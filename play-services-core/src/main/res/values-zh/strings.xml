@@ -4,7 +4,6 @@
   -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="gms_app_name">MicroG</string>
     <string name="gms_settings_name">MicroG 设置</string>
     <string name="gms_settings_summary">设置 MicroG 服务</string>
 
@@ -85,10 +84,6 @@
     <string name="self_check_name_battery_optimizations">忽略电池优化</string>
     <string name="self_check_resolution_battery_optimizations">点击此处禁用电池优化。不这样做可能导致无法接收来自 YouTube 和其他已注册应用的通知</string>
 
-    <string name="self_check_pkg_revanced">ReVanced</string>
-    <string name="self_check_pkg_revanced_extended">ReVanced Extended</string>
-    <string name="self_check_pkg_youtube_advanced">YT Advanced</string>
-    <string name="self_check_pkg_vanced">Vanced</string>
     <string name="self_check_revanced_name_app_installed">正在使用 <xliff:g example="F-Droid">%1$s</xliff:g> 运行</string>
     <string name="self_check_revanced_resolution_app_installed">未找到 <xliff:g example="F-Droid">%1$s</xliff:g> 应用，请编译或安装修改版的 APK</string>
 
@@ -112,7 +107,6 @@
     <string name="pref_auth_strip_device_name_summary">启用时，认证请求将不包含设备名称，这可能允许未经授权的设备登录，但可能会产生不可预见的后果</string>
 
     <string name="pref_checkin_enable_summary">将您的设备注册到 Google 服务并创建唯一的设备标识符。MicroG 会从注册数据中剥离除您 Google 账户名称之外的识别信息</string>
-    <string name="pref_device_registration_android_id">Android ID</string>
 
     <string name="checkin_not_registered">未注册</string>
     <string name="checkin_last_registration">最后注册：<xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
@@ -208,11 +202,7 @@
 
     <!-- Settings options strings-->
 
-    <string name="wstxda">WSTxda</string>
     <string name="developer">开发者</string>
-    <string name="developer_link">https://github.com/WSTxda</string>
-    <string name="github">GitHub</string>
     <string name="github_source">源代码仓库</string>
-    <string name="github_link">https://github.com/WSTxda/MicroG-RE</string>
     <string name="pref_hide_launcher_icon">在启动器中隐藏图标</string>
 </resources>
