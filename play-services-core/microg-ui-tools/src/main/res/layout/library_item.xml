@@ -17,7 +17,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="12dp">
+            android:padding="16dp">
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/icon"
@@ -33,8 +33,10 @@
                 android:id="@android:id/text1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:textAppearance="?attr/textAppearanceLabelLarge"
+                android:layout_marginStart="16dp"
+                android:maxLines="2"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:textColor="?attr/colorOnSecondaryContainer"
                 app:layout_constraintBottom_toTopOf="@android:id/text2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/icon"
@@ -46,8 +48,11 @@
                 android:id="@android:id/text2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textAppearance="?attr/textAppearanceBodySmall"
-                android:textColor="?android:textColorSecondary"
+                android:layout_marginTop="2dp"
+                android:ellipsize="marquee"
+                android:maxLines="10"
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:textColor="?attr/colorSecondary"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@android:id/text1"

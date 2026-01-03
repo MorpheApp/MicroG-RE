@@ -18,6 +18,8 @@
     <string name="about_version_str">Phiên bản: %1$s</string>
     <string name="about_default_license">Mọi quyền được bảo lưu</string>
 
+    <string name="morphe_description">Morphe là một dự án mã nguồn mở được thiết kế để sửa đổi các ứng dụng Android thông qua các bản vá</string>
+
     <string name="prefcat_setup">Thiết lập</string>
 
     <string name="self_check_title">Tự kiểm tra</string>

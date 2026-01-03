@@ -1,0 +1,67 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_info"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_height="wrap_content"
+    android:background="@drawable/preference_background_top"
+    android:padding="20dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/app_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@android:color/white"
+        android:src="@drawable/ic_microg_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+        tools:src="@android:drawable/sym_def_app_icon" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/app_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/gms_app_name_full"
+        android:textAppearance="?attr/textAppearanceTitleLargeEmphasized"
+        app:layout_constraintBottom_toTopOf="@+id/app_version"
+        app:layout_constraintEnd_toStartOf="@+id/app_check_updates"
+        app:layout_constraintStart_toEndOf="@id/app_icon"
+        app:layout_constraintTop_toTopOf="@id/app_icon"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="@string/about_root_title" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/app_version"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:textAppearance="?attr/textAppearanceBodyMedium"
+        android:textColor="?android:textColorSecondary"
+        app:layout_constraintBottom_toBottomOf="@id/app_icon"
+        app:layout_constraintEnd_toStartOf="@+id/app_check_updates"
+        app:layout_constraintStart_toEndOf="@id/app_icon"
+        app:layout_constraintTop_toBottomOf="@id/app_title"
+        tools:text="@string/about_root_version" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/app_check_updates"
+        style="@style/Widget.Material3Expressive.Button.IconButton.Tonal"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/check_updates"
+        app:backgroundTint="?attr/colorPrimaryContainer"
+        app:icon="@drawable/ic_update"
+        app:iconGravity="textStart"
+        app:iconTint="?attr/colorOnPrimaryContainer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

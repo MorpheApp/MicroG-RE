@@ -16,11 +16,9 @@
   -->
 
 <resources>
-    <string name="lib_name">Інструменти інтерфейсу MicroG</string>
-    <string name="lib_license">Ліцензія Apache 2.0, команда microG</string>
+    <string name="morphe_description">Morphe — це проєкт з відкритим вихідним кодом, призначений для модифікації Android-додатків за допомогою патчів</string>
 
     <string name="about_version_str">Версія: %1$s</string>
-    <string name="about_name_version_str">%1$s %2$s</string>
     <string name="about_default_license">Усі права захищені</string>
 
     <string name="prefcat_setup">Налаштування</string>

@@ -43,8 +43,9 @@ class SettingsFragment : ResourceSettingsFragment() {
         const val PREF_CHECKIN = "pref_checkin"
         const val PREF_ACCOUNTS = "pref_accounts"
         const val PREF_HIDE_LAUNCHER_ICON = "pref_hide_launcher_icon"
-        const val PREF_DEVELOPER = "pref_developer"
         const val PREF_GITHUB = "pref_github"
+
+        private const val PREF_GITHUB_URL = "https://github.com/MorpheApp/MicroG-RE"
         const val PREF_IGNORE_BATTERY_OPTIMIZATION = "pref_ignore_battery_optimization"
     }
 
@@ -99,12 +100,8 @@ class SettingsFragment : ResourceSettingsFragment() {
             toggleActivityVisibility(MainSettingsActivity::class.java, !(newValue as Boolean))
             true
         }
-        findPreference<Preference>(PREF_DEVELOPER)?.setOnPreferenceClickListener {
-            openLink(getString(R.string.developer_link))
-            true
-        }
         findPreference<Preference>(PREF_GITHUB)?.setOnPreferenceClickListener {
-            openLink(getString(R.string.github_link))
+            openGithub()
             true
         }
         findPreference<Preference>(PREF_ABOUT)?.setOnPreferenceClickListener {
@@ -231,11 +228,11 @@ class SettingsFragment : ResourceSettingsFragment() {
     }
 
 
-    private fun openLink(url: String) {
+    private fun openGithub() {
         try {
-            startActivity(Intent(Intent.ACTION_VIEW, url.toUri()))
+            startActivity(Intent(Intent.ACTION_VIEW, PREF_GITHUB_URL.toUri()))
         } catch (e: ActivityNotFoundException) {
-            Log.e(TAG, "Error opening link: $url", e)
+            Log.e(TAG, "Error opening link: $PREF_GITHUB_URL", e)
         }
     }
 

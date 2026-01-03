@@ -15,12 +15,10 @@
   -->
 
 <resources>
-    <string name="lib_name">Narzędzia UI MicroG</string>
-    <string name="lib_license">Licencja Apache 2.0, Zespół microG</string>
-
     <string name="about_version_str">Wersja: %1$s</string>
-    <string name="about_name_version_str">%1$s %2$s</string>
     <string name="about_default_license">Wszelkie prawa zastrzeżone</string>
+
+    <string name="morphe_description">Morphe to projekt typu open-source zaprojektowany do modyfikowania aplikacji na Androida za pomocą łatek</string>
 
     <string name="prefcat_setup">Konfiguracja</string>
 

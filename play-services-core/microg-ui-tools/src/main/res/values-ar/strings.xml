@@ -15,12 +15,10 @@
   -->
 
 <resources>
-    <string name="lib_name">أدوات واجهة مستخدم MicroG</string>
-    <string name="lib_license">رخصة Apache 2.0، فريق microG</string>
-
     <string name="about_version_str">الإصدار: %1$s</string>
-    <string name="about_name_version_str">%1$s %2$s</string>
     <string name="about_default_license">جميع الحقوق محفوظة</string>
+
+    <string name="morphe_description">Morphe هو مشروع مفتوح المصدر مصمم لتعديل تطبيقات Android من خلال التصحيحات</string>
 
     <string name="prefcat_setup">الإعداد</string>
 

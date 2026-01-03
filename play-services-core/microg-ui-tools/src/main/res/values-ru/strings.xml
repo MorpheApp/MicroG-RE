@@ -18,6 +18,8 @@
     <string name="about_version_str">Версия: %1$s</string>
     <string name="about_default_license">Все права защищены</string>
 
+    <string name="morphe_description">Morphe — это проект с открытым исходным кодом, предназначенный для модификации Android-приложений с помощью патчей</string>
+
     <string name="prefcat_setup">Настройка</string>
 
     <string name="self_check_title">Самопроверка</string>

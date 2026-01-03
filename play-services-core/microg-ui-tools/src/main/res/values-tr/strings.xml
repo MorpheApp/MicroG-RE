@@ -15,12 +15,10 @@
   -->
 
 <resources>
-    <string name="lib_name">MicroG UI Araçları</string>
-    <string name="lib_license">Apache Lisansı 2.0, microG Ekibi</string>
-
     <string name="about_version_str">Sürüm: %1$s</string>
-    <string name="about_name_version_str">%1$s %2$s</string>
     <string name="about_default_license">Tüm hakları saklıdır</string>
+
+    <string name="morphe_description">Morphe, Android uygulamalarını yamalar aracılığıyla değiştirmek için tasarlanmış açık kaynaklı bir projedir</string>
 
     <string name="prefcat_setup">Kurulum</string>
 

@@ -15,12 +15,10 @@
   -->
 
 <resources>
-    <string name="lib_name">Alat UI MicroG</string>
-    <string name="lib_license">Lisensi Apache 2.0, Tim microG</string>
-
     <string name="about_version_str">Versi: %1$s</string>
-    <string name="about_name_version_str">%1$s %2$s</string>
     <string name="about_default_license">Semua hak dilindungi undang-undang</string>
+
+    <string name="morphe_description">Morphe adalah proyek sumber terbuka yang dirancang untuk memodifikasi aplikasi Android melalui patch</string>
 
     <string name="prefcat_setup">Pengaturan</string>
 
