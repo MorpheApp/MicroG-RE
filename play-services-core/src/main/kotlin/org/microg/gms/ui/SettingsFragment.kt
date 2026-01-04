@@ -45,6 +45,7 @@ class SettingsFragment : ResourceSettingsFragment() {
         const val PREF_HIDE_LAUNCHER_ICON = "pref_hide_launcher_icon"
         const val PREF_GITHUB = "pref_github"
 
+        private const val ACTIVITY_LAUNCHER_CONTROL = "org.microg.gms.ui.SettingsActivityLauncher"
         private const val PREF_GITHUB_URL = "https://github.com/MorpheApp/MicroG-RE"
         const val PREF_IGNORE_BATTERY_OPTIMIZATION = "pref_ignore_battery_optimization"
     }
@@ -63,9 +64,10 @@ class SettingsFragment : ResourceSettingsFragment() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         super.onCreatePreferences(savedInstanceState, rootKey)
         setupStaticPreferenceClickListeners()
+        updateLauncherIconSwitchState()
+        updateBatteryOptimizationPreference()
         updateAboutSummary()
         loadStaticEntries()
-        updateBatteryOptimizationPreference()
     }
 
     override fun onResume() {
@@ -73,7 +75,7 @@ class SettingsFragment : ResourceSettingsFragment() {
         activity?.findViewById<ExtendedFloatingActionButton>(R.id.preference_fab)?.visibility =
             View.GONE
         updateBatteryOptimizationPreference()
-        updateHideLauncherIconSwitchState()
+        updateLauncherIconSwitchState()
         updateGcmSummary()
         updateCheckinSummary()
         updateDynamicEntries()
@@ -97,7 +99,8 @@ class SettingsFragment : ResourceSettingsFragment() {
             true
         }
         findPreference<SwitchPreferenceCompat>(PREF_HIDE_LAUNCHER_ICON)?.setOnPreferenceChangeListener { _, newValue ->
-            toggleActivityVisibility(MainSettingsActivity::class.java, !(newValue as Boolean))
+            val hide = newValue as Boolean
+            toggleLauncherIconVisibility(show = !hide)
             true
         }
         findPreference<Preference>(PREF_GITHUB)?.setOnPreferenceClickListener {
@@ -172,35 +175,24 @@ class SettingsFragment : ResourceSettingsFragment() {
         }
     }
 
-    private fun toggleActivityVisibility(activityClass: Class<*>, showActivity: Boolean) {
-        val ctx = context ?: return
-        val component = ComponentName(ctx, activityClass)
-        val newState = if (showActivity) PackageManager.COMPONENT_ENABLED_STATE_ENABLED
+    private fun toggleLauncherIconVisibility(show: Boolean) {
+        val newState = if (show) PackageManager.COMPONENT_ENABLED_STATE_ENABLED
         else PackageManager.COMPONENT_ENABLED_STATE_DISABLED
+
+        val ctx = context ?: return
+        val component = ComponentName(ctx, ACTIVITY_LAUNCHER_CONTROL)
         ctx.packageManager.setComponentEnabledSetting(
             component, newState, PackageManager.DONT_KILL_APP
         )
     }
 
-    private fun updateHideLauncherIconSwitchState() {
-        val isVisible = isIconActivityVisible(MainSettingsActivity::class.java)
-        findPreference<SwitchPreferenceCompat>(PREF_HIDE_LAUNCHER_ICON)?.isChecked = !isVisible
-    }
+    private fun updateLauncherIconSwitchState() {
+        val ctx = context ?: return
+        val component = ComponentName(ctx, ACTIVITY_LAUNCHER_CONTROL)
+        val state = ctx.packageManager.getComponentEnabledSetting(component)
 
-    private fun isIconActivityVisible(activityClass: Class<*>): Boolean {
-        val ctx = context ?: return false
-        val component = ComponentName(ctx, activityClass)
-        return when (ctx.packageManager.getComponentEnabledSetting(component)) {
-            PackageManager.COMPONENT_ENABLED_STATE_ENABLED -> true
-            PackageManager.COMPONENT_ENABLED_STATE_DISABLED -> false
-            else -> {
-                try {
-                    ctx.packageManager.getActivityInfo(component, 0).enabled
-                } catch (_: PackageManager.NameNotFoundException) {
-                    false
-                }
-            }
-        }
+        val isEnabled = state == PackageManager.COMPONENT_ENABLED_STATE_ENABLED || state == PackageManager.COMPONENT_ENABLED_STATE_DEFAULT
+        findPreference<SwitchPreferenceCompat>(PREF_HIDE_LAUNCHER_ICON)?.isChecked = !isEnabled
     }
 
     private fun updateGcmSummary() {
@@ -226,7 +218,6 @@ class SettingsFragment : ResourceSettingsFragment() {
             else org.microg.gms.base.core.R.string.service_status_disabled_short
         findPreference<Preference>(PREF_CHECKIN)?.setSummary(summaryRes)
     }
-
 
     private fun openGithub() {
         try {

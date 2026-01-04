@@ -366,14 +366,25 @@
         <activity
             android:name="org.microg.gms.ui.MainSettingsActivity"
             android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
-            android:enabled="false"
             android:exported="true"
             android:taskAffinity="org.microg.gms.settings">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+        <!--Hide microG Settings from launcher activity control-->
+        <activity-alias
+            android:name="org.microg.gms.ui.SettingsActivityLauncher"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="org.microg.gms.ui.MainSettingsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
 
         <!-- Allow microG Settings from opening by other applications -->
         <activity-alias
