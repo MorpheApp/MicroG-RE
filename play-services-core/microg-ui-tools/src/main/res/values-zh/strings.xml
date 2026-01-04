@@ -1,0 +1,53 @@
+<!--
+  ~ Copyright (C) 2013-2017 microG Project Team
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string name="about_version_str">版本：%1$s</string>
+    <string name="about_default_license">保留所有权利</string>
+
+    <string name="morphe_description">Morphe 是一个开源项目，旨在通过补丁修改 Android 应用程序</string>
+
+    <string name="prefcat_setup">设置</string>
+
+    <string name="self_check_title">自检</string>
+    <string name="self_check_desc">检查系统是否正确设置以使用 MicroG</string>
+
+    <string name="self_check_cat_permissions">已授予的权限</string>
+    <string name="self_check_name_permission">%1$s 的权限：</string>
+    <string name="self_check_resolution_permission">点击此处授予权限。不授予权限可能导致应用程序行为异常</string>
+
+    <string name="about_root_title">MicroG UI 演示</string>
+    <string name="about_root_summary">摘要</string>
+    <string name="about_root_version">版本 v0.1.0</string>
+    <string name="about_root_libraries">包含的库</string>
+
+    <string name="about_android_support_v4">v4 支持库</string>
+    <string name="about_android_support_v7_appcompat">v7 appcompat 支持库</string>
+    <string name="about_android_support_v7_preference">v7 preference 支持库</string>
+    <string name="about_android_support_license">Apache 许可证 2.0, Android 开源项目</string>
+
+    <!-- Updater strings-->
+
+    <string name="check_updates">检查更新</string>
+    <string name="update_available">有新版本可用！</string>
+    <string name="no_update_available">您使用的是最新版本</string>
+    <string name="check_updates_error">无法检查更新</string>
+
+    <string name="snackbar_button_download">下载</string>
+
+    <string name="error_connection">连接错误：</string>
+    <string name="error_others">错误：</string>
+</resources>
