@@ -237,7 +237,7 @@ public class LoginActivity extends AssistantActivity {
         if (response != null) {
             response.onError(AccountManager.ERROR_CODE_CANCELED, "Canceled");
         }
-        if (SDK_INT >= LOLLIPOP) { finishAndRemoveTask(); } else finish();
+        finishAndRemoveTask();
     }
 
     /** @noinspection deprecation*/
@@ -437,7 +437,7 @@ public class LoginActivity extends AssistantActivity {
                         }
                         checkin(true);
                         returnSuccessResponse(account);
-                        if (SDK_INT >= LOLLIPOP) { finishAndRemoveTask(); } else finish();
+                        finishAndRemoveTask();
                     }
 
                     @Override
