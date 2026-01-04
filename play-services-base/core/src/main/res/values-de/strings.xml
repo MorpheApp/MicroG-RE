@@ -1,1 +1,37 @@
+<!-- 
+  ~ SPDX-FileCopyrightText: 2020, microG Project Team 
+  ~ SPDX-License-Identifier: Apache-2.0 
+  --> 
+ 
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"> 
+    <string name="foreground_service_notification_title">Aktiv im Hintergrund</string> 
+    <string name="foreground_service_notification_text"><xliff:g example="Exposure Notification">%1$s</xliff:g> wird im Hintergrund ausgeführt</string> 
+    <string name="foreground_service_notification_big_text">Schließe <xliff:g example="microG Services">%1$s</xliff:g> von der Batterieoptimierung aus oder ändere die Benachrichtigungseinstellungen, um diese Benachrichtigung auszublenden</string> 
+    <string name="foreground_action_battery_optimization">Batterieoptimierung</string> 
+    <string name="foreground_action_notification_settings">Einstellungen</string> 
+ 
+    <string name="menu_settings">Einstellungen</string> 
+ 
+    <string name="list_no_item_none">Keine</string> 
+    <string name="list_item_see_all">Alle anzeigen</string> 
+ 
+    <string name="open_app">Öffnen</string> 
+ 
+    <string name="service_status_disabled">Deaktiviert</string> 
+    <string name="service_status_enabled">Aktiviert</string> 
+    <string name="service_status_automatic">Automatisch</string> 
+    <string name="service_status_manual">Manuell</string> 
+    <string name="service_status_enabled_short">An</string> 
+    <string name="service_status_disabled_short">Aus</string> 
+ 
+    <!--patchers names--> 
+ 
+    <string name="morphe" translatable="false">Morphe</string> 
+    <string name="vanced" translatable="false">Vanced</string> 
+    <string name="revanced" translatable="false">ReVanced</string> 
+    <string name="youtube_advanced" translatable="false">YT Advanced</string> 
+    <string name="revanced_extended" translatable="false">ReVanced Extended</string> 
+    <string name="revanced_extended_anddea" translatable="false">ReVanced Extended (Anddea)</string> 
+    <string name="revanced_extended_rufusin" translatable="false">ReVanced Extended (Rufusin)</string> 
+</resources> 
 
