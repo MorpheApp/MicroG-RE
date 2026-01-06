@@ -17,7 +17,7 @@ import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.TwoStatePreference
 import com.google.android.gms.R
 import com.google.android.material.color.MaterialColors
-import com.google.android.material.transition.platform.MaterialSharedAxis
+import com.google.android.material.transition.MaterialSharedAxis
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.microg.gms.gcm.GcmDatabase
@@ -43,7 +43,7 @@ class PushNotificationAppFragment : PreferenceFragmentCompat() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enterTransition = MaterialSharedAxis(MaterialSharedAxis.X, true)
-        reenterTransition = MaterialSharedAxis(MaterialSharedAxis.X, false)
+        returnTransition = MaterialSharedAxis(MaterialSharedAxis.X, false)
         database = GcmDatabase(context)
     }
 

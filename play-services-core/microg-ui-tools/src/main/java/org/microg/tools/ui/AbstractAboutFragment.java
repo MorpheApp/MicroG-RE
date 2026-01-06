@@ -35,7 +35,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.color.MaterialColors;
-import com.google.android.material.transition.platform.MaterialSharedAxis;
+import com.google.android.material.transition.MaterialSharedAxis;
 
 import org.microg.tools.updater.UpdateChecker;
 
@@ -73,7 +73,7 @@ public abstract class AbstractAboutFragment extends Fragment {
 //            throw new RuntimeException(e);
 //        }
 //    }
-
+//
 //    protected String getAppName() {
 //        return getAppName(requireContext());
 //    }
@@ -92,8 +92,6 @@ public abstract class AbstractAboutFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setEnterTransition(new MaterialSharedAxis(MaterialSharedAxis.X, true));
-        setExitTransition(new MaterialSharedAxis(MaterialSharedAxis.X, true));
-        setReenterTransition(new MaterialSharedAxis(MaterialSharedAxis.X, false));
         setReturnTransition(new MaterialSharedAxis(MaterialSharedAxis.X, false));
     }
 

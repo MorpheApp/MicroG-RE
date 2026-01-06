@@ -21,7 +21,7 @@ import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceFragmentCompat
 import com.google.android.gms.R
 import com.google.android.material.color.MaterialColors
-import com.google.android.material.transition.platform.MaterialSharedAxis
+import com.google.android.material.transition.MaterialSharedAxis
 import org.microg.gms.checkin.CheckinPreferences
 import org.microg.gms.checkin.getCheckinServiceInfo
 import org.microg.gms.profile.ProfileManager
@@ -48,7 +48,7 @@ class DeviceRegistrationFragment : PreferenceFragmentCompat() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enterTransition = MaterialSharedAxis(MaterialSharedAxis.X, true)
-        reenterTransition = MaterialSharedAxis(MaterialSharedAxis.X, false)
+        returnTransition = MaterialSharedAxis(MaterialSharedAxis.X, false)
         profileFileImport = registerForActivityResult(ActivityResultContracts.GetContent(), this::onFileSelected)
     }
 

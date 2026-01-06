@@ -33,7 +33,7 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
-import com.google.android.material.transition.platform.MaterialSharedAxis;
+import com.google.android.material.transition.MaterialSharedAxis;
 
 import org.microg.tools.selfcheck.SelfCheckGroup;
 
@@ -71,7 +71,7 @@ public abstract class AbstractSelfCheckFragment extends Fragment {
         permissionsLauncher = registerForActivityResult(new ActivityResultContracts.RequestMultiplePermissions(), r -> reset(LayoutInflater.from(getContext())));
 
         setEnterTransition(new MaterialSharedAxis(MaterialSharedAxis.X, true));
-        setExitTransition(new MaterialSharedAxis(MaterialSharedAxis.X, true));
+        setReturnTransition(new MaterialSharedAxis(MaterialSharedAxis.X, false));
     }
 
     public void launchIntent(Intent intent) {

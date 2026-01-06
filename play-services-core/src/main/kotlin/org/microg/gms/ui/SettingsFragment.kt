@@ -24,6 +24,7 @@ import androidx.preference.PreferenceCategory
 import androidx.preference.SwitchPreferenceCompat
 import com.google.android.gms.R
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+import com.google.android.material.transition.MaterialSharedAxis
 import kotlinx.coroutines.launch
 import org.microg.gms.checkin.CheckinPreferences
 import org.microg.gms.gcm.GcmDatabase
@@ -69,6 +70,12 @@ class SettingsFragment : ResourceSettingsFragment() {
         updateBatteryOptimizationPreference()
         updateAboutSummary()
         loadStaticEntries()
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        exitTransition = MaterialSharedAxis(MaterialSharedAxis.X, true)
+        reenterTransition = MaterialSharedAxis(MaterialSharedAxis.X, false)
     }
 
     override fun onResume() {
