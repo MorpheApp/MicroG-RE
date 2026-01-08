@@ -31,7 +31,6 @@
 
     <string name="about_morphe_description">Morphe — це проект з відкритим вихідним кодом для модифікації додатків Android через патчі</string>
     <string name="about_version_str">Версія: %1$s</string>
-    <string name="about_name_version_str">%1$s %2$s</string>
     <string name="about_default_license">Усі права захищені</string>
 
     <!--Self Check-->

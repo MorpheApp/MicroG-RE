@@ -202,7 +202,6 @@ Quá trình này có thể tốn một vài phút."</string>
     <string name="pref_hide_launcher_icon">Ẩn biểu tượng trong trình khởi chạy</string>
     <!--preferences: about-->
     <string name="pref_about_title">Giới thiệu MicroG</string>
-    <string name="pref_github">GitHub</string>
     <string name="pref_github_summary">Nơi lưu trữ mã nguồn</string>
 
     <!--Permissions-->

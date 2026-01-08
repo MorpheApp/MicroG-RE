@@ -30,7 +30,6 @@
 
     <string name="about_morphe_description">Morphe là một dự án mã nguồn mở dùng để chỉnh sửa ứng dụng Android thông qua các bản vá</string>
     <string name="about_version_str">Phiên bản: %1$s</string>
-    <string name="about_name_version_str">%1$s %2$s</string>
     <string name="about_default_license">Mọi quyền được bảo lưu</string>
 
     <!--Self Check-->

@@ -30,7 +30,6 @@
 
     <string name="about_morphe_description">Morphe è un progetto open source progettato para modificare le app Android tramite patch</string>
     <string name="about_version_str">Versione: %1$s</string>
-    <string name="about_name_version_str">%1$s %2$s</string>
     <string name="about_default_license">Tutti i diritti riservati</string>
 
     <!--Self Check-->

@@ -202,7 +202,6 @@ Ini mungkin memerlukan beberapa menit"</string>
     <string name="pref_hide_launcher_icon">Sembunyikan ikon di peluncur</string>
     <!--preferences: about-->
     <string name="pref_about_title">Tentang MicroG</string>
-    <string name="pref_github">GitHub</string>
     <string name="pref_github_summary">Repositori kode sumber</string>
 
     <!--Permissions-->

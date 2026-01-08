@@ -202,7 +202,6 @@
     <string name="pref_hide_launcher_icon">隐藏图标</string>
     <!--preferences: about-->
     <string name="pref_about_title">关于 MicroG</string>
-    <string name="pref_github">GitHub</string>
     <string name="pref_github_summary">源码库</string>
 
     <!--Permissions-->

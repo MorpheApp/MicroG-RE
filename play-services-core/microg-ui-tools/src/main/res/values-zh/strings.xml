@@ -30,7 +30,6 @@
 
     <string name="about_morphe_description">Morphe 是一个旨在通过补丁修改 Android 应用的开源项目</string>
     <string name="about_version_str">版本：%1$s</string>
-    <string name="about_name_version_str">%1$s %2$s</string>
     <string name="about_default_license">保留所有权利</string>
 
     <!--Self Check-->
