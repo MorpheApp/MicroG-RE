@@ -5,9 +5,7 @@
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!--App Names-->
-    <string name="gms_app_name">MicroG</string>
     <string name="gms_settings_name">MicroG 설정</string>
-    <string name="gms_settings_summary">MicroG 서비스 설정</string>
     <!--Authentication-->
     <!--auth: headers-->
     <string name="auth_add_account">계정 추가</string>
@@ -122,17 +120,10 @@ Google 계정에 연결하려면 <b>로그인</b> 버튼을 사용하거나, 해
     <string name="self_check_name_oem_restriction">백그라운드 프로세스 제한</string>
     <string name="self_check_resolution_oem_restriction">시스템에서 백그라운드 프로세스를 제한할 수 있습니다. 여기를 탭하여 Don\'t Kill My App! 사이트를 열고 이러한 제한을 해제하는 방법을 알아보십시오</string>
     <!--self check: signature-->
-    <string name="self_check_name_fake_sig_perm">시스템에서 서명 스푸핑을 지원합니다</string>
-    <string name="self_check_resolution_fake_sig_perm">사용 중인 ROM은 서명 스푸핑를 기본적으로 지원하지 않습니다. Xposed 또는 다른 시스템을 통해 서명을 위조할 수는 있습니다. 서명 스푸핑을 지원하는 ROM 목록과 미지원 ROM에서 MicroG 사용 방법은 관련 문서를 확인해 주십시오</string>
     <string name="self_check_name_system_spoofs">시스템 서명 스푸핑</string>
-    <string name="self_check_name_perm_granted">시스템에서 서명 스푸핑 권한을 부여합니다</string>
-    <string name="self_check_name_correct_sig"><xliff:g example="YouTube">%1$s</xliff:g> 올바른 서명</string>
-    <string name="self_check_resolution_correct_sig">설치된 <xliff:g example="YouTube">%1$s</xliff:g>가 호환되지 않거나 서명 스푸핑이 활성화되어 있지 않습니다. 호환되는 애플리케이션 및 ROM에 대한 문서를 확인하십시오</string>
-    <string name="self_check_resolution_perm_granted">이는 ROM이 서명 스푸핑을 지원하지만 활성화하기 위해 추가 조치가 필요하다는 강력한 지표입니다. 필요한 단계에 대해서는 문서를 확인하십시오</string>
     <string name="self_check_resolution_system_spoofs">어떤 단계가 필요할 수 있는지 문서를 확인하십시오</string>
     <!--self check: package-->
     <string name="self_check_pkg_gms">Play 서비스</string>
-    <string name="self_check_pkg_vending">Play 스토어</string>
     <string name="self_check_name_app_installed"><xliff:g example="YouTube">%1$s</xliff:g>이 설치됨</string>
     <string name="self_check_resolution_app_installed">애플리케이션 <xliff:g example="YouTube">%1$s</xliff:g> 또는 호환되는 애플리케이션을 설치하시고, 호환되는 애플리케이션에 대한 문서를 확인하십시오</string>
     <!--Settings Preferences-->
@@ -196,9 +187,7 @@ Google 계정에 연결하려면 <b>로그인</b> 버튼을 사용하거나, 해
     <string name="pref_hide_launcher_icon">런처에서 아이콘 숨기기</string>
     <!--preferences: about-->
     <string name="pref_about_title">MicroG에 대한 정보</string>
-    <string name="pref_github">GitHub</string>
     <string name="pref_github_summary">소스 코드 리포지토리</string>
-    <string name="pref_developer">개발자</string>
     <!--Permissions-->
     <string name="perm_status_broadcast_label">내부 상태 브로드캐스트 수신</string>
     <string name="perm_gsf_read_gservices_label">Google 서비스 구성 읽기</string>
