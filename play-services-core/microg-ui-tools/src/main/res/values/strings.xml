@@ -28,11 +28,11 @@
 
     <!--Settings About-->
 
-    <string name="about_microg_re">MicroG RE</string>
-    <string name="about_morphe">Morphe</string>
+    <string name="about_microg_re" translatable="false">MicroG RE</string>
+    <string name="about_morphe" translatable="false">Morphe</string>
     <string name="about_morphe_description">Morphe is an open-source project designed to modify Android apps through patches</string>
     <string name="about_version_str">Version: %1$s</string>
-    <string name="about_name_version_str">%1$s %2$s</string>
+    <string name="about_name_version_str" translatable="false">%1$s %2$s</string>
     <string name="about_default_license">All rights reserved</string>
 
     <!--Self Check-->

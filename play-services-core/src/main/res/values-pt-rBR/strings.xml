@@ -202,7 +202,6 @@ Isso pode levar alguns minutos. Por favor, seja paciente."</string>
     <string name="pref_hide_launcher_icon">Ocultar ícone do launcher</string>
     <!--preferences: about-->
     <string name="pref_about_title">Sobre o MicroG</string>
-    <string name="pref_github">GitHub</string>
     <string name="pref_github_summary">Repositório com o código-fonte</string>
 
     <!--Permissions-->

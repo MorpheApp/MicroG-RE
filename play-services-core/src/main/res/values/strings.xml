@@ -7,7 +7,7 @@
 
     <!--App Names-->
 
-    <string name="gms_app_name">MicroG</string>
+    <string name="gms_app_name" translatable="false">MicroG</string>
     <string name="gms_settings_name">MicroG Settings</string>
 
     <!--Authentication-->
@@ -203,7 +203,7 @@ This can take a couple of minutes"</string>
     <string name="pref_hide_launcher_icon">Hide icon in launcher</string>
     <!--preferences: about-->
     <string name="pref_about_title">About MicroG</string>
-    <string name="pref_github">GitHub</string>
+    <string name="pref_github" translatable="false">GitHub</string>
     <string name="pref_github_summary">Source code repository</string>
 
     <!--Permissions-->

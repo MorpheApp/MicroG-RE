@@ -202,7 +202,6 @@
     <string name="pref_hide_launcher_icon">إخفاء الأيقونة في المشغل</string>
     <!--preferences: about-->
     <string name="pref_about_title">حول MicroG</string>
-    <string name="pref_github">GitHub</string>
     <string name="pref_github_summary">مستودع الشيفرة المصدرية</string>
 
     <!--Permissions-->

@@ -195,7 +195,6 @@ Może to potrwać kilka minut"</string>
     <string name="pref_hide_launcher_icon">Ukryj ikonę w launcherze</string>
     <!--preferences: about-->
     <string name="pref_about_title">Informacje o MicroG</string>
-    <string name="pref_github">GitHub</string>
     <string name="pref_github_summary">Repozytorium kodu źródłowego</string>
 
     <!--Permissions-->

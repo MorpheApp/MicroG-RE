@@ -202,7 +202,6 @@ Bu işlem birkaç dakika sürebilir."</string>
     <string name="pref_hide_launcher_icon">Simgeyi başlatıcıda gizle</string>
     <!--preferences: about-->
     <string name="pref_about_title">MicroG Hakkında</string>
-    <string name="pref_github">GitHub</string>
     <string name="pref_github_summary">Kaynak kod deposu</string>
 
     <!--Permissions-->
