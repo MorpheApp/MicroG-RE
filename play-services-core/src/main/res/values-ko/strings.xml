@@ -28,7 +28,7 @@ Google 계정에 연결하려면 <b>로그인</b> 버튼을 사용하거나, 해
     <string name="auth_connecting">"기기가 Google 서버에 연결하여 로그인을 진행 중입니다.
 
 몇 초 정도 소요될 수 있습니다"</string>
-    <string name="auth_no_network_error_desc">"네트워크 연결이 없습니다.
+    <string name="auth_no_network_error_desc">"네트워크에 연결되지 않았습니다.
 
 일시적인 문제일 수 있으며 Android 기기에 데이터 서비스가 제공되지 않았을 수 있습니다. 모바일 네트워크에 연결된 후 다시 시도하거나 Wi-Fi 네트워크에 연결하십시오"</string>
     <string name="auth_general_error_desc">"Google 서버와의 통신에 문제가 발생하였습니다.
