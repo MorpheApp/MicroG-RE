@@ -265,6 +265,7 @@ class AccountsFragment : PreferenceFragmentCompat() {
 
             snackbar.addCallback(object : Snackbar.Callback() {
                 override fun onDismissed(transientBottomBar: Snackbar?, event: Int) {
+                    if (view == null) return
                     if (!cancelRemoval) {
                         viewLifecycleOwner.lifecycleScope.launch(Dispatchers.IO) {
                             if (accountManager.removeAccountExplicitly(it)) {
