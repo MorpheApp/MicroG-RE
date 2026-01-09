@@ -24,7 +24,7 @@
     <string name="signin_confirm_title">Autorizar login em <xliff:g example="YouTube">%1$s</xliff:g></string>
     <string name="signin_subtext_sharing">Para continuar, o MicroG compartilhará nome, endereço de e-mail e foto de perfil da sua Conta Google com <xliff:g example="YouTube">%1$s</xliff:g></string>
     <!--auth: buttons-->
-    <string name="auth_huawei_button">Huawei</string>
+    <string name="auth_huawei_button" translatable="false">Huawei</string>
     <!--auth: messages-->
     <string name="auth_before_connect">"Vamos conectar sua conta Google usando o MicroG.
 
