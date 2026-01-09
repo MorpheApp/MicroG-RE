@@ -53,14 +53,13 @@ jobs:
           fetch-depth: 0
           clean: true
 
-      # TODO: Compile the app to verify strings work? Or is this too slow?
       # Step 2: Compile Android app to check string resources
-#      - name: Compile Android app to check resources
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#        run: |
-#          chmod +x ./gradlew
-#          ./gradlew --no-daemon assemble
+      - name: Compile Android app to check resources
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          chmod +x ./gradlew
+          ./gradlew --no-daemon clean :play-services-core:assembleDefaultDebug
 
       # Step 3: Checkout dev branch to prepare for merging
       - name: Checkout dev branch for merge
