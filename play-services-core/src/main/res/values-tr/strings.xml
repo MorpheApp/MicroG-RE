@@ -3,7 +3,7 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
 
     <!--App Names-->
 
@@ -18,13 +18,11 @@
     <string name="auth_sorry">Üzgünüz…</string>
     <!--auth: sign-->
     <string name="signin_picker_title">Bir hesap seçin</string>
-    <string name="signin_picker_subtitle"><xliff:g example="YouTube">%1$s</xliff:g> ile devam etmek için</string>
+    <string name="signin_picker_subtitle">%1$s ile devam etmek için</string>
     <string name="signin_confirm_button_text">İzin ver ve paylaş</string>
     <string name="signin_picker_add_account_label">Başka bir hesap ekle</string>
-    <string name="signin_confirm_title"><xliff:g example="YouTube">%1$s</xliff:g> için oturum açmaya izin ver</string>
-    <string name="signin_subtext_sharing">Devam etmek için MicroG; adınızı, e-posta adresinizi ve profil resminizi <xliff:g example="YouTube">%1$s</xliff:g> ile paylaşacaktır</string>
-    <!--auth: buttons-->
-    <string name="auth_huawei_button">Huawei</string>
+    <string name="signin_confirm_title">%1$s için oturum açmaya izin ver</string>
+    <string name="signin_subtext_sharing">Devam etmek için MicroG; adınızı, e-posta adresinizi ve profil resminizi %1$s ile paylaşacaktır</string>
     <!--auth: messages-->
     <string name="auth_before_connect">"Google hesabını MicroG ile bağla.
 
@@ -44,12 +42,16 @@ Daha sonra tekrar deneyin."</string>
 Bu işlem birkaç dakika sürebilir."</string>
     <!--auth: notifications-->
     <string name="auth_notification_title">Kimlik doğrulama gerekli</string>
-    <string name="auth_notification_content"><xliff:g example="YouTube">%1$s</xliff:g>, Google hesabınıza erişim için yetkilendirmenizi istiyor</string>
+    <string name="auth_notification_content">%1$s, Google hesabınıza erişim için yetkilendirmenizi istiyor</string>
 
     <!--Account Manager-->
 
     <string name="dialog_title_remove_account">Hesabı kaldır</string>
-    <string name="dialog_message_remove_account">Bu hesabı kaldırmak istediğinizden emin misiniz?\n\nBazı hizmetler ve işlevler kullanılamayacaktır\n\nVerileriniz kaybolmayacaktır</string>
+    <string name="dialog_message_remove_account">"Bu hesabı kaldırmak istediğinizden emin misiniz?
+
+Bazı hizmetler ve işlevler kullanılamayacaktır
+
+Verileriniz kaybolmayacaktır"</string>
     <string name="dialog_confirm_button">Kaldır</string>
     <string name="dialog_cancel_button">İptal</string>
     <string name="snackbar_remove_account">Hesap %s kaldırıldı</string>
@@ -63,18 +65,24 @@ Bu işlem birkaç dakika sürebilir."</string>
     <string name="gcm_registered">Kayıtlı</string>
     <string name="gcm_unregister_app">Kaydı sil</string>
     <string name="gcm_remove_registers_dialog_title">Tüm kayıtlar silinsin mi?</string>
-    <string name="gcm_unregister_confirm_title"><xliff:g example="YouTube">%1$s</xliff:g> kaydı silinsin mi?</string>
-    <string name="gcm_remove_registers_dialog_message">Bu işlem, anlık bildirimler için kayıtlı tüm uygulamaları aynı anda kaldıracaktır\n\nUygulamaları açarak bulut mesajlaşmaya yeniden kaydolmanız gerekecektir\n\nBazı uygulamalar bu işlemden sonra tekrar kaydolamayabilir</string>
-    <string name="gcm_unregister_confirm_message">Bazı uygulamalar otomatik olarak tekrar kaydolmaz ve/veya bunu manuel olarak yapma seçeneği sunmaz. Bu uygulamalar kaydı sildikten sonra düzgün çalışmayabilir.\nDevam edilsin mi?</string>
-    <string name="gcm_unregister_after_deny_message">Zaten kayıtlı olan bir uygulamanın anlık bildirim kaydı isteğini reddettiniz.\nBundan sonra anlık bildirim almaması için kaydını şimdi silmek ister misiniz?</string>
+    <string name="gcm_unregister_confirm_title">%1$s kaydı silinsin mi?</string>
+    <string name="gcm_remove_registers_dialog_message">"Bu işlem, anlık bildirimler için kayıtlı tüm uygulamaları aynı anda kaldıracaktır
+
+Uygulamaları açarak bulut mesajlaşmaya yeniden kaydolmanız gerekecektir
+
+Bazı uygulamalar bu işlemden sonra tekrar kaydolamayabilir"</string>
+    <string name="gcm_unregister_confirm_message">"Bazı uygulamalar otomatik olarak tekrar kaydolmaz ve/veya bunu manuel olarak yapma seçeneği sunmaz. Bu uygulamalar kaydı sildikten sonra düzgün çalışmayabilir.
+Devam edilsin mi?"</string>
+    <string name="gcm_unregister_after_deny_message">"Zaten kayıtlı olan bir uygulamanın anlık bildirim kaydı isteğini reddettiniz.
+Bundan sonra anlık bildirim almaması için kaydını şimdi silmek ister misiniz?"</string>
     <!--gcm: register messages infos-->
     <string name="gcm_no_message_yet">Henüz mesaj alınmadı</string>
-    <string name="gcm_last_message_at">Son mesaj: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
-    <string name="gcm_registered_since">Kayıt tarihi: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
-    <string name="gcm_messages_counter">Mesajlar: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> bayt)</string>
+    <string name="gcm_last_message_at">Son mesaj: %1$s</string>
+    <string name="gcm_registered_since">Kayıt tarihi: %1$s</string>
+    <string name="gcm_messages_counter">Mesajlar: %1$d (%2$d bayt)</string>
     <!--gcm: network states-->
     <string name="gcm_network_state_disconnected">Bağlantı kesildi</string>
-    <string name="gcm_network_state_connected">Bağlı: <xliff:g example="2 hours ago">%1$s</xliff:g></string>
+    <string name="gcm_network_state_connected">Bağlı: %1$s</string>
     <!--gcm: network types entry's-->
     <string name="network_type_mobile">Mobil ağ</string>
     <string name="network_type_wifi">Wi-Fi</string>
@@ -87,13 +95,13 @@ Bu işlem birkaç dakika sürebilir."</string>
     <string name="push_notifications_summary_values_seconds">%s saniye</string>
     <string name="push_notifications_summary_values_minutes">%s dakika</string>
     <!--gcm: ask push permission dialog-->
-    <string name="gcm_allow_app_popup"><xliff:g example="YouTube">%1$s</xliff:g> uygulamasının anlık bildirimler için kaydolmasına izin verilsin mi?</string>
+    <string name="gcm_allow_app_popup">%1$s uygulamasının anlık bildirimler için kaydolmasına izin verilsin mi?</string>
     <string name="allow">İzin ver</string>
     <string name="deny">Reddet</string>
     <!--gcm: ask permission tos-->
     <string name="ask_permission_tos">Devam ederek, bu uygulamanın ve Google’ın bilgilerinizi kendi hizmet şartları ve gizlilik politikaları doğrultusunda kullanmasına izin vermiş olursunuz</string>
-    <string name="ask_scope_permission_title"><xliff:g example="YouTube">%1$s</xliff:g> şunları yapmak istiyor:</string>
-    <string name="ask_service_permission_title"><xliff:g example="YouTube">%1$s</xliff:g> şunları kullanmak istiyor:</string>
+    <string name="ask_scope_permission_title">%1$s şunları yapmak istiyor:</string>
+    <string name="ask_service_permission_title">%1$s şunları kullanmak istiyor:</string>
 
     <!--Device Registration-->
 
@@ -101,7 +109,7 @@ Bu işlem birkaç dakika sürebilir."</string>
     <string name="checkin_enable_switch">Cihazı kaydet</string>
     <!--checkin: registration status-->
     <string name="checkin_not_registered">Kayıtlı değil</string>
-    <string name="checkin_last_registration">Son kayıt: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="checkin_last_registration">Son kayıt: %1$s</string>
     <!--checkin: profile names types entry's-->
     <string name="profile_name_native">Yerel</string>
     <string name="profile_name_real">Gerçek</string>
@@ -119,8 +127,8 @@ Bu işlem birkaç dakika sürebilir."</string>
     <!--self check: patched apps-->
     <string name="self_check_source_morphe">Morphe yamaları</string>
     <string name="self_check_source_alternative">alternatif yamalar</string>
-    <string name="self_check_patched_app_installed"><xliff:g example="Morphe">%1$s</xliff:g> ile çalışıyor</string>
-    <string name="self_check_resolution_patched_app_installed"><xliff:g example="Morphe">%1$s</xliff:g> kullanan uygulamalar bulunamadı. Lütfen bir apk yamalayın ve yükleyin</string>
+    <string name="self_check_patched_app_installed">%1$s ile çalışıyor</string>
+    <string name="self_check_resolution_patched_app_installed">%1$s kullanan uygulamalar bulunamadı. Lütfen bir apk yamalayın ve yükleyin</string>
     <string name="self_check_action_download_morphe">Morphe\'yi İndir</string>
     <!--self check: permission-->
     <string name="self_check_name_notifications">Bildirimlere izin verildi</string>
@@ -137,8 +145,8 @@ Bu işlem birkaç dakika sürebilir."</string>
     <string name="self_check_resolution_system_spoofs">Gerekli olabilecek adımlar için belgeleri kontrol edin</string>
     <!--self check: package-->
     <string name="self_check_pkg_gms">Play Hizmetleri</string>
-    <string name="self_check_name_app_installed"><xliff:g example="YouTube">%1$s</xliff:g> yüklü</string>
-    <string name="self_check_resolution_app_installed"><xliff:g example="YouTube">%1$s</xliff:g> uygulamasını yükleyin. Hangi uygulamaların uyumlu olduğunu öğrenmek için belgeleri kontrol edin</string>
+    <string name="self_check_name_app_installed">%1$s yüklü</string>
+    <string name="self_check_resolution_app_installed">%1$s uygulamasını yükleyin. Hangi uygulamaların uyumlu olduğunu öğrenmek için belgeleri kontrol edin</string>
 
     <!--Settings Preferences-->
 
@@ -189,7 +197,8 @@ Bu işlem birkaç dakika sürebilir."</string>
     <string name="pref_network_google_enabled">Google sunucularına bağlanmaya izin ver</string>
     <string name="pref_network_google_enabled_summary">Kapalıyken MicroG tarafından yapılan tüm bağlantılar engellenir. Bu, hizmet ayarlarını geçersiz kılar</string>
     <string name="pref_network_google_use_tor">Google\'a Tor üzerinden bağlan</string>
-    <string name="pref_network_google_use_tor_summary">Orbot yüklü olmalıdır\nHenüz desteklenmiyor</string>
+    <string name="pref_network_google_use_tor_summary">"Orbot yüklü olmalıdır
+Henüz desteklenmiyor"</string>
     <string name="pref_auth_trust_google_title">Uygulama izinleri için Google\'a güven</string>
     <string name="pref_auth_trust_google_summary">Kapalıyken istek gönderilmeden kullanıcıya sorulur. Kapatılırsa bazı uygulamalar hesabı kullanamayabilir</string>
     <string name="pref_auth_visible_title">Uygulamaların hesapları bulmasına izin ver</string>

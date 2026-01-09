@@ -3,7 +3,7 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
 
     <!--App Names-->
 
@@ -28,7 +28,7 @@
     <!-- %1$s is an app name, such as "YouTube" -->
     <string name="signin_subtext_sharing">To continue, MicroG will share name, email address and profile picture of your Google Account with %1$s</string>
     <!--auth: buttons-->
-    <string name="auth_huawei_button">Huawei</string>
+    <string name="auth_huawei_button" translatable="false">Huawei</string>
     <!--auth: messages-->
     <string name="auth_before_connect">"Connect Google account with MicroG.
 

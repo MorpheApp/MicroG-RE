@@ -3,7 +3,7 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
 
     <!--App Names-->
 
@@ -18,13 +18,11 @@
     <string name="auth_sorry">Вибачте…</string>
     <!--auth: sign-->
     <string name="signin_picker_title">Виберіть обліковий запис</string>
-    <string name="signin_picker_subtitle">щоб продовжити в <xliff:g example="YouTube">%1$s</xliff:g></string>
+    <string name="signin_picker_subtitle">щоб продовжити в %1$s</string>
     <string name="signin_confirm_button_text">Дозволити і поділитися</string>
     <string name="signin_picker_add_account_label">Додати інший обліковий запис</string>
-    <string name="signin_confirm_title">Дозволити вхід у <xliff:g example="YouTube">%1$s</xliff:g></string>
-    <string name="signin_subtext_sharing">Щоб продовжити, MicroG поділиться ім\'ям, адресою електронної пошти та зображенням профілю вашого облікового запису Google з <xliff:g example="YouTube">%1$s</xliff:g></string>
-    <!--auth: buttons-->
-    <string name="auth_huawei_button">Huawei</string>
+    <string name="signin_confirm_title">Дозволити вхід у %1$s</string>
+    <string name="signin_subtext_sharing">Щоб продовжити, MicroG поділиться ім\'ям, адресою електронної пошти та зображенням профілю вашого облікового запису Google з %1$s</string>
     <!--auth: messages-->
     <string name="auth_before_connect">"Підключіть обліковий запис Google до MicroG.
 
@@ -44,12 +42,16 @@
 Це може зайняти кілька хвилин."</string>
     <!--auth: notifications-->
     <string name="auth_notification_title">Потрібна автентифікація</string>
-    <string name="auth_notification_content"><xliff:g example="YouTube">%1$s</xliff:g> вимагає вашої авторизації для доступу до вашого облікового запису Google</string>
+    <string name="auth_notification_content">%1$s вимагає вашої авторизації для доступу до вашого облікового запису Google</string>
 
     <!--Account Manager-->
 
     <string name="dialog_title_remove_account">Видалити обліковий запис</string>
-    <string name="dialog_message_remove_account">Ви впевнені, що хочете видалити цей обліковий запис?\n\nДеякі сервіси та функції стануть недоступними\n\nВаші дані не буде втрачено</string>
+    <string name="dialog_message_remove_account">"Ви впевнені, що хочете видалити цей обліковий запис?
+
+Деякі сервіси та функції стануть недоступними
+
+Ваші дані не буде втрачено"</string>
     <string name="dialog_confirm_button">Видалити</string>
     <string name="dialog_cancel_button">Скасувати</string>
     <string name="snackbar_remove_account">Обліковий запис %s видалено</string>
@@ -63,18 +65,24 @@
     <string name="gcm_registered">Зареєстровано</string>
     <string name="gcm_unregister_app">Скасувати реєстрацію</string>
     <string name="gcm_remove_registers_dialog_title">Видалити всі реєстрації?</string>
-    <string name="gcm_unregister_confirm_title">Скасувати реєстрацію <xliff:g example="YouTube">%1$s</xliff:g>?</string>
-    <string name="gcm_remove_registers_dialog_message">Це одночасно видалить усі програми, зареєстровані для push-сповіщень\n\nВам потрібно буде відкрити програми для повторної реєстрації в хмарних повідомленнях\n\nДеякі програми можуть не зареєструватися знову після цієї дії</string>
-    <string name="gcm_unregister_confirm_message">Деякі додатки повторно не реєструються автоматично та/або не надають можливості зробити це вручну. Ці додатки можуть працювати неправильно після скасування реєстрації.\nПродовжити?</string>
-    <string name="gcm_unregister_after_deny_message">Ви відмовили додатку в реєстрації для отримання сповіщень, який вже зареєстрований.\nВи хочете скасувати реєстрацію зараз, щоб він не отримував повідомлень у майбутньому?</string>
+    <string name="gcm_unregister_confirm_title">Скасувати реєстрацію %1$s?</string>
+    <string name="gcm_remove_registers_dialog_message">"Це одночасно видалить усі програми, зареєстровані для push-сповіщень
+
+Вам потрібно буде відкрити програми для повторної реєстрації в хмарних повідомленнях
+
+Деякі програми можуть не зареєструватися знову після цієї дії"</string>
+    <string name="gcm_unregister_confirm_message">"Деякі додатки повторно не реєструються автоматично та/або не надають можливості зробити це вручну. Ці додатки можуть працювати неправильно після скасування реєстрації.
+Продовжити?"</string>
+    <string name="gcm_unregister_after_deny_message">"Ви відмовили додатку в реєстрації для отримання сповіщень, який вже зареєстрований.
+Ви хочете скасувати реєстрацію зараз, щоб він не отримував повідомлень у майбутньому?"</string>
     <!--gcm: register messages infos-->
     <string name="gcm_no_message_yet">Поки що повідомлень не отримано</string>
-    <string name="gcm_last_message_at">Останнє повідомлення: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
-    <string name="gcm_registered_since">Зареєстровано з: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
-    <string name="gcm_messages_counter">Повідомлень: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> байт)</string>
+    <string name="gcm_last_message_at">Останнє повідомлення: %1$s</string>
+    <string name="gcm_registered_since">Зареєстровано з: %1$s</string>
+    <string name="gcm_messages_counter">Повідомлень: %1$d (%2$d байт)</string>
     <!--gcm: network states-->
     <string name="gcm_network_state_disconnected">Відключено</string>
-    <string name="gcm_network_state_connected">Підключено <xliff:g example="2 hours ago">%1$s</xliff:g></string>
+    <string name="gcm_network_state_connected">Підключено %1$s</string>
     <!--gcm: network types entry's-->
     <string name="network_type_mobile">Мобільна мережа</string>
     <string name="network_type_wifi">Wi-Fi</string>
@@ -87,13 +95,13 @@
     <string name="push_notifications_summary_values_seconds">%s секунд</string>
     <string name="push_notifications_summary_values_minutes">%s хвилин</string>
     <!--gcm: ask push permission dialog-->
-    <string name="gcm_allow_app_popup">Дозволити <xliff:g example="YouTube">%1$s</xliff:g> зареєструватися для отримання сповіщень?</string>
+    <string name="gcm_allow_app_popup">Дозволити %1$s зареєструватися для отримання сповіщень?</string>
     <string name="allow">Дозволити</string>
     <string name="deny">Відхилити</string>
     <!--gcm: ask permission tos-->
     <string name="ask_permission_tos">Продовжуючи, ви дозволяєте цьому додатку та Google використовувати вашу інформацію згідно з їхніми умовами використання та політикою конфіденційності.</string>
-    <string name="ask_scope_permission_title"><xliff:g example="YouTube">%1$s</xliff:g> хоче:</string>
-    <string name="ask_service_permission_title"><xliff:g example="YouTube">%1$s</xliff:g> хоче використовувати:</string>
+    <string name="ask_scope_permission_title">%1$s хоче:</string>
+    <string name="ask_service_permission_title">%1$s хоче використовувати:</string>
 
     <!--Device Registration-->
 
@@ -101,7 +109,7 @@
     <string name="checkin_enable_switch">Зареєструвати пристрій</string>
     <!--checkin: registration status-->
     <string name="checkin_not_registered">Не зареєстровано</string>
-    <string name="checkin_last_registration">Остання реєстрація: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="checkin_last_registration">Остання реєстрація: %1$s</string>
     <!--checkin: profile names types entry's-->
     <string name="profile_name_native">Рідний</string>
     <string name="profile_name_real">Реальний</string>
@@ -119,8 +127,8 @@
     <!--self check: patched apps-->
     <string name="self_check_source_morphe">патчі Morphe</string>
     <string name="self_check_source_alternative">альтернативні патчі</string>
-    <string name="self_check_patched_app_installed">Використовується з <xliff:g example="Morphe">%1$s</xliff:g></string>
-    <string name="self_check_resolution_patched_app_installed">Програми, що використовують <xliff:g example="Morphe">%1$s</xliff:g>, не знайдено. Будь ласка, застосуйте патч до apk та встановіть</string>
+    <string name="self_check_patched_app_installed">Використовується з %1$s</string>
+    <string name="self_check_resolution_patched_app_installed">Програми, що використовують %1$s, не знайдено. Будь ласка, застосуйте патч до apk та встановіть</string>
     <string name="self_check_action_download_morphe">Завантажити Morphe</string>
     <!--self check: permission-->
     <string name="self_check_name_notifications">Сповіщення дозволено</string>
@@ -137,8 +145,8 @@
     <string name="self_check_resolution_system_spoofs">Будь ласка, перевірте документацію щодо необхідних кроків</string>
     <!--self check: package-->
     <string name="self_check_pkg_gms">Play Сервіси</string>
-    <string name="self_check_name_app_installed"><xliff:g example="YouTube">%1$s</xliff:g> встановлено</string>
-    <string name="self_check_resolution_app_installed">Встановіть додаток <xliff:g example="YouTube">%1$s</xliff:g> або сумісний. Будь ласка, перевірте список сумісних додатків у документації</string>
+    <string name="self_check_name_app_installed">%1$s встановлено</string>
+    <string name="self_check_resolution_app_installed">Встановіть додаток %1$s або сумісний. Будь ласка, перевірте список сумісних додатків у документації</string>
 
     <!--Settings Preferences-->
 
@@ -189,7 +197,8 @@
     <string name="pref_network_google_enabled">Дозволити підключення до серверів Google</string>
     <string name="pref_network_google_enabled_summary">Якщо вимкнено, підключення до серверів Google буде заборонено. Це перекриває налаштування конкретних сервісів</string>
     <string name="pref_network_google_use_tor">Підключення до Google через Tor</string>
-    <string name="pref_network_google_use_tor_summary">Потрібно встановити Orbot\nЩе не підтримується</string>
+    <string name="pref_network_google_use_tor_summary">"Потрібно встановити Orbot
+Ще не підтримується"</string>
     <string name="pref_auth_trust_google_title">Довіряти Google дозволи додатків</string>
     <string name="pref_auth_trust_google_summary">Якщо вимкнено, користувача запитуватимуть перед авторизацією. Деякі додатки не зможуть працювати без цього</string>
     <string name="pref_auth_visible_title">Дозволити додаткам знаходити акаунти</string>

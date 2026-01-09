@@ -3,13 +3,13 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
 
     <!--Foreground service notification-->
 
     <string name="foreground_service_notification_title">Attivo in secondo piano</string>
-    <string name="foreground_service_notification_text"><xliff:g example="Exposure Notification">%1$s</xliff:g> è in fase di esecuzione in secondo piano</string>
-    <string name="foreground_service_notification_big_text">Escludi <xliff:g example="microG Services">%1$s</xliff:g> dalla lista delle app con ottimizzazione della batteria attiva o nascondi questa notifica dalle impostazioni dell\'app</string>
+    <string name="foreground_service_notification_text" formatted="true">%1$s è in fase di esecuzione in secondo piano</string>
+    <string name="foreground_service_notification_big_text">Escludi %1$s dalla lista delle app con ottimizzazione della batteria attiva o nascondi questa notifica dalle impostazioni dell\'app</string>
     <!--foreground service: notification actions-->
     <string name="foreground_action_battery_optimization">Ottimizzazione batteria</string>
     <string name="foreground_action_notification_settings">Impostazioni</string>

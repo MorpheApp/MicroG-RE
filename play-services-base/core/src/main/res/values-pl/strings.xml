@@ -3,13 +3,13 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
 
     <!--Foreground service notification-->
 
     <string name="foreground_service_notification_title">Aktywna w tle</string>
-    <string name="foreground_service_notification_text"><xliff:g example="Exposure Notification">%1$s</xliff:g> jest uruchomiona w tle</string>
-    <string name="foreground_service_notification_big_text">Wyłącz optymalizację baterii dla <xliff:g example="microG Services">%1$s</xliff:g> lub zmień ustawienia powiadomień, aby ukryć to powiadomienie</string>
+    <string name="foreground_service_notification_text" formatted="true">%1$s jest uruchomiona w tle</string>
+    <string name="foreground_service_notification_big_text">Wyłącz optymalizację baterii dla %1$s lub zmień ustawienia powiadomień, aby ukryć to powiadomienie</string>
     <!--foreground service: notification actions-->
     <string name="foreground_action_battery_optimization">Optymalizacja baterii</string>
     <string name="foreground_action_notification_settings">Ustawienia</string>

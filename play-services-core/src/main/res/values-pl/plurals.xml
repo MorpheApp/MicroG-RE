@@ -14,13 +14,13 @@
   ~ limitations under the License.
   -->
 
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
 
     <!--Google Cloud Messaging-->
 
     <plurals name="gcm_registered_apps_counter">
-        <item quantity="one"><xliff:g example="1">%1$d</xliff:g> zarejestrowana aplikacja</item>
-        <item quantity="other"><xliff:g example="123">%1$d</xliff:g> zarejestrowanych aplikacji</item>
+        <item quantity="one">%1$d zarejestrowana aplikacja</item>
+        <item quantity="other">%1$d zarejestrowanych aplikacji</item>
     </plurals>
 
     <!--Conditions-->

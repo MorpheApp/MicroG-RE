@@ -3,7 +3,7 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
 
     <!--App Names-->
 
@@ -18,13 +18,11 @@
     <string name="auth_sorry">Извините…</string>
     <!--auth: sign-->
     <string name="signin_picker_title">Выберите аккаунт</string>
-    <string name="signin_picker_subtitle">чтобы продолжить в <xliff:g example="YouTube">%1$s</xliff:g></string>
+    <string name="signin_picker_subtitle">чтобы продолжить в %1$s</string>
     <string name="signin_confirm_button_text">Разрешить и поделиться</string>
     <string name="signin_picker_add_account_label">Добавить другой аккаунт</string>
-    <string name="signin_confirm_title">Разрешить вход в <xliff:g example="YouTube">%1$s</xliff:g></string>
-    <string name="signin_subtext_sharing">Чтобы продолжить, MicroG передаст имя, адрес электронной почты и фотографию профиля вашего аккаунта Google в <xliff:g example="YouTube">%1$s</xliff:g></string>
-    <!--auth: buttons-->
-    <string name="auth_huawei_button">Huawei</string>
+    <string name="signin_confirm_title">Разрешить вход в %1$s</string>
+    <string name="signin_subtext_sharing">Чтобы продолжить, MicroG передаст имя, адрес электронной почты и фотографию профиля вашего аккаунта Google в %1$s</string>
     <!--auth: messages-->
     <string name="auth_before_connect">"Подключите аккаунт Google к MicroG.
 
@@ -44,12 +42,16 @@
 Это может занять пару минут"</string>
     <!--auth: notifications-->
     <string name="auth_notification_title">Требуется аутентификация</string>
-    <string name="auth_notification_content"><xliff:g example="YouTube">%1$s</xliff:g> запрашивает доступ к вашему аккаунту Google</string>
+    <string name="auth_notification_content">%1$s запрашивает доступ к вашему аккаунту Google</string>
 
     <!--Account Manager-->
 
     <string name="dialog_title_remove_account">Удалить аккаунт</string>
-    <string name="dialog_message_remove_account">Вы уверены, что хотите удалить этот аккаунт?\n\nНекоторые службы и функции будут недоступны\n\nВаши данные не будут потеряны</string>
+    <string name="dialog_message_remove_account">"Вы уверены, что хотите удалить этот аккаунт?
+
+Некоторые службы и функции будут недоступны
+
+Ваши данные не будут потеряны"</string>
     <string name="dialog_confirm_button">Удалить</string>
     <string name="dialog_cancel_button">Отмена</string>
     <string name="snackbar_remove_account">Аккаунт %s удалён</string>
@@ -63,22 +65,28 @@
     <string name="gcm_registered">Зарегистрировано</string>
     <string name="gcm_unregister_app">Отменить регистрацию</string>
     <string name="gcm_remove_registers_dialog_title">Удалить все регистрации?</string>
-    <string name="gcm_unregister_confirm_title">Отменить регистрацию <xliff:g example="YouTube">%1$s</xliff:g>?</string>
-    <string name="gcm_remove_registers_dialog_message">Это удалит все приложения, зарегистрированные для push-уведомлений.\n\nВам понадобится открыть приложения, чтобы повторно зарегистрироваться в облачных сообщениях.\n\nНекоторые приложения могут не суметь зарегистрироваться снова после этого действия</string>
-    <string name="gcm_unregister_confirm_message">Некоторые приложения не регистрируются автоматически повторно и/или не предоставляют опцию для ручной регистрации. После отмены регистрации эти приложения могут работать некорректно.\nПродолжить?</string>
-    <string name="gcm_unregister_after_deny_message">Вы отказали приложению в регистрации для push-уведомлений, которое уже зарегистрировано.\nХотите отменить регистрацию сейчас, чтобы оно больше не получало сообщения?</string>
+    <string name="gcm_unregister_confirm_title">Отменить регистрацию %1$s?</string>
+    <string name="gcm_remove_registers_dialog_message">"Это удалит все приложения, зарегистрированные для push-уведомлений.
+
+Вам понадобится открыть приложения, чтобы повторно зарегистрироваться в облачных сообщениях.
+
+Некоторые приложения могут не суметь зарегистрироваться снова после этого действия"</string>
+    <string name="gcm_unregister_confirm_message">"Некоторые приложения не регистрируются автоматически повторно и/или не предоставляют опцию для ручной регистрации. После отмены регистрации эти приложения могут работать некорректно.
+Продолжить?"</string>
+    <string name="gcm_unregister_after_deny_message">"Вы отказали приложению в регистрации для push-уведомлений, которое уже зарегистрировано.
+Хотите отменить регистрацию сейчас, чтобы оно больше не получало сообщения?"</string>
     <!--gcm: register messages infos-->
     <string name="gcm_no_message_yet">Пока сообщений нет</string>
-    <string name="gcm_last_message_at">Последнее сообщение: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
-    <string name="gcm_registered_since">Зарегистрировано с: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
-    <string name="gcm_messages_counter">Сообщения: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> байт)</string>
+    <string name="gcm_last_message_at">Последнее сообщение: %1$s</string>
+    <string name="gcm_registered_since">Зарегистрировано с: %1$s</string>
+    <string name="gcm_messages_counter">Сообщения: %1$d (%2$d байт)</string>
     <!--gcm: network states-->
     <string name="gcm_network_state_disconnected">Отключено</string>
-    <string name="gcm_network_state_connected">Подключено с: <xliff:g example="2 hours ago">%1$s</xliff:g></string>
+    <string name="gcm_network_state_connected">Подключено с: %1$s</string>
     <!--gcm: network types entry's-->
     <string name="network_type_mobile">Мобильная сеть</string>
     <string name="network_type_wifi">Wi-Fi</string>
-    <string name="network_type_roaming">Роуминг</string>
+    <string name="network_type_roaming">Роумінг</string>
     <string name="network_type_other">Другие сети</string>
     <!--gcm: push notifications ping entry's-->
     <string name="push_notifications_summary_off">ВЫКЛ</string>
@@ -87,13 +95,13 @@
     <string name="push_notifications_summary_values_seconds">%s сек</string>
     <string name="push_notifications_summary_values_minutes">%s мин</string>
     <!--gcm: ask push permission dialog-->
-    <string name="gcm_allow_app_popup">Разрешить <xliff:g example="YouTube">%1$s</xliff:g> регистрироваться для push-уведомлений?</string>
+    <string name="gcm_allow_app_popup">Разрешить %1$s регистрироваться для push-уведомлений?</string>
     <string name="allow">Разрешить</string>
     <string name="deny">Отказать</string>
     <!--gcm: ask permission tos-->
     <string name="ask_permission_tos">Продолжая, вы разрешаете этому приложению и Google использовать информацию в соответствии с их условиями и политиками конфиденциальности</string>
-    <string name="ask_scope_permission_title"><xliff:g example="YouTube">%1$s</xliff:g> запрашивает:</string>
-    <string name="ask_service_permission_title"><xliff:g example="YouTube">%1$s</xliff:g> хотел бы использовать:</string>
+    <string name="ask_scope_permission_title">%1$s запрашивает:</string>
+    <string name="ask_service_permission_title">%1$s хотел бы использовать:</string>
 
     <!--Device Registration-->
 
@@ -101,7 +109,7 @@
     <string name="checkin_enable_switch">Регистрация устройства</string>
     <!--checkin: registration status-->
     <string name="checkin_not_registered">Не зарегистрировано</string>
-    <string name="checkin_last_registration">Последняя регистрация: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="checkin_last_registration">Последняя регистрация: %1$s</string>
     <!--checkin: profile names types entry's-->
     <string name="profile_name_native">Нативный</string>
     <string name="profile_name_real">Реальный</string>
@@ -117,10 +125,10 @@
     <string name="self_check_cat_gms_packages">Установленные пакеты</string>
     <string name="self_check_cat_fake_sig">Подмена подписи</string>
     <!--self check: patched apps-->
-    <string name="self_check_source_morphe">патчи Morphe</string>
+    <string name="self_check_source_morphe">патчі Morphe</string>
     <string name="self_check_source_alternative">альтернативные патчи</string>
-    <string name="self_check_patched_app_installed">Работает с <xliff:g example="Morphe">%1$s</xliff:g></string>
-    <string name="self_check_resolution_patched_app_installed">Приложения, использующие <xliff:g example="Morphe">%1$s</xliff:g>, не найдены. Пожалуйста, пропатчите apk и установите</string>
+    <string name="self_check_patched_app_installed">Работает с %1$s</string>
+    <string name="self_check_resolution_patched_app_installed">Приложения, использующие %1$s, не найдены. Пожалуйста, пропатчите apk и установите</string>
     <string name="self_check_action_download_morphe">Загрузить Morphe</string>
     <!--self check: permission-->
     <string name="self_check_name_notifications">Уведомления разрешены</string>
@@ -137,8 +145,8 @@
     <string name="self_check_resolution_system_spoofs">Сверьтесь с документацией о необходимых дополнительных шагах</string>
     <!--self check: package-->
     <string name="self_check_pkg_gms">Play Services</string>
-    <string name="self_check_name_app_installed"><xliff:g example="YouTube">%1$s</xliff:g> установлено</string>
-    <string name="self_check_resolution_app_installed">Установите <xliff:g example="YouTube">%1$s</xliff:g> или совместимый вариант. Проверьте список совместимых программ в документации</string>
+    <string name="self_check_name_app_installed">%1$s установлено</string>
+    <string name="self_check_resolution_app_installed">Установите %1$s или совместимый вариант. Проверьте список совместимых программ в документации</string>
 
     <!--Settings Preferences-->
 
@@ -189,7 +197,8 @@
     <string name="pref_network_google_enabled">Разрешить соединение с серверами Google</string>
     <string name="pref_network_google_enabled_summary">Если отключено, MicroG будет блокировать любые запросы к Google. Это важнее настроек сервисов</string>
     <string name="pref_network_google_use_tor">Подключаться к Google через сеть Tor</string>
-    <string name="pref_network_google_use_tor_summary">Требует Orbot\nЕще не поддерживается</string>
+    <string name="pref_network_google_use_tor_summary">"Требует Orbot
+Еще не поддерживается"</string>
     <string name="pref_auth_trust_google_title">Доверять Google для разрешений приложений</string>
     <string name="pref_auth_trust_google_summary">Если отключено, пользователь будет видеть вопрос перед авторизацией. Некоторые программы могут не работать без доверия</string>
     <string name="pref_auth_visible_title">Разрешить приложениям находить аккаунты</string>
@@ -207,7 +216,7 @@
     <!--Permissions-->
 
     <string name="perm_status_broadcast_label">прослушивать внутренние сообщения статуса</string>
-    <string name="perm_gsf_read_gservices_label">читать конфигурацию сервисов Google</string>
+    <string name="perm_gsf_read_gservices_label">читать конфигурацию сервісів Google</string>
     <string name="perm_c2dm_receive_label">принимать сообщения C2DM</string>
     <string name="perm_c2dm_send_label">отправлять C2DM сообщения другим приложениям</string>
     <string name="perm_gtalk_svc_label">обмениваться сообщениями и получать уведомления синхронизации</string>

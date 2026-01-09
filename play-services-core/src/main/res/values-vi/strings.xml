@@ -3,7 +3,7 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
 
     <!--App Names-->
 
@@ -18,13 +18,11 @@
     <string name="auth_sorry">Lấy làm tiếc…</string>
     <!--auth: sign-->
     <string name="signin_picker_title">Chọn một tài khoản</string>
-    <string name="signin_picker_subtitle">để tiếp tục với <xliff:g example="YouTube">%1$s</xliff:g></string>
+    <string name="signin_picker_subtitle">để tiếp tục với %1$s</string>
     <string name="signin_confirm_button_text">Cho phép và chia sẻ</string>
     <string name="signin_picker_add_account_label">Thêm tài khoản khác</string>
-    <string name="signin_confirm_title">Cho phép đăng nhập vào <xliff:g example="YouTube">%1$s</xliff:g></string>
-    <string name="signin_subtext_sharing">Để tiếp tục, MicroG sẽ chia sẻ tên, email và ảnh đại diện của Tài khoản Google của bạn với <xliff:g example="YouTube">%1$s</xliff:g></string>
-    <!--auth: buttons-->
-    <string name="auth_huawei_button">Huawei</string>
+    <string name="signin_confirm_title">Cho phép đăng nhập vào %1$s</string>
+    <string name="signin_subtext_sharing">Để tiếp tục, MicroG sẽ chia sẻ tên, email và ảnh đại diện của Tài khoản Google của bạn với %1$s</string>
     <!--auth: messages-->
     <string name="auth_before_connect">"Liên kết tài khoản Google của bạn với MicroG.
 
@@ -44,12 +42,16 @@ Vui lòng thử lại sau."</string>
 Quá trình này có thể tốn một vài phút."</string>
     <!--auth: notifications-->
     <string name="auth_notification_title">Yêu cầu xác thực</string>
-    <string name="auth_notification_content"><xliff:g example="YouTube">%1$s</xliff:g> yêu cầu quyền truy cập vào tài khoản Google của bạn</string>
+    <string name="auth_notification_content">%1$s yêu cầu quyền truy cập vào tài khoản Google của bạn</string>
 
     <!--Account Manager-->
 
     <string name="dialog_title_remove_account">Huỷ liên kết tài khoản</string>
-    <string name="dialog_message_remove_account">Bạn có muốn huỷ liên kết tài khoản này không?\n\nMột vài tính năng và dịch vụ sẽ không khả dụng sau đó.\n\nDữ liệu của bạn sẽ không bị mất.</string>
+    <string name="dialog_message_remove_account">"Bạn có muốn huỷ liên kết tài khoản này không?
+
+Một vài tính năng và dịch vụ sẽ không khả dụng sau đó.
+
+Dữ liệu của bạn sẽ không bị mất."</string>
     <string name="dialog_confirm_button">Huỷ liên kết</string>
     <string name="dialog_cancel_button">Bỏ qua</string>
     <string name="snackbar_remove_account">Tài khoản %s đã huỷ liên kết</string>
@@ -63,18 +65,24 @@ Quá trình này có thể tốn một vài phút."</string>
     <string name="gcm_registered">Đã đăng ký</string>
     <string name="gcm_unregister_app">Huỷ đăng ký</string>
     <string name="gcm_remove_registers_dialog_title">Xoá mọi trạng thái đăng ký?</string>
-    <string name="gcm_unregister_confirm_title">Huỷ đăng ký <xliff:g example="YouTube">%1$s</xliff:g>?</string>
-    <string name="gcm_remove_registers_dialog_message">Điều này sẽ xoá tất cả ứng dụng đã đăng ký nhận thông báo từ FCM cùng lúc.\n\nBạn sẽ cần mở lại ứng dụng để đăng ký lại vào dịch vụ thông báo đám mây.\n\nMột số ứng dụng có thể không đăng ký lại được sau thao tác này.</string>
-    <string name="gcm_unregister_confirm_message">Một số ứng dụng không tự đăng ký lại hoặc không có tùy chọn thực hiện thủ công. Ứng dụng có thể hoạt động không đúng cách sau khi hủy đăng ký.\nTiếp tục?</string>
-    <string name="gcm_unregister_after_deny_message">Bạn đã từ chối quyền đăng ký thông báo cho ứng dụng đã được đăng ký. \nBạn có muốn hủy đăng ký bây giờ để không nhận thông báo trong tương lai không?</string>
+    <string name="gcm_unregister_confirm_title">Huỷ đăng ký %1$s?</string>
+    <string name="gcm_remove_registers_dialog_message">"Điều này sẽ xoá tất cả ứng dụng đã đăng ký nhận thông báo từ FCM cùng lúc.
+
+Bạn sẽ cần mở lại ứng dụng để đăng ký lại vào dịch vụ thông báo đám mây.
+
+Một số ứng dụng có thể không đăng ký lại được sau thao tác này."</string>
+    <string name="gcm_unregister_confirm_message">"Một số ứng dụng không tự đăng ký lại hoặc không có tùy chọn thực hiện thủ công. Ứng dụng có thể hoạt động không đúng cách sau khi hủy đăng ký.
+Tiếp tục?"</string>
+    <string name="gcm_unregister_after_deny_message">"Bạn đã từ chối quyền đăng ký thông báo cho ứng dụng đã được đăng ký. 
+Bạn có muốn hủy đăng ký bây giờ để không nhận thông báo trong tương lai không?"</string>
     <!--gcm: register messages infos-->
     <string name="gcm_no_message_yet">Không có thông báo nhận gần đây</string>
-    <string name="gcm_last_message_at">Thông báo cuối cùng: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
-    <string name="gcm_registered_since">Đăng ký từ: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
-    <string name="gcm_messages_counter">Số lượng thông báo: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> bytes)</string>
+    <string name="gcm_last_message_at">Thông báo cuối cùng: %1$s</string>
+    <string name="gcm_registered_since">Đăng ký từ: %1$s</string>
+    <string name="gcm_messages_counter">Số lượng thông báo: %1$d (%2$d bytes)</string>
     <!--gcm: network states-->
     <string name="gcm_network_state_disconnected">Đã ngắt kết nối</string>
-    <string name="gcm_network_state_connected">Đã kết nối từ <xliff:g example="2 hours ago">%1$s</xliff:g></string>
+    <string name="gcm_network_state_connected">Đã kết nối từ %1$s</string>
     <!--gcm: network types entry's-->
     <string name="network_type_mobile">Dữ liệu di động</string>
     <string name="network_type_wifi">Wi-Fi</string>
@@ -87,13 +95,13 @@ Quá trình này có thể tốn một vài phút."</string>
     <string name="push_notifications_summary_values_seconds">%s giây</string>
     <string name="push_notifications_summary_values_minutes">%s phút</string>
     <!--gcm: ask push permission dialog-->
-    <string name="gcm_allow_app_popup">Cho phép <xliff:g example="YouTube">%1$s</xliff:g> đăng ký nhận thông báo đẩy?</string>
+    <string name="gcm_allow_app_popup">Cho phép %1$s đăng ký nhận thông báo đẩy?</string>
     <string name="allow">Cho phép</string>
     <string name="deny">Từ chối</string>
     <!--gcm: ask permission tos-->
     <string name="ask_permission_tos">Bằng việc tiếp tục, bạn đồng ý cho ứng dụng và Google sử dụng thông tin của bạn theo điều khoản dịch vụ và chính sách quyền riêng tư tương ứng.</string>
-    <string name="ask_scope_permission_title"><xliff:g example="YouTube">%1$s</xliff:g> muốn:</string>
-    <string name="ask_service_permission_title"><xliff:g example="YouTube">%1$s</xliff:g> muốn sử dụng:</string>
+    <string name="ask_scope_permission_title">%1$s muốn:</string>
+    <string name="ask_service_permission_title">%1$s muốn sử dụng:</string>
 
     <!--Device Registration-->
 
@@ -101,7 +109,7 @@ Quá trình này có thể tốn một vài phút."</string>
     <string name="checkin_enable_switch">Đăng ký thiết bị</string>
     <!--checkin: registration status-->
     <string name="checkin_not_registered">Chưa đăng ký</string>
-    <string name="checkin_last_registration">Lần đăng ký cuối: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="checkin_last_registration">Lần đăng ký cuối: %1$s</string>
     <!--checkin: profile names types entry's-->
     <string name="profile_name_native">Trực tiếp</string>
     <string name="profile_name_real">Thực</string>
@@ -119,8 +127,8 @@ Quá trình này có thể tốn một vài phút."</string>
     <!--self check: patched apps-->
     <string name="self_check_source_morphe">bản vá Morphe</string>
     <string name="self_check_source_alternative">bản vá thay thế</string>
-    <string name="self_check_patched_app_installed">Đang chạy với <xliff:g example="Morphe">%1$s</xliff:g></string>
-    <string name="self_check_resolution_patched_app_installed">Không tìm thấy ứng dụng sử dụng <xliff:g example="Morphe">%1$s</xliff:g>. Vui lòng vá apk và cài đặt</string>
+    <string name="self_check_patched_app_installed">Đang chạy với %1$s</string>
+    <string name="self_check_resolution_patched_app_installed">Không tìm thấy ứng dụng sử dụng %1$s. Vui lòng vá apk và cài đặt</string>
     <string name="self_check_action_download_morphe">Tải về Morphe</string>
     <!--self check: permission-->
     <string name="self_check_name_notifications">Đã cho phép thông báo</string>
@@ -137,8 +145,8 @@ Quá trình này có thể tốn một vài phút."</string>
     <string name="self_check_resolution_system_spoofs">Vui lòng đọc tài liệu để biết các bước cần thiết.</string>
     <!--self check: package-->
     <string name="self_check_pkg_gms">Dịch vụ Google Play</string>
-    <string name="self_check_name_app_installed"><xliff:g example="YouTube">%1$s</xliff:g> đã cài đặt</string>
-    <string name="self_check_resolution_app_installed">Cài đặt ứng dụng <xliff:g example="YouTube">%1$s</xliff:g> hoặc một ứng dụng tương thích khác. Đọc tài liệu để biết thêm chi tiết.</string>
+    <string name="self_check_name_app_installed">%1$s đã cài đặt</string>
+    <string name="self_check_resolution_app_installed">Cài đặt ứng dụng %1$s hoặc một ứng dụng tương thích khác. Đọc tài liệu để biết thêm chi tiết.</string>
 
     <!--Settings Preferences-->
 
@@ -189,7 +197,7 @@ Quá trình này có thể tốn một vài phút."</string>
     <string name="pref_network_google_enabled">Cho phép kết nối máy chủ Google</string>
     <string name="pref_network_google_enabled_summary">Nếu bị vô hiệu hoá, mọi kết nối tới máy chủ Google của MicroG sẽ bị chặn. Điều này ghi đè các cài đặt cụ thể.</string>
     <string name="pref_network_google_use_tor">Kết nối Google qua mạng lưới Tor</string>
-    <string name="pref_network_google_use_tor_summary">Yêu cầu cài đặt ứng dụng Orbot. Hiện chưa được hỗ trợ.</string>
+    <string name="pref_network_google_use_tor_summary">"Yêu cầu cài đặt ứng dụng Orbot. Hiện chưa được hỗ trợ."</string>
     <string name="pref_auth_trust_google_title">Tin tưởng Google về các quyền ứng dụng</string>
     <string name="pref_auth_trust_google_summary">Khi tắt, người dùng sẽ được hỏi trước khi yêu cầu xác thực gửi tới Google. Một số ứng dụng có thể gặp lỗi khi tắt tùy chọn này.</string>
     <string name="pref_auth_visible_title">Cho phép ứng dụng tìm tài khoản</string>

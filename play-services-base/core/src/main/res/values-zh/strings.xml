@@ -3,13 +3,13 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
 
     <!--Foreground service notification-->
 
     <string name="foreground_service_notification_title">后台运行中</string>
-    <string name="foreground_service_notification_text"><xliff:g example="Exposure Notification">%1$s</xliff:g> 正在后台运行</string>
-    <string name="foreground_service_notification_big_text">将 <xliff:g example="microG Services">%1$s</xliff:g> 排除在电池优化之外或更改通知设置以隐藏此通知</string>
+    <string name="foreground_service_notification_text" formatted="true">%1$s 正在后台运行</string>
+    <string name="foreground_service_notification_big_text">将 %1$s 排除在电池优化之外或更改通知设置以隐藏此通知</string>
     <!--foreground service: notification actions-->
     <string name="foreground_action_battery_optimization">电池优化</string>
     <string name="foreground_action_notification_settings">设置</string>

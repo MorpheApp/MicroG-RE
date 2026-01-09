@@ -3,13 +3,13 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
 
     <!--Foreground service notification-->
 
     <string name="foreground_service_notification_title">Hoạt động trong nền</string>
-    <string name="foreground_service_notification_text"><xliff:g example="Exposure Notification">%1$s</xliff:g> đang chạy trong nền</string>
-    <string name="foreground_service_notification_big_text">Loại bỏ <xliff:g example="microG Services">%1$s</xliff:g> khỏi tối ưu hóa pin hoặc thay đổi cài đặt thông báo để ẩn cảnh báo này</string>
+    <string name="foreground_service_notification_text" formatted="true">%1$s đang chạy trong nền</string>
+    <string name="foreground_service_notification_big_text">Loại bỏ %1$s khỏi tối ưu hóa pin hoặc thay đổi cài đặt thông báo để ẩn cảnh báo này</string>
     <!--foreground service: notification actions-->
     <string name="foreground_action_battery_optimization">Tối ưu hóa pin</string>
     <string name="foreground_action_notification_settings">Cài đặt</string>

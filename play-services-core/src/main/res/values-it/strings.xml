@@ -3,7 +3,7 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
 
     <!--App Names-->
 
@@ -18,13 +18,11 @@
     <string name="auth_sorry">Spiacente…</string>
     <!--auth: sign-->
     <string name="signin_picker_title">Scegli un account</string>
-    <string name="signin_picker_subtitle">per procedere a <xliff:g example="YouTube">%1$s</xliff:g></string>
+    <string name="signin_picker_subtitle">per procedere a %1$s</string>
     <string name="signin_confirm_button_text">Consenti e condividi</string>
     <string name="signin_picker_add_account_label">Aggiungi un altro account</string>
-    <string name="signin_confirm_title">Consenti l\'accesso a <xliff:g example="YouTube">%1$s</xliff:g></string>
-    <string name="signin_subtext_sharing">Procedendo, MicroG condividerà il nome, l\'indirizzo email e l\'immagine di profilo del tuo account Google con <xliff:g example="YouTube">%1$s</xliff:g></string>
-    <!--auth: buttons-->
-    <string name="auth_huawei_button">Huawei</string>
+    <string name="signin_confirm_title">Consenti l\'accesso a %1$s</string>
+    <string name="signin_subtext_sharing">Procedendo, MicroG condividerà il nome, l\'indirizzo email e l\'immagine di profilo del tuo account Google con %1$s</string>
     <!--auth: messages-->
     <string name="auth_before_connect">"Connetti account Google con MicroG.
 
@@ -44,12 +42,16 @@ Riprova più tardi"</string>
 Questo potrebbe richiedere qualche minuto"</string>
     <!--auth: notifications-->
     <string name="auth_notification_title">Autenticazione richiesta</string>
-    <string name="auth_notification_content"><xliff:g example="YouTube">%1$s</xliff:g> richiede la tua autorizzazione per accedere al tuo account Google</string>
+    <string name="auth_notification_content">%1$s richiede la tua autorizzazione per accedere al tuo account Google</string>
 
     <!--Account Manager-->
 
     <string name="dialog_title_remove_account">Rimuovi account</string>
-    <string name="dialog_message_remove_account">Sei sicuro di voler rimuovere questo account?\n\nAlcuni servizi e funzionalità non saranno più disponibili\n\nI tuoi dati non andranno persi</string>
+    <string name="dialog_message_remove_account">"Sei sicuro di voler rimuovere questo account?
+
+Alcuni servizi e funzionalità non saranno più disponibili
+
+I tuoi dati non andranno persi"</string>
     <string name="dialog_confirm_button">Rimuovi</string>
     <string name="dialog_cancel_button">Annulla</string>
     <string name="snackbar_remove_account">Account %s rimosso</string>
@@ -63,18 +65,24 @@ Questo potrebbe richiedere qualche minuto"</string>
     <string name="gcm_registered">Registrato</string>
     <string name="gcm_unregister_app">Annulla registrazione</string>
     <string name="gcm_remove_registers_dialog_title">Rimuovere tutti i registri?</string>
-    <string name="gcm_unregister_confirm_title">Annullare la registrazione di <xliff:g example="YouTube">%1$s</xliff:g>?</string>
-    <string name="gcm_remove_registers_dialog_message">Questa operazione rimuoverà tutte le applicazioni registrate per le notifiche push in una sola volta.\n\nDovrai aprire le applicazioni per registrarti nuovamente sul servizio di messaggistica cloud.\n\nAlcune app potrebbero non essere in grado di registrarsi nuovamente dopo questa azione</string>
-    <string name="gcm_unregister_confirm_message">Alcune app non effettuano una nuova registrazione in automatico o non forniscono un\'opzione manuale per farlo. Queste app potrebbero non funzionare correttamente dopo aver annullato la registrazione.\nProcedere?</string>
-    <string name="gcm_unregister_after_deny_message">Hai negato ad un\'app già registrata di potersi registrare nuovamente per mostrare notifiche push.\nIntendi annullare anche la sua attuale registrazione ora, così da non ricevere notifiche push in futuro?</string>
+    <string name="gcm_unregister_confirm_title">Annullare la registrazione di %1$s?</string>
+    <string name="gcm_remove_registers_dialog_message">"Questa operazione rimuoverà tutte le applicazioni registrate per le notifiche push in una sola volta.
+
+Dovrai aprire le applicazioni per registrarti nuovamente sul servizio di messaggistica cloud.
+
+Alcune app potrebbero non essere in grado di registrarsi nuovamente dopo questa azione"</string>
+    <string name="gcm_unregister_confirm_message">"Alcune app non effettuano una nuova registrazione in automatico o non forniscono un\'opzione manuale per farlo. Queste app potrebbero non funzionare correttamente dopo aver annullato la registrazione.
+Procedere?"</string>
+    <string name="gcm_unregister_after_deny_message">"Hai negato ad un\'app già registrata di potersi registrare nuovamente per mostrare notifiche push.
+Intendi annullare anche la sua attuale registrazione ora, così da non ricevere notifiche push in futuro?"</string>
     <!--gcm: register messages infos-->
     <string name="gcm_no_message_yet">Nessun messaggio finora ricevuto</string>
-    <string name="gcm_last_message_at">Ultimo messaggio: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
-    <string name="gcm_registered_since">Registrato da: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
-    <string name="gcm_messages_counter">Messaggi: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> byte)</string>
+    <string name="gcm_last_message_at">Ultimo messaggio: %1$s</string>
+    <string name="gcm_registered_since">Registrato da: %1$s</string>
+    <string name="gcm_messages_counter">Messaggi: %1$d (%2$d byte)</string>
     <!--gcm: network states-->
     <string name="gcm_network_state_disconnected">Disconnesso</string>
-    <string name="gcm_network_state_connected">Connesso da <xliff:g example="2 hours ago">%1$s</xliff:g></string>
+    <string name="gcm_network_state_connected">Connesso da %1$s</string>
     <!--gcm: network types entry's-->
     <string name="network_type_mobile">Rete mobile</string>
     <string name="network_type_wifi">Wi-Fi</string>
@@ -87,13 +95,13 @@ Questo potrebbe richiedere qualche minuto"</string>
     <string name="push_notifications_summary_values_seconds">%s secondi</string>
     <string name="push_notifications_summary_values_minutes">%s minuti</string>
     <!--gcm: ask push permission dialog-->
-    <string name="gcm_allow_app_popup">Vuoi consentire a <xliff:g example="YouTube">%1$s</xliff:g> di registrarsi per mostrare notifiche push?</string>
+    <string name="gcm_allow_app_popup">Vuoi consentire a %1$s di registrarsi per mostrare notifiche push?</string>
     <string name="allow">Consenti</string>
     <string name="deny">Nega</string>
     <!--gcm: ask permission tos-->
     <string name="ask_permission_tos">Procedendo, autorizzerai l\'app e Google all\'utilizzo delle tue informazioni in accordo con i relativi termini di servizio e l\'informativa sulla privacy</string>
-    <string name="ask_scope_permission_title"><xliff:g example="YouTube">%1$s</xliff:g> vorrebbe:</string>
-    <string name="ask_service_permission_title"><xliff:g example="YouTube">%1$s</xliff:g> vorrebbe utilizzare:</string>
+    <string name="ask_scope_permission_title">%1$s vorrebbe:</string>
+    <string name="ask_service_permission_title">%1$s vorrebbe utilizzare:</string>
 
     <!--Device Registration-->
 
@@ -101,7 +109,7 @@ Questo potrebbe richiedere qualche minuto"</string>
     <string name="checkin_enable_switch">Registra dispositivo</string>
     <!--checkin: registration status-->
     <string name="checkin_not_registered">Non registrato</string>
-    <string name="checkin_last_registration">Ultima registrazione: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="checkin_last_registration">Ultima registrazione: %1$s</string>
     <!--checkin: profile names types entry's-->
     <string name="profile_name_native">Nativo</string>
     <string name="profile_name_real">Reale</string>
@@ -119,8 +127,8 @@ Questo potrebbe richiedere qualche minuto"</string>
     <!--self check: patched apps-->
     <string name="self_check_source_morphe">patch Morphe</string>
     <string name="self_check_source_alternative">patch alternative</string>
-    <string name="self_check_patched_app_installed">In esecuzione con <xliff:g example="Morphe">%1$s</xliff:g></string>
-    <string name="self_check_resolution_patched_app_installed">App che usano <xliff:g example="Morphe">%1$s</xliff:g> non trovate. Esegui il patch di un apk e installalo</string>
+    <string name="self_check_patched_app_installed">In esecuzione con %1$s</string>
+    <string name="self_check_resolution_patched_app_installed">App che usano %1$s non trovate. Esegui il patch di un apk e installalo</string>
     <string name="self_check_action_download_morphe">Scarica Morphe</string>
     <!--self check: permission-->
     <string name="self_check_name_notifications">Notifiche consentite</string>
@@ -137,8 +145,8 @@ Questo potrebbe richiedere qualche minuto"</string>
     <string name="self_check_resolution_system_spoofs">Si prega di fare riferimento alla documentazione sui passaggi che potrebbero essere richiesti</string>
     <!--self check: package-->
     <string name="self_check_pkg_gms">Play Services</string>
-    <string name="self_check_name_app_installed"><xliff:g example="YouTube">%1$s</xliff:g> installata</string>
-    <string name="self_check_resolution_app_installed">Installa l\'applicazione <xliff:g example="YouTube">%1$s</xliff:g> o una versione compatibile. Si prega di verificare la documentazione sulle app compatibili</string>
+    <string name="self_check_name_app_installed">%1$s installata</string>
+    <string name="self_check_resolution_app_installed">Installa l\'applicazione %1$s o una versione compatibile. Si prega di verificare la documentazione sulle app compatibili</string>
 
     <!--Settings Preferences-->
 
@@ -189,7 +197,8 @@ Questo potrebbe richiedere qualche minuto"</string>
     <string name="pref_network_google_enabled">Consenti connessione ai server Google</string>
     <string name="pref_network_google_enabled_summary">Se l\'opzione risulta disattivata, tutte le connessioni ai server Google normalmente gestite da MicroG verranno negate. Ciò sovrascriverà le impostazioni di servizio specifiche</string>
     <string name="pref_network_google_use_tor">Connettiti a Google tramite rete Tor</string>
-    <string name="pref_network_google_use_tor_summary">Richiede l\'installazione di Orbot\nNon ancora supportata</string>
+    <string name="pref_network_google_use_tor_summary">"Richiede l\'installazione di Orbot
+Non ancora supportata"</string>
     <string name="pref_auth_trust_google_title">Rendi Google una fonte affidabile para i permessi delle app</string>
     <string name="pref_auth_trust_google_summary">Quando questa opzione risulta disattivata, all\'utente verrà prima chiesto se inviare la richiesta di autorizzazione di un\'app a Google o meno. Alcune applicazioni potrebbero não riuscire ad utilizzare l\'account Google in assenza di tale opzione</string>
     <string name="pref_auth_visible_title">Consenti alle app di trovare gli account</string>

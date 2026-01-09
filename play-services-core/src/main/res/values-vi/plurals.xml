@@ -14,13 +14,13 @@
   ~ limitations under the License.
   -->
 
-<resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!--Google Cloud Messaging-->
 
     <plurals name="gcm_registered_apps_counter" tools:ignore="UnusedQuantity">
-        <item quantity="one"><xliff:g example="1">%1$d</xliff:g> ứng dụng đã đăng ký</item>
-        <item quantity="other"><xliff:g example="123">%1$d</xliff:g> ứng dụng đã đăng ký</item>
+        <item quantity="one">%1$d ứng dụng đã đăng ký</item>
+        <item quantity="other">%1$d ứng dụng đã đăng ký</item>
     </plurals>
 
     <!--Conditions-->
