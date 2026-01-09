@@ -20,7 +20,7 @@ jobs:
       - name: Open pull request
         uses: repo-sync/pull-request@v2
         with:
-          destination_branch: main
+          destination_branch: master
           pr_title: 'chore: ${{ env.MESSAGE }}'
           pr_body: |
             This pull request will ${{ env.MESSAGE }}.
