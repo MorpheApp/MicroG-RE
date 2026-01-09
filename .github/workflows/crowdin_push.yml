@@ -6,10 +6,10 @@ on:
     branches:
       - dev
     paths:
-      - /play-services-base/core/src/main/res/values/strings.xml
-      - /play-services-core/src/main/res/values/plurals.xml
-      - /play-services-core/src/main/res/values/strings.xml
-      - /play-services-core/microg-ui-tools/src/main/res/values/strings.xml
+      - play-services-base/core/src/main/res/values/strings.xml
+      - play-services-core/src/main/res/values/plurals.xml
+      - play-services-core/src/main/res/values/strings.xml
+      - play-services-core/microg-ui-tools/src/main/res/values/strings.xml
 
 jobs:
   push:
