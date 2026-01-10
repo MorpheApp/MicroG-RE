@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ SPDX-FileCopyrightText: 2017 microG Project Team
+  ~ SPDX-License-Identifier: Apache-2.0
+  -->
+<resources>
+    <!--App Names-->
+    <!--Authentication-->
+    <!--auth: headers-->
+    <string name="auth_add_account">Account toevoegen</string>
+    <string name="auth_sign_in">Aanmelden</string>
+    <string name="auth_just_a_sec">Even een seconde…</string>
+    <string name="auth_sorry">Sorry…</string>
+    <!--auth: sign-->
+    <string name="signin_picker_title">Kies een account</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="signin_picker_subtitle">om te doorgaan naar %1$s</string>
+    <string name="signin_confirm_button_text">Toestemmen</string>
+    <string name="signin_picker_add_account_label">Een ander account toevoegen</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="signin_confirm_title">Toestemming geven voor in te loggen op %1$s</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <!--auth: buttons-->
+    <!--auth: messages-->
+    <string name="auth_connecting">"Er is een probleem opgetreden bij de communicatie met Google-servers.
+
+Probeer het later nog eens"</string>
+    <string name="auth_no_network_error_desc">"Uw apparaat neemt contact op met Google om informatie op uw account te bewaren.
+
+Dit kan een aantal minuten duren"</string>
+    <string name="auth_general_error_desc">"Autorisatie vereist"</string>
+    <string name="auth_finalize">"Uw apparaat staat in contact met Google om informatie op uw account op te slaan.
+
+Dit kan enkele minuten duren"</string>
+    <!--auth: notifications-->
+    <string name="auth_notification_title">Account verwijderen</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="auth_notification_content">%1$s vereist uw toestemming om toegang te krijgen tot uw Google-account</string>
+    <!--Account Manager-->
+    <string name="dialog_title_remove_account">Ongedaan maken</string>
+    <string name="dialog_message_remove_account">"Verbinding met Google via Tor-netwerk"</string>
+    <string name="dialog_confirm_button">Pushmeldingen inschakelen</string>
+    <string name="dialog_cancel_button">Geregistreerd</string>
+    <string name="snackbar_remove_account">U bent niet geregistreerd</string>
+    <string name="snackbar_undo_button">Ongedaan maken</string>
+    <!--Google Cloud Messaging-->
+    <string name="service_name_mcs">Standaard</string>
+    <string name="gcm_enable_switch">Echte</string>
+    <!--gcm: register dialogs-->
+    <string name="gcm_registered">Aangepaste: %s</string>
+    <string name="gcm_unregister_app">Automatisch: %s</string>
+    <string name="gcm_remove_registers_dialog_title">Systeem: %s</string>
+    <!-- %1$s is an app name, such as "YouTube"? -->
+    <string name="gcm_unregister_confirm_title">Afmelden van %1$s?</string>
+    <string name="gcm_remove_registers_dialog_message">"Trust Google voor app-permissies"</string>
+    <string name="gcm_unregister_confirm_message">"Toestaan"</string>
+    <string name="gcm_unregister_after_deny_message">"Apps mogen accounts vinden"</string>
+    <!--gcm: register messages infos-->
+    <string name="gcm_no_message_yet">Nog geen berichten ontvangen</string>
+    <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
+    <string name="gcm_last_message_at">Laatste bericht: %1$s</string>
+    <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
+    <string name="gcm_registered_since">Geregistreerd sinds: %1$s</string>
+    <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
+    <string name="gcm_messages_counter">Berichten: %1$d (%2$d bytes)</string>
+    <!--gcm: network states-->
+    <string name="gcm_network_state_disconnected">Verbinding verbroken</string>
+    <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
+    <string name="gcm_network_state_connected">Verbonden sinds %1$s</string>
+    <!--gcm: network types entry's-->
+    <string name="network_type_mobile">Wi-Fi</string>
+    <string name="network_type_wifi">Roaming</string>
+    <string name="network_type_roaming">Andere netwerken</string>
+    <string name="network_type_other">UIT</string>
+    <!--gcm: push notifications ping entry's-->
+    <string name="push_notifications_summary_off">AAN</string>
+    <string name="push_notifications_summary_automatic">AAN / Automatisch: %s</string>
+    <string name="push_notifications_summary_manual">AAN / Handmatig: %s</string>
+    <string name="push_notifications_summary_values_seconds">%s seconden</string>
+    <string name="push_notifications_summary_values_minutes">%s minuten</string>
+    <!--gcm: ask push permission dialog-->
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="gcm_allow_app_popup">Toestemming geven voor %1$s om pushmeldingen te registreren?</string>
+    <string name="allow">Niet toestaan</string>
+    <string name="deny">Door verder te gaan, stelt u deze app en Google toe om uw informatie te gebruiken in overeenstemming met hun respectieve voorwaarden en privacybeleid</string>
+    <!--gcm: ask permission tos-->
+    <string name="ask_permission_tos">Door doorgaan, geef u toestemming aan deze app en Google om uw informatie te gebruiken in overeenstemming met hun respectievelijke voorwaarden en privacybeleid</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="ask_scope_permission_title">%1$s wil het volgende:</string>
+    <string name="ask_service_permission_title">%1$s wil het volgende gebruiken:</string>
+    <!--Device Registration-->
+    <string name="service_name_checkin">Registreer app</string>
+    <string name="checkin_enable_switch">Start app bij ontvangst van pushmelding</string>
+    <!--checkin: registration status-->
+    <string name="checkin_not_registered">Niet geregistreerd</string>
+    <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
+    <string name="checkin_last_registration">Laatste registratie: %1$s</string>
+    <!--checkin: profile names types entry's-->
+    <string name="profile_name_native">Standaard</string>
+    <string name="profile_name_real">Aangepaste: %s</string>
+    <string name="profile_name_user">Automatisch: %s</string>
+    <string name="profile_name_auto">Systeem: %s</string>
+    <string name="profile_name_system">Gepatchte apps</string>
+    <!--Self Check-->
+    <!--self check: categories-->
+    <string name="self_check_cat_system">Systeem</string>
+    <string name="self_check_cat_patched_apps">Ondersteuning van handtekeningsondersteuning</string>
+    <string name="self_check_cat_gms_packages">Geïnstalleerde pakketten</string>
+    <string name="self_check_cat_fake_sig">Handtekening vervalsing ondersteuning</string>
+    <!--self check: patched apps-->
+    <string name="self_check_source_morphe">Download Morphe</string>
+    <string name="self_check_source_alternative">Meldingen toegestaan</string>
+    <!-- %1$s is an app name, such as "Morphe" -->
+    <string name="self_check_patched_app_installed">Wordt uitgevoerd met %1$s</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="self_check_resolution_patched_app_installed">Apps die %1$s gebruiken niet gevonden. Installeer de gewijzigde app</string>
+    <string name="self_check_action_download_morphe">Tap hier om deze permissie toe te kennen. Deze permissie is vereist om pop-up waarschuwingen te tonen op bovenliggende apps</string>
+    <!--self check: permission-->
+    <string name="self_check_name_notifications">Batterij-optimisaties uitgeschakeld</string>
+    <string name="self_check_resolution_notifications">Tap hier om batterij-optimisaties uit te schakelen. Als dit ingeschakeld blijft, kunt u mogelijk problemen ondervinden bij het ontvangen van meldingen van YouTube en andere geregistreerde apps</string>
+    <string name="self_check_name_overlay">Systeemhandtekeningen ondersteuning</string>
+    <string name="self_check_resolution_overlay">Uw systeem kan achtergrondprocessen beperken. Open de Don’t Kill My App! site en lees hoe u deze beperkingen kunt uit te schakelen</string>
+    <!--self check: system-->
+    <string name="self_check_name_battery_optimizations">Systeemhandtekeningen ondersteuning</string>
+    <string name="self_check_resolution_battery_optimizations">Tik hier om batterijoptimalisaties uit te schakelen. Als dit niet gedaan wordt, kunnen er problemen optreden bij het ontvangen van meldingen van YouTube en andere geregistreerde apps</string>
+    <string name="self_check_name_oem_restriction">Google Services</string>
+    <string name="self_check_resolution_oem_restriction">Uw systeem kan achtergrondprocessen beperken. Klik hier om naar de \'Don’t Kill My App!\'-site te gaan en lees hoe u deze beperkingen kunt uitschakelen</string>
+    <!--self check: signature-->
+    <string name="self_check_name_system_spoofs">Systeem vervalt handtekening</string>
+    <string name="self_check_resolution_system_spoofs">Geregistreerde accounts</string>
+    <!--self check: package-->
+    <string name="self_check_pkg_gms">Opties</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="self_check_name_app_installed">%1$s geïnstalleerd</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="self_check_resolution_app_installed">Installeer de applicatie %1$s of een compatibele. Controleer de documentatie welke applicaties compatibel zijn</string>
+    <!--Settings Preferences-->
+    <!--preferences: categories-->
+    <string name="prefcat_accounts_login_accounts_title">Appprofiel</string>
+    <string name="prefcat_accounts_options_title">Selecteer profiel</string>
+    <string name="prefcat_youtube_activity">Importeer aangepast profiel</string>
+    <string name="prefcat_push_apps_registered_title">Importeer appprofiel uit bestand</string>
+    <string name="prefcat_push_apps_unregistered_title">Serienummer</string>
+    <string name="prefcat_gcm_registers">Android ID</string>
+    <string name="prefcat_push_networks_title">Registreer uw apparaat bij Google-services en creeer een unieke apparatenkennummer. MicroG haalt identificerende bits behalve uw Google-accountnaam uit de registratiedata</string>
+    <string name="prefcat_applications">Apps die pushmeldingen gebruiken</string>
+    <string name="prefcat_authentication">Toestaan</string>
+    <string name="prefcat_about">Over</string>
+    <string name="prefcat_details">Cloud messaging is een provider voor pushmeldingen die wordt gebruikt voor gepatchte apps. Om deze te gebruiken, moet u device-registratie inschakelen</string>
+    <string name="pref_info_status">Bevestig nieuwe apps</string>
+    <!--preferences: account manager-->
+    <string name="pref_account_title">Verwijder alle geregistreerde apps</string>
+    <string name="pref_account_summary">Privacy</string>
+    <string name="pref_accounts_summary">Privacy-instellingen voor authenticatie en apps</string>
+    <string name="pref_accounts_manage_accounts_title">Toestaan</string>
+    <string name="pref_accounts_manage_accounts_summary">Verbinding met Google-servers</string>
+    <string name="pref_manage_all_history">Als u dit uitschakelt, worden alle verbindingen met Google-servers die normaal door MicroG worden uitgevoerd, geweigerd. Dit overschrijdt service-specifieke instellingen</string>
+    <string name="pref_data_in_youtube">Verbinding met Google via Tor-netwerk</string>
+    <string name="pref_accounts_login_accounts_summary">Requires Orbot to be installed
+Not yet supported</string>
+    <!--preferences: device registration-->
+    <string name="pref_device_registration_device_profile_category">Toestaan</string>
+    <string name="pref_device_registration_select_profile_title">Apps mogen accounts vinden</string>
+    <string name="pref_device_registration_import_custom_profile_title">Als u dit inschakelt, kunnen alle apps op dit apparaat de e-mailadres van uw Google-accounts zien zonder voorafgaande autorisatie</string>
+    <string name="pref_device_registration_import_custom_profile_summary">Authenticeer met device-registratie</string>
+    <string name="pref_device_registration_serial_title">Als u dit uitschakelt, worden authenticatie-aanvragen niet gekoppeld aan de device-registratie, wat toestaat niet-autoriseerde apparaten om zich aan te melden, maar kan onverwachte gevolgen hebben</string>
+    <string name="pref_device_registration_android_id">Schakel device-naam uit voor authenticatie</string>
+    <!--preferences: cloud messaging-->
+    <string name="prefcat_push_apps_title">Verberg icoon in launcher</string>
+    <string name="pref_push_app_allow_register_title">Over MicroG</string>
+    <string name="pref_push_app_allow_register_summary">Broncode-opslag</string>
+    <string name="pref_push_app_wake_for_delivery_title">Luister naar interne statusbroadcasts</string>
+    <string name="pref_push_app_wake_for_delivery_summary">Lees Google-serviceconfiguratie</string>
+    <string name="pref_gcm_enable_mcs_summary">Stuur en ontvang C2DM-berichten</string>
+    <string name="pref_gcm_confirm_new_apps_title">Uitbreiding van toegang tot Google-services</string>
+    <string name="pref_gcm_confirm_new_apps_summary">Batterij-optimisaties ingeschakeld</string>
+    <string name="pref_gcm_remove_registers">Negeer optimisaties</string>
+    <string name="pref_gcm_remove_registers_summary">Verwijder alle geregistreerde apps</string>
+    <!--preferences: privacy-->
+    <string name="pref_privacy_title">Privacy-instellingen voor authenticatie en apps</string>
+    <string name="pref_privacy_summary">Toestaan</string>
+    <string name="pref_network_google_enabled">Verbinding met Google-servers</string>
+    <string name="pref_network_google_use_tor">Verbinding met Google via Tor-netwerk</string>
+    <string name="pref_network_google_use_tor_summary">"Als u dit inschakelt, kunnen alle apps op dit apparaat de e-mailadres van uw Google-accounts zien zonder voorafgaande autorisatie"</string>
+    <string name="pref_auth_trust_google_title">Als u dit uitschakelt, wordt de gebruiker gevraagd voordat een apps autorisatie-aanvraag wordt gestuurd naar Google. Sommige apps kunnen niet gebruik maken van de Google-account als dit is uitgeschakeld</string>
+    <string name="pref_auth_trust_google_summary">Toestaan</string>
+    <string name="pref_auth_visible_title">Apps mogen accounts vinden</string>
+    <string name="pref_auth_visible_summary">Als u dit inschakelt, kunnen alle apps op dit apparaat de e-mailadres van uw Google-accounts zien zonder voorafgaande autorisatie</string>
+    <string name="pref_auth_include_android_id_title">Authenticeer met device-registratie</string>
+    <string name="pref_auth_include_android_id_summary">Als u dit uitschakelt, worden authenticatie-aanvragen niet gekoppeld aan de device-registratie, wat toestaat niet-autoriseerde apparaten om zich aan te melden, maar kan onverwachte gevolgen hebben</string>
+    <string name="pref_auth_strip_device_name_title">Schakel device-naam uit voor authenticatie</string>
+    <string name="pref_auth_strip_device_name_summary">Als u dit inschakelt, worden authenticatie-aanvragen niet verzonden met de naam van het apparaat, wat toestaat niet-autoriseerde apparaten om zich aan te melden, maar kan onverwachte gevolgen hebben</string>
+    <!--preferences: hide icon in launcher-->
+    <string name="pref_hide_launcher_icon">Verberg icoon in launcher</string>
+    <!--preferences: about-->
+    <string name="pref_github_summary">Luister naar interne statusbroadcasts</string>
+    <!--Permissions-->
+    <string name="perm_status_broadcast_label">Lees Google-serviceconfiguratie</string>
+    <string name="perm_gsf_read_gservices_label">Stuur en ontvang C2DM-berichten</string>
+    <string name="perm_c2dm_receive_label">Uitbreiding van toegang tot Google-services</string>
+    <string name="perm_c2dm_send_label">Batterij-optimisaties ingeschakeld</string>
+    <string name="perm_gtalk_svc_label">Negeer optimisaties</string>
+    <string name="perm_extended_access_label">Privacy-instellingen voor authenticatie en apps</string>
+    <!--Conditions-->
+    <string name="cond_gcm_bat_title">Toestaan</string>
+    <string name="cond_gcm_bat_action">Als u dit uitschakelt, worden alle verbindingen met Google-servers die normaal door MicroG worden uitgevoerd, geweigerd. Dit overschrijdt service-specifieke instellingen</string>
+    <string name="cond_perm_title">Verbinding met Google via Tor-netwerk</string>
+</resources>

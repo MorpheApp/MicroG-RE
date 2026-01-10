@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ SPDX-FileCopyrightText: 2017 microG Project Team
+  ~ SPDX-License-Identifier: Apache-2.0
+  -->
+<resources>
+    <!--App Names-->
+    <string name="gms_settings_name">Налаштування microG</string>
+    <!--Authentication-->
+    <!--auth: headers-->
+    <string name="auth_add_account">Додати обліковий запис</string>
+    <string name="auth_sign_in">Увійти</string>
+    <string name="auth_just_a_sec">Зачекайте...</string>
+    <string name="auth_sorry">Вибачте...</string>
+    <!--auth: sign-->
+    <string name="signin_picker_title">Оберіть обліковий запис</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="signin_picker_subtitle">продовжити до %1$s</string>
+    <string name="signin_confirm_button_text">Дозволити та поділитися</string>
+    <string name="signin_picker_add_account_label">Додати інший обліковий запис</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="signin_confirm_title">Дозволити увійти під вашою обліковим записом у %1$s</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <!--auth: buttons-->
+    <!--auth: messages-->
+    <string name="auth_connecting">"Ваш пристрій встановлює з'єднання з серверами Google для входу. Це може зайняти кілька секунд."</string>
+    <string name="auth_no_network_error_desc">"У вас відсутній доступ до мережі. Це може бути тимчасова проблема або ваш пристрій Android не підключений до послуг даних. Спробуйте знову, коли будете підключені до мережі мобільного оператора або підключіться до мережі Wi-Fi."</string>
+    <string name="auth_general_error_desc">"Під час спроби зв'язатися з серверами Google виникла проблема. Спробуйте знову пізніше."</string>
+    <string name="auth_finalize">"Ваш пристрій зв'язується з Google для збереження інформації в обліковому записі. Це може зайняти кілька хвилин."</string>
+    <!--auth: notifications-->
+    <string name="auth_notification_title">Потрібен авторизаційний запит</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="auth_notification_content">%1$s вимагає вашої авторизації для доступу до вашого облікового запису Google</string>
+    <!--Account Manager-->
+    <string name="dialog_title_remove_account">Видалити обліковий запис</string>
+    <string name="dialog_message_remove_account">"Ви впевнені, що хочете видалити цей обліковий запис?
+
+Деякі служби та функції будуть недоступні
+
+Ваші дані не будуть втрачені"</string>
+    <string name="dialog_confirm_button">Видалити</string>
+    <string name="dialog_cancel_button">Скасувати</string>
+    <string name="snackbar_remove_account">Обліковий запис %s видалено</string>
+    <string name="snackbar_undo_button">Відмінити</string>
+    <!--Google Cloud Messaging-->
+    <string name="service_name_mcs">Обслуговування повідомлень</string>
+    <string name="gcm_enable_switch">Включити сповіщення</string>
+    <!--gcm: register dialogs-->
+    <string name="gcm_registered">Зареєстровано</string>
+    <string name="gcm_unregister_app">Відключити</string>
+    <string name="gcm_remove_registers_dialog_title">Видалити всі реєстрації?</string>
+    <!-- %1$s is an app name, such as "YouTube"? -->
+    <string name="gcm_unregister_confirm_title">Зняти реєстрацію %1$s?</string>
+    <string name="gcm_remove_registers_dialog_message">"Це видалить всі застосунки, зареєстровані для push-повідомлень одночасно
+
+Вам потрібно відкрити застосунки, щоб перереєструватися в cloud messaging
+
+Деякі застосунки можуть бути не в змозі перереєструватися після цієї дії"</string>
+    <string name="gcm_unregister_confirm_message">"Деякі застосунки не автоматично перереєструються та/або не надають опції для річного перереєстрування. Ці застосунки можуть не працювати правильно після відключення."</string>
+    <string name="gcm_unregister_after_deny_message">"Ви відмовили застосунку в реєстрації для push-повідомлень, який вже зареєстрований.
+Чи хочете видалити його зараз, щоб він не отримував push-повідомлень у майбутньому?"</string>
+    <!--gcm: register messages infos-->
+    <string name="gcm_no_message_yet">Наразі повідомлень немає</string>
+    <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
+    <string name="gcm_last_message_at">Остання повідомлення: %1$s</string>
+    <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
+    <string name="gcm_registered_since">Зареєстровано з: %1$s</string>
+    <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
+    <string name="gcm_messages_counter">Повідомлення: %1$d (%2$d байтів)</string>
+    <!--gcm: network states-->
+    <string name="gcm_network_state_disconnected">Відключено</string>
+    <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
+    <string name="gcm_network_state_connected">Підключено з %1$s</string>
+    <!--gcm: network types entry's-->
+    <string name="network_type_mobile">Мобільна мережа</string>
+    <string name="network_type_wifi">Wi-Fi</string>
+    <string name="network_type_roaming">Роумінг</string>
+    <string name="network_type_other">Інші мережі</string>
+    <!--gcm: push notifications ping entry's-->
+    <string name="push_notifications_summary_off">ВИКЛ</string>
+    <string name="push_notifications_summary_automatic">ВКЛ / Автоматичний: %s</string>
+    <string name="push_notifications_summary_manual">ВКЛ / Ручний: %s</string>
+    <string name="push_notifications_summary_values_seconds">%s секунд</string>
+    <string name="push_notifications_summary_values_minutes">%s хвилин</string>
+    <!--gcm: ask push permission dialog-->
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="gcm_allow_app_popup">Дозволити %1$s зареєструватися для отримання push-повідомлень?</string>
+    <string name="allow">Дозволити</string>
+    <string name="deny">Заборонено</string>
+    <!--gcm: ask permission tos-->
+    <string name="ask_permission_tos">Продовживши, ви дозволяєте цьому додатку та Google використовувати ваші дані відповідно до умов використання та політики конфіденційності</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="ask_scope_permission_title">%1$s бажає:</string>
+    <string name="ask_service_permission_title">%1$s бажає використовувати:</string>
+    <!--Device Registration-->
+    <string name="service_name_checkin">Реєстрація пристрою</string>
+    <string name="checkin_enable_switch">Дозволити реєстрацію пристрою</string>
+    <!--checkin: registration status-->
+    <string name="checkin_not_registered">Не зареєстровано</string>
+    <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
+    <string name="checkin_last_registration">Остання реєстрація: %1$s</string>
+    <!--checkin: profile names types entry's-->
+    <string name="profile_name_native">Нативний</string>
+    <string name="profile_name_real">Реальний</string>
+    <string name="profile_name_user">Користувацький: %s</string>
+    <string name="profile_name_auto">Автоматичний: %s</string>
+    <string name="profile_name_system">Система: %s</string>
+    <!--Self Check-->
+    <!--self check: categories-->
+    <string name="self_check_cat_system">Система</string>
+    <string name="self_check_cat_patched_apps">Патчовані додатки</string>
+    <string name="self_check_cat_gms_packages">Встановлені пакети</string>
+    <string name="self_check_cat_fake_sig">Підтримування підробки підпису</string>
+    <!--self check: patched apps-->
+    <string name="self_check_source_morphe">Патчі Morphe</string>
+    <string name="self_check_source_alternative">альтернативні патчі</string>
+    <!-- %1$s is an app name, such as "Morphe" -->
+    <string name="self_check_patched_app_installed">Робота з %1$s</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="self_check_resolution_patched_app_installed">Аплікації, що використовують %1$s, не знайдено. Будь ласка, патчуйте та встановіть змінену програму</string>
+    <string name="self_check_action_download_morphe">Завантажити Morphe</string>
+    <!--self check: permission-->
+    <string name="self_check_name_notifications">Дозволено сповіщення</string>
+    <string name="self_check_resolution_notifications">Натисніть тут, щоб відкрити налаштування сповіщень. Сповіщення використовуються для підтримки роботи GcmService на фоні, коли активовано оптимізація акумуму</string>
+    <string name="self_check_name_overlay">Дозволено відображення над іншими додатками</string>
+    <string name="self_check_resolution_overlay">Натисніть тут, щоб надати дозвіл на цю функцію. Ця функція потрібна для відображення попередніх сповіщень над іншими додатками</string>
+    <!--self check: system-->
+    <string name="self_check_name_battery_optimizations">Вимкнення оптимізації акумуму вимкнено</string>
+    <string name="self_check_resolution_battery_optimizations">Натисніть тут, щоб вимкнути оптимізацію батареї. Якщо не вимкнуто, ви можете стикнутися з проблемами з отриманням сповіщень від YouTube та інших зареєстрованих додатків</string>
+    <string name="self_check_name_oem_restriction">Обмежження фонових процесів</string>
+    <string name="self_check_resolution_oem_restriction">Ваша система може обмежувати фонові процеси. Натисніть тут, щоб відкрити сторінку \"Не вбивайте мій додаток!\" та дізнатися, як вимкнути ці обмеження</string>
+    <!--self check: signature-->
+    <string name="self_check_name_system_spoofs">Система підробляє підпис</string>
+    <string name="self_check_resolution_system_spoofs">Будь ласка переглянути документацію, яка описує можливі кроки, що можуть бути потрібні</string>
+    <!--self check: package-->
+    <string name="self_check_pkg_gms">Служби Google</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="self_check_name_app_installed">%1$s встановлено</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="self_check_resolution_app_installed">Встановіть програму %1$s або сумісну. Будь ласка, перевірте документацію, які програми сумісні</string>
+    <!--Settings Preferences-->
+    <!--preferences: categories-->
+    <string name="prefcat_accounts_login_accounts_title">Увійти</string>
+    <string name="prefcat_accounts_options_title">Опції</string>
+    <string name="prefcat_youtube_activity">Активність YouTube</string>
+    <string name="prefcat_push_apps_registered_title">Зареєстровані додатки</string>
+    <string name="prefcat_push_apps_unregistered_title">Незареєстровані додатки</string>
+    <string name="prefcat_gcm_registers">Реєстрації</string>
+    <string name="prefcat_push_networks_title">Мережі для сповіщень</string>
+    <string name="prefcat_applications">Додатки</string>
+    <string name="prefcat_authentication">Авторизація</string>
+    <string name="prefcat_about">Про нас</string>
+    <string name="prefcat_details">Деталі</string>
+    <string name="pref_info_status">Облікові записи</string>
+    <!--preferences: account manager-->
+    <string name="pref_account_title">Ввійти в новий обліковий запис Google</string>
+    <string name="pref_account_summary">Додати та керувати обліковими записами Google</string>
+    <string name="pref_accounts_summary">Керувати обліковими записами</string>
+    <string name="pref_accounts_manage_accounts_title">Відкрити менеджер облікових записів пристрою</string>
+    <string name="pref_accounts_manage_accounts_summary">Керувати всіма історіями</string>
+    <string name="pref_manage_all_history">Ваші дані в YouTube</string>
+    <string name="pref_data_in_youtube">Облікові записи зберігаються та зберігаються лише на цьому пристрою. Натисніть обліковий запис, щоб видалити його з цього пристрою назавжди</string>
+    <string name="pref_accounts_login_accounts_summary">Профіль пристрою</string>
+    <!--preferences: device registration-->
+    <string name="pref_device_registration_device_profile_category">Виберіть профіль</string>
+    <string name="pref_device_registration_select_profile_title">Імпортувати користувацький профіль</string>
+    <string name="pref_device_registration_import_custom_profile_title">Імпортувати профіль пристрою з файлу</string>
+    <string name="pref_device_registration_import_custom_profile_summary">Серійний номер</string>
+    <string name="pref_device_registration_serial_title">Android ID</string>
+    <string name="pref_device_registration_android_id">Реєструє ваш пристрій до сервісів Google та створює унікальний ідентифікатор пристрою. MicroG видаляє ідентифікаційні біти, окрім імені облікового запису Google, з даних реєстрації</string>
+    <!--preferences: cloud messaging-->
+    <string name="prefcat_push_apps_title">Дозволити реєстрацію</string>
+    <string name="pref_push_app_allow_register_title">Дозволити додатку отримувати сповіщення</string>
+    <string name="pref_push_app_allow_register_summary">Почати додаток при отриманні сповіщення</string>
+    <string name="pref_push_app_wake_for_delivery_title">Обслуговування Google</string>
+    <string name="pref_push_app_wake_for_delivery_summary">Підтвердіть нові додатки</string>
+    <string name="pref_gcm_enable_mcs_summary">Видалити всі реєстрації</string>
+    <string name="pref_gcm_confirm_new_apps_title">Приватність</string>
+    <string name="pref_gcm_confirm_new_apps_summary">Налаштування приватності для авторизації та додатків</string>
+    <string name="pref_gcm_remove_registers">Дозволити з\'єднання з серверами Google</string>
+    <string name="pref_gcm_remove_registers_summary">З\'єднання з серверами Google відключено. Це перевищує налаштування, специфічні для сервісів</string>
+    <!--preferences: privacy-->
+    <string name="pref_privacy_title">З\'єднання з серверами Google через мережу Tor</string>
+    <string name="pref_privacy_summary">Довірити Google щодо дозволу на авторизацію</string>
+    <string name="pref_network_google_enabled">Дозволити додаткам знаходити облікові записи</string>
+    <string name="pref_network_google_use_tor">Видалити ім\'я пристрою для авторизації</string>
+    <string name="pref_network_google_use_tor_summary">"Вимагає інсталяції Orbot
+ ще не підтримується"</string>
+    <string name="pref_auth_trust_google_title">Джерело коду</string>
+    <string name="pref_auth_trust_google_summary">Дозвіл на обробку</string>
+    <string name="pref_auth_visible_title">Дозвіл на обробку</string>
+    <string name="pref_auth_visible_summary">Дозвіл на обробку</string>
+    <string name="pref_auth_include_android_id_title">Дозвіл на обробку</string>
+    <string name="pref_auth_include_android_id_summary">Дозвіл на обробку</string>
+    <string name="pref_auth_strip_device_name_title">Дозвіл на обробку</string>
+    <string name="pref_auth_strip_device_name_summary">Дозвіл на обробку</string>
+    <!--preferences: hide icon in launcher-->
+    <string name="pref_hide_launcher_icon">Дозвіл на обробку</string>
+    <!--preferences: about-->
+    <string name="pref_about_title">Про MicroG RE</string>
+    <string name="pref_github_summary">Дозвіл на обробку</string>
+    <!--Permissions-->
+    <string name="perm_status_broadcast_label">Дозвіл на обробку</string>
+    <string name="perm_gsf_read_gservices_label">Дозвіл на обробку</string>
+    <string name="perm_c2dm_receive_label">Дозвіл на обробку</string>
+    <string name="perm_c2dm_send_label">Дозвіл на обробку</string>
+    <string name="perm_gtalk_svc_label">Дозвіл на обробку</string>
+    <string name="perm_extended_access_label">Дозвіл на обробку</string>
+    <!--Conditions-->
+    <string name="cond_gcm_bat_title">Дозвіл на обробку</string>
+    <string name="cond_gcm_bat_action">Дозвіл на обробку</string>
+    <string name="cond_perm_title">Дозвіл на обробку</string>
+</resources>

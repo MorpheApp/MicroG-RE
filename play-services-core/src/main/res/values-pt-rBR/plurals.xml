@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ Copyright (C) 2017 microG Project Team
   ~
@@ -13,23 +14,17 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-
 <resources>
-
     <!--Google Cloud Messaging-->
-
     <plurals name="gcm_registered_apps_counter">
-        <item quantity="one">%1$d app registrado</item>
-        <item quantity="other">%1$d apps registrados</item>
+        <item quantity="one">%1$d aplicativo registrado</item>
+        <item quantity="other">%1$d aplicativos registrados</item>
     </plurals>
-
     <!--Conditions-->
-
     <plurals name="cond_perm_summary">
-        <item quantity="one">Uma permissão necessária para o funcionamento adequado dos Serviços microG não foi concedida.</item>
-        <item quantity="other">Permissões necessárias para o funcionamento adequado dos Serviços microG não foram concedidas.</item>
+        <item quantity="one">Uma permissão necessária para o funcionamento adequado dos serviços microG não foi concedida.</item>
+        <item quantity="other">Permissões necessárias para o funcionamento adequado dos serviços microG não foram concedidas.</item>
     </plurals>
-
     <plurals name="cond_perm_action">
         <item quantity="one">Solicitar permissão ausente</item>
         <item quantity="other">Solicitar permissões ausentes</item>

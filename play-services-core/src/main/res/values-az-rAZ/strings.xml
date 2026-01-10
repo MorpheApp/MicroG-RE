@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ SPDX-FileCopyrightText: 2017 microG Project Team
+  ~ SPDX-License-Identifier: Apache-2.0
+  -->
+<resources>
+    <!--App Names-->
+    <!--Authentication-->
+    <!--auth: headers-->
+    <string name="auth_add_account">Hesab əlavə et</string>
+    <string name="auth_sign_in">Daxil ol</string>
+    <string name="auth_just_a_sec">Bir az gözləyin…</string>
+    <string name="auth_sorry">Üzülüm…</string>
+    <!--auth: sign-->
+    <string name="signin_picker_title">Hesab seçin</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="signin_picker_subtitle">davam etmək üçün %1$s</string>
+    <string name="signin_confirm_button_text">Paylaşmaq icazə verin</string>
+    <string name="signin_picker_add_account_label">Digər hesab əlavə et</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="signin_confirm_title">%1$sə daxil olmaq üçün icazə verin</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <!--auth: buttons-->
+    <!--auth: messages-->
+    <string name="auth_connecting">"Sizin cihazınız Google-un serverləri ilə əlaqə qurmaq üçün cəhd edir.
+
+Bu bir neçə sanə çəkə bilər"</string>
+    <string name="auth_no_network_error_desc">"Sizə şəbəkə əlaqəsi yoxdur.
+
+Bu müvəqqəti problem ola bilər ya da Android cihazınız şəbəkə xidmətləri üçün təchizə edilməmişdir. Mobil şəbəkəyə qoşulduğunuzda yenidən cəhd edin ya da Wi-Fi şəbəkəsinə qoşulun"</string>
+    <string name="auth_general_error_desc">"Google serverləri ilə əlaqə qurmaqda problem yaranıb.
+
+Yenidən cəhd edin"</string>
+    <string name="auth_finalize">"Sizin cihazınız Google-un serverləri ilə əlaqə saxlayır.
+
+Bu bir neçə dəqiqə çəkə bilər"</string>
+    <!--auth: notifications-->
+    <string name="auth_notification_title">Təhlükəsizlik tələb olunur</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="auth_notification_content">%1$s sizin Google hesabınıza daxil olmaq üçün icazə tələb edir</string>
+    <!--Account Manager-->
+    <string name="dialog_title_remove_account">Hesabı silin</string>
+    <string name="dialog_message_remove_account">"Bu hesabı silmək istədiyinizə əminsiniz?
+
+Bazı xidmətlər və funksiyaların istifadəsi mümkün olmayacaq
+
+Sizin verilənlərin itirilməyəcəyini unutmayın"</string>
+    <string name="dialog_confirm_button">Sil</string>
+    <string name="dialog_cancel_button">Ləğv et</string>
+    <string name="snackbar_remove_account">Hesab %s silindi</string>
+    <string name="snackbar_undo_button">Ləğv et</string>
+    <!--Google Cloud Messaging-->
+    <string name="service_name_mcs">Cloud mesajlaşdırma</string>
+    <string name="gcm_enable_switch">Bildirişləri gizlət</string>
+    <!--gcm: register dialogs-->
+    <string name="gcm_registered">Təyişdirildi</string>
+    <string name="gcm_unregister_app">Çıxış</string>
+    <string name="gcm_remove_registers_dialog_title">Bütün qeydiyyatlar silinilsin mi?</string>
+    <!-- %1$s is an app name, such as "YouTube"? -->
+    <string name="gcm_unregister_confirm_title">%1$s-i ləğv etmək istəyirsiniz?</string>
+    <string name="gcm_remove_registers_dialog_message">"Bu, bir neçə tətbiq üçün bir kəslə push xidmətlərindən çıxış edəcək
+
+Tətbiqləri yenidən nümayəndəlik üçün açmaq lazımdır
+
+Bazı tətbiqlər yenidən qeydiyyatdan keçməyə imkan vermir"</string>
+    <string name="gcm_unregister_confirm_message">"Bazı tətbiqlər avtomatik yenidən qeydiyyatdan keçmirlər və ya bu üçün əlavə seçənə imkan verən tətbiqlər olmur. Bu tətbiqlər bu əməliyyatdan sonra düzgün işləyə bilməz."</string>
+    <string name="gcm_unregister_after_deny_message">"Tətbiq push xidmətlərindən qeydiyyatdan keçmək üçün icazə vermədi, lakin artıq qeydiyyatdan keçib. Bu tətbiqdən sonrakı push mesajları almaması üçün onu hələlik qeydiyyatdan çıxarmaq istəyirsiniz?"</string>
+    <!--gcm: register messages infos-->
+    <string name="gcm_no_message_yet">Hələ də mesaj alınıb</string>
+    <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
+    <string name="gcm_last_message_at">Son mesaj: %1$s</string>
+    <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
+    <string name="gcm_registered_since">Tarixdən sonra qeydiyyat: %1$s</string>
+    <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
+    <string name="gcm_messages_counter">Mesajlar: %1$d (%2$d bayt)</string>
+    <!--gcm: network states-->
+    <string name="gcm_network_state_disconnected">Təhlükəsiz</string>
+    <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
+    <string name="gcm_network_state_connected">Bağlandı: %1$s</string>
+    <!--gcm: network types entry's-->
+    <string name="network_type_mobile">Wi-Fi</string>
+    <string name="network_type_wifi">Roaming</string>
+    <string name="network_type_roaming">Digər şəbəkələr</string>
+    <string name="network_type_other">OFF</string>
+    <!--gcm: push notifications ping entry's-->
+    <string name="push_notifications_summary_off">ON / Avtomatik: %s</string>
+    <string name="push_notifications_summary_automatic">ON / Manual: %s</string>
+    <string name="push_notifications_summary_manual">%s dəqiqə</string>
+    <string name="push_notifications_summary_values_seconds">%s saniyə</string>
+    <string name="push_notifications_summary_values_minutes">Rəddiyyatdan imtina edən bir app var.\nBu app-ü indi qeydiyyatdan çıxarmaq istəyirsiniz?</string>
+    <!--gcm: ask push permission dialog-->
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="gcm_allow_app_popup">%1$s push xəbərdarlıqlar üçün qeydiyyata qoşulma icazəsi verin?</string>
+    <string name="allow">Rəddiyyat verin</string>
+    <string name="deny">Rəddiyyatdan imtina edin</string>
+    <!--gcm: ask permission tos-->
+    <string name="ask_permission_tos">Davam edərək, siz bu app-i və Google-i onların müvafiqiyyətlərinə uyğun istifadə etməyə icazə verərsiniz</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="ask_scope_permission_title">%1$s istəyir:</string>
+    <string name="ask_service_permission_title">%1$s istəyir:</string>
+    <!--Device Registration-->
+    <string name="service_name_checkin">Cihaz qeydiyyatı</string>
+    <string name="checkin_enable_switch">Cihazı qeydiyyatdan çıxarmaq</string>
+    <!--checkin: registration status-->
+    <string name="checkin_not_registered">Qeydiyyatdan çıxılmamış</string>
+    <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
+    <string name="checkin_last_registration">Son qeydiyyat: %1$s</string>
+    <!--checkin: profile names types entry's-->
+    <string name="profile_name_native">Standart</string>
+    <string name="profile_name_real">Rəal</string>
+    <string name="profile_name_user">İstifadəçi: %s</string>
+    <string name="profile_name_auto">Avtomatik: %s</string>
+    <string name="profile_name_system">Sistem: %s</string>
+    <!--Self Check-->
+    <!--self check: categories-->
+    <string name="self_check_cat_system">Sistem</string>
+    <string name="self_check_cat_patched_apps">Patçalan apps</string>
+    <string name="self_check_cat_gms_packages">GMS paketləri</string>
+    <string name="self_check_cat_fake_sig">Sistem imitasiyası dəstəklən</string>
+    <!--self check: patched apps-->
+    <string name="self_check_source_morphe">Morphe patches</string>
+    <string name="self_check_source_alternative">Alternativ patches</string>
+    <!-- %1$s is an app name, such as "Morphe" -->
+    <string name="self_check_patched_app_installed">%1$s ilə işləyir</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="self_check_resolution_patched_app_installed">%1$s istifadə olunur. Lütfən, sənədləri baxın ki, hansı proqramlar uyğundur</string>
+    <string name="self_check_action_download_morphe">Morphe yüklə</string>
+    <!--self check: permission-->
+    <string name="self_check_name_notifications">Bildirişlər icazə verilib</string>
+    <string name="self_check_resolution_notifications">Bildirişləri açmaq üçün bu düymə basın. Bildirişlər sizə GcmService-i arxa qoymaq üçün istifadə olunur, cihazın optimizasiya prosesi aktiv olduqda ya da digər şəraitlərdə</string>
+    <string name="self_check_name_overlay">Bildirişlər üzərindəki icazə verilib</string>
+    <string name="self_check_resolution_overlay">Bildirişlər üzərindəki icazə verilib</string>
+    <!--self check: system-->
+    <string name="self_check_name_battery_optimizations">Batareya optimizasiya məhduddur</string>
+    <string name="self_check_resolution_battery_optimizations">Buraya vurun batareya optimizasiya problemini deaktiv edin. Deaktiv edilməmişsə, YouTube və başqa qeydiyyatdan keçmiş app-lərdən xəbərdarlıq almaqda problem yaşaya bilərsiniz</string>
+    <string name="self_check_name_oem_restriction">Sistem imitasiyası imtinasını</string>
+    <string name="self_check_resolution_oem_restriction">Sistem imitasiyası imtinasını</string>
+    <!--self check: signature-->
+    <string name="self_check_name_system_spoofs">Sistem imitasiyası</string>
+    <string name="self_check_resolution_system_spoofs">Dokumentasiyaya baxın ki, hansı addımlar tələb olunur</string>
+    <!--self check: package-->
+    <string name="self_check_pkg_gms">Xidmət Paketi</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="self_check_name_app_installed">%1$s yükləndi</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="self_check_resolution_app_installed">%1$s proqramı və ya uyğun birini yükləyin. Lütfən, sənədləri baxın ki, hansı proqramlar uyğundur</string>
+    <!--Settings Preferences-->
+    <!--preferences: categories-->
+    <string name="prefcat_accounts_login_accounts_title">Giriş edildi</string>
+    <string name="prefcat_accounts_options_title">Seçimlər</string>
+    <string name="prefcat_youtube_activity">YouTube Aktivliyi</string>
+    <string name="prefcat_push_apps_registered_title">Qeydiyyatdan keçmiş proqramlar</string>
+    <string name="prefcat_push_apps_unregistered_title">Qeydiyyatdan keçməyən proqramlar</string>
+    <string name="prefcat_gcm_registers">Qeydiyyatdan keçirir</string>
+    <string name="prefcat_push_networks_title">Xidmət üçün push xəbərləri</string>
+    <string name="prefcat_applications">Proqramlar</string>
+    <string name="prefcat_authentication">Təhlükəsizlik</string>
+    <string name="prefcat_about">Haqqında</string>
+    <string name="prefcat_details">Detallar</string>
+    <string name="pref_info_status">Status</string>
+    <!--preferences: account manager-->
+    <string name="pref_account_title">Hesablar</string>
+    <string name="pref_account_summary">Yeni Google hesabına daxil olun</string>
+    <string name="pref_accounts_summary">Google hesablarını əlavə edin və idarə edin</string>
+    <string name="pref_accounts_manage_accounts_title">Hesabları idarə edin</string>
+    <string name="pref_accounts_manage_accounts_summary">Cihaz hesabları menecerini açın</string>
+    <string name="pref_manage_all_history">Bütün tarixi idarə edin</string>
+    <string name="pref_data_in_youtube">YouTube-nizə aid verilənlər</string>
+    <string name="pref_accounts_login_accounts_summary">Hesablar yalnız bu cihazda saxlanılır. Hesabı bu cihazdan daimi olaraq silmək üçün ona toxunun</string>
+    <!--preferences: device registration-->
+    <string name="pref_device_registration_device_profile_category">Cihaz profili</string>
+    <string name="pref_device_registration_select_profile_title">Profil seçin</string>
+    <string name="pref_device_registration_import_custom_profile_title">Mənfi profil əlavə edin</string>
+    <string name="pref_device_registration_import_custom_profile_summary">Cihaz profilini faylından əlavə edin</string>
+    <string name="pref_device_registration_serial_title">Serial nömrə</string>
+    <string name="pref_device_registration_android_id">Android ID</string>
+    <!--preferences: cloud messaging-->
+    <string name="prefcat_push_apps_title">Push xəbərləri istifadə edən proqramlar</string>
+    <string name="pref_push_app_allow_register_title">Qeydiyyatdan keçməsinə icazə verin</string>
+    <string name="pref_push_app_allow_register_summary">Proqram push xəbərləri üçün qeydiyyatdan keçməyə icazə verin</string>
+    <string name="pref_push_app_wake_for_delivery_title">Push xəbərləri üçün proqramı arxa fonunda başladın</string>
+    <string name="pref_push_app_wake_for_delivery_summary">Arxa fonunda proqramı başladın ki, gələn push xəbərləri alınsın</string>
+    <string name="pref_gcm_enable_mcs_summary">Modifikasiya edilmiş proqramlar üçün push xəbərləri təmin edən xidmət. Bu xidməti istifadə etmək üçün cihaz qeydiyyatdan keçirilməlidir</string>
+    <string name="pref_gcm_confirm_new_apps_title">Yeni proqramları təsdiqlə</string>
+    <string name="pref_gcm_confirm_new_apps_summary">Push xəbərləri almaq üçün qeydiyyatdan keçən yeni proqramı təsdiqlə</string>
+    <string name="pref_gcm_remove_registers">Bütün qeydiyyatdan keçmiş proqramları silin</string>
+    <string name="pref_gcm_remove_registers_summary">Təkcə qeydiyyat etməkdə çətinlik çəkəniz və ya bildirişləri almaqda problem yaşayanız üçün bu seçimi istifadə edin.</string>
+    <!--preferences: privacy-->
+    <string name="pref_privacy_title">Təhlükəsizlik</string>
+    <string name="pref_privacy_summary">Təhlükəsizlik parametrləri üçün kimlik doğrulaması və tətbiqlər</string>
+    <string name="pref_network_google_enabled">Google serverlərə qoşulma</string>
+    <string name="pref_network_google_use_tor">Tor şəbəkəsi vasitəsilə Googleə qoşulma</string>
+    <string name="pref_network_google_use_tor_summary">"Orbotun quraşdırılması tələb olunur
+Hələ də dəstəklənmir"</string>
+    <string name="pref_auth_trust_google_title">Google üçün tətbiq icazələri</string>
+    <string name="pref_auth_trust_google_summary">İmtina halında, Google hesabı üçün tətbiqin icazə istəyi göndərilməsi öncə istifadəçidən soruşulur. Bəzi tətbiqlər bu imtina halında Google hesabını istifadə edə bilmirlər.</string>
+    <string name="pref_auth_visible_title">Təhlükəsizlik parametrləri üçün kimlik doğrulaması</string>
+    <string name="pref_auth_visible_summary">İmtina halında, bütün cihazda olan tətbiqlər Google hesablarının email ünvanlarını görürlər.</string>
+    <string name="pref_auth_include_android_id_title">Cihaz qeydiyyatı ilə kimlik doğrulaması</string>
+    <string name="pref_auth_include_android_id_summary">İmtina halında, kimlik doğrulaması cihaz qeydiyyatına bağlanmayacaq, bu, icazəsiz cihazların daxil ola bilməsinə imkan verir, lakin gözlənilməz nəticələr ola bilər.</string>
+    <string name="pref_auth_strip_device_name_title">Kimlik doğrulaması üçün cihaz adını sil</string>
+    <string name="pref_auth_strip_device_name_summary">İmtina halında, kimlik doğrulaması cihazın adını əlavə etməz, bu, icazəsiz cihazların daxil ola bilməsinə imkan verir, lakin gözlənilməz nəticələr ola bilər.</string>
+    <!--preferences: hide icon in launcher-->
+    <string name="pref_hide_launcher_icon">Louncher simvolunu gizlət</string>
+    <!--preferences: about-->
+    <string name="pref_github_summary">Mənbə kodu deposu</string>
+    <!--Permissions-->
+    <string name="perm_status_broadcast_label">Daxili status yayımına qulaq asın</string>
+    <string name="perm_gsf_read_gservices_label">Google xidmət parametrlərini oxuyun</string>
+    <string name="perm_c2dm_receive_label">C2DM mesajlarını alın</string>
+    <string name="perm_c2dm_send_label">Başqa tətbiqlərə C2DM mesajlarını göndərin</string>
+    <string name="perm_gtalk_svc_label">Google serverləri ilə mesajlaşma və sinxronlaşdırma bildirişləri almaq</string>
+    <string name="perm_extended_access_label">Google xidmətlərinə geniş müraciət</string>
+    <!--Conditions-->
+    <string name="cond_gcm_bat_title">Batareya optimizasiyası aktivdir</string>
+    <string name="cond_gcm_bat_action">Optimizasiyanı unut</string>
+    <string name="cond_perm_title">İcazə yoxdur</string>
+</resources>

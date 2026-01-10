@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ SPDX-FileCopyrightText: 2017 microG Project Team
+  ~ SPDX-License-Identifier: Apache-2.0
+  -->
+<resources>
+    <!--App Names-->
+    <!--Authentication-->
+    <!--auth: headers-->
+    <string name="auth_add_account">添加账户</string>
+    <string name="auth_sign_in">登录</string>
+    <string name="auth_just_a_sec">请稍等…</string>
+    <string name="auth_sorry">抱歉…</string>
+    <!--auth: sign-->
+    <string name="signin_picker_title">选择账户</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="signin_picker_subtitle">继续到 %1$s</string>
+    <string name="signin_confirm_button_text">允许并共享</string>
+    <string name="signin_picker_add_account_label">添加另一个账户</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="signin_confirm_title">允许 %1$s 登录</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <!--auth: buttons-->
+    <!--auth: messages-->
+    <string name="auth_connecting">"您的设备正在连接到 Google 的服务器进行登录。
+
+这可能需要几秒钟"</string>
+    <string name="auth_no_network_error_desc">"您没有网络连接。
+
+这可能是暂时问题，或者您的 Android 设备可能没有配置数据服务。请在连接到移动网络时重试，或者连接到 Wi-Fi 网络"</string>
+    <string name="auth_general_error_desc">"与 Google 服务器通信时出现问题。
+
+请稍后再试"</string>
+    <string name="auth_finalize">"您的设备正在连接到 Google 以将信息保存到您的账户。
+
+这可能需要几分钟"</string>
+    <!--auth: notifications-->
+    <string name="auth_notification_title">需要身份验证</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="auth_notification_content">%1$s 需要您的授权才能访问您的 Google 帐户</string>
+    <!--Account Manager-->
+    <string name="dialog_title_remove_account">移除账户</string>
+    <string name="dialog_message_remove_account">"您确定要移除此帐户吗？
+
+某些服务和功能将无法使用
+
+您的数据不会丢失"</string>
+    <string name="dialog_confirm_button">移除</string>
+    <string name="dialog_cancel_button">取消</string>
+    <string name="snackbar_remove_account">已移除账户 %s</string>
+    <string name="snackbar_undo_button">撤销</string>
+    <!--Google Cloud Messaging-->
+    <string name="service_name_mcs">云消息</string>
+    <string name="gcm_enable_switch">启用推送通知</string>
+    <!--gcm: register dialogs-->
+    <string name="gcm_registered">已注册</string>
+    <string name="gcm_unregister_app">取消注册</string>
+    <string name="gcm_remove_registers_dialog_title">要移除所有注册吗？</string>
+    <!-- %1$s is an app name, such as "YouTube"? -->
+    <string name="gcm_unregister_confirm_title">取消注册 %1$s？</string>
+    <string name="gcm_remove_registers_dialog_message">"这将一次性移除所有已注册的推送通知应用
+
+您需要打开应用以重新注册到云消息
+
+某些应用可能无法再次注册"</string>
+    <string name="gcm_unregister_confirm_message">"某些应用不支持自动重新注册或无法手动执行。这些应用可能在取消注册后无法正常工作。
+继续吗？"</string>
+    <string name="gcm_unregister_after_deny_message">"您拒绝了一个已注册的应用接收推送通知。
+您要现在取消注册它，以便它将来不再接收推送消息吗？"</string>
+    <!--gcm: register messages infos-->
+    <string name="gcm_no_message_yet">尚未收到任何消息</string>
+    <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
+    <string name="gcm_last_message_at">最后一条消息：%1$s</string>
+    <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
+    <string name="gcm_registered_since">已注册以来：%1$s</string>
+    <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
+    <string name="gcm_messages_counter">消息：%1$d (%2$d 字节)</string>
+    <!--gcm: network states-->
+    <string name="gcm_network_state_disconnected">已断开连接</string>
+    <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
+    <string name="gcm_network_state_connected">已连接以来 %1$s</string>
+    <!--gcm: network types entry's-->
+    <string name="network_type_mobile">移动网络</string>
+    <string name="network_type_wifi">Wi-Fi</string>
+    <string name="network_type_roaming">漫游</string>
+    <string name="network_type_other">其他网络</string>
+    <!--gcm: push notifications ping entry's-->
+    <string name="push_notifications_summary_off">关闭</string>
+    <string name="push_notifications_summary_automatic">开启 / 自动：%s</string>
+    <string name="push_notifications_summary_manual">开启 / 手动：%s</string>
+    <string name="push_notifications_summary_values_seconds">%s 秒</string>
+    <string name="push_notifications_summary_values_minutes">%s 分钟</string>
+    <!--gcm: ask push permission dialog-->
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="gcm_allow_app_popup">允许 %1$s 注册推送通知？</string>
+    <string name="allow">允许</string>
+    <string name="deny">拒绝</string>
+    <!--gcm: ask permission tos-->
+    <string name="ask_permission_tos">继续操作，您允许此应用和 Google 使用您的信息，根据其各自的服务条款和隐私政策</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="ask_scope_permission_title">%1$s 想要：</string>
+    <string name="ask_service_permission_title">%1$s 想要使用：</string>
+    <!--Device Registration-->
+    <string name="service_name_checkin">设备注册</string>
+    <string name="checkin_enable_switch">启用设备注册</string>
+    <!--checkin: registration status-->
+    <string name="checkin_not_registered">未注册</string>
+    <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
+    <string name="checkin_last_registration">最后注册：%1$s</string>
+    <!--checkin: profile names types entry's-->
+    <string name="profile_name_native">原生</string>
+    <string name="profile_name_real">自定义：%s</string>
+    <string name="profile_name_user">自动：%s</string>
+    <string name="profile_name_auto">系统：%s</string>
+    <string name="profile_name_system">系统</string>
+    <!--Self Check-->
+    <!--self check: categories-->
+    <string name="self_check_cat_system">系统</string>
+    <string name="self_check_cat_patched_apps">已修补应用</string>
+    <string name="self_check_cat_gms_packages">已安装包</string>
+    <string name="self_check_cat_fake_sig">签名伪造支持</string>
+    <!--self check: patched apps-->
+    <string name="self_check_source_morphe">Morphe 补丁</string>
+    <string name="self_check_source_alternative">不兼容的补丁</string>
+    <!-- %1$s is an app name, such as "Morphe" -->
+    <string name="self_check_patched_app_installed">使用 %1$s 运行</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="self_check_resolution_patched_app_installed">找不到使用 %1$s 的应用程序。请修补并安装修改后的应用程序</string>
+    <string name="self_check_action_download_morphe">下载 Morphe</string>
+    <!--self check: permission-->
+    <string name="self_check_name_notifications">已启用通知</string>
+    <string name="self_check_resolution_notifications">点击此处打开通知设置。启用通知以在启用电池优化时保持 GcmService 在后台运行</string>
+    <string name="self_check_name_overlay">启用显示在其他应用上方</string>
+    <string name="self_check_resolution_overlay">点击此处授予此权限。此权限用于在其他应用上方显示弹出警告</string>
+    <!--self check: system-->
+    <string name="self_check_name_battery_optimizations">已禁用电池优化</string>
+    <string name="self_check_resolution_battery_optimizations">点击此处禁用电池优化。如未禁用，您可能会遇到来自YouTube和其他注册应用的通知问题。</string>
+    <string name="self_check_name_oem_restriction">系统可能会限制后台进程。点击此处打开“Don’t Kill My App!”网站，了解如何禁用这些限制</string>
+    <string name="self_check_resolution_oem_restriction">系统伪造签名</string>
+    <!--self check: signature-->
+    <string name="self_check_name_system_spoofs">请检查文档，查看可能需要执行的步骤</string>
+    <string name="self_check_resolution_system_spoofs">Play Services</string>
+    <!--self check: package-->
+    <string name="self_check_pkg_gms">Play Services</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="self_check_name_app_installed">已安装 %1$s</string>
+    <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="self_check_resolution_app_installed">安装应用程序 %1$s 或兼容的应用程序。请检查文档以了解哪些应用程序兼容</string>
+    <!--Settings Preferences-->
+    <!--preferences: categories-->
+    <string name="prefcat_accounts_login_accounts_title">已登录</string>
+    <string name="prefcat_accounts_options_title">选项</string>
+    <string name="prefcat_youtube_activity">YouTube 活动</string>
+    <string name="prefcat_push_apps_registered_title">已注册的应用</string>
+    <string name="prefcat_push_apps_unregistered_title">未注册的应用</string>
+    <string name="prefcat_gcm_registers">注册</string>
+    <string name="prefcat_push_networks_title">推送通知使用的网络</string>
+    <string name="prefcat_applications">应用</string>
+    <string name="prefcat_authentication">身份验证</string>
+    <string name="prefcat_about">关于</string>
+    <string name="prefcat_details">详情</string>
+    <string name="pref_info_status">状态</string>
+    <!--preferences: account manager-->
+    <string name="pref_account_title">帐户</string>
+    <string name="pref_account_summary">登录到新的 Google 账户</string>
+    <string name="pref_accounts_summary">添加和管理 Google 账户</string>
+    <string name="pref_accounts_manage_accounts_title">管理帐户</string>
+    <string name="pref_accounts_manage_accounts_summary">打开设备帐户管理器</string>
+    <string name="pref_manage_all_history">管理所有历史记录</string>
+    <string name="pref_data_in_youtube">您在 YouTube 上的数据</string>
+    <string name="pref_accounts_login_accounts_summary">帐户只会保存在设备上，点击帐户以永久从设备上移除</string>
+    <!--preferences: device registration-->
+    <string name="pref_device_registration_device_profile_category">设备注册</string>
+    <string name="pref_device_registration_select_profile_title">选择配置文件</string>
+    <string name="pref_device_registration_import_custom_profile_title">导入自定义配置文件</string>
+    <string name="pref_device_registration_import_custom_profile_summary">从文件导入自定义配置文件</string>
+    <string name="pref_device_registration_serial_title">序列号</string>
+    <string name="pref_device_registration_android_id">Android ID</string>
+    <!--preferences: cloud messaging-->
+    <string name="prefcat_push_apps_title">启用应用注册</string>
+    <string name="pref_push_app_allow_register_title">允许注册</string>
+    <string name="pref_push_app_allow_register_summary">允许应用注册推送通知</string>
+    <string name="pref_push_app_wake_for_delivery_title">在推送消息时启动应用</string>
+    <string name="pref_push_app_wake_for_delivery_summary">在后台运行应用以接收传入的推送消息</string>
+    <string name="pref_gcm_enable_mcs_summary">云消息是修改应用的推送通知提供程序。要使用它，您必须启用设备注册</string>
+    <string name="pref_gcm_confirm_new_apps_title">确认新应用</string>
+    <string name="pref_gcm_confirm_new_apps_summary">在注册新应用以接收推送通知之前，请求确认</string>
+    <string name="pref_gcm_remove_registers">移除所有注册的应用</string>
+    <string name="pref_gcm_remove_registers_summary">仅在出现注册应用或接收通知问题时使用此选项</string>
+    <!--preferences: privacy-->
+    <string name="pref_privacy_title">隐私</string>
+    <string name="pref_privacy_summary">身份验证和应用的隐私设置</string>
+    <string name="pref_network_google_enabled">允许连接到 Google 服务器</string>
+    <string name="pref_network_google_use_tor">通过 Tor 网络连接到 Google</string>
+    <string name="pref_network_google_use_tor_summary">"需要安装Orbot
+尚未支持"</string>
+    <string name="pref_auth_trust_google_title">信任 Google 的应用权限</string>
+    <string name="pref_auth_trust_google_summary">如果禁用，用户在发送应用的身份验证请求给 Google 时会被要求。某些应用如果禁用此设置可能无法使用 Google 帐户</string>
+    <string name="pref_auth_visible_title">允许应用查找帐户</string>
+    <string name="pref_auth_visible_summary">如果启用，所有应用都可以看到您的 Google 帐户的电子邮件地址，而无需先进行授权</string>
+    <string name="pref_auth_include_android_id_title">使用设备注册进行身份验证</string>
+    <string name="pref_auth_include_android_id_summary">如果禁用，身份验证请求不会链接到设备注册，这允许未经授权的设备登录，但可能会有未预期的后果</string>
+    <string name="pref_auth_strip_device_name_title">剥离设备名称进行身份验证</string>
+    <string name="pref_auth_strip_device_name_summary">如果启用，身份验证请求不会包含设备的名称，这可能允许未经授权的设备登录，但可能会有未预期的后果</string>
+    <!--preferences: hide icon in launcher-->
+    <string name="pref_hide_launcher_icon">隐藏启动器图标</string>
+    <!--preferences: about-->
+    <string name="pref_github_summary">源代码仓库</string>
+    <!--Permissions-->
+    <string name="perm_status_broadcast_label">监听内部状态广播</string>
+    <string name="perm_gsf_read_gservices_label">读取 Google 服务配置</string>
+    <string name="perm_c2dm_receive_label">接收 C2DM 消息</string>
+    <string name="perm_c2dm_send_label">发送 C2DM 消息给其他应用</string>
+    <string name="perm_gtalk_svc_label">与 Google 服务器交换消息并接收同步通知</string>
+    <string name="perm_extended_access_label">扩展 Google 服务访问</string>
+    <!--Conditions-->
+    <string name="cond_gcm_bat_title">电池优化已启用</string>
+    <string name="cond_gcm_bat_action">忽略优化</string>
+    <string name="cond_perm_title">权限缺失</string>
+</resources>
