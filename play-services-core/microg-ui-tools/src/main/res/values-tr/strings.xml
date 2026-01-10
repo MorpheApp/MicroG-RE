@@ -43,11 +43,11 @@
 
     <!--preferences: self-check-->
     <string name="self_check_title">Kendi Kendine Kontrol</string>
-    <string name="self_check_desc">Cihazın MicroG kullanmak için doğru şekilde yapılandırıldığını doğrulayın</string>
+    <string name="self_check_desc">Cihazın microG kullanmak için doğru şekilde yapılandırıldığını doğrulayın</string>
 
     <!--UI preview-->
 
-    <string name="about_root_title">MicroG UI Demo</string>
+    <string name="about_root_title">microG UI Demo</string>
     <string name="about_root_version">Sürüm v0.1.0</string>
     <string name="about_root_libraries">Kullanılan kütüphaneler</string>
 </resources>

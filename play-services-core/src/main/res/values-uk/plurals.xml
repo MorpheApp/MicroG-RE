@@ -28,10 +28,10 @@
     <!--Conditions-->
 
     <plurals name="cond_perm_summary">
-        <item quantity="one">Дозвіл, необхідний для належної роботи сервісів MicroG, не надано.</item>
-        <item quantity="few">Дозволи, необхідні для належної роботи сервісів MicroG, не надано.</item>
-        <item quantity="many">Дозволи, необхідні для належної роботи сервісів MicroG, не надано.</item>
-        <item quantity="other">Дозволи, необхідні для належної роботи сервісів MicroG, не надано.</item>
+        <item quantity="one">Дозвіл, необхідний для належної роботи сервісів microG, не надано.</item>
+        <item quantity="few">Дозволи, необхідні для належної роботи сервісів microG, не надано.</item>
+        <item quantity="many">Дозволи, необхідні для належної роботи сервісів microG, не надано.</item>
+        <item quantity="other">Дозволи, необхідні для належної роботи сервісів microG, не надано.</item>
     </plurals>
 
     <plurals name="cond_perm_action">

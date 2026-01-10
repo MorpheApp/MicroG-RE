@@ -1,5 +1,5 @@
 <!--
-  ~ SPDX-FileCopyrightText: 2017 MicroG Project Team
+  ~ SPDX-FileCopyrightText: 2017 microG Project Team
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 
@@ -7,8 +7,8 @@
 
     <!--App Names-->
 
-    <string name="gms_app_name" translatable="false">MicroG</string>
-    <string name="gms_settings_name">MicroG Settings</string>
+    <string name="gms_app_name" translatable="false">MicroG RE</string>
+    <string name="gms_settings_name">microG Settings</string>
 
     <!--Authentication-->
 
@@ -26,11 +26,11 @@
     <!-- %1$s is an app name, such as "YouTube" -->
     <string name="signin_confirm_title">Allow to sign you in to %1$s</string>
     <!-- %1$s is an app name, such as "YouTube" -->
-    <string name="signin_subtext_sharing">To continue, MicroG will share name, email address and profile picture of your Google Account with %1$s</string>
+    <string name="signin_subtext_sharing">To continue, microG will share name, email address and profile picture of your Google Account with %1$s</string>
     <!--auth: buttons-->
     <string name="auth_huawei_button" translatable="false">Huawei</string>
     <!--auth: messages-->
-    <string name="auth_before_connect">"Connect Google account with MicroG.
+    <string name="auth_before_connect">"Connect Google account with microG.
 
 Let's connect to a Google account, use the <b>Sign in</b> button or use the <b>Huawei</b> button if you have a device with this manufacturer. By pressing one of the buttons you will be redirected to the page to login to your account."</string>
 
@@ -199,7 +199,7 @@ Do you want to unregister it now so it does not receive push messages in the fut
     <string name="pref_device_registration_import_custom_profile_summary">Import device profile from file</string>
     <string name="pref_device_registration_serial_title">Serial</string>
     <string name="pref_device_registration_android_id">Android ID</string>
-    <string name="pref_checkin_enable_summary">Registers your device to Google services and creates a unique device identifier. MicroG strips identifying bits other than your Google account name from registration data</string>
+    <string name="pref_checkin_enable_summary">Registers your device to Google services and creates a unique device identifier. microG strips identifying bits other than your Google account name from registration data</string>
     <!--preferences: cloud messaging-->
     <string name="prefcat_push_apps_title">Apps using push notifications</string>
     <string name="pref_push_app_allow_register_title">Allow registration</string>
@@ -215,7 +215,7 @@ Do you want to unregister it now so it does not receive push messages in the fut
     <string name="pref_privacy_title">Privacy</string>
     <string name="pref_privacy_summary">Privacy settings for authentication and apps</string>
     <string name="pref_network_google_enabled">Allow connecting to Google servers</string>
-    <string name="pref_network_google_enabled_summary">If disabled, all connections to Google servers usually done by MicroG will be denied. This overrides service specific settings</string>
+    <string name="pref_network_google_enabled_summary">If disabled, all connections to Google servers usually done by microG will be denied. This overrides service specific settings</string>
     <string name="pref_network_google_use_tor">Connect to Google via Tor network</string>
     <string name="pref_network_google_use_tor_summary">"Requires Orbot to be installed
 Not yet supported"</string>
@@ -230,7 +230,7 @@ Not yet supported"</string>
     <!--preferences: hide icon in launcher-->
     <string name="pref_hide_launcher_icon">Hide icon in launcher</string>
     <!--preferences: about-->
-    <string name="pref_about_title">About MicroG</string>
+    <string name="pref_about_title">About MicroG RE</string>
     <string name="pref_github" translatable="false">GitHub</string>
     <string name="pref_github_summary">Source code repository</string>
 
@@ -246,7 +246,7 @@ Not yet supported"</string>
     <!--Conditions-->
 
     <string name="cond_gcm_bat_title">Battery optimizations enabled</string>
-    <string name="cond_gcm_bat_summary">You enabled Cloud messaging but have battery optimizations active for MicroG Services. For push notifications to arrive you should ignore battery optimizations</string>
+    <string name="cond_gcm_bat_summary">You enabled Cloud messaging but have battery optimizations active for microG Services. For push notifications to arrive you should ignore battery optimizations</string>
     <string name="cond_gcm_bat_action">Ignore optimizations</string>
     <string name="cond_perm_title">Permission missing</string>
 </resources>

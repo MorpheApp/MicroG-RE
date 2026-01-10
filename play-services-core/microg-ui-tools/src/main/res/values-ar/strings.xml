@@ -43,11 +43,11 @@
 
     <!--preferences: self-check-->
     <string name="self_check_title">الفحص الذاتي</string>
-    <string name="self_check_desc">تحقق من أن الجهاز تم تكوينه بشكل صحيح لاستخدام MicroG</string>
+    <string name="self_check_desc">تحقق من أن الجهاز تم تكوينه بشكل صحيح لاستخدام microG</string>
 
     <!--UI preview-->
 
-    <string name="about_root_title">عرض MicroG UI</string>
+    <string name="about_root_title">عرض microG UI</string>
     <string name="about_root_version">الإصدار v0.1.0</string>
     <string name="about_root_libraries">المكتبات المستخدمة</string>
 </resources>

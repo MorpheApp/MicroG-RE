@@ -1,5 +1,5 @@
 <!--
-  ~ SPDX-FileCopyrightText: 2017 MicroG Project Team
+  ~ SPDX-FileCopyrightText: 2017 microG Project Team
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 
@@ -7,7 +7,7 @@
 
     <!--App Names-->
 
-    <string name="gms_settings_name">Cài đặt MicroG</string>
+    <string name="gms_settings_name">Cài đặt microG</string>
 
     <!--Authentication-->
 
@@ -22,9 +22,9 @@
     <string name="signin_confirm_button_text">Cho phép và chia sẻ</string>
     <string name="signin_picker_add_account_label">Thêm tài khoản khác</string>
     <string name="signin_confirm_title">Cho phép đăng nhập vào %1$s</string>
-    <string name="signin_subtext_sharing">Để tiếp tục, MicroG sẽ chia sẻ tên, email và ảnh đại diện của Tài khoản Google của bạn với %1$s</string>
+    <string name="signin_subtext_sharing">Để tiếp tục, microG sẽ chia sẻ tên, email và ảnh đại diện của Tài khoản Google của bạn với %1$s</string>
     <!--auth: messages-->
-    <string name="auth_before_connect">"Liên kết tài khoản Google của bạn với MicroG.
+    <string name="auth_before_connect">"Liên kết tài khoản Google của bạn với microG.
 
 Bắt đầu bằng cách liên kết tài khoản Google của bạn, nhấn nút <b>Đăng nhập</b> hoặc nút <b>Huawei</b> nếu bạn sử dụng thiết bị từ nhà sản xuất này. Khi bạn nhấn một trong các nút, bạn sẽ được chuyển hướng đến trang đăng nhập tài khoản."</string>
 
@@ -179,7 +179,7 @@ Bạn có muốn hủy đăng ký bây giờ để không nhận thông báo tro
     <string name="pref_device_registration_import_custom_profile_summary">Nhập thông tin thiết bị từ tệp</string>
     <string name="pref_device_registration_serial_title">Serial</string>
     <string name="pref_device_registration_android_id">Android ID</string>
-    <string name="pref_checkin_enable_summary">Liên kết thiết bị của bạn với dịch vụ Google và tạo định danh duy nhất. MicroG sẽ giúp loại bỏ các dữ liệu dư thừa khác ngoài tên tài khoản Google.</string>
+    <string name="pref_checkin_enable_summary">Liên kết thiết bị của bạn với dịch vụ Google và tạo định danh duy nhất. microG sẽ giúp loại bỏ các dữ liệu dư thừa khác ngoài tên tài khoản Google.</string>
     <!--preferences: cloud messaging-->
     <string name="prefcat_push_apps_title">Ứng dụng sử dụng thông báo đẩy</string>
     <string name="pref_push_app_allow_register_title">Cho phép đăng ký</string>
@@ -195,7 +195,7 @@ Bạn có muốn hủy đăng ký bây giờ để không nhận thông báo tro
     <string name="pref_privacy_title">Quyền riêng tư</string>
     <string name="pref_privacy_summary">Cài đặt về quyền riêng tư cho xác thực và ứng dụng</string>
     <string name="pref_network_google_enabled">Cho phép kết nối máy chủ Google</string>
-    <string name="pref_network_google_enabled_summary">Nếu bị vô hiệu hoá, mọi kết nối tới máy chủ Google của MicroG sẽ bị chặn. Điều này ghi đè các cài đặt cụ thể.</string>
+    <string name="pref_network_google_enabled_summary">Nếu bị vô hiệu hoá, mọi kết nối tới máy chủ Google của microG sẽ bị chặn. Điều này ghi đè các cài đặt cụ thể.</string>
     <string name="pref_network_google_use_tor">Kết nối Google qua mạng lưới Tor</string>
     <string name="pref_network_google_use_tor_summary">"Yêu cầu cài đặt ứng dụng Orbot. Hiện chưa được hỗ trợ."</string>
     <string name="pref_auth_trust_google_title">Tin tưởng Google về các quyền ứng dụng</string>
@@ -209,7 +209,7 @@ Bạn có muốn hủy đăng ký bây giờ để không nhận thông báo tro
     <!--preferences: hide icon in launcher-->
     <string name="pref_hide_launcher_icon">Ẩn biểu tượng trong trình khởi chạy</string>
     <!--preferences: about-->
-    <string name="pref_about_title">Giới thiệu MicroG</string>
+    <string name="pref_about_title">Giới thiệu MicroG RE</string>
     <string name="pref_github_summary">Nơi lưu trữ mã nguồn</string>
 
     <!--Permissions-->
@@ -224,7 +224,7 @@ Bạn có muốn hủy đăng ký bây giờ để không nhận thông báo tro
     <!--Conditions-->
 
     <string name="cond_gcm_bat_title">Đang bật tối ưu hoá pin</string>
-    <string name="cond_gcm_bat_summary">Bạn đã bật Thông báo đám mây nhưng chưa tắt tối ưu hóa pin cho MicroG. Hãy vô hiệu hoá tối ưu hóa pin để nhận thông báo ổn định.</string>
+    <string name="cond_gcm_bat_summary">Bạn đã bật Thông báo đám mây nhưng chưa tắt tối ưu hóa pin cho microG. Hãy vô hiệu hoá tối ưu hóa pin để nhận thông báo ổn định.</string>
     <string name="cond_gcm_bat_action">Bỏ qua tối ưu hoá</string>
     <string name="cond_perm_title">Thiếu quyền</string>
 </resources>

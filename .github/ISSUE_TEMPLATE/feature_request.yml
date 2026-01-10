@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        # microG RE feature request
+        # MicroG RE feature request
 
         Before creating a new feature request, please keep the following in mind:
         

@@ -26,8 +26,8 @@
     <!--Conditions-->
 
     <plurals name="cond_perm_summary">
-        <item quantity="one">Un permesso richiesto per il corretto funzionamento dei Servizi MicroG non è stato concesso.</item>
-        <item quantity="other">Dei permessi richiesti per il corretto funzionamento dei Servizi MicroG non sono stati concessi.</item>
+        <item quantity="one">Un permesso richiesto per il corretto funzionamento dei Servizi microG non è stato concesso.</item>
+        <item quantity="other">Dei permessi richiesti per il corretto funzionamento dei Servizi microG non sono stati concessi.</item>
     </plurals>
 
     <plurals name="cond_perm_action">

@@ -1,5 +1,5 @@
 <!--
-  ~ SPDX-FileCopyrightText: 2017 MicroG Project Team
+  ~ SPDX-FileCopyrightText: 2017 microG Project Team
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 
@@ -7,7 +7,7 @@
 
     <!--App Names-->
 
-    <string name="gms_settings_name">Impostazioni di MicroG</string>
+    <string name="gms_settings_name">Impostazioni di microG</string>
 
     <!--Authentication-->
 
@@ -22,9 +22,9 @@
     <string name="signin_confirm_button_text">Consenti e condividi</string>
     <string name="signin_picker_add_account_label">Aggiungi un altro account</string>
     <string name="signin_confirm_title">Consenti l\'accesso a %1$s</string>
-    <string name="signin_subtext_sharing">Procedendo, MicroG condividerà il nome, l\'indirizzo email e l\'immagine di profilo del tuo account Google con %1$s</string>
+    <string name="signin_subtext_sharing">Procedendo, microG condividerà il nome, l\'indirizzo email e l\'immagine di profilo del tuo account Google con %1$s</string>
     <!--auth: messages-->
-    <string name="auth_before_connect">"Connetti account Google con MicroG.
+    <string name="auth_before_connect">"Connetti account Google con microG.
 
 Effettua una connessione ad un account Google, utilizzando il pulsante <b>Accedi</b> o il pulsante <b>Huawei</b> qualora tu fossi in possesso di un dispositivo di questo produttore. Premendo uno di questi pulsanti verrai reindirizzato alla pagina di accesso al tuo account."</string>
 
@@ -179,7 +179,7 @@ Intendi annullare anche la sua attuale registrazione ora, così da non ricevere 
     <string name="pref_device_registration_import_custom_profile_summary">Importa profilo dispositivo da file</string>
     <string name="pref_device_registration_serial_title">Numero identificativo</string>
     <string name="pref_device_registration_android_id">ID Android</string>
-    <string name="pref_checkin_enable_summary">Registra il tuo dispositivo sui servizi Google e crea un identificativo univoco. MicroG rimuoverà i bit di identificazione oltre che il nome del tuo account Google dai dati di registrazione</string>
+    <string name="pref_checkin_enable_summary">Registra il tuo dispositivo sui servizi Google e crea un identificativo univoco. microG rimuoverà i bit di identificazione oltre che il nome del tuo account Google dai dati di registrazione</string>
     <!--preferences: cloud messaging-->
     <string name="prefcat_push_apps_title">App che utilizzano le notifiche push</string>
     <string name="pref_push_app_allow_register_title">Consenti registrazione</string>
@@ -195,7 +195,7 @@ Intendi annullare anche la sua attuale registrazione ora, così da non ricevere 
     <string name="pref_privacy_title">Privacy</string>
     <string name="pref_privacy_summary">Impostazioni Privacy per l\'autenticazione e le app</string>
     <string name="pref_network_google_enabled">Consenti connessione ai server Google</string>
-    <string name="pref_network_google_enabled_summary">Se l\'opzione risulta disattivata, tutte le connessioni ai server Google normalmente gestite da MicroG verranno negate. Ciò sovrascriverà le impostazioni di servizio specifiche</string>
+    <string name="pref_network_google_enabled_summary">Se l\'opzione risulta disattivata, tutte le connessioni ai server Google normalmente gestite da microG verranno negate. Ciò sovrascriverà le impostazioni di servizio specifiche</string>
     <string name="pref_network_google_use_tor">Connettiti a Google tramite rete Tor</string>
     <string name="pref_network_google_use_tor_summary">"Richiede l\'installazione di Orbot
 Non ancora supportata"</string>
@@ -210,7 +210,7 @@ Non ancora supportata"</string>
     <!--preferences: hide icon in launcher-->
     <string name="pref_hide_launcher_icon">Nascondi icona do launcher</string>
     <!--preferences: about-->
-    <string name="pref_about_title">Informazioni su MicroG</string>
+    <string name="pref_about_title">Informazioni su MicroG RE</string>
     <string name="pref_github_summary">Repository Codice Sorgente</string>
 
     <!--Permissions-->
@@ -225,7 +225,7 @@ Non ancora supportata"</string>
     <!--Conditions-->
 
     <string name="cond_gcm_bat_title">Ottimizzazioni batteria attive</string>
-    <string name="cond_gcm_bat_summary">Hai attivato l\'opzione Messaggistica Cloud ma le ottimizzazioni della batteria per i Servizi MicroG risultano attive. Per poter ricevere le notifiche push devi ignorare le suddette ottimizzazioni</string>
+    <string name="cond_gcm_bat_summary">Hai attivato l\'opzione Messaggistica Cloud ma le ottimizzazioni della batteria per i Servizi microG risultano attive. Per poter ricevere le notifiche push devi ignorare le suddette ottimizzazioni</string>
     <string name="cond_gcm_bat_action">Ignora ottimizzazioni</string>
     <string name="cond_perm_title">Permesso não concesso</string>
 </resources>

@@ -43,11 +43,11 @@
 
     <!--preferences: self-check-->
     <string name="self_check_title">Tự kiểm tra</string>
-    <string name="self_check_desc">Xác minh rằng thiết bị được cấu hình đúng để sử dụng MicroG</string>
+    <string name="self_check_desc">Xác minh rằng thiết bị được cấu hình đúng để sử dụng microG</string>
 
     <!--UI preview-->
 
-    <string name="about_root_title">MicroG UI Demo</string>
+    <string name="about_root_title">microG UI Demo</string>
     <string name="about_root_version">Phiên bản v0.1.0</string>
     <string name="about_root_libraries">Thư viện đã sử dụng</string>
 </resources>

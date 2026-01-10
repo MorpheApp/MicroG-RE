@@ -26,8 +26,8 @@
     <!--Conditions-->
 
     <plurals name="cond_perm_summary">
-        <item quantity="one">Uma permissão necessária para o funcionamento adequado dos Serviços MicroG não foi concedida.</item>
-        <item quantity="other">Permissões necessárias para o funcionamento adequado dos Serviços MicroG não foram concedidas.</item>
+        <item quantity="one">Uma permissão necessária para o funcionamento adequado dos Serviços microG não foi concedida.</item>
+        <item quantity="other">Permissões necessárias para o funcionamento adequado dos Serviços microG não foram concedidas.</item>
     </plurals>
 
     <plurals name="cond_perm_action">

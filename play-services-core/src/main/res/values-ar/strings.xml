@@ -1,5 +1,5 @@
 <!--
-  ~ SPDX-FileCopyrightText: 2017 MicroG Project Team
+  ~ SPDX-FileCopyrightText: 2017 microG Project Team
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 
@@ -7,7 +7,7 @@
 
     <!--App Names-->
 
-    <string name="gms_settings_name">إعدادات MicroG</string>
+    <string name="gms_settings_name">إعدادات microG</string>
 
     <!--Authentication-->
 
@@ -22,9 +22,9 @@
     <string name="signin_confirm_button_text">السماح والمشاركة</string>
     <string name="signin_picker_add_account_label">إضافة حساب آخر</string>
     <string name="signin_confirm_title">السماح بتسجيل الدخول إلى %1$s</string>
-    <string name="signin_subtext_sharing">للمتابعة، سيشارك MicroG اسمك وعنوان بريدك الإلكتروني وصورة ملفك الشخصي من حساب Google مع %1$s</string>
+    <string name="signin_subtext_sharing">للمتابعة، سيشارك microG اسمك وعنوان بريدك الإلكتروني وصورة ملفك الشخصي من حساب Google مع %1$s</string>
     <!--auth: messages-->
-    <string name="auth_before_connect">"ربط حساب Google بـ MicroG.
+    <string name="auth_before_connect">"ربط حساب Google بـ microG.
 
 لنتصل بحساب Google، استخدم زر <b>تسجيل الدخول</b> أو زر <b>Huawei</b> إذا كان لديك جهاز من هذا المصنع. عند الضغط على أحد الأزرار، سيتم توجيهك إلى صفحة تسجيل الدخول إلى حسابك."</string>
 
@@ -179,7 +179,7 @@
     <string name="pref_device_registration_import_custom_profile_summary">استيراد ملف تعريف الجهاز من الملف</string>
     <string name="pref_device_registration_serial_title">سيريال</string>
     <string name="pref_device_registration_android_id">معرف Android</string>
-    <string name="pref_checkin_enable_summary">يقوم بتسجيل جهازك في خدمات Google وينشئ معرف جهاز فريد. يقوم MicroG بإزالة الأجزاء التي تعرف الهوية باستثناء اسم حساب Google الخاص بك من بيانات التسجيل</string>
+    <string name="pref_checkin_enable_summary">يقوم بتسجيل جهازك في خدمات Google وينشئ معرف جهاز فريد. يقوم microG بإزالة الأجزاء التي تعرف الهوية باستثناء اسم حساب Google الخاص بك من بيانات التسجيل</string>
     <!--preferences: cloud messaging-->
     <string name="prefcat_push_apps_title">التطبيقات التي تستخدم إشعارات الدفع</string>
     <string name="pref_push_app_allow_register_title">السماح بالتسجيل</string>
@@ -195,7 +195,7 @@
     <string name="pref_privacy_title">الخصوصية</string>
     <string name="pref_privacy_summary">إعدادات الخصوصية للمصادقة والتطبيقات</string>
     <string name="pref_network_google_enabled">السماح بالاتصال بخوادم Google</string>
-    <string name="pref_network_google_enabled_summary">إذا تم تعطيله، سيتم رفض جميع الاتصالات بخوادم Google التي تتم عادةً بواسطة MicroG. هذا يتجاوز إعدادات الخدمة المحددة</string>
+    <string name="pref_network_google_enabled_summary">إذا تم تعطيله، سيتم رفض جميع الاتصالات بخوادم Google التي تتم عادةً بواسطة microG. هذا يتجاوز إعدادات الخدمة المحددة</string>
     <string name="pref_network_google_use_tor">الاتصال بـ Google عبر شبكة Tor</string>
     <string name="pref_network_google_use_tor_summary">"يتطلب تثبيت Orbot
 غير مدعوم حتى الآن"</string>
@@ -210,7 +210,7 @@
     <!--preferences: hide icon in launcher-->
     <string name="pref_hide_launcher_icon">إخفاء الأيقونة في المشغل</string>
     <!--preferences: about-->
-    <string name="pref_about_title">حول MicroG</string>
+    <string name="pref_about_title">حول MicroG RE</string>
     <string name="pref_github_summary">مستودع الشيفرة المصدرية</string>
 
     <!--Permissions-->
@@ -225,7 +225,7 @@
     <!--Conditions-->
 
     <string name="cond_gcm_bat_title">تمكين تحسينات البطارية</string>
-    <string name="cond_gcm_bat_summary">لقد قمت بتمكين الرسائل السحابية ولكن لديك تحسينات البطارية مفعلة لخدمات MicroG. لتلقي الإشعارات يجب عليك تجاهل تحسينات البطارية</string>
+    <string name="cond_gcm_bat_summary">لقد قمت بتمكين الرسائل السحابية ولكن لديك تحسينات البطارية مفعلة لخدمات microG. لتلقي الإشعارات يجب عليك تجاهل تحسينات البطارية</string>
     <string name="cond_gcm_bat_action">تجاهل التحسينات</string>
     <string name="cond_perm_title">إذن مفقود</string>
 </resources>

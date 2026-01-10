@@ -26,7 +26,7 @@
     <!--Conditions-->
 
     <plurals name="cond_perm_summary" tools:ignore="UnusedQuantity">
-        <item quantity="one">Izin yang diperlukan agar Layanan MicroG berfungsi dengan benar tidak diberikan.</item>
+        <item quantity="one">Izin yang diperlukan agar Layanan microG berfungsi dengan benar tidak diberikan.</item>
         <item quantity="other">Beberapa izin yang diperlukan untuk fungsionalitas yang tepat dari Layanan microG belum diberikan.</item>
     </plurals>
 

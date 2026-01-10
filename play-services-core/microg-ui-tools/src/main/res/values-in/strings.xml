@@ -43,11 +43,11 @@
 
     <!--preferences: self-check-->
     <string name="self_check_title">Pemeriksaan Mandiri</string>
-    <string name="self_check_desc">Pastikan perangkat dikonfigurasi dengan benar untuk menggunakan MicroG</string>
+    <string name="self_check_desc">Pastikan perangkat dikonfigurasi dengan benar untuk menggunakan microG</string>
 
     <!--UI preview-->
 
-    <string name="about_root_title">Demo UI MicroG</string>
+    <string name="about_root_title">Demo UI microG</string>
     <string name="about_root_version">Versi v0.1.0</string>
     <string name="about_root_libraries">Library yang digunakan</string>
 </resources>

@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        # microG RE bug report
+        # MicroG RE bug report
 
         Before creating a new bug report, please keep the following in mind:
 

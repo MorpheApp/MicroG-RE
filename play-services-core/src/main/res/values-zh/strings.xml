@@ -1,5 +1,5 @@
 <!--
-  ~ SPDX-FileCopyrightText: 2017 MicroG Project Team
+  ~ SPDX-FileCopyrightText: 2017 microG Project Team
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 
@@ -7,7 +7,7 @@
 
     <!--App Names-->
 
-    <string name="gms_settings_name">MicroG 设置</string>
+    <string name="gms_settings_name">microG 设置</string>
 
     <!--Authentication-->
 
@@ -22,9 +22,9 @@
     <string name="signin_confirm_button_text">允许并共享</string>
     <string name="signin_picker_add_account_label">添加其他账户</string>
     <string name="signin_confirm_title">允许登录到 %1$s</string>
-    <string name="signin_subtext_sharing">要继续，MicroG 将与 %1$s 共享您 Google 账户的姓名、电子邮件地址和个人资料图片</string>
+    <string name="signin_subtext_sharing">要继续，microG 将与 %1$s 共享您 Google 账户的姓名、电子邮件地址和个人资料图片</string>
     <!--auth: messages-->
-    <string name="auth_before_connect">"将 Google 账户与 MicroG 连接。
+    <string name="auth_before_connect">"将 Google 账户与 microG 连接。
 
 让我们连接到一个 Google 账户，使用<b>登录</b>按钮，或者如果您使用的是华为设备，请使用<b>华为</b>按钮。按下其中一个按钮后，您将被重定向到登录您的账户的页面。"</string>
 
@@ -179,7 +179,7 @@
     <string name="pref_device_registration_import_custom_profile_summary">从文件导入设备配置文件</string>
     <string name="pref_device_registration_serial_title">序列号</string>
     <string name="pref_device_registration_android_id">Android ID</string>
-    <string name="pref_checkin_enable_summary">将设备注册到 Google 服务并创建唯一 ID。MicroG 会移除账户名称以外的敏感数据</string>
+    <string name="pref_checkin_enable_summary">将设备注册到 Google 服务并创建唯一 ID。microG 会移除账户名称以外的敏感数据</string>
     <!--preferences: cloud messaging-->
     <string name="prefcat_push_apps_title">使用推送通知的应用</string>
     <string name="pref_push_app_allow_register_title">允许注册</string>
@@ -195,7 +195,7 @@
     <string name="pref_privacy_title">隐私</string>
     <string name="pref_privacy_summary">身份验证和应用的隐私设置</string>
     <string name="pref_network_google_enabled">允许连接到 Google 服务器</string>
-    <string name="pref_network_google_enabled_summary">禁用则拦截 MicroG 发往 Google 服务器的连接。这会覆盖所有具体服务的设置</string>
+    <string name="pref_network_google_enabled_summary">禁用则拦截 microG 发往 Google 服务器的连接。这会覆盖所有具体服务的设置</string>
     <string name="pref_network_google_use_tor">通过 Tor 网络连接到 Google</string>
     <string name="pref_network_google_use_tor_summary">"需要 Orbot，目前尚不支持"</string>
     <string name="pref_auth_trust_google_title">应用权限信任 Google</string>
@@ -209,7 +209,7 @@
     <!--preferences: hide icon in launcher-->
     <string name="pref_hide_launcher_icon">隐藏图标</string>
     <!--preferences: about-->
-    <string name="pref_about_title">关于 MicroG</string>
+    <string name="pref_about_title">关于 MicroG RE</string>
     <string name="pref_github_summary">源码库</string>
 
     <!--Permissions-->
@@ -224,7 +224,7 @@
     <!--Conditions-->
 
     <string name="cond_gcm_bat_title">电池优化已开启</string>
-    <string name="cond_gcm_bat_summary">已开启云消息传递，但对 MicroG 服务启用了电池优化。为确保接收通知，请将 MicroG 设为白名单</string>
+    <string name="cond_gcm_bat_summary">已开启云消息传递，但对 microG 服务启用了电池优化。为确保接收通知，请将 microG 设为白名单</string>
     <string name="cond_gcm_bat_action">忽略电池优化</string>
     <string name="cond_perm_title">权限缺失</string>
 </resources>

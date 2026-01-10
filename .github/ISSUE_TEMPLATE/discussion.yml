@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        # microG RE Discussion
+        # MicroG RE Discussion
 
         Before creating a new discussion, please keep the following in mind:
 

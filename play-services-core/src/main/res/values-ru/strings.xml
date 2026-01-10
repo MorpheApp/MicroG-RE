@@ -1,5 +1,5 @@
 <!--
-  ~ SPDX-FileCopyrightText: 2017 MicroG Project Team
+  ~ SPDX-FileCopyrightText: 2017 microG Project Team
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 
@@ -7,7 +7,7 @@
 
     <!--App Names-->
 
-    <string name="gms_settings_name">Параметры MicroG</string>
+    <string name="gms_settings_name">Параметры microG</string>
 
     <!--Authentication-->
 
@@ -22,9 +22,9 @@
     <string name="signin_confirm_button_text">Разрешить и поделиться</string>
     <string name="signin_picker_add_account_label">Добавить другой аккаунт</string>
     <string name="signin_confirm_title">Разрешить вход в %1$s</string>
-    <string name="signin_subtext_sharing">Чтобы продолжить, MicroG передаст имя, адрес электронной почты и фотографию профиля вашего аккаунта Google в %1$s</string>
+    <string name="signin_subtext_sharing">Чтобы продолжить, microG передаст имя, адрес электронной почты и фотографию профиля вашего аккаунта Google в %1$s</string>
     <!--auth: messages-->
-    <string name="auth_before_connect">"Подключите аккаунт Google к MicroG.
+    <string name="auth_before_connect">"Подключите аккаунт Google к microG.
 
 Давайте подключим аккаунт Google — используйте кнопку <b>Войти</b> или кнопку <b>Huawei</b>, если у вас устройство этого производителя. Нажав одну из кнопок, вы будете перенаправлены на страницу входа в аккаунт."</string>
 
@@ -179,7 +179,7 @@
     <string name="pref_device_registration_import_custom_profile_summary">Импортировать профиль устройства из файла</string>
     <string name="pref_device_registration_serial_title">Серийный номер</string>
     <string name="pref_device_registration_android_id">Android ID</string>
-    <string name="pref_checkin_enable_summary">Регистрирует устройство в Google и создаёт уникальный ID. MicroG удаляет лишние идентификаторы из данных регистрации</string>
+    <string name="pref_checkin_enable_summary">Регистрирует устройство в Google и создаёт уникальный ID. microG удаляет лишние идентификаторы из данных регистрации</string>
     <!--preferences: cloud messaging-->
     <string name="prefcat_push_apps_title">Приложения, использующие push-уведомления</string>
     <string name="pref_push_app_allow_register_title">Разрешить регистрацию</string>
@@ -195,7 +195,7 @@
     <string name="pref_privacy_title">Конфиденциальность</string>
     <string name="pref_privacy_summary">Настройки конфиденциальности для аутентификации</string>
     <string name="pref_network_google_enabled">Разрешить соединение с серверами Google</string>
-    <string name="pref_network_google_enabled_summary">Если отключено, MicroG будет блокировать любые запросы к Google. Это важнее настроек сервисов</string>
+    <string name="pref_network_google_enabled_summary">Если отключено, microG будет блокировать любые запросы к Google. Это важнее настроек сервисов</string>
     <string name="pref_network_google_use_tor">Подключаться к Google через сеть Tor</string>
     <string name="pref_network_google_use_tor_summary">"Требует Orbot
 Еще не поддерживается"</string>
@@ -210,7 +210,7 @@
     <!--preferences: hide icon in launcher-->
     <string name="pref_hide_launcher_icon">Скрыть значок в лаунчере</string>
     <!--preferences: about-->
-    <string name="pref_about_title">О MicroG</string>
+    <string name="pref_about_title">О MicroG RE</string>
     <string name="pref_github_summary">Репозиторий исходного кода</string>
 
     <!--Permissions-->
@@ -225,7 +225,7 @@
     <!--Conditions-->
 
     <string name="cond_gcm_bat_title">Включены оптимизации батареи</string>
-    <string name="cond_gcm_bat_summary">Cloud Messaging включен, но для MicroG активирована оптимизация батареи. Добавьте его в исключения, чтобы уведомления не пропадали</string>
+    <string name="cond_gcm_bat_summary">Cloud Messaging включен, но для microG активирована оптимизация батареи. Добавьте его в исключения, чтобы уведомления не пропадали</string>
     <string name="cond_gcm_bat_action">Отключить оптимизации</string>
     <string name="cond_perm_title">Отсутствует разрешение</string>
 </resources>

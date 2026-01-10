@@ -26,8 +26,8 @@
     <!--Conditions-->
 
     <plurals name="cond_perm_summary">
-        <item quantity="one">A permission required for proper functionality of MicroG Services is not granted.</item>
-        <item quantity="other">Permissions required for proper functionality of MicroG Services are not granted.</item>
+        <item quantity="one">A permission required for proper functionality of microG Services is not granted.</item>
+        <item quantity="other">Permissions required for proper functionality of microG Services are not granted.</item>
     </plurals>
 
     <plurals name="cond_perm_action">

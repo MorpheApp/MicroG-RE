@@ -43,11 +43,11 @@
 
     <!--preferences: self-check-->
     <string name="self_check_title">系统自检</string>
-    <string name="self_check_desc">验证设备是否已正确配置以使用 MicroG</string>
+    <string name="self_check_desc">验证设备是否已正确配置以使用 microG</string>
 
     <!--UI preview-->
 
-    <string name="about_root_title">MicroG UI 演示</string>
+    <string name="about_root_title">microG UI 演示</string>
     <string name="about_root_version">版本 v0.1.0</string>
     <string name="about_root_libraries">使用的库</string>
 </resources>

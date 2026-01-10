@@ -26,8 +26,8 @@
     <!--Conditions-->
 
     <plurals name="cond_perm_summary" tools:ignore="UnusedQuantity">
-        <item quantity="one">Một quyền cần thiết để Dịch vụ MicroG hoạt động đúng cách chưa được cấp.</item>
-        <item quantity="other">Các quyền cần thiết để Dịch vụ MicroG hoạt động đúng cách chưa được cấp.</item>
+        <item quantity="one">Một quyền cần thiết để Dịch vụ microG hoạt động đúng cách chưa được cấp.</item>
+        <item quantity="other">Các quyền cần thiết để Dịch vụ microG hoạt động đúng cách chưa được cấp.</item>
     </plurals>
 
     <plurals name="cond_perm_action" tools:ignore="UnusedQuantity">
