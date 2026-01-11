@@ -102,12 +102,20 @@ public abstract class AbstractAboutFragment extends Fragment {
         view.setBackgroundColor(MaterialColors.getColor(view, android.R.attr.colorBackground));
     }
 
-    public static String getSelfVersion(Context context) {
-        return getLibVersion(BuildConfig.GMS_APPLICATION_NAMESPACE);
+    public static String getAppVersion() {
+        return BuildConfig.APP_VERSION_NAME;
     }
 
-    protected String getSelfVersion() {
-        return getSelfVersion(getContext());
+    public static String getGmsVersion() {
+        return BuildConfig.GMS_VERSION_NAME;
+    }
+
+    public static String getAppVersion(Context context) {
+        return getAppVersion();
+    }
+
+    public static String getGmsVersion(Context context) {
+        return getGmsVersion();
     }
 
     protected String getSummary() {
@@ -125,7 +133,8 @@ public abstract class AbstractAboutFragment extends Fragment {
             View appCard = inflater.inflate(R.layout.about_app, appCardContainer, true);
 //            ((ImageView) appCard.findViewById(R.id.app_icon)).setImageDrawable(getIcon(requireContext()));
 //            ((TextView) appCard.findViewById(R.id.app_title)).setText(getAppName());
-            ((TextView) appCard.findViewById(R.id.app_version)).setText(getSelfVersion());
+            ((TextView) appCard.findViewById(R.id.app_version)).setText(getAppVersion());
+            ((TextView) appCard.findViewById(R.id.gms_version)).setText(getGmsVersion());
 
             appCard.findViewById(R.id.app_check_updates).setOnClickListener(v -> {
                 new UpdateChecker(requireContext()).checkForUpdates(v, () -> {

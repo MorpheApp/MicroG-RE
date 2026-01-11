@@ -43,13 +43,27 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
+        android:textAppearance="?attr/textAppearanceTitleSmallEmphasized"
+        android:textColor="?android:textColorSecondary"
+        app:layout_constraintBottom_toTopOf="@id/gms_version"
+        app:layout_constraintEnd_toStartOf="@+id/app_check_updates"
+        app:layout_constraintStart_toEndOf="@id/app_icon"
+        app:layout_constraintTop_toBottomOf="@id/app_title"
+        tools:text="@string/about_root_version" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/gms_version"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
         android:textAppearance="?attr/textAppearanceBodyMedium"
         android:textColor="?android:textColorSecondary"
         app:layout_constraintBottom_toBottomOf="@id/app_icon"
         app:layout_constraintEnd_toStartOf="@+id/app_check_updates"
         app:layout_constraintStart_toEndOf="@id/app_icon"
-        app:layout_constraintTop_toBottomOf="@id/app_title"
-        tools:text="@string/about_root_version" />
+        app:layout_constraintTop_toBottomOf="@id/app_version"
+        tools:text="GMS: 00.00.00" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/app_check_updates"

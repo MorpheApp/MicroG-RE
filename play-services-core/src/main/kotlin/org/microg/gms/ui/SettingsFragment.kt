@@ -127,7 +127,7 @@ class SettingsFragment : ResourceSettingsFragment() {
 
     private fun updateAboutSummary() {
         findPreference<Preference>(PREF_ABOUT)?.summary = getString(
-            org.microg.tools.ui.R.string.about_version_str, AboutFragment.getSelfVersion(context)
+            org.microg.tools.ui.R.string.about_version_str, AboutFragment.getAppVersion(context)
         )
     }
 
