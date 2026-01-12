@@ -41,6 +41,7 @@ import android.webkit.WebView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.webkit.WebSettingsCompat;
@@ -193,6 +194,13 @@ public class LoginActivity extends AssistantActivity {
         }
     }
 
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        if (webView != null) {
+            updateWebViewTheme(this, webView);
+        }
+    }
+
     @Override
     protected void onNextButtonClicked() {
         super.onNextButtonClicked();
@@ -236,6 +244,7 @@ public class LoginActivity extends AssistantActivity {
     }
 
     /** @noinspection deprecation*/
+    @SuppressLint("GestureBackNavigation")
     @Override
     public void onBackPressed() {
         super.onBackPressed();
@@ -260,24 +269,24 @@ public class LoginActivity extends AssistantActivity {
     }
 
     private static WebView createWebView(Context context) {
-        boolean systemIsDark = isSystemDarkTheme(context);
-
         WebView webView = new WebView(context);
         webView.setVisibility(View.INVISIBLE);
         webView.setLayoutParams(new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         webView.setBackgroundColor(Color.TRANSPARENT);
+        updateWebViewTheme(context, webView);
+        prepareWebViewSettings(context, webView.getSettings());
+        return webView;
+    }
 
+    @SuppressWarnings("deprecation")
+    private static void updateWebViewTheme(Context context, WebView webView) {
         // Apply dark theme to WebView based on system state
+        boolean systemIsDark = isSystemDarkTheme(context);
         if (Build.VERSION.SDK_INT >= 29) {
             if (WebViewFeature.isFeatureSupported(WebViewFeature.FORCE_DARK)) {
-                //noinspection deprecation
                 WebSettingsCompat.setForceDark(webView.getSettings(), systemIsDark ? WebSettingsCompat.FORCE_DARK_ON : WebSettingsCompat.FORCE_DARK_OFF);
             }
         }
-
-        prepareWebViewSettings(context, webView.getSettings());
-
-        return webView;
     }
 
     @SuppressLint("SetJavaScriptEnabled")
@@ -331,6 +340,9 @@ public class LoginActivity extends AssistantActivity {
     private void loadLoginPage() {
         String tmpl = getIntent().hasExtra(EXTRA_TMPL) ? getIntent().getStringExtra(EXTRA_TMPL) : TMPL_NEW_ACCOUNT;
         webView.loadUrl(buildUrl(tmpl, Utils.getLocale(this)));
+        if (webView != null) {
+            updateWebViewTheme(this, webView);
+        }
     }
 
     protected void runScript(String js) {
