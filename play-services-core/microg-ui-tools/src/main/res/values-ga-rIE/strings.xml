@@ -25,7 +25,7 @@
     <string name="update_checker_generic_error">Tharla ghnólacht… Téigh ar ais níos déanaí</string>
     <!--Settings About-->
     <string name="about_morphe_description">Tá Morphe suite ag cur athrú ar app Android trí phatcha</string>
-    <string name="about_version_str">Versi%C3%B3n %1$s</string>
+    <string name="about_version_str">Leagan %1$s</string>
     <string name="about_default_license">Tá gnáthdhéileálacha faoi seirbhís</string>
     <!--Self Check-->
     <!--self-check: permission-->

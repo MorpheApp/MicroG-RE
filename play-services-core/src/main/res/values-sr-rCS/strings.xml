@@ -10,18 +10,18 @@
     <!--auth: headers-->
     <string name="auth_add_account">Dodaj nalog</string>
     <string name="auth_sign_in">Prijavi se</string>
-    <string name="auth_just_a_sec">Moment, molim...</string>
+    <string name="auth_just_a_sec">Upoznaјте se…</string>
     <string name="auth_sorry">Izvinite, molim...</string>
     <!--auth: sign-->
-    <string name="signin_picker_title">Izaberite nalog</string>
+    <string name="signin_picker_title">Odaberi nalog</string>
     <!-- %1$s is an app name, such as "YouTube" -->
     <string name="signin_picker_subtitle">da nastavite do %1$s</string>
     <string name="signin_confirm_button_text">Dozvoliti i deliti</string>
     <string name="signin_picker_add_account_label">Dodaj novi nalog</string>
     <!-- %1$s is an app name, such as "YouTube" -->
-    <string name="signin_confirm_title">Dozvoliti da se prijavite na %1$s</string>
+    <string name="signin_confirm_title">Dozvoli da se ulogujete na %1$s</string>
     <!-- %1$s is an app name, such as "YouTube" -->
-    <string name="signin_subtext_sharing">Da bi nastavili, microG će deliti ime, email adresu i profilnu sliku Vašeg Google računa sa %1$s</string>
+    <string name="signin_subtext_sharing">Da bi nastavili, microG će podijeliti ime, email adresu i profilnu sliku vašeg Google računa s %1$s</string>
     <!--auth: buttons-->
     <!--auth: messages-->
     <string name="auth_before_connect">"Poveži Google račun sa microG.
@@ -55,7 +55,7 @@ Vaši podaci neće biti izgubljeni"</string>
     <string name="snackbar_remove_account">Nalog %s uklonjen</string>
     <string name="snackbar_undo_button">Poništi</string>
     <!--Google Cloud Messaging-->
-    <string name="service_name_mcs">Cloud messaging</string>
+    <string name="service_name_mcs">Cloud Messaging</string>
     <string name="gcm_enable_switch">Prikaži obaveštenja</string>
     <!--gcm: register dialogs-->
     <string name="gcm_registered">Registrovano</string>
@@ -113,40 +113,40 @@ Da li želite da je uklonite sada da ne prima obaveštenja u budućnosti?"</stri
     <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
     <string name="checkin_last_registration">Poslednja registracija: %1$s</string>
     <!--checkin: profile names types entry's-->
-    <string name="profile_name_native">Standardno: %s</string>
-    <string name="profile_name_real">Prilagođeno: %s</string>
-    <string name="profile_name_user">Automatsko: %s</string>
-    <string name="profile_name_auto">Sistem: %s</string>
-    <string name="profile_name_system">Sistem</string>
+    <string name="profile_name_native">Autohton</string>
+    <string name="profile_name_real">Real</string>
+    <string name="profile_name_user">Prvi: %s</string>
+    <string name="profile_name_auto">Automatski: %s</string>
+    <string name="profile_name_system">Sistem: %s</string>
     <!--Self Check-->
     <!--self check: categories-->
-    <string name="self_check_cat_system">Patirane aplikacije</string>
-    <string name="self_check_cat_patched_apps">Instalirane pakete</string>
+    <string name="self_check_cat_system">Sistem</string>
+    <string name="self_check_cat_patched_apps">Uređene aplikacije</string>
     <string name="self_check_cat_gms_packages">Podrška lažnog potpisivanja</string>
     <string name="self_check_cat_fake_sig">Morphe obaveštenje</string>
     <!--self check: patched apps-->
-    <string name="self_check_source_morphe">alternativne patche</string>
-    <string name="self_check_source_alternative">alternativni zamene</string>
+    <string name="self_check_source_morphe">Morphe obaveštenja</string>
+    <string name="self_check_source_alternative">alternativni nakosi</string>
     <!-- %1$s is an app name, such as "Morphe" -->
     <string name="self_check_patched_app_installed">Pokreće se sa %1$s</string>
     <!-- %1$s is an app name, such as "YouTube" -->
     <string name="self_check_resolution_patched_app_installed">Aplikacije koje koriste %1$s nisu nađene. Molimo patčite i instalirajte modifikovanu aplikaciju</string>
-    <string name="self_check_action_download_morphe">Prikaži ovde da bi otvorili postavke obaveštenja. Obaveštenja se koriste da bi GcmService bio u pozadini pri aktivaciji optimizacije baterije ili u drugim uslovima</string>
+    <string name="self_check_action_download_morphe">Preuzmi Morphe</string>
     <!--self check: permission-->
-    <string name="self_check_name_notifications">Dozvoljeno</string>
+    <string name="self_check_name_notifications">Obaveštenja dozvoljena</string>
     <string name="self_check_resolution_notifications">Pritisnite ovde da biste dodali ovu dozvolu. Ova dozvola je neophodna da bi se GcmService mogao pokrenuti u pozadini pri aktivaciji optimizacije baterije ili u drugim uslovima</string>
     <string name="self_check_name_overlay">Prikaži na vrhu drugih aplikacija</string>
-    <string name="self_check_resolution_overlay">Pritisnite ovde da biste dodali ovu dozvolu. Ova dozvola je neophodna da bi se GcmService mogao prikazati na vrhu drugih aplikacija</string>
+    <string name="self_check_resolution_overlay">Kliknite ovde da dodijelite ovu dozvolu. Ova dozvola je potrebna da bi se prikazali pop-up upozorenja iznad drugih aplikacija</string>
     <!--self check: system-->
-    <string name="self_check_name_battery_optimizations">Baterija je isključena</string>
+    <string name="self_check_name_battery_optimizations">Optimizacije baterije isključen</string>
     <string name="self_check_resolution_battery_optimizations">Kliknite ovde da isključite optimizacije baterije. Ako nisu isključene, možda ćete imati probleme pri primanju obaveštenja sa YouTube-a i drugih registrovanih aplikacija</string>
     <string name="self_check_name_oem_restriction">Vaš sistem može ograničavati pozadinski proces. Pritisnite ovde da biste otvorili stranicu Don’t Kill My App! i saznajte kako da isključite ova ograničenja</string>
     <string name="self_check_resolution_oem_restriction">Sistem laže potpisivanje</string>
     <!--self check: signature-->
-    <string name="self_check_name_system_spoofs">Molimo provjerite dokumentaciju o koracima koje bi trebali izvršiti</string>
-    <string name="self_check_resolution_system_spoofs">Play Services</string>
+    <string name="self_check_name_system_spoofs">Sistem simulira potpis</string>
+    <string name="self_check_resolution_system_spoofs">Molimo provjerite dokumentaciju o koracima koji bi mogli biti potrebni.</string>
     <!--self check: package-->
-    <string name="self_check_pkg_gms">Usluge</string>
+    <string name="self_check_pkg_gms">Play Services</string>
     <!-- %1$s is an app name, such as "YouTube" -->
     <string name="self_check_name_app_installed">%1$s instaliran</string>
     <!-- %1$s is an app name, such as "YouTube" -->
@@ -169,9 +169,9 @@ Da li želite da je uklonite sada da ne prima obaveštenja u budućnosti?"</stri
     <string name="pref_account_title">Nalozi</string>
     <string name="pref_account_summary">Prijavi se na novi Google nalog</string>
     <string name="pref_accounts_summary">Dodaj i upravljaj Google nalogima</string>
-    <string name="pref_accounts_manage_accounts_title">Upravljaj naloge</string>
+    <string name="pref_accounts_manage_accounts_title">Uправљај налозима</string>
     <string name="pref_accounts_manage_accounts_summary">Otvorite upravljač naloga uređaja</string>
-    <string name="pref_manage_all_history">Upravljaj sve povratke</string>
+    <string name="pref_manage_all_history">Upravljajte sva istorijom</string>
     <string name="pref_data_in_youtube">Vaši podaci na YouTube</string>
     <string name="pref_accounts_login_accounts_summary">Nalozi su sačuvani i pohranjeni samo na ovom uređaju. Pritisnite nalog da ga trajno uklonite sa ovog uređaja</string>
     <!--preferences: device registration-->
@@ -225,6 +225,6 @@ Još nije podržan"</string>
     <!--Conditions-->
     <string name="cond_gcm_bat_title">Baterija je uključena</string>
     <string name="cond_gcm_bat_summary">Ukljućili ste obavještavanje oblaka ali imate aktivne optimizacije baterije za microG Usluge. Da bi dobili obavještavanja, trebate ignorisati optimizacije baterije</string>
-    <string name="cond_gcm_bat_action">Izbaci optimizacije</string>
-    <string name="cond_perm_title">Nedostaje dozvola</string>
+    <string name="cond_gcm_bat_action">Ignoriraj optimizacije</string>
+    <string name="cond_perm_title">Nedostaje dopuštenje</string>
 </resources>

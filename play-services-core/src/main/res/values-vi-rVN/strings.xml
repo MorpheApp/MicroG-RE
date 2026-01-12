@@ -24,7 +24,7 @@
     <string name="signin_subtext_sharing">Để tiếp tục, microG sẽ chia sẻ TÊN, ĐỊA CHỈ EMAIL, ẢNH ĐẠI DIỆN tài khoản Google của bạn với %1$s</string>
     <!--auth: buttons-->
     <!--auth: messages-->
-    <string name="auth_before_connect">"Liên kết tài khoản Google với microG.\n\nĐể tiếp tục, hãy ấn nút <b>Đăng nhập</b> hoặc nút <b>Huawei</b> nếu bạn đang sử dụng thiết bị đến từ Huawei. Khi đó, bạn sẽ được chuyển đến trang đăng nhập."</string>
+    <string name="auth_before_connect">"Liên kết tài khoản Google với microG.\n\nĐể tiếp tục, hãy ấn nút <b>Đăng nhập</b> hoặc <b>Huawei</b> nếu bạn đang sử dụng thiết bị đến từ Huawei. Khi đó, bạn sẽ được chuyển đến trang đăng nhập."</string>
     <string name="auth_connecting">"Đang chuyển đến trang đăng nhập của Google.\n\nQuá trình này sẽ hoàn tất sau giây lát"</string>
     <string name="auth_no_network_error_desc">"Không có kết nối mạng.\n\nCó thể do mạng yếu hoặc sự cố tạm thời từ máy chủ, hãy kiểm tra kết nối mạng và thử lại"</string>
     <string name="auth_general_error_desc">"Không thể kết nối với máy chủ Google.\n\nHãy thử lại sau"</string>

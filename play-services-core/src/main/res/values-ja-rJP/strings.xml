@@ -13,7 +13,7 @@
     <string name="auth_just_a_sec">少々お待ちください…</string>
     <string name="auth_sorry">すみません…</string>
     <!--auth: sign-->
-    <string name="signin_picker_title">アカウントを選択してください</string>
+    <string name="signin_picker_title">アカウントを選択</string>
     <!-- %1$s is an app name, such as "YouTube" -->
     <string name="signin_picker_subtitle">%1$s にログインするアカウント</string>
     <string name="signin_confirm_button_text">許可して共有する</string>
@@ -26,7 +26,7 @@
     <!--auth: messages-->
     <string name="auth_before_connect">"Google アカウントと microG を接続します。
 
-Google アカウントに接続しましょう。<b>ログイン</b> ボタンを使用するか、デバイスが Huawei 製の場合は <b>Huawei</b> ボタンを使用してください。いずれかのボタンを押すと、アカウントにログインするためのページにリダイレクトされます。"</string>
+Google アカウントに接続しましょう。<b>ログイン</b> ボタンまたはデバイスが Huawei 製の場合は <b>Huawei</b> ボタンを使用してください。いずれかのボタンを押すと、アカウントにログインするためのページにリダイレクトされます。"</string>
     <string name="auth_connecting">"ログインするために、デバイスが Google サーバーへの接続を確立しています。
 
 この処理には数秒かかる場合があります"</string>
@@ -89,9 +89,9 @@ Cloud Messaging に再登録するにはそのアプリを開く必要があり�
     <string name="network_type_roaming">ローミング</string>
     <string name="network_type_other">その他のネットワーク</string>
     <!--gcm: push notifications ping entry's-->
-    <string name="push_notifications_summary_off">OFF</string>
-    <string name="push_notifications_summary_automatic">ON / 自動: %s</string>
-    <string name="push_notifications_summary_manual">ON / 手動: %s</string>
+    <string name="push_notifications_summary_off">オフ</string>
+    <string name="push_notifications_summary_automatic">オン / 自動: %s</string>
+    <string name="push_notifications_summary_manual">オン / 手動: %s</string>
     <string name="push_notifications_summary_values_seconds">%s 秒</string>
     <string name="push_notifications_summary_values_minutes">%s 分</string>
     <!--gcm: ask push permission dialog-->
@@ -121,20 +121,20 @@ Cloud Messaging に再登録するにはそのアプリを開く必要があり�
     <!--self check: categories-->
     <string name="self_check_cat_system">システム</string>
     <string name="self_check_cat_patched_apps">パッチ済みアプリ</string>
-    <string name="self_check_cat_gms_packages">インストール済みパッケージ</string>
+    <string name="self_check_cat_gms_packages">パッケージのインストール</string>
     <string name="self_check_cat_fake_sig">署名の偽装へのサポート</string>
     <!--self check: patched apps-->
     <string name="self_check_source_morphe">Morphe パッチ</string>
     <string name="self_check_source_alternative">代替パッチ</string>
     <!-- %1$s is an app name, such as "Morphe" -->
-    <string name="self_check_patched_app_installed">%1$s を実行中</string>
+    <string name="self_check_patched_app_installed">%1$s が適用されたアプリのインストール</string>
     <!-- %1$s is an app name, such as "YouTube" -->
     <string name="self_check_resolution_patched_app_installed">%1$s が適用されたアプリは見つかりませんでした。アプリにパッチを適用してインストールしてください</string>
     <string name="self_check_action_download_morphe">Morphe をダウンロード</string>
     <!--self check: permission-->
-    <string name="self_check_name_notifications">通知を許可</string>
+    <string name="self_check_name_notifications">通知の許可</string>
     <string name="self_check_resolution_notifications">ここをタップして通知設定を開いてください。通知は、電池の最適化が有効になっている場合やその他の条件下で GcmService をバックグラウンドで実行し続けるために使用されます</string>
-    <string name="self_check_name_overlay">他のアプリの上に重ねて表示</string>
+    <string name="self_check_name_overlay">「他のアプリの上に重ねて表示」の許可</string>
     <string name="self_check_resolution_overlay">ここをタップしてこの権限を付与してください。この権限は、他のアプリの上にポップアップ アラートを表示するために必要です</string>
     <!--self check: system-->
     <string name="self_check_name_battery_optimizations">電池の最適化を無効化</string>
@@ -143,11 +143,11 @@ Cloud Messaging に再登録するにはそのアプリを開く必要があり�
     <string name="self_check_resolution_oem_restriction">システムがバックグラウンド処理を制限している可能性があります。ここをタップしてウェブサイト「Don’t Kill My App!」を開き、この制限を無効にする方法を確認してください</string>
     <!--self check: signature-->
     <string name="self_check_name_system_spoofs">システムによる署名の偽装</string>
-    <string name="self_check_resolution_system_spoofs">ドキュメントに、必要な手順が記載されている可能性があります</string>
+    <string name="self_check_resolution_system_spoofs">必要になる可能性のある手順についてドキュメントを確認してください</string>
     <!--self check: package-->
     <string name="self_check_pkg_gms">Play 開発者サービス</string>
     <!-- %1$s is an app name, such as "YouTube" -->
-    <string name="self_check_name_app_installed">%1$s がインストールされています</string>
+    <string name="self_check_name_app_installed">%1$s のインストール</string>
     <!-- %1$s is an app name, such as "YouTube" -->
     <string name="self_check_resolution_app_installed">%1$s アプリまたは互換性のあるアプリをインストールしてください。どのアプリが互換性があるかは、ドキュメントを確認してください</string>
     <!--Settings Preferences-->
@@ -214,11 +214,11 @@ Cloud Messaging に再登録するにはそのアプリを開く必要があり�
     <string name="pref_about_title">MicroG RE について</string>
     <string name="pref_github_summary">ソース コード リポジトリ</string>
     <!--Permissions-->
-    <string name="perm_status_broadcast_label">内部のステータスを聞き取ります</string>
-    <string name="perm_gsf_read_gservices_label">Google サービスの設定を読み取ります</string>
-    <string name="perm_c2dm_receive_label">C2DM メッセージを聞き取ります</string>
-    <string name="perm_c2dm_send_label">他のアプリに C2DM メッセージを送信します</string>
-    <string name="perm_gtalk_svc_label">Google サーバーとのメッセージのやり取りと同期を受信します</string>
+    <string name="perm_status_broadcast_label">内部のステータスのブロードキャストを受信する</string>
+    <string name="perm_gsf_read_gservices_label">Google サービスの設定を読み取る</string>
+    <string name="perm_c2dm_receive_label">C2DM メッセージを受信する</string>
+    <string name="perm_c2dm_send_label">他のアプリに C2DM メッセージを送信する</string>
+    <string name="perm_gtalk_svc_label">Google サーバーとメッセージを送受信し同期通知を受け取る</string>
     <string name="perm_extended_access_label">Google サービスへの拡張アクセス</string>
     <!--Conditions-->
     <string name="cond_gcm_bat_title">電池の最適化が有効です</string>

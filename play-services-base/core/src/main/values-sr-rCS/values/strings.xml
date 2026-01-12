@@ -22,8 +22,8 @@
     <string name="service_status_disabled">Onemogućen</string>
     <string name="service_status_enabled">Omogućen</string>
     <string name="service_status_automatic">Automatski</string>
-    <string name="service_status_manual">Ručno</string>
-    <string name="service_status_enabled_short">Uklj</string>
-    <string name="service_status_disabled_short">Iskl</string>
+    <string name="service_status_manual">Ručni</string>
+    <string name="service_status_enabled_short">Uključen</string>
+    <string name="service_status_disabled_short">Isključen</string>
     <!--Patchers names-->
 </resources>

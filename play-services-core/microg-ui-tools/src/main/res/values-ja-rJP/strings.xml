@@ -21,10 +21,10 @@
     <!--updater: messages-->
     <string name="update_checker_no_update">利用可能な更新はありません</string>
     <string name="update_checker_update_available">利用可能な更新: %s</string>
-    <string name="update_checker_no_internet">インターネット接続がありません</string>
+    <string name="update_checker_no_internet">インターネットに接続されていません</string>
     <string name="update_checker_generic_error">何か問題が発生しました… 後で再度お試しください</string>
     <!--Settings About-->
-    <string name="about_morphe_description">Morphe は、Android アプリをパッチを通して修正するために設計されたオープンソースプロジェクトです</string>
+    <string name="about_morphe_description">Morphe は、パッチを通じて Android アプリを改変するために設計されたオープンソース プロジェクトです</string>
     <string name="about_version_str">バージョン %1$s</string>
     <string name="about_default_license">全ての権利所有</string>
     <!--Self Check-->
@@ -35,7 +35,7 @@
     <!--Settings Preferences-->
     <!--preferences: self-check-->
     <string name="self_check_title">セルフチェック</string>
-    <string name="self_check_desc">デバイスが正しく microG を使用するように設定されていることを確認してください</string>
+    <string name="self_check_desc">デバイスが microG を使用できるように正しく設定されていることを確認します</string>
     <!--UI preview-->
     <string name="about_root_title">microG UI デモ</string>
     <string name="about_root_version">バージョン v0.1.0</string>

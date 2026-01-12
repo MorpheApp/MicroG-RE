@@ -11,5 +11,6 @@
     <!--Actionbar menu-->
     <!--Google Cloud Messaging-->
     <!--gcm: network status-->
+    <string name="service_status_disabled_short">Apagat</string>
     <!--Patchers names-->
 </resources>
