@@ -183,6 +183,7 @@ Do you want to unregister it now so it does not receive push messages in the fut
     <string name="prefcat_authentication">Authentication</string>
     <string name="prefcat_about">About</string>
     <string name="prefcat_details">Details</string>
+    <string name="prefcat_advanced">Advanced</string>
     <string name="pref_info_status">Status</string>
     <!--preferences: account manager-->
     <string name="pref_account_title">Accounts</string>
