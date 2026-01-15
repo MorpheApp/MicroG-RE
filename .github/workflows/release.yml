@@ -60,14 +60,9 @@ jobs:
           keyPassword: ${{ secrets.KEYSTORE_ENTRY_PASSWORD }}
           buildToolsVersion: 36.0.0
 
-      - uses: actions/upload-artifact@v4
-        with:
-          name: Signed app bundle
-          path: ${{steps.sign_app.outputs.signedFile}}
-
       - name: Upload artifacts
         uses: actions/upload-artifact@v6
         with:
           name: MicroG-RE
-          path: play-services-core/build/outputs/apk/default/release/microg-release*.apk
+          path: ${{steps.sign_app.outputs.signedFile}}
 
