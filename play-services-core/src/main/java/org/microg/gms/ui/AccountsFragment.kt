@@ -84,7 +84,13 @@ class AccountsFragment : PreferenceFragmentCompat() {
 
     private fun setupPreferenceListeners() {
         findPreference<Preference>("pref_privacy")?.setOnPreferenceClickListener {
-            findNavController().navigate(requireContext(), R.id.privacyFragment)
+            val activity = requireActivity()
+
+            if (activity is AccountManagerActivity) {
+                activity.replaceFragment(PrivacyFragment())
+            } else {
+                 findNavController().navigate(R.id.privacyFragment)
+            }
             true
         }
         findPreference<Preference>("pref_manage_accounts")?.setOnPreferenceClickListener {
