@@ -225,6 +225,6 @@ Google アカウントに接続しましょう。<b>ログイン</b> ボタン�
     <!--Conditions-->
     <string name="cond_gcm_bat_title">電池の最適化が有効です</string>
     <string name="cond_gcm_bat_summary">Cloud Messaging を有効にしていますが、microG Services に対する電池の最適化が有効になっています。プッシュ通知を受け取るには、電池の最適化を無効にする必要があります</string>
-    <string name="cond_gcm_bat_action">無効にします</string>
-    <string name="cond_perm_title">権限がありません</string>
+    <string name="cond_gcm_bat_action">最適化を無効化</string>
+    <string name="cond_perm_title">権限が不足しています</string>
 </resources>

@@ -17,16 +17,16 @@
 <resources>
     <!--Google Cloud Messaging-->
     <plurals name="gcm_registered_apps_counter">
-        <item quantity="one">%1$d रजिस्टर्ड एप्प्स</item>
-        <item quantity="other">%1$d रजिस्टर्ड एप्प्स</item>
+        <item quantity="one">%1$d registrerad app</item>
+        <item quantity="other">%1$d registrerade appar</item>
     </plurals>
     <!--Conditions-->
     <plurals name="cond_perm_summary">
-        <item quantity="one">माइक्रोजी सर्विसेस के सही काम करने के लिए आवश्यक अनुमति नहीं दी गई है।</item>
-        <item quantity="other">माइक्रोजी सर्विसेस के सही काम करने के लिए आवश्यक अनुमतियां नहीं दी गई हैं।</item>
+        <item quantity="one">En behörighet som krävs för korrekt funktionalitet för microG-tjänster beviljas inte.</item>
+        <item quantity="other">Behörigheter som krävs för korrekt funktionalitet för microG-tjänster beviljas inte.</item>
     </plurals>
     <plurals name="cond_perm_action">
-        <item quantity="one">अनुमति की आवश्यकता है</item>
-        <item quantity="other">अनुमतियों की आवश्यकता है</item>
+        <item quantity="one">Begära saknad behörighet</item>
+        <item quantity="other">Begära saknade behörigheter</item>
     </plurals>
 </resources>

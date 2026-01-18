@@ -24,6 +24,6 @@
         <item quantity="other">microG Services の正常な動作のために必要な権限が付与されていません。</item>
     </plurals>
     <plurals name="cond_perm_action">
-        <item quantity="other">必要な権限をリクエストしてください</item>
+        <item quantity="other">不足している権限を許可</item>
     </plurals>
 </resources>
