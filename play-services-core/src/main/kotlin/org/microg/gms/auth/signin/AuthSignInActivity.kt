@@ -208,7 +208,7 @@ class AuthSignInActivity : AppCompatActivity() {
             })
         }
         Log.d(TAG, "Result: ${data.extras?.also { it.keySet() }}")
-        setResult(statusCode, data)
+        setResult(RESULT_OK, data)
         finish()
     }
 
