@@ -355,7 +355,7 @@
             android:name="org.microg.gms.auth.signin.AuthSignInActivity"
             android:exported="true"
             android:process=":ui"
-            android:theme="@style/Theme.Component.Material.AlertDialog">
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
             <intent-filter>
                 <action android:name="${basePackageName}.android.gms.auth.GOOGLE_SIGN_IN" />
                 <category android:name="android.intent.category.DEFAULT" />

@@ -63,7 +63,6 @@
             android:layout_margin="2dp"
             android:gravity="center_horizontal"
             android:text="@{@string/signin_picker_subtitle(appName)}"
-            android:textColor="?colorOnSurfaceVariant"
             tools:text="@string/signin_picker_subtitle" />
 
         <FrameLayout
