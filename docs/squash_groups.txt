@@ -1,0 +1,386 @@
+Total commits: 482
+Cherry-picked (drop): 65
+Merge commits (drop): 13
+Duplicates (drop): 74
+Revert pairs found: 8
+Revert hashes (drop): 16
+
+Total to DROP: 165
+Remaining to KEEP/SQUASH: 317
+
+=== REVERT PAIRS ===
+  ef84e45b8668 Add uninstall and open button in app heading
+  e63c2ab3104d Revert: Add uninstall and open button in app heading
+
+  9ddf3c24be1b Make icon show in launcher in first install
+  e75e340b2c30 Revert "Make icon show in launcher in first install"
+
+  3efd0518b2a5 Add QUERY_ALL_PACKAGES to resolve getPackageInfo in PackageSpoofUtils
+  add750067b42 Revert "Add QUERY_ALL_PACKAGES to resolve getPackageInfo in PackageSpoofUtils"
+
+  bed78d3c7b08 Replace alarm permission to SCHEDULE_EXACT_ALARM
+  56c4190a654a Revert "Replace alarm permission to SCHEDULE_EXACT_ALARM"
+
+  8c70ba840468 feat: Add identity sign-in service (#2130)
+  21afca05f5a1 Revert "feat: Add identity sign-in service (#2130)"
+
+  174a7ba5cdb6 Add dummy service for AUDIT(154) (#2156)
+  5c7929b42181 Revert "Add dummy service for AUDIT(154) (#2156)"
+
+  e3cdbfab4668 Disable YT Advanced detection
+  c53bbdd3cecc Revert "Disable YT Advanced detection"
+
+  2c8c977df79f Disable hide icon in launcher after click on Huawei button
+  0e4c0cfe2769 Revert "Disable hide icon in launcher after click on Huawei button"
+
+=== REMAINING COMMITS BY GROUP ===
+
+--- other (88) ---
+  68f603782513 [Hoàng Gia Bảo] Remove unused code + Fix build error
+  08a5d8aef382 [Hoàng Gia Bảo] Update .gitignore
+  b07472d891c6 [WSTxda] Drop translations
+  8035331d53f7 [WSTxda] Update strings
+  4fcd931cd318 [WSTxda] Bump version
+  97808e4b4cdc [WSTxda] Some cleanings
+  604a9446ebb4 [WSTxda] Show package name in app heading
+  ea873ad71c57 [WSTxda] Show app version in app heading
+  7c8db2ff8153 [WSTxda] Add redfin profile
+  4e9ba9dc96c4 [WSTxda] Update buttons
+  20e5d72ffaf5 [WSTxda] Update app heading buttons
+  735712d58715 [WSTxda] Switch to GitHub link
+  c07548b39406 [WSTxda] Resources cleaning
+  aca6cb15b0b3 [WSTxda] Update Banner.svg
+  51d13785cc81 [WSTxda] Meow meow, meow meow 🐈
+  b390d3c62aa6 [WSTxda] Bump version to 4.5
+  762b4a5734c7 [marciozomb13] Add PT-BR translations
+  f81dce14f53d [WSTxda] Nuke strings translations files
+  d76b7e6864ef [WSTxda] Move preference links to settings fragment
+  6f139aa62a5b [marciozomb13] Update strings.xml
+  3a86c5753f87 [Fynn Godau] Enable postprocessing in vending-app
+  1cf35b393e76 [WSTxda] Update ic_notification.xml
+  efac1ccb6700 [WSTxda] Cleanup files
+  8efc1be3f0f7 [WSTxda] Move system category on top
+  3d3ed726bfe2 [WSTxda] Disabled button state with timeout to avoid request spam by user
+  3ef26d911e20 [WSTxda] Make advanced menu is settings option direct
+  3688d20b4dfe [WSTxda] Change advanced fragment label
+  0dfef6075502 [WSTxda] Added fragment transitions
+  bf17b84501ec [WSTxda] Added request battery optimization card in home settings
+  6eaa5990fe5c [WSTxda] Improvement app heading design
+  39cee3ce0f75 [WSTxda] Refactor handleUpdateError for simplified exception handling
+  dccad0e4c9f2 [WSTxda] UI Refactor
+  e98047cd8914 [WSTxda] Update some things
+  4986f3b8ba2b [oSumAtrIX] Enable necessary settings by default
+  014c7ef3ef4f [WSTxda] Make update list in main thread to prevent crash
+  34287387db2c [WSTxda] Added options for manage YouTube data and history
+  22507a3c034a [WSTxda] Move menu option to preference fragment
+  870f98a5af6c [Patriot99] Added polish translations
+  cc7de7d2f5e6 [muhammadbahaa20] Added Arabic translations
+  a1304e588c94 [WSTxda] Adjust some text styles in preference
+  7e535c1fdd76 [WSTxda] Add Spoof package support for Google News and Google Photos
+  68ff39a36348 [WSTxda] Bump version name
+  8753d612a176 [0xrxL] Italian localization (#27)
+  7824f75e3236 [WSTxda] Small strings changes
+  096dab2bfbac [S1m] Do not check spoofSignature with org.microg.gms
+  ef8afc0f53aa [WSTxda] Small fixes in Indonesian (Bahasa) translation
+  6c9ae5ea5639 [0xrxL] Italian translation fixes (#44)
+  bc28f7289b21 [WSTxda] Delete fake-signature
+  025624fa8492 [WSTxda] Support x86 and x86_64 ABIs
+  341c7fe300de [WSTxda] Add missing italian strings
+  b9ec5dca3164 [WSTxda] Adjust margin for preference card view
+  c39213044680 [WSTxda] Added privacy option in settings also
+  52ff483f7d91 [WSTxda] Enable edge to edge
+  144a33153f0b [WSTxda] Disable edge to edge
+  64656546d0e5 [WSTxda] Add enableOnBackInvokedCallback
+  91f15f500e7f [𝗦𝗵𝗟𝗲𝗿𝗣] Add Turkish (#64)
+  1b7ba49364ad [Nhật Minh] Added vietnamese (#69)
+  e759fd0b3e74 [WSTxda] Update included libraries list
+  fc6d1d2e60c9 [WSTxda] Disable settings scrollbars
+  962b5bf1777b [WSTxda] Updade dialogs design
+  e13e7cf0f0ac [WSTxda] Organize settings fragment
+  64667b8e97f6 [WSTxda] UI improvements
+  68557681df2a [WSTxda] Update signature retrieval for API compatibility
+  aa8944042422 [WSTxda] Some improvements
+  4eb4536dcfd0 [WSTxda] Update used libraries list
+  909d1931cfef [WSTxda] Enable edge to edge and implement window insets listener
+  a73bff59e53b [btnc_ua] Added Ukrainian (#74)
+  9be59c360b5a [dependabot[bot]] Bump actions/setup-java from 4 to 5
+  66c650a2463c [WSTxda] Added remove all registered apps option
+  b3da14905bbe [Котфуций] Added Russian language (#81)
+  d673444c29c2 [WSTxda] chore: Update README, links and more thinks to Morphe
+  88596bba13ef [WSTxda] chore: Organize strings files
+  699e869fdd5e [WSTxda] chore: Cleanup
+  0bff7962ef96 [WSTxda] chore: Mark non-translatable strings
+  6e914cbb8ac5 [LisoUseInAIKyri] chore: Add GitHub issue templates
+  2f6681cecf38 [LisoUseInAIKyri] chore: Change strings with line breaks to raw strings
+  2ec94770f5ae [LisoUseInAIKyri] chore: Remove xliff tags that is confusing AI pre-translate
+  1ac7c6bc0e14 [WSTxda] chore: Cleanup strings
+  a6889cc97d64 [LisoUseInAIKyri] chore: Adjust string wording
+  676f55bf183a [WSTxda] chore: Update "MicroG" to "microG" after #105 discussion
+  a2c768813f6b [WSTxda] chore: Change build output name
+  9e172f6a05a7 [WSTxda] chore: Show the app version and GMS separately
+  a8053ca6ebe6 [WSTxda] chore: Update version name to new format
+  24119b7a3f1e [WSTxda] chore: Delete images folder
+  1a82a52e3794 [WSTxda] chore: Move remove all registered apps to advanced preference category
+  ebf507699955 [WSTxda] chore: Update readme
+  2d66fe8db783 [WSTxda] chore: Cleanup manifest
+  9aba81830eaf [WSTxda] chore: Cleanup ForegroundServiceOemUtils class
+
+--- ui_theme (58) ---
+  b814cafaff4c [Hoàng Gia Bảo] Spoof package name + Apply theme
+  0d07f258863e [Hoàng Gia Bảo] Fix incorrect theme
+  44e37bbcdcda [Hoàng Gia Bảo] Update app icon
+  c9fc33efdeb0 [WSTxda] Update app theme
+  b31354cef8e5 [WSTxda] Update icons
+  51d490a3973b [WSTxda] Preference redesign
+  5f50a64e5492 [WSTxda] Layout redesign
+  dd9a1a3f75e3 [WSTxda] Show app in launcher
+  41271ce0d8af [WSTxda] Update ic_launcher_monochrome.xml
+  6bf6cd2f2fa3 [WSTxda] Use color error in disabled switchbar
+  ae3ba59df86a [WSTxda] Set switchbar disabled color directly
+  18ffcd0a0145 [WSTxda] Add hide icon in launcher
+  27138a79fe56 [WSTxda] Update colors to match YouTube changes
+  9cde6af17480 [WSTxda] Cleaning MicroG vector drawable icons
+  f10fe166c25c [WSTxda] Update to new MicroG RE icon
+  7a5f907a65c4 [WSTxda] Update UI icons to match better YouTube
+  9193495b4179 [WSTxda] Update settings link icons
+  0bc53edba415 [WSTxda] Adapt theme for older Android versions
+  64ce1a1b8807 [WSTxda] Redesign app to Material3
+  954080361c16 [WSTxda] Use color error in remove button dialog
+  d0e4e3b925a4 [WSTxda] Added padding for menu icon in toolbar
+  76a4f774ba7d [WSTxda] Added collapsed toolbar in settings activity for all fragments
+  a9f17dbe19a4 [WSTxda] Update Material Colors pallete
+  84b0aa19a174 [WSTxda] Improvement switchbar color state
+  55904d96aae0 [WSTxda] Remove switchbar from confirm new apps preference
+  51227a8d04f0 [WSTxda] Enable rtl support
+  836e35904479 [WSTxda] Improvement hide icon in launcher option
+  4cf691f6d879 [WSTxda] Set hide icon switch state match component state
+  d450aeb3d25a [WSTxda] Fix hide icon in launcher option and switch application preference activity
+  f4cbcd553f76 [WSTxda] Fixed WebView dark theme not follow system theme correctly
+  c07099dd8b1c [WSTxda] Improvement preferences typography font
+  261aa073218e [WSTxda] Improvement some layout ui things
+  7aaca458fd01 [WSTxda] Update app icon color to match YouTube changes
+  26fdaaedd204 [WSTxda] Add back missing monochrome icon
+  baa68841cb8d [WSTxda] Update general layout
+  b6f67a865806 [WSTxda] Change MaterialSharedAxis transition style
+  d753d768ff28 [WSTxda] Adjust paddings
+  6a4206edbe5c [WSTxda] Allow double line title in collapsed toolbar
+  9e62d628cb75 [WSTxda] Refactor themes
+  03f890012ec2 [WSTxda] Added icons for dialogs and change to centered
+  538f50ce0ce0 [WSTxda] Adjust library item paddings
+  b129d10fe62e [WSTxda] Update layout things
+  c1352a20d5c3 [WSTxda] Update hide icon in laucher preference to not gone battery optimization options
+  9dfd269ec0f1 [WSTxda] Switch to Material3Expressive theme style
+  b92810022450 [WSTxda] Update theme colors
+  9f19e7d9b1be [WSTxda] Redesign UI to Material3Expressive
+  b0025226588c [WSTxda] Update material library version
+  79299cdfc0c9 [WSTxda] Update MicroG RE icon resources
+  3d09af885d4d [WSTxda] Added thumb icon in switch components
+  e7941f29a042 [WSTxda] Layout improvements
+  f0f11611c82a [WSTxda] feat: Update about layout UI to include Morphe links
+  688e28083e1a [WSTxda] fix: About layout buttons and colors
+  24c148f1a4b0 [WSTxda] fix #71 : Use activity alias in hide icon in launcher option to prevent gone battery optimization options in HyperOS
+  1aeaaffaddc1 [WSTxda] fix: Fragments MaterialSharedAxis transitions
+  649c1268a570 [WSTxda] chore: Update and improve layouts
+  f61f58866a1c [WSTxda] fix: Hide icon in launcher preference switch state does not match current state on first install
+  40760fce15f9 [WSTxda] chore: Cleanup and layout fixes
+  1f786eaa891d [WSTxda] fix: Switch bar text color state
+
+--- account (58) ---
+  de16de6a5015 [WSTxda] Update login theme
+  a05883f009b5 [WSTxda] Remove authenticator preferences
+  4e5eb1622a64 [WSTxda] Add account manager screen
+  9dc8c91c2384 [WSTxda] Tap to remove account in list
+  149f9690d777 [WSTxda] Drop updateAccountList
+  b8798ca4939f [WSTxda] Make account list dynamic
+  8bab38f2f547 [WSTxda] Show toast when account is removed
+  fb72d02bb3ea [WSTxda] Update login_assistant_loading.xml
+  2197a23ddf5b [WSTxda] Update AccountsFragment.kt
+  eaeac30d9def [WSTxda] Update account list after confirm remove
+  3032c6b7d87e [WSTxda] Update login_assistant.xml
+  2deff9bf8ff8 [WSTxda] Add default account tag
+  f088aff10a37 [WSTxda] Improvement login assistant layout
+  70bb9774d718 [WSTxda] Use findPreference to open login activity
+  09b4b19a7e23 [WSTxda] Fixed IllegalStateException (deadlock) in removeAccount
+  a99703ec764b [WSTxda] Update login assistant design
+  275f36030522 [Fynn Godau] Replace hardcoded auth token with auth token fetched via account
+  dc5df50e41f0 [Fynn Godau] Notify is user not signed in to any Google account
+  024e92c636ec [Marvin W] Auth: Allow stripping device name from requests
+  034a8da27ed2 [WSTxda] Added legacy account manager option in accounts
+  73f42c7f23c1 [WSTxda] Update preferences account
+  8990922d8cac [WSTxda] Change account manager to privacy
+  76d086904a70 [WSTxda] Support dark theme in WebView login
+  f56dc668c4fa [DaVinci9196] Auth: Return result from login activity (#2227)
+  402e03e7d49f [DaVinci9196] Auth: Correctly handle permission for requests with token request options (#2322)
+  fb67ccf85e7a [WSTxda] Login: Switch to m3 proguess indicator
+  b7204d961fee [WSTxda] Fix: Handler YouTube Music account manager link
+  04811fd22f41 [WSTxda] Refactor accounts manager screen
+  cfc7b6b5e760 [WSTxda] Tap in "Google account" "Manage your Google Account" open accounts
+  67b7e6e6f094 [WSTxda] Fixed ActivityNotFoundExeption for accounts settings link due package spoofing in RVX, REX
+  2b857162f278 [WSTxda] Refactor Login Assistant UI
+  f0111cd6de97 [WSTxda] Update accounts fragment/manage account handler activity
+  c17e18af9ec3 [WSTxda] Hide "logged in" if have none account in list
+  dc240d98e276 [WSTxda] Improvement AccountsFragment
+  35f36a321e87 [WSTxda] Adjust login ui text style
+  087098fccd68 [DaVinci9196] Account Settings: Take product name into MyActivity page (#2491)
+  14e7c6c9ab8f [WSTxda] Added option to undo remove account
+  8e72228f468d [WSTxda] Adjust remove account dialog style
+  d0aa7ac89895 [WSTxda] Update login screen activity design
+  c1e514ecea53 [WSTxda] Use wave animation in login proguess indicator
+  6ff1d817a79b [WSTxda] Update remove account dialog layout
+  8b22ff4a9d18 [WSTxda] Update login assistant layouts
+  62d28f2a422d [WSTxda] Refactor AccountsFragment and improve lifecycle
+  febba80a8f34 [WSTxda] Hide auth trust google preference
+  24c2e086f50b [WSTxda] Not recreate LoginActivity on screen rotation #76
+  2db055b55509 [WSTxda] Fix description text frame changes on login loading
+  0a5d5bfd8032 [WSTxda] Shrink add account fab on scroll and add padding in preferences
+  08bde0da8335 [Marvin W] Auth: Migrate SignInConfiguration to preprocessor-based safe parcelable
+  96d3a64a1647 [DaVinci9196] fix: Fix entering account registration flow from microG signin (#3087)
+  e1f28d3b5b86 [DaVinci9196] chore (auth): Make login activity single task (#2578)
+  e59e772a82e6 [WSTxda] chore: Use login theme in accounts settings activity
+  b754a1c8552b [WSTxda] feat: Use privacy fragment in account manager
+  0e7e7bb931bd [WSTxda] feat: Add app shortcut to add account
+  7e7302edb4df [WSTxda] Fix: `NullPointerException` in AccountsFragment snackbar callback
+  9da33ac32da0 [WSTxda] feat: Refactor account manager
+  54e856dfb59d [WSTxda] fix: Login WebView dark theme not listening current device theme correctly
+  c17c7321f73a [WSTxda] fix: Privacy settings crash if open it on account manager activity
+  627f49218560 [DaVinci9196] fix: Resolve login errors
+
+--- gms_bump (22) ---
+  40d3e7c6fb89 [Hoàng Gia Bảo] Bump GMS version to `v23.43.55`
+  a1739989f43b [WSTxda] Bump GMS version to 23.45.23
+  f7a0b25153ad [WSTxda] Bump GMS version to 23.49.14
+  2b3838a801bc [WSTxda] Bump GMS version to 23.49.55
+  dc8aca65e418 [WSTxda] Bump GMS version to 23.50.14
+  d010fc084239 [WSTxda] Bump GMS version to 24.02.13
+  0329dbf88f2e [WSTxda] Bump GMS version to 24.02.55
+  16657d5b177a [WSTxda] Bump GMS version to 24.05.15
+  dfd27499183f [WSTxda] Bump GMS version to 24.08.12
+  d3f7dff54335 [WSTxda] Bump GMS version to 24.08.56
+  3413e8755606 [WSTxda] Bump GMS version to 24.21.55
+  23ddd2c08270 [WSTxda] Bump GMS version to 24.26.32
+  dc8da7619249 [WSTxda] Bump GMS version to 24.26.62
+  29833fbe09ca [WSTxda] Bump GMS version to 24.31.36
+  44e8f8b34c77 [WSTxda] Bump GMS version to 24.38.64
+  bed4b3786094 [WSTxda] Bump GMS version to 24.47.38
+  48d2888a7f57 [WSTxda] Bump GMS version to 25.14.62
+  49c578b0c088 [WSTxda] Bump GMS version to 25.31.33
+  bdd01799a8ab [WSTxda] Bump GMS version to 25.38.50
+  2f3f398d51a9 [WSTxda] chore: Bump GMS version to 25.49.61
+  6e231870b6d2 [WSTxda] chore: Remove GMS version info in about app
+  350642643295 [WSTxda] chore: Bump GMS version to 25.50.34
+
+--- gradle_deps (16) ---
+  b11f9a504892 [WSTxda] Set min SDK to 23
+  0d0cbcb9829b [Marvin W] Gradle: Use sublude function for :play-services-base:core:package
+  0d18ed2bd525 [WSTxda] Update build.gradle
+  54f296d51354 [WSTxda] Update gradle and build tools
+  da0c3cf09a6e [WSTxda] Update gradle
+  74049f29bffb [WSTxda] Update gradle and used libraries
+  2b6bbad87673 [WSTxda] Migrate BuildConfig to Build Gradle Files
+  d4dbc35069df [WSTxda] Update gradle dependencies
+  90fed214d90c [WSTxda] Update gradle and dependencies
+  d83dd6f357fc [WSTxda] Enable gradle build cache
+  7580efdb6773 [WSTxda] Update dependencies
+  5088a669266b [WSTxda] Update gradle version
+  2459fa396f90 [WSTxda] Disable androd build tools version and update jvm version
+  acb221a7706b [WSTxda] Update Gradle and dependencies
+  fe375ca7e981 [WSTxda] Update Gradle
+  0d2aaa99b5c6 [WSTxda] chore: Update Gradle version
+
+--- push_notif (12) ---
+  2fd0a15667e7 [WSTxda] Redesign ask gcm dialog
+  76322d1f4eec [WSTxda] Update ask gcm dialog to m3
+  6bbdfebf1902 [Marvin W] Push: Fix permission dialog
+  af4a0ef1e09c [WSTxda] Translate cloud messaging strings for pt-br correctly
+  a78e271d44b8 [WSTxda] Add actions in foreground service notification
+  44eb2b2e792a [WSTxda] Fix foreground service
+  4e39ab0fdd27 [WSTxda] Refactor ask push permission register dialog and activity data flow
+  96f65ba1739c [WSTxda] Add no history flag to push register request
+  ff8a21da244a [WSTxda] Fix PushNotificationAdvancedFragment lifecycle handling
+  8881eb733360 [WSTxda] Organize gcm settings preferences
+  66e1d854cff1 [WSTxda] feat (gcm): Ask display over others apps permission in confirm new apps preference
+  66d0836b0ede [LisoUseInAIKyri] ci: Always push stings from dev branch to prevent accidentally pushing main branch strings if run
+
+--- patcher (10) ---
+  b663c2e8f2cb [WSTxda] Show patcher name in app heading
+  12e731cf531d [WSTxda] Add more patchers name
+  a6c26ea13783 [WSTxda] Added patchers package installation in self-check
+  5ae7c20adfb5 [WSTxda] Improvement patchers package detection
+  38ddd1e6eb0b [WSTxda] Added Anddea package detection
+  4d5fc3a9d71b [WSTxda] Added rufusin package detection
+  35c8ddbff4ac [WSTxda] Change ID to ReVanced and bump dependences and version
+  735630c5e376 [WSTxda] Change default group id to ReVanced
+  a814431d8159 [WSTxda] feat: Improve patcher detection using know packages names
+  bcf83376fcd3 [WSTxda] feat: Added blacklist packages in patcher detection
+
+--- update_checker (10) ---
+  65628833b4c6 [WSTxda] Add check updates button
+  a2eb62dee299 [WSTxda] Improvement check updates button with new UpdateChecker
+  6a48f6f724e7 [WSTxda] Replace AsyncTask to Executors/FutureTask in UpdateChecker
+  437c2706badd [WSTxda] Add error handling in UpdateChecker exceptions
+  5ef1545edbe6 [WSTxda] Use snackbar in UpdateChecker and improve handler exceptions
+  58cc3575ba04 [WSTxda] Reduce check updates button disable timeout
+  f244c3e25d48 [WSTxda] Fix ANR in UpdateChecker and rewire feature
+  f20419d09127 [WSTxda] Manage check updates button based on result callback
+  8bd13ed12e52 [WSTxda] No disable check update button on verification
+  573ed2449b58 [WSTxda] feat: Modularize update checker and version comparison
+
+--- translation (9) ---
+  b1b67d9c9041 [WSTxda] Update translations
+  a2b3a3bf52cb [LisoUseInAIKyri] ci: Add Crowdin actions and config (#103)
+  af26da67fe2a [LisoUseInAIKyri] ci: Fix Crowdin file paths
+  d5fb671415e0 [LisoUseInAIKyri] chore: Add Crowdin badge to readme
+  03e66d13a9e8 [LisoUseInAIKyri] ci: Fix pull from Crowdin?
+  a91f5b35a1c6 [Crowdin Bot] chore: Update translations from Crowdin
+  8dab98734f5f [LisoUseInAIKyri] ci: Fix typo in Crowdin destination folder
+  eccf0c3ec720 [LisoUseInAIKyri] chore: Move Crowdin translations to correct directory
+  4381de2c3f4a [LisoUseInAIKyri] chore: Remove old non-crowdin translations
+
+--- bugfix (8) ---
+  6f799c894f7b [WSTxda] Fix typo
+  69ea78eea7e3 [WSTxda] Fixed updater tag loop
+  f8efdb8abcd7 [davinci9196] Fix the problem that Tasks&Jamboard&Fitbit App cannot log in with Google
+  6a15d7ae1d4e [WSTxda] Fix library list view scrolling
+  c69ef9bc3e50 [WSTxda] Fix resources and lint error
+  6bbce42147b2 [WSTxda] Fix lowerCase deprecation
+  4808ab98fe93 [WSTxda] Fixed Google Photos spoof package
+  f91315a8c834 [WSTxda] Fix: #112 Open "App battery usage" screen to setup permission in Xiaomi devices
+
+--- ci (7) ---
+  600d0d928cff [Marvin W] Update GitHub Actions
+  d170d20f438d [WSTxda] Update Java version in GitHub Actions
+  bef02bddbea6 [WSTxda] ci: Fix build
+  472253634b89 [WSTxda] ci: Fix build removing obsolete SDK checks
+  39cc1c2fc7a4 [LisoUseInAIKyri] ci: Use correct branch name for action
+  a4a3e6f26dea [LisoUseInAIKyri] ci: Use update main branch name
+  8c9d94f2ed99 [LisoUseInAIKyri] ci: Add release action
+
+--- self_check (7) ---
+  52142735257e [WSTxda] Fixed Self-Check layout gravity and padding
+  cdcd4c4ca419 [WSTxda] Fixed self-check collapsed toolbar
+  8e22d669d407 [WSTxda] Remove self-check preference
+  97a5ac1c9f52 [WSTxda] Fixed Self-Check fragment issues and padding
+  f970bc961ce4 [WSTxda] feat: Added (again) self-check option in settings to see and configure app permissions
+  615e82c42537 [WSTxda] chore: Update Self-Check preference icon
+  0384796baa28 [WSTxda] feat: Added neutral result in self check group to non required permission and actions
+
+--- huawei (5) ---
+  f8118db13bf5 [Hoàng Gia Bảo] Add support for Huawei devices
+  2bd4dcfc30a5 [Hoàng Gia Bảo] Add Huawei Button
+  2f18930ed5af [WSTxda] Adapt sign in sumarry to huawei button
+  cb7fe4277dfa [Marvin W] Add Huawei -lh flavor
+  d3e97521dfdc [LisoUseInAIKyri] chore: Change Huawei to untranslatable
+
+--- feature (3) ---
+  fc4548d5a922 [Okki Dwi] feat(Translations): Add `Indonesian (Bahasa)` (#37)
+  a6c764a7375b [Herway] feat: Add Chinese Translation (#91)
+  08ec61b3f9fc [WSTxda] feat: Clear checkin info in remove all registered apps option
+
+--- readme (2) ---
+  d66066dc47c4 [WSTxda] Update readme
+  f28aa22bfab8 [WSTxda] Update README.md
+
+--- screenshots (2) ---
+  9ed93122b65f [WSTxda] Added screenshots
+  295a64d57b9b [WSTxda] Update screenshots
+___BEGIN___COMMAND_DONE_MARKER___0

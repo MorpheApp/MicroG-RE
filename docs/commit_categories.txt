@@ -1,0 +1,525 @@
+=== CATEGORY COUNTS ===
+other: 99
+chore/version: 74
+cherry-pick: 65
+ui/theme: 55
+account: 55
+feature: 44
+translation: 34
+bugfix: 22
+merge: 13
+ci: 11
+huawei: 8
+deps: 2
+location: 0
+TOTAL: 482
+
+=== OTHER (99) ===
+  ed980f66893a Organize gcm settings preferences
+  dc628cc30dfe Auth: Migrate SignInConfiguration to preprocessor-based safe parcelable
+  ce08e1abf7db Update Gradle
+  8881eb733360 Organize gcm settings preferences
+  08bde0da8335 Auth: Migrate SignInConfiguration to preprocessor-based safe parcelable
+  fe375ca7e981 Update Gradle
+  14b0fcbbaada Update screenshots
+  acb221a7706b Update Gradle and dependencies
+  2459fa396f90 Disable androd build tools version and update jvm version
+  909d1931cfef Enable edge to edge and implement window insets listener
+  4eb4536dcfd0 Update used libraries list
+  febba80a8f34 Hide auth trust google preference
+  aa8944042422 Some improvements
+  68557681df2a Update signature retrieval for API compatibility
+  b0025226588c Update material library version
+  b9598004bf73 Update screenshots
+  5088a669266b Update gradle version
+  803664abfb38 Update dependencies
+  64667b8e97f6 UI improvements
+  e13e7cf0f0ac Organize settings fragment
+  962b5bf1777b Updade dialogs design
+  fc6d1d2e60c9 Disable settings scrollbars
+  e759fd0b3e74 Update included libraries list
+  8bd13ed12e52 No disable check update button on verification
+  34f47fa291d8 Update build.gradle
+  3cf43608f397 Update screenshots
+  26b1480dc23a Update gradle
+  144a33153f0b Disable edge to edge
+  f20419d09127 Manage check updates button based on result callback
+  58cc3575ba04 Reduce check updates button disable timeout
+  52ff483f7d91 Enable edge to edge
+  af4a0ef1e09c Translate cloud messaging strings for pt-br correctly
+  76d922fa3dee Change MaterialSharedAxis transition style
+  6a4206edbe5c Allow double line title in collapsed toolbar
+  b9ec5dca3164 Adjust margin for preference card view
+  b6f67a865806 Change MaterialSharedAxis transition style
+  025624fa8492 Support x86 and x86_64 ABIs
+  bc28f7289b21 Delete fake-signature
+  5ef1545edbe6 Use snackbar in UpdateChecker and improve handler exceptions
+  7580efdb6773 Update dependencies
+  f598b01bda4c Update gradle
+  2f0eb409a659 Update Banner.svg
+  d83dd6f357fc Enable gradle build cache
+  096dab2bfbac Do not check spoofSignature with org.microg.gms
+  7824f75e3236 Small strings changes
+  c07099dd8b1c Improvement preferences typography font
+  6bbdfebf1902 Push: Fix permission dialog
+  8753d612a176 Italian localization (#27)
+  a1304e588c94 Adjust some text styles in preference
+  51227a8d04f0 Enable rtl support
+  295a64d57b9b Update screenshots
+  90fed214d90c Update gradle and dependencies
+  22507a3c034a Move menu option to preference fragment
+  735630c5e376 Change default group id to ReVanced
+  d4dbc35069df Update gradle dependencies
+  90b57c4f9db3 Push: Do not allow app data to override service fields
+  402e03e7d49f Auth: Correctly handle permission for requests with token request options (#2322)
+  4986f3b8ba2b Enable necessary settings by default
+  35c8ddbff4ac Change ID to ReVanced and bump dependences and version
+  e98047cd8914 Update some things
+  8e22d669d407 Remove self-check preference
+  c53bbdd3cecc Revert "Disable YT Advanced detection"
+  6eaa5990fe5c Improvement app heading design
+  2b6bbad87673 Migrate BuildConfig to Build Gradle Files
+  74049f29bffb Update gradle and used libraries
+  3688d20b4dfe Change advanced fragment label
+  da0c3cf09a6e Update gradle
+  024e92c636ec Auth: Allow stripping device name from requests
+  3ef26d911e20 Make advanced menu is settings option direct
+  3d3ed726bfe2 Disabled button state with timeout to avoid request spam by user
+  54f296d51354 Update gradle and build tools
+  76322d1f4eec Update ask gcm dialog to m3
+  8efc1be3f0f7 Move system category on top
+  e3cdbfab4668 Disable YT Advanced detection
+  1cf35b393e76 Update ic_notification.xml
+  3a86c5753f87 Enable postprocessing in vending-app
+  6f139aa62a5b Update strings.xml
+  56c4190a654a Revert "Replace alarm permission to SCHEDULE_EXACT_ALARM"
+  f13c197c27ed Update buttons
+  0d18ed2bd525 Update build.gradle
+  6a48f6f724e7 Replace AsyncTask to Executors/FutureTask in UpdateChecker
+  d76b7e6864ef Move preference links to settings fragment
+  bed78d3c7b08 Replace alarm permission to SCHEDULE_EXACT_ALARM
+  51d13785cc81 Meow meow, meow meow 🐈
+  aca6cb15b0b3 Update Banner.svg
+  5ae7c20adfb5 Improvement patchers package detection
+  c07548b39406 Resources cleaning
+  a2eb62dee299 Improvement check updates button with new UpdateChecker
+  735712d58715 Switch to GitHub link
+  20e5d72ffaf5 Update app heading buttons
+  4e9ba9dc96c4 Update buttons
+  b663c2e8f2cb Show patcher name in app heading
+  ea873ad71c57 Show app version in app heading
+  604a9446ebb4 Show package name in app heading
+  97808e4b4cdc Some cleanings
+  0d0cbcb9829b Gradle: Use sublude function for :play-services-base:core:package
+  b11f9a504892 Set min SDK to 23
+  8035331d53f7 Update strings
+  68f603782513 Remove unused code + Fix build error
+
+=== CHORE/VERSION (74) ===
+  9518ebcc806e chore: Update Gradle version
+  350642643295 chore: Bump GMS version to 25.50.34
+  9aba81830eaf chore: Cleanup ForegroundServiceOemUtils class
+  2d66fe8db783 chore: Cleanup manifest
+  ebf507699955 chore: Update readme
+  137a47053987 chore: Cleanup
+  1a82a52e3794 chore: Move remove all registered apps to advanced preference category
+  0d2aaa99b5c6 chore: Update Gradle version
+  24119b7a3f1e chore: Delete images folder
+  a8053ca6ebe6 chore: Update version name to new format
+  6e231870b6d2 chore: Remove GMS version info in about app
+  9e172f6a05a7 chore: Show the app version and GMS separately
+  2f3f398d51a9 chore: Bump GMS version to 25.49.61
+  40760fce15f9 chore: Cleanup and layout fixes
+  a2c768813f6b chore: Change build output name
+  676f55bf183a chore: Update "MicroG" to "microG" after #105 discussion
+  a6889cc97d64 chore: Adjust string wording
+  1ac7c6bc0e14 chore: Cleanup strings
+  2ec94770f5ae chore: Remove xliff tags that is confusing AI pre-translate
+  2f6681cecf38 chore: Change strings with line breaks to raw strings
+  6e914cbb8ac5 chore: Add GitHub issue templates
+  0bff7962ef96 chore: Mark non-translatable strings
+  699e869fdd5e chore: Cleanup
+  649c1268a570 chore: Update and improve layouts
+  615e82c42537 chore: Update Self-Check preference icon
+  88596bba13ef chore: Organize strings files
+  f0ea42437b3a chore: Update README, links and more thinks to Morphe
+  1672c0ca1d9c Update README.md
+  49abc3f083f7 Bump GMS version to 25.38.50
+  d673444c29c2 chore: Update README, links and more thinks to Morphe
+  c963d6ead508 Update README.md
+  bdd01799a8ab Bump GMS version to 25.38.50
+  856205030009 Update README.md
+  de4c0e50b607 Update README.md
+  49c578b0c088 Bump GMS version to 25.31.33
+  efcb7619dfb7 Update README.md
+  d9287e951b04 Update README.md
+  48d2888a7f57 Bump GMS version to 25.14.62
+  2570cb4271c2 Update README.md
+  8ed6b61574e0 Update README.md
+  bed4b3786094 Bump GMS version to 24.47.38
+  6b5079c78165 Update README.md
+  44e8f8b34c77 Bump GMS version to 24.38.64
+  8e4614288504 Update README.md
+  68ff39a36348 Bump version name
+  29833fbe09ca Bump GMS version to 24.31.36
+  ea1493aebee4 Update README.md
+  dc8da7619249 Bump GMS version to 24.26.62
+  23ddd2c08270 Bump GMS version to 24.26.32
+  3413e8755606 Bump GMS version to 24.21.55
+  d3f7dff54335 Bump GMS version to 24.08.56
+  11109bc8ce85 Update README.md
+  dfd27499183f Bump GMS version to 24.08.12
+  16657d5b177a Bump GMS version to 24.05.15
+  52b6848e6474 Update README.md
+  efac1ccb6700 Cleanup files
+  f4c334e7442c Update README.md
+  77b8f79c7c8d Update README.md
+  0329dbf88f2e Bump GMS version to 24.02.55
+  d010fc084239 Bump GMS version to 24.02.13
+  676dde2bb2d3 Update README.md
+  b390d3c62aa6 Bump version to 4.5
+  6abba3c15452 Update README.md
+  b61f3ceece10 Update README.md
+  dc8aca65e418 Bump GMS version to 23.50.14
+  2b3838a801bc Bump GMS version to 23.49.55
+  96af82034487 Update README.md
+  f7a0b25153ad Bump GMS version to 23.49.14
+  a1739989f43b Bump GMS version to 23.45.23
+  f28aa22bfab8 Update README.md
+  4fcd931cd318 Bump version
+  d66066dc47c4 Update readme
+  08a5d8aef382 Update .gitignore
+  40d3e7c6fb89 Bump GMS version to `v23.43.55`
+
+=== CHERRY-PICK (65) ===
+  f4dd994b1e02 Bump actions/checkout from 4 to 5
+  ea4e37f63fd1 Bump actions/checkout from 4 to 5
+  d52f1fa332f5 GCM: Topic unregistrations are valid when they return an empty token
+  ece09d1e5c59 Account settings: Allow profile picture page (#2535)
+  27f755a0ad16 SafeParcelProcessor: Fix code generator (#2525)
+  780346e36b40 Bump gradle/actions from 3 to 4
+  b9b91217a924 SafeParcel: Mark processor as incremental
+  82be0ccabfbe Improve log of service request
+  d7307ec8e96c Improve the signOut method of AuthSignInService
+  582c03a3a987 Auth: update credentials feature version
+  aafa4391f3cb Auth: Remove unnecessary prompts
+  a2abc91e0a8b Push: Do not allow app data to override service fields
+  a0a73aec9c05 Only include sent time when valid, also add TTL
+  f2340c7f4ae5 Add google.sent_time extra to C2DM receive intent
+  bd3ae7ca62eb Add update check for Github actions (#2342)
+  88adf9e8efe4 Update Gradle Wrapper validation action
+  2aa144f85e5f Correctly handle optional spaces at the start of the error message in the GitHub workflow (#2251)
+  42755ddcbdb7 Self-Check: Adjust to better cover most signature spoofing scenarios
+  381b397e3e33 Separate assemble and check on GitHub workflow
+  4c71aeb3b47e Fake signature: Add additional packages
+  3ae2f6aa3795 Auth: Make account visible after creation when configured to do so (#2235)
+  c8b62dbe52c5 GitHub Gradle build improvements (#2224)
+  60b2713a64fe Add some apps to improve support for huawei devices
+  57bfe21d9680 Optimize Gradle build on GitHub
+  f84ce7dc5aa8 Location: handle invalid or dead old binder on location request update (#2190)
+  877846b27803 License Check: Correctly check callingUid when having multiple accounts
+  040fc86f4028 Disable `GetLocales` lint
+  66ce104a135d Use big text style so that the text is displayed fully
+  2d96c4efa9f1 Check for `POST_NOTIFICATIONS` permission
+  0fda7acfaf98 Fix Ignore on notification not working
+  ad2aa2bc424a Fix swapped docstrings
+  3ecebbf7cd63 Check preference from within Licensing service
+  a8329b01fcb9 Use Google androidId for Licensing
+  ddf5a4bf2998 Apply review
+  8477cb2eb0d8 Load device profile data for licensing user agent
+  9eb4cfcb6469 Check preference from within Licensing service
+  621afa192d94 Apply review
+  3dc59f8667e7 Require permission to check license
+  10b92a41e310 Target JVM 1.8 instead of 17 in fakestore
+  b097f1f520e1 Always request `android.permission.GET_ACCOUNTS`
+  b53c16fe160c Dismiss all notifications if user wants to sign in
+  f1a653d5c577 Query licenses from multiple Google accounts in a row
+  7dfb4456e482 Improve license notification icon & sound
+  784c5cb55a5e Don't provide most negative results in V2 licensing
+  1b0cf32c1ddd Licensing service
+  8a01aa608b79 fixed the issue where marker information is not displayed on the KMB.LWB app map
+  3465cfcafb8e fixed the issue that the HKTaxi app could not move when selecting a location
+  f0722bcb3aae fixed skype app crash
+  79d65528fff1 fixed the problem that Claro Flex APP cannot enter the application
+  a2eff8ca9acf fixed the crash exception when clicking the icon in the lower left corner of the mapbox map pop-up window content page to jump
+  ad8c8bb97cbb fixed <real-time weather> & <Meteoroloji> app map layer display issues
+  5351a641e9d9 Fix the bug in the signature spoofing module. Binder.getCallingUid() should be used for permission judgment.
+  be45d236eeb8 No hardcoded application name in setting permission uses
+  623f465b6c9a Added new domain name to Google Maps Timeline
+  2f4e742ca0b6 No hardcoded application name in setting permission names
+  69816233ef86 Expose settings via signature level permission
+  72970a73a6ab Location: add SNCF/Ouigo location lookup
+  618733b5e1dd Location: Catch exceptions from callback
+  96b9e55ae652 Location provider: Add support for more moving wifis
+  18ab6846844d HMS Maps: Have MapContext report correct package name except to HMS
+  870102d66fa1 UI: Remove permission request dialogs from recent apps
+  08fc0c142d85 Fido: Allow background activity launch
+  11287d222105 Location: Set low-power for network location requests
+  a8e9f38cdea9 fixes unhandled NullPointerException for styleOperations
+  cfb3a84382ed fixes an exception <process unstable thread limit> Caused by Repeated Thread Creation.
+
+=== UI/THEME (55) ===
+  1f786eaa891d fix: Switch bar text color state
+  f61f58866a1c fix: Hide icon in launcher preference switch state does not match current state on first install
+  24c148f1a4b0 fix #71 : Use activity alias in hide icon in launcher option to prevent gone battery optimization options in HyperOS
+  213929fb2f5b fix: About layout buttons and colors
+  29be004f5d18 feat: Update about layout UI to include Morphe links
+  688e28083e1a fix: About layout buttons and colors
+  f0f11611c82a feat: Update about layout UI to include Morphe links
+  f256fbedb975 Layout improvements
+  e7941f29a042 Layout improvements
+  3d09af885d4d Added thumb icon in switch components
+  79299cdfc0c9 Update MicroG RE icon resources
+  9f19e7d9b1be Redesign UI to Material3Expressive
+  b92810022450 Update theme colors
+  9dfd269ec0f1 Switch to Material3Expressive theme style
+  c1352a20d5c3 Update hide icon in laucher preference to not gone battery optimization options
+  b129d10fe62e Update layout things
+  03f890012ec2 Added icons for dialogs and change to centered
+  9e62d628cb75 Refactor themes
+  baa68841cb8d Update general layout
+  26fdaaedd204 Add back missing monochrome icon
+  7aaca458fd01 Update app icon color to match YouTube changes
+  261aa073218e Improvement some layout ui things
+  f4cbcd553f76 Fixed WebView dark theme not follow system theme correctly
+  d450aeb3d25a Fix hide icon in launcher option and switch application preference activity
+  4cf691f6d879 Set hide icon switch state match component state
+  836e35904479 Improvement hide icon in launcher option
+  55904d96aae0 Remove switchbar from confirm new apps preference
+  84b0aa19a174 Improvement switchbar color state
+  a9f17dbe19a4 Update Material Colors pallete
+  d0e4e3b925a4 Added padding for menu icon in toolbar
+  954080361c16 Use color error in remove button dialog
+  64ce1a1b8807 Redesign app to Material3
+  0bc53edba415 Adapt theme for older Android versions
+  9193495b4179 Update settings link icons
+  e75e340b2c30 Revert "Make icon show in launcher in first install"
+  9ddf3c24be1b Make icon show in launcher in first install
+  7a5f907a65c4 Update UI icons to match better YouTube
+  f10fe166c25c Update to new MicroG RE icon
+  9cde6af17480 Cleaning MicroG vector drawable icons
+  52142735257e Fixed Self-Check layout gravity and padding
+  27138a79fe56 Update colors to match YouTube changes
+  2fd0a15667e7 Redesign ask gcm dialog
+  18ffcd0a0145 Add hide icon in launcher
+  ae3ba59df86a Set switchbar disabled color directly
+  6bf6cd2f2fa3 Use color error in disabled switchbar
+  41271ce0d8af Update ic_launcher_monochrome.xml
+  dd9a1a3f75e3 Show app in launcher
+  5f50a64e5492 Layout redesign
+  51d490a3973b Preference redesign
+  325c718d1796 Update app icon
+  b31354cef8e5 Update icons
+  c9fc33efdeb0 Update app theme
+  44e37bbcdcda Update app icon
+  0d07f258863e Fix incorrect theme
+  b814cafaff4c Spoof package name + Apply theme
+
+=== ACCOUNT (55) ===
+  627f49218560 fix: Resolve login errors
+  c17c7321f73a fix: Privacy settings crash if open it on account manager activity
+  54e856dfb59d fix: Login WebView dark theme not listening current device theme correctly
+  9da33ac32da0 feat: Refactor account manager
+  7e7302edb4df Fix: `NullPointerException` in AccountsFragment snackbar callback
+  0e7e7bb931bd feat: Add app shortcut to add account
+  b754a1c8552b feat: Use privacy fragment in account manager
+  e59e772a82e6 chore: Use login theme in accounts settings activity
+  e1f28d3b5b86 chore (auth): Make login activity single task (#2578)
+  96d3a64a1647 fix: Fix entering account registration flow from microG signin (#3087)
+  865d7c515201 Shrink add account fab on scroll and add padding in preferences
+  0a5d5bfd8032 Shrink add account fab on scroll and add padding in preferences
+  2db055b55509 Fix description text frame changes on login loading
+  24c2e086f50b Not recreate LoginActivity on screen rotation #76
+  62d28f2a422d Refactor AccountsFragment and improve lifecycle
+  8b22ff4a9d18 Update login assistant layouts
+  6ff1d817a79b Update remove account dialog layout
+  c1e514ecea53 Use wave animation in login proguess indicator
+  d0aa7ac89895 Update login screen activity design
+  8e72228f468d Adjust remove account dialog style
+  14e7c6c9ab8f Added option to undo remove account
+  087098fccd68 Account Settings: Take product name into MyActivity page (#2491)
+  35f36a321e87 Adjust login ui text style
+  dc240d98e276 Improvement AccountsFragment
+  c17e18af9ec3 Hide "logged in" if have none account in list
+  f0111cd6de97 Update accounts fragment/manage account handler activity
+  2b857162f278 Refactor Login Assistant UI
+  67b7e6e6f094 Fixed ActivityNotFoundExeption for accounts settings link due package spoofing in RVX, REX
+  cfc7b6b5e760 Tap in "Google account" "Manage your Google Account" open accounts
+  04811fd22f41 Refactor accounts manager screen
+  b7204d961fee Fix: Handler YouTube Music account manager link
+  fb67ccf85e7a Login: Switch to m3 proguess indicator
+  f56dc668c4fa Auth: Return result from login activity (#2227)
+  76d086904a70 Support dark theme in WebView login
+  8990922d8cac Change account manager to privacy
+  73f42c7f23c1 Update preferences account
+  034a8da27ed2 Added legacy account manager option in accounts
+  dc5df50e41f0 Notify is user not signed in to any Google account
+  275f36030522 Replace hardcoded auth token with auth token fetched via account
+  a99703ec764b Update login assistant design
+  09b4b19a7e23 Fixed IllegalStateException (deadlock) in removeAccount
+  70bb9774d718 Use findPreference to open login activity
+  f088aff10a37 Improvement login assistant layout
+  2deff9bf8ff8 Add default account tag
+  3032c6b7d87e Update login_assistant.xml
+  eaeac30d9def Update account list after confirm remove
+  2197a23ddf5b Update AccountsFragment.kt
+  fb72d02bb3ea Update login_assistant_loading.xml
+  8bab38f2f547 Show toast when account is removed
+  b8798ca4939f Make account list dynamic
+  149f9690d777 Drop updateAccountList
+  9dc8c91c2384 Tap to remove account in list
+  4e5eb1622a64 Add account manager screen
+  a05883f009b5 Remove authenticator preferences
+  de16de6a5015 Update login theme
+
+=== FEATURE (44) ===
+  0384796baa28 feat: Added neutral result in self check group to non required permission and actions
+  08ec61b3f9fc feat: Clear checkin info in remove all registered apps option
+  573ed2449b58 feat: Modularize update checker and version comparison
+  f970bc961ce4 feat: Added (again) self-check option in settings to see and configure app permissions
+  bcf83376fcd3 feat: Added blacklist packages in patcher detection
+  66e1d854cff1 feat (gcm): Ask display over others apps permission in confirm new apps preference
+  43a6c8a1ee73 feat: Improve patcher detection using know packages names
+  fefaf0ab5aa5 Added Russian language (#81)
+  a814431d8159 feat: Improve patcher detection using know packages names
+  b3da14905bbe Added Russian language (#81)
+  a71dabc7fe80 Added remove all registered apps option
+  66c650a2463c Added remove all registered apps option
+  a73bff59e53b Added Ukrainian (#74)
+  96f65ba1739c Add no history flag to push register request
+  4e39ab0fdd27 Refactor ask push permission register dialog and activity data flow
+  1b7ba49364ad Added vietnamese (#69)
+  91f15f500e7f Add Turkish (#64)
+  64656546d0e5 Add enableOnBackInvokedCallback
+  a78e271d44b8 Add actions in foreground service notification
+  538f50ce0ce0 Adjust library item paddings
+  c39213044680 Added privacy option in settings also
+  d753d768ff28 Adjust paddings
+  341c7fe300de Add missing italian strings
+  7e535c1fdd76 Add Spoof package support for Google News and Google Photos
+  34287387db2c Added options for manage YouTube data and history
+  4d5fc3a9d71b Added rufusin package detection
+  dccad0e4c9f2 UI Refactor
+  38ddd1e6eb0b Added Anddea package detection
+  39cee3ce0f75 Refactor handleUpdateError for simplified exception handling
+  bf17b84501ec Added request battery optimization card in home settings
+  0dfef6075502 Added fragment transitions
+  76a4f774ba7d Added collapsed toolbar in settings activity for all fragments
+  437c2706badd Add error handling in UpdateChecker exceptions
+  9ed93122b65f Added screenshots
+  5c7929b42181 Revert "Add dummy service for AUDIT(154) (#2156)"
+  174a7ba5cdb6 Add dummy service for AUDIT(154) (#2156)
+  21afca05f5a1 Revert "feat: Add identity sign-in service (#2130)"
+  8c70ba840468 feat: Add identity sign-in service (#2130)
+  a6c26ea13783 Added patchers package installation in self-check
+  e63c2ab3104d Revert: Add uninstall and open button in app heading
+  ef84e45b8668 Add uninstall and open button in app heading
+  12e731cf531d Add more patchers name
+  7c8db2ff8153 Add redfin profile
+  65628833b4c6 Add check updates button
+
+=== TRANSLATION (34) ===
+  7ef45eb855a1 chore: Update translations from Crowdin
+  7c3decd887a7 chore: Update translations from Crowdin
+  93e823d0777f chore: Update translations from Crowdin
+  98335753e06e chore: Update translations from Crowdin
+  4381de2c3f4a chore: Remove old non-crowdin translations
+  eccf0c3ec720 chore: Move Crowdin translations to correct directory
+  8dab98734f5f ci: Fix typo in Crowdin destination folder
+  473ecc1333ea chore: Update translations from Crowdin
+  08c2f4d45641 chore: Update translations from Crowdin
+  be148d10bb67 chore: Update translations from Crowdin
+  3eeedb24fd26 chore: Update translations from Crowdin
+  a3bfef0d4a4d chore: Update translations from Crowdin
+  a74c1fb5418e chore: Update translations from Crowdin
+  a91f5b35a1c6 chore: Update translations from Crowdin
+  02f04d8740d7 ci: Fix pull from Crowdin?
+  03e66d13a9e8 ci: Fix pull from Crowdin?
+  2afa9493677a chore: Add Crowdin badge to readme
+  d5fb671415e0 chore: Add Crowdin badge to readme
+  d68c4b993fd1 ci: Fix Crowdin file paths
+  af26da67fe2a ci: Fix Crowdin file paths
+  869f8925e984 ci: Add Crowdin actions and config (#103)
+  a2b3a3bf52cb ci: Add Crowdin actions and config (#103)
+  b46e288a0960 feat: Add Chinese Translation (#91)
+  a6c764a7375b feat: Add Chinese Translation (#91)
+  f991680ac3e5 Update translations
+  b1b67d9c9041 Update translations
+  6c9ae5ea5639 Italian translation fixes (#44)
+  ef8afc0f53aa Small fixes in Indonesian (Bahasa) translation
+  fc4548d5a922 feat(Translations): Add `Indonesian (Bahasa)` (#37)
+  cc7de7d2f5e6 Added Arabic translations
+  870f98a5af6c Added polish translations
+  f81dce14f53d Nuke strings translations files
+  762b4a5734c7 Add PT-BR translations
+  b07472d891c6 Drop translations
+
+=== BUGFIX (22) ===
+  f91315a8c834 Fix: #112 Open "App battery usage" screen to setup permission in Xiaomi devices
+  1aeaaffaddc1 fix: Fragments MaterialSharedAxis transitions
+  4f28403c46d7 Fix PushNotificationAdvancedFragment lifecycle handling
+  ff8a21da244a Fix PushNotificationAdvancedFragment lifecycle handling
+  fc4d7185c65d Fix typo
+  4808ab98fe93 Fixed Google Photos spoof package
+  44eb2b2e792a Fix foreground service
+  f244c3e25d48 Fix ANR in UpdateChecker and rewire feature
+  c8f0cb12b5f6 Fix typo
+  6bbce42147b2 Fix lowerCase deprecation
+  97a5ac1c9f52 Fixed Self-Check fragment issues and padding
+  014c7ef3ef4f Make update list in main thread to prevent crash
+  c69ef9bc3e50 Fix resources and lint error
+  6a15d7ae1d4e Fix library list view scrolling
+  549c3d6e4bbd Fix typo
+  cdcd4c4ca419 Fixed self-check collapsed toolbar
+  add750067b42 Revert "Add QUERY_ALL_PACKAGES to resolve getPackageInfo in PackageSpoofUtils"
+  f8efdb8abcd7 Fix the problem that Tasks&Jamboard&Fitbit App cannot log in with Google
+  3efd0518b2a5 Add QUERY_ALL_PACKAGES to resolve getPackageInfo in PackageSpoofUtils
+  5a84faf8fefe Fix typo
+  69ea78eea7e3 Fixed updater tag loop
+  6f799c894f7b Fix typo
+
+=== MERGE (13) ===
+  ba8ec46d2e90 chore: Merge branch `dev` to `main` (#133)
+  30a03ee6c095 Merge branch 'main' into dev
+  9ddda4325cfb chore: Merge branch `dev` to `main` (#117)
+  b102fb182aed chore: Merge branch `dev` to `main` (#114)
+  0848073703a2 chore: Merge branch `dev` to `main` (#104)
+  a7d018932c38 Merge branch 'main' into dev
+  aea4e52fe81d Merge pull request #19 from WSTxda/dev
+  64d00344fd82 Merge pull request #14 from WSTxda/dev
+  0467078a9c3e Merge pull request #8 from WSTxda/dev
+  69542ec7098d Merge pull request #7 from WSTxda/dev
+  db34892f0379 Merge pull request #6 from WSTxda/dev
+  12f4859d8e2a Merge pull request #5 from marciozomb13/patch-5
+  6d342716cb8a Merge branch 'master' of https://github.com/WSTxda/MicroG-RE
+
+=== CI (11) ===
+  8c9d94f2ed99 ci: Add release action
+  66d0836b0ede ci: Always push stings from dev branch to prevent accidentally pushing main branch strings if run
+  40b999c696e1 ci: Use update main branch name
+  a4a3e6f26dea ci: Use update main branch name
+  3df9a11b274e ci: Use correct branch name for action
+  39cc1c2fc7a4 ci: Use correct branch name for action
+  472253634b89 ci: Fix build removing obsolete SDK checks
+  5514818876b3 ci: Fix build
+  bef02bddbea6 ci: Fix build
+  d170d20f438d Update Java version in GitHub Actions
+  600d0d928cff Update GitHub Actions
+
+=== HUAWEI (8) ===
+  53ef5dcc0b34 chore: Change Huawei to untranslatable
+  d3e97521dfdc chore: Change Huawei to untranslatable
+  0e4c0cfe2769 Revert "Disable hide icon in launcher after click on Huawei button"
+  2c8c977df79f Disable hide icon in launcher after click on Huawei button
+  cb7fe4277dfa Add Huawei -lh flavor
+  2f18930ed5af Adapt sign in sumarry to huawei button
+  2bd4dcfc30a5 Add Huawei Button
+  f8118db13bf5 Add support for Huawei devices
+
+=== DEPS (2) ===
+  c558a3142839 Bump actions/setup-java from 4 to 5
+  9be59c360b5a Bump actions/setup-java from 4 to 5
+
+=== LOCATION (0) ===
+
+___BEGIN___COMMAND_DONE_MARKER___0
