@@ -19,7 +19,7 @@
     <string name="update_checker_button">Vérifier les mises à jour</string>
     <string name="update_checker_download_button">Télécharger</string>
     <!--updater: messages-->
-    <string name="update_checker_no_update">Pas de mise à jour disponible</string>
+    <string name="update_checker_no_update">Aucune mise à jour disponible</string>
     <string name="update_checker_update_available">Nouvelle mise à jour disponible : %s</string>
     <string name="update_checker_no_internet">Pas de connexion Internet</string>
     <string name="update_checker_generic_error">Une erreur s\'est produite… Veuillez réessayer plus tard</string>

@@ -5,23 +5,12 @@
   -->
 <resources>
     <!--App Names-->
-    <string name="gms_settings_name">Pengaturan microG</string>
     <!--Authentication-->
     <!--auth: headers-->
-    <string name="auth_add_account">Tambah Akaun</string>
-    <string name="auth_sign_in">Log Masuk</string>
-    <string name="auth_just_a_sec">Tunggu sebentar… </string>
-    <string name="auth_sorry">Maaf… </string>
     <!--auth: sign-->
-    <string name="signin_picker_title">Pilih akaun</string>
     <!-- %1$s is an app name, such as "YouTube" -->
-    <string name="signin_picker_subtitle">untuk teruskan ke %1$s</string>
-    <string name="signin_confirm_button_text">Benarkan dan kongsi</string>
-    <string name="signin_picker_add_account_label">Tambah akaun lain</string>
     <!-- %1$s is an app name, such as "YouTube" -->
-    <string name="signin_confirm_title">Benarkan anda log masuk ke %1$s</string>
     <!-- %1$s is an app name, such as "YouTube" -->
-    <string name="signin_subtext_sharing">Untuk teruskan, microG akan kongsikan nama, alamat emel dan gambar profil akaun Google anda dengan %1$s</string>
     <!--auth: buttons-->
     <!--auth: messages-->
     <!--auth: notifications-->
@@ -48,7 +37,6 @@
     <!--checkin: profile names types entry's-->
     <!--Self Check-->
     <!--self check: categories-->
-    <string name="self_check_cat_system">Sistem</string>
     <!--self check: patched apps-->
     <!-- %1$s is an app name, such as "Morphe" -->
     <!-- %1$s is an app name, such as "YouTube" -->

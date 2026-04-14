@@ -198,9 +198,9 @@
     <!--preferences: privacy-->
     <string name="pref_privacy_title">隱私</string>
     <string name="pref_privacy_summary">身份驗證和應用程式的隱私設定</string>
-    <string name="pref_network_google_enabled">使用 Tor 網路連接到 Google</string>
+    <string name="pref_network_google_enabled">允許連線到 Google 伺服器</string>
     <string name="pref_network_google_enabled_summary">如果停用，Google 伺服器通常會拒絕 microG 發起的連接。這會覆蓋服務特定的設定。</string>
-    <string name="pref_network_google_use_tor">透過 Tor 網絡連接至 Google</string>
+    <string name="pref_network_google_use_tor">使用 Tor 網路連線到 Google</string>
     <string name="pref_network_google_use_tor_summary">"需要安裝 Orbot
 尚未支援"</string>
     <string name="pref_auth_trust_google_title">信任 Google 以獲得應用程式權限</string>

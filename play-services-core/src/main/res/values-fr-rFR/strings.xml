@@ -41,7 +41,7 @@ Veuillez réessayer plus tard"</string>
 
 Cela peut prendre quelques minutes"</string>
     <!--auth: notifications-->
-    <string name="auth_notification_title">Authentification requise</string>
+    <string name="auth_notification_title">Authentification nécessaire</string>
     <!-- %1$s is an app name, such as "YouTube" -->
     <string name="auth_notification_content">%1$s nécessite votre autorisation pour accéder à votre compte Google</string>
     <!--Account Manager-->
@@ -138,7 +138,7 @@ Voulez-vous la désenregistrer maintenant afin qu’elle ne reçoive plus de mes
     <string name="self_check_name_notifications">Notifications autorisées</string>
     <string name="self_check_resolution_notifications">Appuyez ici pour ouvrir les paramètres de notifications. Les notifications sont utilisées pour maintenir GcmService en exécution en arrière-plan lorsque l’optimisation de la batterie est activée ou dans d’autres conditions</string>
     <string name="self_check_name_overlay">Affichage par-dessus les autres applications autorisé</string>
-    <string name="self_check_resolution_overlay">Appuyez ici pour accorder cette autorisation. Cette autorisation est requise pour afficher des alertes pop-up par-dessus les autres applications</string>
+    <string name="self_check_resolution_overlay">Appuyez ici pour accorder cette autorisation. Cette autorisation est nécessaire pour afficher des alertes pop-up par-dessus les autres applications</string>
     <!--self check: system-->
     <string name="self_check_name_battery_optimizations">Optimisations de la batterie désactivées</string>
     <string name="self_check_resolution_battery_optimizations">Appuyez ici pour désactiver les optimisations de la batterie. Si elles restent activées, vous pourriez rencontrer des problèmes de réception des notifications de YouTube et d’autres applications enregistrées</string>
@@ -146,7 +146,7 @@ Voulez-vous la désenregistrer maintenant afin qu’elle ne reçoive plus de mes
     <string name="self_check_resolution_oem_restriction">Votre système peut restreindre les processus en arrière-plan. Appuyez ici pour ouvrir le site Don’t Kill My App! et apprendre comment désactiver ces restrictions</string>
     <!--self check: signature-->
     <string name="self_check_name_system_spoofs">Le système falsifie la signature</string>
-    <string name="self_check_resolution_system_spoofs">Veuillez consulter la documentation pour connaître les étapes éventuellement requises</string>
+    <string name="self_check_resolution_system_spoofs">Veuillez consulter la documentation pour connaître les étapes éventuellement nécessaires</string>
     <!--self check: package-->
     <string name="self_check_pkg_gms">Play Services</string>
     <!-- %1$s is an app name, such as "YouTube" -->

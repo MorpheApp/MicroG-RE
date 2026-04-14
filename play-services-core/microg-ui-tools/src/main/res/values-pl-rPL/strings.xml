@@ -21,7 +21,7 @@
     <!--updater: messages-->
     <string name="update_checker_no_update">Brak dostępnych aktualizacji</string>
     <string name="update_checker_update_available">Dostępna nowa aktualizacja: %s</string>
-    <string name="update_checker_no_internet">Brak połączenia z Internetem</string>
+    <string name="update_checker_no_internet">Brak połączenia z internetem</string>
     <string name="update_checker_generic_error">Coś poszło nie tak… Spróbuj ponownie później</string>
     <!--Settings About-->
     <string name="about_morphe_description">Morphe to projekt otwartoźródłowy, służący do personalizacji aplikacji na Androida przy użyciu modyfikacji</string>
@@ -39,5 +39,5 @@
     <!--UI preview-->
     <string name="about_root_title">Podgląd interfejsu microG</string>
     <string name="about_root_version">Wersja v0.1.0</string>
-    <string name="about_root_libraries">Uwzględnione biblioteki</string>
+    <string name="about_root_libraries">Zawarte biblioteki</string>
 </resources>

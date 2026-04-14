@@ -33,7 +33,7 @@ Az egyik gomb megnyomásával átirányítjuk Önt a fiókjába való bejelentke
 Ez eltarthat néhány másodpercig"</string>
     <string name="auth_no_network_error_desc">"Nincs hálózati kapcsolat.
 
-Ez lehet ideiglenes probléma vagy az Android-eszköze nem rendelkezik adatátviteli szolgáltatásokkal. Csatlakozzon egy mobilhálózathoz vagy Wi-Fi-hez és próbálja meg újra"</string>
+Ez lehet ideiglenes probléma vagy az Android-eszköz nem rendelkezik adatátviteli szolgáltatásokkal. Próbálja meg újra mobilhálózathoz vagy Wi-Fi-hálózathoz csatlakozva."</string>
     <string name="auth_general_error_desc">"Probléma történt a Google-szerverekkel való kommunikáció során.
 
 Próbálja újra később."</string>

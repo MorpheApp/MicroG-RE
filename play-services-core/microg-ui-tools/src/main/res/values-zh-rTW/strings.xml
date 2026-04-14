@@ -31,7 +31,7 @@
     <!--self-check: permission-->
     <string name="self_check_cat_permissions">權限</string>
     <string name="self_check_name_permission">權限 %1$s：</string>
-    <string name="self_check_resolution_permission">點擊這裏授權。如果拒絕授權，應用程式可能無法正常運作</string>
+    <string name="self_check_resolution_permission">點擊這裡允許存取。如果拒絕權限，應用程式可能無法正常執行。</string>
     <!--Settings Preferences-->
     <!--preferences: self-check-->
     <string name="self_check_title">手動檢查</string>
