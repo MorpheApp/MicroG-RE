@@ -16,5 +16,17 @@
   -->
 <resources>
     <!--Google Cloud Messaging-->
+    <plurals name="gcm_registered_apps_counter">
+        <item quantity="one">%1$d nakarehistro na aplikasyon</item>
+        <item quantity="other">%1$d nakarehistro na mga aplikasyon</item>
+    </plurals>
     <!--Conditions-->
+    <plurals name="cond_perm_summary">
+        <item quantity="one">Hindi ibinibigay ang pahintulot na kinakailangan para sa wastong paggana ng microG Services.</item>
+        <item quantity="other">Hindi ibinibigay ang mga pahintulot na kinakailangan para sa wastong paggana ng microG Services.</item>
+    </plurals>
+    <plurals name="cond_perm_action">
+        <item quantity="one">Humiling ng nawawalang pahintulot</item>
+        <item quantity="other">Humiling ng mga nawawalang pahintulot</item>
+    </plurals>
 </resources>

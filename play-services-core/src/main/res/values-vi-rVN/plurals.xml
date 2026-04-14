@@ -21,7 +21,7 @@
     </plurals>
     <!--Conditions-->
     <plurals name="cond_perm_summary">
-        <item quantity="other">Các quyền cần thiết để microG hoạt động chưa được cấp.</item>
+        <item quantity="other">MicroG chưa được cấp đủ quyền để hoạt động bình thường.</item>
     </plurals>
     <plurals name="cond_perm_action">
         <item quantity="other">Yêu cầu quyền truy cập bị thiếu</item>

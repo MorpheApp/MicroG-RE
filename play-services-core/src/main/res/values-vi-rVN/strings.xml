@@ -116,7 +116,7 @@ Một số ứng dụng có thể không đăng ký lại được và sẽ cầ
     <string name="self_check_patched_app_installed">Chạy với %1$s</string>
     <!-- %1$s is an app name, such as "YouTube" -->
     <string name="self_check_resolution_patched_app_installed">Không tìm thấy ứng dụng dùng %1$s. Vui lòng vá và cài ứng dụng đã sửa đổi</string>
-    <string name="self_check_action_download_morphe">Tải xuống Morphe</string>
+    <string name="self_check_action_download_morphe">Tải Morphe</string>
     <!--self check: permission-->
     <string name="self_check_name_notifications">Bật thông báo</string>
     <string name="self_check_resolution_notifications">Bấm vào đây để mở cài đặt thông báo. Bật thông báo để giữ cho GcmService chạy trong nền khi bật tối ưu hóa hoặc tương tự</string>

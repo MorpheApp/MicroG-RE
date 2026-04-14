@@ -21,9 +21,9 @@
     </plurals>
     <!--Conditions-->
     <plurals name="cond_perm_summary">
-        <item quantity="other">microG Services の正常な動作のために必要な権限が付与されていません。</item>
+        <item quantity="other">microG Services の正常な動作のために必要な権限が許可されていません。</item>
     </plurals>
     <plurals name="cond_perm_action">
-        <item quantity="other">不足している権限を許可</item>
+        <item quantity="other">不足している権限をリクエスト</item>
     </plurals>
 </resources>

@@ -17,25 +17,25 @@
 <resources>
     <!--Google Cloud Messaging-->
     <plurals name="gcm_registered_apps_counter">
-        <item quantity="one">%1$d app seolaithe</item>
-        <item quantity="two">%1$d app seolaithe</item>
-        <item quantity="few">%1$d app seolaithe</item>
-        <item quantity="many">%1$d app seolaithe</item>
-        <item quantity="other">%1$d app seolaithe</item>
+        <item quantity="one">%1$d aip chláraithe</item>
+        <item quantity="two">%1$d aip chláraithe</item>
+        <item quantity="few">%1$d aip chláraithe</item>
+        <item quantity="many">%1$d aip chláraithe</item>
+        <item quantity="other">%1$d aip chláraithe</item>
     </plurals>
     <!--Conditions-->
     <plurals name="cond_perm_summary">
-        <item quantity="one">A permission required for proper functionality of microG Services is not granted.</item>
-        <item quantity="two">Permissions required for proper functionality of microG Services are not granted.</item>
-        <item quantity="few">Permissions required for proper functionality of microG Services are not granted.</item>
-        <item quantity="many">Permissions required for proper functionality of microG Services are not granted.</item>
-        <item quantity="other">Permissions required for proper functionality of microG Services are not granted.</item>
+        <item quantity="one">Ní dheonaítear cead atá riachtanach le go bhfeidhmeoidh Seirbhísí microG i gceart.</item>
+        <item quantity="two">Ní dheonaítear na ceadanna atá riachtanach le go bhfeidhmeoidh Seirbhísí microG i gceart.</item>
+        <item quantity="few">Ní dheonaítear na ceadanna atá riachtanach le go bhfeidhmeoidh Seirbhísí microG i gceart.</item>
+        <item quantity="many">Ní dheonaítear na ceadanna atá riachtanach le go bhfeidhmeoidh Seirbhísí microG i gceart.</item>
+        <item quantity="other">Ní dheonaítear na ceadanna atá riachtanach le go bhfeidhmeoidh Seirbhísí microG i gceart.</item>
     </plurals>
     <plurals name="cond_perm_action">
-        <item quantity="one">Iarr cead atá ar eagla</item>
-        <item quantity="two">Iarr cead atá ar eagla</item>
-        <item quantity="few">Iarr cead atá ar eagla</item>
-        <item quantity="many">Iarr cead atá ar eagla</item>
-        <item quantity="other">Iarr cead atá ar eagla</item>
+        <item quantity="one">Iarr cead atá ar iarraidh</item>
+        <item quantity="two">Iarr ceadanna atá ar iarraidh</item>
+        <item quantity="few">Iarr ceadanna atá ar iarraidh</item>
+        <item quantity="many">Iarr ceadanna atá ar iarraidh</item>
+        <item quantity="other">Iarr ceadanna atá ar iarraidh</item>
     </plurals>
 </resources>

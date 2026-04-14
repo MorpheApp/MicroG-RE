@@ -19,7 +19,7 @@
     <string name="list_no_item_none">Tidak ada</string>
     <string name="list_item_see_all">Lihat semua</string>
     <!--gcm: network status-->
-    <string name="service_status_disabled">Nonaktif</string>
+    <string name="service_status_disabled">Dinonaktifkan</string>
     <string name="service_status_enabled">Aktif</string>
     <string name="service_status_automatic">Otomatis</string>
     <string name="service_status_manual">Manual</string>

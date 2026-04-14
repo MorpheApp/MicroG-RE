@@ -17,7 +17,7 @@
 <resources>
     <!--Updater-->
     <string name="update_checker_button">Kiểm tra cập nhật</string>
-    <string name="update_checker_download_button">Tải xuống</string>
+    <string name="update_checker_download_button">Tải về</string>
     <!--updater: messages-->
     <string name="update_checker_no_update">Hiện không có bản cập nhật nào</string>
     <string name="update_checker_update_available">Đã có bản cập nhật: %s</string>
@@ -26,7 +26,7 @@
     <!--Settings About-->
     <string name="about_morphe_description">Morphe là một dự án nguồn mở, được thiết kế để sửa đổi ứng dụng Android thông qua các bản vá</string>
     <string name="about_version_str">Phiên bản %1$s</string>
-    <string name="about_default_license">Tất cả quyền được bảo lưu</string>
+    <string name="about_default_license">Bảo lưu mọi quyền</string>
     <!--Self Check-->
     <!--self-check: permission-->
     <string name="self_check_cat_permissions">Quyền</string>

@@ -23,10 +23,10 @@
     <!--Conditions-->
     <plurals name="cond_perm_summary">
         <item quantity="one">Een vereiste omstandigheid voor de correcte werking van microG Services is niet voldaan.</item>
-        <item quantity="other">Vereiste omstandigheden voor de correcte werking van microG Services zijn niet voldaan.</item>
+        <item quantity="other">De benodigde machtigingen voor een goede werking van de microG-services zijn niet verleend</item>
     </plurals>
     <plurals name="cond_perm_action">
         <item quantity="one">Mislende toestemming aanvragen</item>
-        <item quantity="other">Mislende toestemmingen aanvragen</item>
+        <item quantity="other">Verzoek om ontbrekende machtigingen</item>
     </plurals>
 </resources>

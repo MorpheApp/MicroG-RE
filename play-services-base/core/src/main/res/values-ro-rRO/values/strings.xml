@@ -7,9 +7,9 @@
     <!--Foreground service notification-->
     <string name="foreground_service_notification_title">Activ în fundal</string>
     <!-- %1$s is a notification text such as "Exposure Notification" -->
-    <string name="foreground_service_notification_text" formatted="true">%1$s Rulează în fundal</string>
+    <string name="foreground_service_notification_text" formatted="true">%1$s rulează în fundal</string>
     <!-- %1$s is a notification text such as "mnicroG Services" -->
-    <string name="foreground_service_notification_big_text">Exclude %1$s din optimizări de baterie sau schimbă setările de notificări pentru a ascunde această notificare</string>
+    <string name="foreground_service_notification_big_text">Exclude %1$s din optimizările bateriei sau modifică setările de notificare pentru a ascunde această notificare</string>
     <!--foreground service: notification actions-->
     <string name="foreground_action_battery_optimization">Optimizări baterie</string>
     <string name="foreground_action_notification_settings">Setări</string>
@@ -21,7 +21,7 @@
     <!--gcm: network status-->
     <string name="service_status_disabled">Dezactivat</string>
     <string name="service_status_enabled">Activ</string>
-    <string name="service_status_automatic">Automatic</string>
+    <string name="service_status_automatic">Automat</string>
     <string name="service_status_manual">Manual</string>
     <string name="service_status_enabled_short">Pornit</string>
     <string name="service_status_disabled_short">Oprit</string>

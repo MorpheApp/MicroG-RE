@@ -16,28 +16,28 @@
   -->
 <resources>
     <!--Updater-->
-    <string name="update_checker_button">Seolathraigh Nuashonrú</string>
+    <string name="update_checker_button">Seiceáil nuashonruithe</string>
     <string name="update_checker_download_button">Íoslódáil</string>
     <!--updater: messages-->
-    <string name="update_checker_no_update">Níor fáil ar nuashonrú</string>
-    <string name="update_checker_update_available">Tá nuashonrú ar fáil: %s</string>
-    <string name="update_checker_no_internet">Níl aon nasc idirlín ar fáil</string>
-    <string name="update_checker_generic_error">Tharla ghnólacht… Téigh ar ais níos déanaí</string>
+    <string name="update_checker_no_update">Níl aon nuashonrú ar fáil</string>
+    <string name="update_checker_update_available">Nuashonrú nua ar fáil: %s</string>
+    <string name="update_checker_no_internet">Gan nasc idirlín</string>
+    <string name="update_checker_generic_error">Chuaigh rud éigin mícheart… Déan iarracht arís ar ball</string>
     <!--Settings About-->
-    <string name="about_morphe_description">Tá Morphe suite ag cur athrú ar app Android trí phatcha</string>
+    <string name="about_morphe_description">Is tionscadal foinse oscailte é Morphe atá deartha chun aipeanna Android a mhodhnú trí phaistí.</string>
     <string name="about_version_str">Leagan %1$s</string>
-    <string name="about_default_license">Tá gnáthdhéileálacha faoi seirbhís</string>
+    <string name="about_default_license">Gach ceart ar cosaint</string>
     <!--Self Check-->
     <!--self-check: permission-->
-    <string name="self_check_cat_permissions">Príomhacháin</string>
-    <string name="self_check_name_permission">Príomhachán do %1$s:</string>
-    <string name="self_check_resolution_permission">Téigh ar an gcló seo chugainn chugainn permission a thabhairt. Ní thabhairt an permission seo atá ag an gcló seo a thabhairt, is féidir le haghaidh na gclóanna a bheith inárthréigthe.</string>
+    <string name="self_check_cat_permissions">Ceadanna</string>
+    <string name="self_check_name_permission">Cead do %1$s:</string>
+    <string name="self_check_resolution_permission">Brúigh anseo chun cead a dheonú. Má mhainnítear an cead a dheonú, d’fhéadfadh drochfheidhmchláir a bheith mar thoradh air.</string>
     <!--Settings Preferences-->
     <!--preferences: self-check-->
-    <string name="self_check_title">Self-Check</string>
-    <string name="self_check_desc">Verify that the device is correctly configured to use microG</string>
+    <string name="self_check_title">Féinsheiceáil</string>
+    <string name="self_check_desc">Fíoraigh go bhfuil an gléas cumraithe i gceart chun microG a úsáid</string>
     <!--UI preview-->
-    <string name="about_root_title">microG UI Demo</string>
-    <string name="about_root_version">Versión v0.1.0</string>
-    <string name="about_root_libraries">Bibliothéics inclaíte</string>
+    <string name="about_root_title">microG Taispeántas Chomhéadan Úsáideora</string>
+    <string name="about_root_version">Leagan v0.1.0</string>
+    <string name="about_root_libraries">Leabharlanna san áireamh</string>
 </resources>

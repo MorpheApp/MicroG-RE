@@ -24,15 +24,15 @@
     </plurals>
     <!--Conditions-->
     <plurals name="cond_perm_summary">
-        <item quantity="one">Для правильної роботи сервісів microG необхідна дозволена права.</item>
-        <item quantity="few">Для правильної роботи сервісів microG необхідні дозволені права.</item>
-        <item quantity="many">Для правильної роботи сервісів microG необхідні дозволені права.</item>
-        <item quantity="other">Для правильної роботи сервісів microG необхідні дозволені права.</item>
+        <item quantity="one">Дозвіл, необхідний для належного функціонування сервісів microG, не надається.</item>
+        <item quantity="few">Дозволи, необхідні для належного функціонування сервісів microG, не надаються.</item>
+        <item quantity="many">Дозволи, необхідні для належного функціонування сервісів microG, не надаються.</item>
+        <item quantity="other">Дозволи, необхідні для належного функціонування сервісів microG, не надаються.</item>
     </plurals>
     <plurals name="cond_perm_action">
-        <item quantity="one">Запросити відсутнє право</item>
-        <item quantity="few">Запросити відсутні права</item>
-        <item quantity="many">Запросити відсутні права</item>
-        <item quantity="other">Запросити відсутні права</item>
+        <item quantity="one">Запит на відсутній дозвіл</item>
+        <item quantity="few">Запит на відсутні дозволи</item>
+        <item quantity="many">Запит на відсутні дозволи</item>
+        <item quantity="other">Запит на відсутні дозволи</item>
     </plurals>
 </resources>

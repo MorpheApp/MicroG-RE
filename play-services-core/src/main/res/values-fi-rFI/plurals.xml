@@ -27,6 +27,6 @@
     </plurals>
     <plurals name="cond_perm_action">
         <item quantity="one">Pyydä puuttuva lupa</item>
-        <item quantity="other">Pyydä puuttuvia lukuja</item>
+        <item quantity="other">Pyydä puuttuvia lupia</item>
     </plurals>
 </resources>

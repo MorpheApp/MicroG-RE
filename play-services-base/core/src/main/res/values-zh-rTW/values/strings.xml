@@ -5,7 +5,7 @@
   -->
 <resources>
     <!--Foreground service notification-->
-    <string name="foreground_service_notification_title">背景活動中</string>
+    <string name="foreground_service_notification_title">在背景執行中</string>
     <!-- %1$s is a notification text such as "Exposure Notification" -->
     <string name="foreground_service_notification_text" formatted="true">%1$s 正在背景執行</string>
     <!-- %1$s is a notification text such as "mnicroG Services" -->

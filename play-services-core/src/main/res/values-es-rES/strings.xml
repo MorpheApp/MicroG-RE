@@ -71,8 +71,8 @@ Es posible que algunas apps no puedan volver a registrarse después de esta acci
     <string name="gcm_unregister_confirm_message">"Algunas aplicaciones no se vuelven a registrar automáticamente y/o no ofrecen una opción para hacerlo manualmente. Es posible que estas aplicaciones no funcionen correctamente después de cancelar el registro.
 ¿Continuar?"</string>
     <string name="gcm_remove_registers_toast_message">Se han eliminado todas las apps de las notificaciones push</string>
-    <string name="gcm_unregister_after_deny_message">"Has denegado una aplicación para registrar notificaciones push que ya está registrada.
-¿Quieres cancelar el registro ahora para que no reciba mensajes push en el futuro?"</string>
+    <string name="gcm_unregister_after_deny_message">"Has denegado una app para registrar notificaciones que ya está registrada.
+¿Quieres cancelar el registro ahora para que no reciba mensajes en el futuro?"</string>
     <!--gcm: register messages infos-->
     <string name="gcm_no_message_yet">Aún no se han recibido mensajes</string>
     <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
@@ -189,10 +189,10 @@ Es posible que algunas apps no puedan volver a registrarse después de esta acci
     <string name="pref_push_app_allow_register_title">Permitir que la aplicación se registre para recibir notificaciones push</string>
     <string name="pref_push_app_allow_register_summary">Permitir que la app se registre para recibir notificaciones push</string>
     <string name="pref_push_app_wake_for_delivery_title">Iniciar app en un mensaje push</string>
-    <string name="pref_push_app_wake_for_delivery_summary">Iniciar la app en segundo plano para recibir los mensajes de push entrantes</string>
+    <string name="pref_push_app_wake_for_delivery_summary">Inicia la app en segundo plano para recibir los mensajes entrantes</string>
     <string name="pref_gcm_enable_mcs_summary">Cloud messaging es un proveedor de notificaciones push utilizado para aplicaciones modificadas. Para utilizarlo, debes habilitar el registro del dispositivo.</string>
     <string name="pref_gcm_confirm_new_apps_title">Confirmar nuevas apps</string>
-    <string name="pref_gcm_confirm_new_apps_summary">Preguntar antes de registrar una nueva app para recibir notificaciones por push.</string>
+    <string name="pref_gcm_confirm_new_apps_summary">Preguntar antes de registrar una nueva app para recibir notificaciones</string>
     <string name="pref_gcm_remove_registers">Eliminar todas las aplicaciones registradas</string>
     <string name="pref_gcm_remove_registers_summary">Sólo utilice esta opción si está teniendo problemas para registrar una aplicación o recibir notificaciones</string>
     <!--preferences: privacy-->

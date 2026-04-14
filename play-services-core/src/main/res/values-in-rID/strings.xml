@@ -151,7 +151,7 @@ Apakah Anda ingin membatalkan pendaftarannya sekarang sehingga tidak menerima pe
     <!-- %1$s is an app name, such as "YouTube" -->
     <string name="self_check_name_app_installed">%1$s terpasang</string>
     <!-- %1$s is an app name, such as "YouTube" -->
-    <string name="self_check_resolution_app_installed">Pasang aplikasi %1$s atau yang cocok. Silahkan periksa dokumen mana aplikasi yang cocok</string>
+    <string name="self_check_resolution_app_installed">Pasang aplikasi %1$s atau yang cocok. Silakan periksa dokumen mana aplikasi yang cocok</string>
     <!--Settings Preferences-->
     <!--preferences: categories-->
     <string name="prefcat_accounts_login_accounts_title">Sudah masuk</string>

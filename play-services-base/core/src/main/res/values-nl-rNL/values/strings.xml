@@ -5,11 +5,11 @@
   -->
 <resources>
     <!--Foreground service notification-->
-    <string name="foreground_service_notification_title">Actief in de achtergrond</string>
+    <string name="foreground_service_notification_title">Actief op de achtergrond</string>
     <!-- %1$s is a notification text such as "Exposure Notification" -->
-    <string name="foreground_service_notification_text" formatted="true">%1$s loopt in de achtergrond</string>
+    <string name="foreground_service_notification_text" formatted="true">%1$s draait op de achtergrond</string>
     <!-- %1$s is a notification text such as "mnicroG Services" -->
-    <string name="foreground_service_notification_big_text">Uitschakelen %1$s uit batterijoptimalisaties of wijzingen in meldingsinstellingen om deze melding te verbergen</string>
+    <string name="foreground_service_notification_big_text">Sluit %1$s uit van batterijoptimalisaties of wijzig de meldingsinstellingen om deze melding te verbergen</string>
     <!--foreground service: notification actions-->
     <string name="foreground_action_battery_optimization">Batterijoptimalisatie</string>
     <string name="foreground_action_notification_settings">Instellingen</string>

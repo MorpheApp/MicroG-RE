@@ -34,7 +34,7 @@
     <string name="self_check_resolution_permission">İzin vermek için buraya dokun. İzin verilmediğinde uygulama sorunları yaşanabilir</string>
     <!--Settings Preferences-->
     <!--preferences: self-check-->
-    <string name="self_check_title">Kendi kendini kontrol et</string>
+    <string name="self_check_title">Öz Kontrol</string>
     <string name="self_check_desc">Cihazın microG kullanımı için doğru olarak yapılandırıldığından emin olun</string>
     <!--UI preview-->
     <string name="about_root_title">microG Kullanıcı Arayüzü Demo</string>

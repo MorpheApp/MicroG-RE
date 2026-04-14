@@ -9,38 +9,40 @@
     <!--Authentication-->
     <!--auth: headers-->
     <string name="auth_add_account">הוסף חשבון</string>
-    <string name="auth_sign_in">התחל סשיון</string>
-    <string name="auth_just_a_sec"> but a second…</string>
-    <string name="auth_sorry"> sorry…</string>
+    <string name="auth_sign_in">התחבר</string>
+    <string name="auth_just_a_sec">שנייה אחת...</string>
+    <string name="auth_sorry">סליחה...</string>
     <!--auth: sign-->
     <string name="signin_picker_title">בחר חשבון</string>
     <!-- %1$s is an app name, such as "YouTube" -->
     <string name="signin_picker_subtitle">להמשיך ל- %1$s</string>
-    <string name="signin_confirm_button_text">אישור</string>
+    <string name="signin_confirm_button_text">אפשר ושתף</string>
     <string name="signin_picker_add_account_label">הוסף חשבון אחר</string>
     <!-- %1$s is an app name, such as "YouTube" -->
     <string name="signin_confirm_title">אפשר להתחבר ל- %1$s</string>
     <!-- %1$s is an app name, such as "YouTube" -->
-    <string name="signin_subtext_sharing">להמשך, microG ישתף את שם, כתובת אימייל וצילום הפרופיל של חשבון Google שלך עם %1$s</string>
+    <string name="signin_subtext_sharing">כדי להמשיך, microG ישתף את השם, כתובת האימייל וצילום הפרופיל של חשבון Google שלך עם %1$s</string>
     <!--auth: buttons-->
     <!--auth: messages-->
     <string name="auth_before_connect">"התחברות לחשבון Google עם microG.
 
-אנחנו מתחברים לחשבון Google, השתמש בלחצן <b>התחברות</b> או בלחצן <b>Huawei</b> אם יש לך מכשיר של יצרן זה. על ידי לחיצה על אחד הלחצנים תועבר לעמוד התחברות לחשבונך."</string>
-    <string name="auth_connecting">"החיבור לחשבון גוגל שלך ייקח כמה שניות.
+בואו נתחבר לחשבון Google, השתמש בלחצן <b>התחברות</b> או בלחצן <b>Huawei</b> אם יש לך מכשיר של יצרן זה. על ידי לחיצה על אחד הלחצנים תועבר לעמוד התחברות לחשבונך."</string>
+    <string name="auth_connecting">"המכשיר שלך מבסס חיבור לשרתים של Google כדי לחבר אותך.
 
 זה יכול להימשך כמה שניות"</string>
-    <string name="auth_no_network_error_desc">"אין חיבור רשת.
+    <string name="auth_no_network_error_desc">"אין לך חיבור לרשת.
 
-זה יכול להיות בעיה זמנית או מכשיר אנדרואיד שלך לא מופעל עבור שירותי נתונים. נסה שוב כאשר תהיה מחובר לרשת מובייל, או לחץ על רשת וויפי."</string>
-    <string name="auth_general_error_desc">"הייתה בעיה בתקשורת עם שרתי גוגל.
+זאת יכולה להיות בעיה זמנית או שמכשיר האנדרואיד שלך לא מוקצה עבור שירותי נתונים. נסה שוב כאשר תהיה מחובר לנתונים ניידים, או התחבר לרשת Wi-Fi."</string>
+    <string name="auth_general_error_desc">"הייתה בעיה בתקשורת עם שרתי Google.
 
 נסה שוב מאוחר יותר"</string>
-    <string name="auth_finalize">"החיבור של המכשיר שלך לגוגל כדי לשמור את המידע לחשבון שלך ייקח כמה דקות"</string>
+    <string name="auth_finalize">"המכשיר שלך מתקשר עם Google כדי לשמור מידע לחשבון שלך.
+
+זה יכול להימשך כמה דקות"</string>
     <!--auth: notifications-->
     <string name="auth_notification_title">נדרש אימות</string>
     <!-- %1$s is an app name, such as "YouTube" -->
-    <string name="auth_notification_content">%1$s דורש את אישורך לגשת לחשבון גוגל שלך</string>
+    <string name="auth_notification_content">%1$s דורש את אישורך לגשת לחשבון Google שלך</string>
     <!--Account Manager-->
     <string name="dialog_title_remove_account">הסר חשבון</string>
     <string name="dialog_message_remove_account">"האם אתה בטוח שברצונך להסיר את החשבון הזה?
@@ -54,13 +56,13 @@
     <string name="snackbar_undo_button">בטל</string>
     <!--Google Cloud Messaging-->
     <string name="service_name_mcs">שירותי ענן</string>
-    <string name="gcm_enable_switch">הודעות חיצוניות</string>
+    <string name="gcm_enable_switch">הודעות פוש</string>
     <!--gcm: register dialogs-->
     <string name="gcm_registered">רשום</string>
     <string name="gcm_unregister_app">בטל רישום</string>
     <string name="gcm_remove_registers_dialog_title">הסר את כל הרישומים?</string>
     <!-- %1$s is an app name, such as "YouTube"? -->
-    <string name="gcm_unregister_confirm_title">להסיר את %1$s?</string>
+    <string name="gcm_unregister_confirm_title">לבטל את הרישום של %1$s?</string>
     <string name="gcm_remove_registers_dialog_message">"זוהי תהליך שימור כל האפליקציות הרשומות מriceiving הודעות push אחת ומיד
 
 אנא צור טוקן ביטחון חדש וID אנדרואיד כדי לרשום אפליקציות. בדוק את סטטוס הרישום של המכשיר

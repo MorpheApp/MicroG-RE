@@ -16,5 +16,17 @@
   -->
 <resources>
     <!--Google Cloud Messaging-->
+    <plurals name="gcm_registered_apps_counter">
+        <item quantity="one">%1$d aplicación rexistrada</item>
+        <item quantity="other">%1$d aplicacións rexistradas</item>
+    </plurals>
     <!--Conditions-->
+    <plurals name="cond_perm_summary">
+        <item quantity="one">Non foi concedido un permiso necesario para o correcto funcionamento dos servizos de microG.</item>
+        <item quantity="other">Non foron concedidos os permisos necesarios para o correcto funcionamento dos servizos de microG.</item>
+    </plurals>
+    <plurals name="cond_perm_action">
+        <item quantity="one">Solicitar permiso pendente</item>
+        <item quantity="other">Solicitar permisos pendentes</item>
+    </plurals>
 </resources>

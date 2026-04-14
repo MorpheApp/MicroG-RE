@@ -22,8 +22,8 @@
     </plurals>
     <!--Conditions-->
     <plurals name="cond_perm_summary">
-        <item quantity="one">Egy, a microG Szolgáltatások megfelelő működéséhez szükséges engedély nincs megadva.</item>
-        <item quantity="other">Egy vagy több, a microG Szolgáltatások megfelelő működéséhez szükséges engedély nincs megadva.</item>
+        <item quantity="one">Egy, a microG-szolgáltatások megfelelő működéséhez szükséges engedély nincs megadva.</item>
+        <item quantity="other">Egy vagy több, a microG-szolgáltatások megfelelő működéséhez szükséges engedély nincs megadva.</item>
     </plurals>
     <plurals name="cond_perm_action">
         <item quantity="one">Hiányzó engedély kérése</item>

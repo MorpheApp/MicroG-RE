@@ -10,24 +10,24 @@
     <!--auth: headers-->
     <string name="auth_add_account">新增帳戶</string>
     <string name="auth_sign_in">登入</string>
-    <string name="auth_just_a_sec">請稍後…</string>
-    <string name="auth_sorry">對不起…</string>
+    <string name="auth_just_a_sec">請稍候…</string>
+    <string name="auth_sorry">很抱歉……</string>
     <!--auth: sign-->
     <string name="signin_picker_title">選擇帳戶</string>
     <!-- %1$s is an app name, such as "YouTube" -->
-    <string name="signin_picker_subtitle">繼續到 %1$s</string>
+    <string name="signin_picker_subtitle">繼續使用「%1$s」</string>
     <string name="signin_confirm_button_text">允許並分享</string>
     <string name="signin_picker_add_account_label">新增其他帳戶</string>
     <!-- %1$s is an app name, such as "YouTube" -->
-    <string name="signin_confirm_title">允許登入到 %1$s</string>
+    <string name="signin_confirm_title">允許將你登入至「%1$s」</string>
     <!-- %1$s is an app name, such as "YouTube" -->
     <string name="signin_subtext_sharing">如要繼續，microG 會將你的 Google 帳戶名稱、電子郵件地址和個人檔案相片提供給 %1$s</string>
     <!--auth: buttons-->
     <!--auth: messages-->
     <string name="auth_before_connect">"將 Google 帳戶連結至 microG。
 
-請使用「<b>登入</b>」按鈕來連結 Google 帳戶；若你使用的是華為裝置，請使用「<b>Huawei</b>」按鈕。按下按鈕後，系統會將你重新導向至帳戶登入頁面。"</string>
-    <string name="auth_connecting">"裝置正在建立與 Google 伺服器的連線以進行登入。
+請使用「<b>登入</b>」按鈕來連結 Google 帳戶；如果你使用的是華為裝置，請使用「<b>Huawei</b>」按鈕。按下按鈕後，系統會將你重新導向至帳戶登入頁面。"</string>
+    <string name="auth_connecting">"裝置正在與 Google 伺服器建立連線以進行登入。
 
 這可能需要幾秒鐘的時間"</string>
     <string name="auth_no_network_error_desc">"沒有網路連線。
@@ -42,7 +42,7 @@
     <!--auth: notifications-->
     <string name="auth_notification_title">需要驗證</string>
     <!-- %1$s is an app name, such as "YouTube" -->
-    <string name="auth_notification_content">%1$s 需要獲得你的授權，才能存取你的 Google 帳戶</string>
+    <string name="auth_notification_content">%1$s 需要獲得授權，才能存取你的 Google 帳戶</string>
     <!--Account Manager-->
     <string name="dialog_title_remove_account">移除帳戶</string>
     <string name="dialog_message_remove_account">"確定要移除這個帳戶嗎？
@@ -55,19 +55,19 @@
     <string name="snackbar_remove_account">已移除帳戶 %s</string>
     <string name="snackbar_undo_button">復原</string>
     <!--Google Cloud Messaging-->
-    <string name="service_name_mcs">雲端訊息</string>
-    <string name="gcm_enable_switch">隱藏通知</string>
+    <string name="service_name_mcs">雲端訊息傳遞</string>
+    <string name="gcm_enable_switch">推播通知</string>
     <!--gcm: register dialogs-->
     <string name="gcm_registered">已註冊</string>
     <string name="gcm_unregister_app">取消註冊</string>
     <string name="gcm_remove_registers_dialog_title">要移除所有註冊嗎？</string>
     <!-- %1$s is an app name, such as "YouTube"? -->
     <string name="gcm_unregister_confirm_title">要取消註冊 %1$s 嗎？</string>
-    <string name="gcm_remove_registers_dialog_message">"這會一次移除所有已註冊應用程式的推播通知接收權限。
+    <string name="gcm_remove_registers_dialog_message">"這會一次移除所有已註冊應用程式的推播通知接收權限
 
-你將需要新的 securityToken 與 AndroidID 才能重新註冊應用程式。請檢查裝置註冊狀態。
+你將需要新的 securityToken 與 AndroidID 才能重新註冊應用程式。請檢查裝置註冊狀態
 
-執行這項操作後，部分應用程式可能無法重新註冊。你可能需要先清除這些應用程式的資料，才能再次要求註冊。"</string>
+執行這項操作後，部分應用程式可能無法重新註冊。你可能需要先清除這些應用程式的資料，才能再次要求註冊"</string>
     <string name="gcm_unregister_confirm_message">"部分應用程式不會自動重新註冊，且／或未提供手動註冊選項。取消註冊後，這些應用程式可能無法正常運作。
 要繼續嗎？"</string>
     <string name="gcm_remove_registers_toast_message">已移除所有應用程式的推播通知權限</string>
@@ -76,7 +76,7 @@
     <!--gcm: register messages infos-->
     <string name="gcm_no_message_yet">尚未收到任何訊息</string>
     <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
-    <string name="gcm_last_message_at">上則訊息：%1$s</string>
+    <string name="gcm_last_message_at">上一則訊息：%1$s</string>
     <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
     <string name="gcm_registered_since">註冊日期：%1$s</string>
     <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
@@ -126,30 +126,30 @@
     <string name="self_check_cat_gms_packages">已安裝的套件</string>
     <string name="self_check_cat_fake_sig">簽署支援</string>
     <!--self check: patched apps-->
-    <string name="self_check_source_morphe">Morphe 通知</string>
+    <string name="self_check_source_morphe">Morphe 修補</string>
     <string name="self_check_source_alternative">其他修改</string>
     <!-- %1$s is an app name, such as "Morphe" -->
-    <string name="self_check_patched_app_installed">使用 %1$s執行</string>
+    <string name="self_check_patched_app_installed">使用 %1$s 執行</string>
     <!-- %1$s is an app name, such as "YouTube" -->
     <string name="self_check_resolution_patched_app_installed">找不到使用 %1$s 的應用程式。請修改並安裝修改後的應用程式</string>
     <string name="self_check_action_download_morphe">下載 Morphe</string>
     <!--self check: permission-->
     <string name="self_check_name_notifications">已啟用通知</string>
-    <string name="self_check_resolution_notifications">點選此處開啟通知設定。通知用於在啟用電池最佳化時保持 GcmService 在後台執行。</string>
+    <string name="self_check_resolution_notifications">點選此處開啟通知設定。通知用於在啟用電池最佳化時或其他情況下保持 GcmService 在後台執行。</string>
     <string name="self_check_name_overlay">允許在其他應用程式上方顯示彈出警告</string>
-    <string name="self_check_resolution_overlay">點選此處授予此權限。此權限需要顯示彈出警告在其他應用程式上方。</string>
+    <string name="self_check_resolution_overlay">點選此處授予權限。要在其他應用程式上顯示彈出警告，此權限是必要的。</string>
     <!--self check: system-->
     <string name="self_check_name_battery_optimizations">已停用電池最佳化</string>
     <string name="self_check_resolution_battery_optimizations">點擊此處以停用電池最佳化。如果未停用，您可能會遇到來自 YouTube 和其他已註冊應用程式的通知問題。</string>
-    <string name="self_check_name_oem_restriction">系統限制背景程式</string>
-    <string name="self_check_resolution_oem_restriction">您的系統可能限制背景程式。點選此處開啟「不要殺死我的應用」網站，並學習如何停用這些限制。</string>
+    <string name="self_check_name_oem_restriction">背景程式限制</string>
+    <string name="self_check_resolution_oem_restriction">您的系統可能限制背景程式運作。點選此處開啟「Dont\'t Kill My App!」網站，並學習如何停用這些限制。</string>
     <!--self check: signature-->
-    <string name="self_check_name_system_spoofs">系統模仿簽署</string>
-    <string name="self_check_resolution_system_spoofs">請檢查文件以查看可能需要的步驟。</string>
+    <string name="self_check_name_system_spoofs">系統偽裝簽署</string>
+    <string name="self_check_resolution_system_spoofs">請檢查文件以查看所需的步驟。</string>
     <!--self check: package-->
     <string name="self_check_pkg_gms">Google Play 服務</string>
     <!-- %1$s is an app name, such as "YouTube" -->
-    <string name="self_check_name_app_installed">%1$s 已安裝</string>
+    <string name="self_check_name_app_installed">已安裝 %1$s</string>
     <!-- %1$s is an app name, such as "YouTube" -->
     <string name="self_check_resolution_app_installed">安裝應用程式 %1$s 或相容的應用程式。請檢查文件以查看哪些應用程式是相容的</string>
     <!--Settings Preferences-->
@@ -166,80 +166,66 @@
     <string name="prefcat_about">關於</string>
     <string name="prefcat_details">詳細資訊</string>
     <string name="prefcat_advanced">進階</string>
-    <string name="pref_info_status">帳號</string>
+    <string name="pref_info_status">狀態</string>
     <!--preferences: account manager-->
-    <string name="pref_account_title">您的裝置已登入新的 Google 帳號。</string>
-    <string name="pref_account_summary">新增和管理 Google 帳號</string>
-    <string name="pref_accounts_summary">管理帳號</string>
-    <string name="pref_accounts_manage_accounts_title">開啟裝置帳號管理員</string>
-    <string name="pref_accounts_manage_accounts_summary">管理所有歷史</string>
-    <string name="pref_manage_all_history">您的資訊在 YouTube</string>
-    <string name="pref_data_in_youtube">帳號已儲存在這台裝置上。點選帳號以永久從這台裝置移除。</string>
-    <string name="pref_accounts_login_accounts_summary">裝置註冊</string>
+    <string name="pref_account_title">帳戶</string>
+    <string name="pref_account_summary">登入新的 Google 帳戶</string>
+    <string name="pref_accounts_summary">新增及管理 Google 帳戶</string>
+    <string name="pref_accounts_manage_accounts_title">管理帳戶</string>
+    <string name="pref_accounts_manage_accounts_summary">開啟裝置帳戶管理員</string>
+    <string name="pref_manage_all_history">管理所有歷史記錄</string>
+    <string name="pref_data_in_youtube">您的 YouTube 資訊</string>
+    <string name="pref_accounts_login_accounts_summary">帳戶僅儲存在此裝置上。點擊帳戶以永久移除</string>
     <!--preferences: device registration-->
-    <string name="pref_device_registration_device_profile_category">選擇設定</string>
-    <string name="pref_device_registration_select_profile_title">匯入自訂設定檔</string>
+    <string name="pref_device_registration_device_profile_category">裝置設定檔</string>
+    <string name="pref_device_registration_select_profile_title">選擇個人資料</string>
     <string name="pref_device_registration_import_custom_profile_title">匯入裝置設定檔</string>
-    <string name="pref_device_registration_import_custom_profile_summary">序號</string>
-    <string name="pref_device_registration_serial_title">Android ID</string>
+    <string name="pref_device_registration_import_custom_profile_summary">從檔案管理員匯入裝置設定檔</string>
+    <string name="pref_device_registration_serial_title">序號</string>
     <string name="pref_device_registration_android_id">Android ID</string>
     <string name="pref_checkin_enable_summary">將您的裝置註冊到 Google 服務，並建立唯一的裝置識別碼。microG 會從註冊資料中刪除除了 Google 帳號名稱之外的所有識別資訊。</string>
     <!--preferences: cloud messaging-->
-    <string name="prefcat_push_apps_title">啟用應用程式註冊</string>
-    <string name="pref_push_app_allow_register_title">啟用設定</string>
-    <string name="pref_push_app_allow_register_summary">允許應用程式註冊以接收推播通知</string>
-    <string name="pref_push_app_wake_for_delivery_title">當應用程式在後台執行時接收傳入的推播通知</string>
-    <string name="pref_push_app_wake_for_delivery_summary">雲端訊息是一個推播通知提供者，用於修改的應用程式。要使用它，您必須啟用裝置註冊。</string>
-    <string name="pref_gcm_enable_mcs_summary">確認新應用程式</string>
-    <string name="pref_gcm_confirm_new_apps_title">移除所有已註冊的應用程式</string>
-    <string name="pref_gcm_confirm_new_apps_summary">您確定要移除所有已註冊的應用程式嗎？
-
-您需要開啟應用程式以重新註冊雲端訊息。
-
-一些應用程式可能無法再次註冊。</string>
-    <string name="pref_gcm_remove_registers">隱私</string>
-    <string name="pref_gcm_remove_registers_summary">隱私設定為驗證和應用程式。</string>
+    <string name="prefcat_push_apps_title">使用推播通知的應用程式</string>
+    <string name="pref_push_app_allow_register_title">允許註冊</string>
+    <string name="pref_push_app_allow_register_summary">允許應用程式註冊推播通知</string>
+    <string name="pref_push_app_wake_for_delivery_title">推送通知時啟動應用程式</string>
+    <string name="pref_push_app_wake_for_delivery_summary">在後台啟動應用程式以接收推送通知.</string>
+    <string name="pref_gcm_enable_mcs_summary">雲端訊息傳遞是已修補應用程式使用的推播通知供應商。假如要使用，您需要啟用裝置註冊</string>
+    <string name="pref_gcm_confirm_new_apps_title">確認新的應用程式</string>
+    <string name="pref_gcm_confirm_new_apps_summary">在重新註冊應用程式以接收推播通知前詢問。</string>
+    <string name="pref_gcm_remove_registers">移除所有已註冊的應用程式</string>
+    <string name="pref_gcm_remove_registers_summary">僅在註冊應用程式或接收推播通知出現問題時使用此選項。</string>
     <!--preferences: privacy-->
-    <string name="pref_privacy_title">允許連接到 Google 伺服器</string>
+    <string name="pref_privacy_title">隱私</string>
     <string name="pref_privacy_summary">身份驗證和應用程式的隱私設定</string>
-    <string name="pref_network_google_enabled">使用 Tor 網路連接到 Google</string>
-    <string name="pref_network_google_enabled_summary">如果停用，microG 通常會被拒絕連接到 Google 伺服器。這會覆蓋服務特定的設定。</string>
-    <string name="pref_network_google_use_tor">當停用時，使用者在發送應用程式授權請求到 Google 之前將會被詢問。一些應用程式無法使用 Google 帳號如果停用這個選項。</string>
-    <string name="pref_network_google_use_tor_summary">"需要安裝Orbot
+    <string name="pref_network_google_enabled">允許連線到 Google 伺服器</string>
+    <string name="pref_network_google_enabled_summary">如果停用，Google 伺服器通常會拒絕 microG 發起的連接。這會覆蓋服務特定的設定。</string>
+    <string name="pref_network_google_use_tor">使用 Tor 網路連線到 Google</string>
+    <string name="pref_network_google_use_tor_summary">"需要安裝 Orbot
 尚未支援"</string>
-    <string name="pref_auth_trust_google_title">當啟用時，所有應用程式在這台裝置上都能看到您的 Google 帳號電子郵件地址，而不需要先授權。</string>
-    <string name="pref_auth_trust_google_summary">使用裝置註冊進行驗證</string>
-    <string name="pref_auth_visible_title">當停用時，驗證請求不會連結到裝置註冊，這允許未經授權的裝置登入，但可能會有未預期的後果。</string>
-    <string name="pref_auth_visible_summary">刪除裝置名稱進行驗證</string>
-    <string name="pref_auth_include_android_id_title">當啟用時，驗證請求不會包含裝置的名稱，這可能允許未經授權的裝置登入，但可能會有未預期的後果。</string>
-    <string name="pref_auth_include_android_id_summary">隱藏啟動器圖示</string>
-    <string name="pref_auth_strip_device_name_title">原始碼存放庫</string>
-    <string name="pref_auth_strip_device_name_summary">聽取內部狀態廣播</string>
+    <string name="pref_auth_trust_google_title">信任 Google 以獲得應用程式權限</string>
+    <string name="pref_auth_trust_google_summary">停用後，向 Google 發送應用程式授權請求前會先詢問用戶。若停用此功能，某些應用程式將無法使用 Google 帳戶</string>
+    <string name="pref_auth_visible_title">允許應用程式尋找帳戶</string>
+    <string name="pref_auth_visible_summary">啟用後，此裝置上的所有應用程式將能在未經事先授權的情況下查看您 Google 帳戶的電子郵件地址</string>
+    <string name="pref_auth_include_android_id_title">使用裝置註冊進行驗證</string>
+    <string name="pref_auth_include_android_id_summary">當停用時，驗證請求將不會與裝置註冊連結，這允許未經授權的裝置登入，但可能會產生不可預見的後果</string>
+    <string name="pref_auth_strip_device_name_title">移除驗證設備名稱</string>
+    <string name="pref_auth_strip_device_name_summary">當啟用時，驗證請求不會包含裝置名稱，這可能會允許未經授權的裝置登入，但也可能產生意料之外的後果</string>
     <!--preferences: hide icon in launcher-->
-    <string name="pref_hide_launcher_icon">讀取 Google 服務設定</string>
+    <string name="pref_hide_launcher_icon">隱藏啟動器圖示</string>
     <!--preferences: about-->
     <string name="pref_about_title">關於 MicroG RE</string>
-    <string name="pref_github_summary">交換訊息和接收 Google 伺服器同步通知</string>
+    <string name="pref_github_summary">原始碼儲存庫</string>
     <!--Permissions-->
-    <string name="perm_status_broadcast_label">擴大 Google 服務存取權限</string>
-    <string name="perm_gsf_read_gservices_label">已啟用雲端訊息但已啟用電池最佳化。為了接收推播通知，您應該忽略電池最佳化。</string>
-    <string name="perm_c2dm_receive_label">權限缺失</string>
-    <string name="perm_c2dm_send_label">Huawei</string>
-    <string name="perm_gtalk_svc_label">您確定要移除此帳號嗎？
-
-一些服務和功能將無法使用
-
-您的資訊不會遺失</string>
-    <string name="perm_extended_access_label">這將會一次移除所有已註冊的應用程式。
-
-您需要開啟應用程式以重新註冊雲端訊息。
-
-一些應用程式可能無法再次註冊。</string>
+    <string name="perm_status_broadcast_label">接收內部狀態廣播</string>
+    <string name="perm_gsf_read_gservices_label">閱讀 Google 服務設置</string>
+    <string name="perm_c2dm_receive_label">接收 C2DM 資訊</string>
+    <string name="perm_c2dm_send_label">將 C2DM 資訊傳送到其他應用程式</string>
+    <string name="perm_gtalk_svc_label">與 Google 伺服器交換並接收同步訊息</string>
+    <string name="perm_extended_access_label">擴展對 Google 服務的存取權</string>
     <!--Conditions-->
-    <string name="cond_gcm_bat_title">您拒絕一個已註冊的應用程式，該應用程式已經註冊。
-
-您要現在取消其註冊嗎？</string>
-    <string name="cond_gcm_bat_summary">您已啟用雲端訊息，但 microG 服務的電池最佳化設定是活動的。為了接收推播通知，您應該忽略電池最佳化設定。</string>
+    <string name="cond_gcm_bat_title">已啟用電池最佳化</string>
+    <string name="cond_gcm_bat_summary">您已啟用雲端訊息傳遞，但 microG 服務的電池最佳化設定已啟用。為了接收推播通知，您應該忽略電池最佳化設定。</string>
     <string name="cond_gcm_bat_action">忽略最佳化</string>
-    <string name="cond_perm_title">權限缺失</string>
+    <string name="cond_perm_title">缺失權限</string>
 </resources>

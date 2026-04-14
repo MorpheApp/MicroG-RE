@@ -30,9 +30,9 @@
         <item quantity="other">Wymagane uprawnienia do prawidłowego działania usług microG nie zostały przyznane.</item>
     </plurals>
     <plurals name="cond_perm_action">
-        <item quantity="one">Poproś o brakujące uprawnienie</item>
-        <item quantity="few">Poproś o brakujące uprawnienia</item>
-        <item quantity="many">Poproś o brakujące uprawnienia</item>
-        <item quantity="other">Poproś o brakujące uprawnienia</item>
+        <item quantity="one">Przyznaj brakujące uprawnienie</item>
+        <item quantity="few">Przyznaj brakujące uprawnienia</item>
+        <item quantity="many">Przyznaj brakujące uprawnienia</item>
+        <item quantity="other">Przyznaj brakujące uprawnienia</item>
     </plurals>
 </resources>

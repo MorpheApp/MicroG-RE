@@ -19,25 +19,25 @@
     <string name="update_checker_button">Tarkista päivitykset</string>
     <string name="update_checker_download_button">Lataa</string>
     <!--updater: messages-->
-    <string name="update_checker_no_update">Ei ole päivitystä saatavilla</string>
+    <string name="update_checker_no_update">Päivityksiä ei saatavilla</string>
     <string name="update_checker_update_available">Uusi päivitys saatavilla: %s</string>
-    <string name="update_checker_no_internet">Ei ole internet-yhteyttä</string>
-    <string name="update_checker_generic_error">Jotain meni pieleen… Yritä myöhemmin uudelleen</string>
+    <string name="update_checker_no_internet">Ei internetyhteyttä</string>
+    <string name="update_checker_generic_error">Jokin meni pieleen… Yritä myöhemmin uudelleen</string>
     <!--Settings About-->
-    <string name="about_morphe_description">Morphe on avoimen lähdekoodin projekti, joka on suunniteltu muokkaamaan Android-sovelluksia patsain avulla</string>
+    <string name="about_morphe_description">Morphe on avoimen lähdekoodin projekti, joka on suunniteltu Android-sovellusten muokkaamiseen paikkauksien avulla</string>
     <string name="about_version_str">Versio %1$s</string>
     <string name="about_default_license">Kaikki oikeudet pidätetään</string>
     <!--Self Check-->
     <!--self-check: permission-->
-    <string name="self_check_cat_permissions">Oikeudet</string>
-    <string name="self_check_name_permission">Oikeus %1$s:</string>
-    <string name="self_check_resolution_permission">Koska ei myönnetä sallinta, sovellukset saattavat käyttäytyä epäluotettavasti. Koska ei myönnetä sallinta, sovellukset saattavat käyttäytyä epäluotettavasti.</string>
+    <string name="self_check_cat_permissions">Luvat</string>
+    <string name="self_check_name_permission">Lupa %1$s:</string>
+    <string name="self_check_resolution_permission">Kosketa tästä myöntääksesi luvan. Luvan epääminen voi johtaa sovellusten virheelliseen toimintaan</string>
     <!--Settings Preferences-->
     <!--preferences: self-check-->
-    <string name="self_check_title">Itsenäinen tarkistus</string>
+    <string name="self_check_title">Itsetestaus</string>
     <string name="self_check_desc">Varmista, että laite on asetettu oikein käyttämään microG:tä</string>
     <!--UI preview-->
     <string name="about_root_title">microG UI-esimerkki</string>
     <string name="about_root_version">Versio v0.1.0</string>
-    <string name="about_root_libraries">Sisällytettävät kirjastoja</string>
+    <string name="about_root_libraries">Sisältyvät kirjastot</string>
 </resources>

@@ -55,12 +55,12 @@ Google 계정에 연결하려면 <b>로그인</b> 버튼을 사용하거나, 해
     <string name="snackbar_remove_account">계정 \'%s\'을 제거하였습니다</string>
     <string name="snackbar_undo_button">계정 삭제</string>
     <!--Google Cloud Messaging-->
-    <string name="service_name_mcs">크라우드 메시징</string>
+    <string name="service_name_mcs">클라우드 메시징</string>
     <string name="gcm_enable_switch">푸시 알림</string>
     <!--gcm: register dialogs-->
     <string name="gcm_registered">등록</string>
     <string name="gcm_unregister_app">등록 해제</string>
-    <string name="gcm_remove_registers_dialog_title">모든 등록을 제거?</string>
+    <string name="gcm_remove_registers_dialog_title">모든 등록 제거</string>
     <!-- %1$s is an app name, such as "YouTube"? -->
     <string name="gcm_unregister_confirm_title">\'%1$s\'을 등록 해제하시겠습니까?</string>
     <string name="gcm_remove_registers_dialog_message">"이 작업은 한 번에 모든 등록된 앱에서 푸시 알림을 제거합니다

@@ -8,16 +8,16 @@
     <string name="gms_settings_name">Setări microG</string>
     <!--Authentication-->
     <!--auth: headers-->
-    <string name="auth_add_account">Adăugați contul</string>
+    <string name="auth_add_account">Adaugă cont</string>
     <string name="auth_sign_in">Autentificare</string>
     <string name="auth_just_a_sec">Așteaptă un moment…</string>
     <string name="auth_sorry">Ne pare rău…</string>
     <!--auth: sign-->
-    <string name="signin_picker_title">Alegeți un cont</string>
+    <string name="signin_picker_title">Alege un cont</string>
     <!-- %1$s is an app name, such as "YouTube" -->
-    <string name="signin_picker_subtitle">a continua %1$s</string>
-    <string name="signin_confirm_button_text">Permiteți și partajați</string>
-    <string name="signin_picker_add_account_label">Adăugați alt cont</string>
+    <string name="signin_picker_subtitle">pentru a continua la %1$s</string>
+    <string name="signin_confirm_button_text">Permite și partajează</string>
+    <string name="signin_picker_add_account_label">Adaugă alt cont</string>
     <!-- %1$s is an app name, such as "YouTube" -->
     <string name="signin_confirm_title">Permiteți să vă conectați la %1$s</string>
     <!-- %1$s is an app name, such as "YouTube" -->

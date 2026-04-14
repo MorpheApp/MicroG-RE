@@ -34,10 +34,10 @@
     <string name="self_check_resolution_permission">Klik hier om toestemming te geven. Het niet geven van toestemming kan leiden tot mislukte applicaties</string>
     <!--Settings Preferences-->
     <!--preferences: self-check-->
-    <string name="self_check_title">zelfcontrole</string>
-    <string name="self_check_desc">Controleer of het apparaat correct is geconfigureerd voor het gebruik van microG</string>
+    <string name="self_check_title">Zelf-Check</string>
+    <string name="self_check_desc">Controleer of het apparaat correct is geconfigureerd voor gebruik met microG</string>
     <!--UI preview-->
     <string name="about_root_title">UI-demo microG</string>
     <string name="about_root_version">Versie v0.1.0</string>
-    <string name="about_root_libraries">Included libraries</string>
+    <string name="about_root_libraries">Inbegrepen bibliotheken</string>
 </resources>

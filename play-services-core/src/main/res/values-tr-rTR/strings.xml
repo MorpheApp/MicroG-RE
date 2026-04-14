@@ -5,7 +5,7 @@
   -->
 <resources>
     <!--App Names-->
-    <string name="gms_settings_name">microG Ayarları</string>
+    <string name="gms_settings_name">microG ayarları</string>
     <!--Authentication-->
     <!--auth: headers-->
     <string name="auth_add_account">Hesap ekle</string>
@@ -24,9 +24,9 @@
     <string name="signin_subtext_sharing">Devam etmek için, microG Google hesabınızın adı, e-posta adresi ve profili resmini %1$s ile paylaşlayacaktır.</string>
     <!--auth: buttons-->
     <!--auth: messages-->
-    <string name="auth_before_connect">"Google hesabınızı microG ile bağlıştırın.
+    <string name="auth_before_connect">"Google hesabınızı microG'ye bağlayın.
 
-Google hesabına bağlanmak iğin, <b>Giriş Yap</b> düğmesi veya <b>Huawei</b> düğmesi kullanarak (cihazınız Huawei markaşı ise) bağlıştırın. Bir düğmeyi tıklayarak, hesabınıza giriş yapmanızı sayfaya yıredileceksiniz."</string>
+Google hesabına bağlanmak için <b>Giriş yap</b> düğmesini kullanın veya bu üreticiye ait bir cihazınız varsa <b>Huawei</b> düğmesini kullanın. Düğmelerden birine basarak hesabınıza giriş yapabileceğiniz sayfaya yönlendirileceksiniz."</string>
     <string name="auth_connecting">"Cihaz, Google sunucuları ile bağlantı kurmak için çalışıyor
 
 Bu, birkaç saniye sürebilir"</string>
@@ -63,16 +63,16 @@ Verileriniz kaybolmayacaktır"</string>
     <string name="gcm_remove_registers_dialog_title">Tüm kaydı kaldırılsın mı?</string>
     <!-- %1$s is an app name, such as "YouTube"? -->
     <string name="gcm_unregister_confirm_title">%1$s\'yi kaydetmek istiyor musunuz?</string>
-    <string name="gcm_remove_registers_dialog_message">"Bu işlem tüm kaydolmuş uygulamaları birden kez bildirimleri almakten çıkarır
+    <string name="gcm_remove_registers_dialog_message">"Bu işlem, kayıtlı tüm uygulamaların anlık bildirim almasını anında engelleyecektir
 
-Bu işlemden sonra, tüm uygulamaların yeni bir securityToken ve AndroidID'ye ihtiyaç olacak olabilir. Uygulamaların kaydolma durumunu kontrol et
+Uygulamaları kaydetmek için yeni bir securityToken ve AndroidID'ye ihtiyacınız olacak. Cihaz kayıt durumunu kontrol edin
 
-Bazı uygulamalar bu işlemden sonra tekrar kaydolamaz olabilir. Bu uygulamaların verilerini temizlemek için gerekebilir"</string>
+Bazı uygulamalar bu işlemden sonra tekrar kayıt olamayabilir. Bu uygulamaların tekrar kayıt talebinde bulunabilmeleri için verilerini temizlemeniz gerekebilir"</string>
     <string name="gcm_unregister_confirm_message">"Bazı uygulamalar otomatik olarak yeniden kayıt olmaz ve/veya bu işlemi manuel olarak yapma seçeneği sunmaz. Bu uygulamalar unregistering sonra düzgün çalışmayabilir.
 Devam et?"</string>
-    <string name="gcm_remove_registers_toast_message">Tüm uygulamalar bildirimden çıkarılmış</string>
-    <string name="gcm_unregister_after_deny_message">"Push bildirimleri için kayıt olmak istediğiniz bir uygulamaya izin vermediniz.
- Gelecekte push mesajları almaması için şimdi unregister etmek istiyor musunuz?"</string>
+    <string name="gcm_remove_registers_toast_message">Anlık bildirimlerden tüm uygulamalar kaldırıldı</string>
+    <string name="gcm_unregister_after_deny_message">"Hali hazırda kayıtlı olan bir uygulamanın anlık bildirimlere kaydolmasını reddettiniz.
+Gelecekte anlık bildirimler almaması için şimdi kaydını silmek ister misiniz?"</string>
     <!--gcm: register messages infos-->
     <string name="gcm_no_message_yet">Henüz bildirim alınmadı</string>
     <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
@@ -93,16 +93,16 @@ Devam et?"</string>
     <!--gcm: push notifications ping entry's-->
     <string name="push_notifications_summary_off">KAPALI</string>
     <string name="push_notifications_summary_automatic">AÇIK / Otomatik: %s</string>
-    <string name="push_notifications_summary_manual">AÇIK / El ile: %s</string>
+    <string name="push_notifications_summary_manual">AÇIK / Manuel: %s</string>
     <string name="push_notifications_summary_values_seconds">%s saniye</string>
     <string name="push_notifications_summary_values_minutes">%s dakika</string>
     <!--gcm: ask push permission dialog-->
     <!-- %1$s is an app name, such as "YouTube" -->
-    <string name="gcm_allow_app_popup">%1$s, basit mesaj bildirimleri için kaydolmak istiyor mu?</string>
+    <string name="gcm_allow_app_popup">%1$s\'in anlık bildirimler için kaydolmasına izin verilsin mi?</string>
     <string name="allow">İzin ver</string>
     <string name="deny">Reddet</string>
     <!--gcm: ask permission tos-->
-    <string name="ask_permission_tos">Devam etmeniz, bu uygulamayı ve Google\'un kullanım koşulları ve gizlilik politikalarını kabul ettiğiniz anlamına gelir</string>
+    <string name="ask_permission_tos">Devam ederek, bu uygulamanın ve Google\'ın bilgilerinizi kendi hizmet şartları ve gizlilik politikalarına uygun olarak kullanmasına izin vermiş oluyorsunuz</string>
     <!-- %1$s is an app name, such as "YouTube" -->
     <string name="ask_scope_permission_title">%1$s şunları istiyor:</string>
     <string name="ask_service_permission_title">%1$s şunu kullanmak istiyor:</string>
@@ -114,30 +114,30 @@ Devam et?"</string>
     <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
     <string name="checkin_last_registration">Son kayıt: %1$s</string>
     <!--checkin: profile names types entry's-->
-    <string name="profile_name_native">Orijinal</string>
-    <string name="profile_name_real">Kullanıcı tanımlı: %s</string>
+    <string name="profile_name_native">Yerel</string>
+    <string name="profile_name_real">Gerçek</string>
     <string name="profile_name_user">Otomatik: %s</string>
-    <string name="profile_name_auto">Sistem: %s</string>
+    <string name="profile_name_auto">Otomatik: %s</string>
     <string name="profile_name_system">Sistem: %s</string>
     <!--Self Check-->
     <!--self check: categories-->
     <string name="self_check_cat_system">Sistem</string>
-    <string name="self_check_cat_patched_apps">Kurulduğu paketler</string>
+    <string name="self_check_cat_patched_apps">Yamalı uygulamalar</string>
     <string name="self_check_cat_gms_packages">İmza sahtecilik desteği</string>
-    <string name="self_check_cat_fake_sig">Morphe bildirimi</string>
+    <string name="self_check_cat_fake_sig">İmza taklidi desteği</string>
     <!--self check: patched apps-->
     <string name="self_check_source_morphe">Morphe yamaları</string>
-    <string name="self_check_source_alternative">alternatif yamalar</string>
+    <string name="self_check_source_alternative">Alternatif yamalar</string>
     <!-- %1$s is an app name, such as "Morphe" -->
     <string name="self_check_patched_app_installed">%1$s ile çalışıyor</string>
     <!-- %1$s is an app name, such as "YouTube" -->
-    <string name="self_check_resolution_patched_app_installed">%1$s kullanan uygulamalar bulunamadı. Lütfen modifiye edilmiş uygulamayı yapıştır ve yükleyin</string>
+    <string name="self_check_resolution_patched_app_installed">%1$s kullanan uygulama bulunamadı. Lütfen yamayı uygulayın ve değiştirilmiş uygulamayı yükleyin</string>
     <string name="self_check_action_download_morphe">Morphe\'i indirin</string>
     <!--self check: permission-->
     <string name="self_check_name_notifications">Bildirimler etkinleştirildi</string>
-    <string name="self_check_resolution_notifications">Bildirimler için cihaz ayarlarını açmak için buraya tıklayın. Bildirimler, pil optimizasyonu etkinleştirildiğinde veya diğer koşullarda cihazin arka planda çalışması için gerekli</string>
+    <string name="self_check_resolution_notifications">Bildirim ayarlarını açmak için buraya dokunun. Bildirimler, pil optimizasyonu etkinleştirildiğinde veya diğer koşullar altında GcmService\'in arka planda çalışmaya devam etmesini sağlamak için kullanılır</string>
     <string name="self_check_name_overlay">Diğer uygulamaların üzerinde göster etkinleştirildi</string>
-    <string name="self_check_resolution_overlay">Bu izni almak için buraya tıklayın. Bu izni almak, cihazın üsteye açılan uyarı popup\'larını göstermek için gerekli</string>
+    <string name="self_check_resolution_overlay">Bu izni vermek için buraya dokunun. Bu izin, diğer uygulamaların üzerinde açılır pencere uyarıları göstermek için gereklidir</string>
     <!--self check: system-->
     <string name="self_check_name_battery_optimizations">Pil optimizasyonları devre dışı bırakıldı</string>
     <string name="self_check_resolution_battery_optimizations">Buraya tıklayarak batarya optimizasyonlarını devre dışı bırakabilirsiniz. Eğer devre dışı bırakılmazsa, YouTube ve kaydolan diğer uygulamalardan bildirimler almakta zorluk çekebilirsiniz</string>
@@ -154,13 +154,13 @@ Devam et?"</string>
     <string name="self_check_resolution_app_installed">%1$s uygulamasını veya uyumlu birini yükleyin. Lütfen belgede hangi uygulamalar uyumlu olduğunu kontrol edin</string>
     <!--Settings Preferences-->
     <!--preferences: categories-->
-    <string name="prefcat_accounts_login_accounts_title">Giriş yapıldı</string>
+    <string name="prefcat_accounts_login_accounts_title">Oturum açıldı</string>
     <string name="prefcat_accounts_options_title">Seçenekler</string>
     <string name="prefcat_youtube_activity">YouTube faaliyetleri</string>
     <string name="prefcat_push_apps_registered_title">Kaydolmuş uygulamalar</string>
     <string name="prefcat_push_apps_unregistered_title">Kaydolmamış uygulamalar</string>
     <string name="prefcat_gcm_registers">Kaydolar</string>
-    <string name="prefcat_push_networks_title">Bildirimler için kullanılacak ağlar</string>
+    <string name="prefcat_push_networks_title">Anlık bildirimleri kullanan ağlar</string>
     <string name="prefcat_applications">Uygulamalar</string>
     <string name="prefcat_authentication">Yetkilendirme</string>
     <string name="prefcat_about">Hakkında</string>
@@ -183,16 +183,16 @@ Devam et?"</string>
     <string name="pref_device_registration_import_custom_profile_summary">Özel cihaz profiline dosya yükleyin</string>
     <string name="pref_device_registration_serial_title">Seri numarası</string>
     <string name="pref_device_registration_android_id">Android ID</string>
-    <string name="pref_checkin_enable_summary">Cihazınızı Google servislerine kaydıtır ve benzersiz bir cihaz kimliği oluşturur. microG kayştırma verilerinden Google hesabı adınınını haricinde tespit edici bileşenleri ayırır.</string>
+    <string name="pref_checkin_enable_summary">Cihazınızı Google hizmetlerine kaydeder ve benzersiz bir cihaz tanımlayıcısı oluşturur. microG, kayıt verilerinden Google hesap adınız dışındaki tanımlayıcı bilgileri kaldırır</string>
     <!--preferences: cloud messaging-->
     <string name="prefcat_push_apps_title">Anlık bildirimleri kullanan uygulamalar</string>
-    <string name="pref_push_app_allow_register_title">Uygulamaya kaydolma izni verildi</string>
-    <string name="pref_push_app_allow_register_summary">Uygulamaya bildirimler için izin verildi</string>
-    <string name="pref_push_app_wake_for_delivery_title">Uygulamayı arka planda çalışırarak gelen bildirimleri almak için etkinleştirildi</string>
-    <string name="pref_push_app_wake_for_delivery_summary">Cloud messaging, değiştirilmiş uygulamalar için bir bildirim sağlayıcıdır. Buyuk için cihaz kaydını etkinleştirmeniz gerekir</string>
-    <string name="pref_gcm_enable_mcs_summary">Yeni uygulamaları onayla</string>
+    <string name="pref_push_app_allow_register_title">Kayıta izin ver</string>
+    <string name="pref_push_app_allow_register_summary">Uygulamanın anlık bildirimler için kaydolmasına izin ver</string>
+    <string name="pref_push_app_wake_for_delivery_title">Anlık mesajla uygulamayı başlat</string>
+    <string name="pref_push_app_wake_for_delivery_summary">Gelen bildirimleri almak için uygulamayı arka planda başlat</string>
+    <string name="pref_gcm_enable_mcs_summary">Bulut mesajlaşma, değiştirilmiş uygulamalar için kullanılan bir anlık bildirim sağlayıcısıdır. Bunu kullanabilmek için cihaz kaydını etkinleştirmeniz gerekir</string>
     <string name="pref_gcm_confirm_new_apps_title">Tüm kaydolmuş uygulamaları kaldır</string>
-    <string name="pref_gcm_confirm_new_apps_summary">Tüm kaydolmuş uygulamaları kaldırırken sorunlar yaşayabilirsiniz</string>
+    <string name="pref_gcm_confirm_new_apps_summary">Yeni bir uygulama kaydolmadan önce anlık bildirimleri almak için izin isteyin</string>
     <string name="pref_gcm_remove_registers">Gizlilik</string>
     <string name="pref_gcm_remove_registers_summary">Yetkilendirme ve uygulamalar için gizlilik ayarları</string>
     <!--preferences: privacy-->
@@ -206,26 +206,26 @@ Henüz desteklenmiyor"</string>
     <string name="pref_auth_trust_google_title">Cihaz kaydını Google sunucuları ile bağlantı kurmak için kullanın</string>
     <string name="pref_auth_trust_google_summary">Uygulamaların Google hesabınıza erişmesine izin vermek için etkinleştirildi. Bazı uygulamalar, bu etkinleştirme devre dışı bırakıldığında işlevsiz kalabilir</string>
     <string name="pref_auth_visible_title">Uygulamalara hesapları bulma izni ver</string>
-    <string name="pref_auth_visible_summary">Etkinleştirildiğinde, bu cihazdaki tüm uygulamalar Google hesabınızın e-posta adresini ön izni olmaksızın görebilir.</string>
-    <string name="pref_auth_include_android_id_title">Cihaz kaydı ile kimlik doygunu</string>
-    <string name="pref_auth_include_android_id_summary">Devre dışı bırakıldığında, kimlik doğrulama isteğleri cihaz kaydıyla bağlantılı olmaz, bu da yetkisiz cihazların oturum açmasına izin verir, ancak olası sonuçlar olabilir.</string>
-    <string name="pref_auth_strip_device_name_title">Kimlik doğrulamasını cihaz adı çıkar</string>
-    <string name="pref_auth_strip_device_name_summary">Etkinleştirildiğinde, kimlik doğrulama isteğleri cihazın adını içermez, bu da yetkisiz cihazların oturum açmasına izin verir, ancak olası sonuçlar olabilir.</string>
+    <string name="pref_auth_visible_summary">Etkinleştirildiğinde, bu cihazdaki tüm uygulamalar önceden yetkilendirme gerektirmeden Google Hesaplarınızın e-posta adresini görebilecektir</string>
+    <string name="pref_auth_include_android_id_title">Cihaz kaydı ile kimliği doğrula</string>
+    <string name="pref_auth_include_android_id_summary">Devre dışı bırakıldığında, kimlik doğrulama istekleri cihaz kaydıyla ilişkilendirilmeyecektir; bu da yetkisiz cihazların oturum açmasına olanak tanır ancak öngörülemeyen sonuçlara yol açabilir</string>
+    <string name="pref_auth_strip_device_name_title">Kimlik doğrulama için cihaz adını kaldır</string>
+    <string name="pref_auth_strip_device_name_summary">Etkinleştirildiğinde, kimlik doğrulama istekleri cihazın adını içermeyecektir; bu durum yetkisiz cihazların oturum açmasına olanak sağlayabilir, ancak öngörülemeyen sonuçlara da yol açabilir</string>
     <!--preferences: hide icon in launcher-->
     <string name="pref_hide_launcher_icon"> Launcher\'da simgeyi gizle</string>
     <!--preferences: about-->
     <string name="pref_about_title">MicroG RE hakkında</string>
     <string name="pref_github_summary">Kaynak kod deposu</string>
     <!--Permissions-->
-    <string name="perm_status_broadcast_label">İç durum yayınları dinle</string>
+    <string name="perm_status_broadcast_label">dahili durum yayınlarını dinleyin</string>
     <string name="perm_gsf_read_gservices_label">Google hizmet yapılandırmasını oku</string>
     <string name="perm_c2dm_receive_label">C2DM mesajlarını dinle</string>
-    <string name="perm_c2dm_send_label">Diğer uygulamalara C2DM mesajları gönder</string>
-    <string name="perm_gtalk_svc_label">Google sunucularıyla mesajlar alışverişi yap ve senkronizasyon bildirimleri al</string>
+    <string name="perm_c2dm_send_label">diğer uygulamalara C2DM mesajları gönder</string>
+    <string name="perm_gtalk_svc_label">Google sunucularıyla mesaj alışverişi yap ve senkronizasyon bildirimleri al</string>
     <string name="perm_extended_access_label">Google hizmetlerine geniş erişim</string>
     <!--Conditions-->
     <string name="cond_gcm_bat_title">Bateri optimizasyonları etkinleştirildi</string>
-    <string name="cond_gcm_bat_summary">Cloud mesajlaşmaını etkinleştirdiniz, fakat microG Servisleri iğin batarya optimizasyonları etkin. Bildirimler gelmek iğin batarya optimizasyonlarını yoksaylamanızı gerekecektir.</string>
+    <string name="cond_gcm_bat_summary">Bulut mesajlaşmayı etkinleştirdiniz ancak microG Hizmetleri için pil optimizasyonları etkin durumda. Anlık bildirimlerin gelmesi için pil optimizasyonlarını göz ardı etmelisiniz</string>
     <string name="cond_gcm_bat_action">Optimizasyonları yoksay</string>
     <string name="cond_perm_title">İzin eksik</string>
 </resources>
