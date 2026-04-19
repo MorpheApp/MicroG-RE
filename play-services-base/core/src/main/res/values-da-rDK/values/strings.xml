@@ -9,9 +9,9 @@
     <!-- %1$s is a notification text such as "Exposure Notification" -->
     <string name="foreground_service_notification_text" formatted="true">%1$s kører i baggrunden</string>
     <!-- %1$s is a notification text such as "mnicroG Services" -->
-    <string name="foreground_service_notification_big_text">Fjern %1$s fra batteri-optimeringer eller ændre notifikationsindstillinger for at skjule denne notifikation</string>
+    <string name="foreground_service_notification_big_text">Fjern %1$s fra batterioptimeringer eller ændre notifikationsindstillinger for at skjule denne notifikation</string>
     <!--foreground service: notification actions-->
-    <string name="foreground_action_battery_optimization">Batterioptimalisering</string>
+    <string name="foreground_action_battery_optimization">Batterioptimering</string>
     <string name="foreground_action_notification_settings">Indstillinger</string>
     <!--Actionbar menu-->
     <string name="menu_settings">Indstillinger</string>

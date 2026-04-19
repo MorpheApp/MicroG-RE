@@ -16,28 +16,28 @@
   -->
 <resources>
     <!--Updater-->
-    <string name="update_checker_button">Güncelleştirmeleri kontrol et</string>
+    <string name="update_checker_button">Güncellemeleri kontrol et</string>
     <string name="update_checker_download_button">İndir</string>
     <!--updater: messages-->
-    <string name="update_checker_no_update">Yeni güncelleme yok</string>
+    <string name="update_checker_no_update">Güncelleme yok</string>
     <string name="update_checker_update_available">Yeni güncelleme mevcut: %s</string>
     <string name="update_checker_no_internet">İnternet bağlantısı yok</string>
     <string name="update_checker_generic_error">Bir hata oluştu... Lütfen daha sonra tekrar deneyin</string>
     <!--Settings About-->
-    <string name="about_morphe_description">Morphe, Android uygulamaları için açılış kodları yoluyla değiştirmek üzere tasarlanmış açık kaynaklı bir projedir</string>
+    <string name="about_morphe_description">Morphe, yamalar aracılığıyla Android uygulamalarını değiştirmek için tasarlanmış açık kaynaklı bir projedir</string>
     <string name="about_version_str">Sürüm %1$s</string>
     <string name="about_default_license">Tüm hakları saklıdır</string>
     <!--Self Check-->
     <!--self-check: permission-->
     <string name="self_check_cat_permissions">İzinler</string>
-    <string name="self_check_name_permission">İzin %1$s için:</string>
+    <string name="self_check_name_permission">%1$s\'a izin:</string>
     <string name="self_check_resolution_permission">İzin vermek için buraya dokun. İzin verilmediğinde uygulama sorunları yaşanabilir</string>
     <!--Settings Preferences-->
     <!--preferences: self-check-->
-    <string name="self_check_title">Öz Kontrol</string>
+    <string name="self_check_title">Öz kontrol</string>
     <string name="self_check_desc">Cihazın microG kullanımı için doğru olarak yapılandırıldığından emin olun</string>
     <!--UI preview-->
     <string name="about_root_title">microG Kullanıcı Arayüzü Demo</string>
     <string name="about_root_version">Sürüm v0.1.0</string>
-    <string name="about_root_libraries">İçeren kütüphaneler</string>
+    <string name="about_root_libraries">İçerilen kütüphaneler</string>
 </resources>
