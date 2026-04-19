@@ -15,13 +15,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set Git user
+      - name: Merge main into dev
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Merge main into dev
-        run: |
           git fetch origin dev
           
           git checkout dev

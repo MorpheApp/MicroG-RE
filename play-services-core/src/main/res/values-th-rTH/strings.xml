@@ -27,7 +27,7 @@
     <string name="auth_before_connect">"เชื่อมต่อบัญชี Google กับ microG.
 
 ไปเชื่อมต่อกับบัญชี Google ใช้ปุ่ม <b>ลงชื่อเข้าใช้</b> หรือใช้ปุ่ม <b>ฮัวเว่ย</b> ถ้าคุณมีอุปกรณ์จากบริษัทนี้ โดยกดปุ่มใดปุ่มหนึ่งจะนำคุณไปยังหน้าเข้าสู่ระบบบัญชีของคุณ"</string>
-    <string name="auth_connecting">"อุปกรณ์ของคุณกำลังเชื่อมต่อไปยังเซิร์ฟเวอร์ของ Google เพื่อลงชื่อเข้าใช้.
+    <string name="auth_connecting">"อุปกรณ์ของคุณกำลังเชื่อมต่อไปยังเซิร์ฟเวอร์ของ Google เพื่อลงชื่อเข้าใช้
 
 อาจใช้เวลาหนึงสองวินาที"</string>
     <string name="auth_no_network_error_desc">"คุณไม่มีการเชื่อมต่อเครือข่าย.
@@ -71,8 +71,8 @@
     <string name="gcm_unregister_confirm_message">"บางแอปไม่ได้ลงทะเบียนอัตโนมัติและ/หรือไม่ได้ให้ตัวเลือกลงทะเบียนใหม่อีกครั้งด้วยตนเองเหล่านี้อาจไม่ทำงานได้ถูกต้องหลังจากการยกเลิกการลงทะเบียน
 ต่อไปหรือไม่"</string>
     <string name="gcm_remove_registers_toast_message">แอปทั้งหมดถูกนำออกจากการแจ้งเตือน Push</string>
-    <string name="gcm_unregister_after_deny_message">"คุณปฏิเสธให้แอปลงทะเบียนสำหรับการแจ้งเตือน Push ที่ลงทะเบียนแล้ว
-คุณต้องการยกเลิกการลงทะเบียนหรือไม่เพื่อไม่ให้ได้รับข้อความ Push ในอนาคต"</string>
+    <string name="gcm_unregister_after_deny_message">"คุณปฏิเสธไม่ให้แอปลงทะเบียนการแจ้งเตือนที่ลงทะเบียนไปแล้ว
+คุณต้องการยกเลิกการลงทะเบียนเพื่อไม่ให้ได้รับข้อความในอนาคตหรือไม่"</string>
     <!--gcm: register messages infos-->
     <string name="gcm_no_message_yet">ยังไม่ได้รับข้อความใดเลย</string>
     <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
@@ -114,7 +114,7 @@
     <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
     <string name="checkin_last_registration">ลงทะเบียนล่าสุด: %1$s</string>
     <!--checkin: profile names types entry's-->
-    <string name="profile_name_native">ธรรมดา</string>
+    <string name="profile_name_native">เนทีฟ</string>
     <string name="profile_name_real">แบบกำหนดเอง: %s</string>
     <string name="profile_name_user">อัตโนมัติ: %s</string>
     <string name="profile_name_auto">ระบบ: %s</string>
@@ -135,7 +135,7 @@
     <string name="self_check_action_download_morphe">ดาวน์โหลด Morphe</string>
     <!--self check: permission-->
     <string name="self_check_name_notifications">อนุญาตให้แสดงการแจ้งเตือน</string>
-    <string name="self_check_resolution_notifications">คลิกที่นำไปยังการตั้งค่าแจ้งเตือน. การแจ้งเตือนใช้เพื่อรักษา GcmService อยู่ในพื้นหลังเมื่อมีการปรับปรุงการบำรุงแบตเตอรี่หรือในสถานการอื่น ๆ</string>
+    <string name="self_check_resolution_notifications">แตะเพื่อไปยังการตั้งค่าแจ้งเตือน การแจ้งเตือนใช้เพื่อให้ GcmService ได้ทำงานอยู่ในพื้นหลังเมื่อเปิดการถนอมแบตเตอรี่หรือในสถานการณ์อื่นๆ</string>
     <string name="self_check_name_overlay">อนุญาตให้แสดงบนแอปพลิเคชันอื่น ๆ</string>
     <string name="self_check_resolution_overlay">คลิกที่นำไปยังการอนุญาตให้ใช้สิทธิ์นี้. สิทธิ์นี้จำเป็นต้องใช้เพื่อแสดงแจ้งเตือนแบบป๊อปอัปบนแอปพลิเคชันอื่น ๆ</string>
     <!--self check: system-->
@@ -145,9 +145,9 @@
     <string name="self_check_resolution_oem_restriction">อุปกรณ์ของคุณอาจะจำกัดการทำงานในพื้นหลัง. คลิกที่นำไปยังเว็บไซต์ Don’t Kill My App! และเรียนรู้วิธีการปิดการจำกัดนี้</string>
     <!--self check: signature-->
     <string name="self_check_name_system_spoofs">ระบบปลอมแปลงลายเซ็น</string>
-    <string name="self_check_resolution_system_spoofs">โปรดตรวจสอบคู่ในเอกสารการที่อาจจะจำเป็นต้องดำเนินการ</string>
+    <string name="self_check_resolution_system_spoofs">โปรดตรวจสอบเอกสารประกอบเพื่อดูขั้นตอนที่อาจจำเป็น</string>
     <!--self check: package-->
-    <string name="self_check_pkg_gms">บริการ Play Services</string>
+    <string name="self_check_pkg_gms">บริการ Google Play</string>
     <!-- %1$s is an app name, such as "YouTube" -->
     <string name="self_check_name_app_installed">%1$s ติดตั้งแล้ว</string>
     <!-- %1$s is an app name, such as "YouTube" -->
@@ -156,45 +156,45 @@
     <!--preferences: categories-->
     <string name="prefcat_accounts_login_accounts_title">ลงชื่อเข้าใช้แล้ว</string>
     <string name="prefcat_accounts_options_title">ตัวเลือก</string>
-    <string name="prefcat_youtube_activity">กิจกรรม YouTube</string>
+    <string name="prefcat_youtube_activity">กิจกรรมของ YouTube</string>
     <string name="prefcat_push_apps_registered_title">บัญชีที่ลงทะเบียนแล้ว</string>
     <string name="prefcat_push_apps_unregistered_title">บัญชีที่ยังไม่ได้ลงทะเบียน</string>
     <string name="prefcat_gcm_registers">ลงทะเบียน</string>
     <string name="prefcat_push_networks_title">เครือข่ายในการใช้การแจ้งเตือนแบบอัตโนมัติ</string>
     <string name="prefcat_applications">แอปพลิเคชัน</string>
-    <string name="prefcat_authentication">ระบบรับรองรับ</string>
+    <string name="prefcat_authentication">การยืนยันตัวตน</string>
     <string name="prefcat_about">เกี่ยวกับ</string>
     <string name="prefcat_details">รายละเอียด</string>
-    <string name="prefcat_advanced">สูงสุด</string>
+    <string name="prefcat_advanced">ขั้นสูง</string>
     <string name="pref_info_status">สถานะ</string>
     <!--preferences: account manager-->
     <string name="pref_account_title">บัญชี</string>
-    <string name="pref_account_summary">ลงชื่อเข้าใช้บัญชี Google เพิ่มใหม่</string>
+    <string name="pref_account_summary">ลงชื่อเข้าใช้บัญชี Google ใหม่</string>
     <string name="pref_accounts_summary">เพิ่มและจัดการบัญชี Google</string>
     <string name="pref_accounts_manage_accounts_title">จัดการบัญชี</string>
-    <string name="pref_accounts_manage_accounts_summary">เปิดตัวเลือกบัญชีของอุปกรณ์</string>
+    <string name="pref_accounts_manage_accounts_summary">เปิดตัวจัดการบัญชีอุปกรณ์</string>
     <string name="pref_manage_all_history">จัดการข้อมูลทั้งหมด</string>
     <string name="pref_data_in_youtube">ข้อมูลของคุณบน YouTube</string>
-    <string name="pref_accounts_login_accounts_summary">บัญชีถูกบันทึกและเก็บอยู่เฉพาะบนอุปกรณ์นี้เท่านั้น. คลิกบัญชีเพื่อลบออกจากอุปกรณ์นี้อย่างถาวรู</string>
+    <string name="pref_accounts_login_accounts_summary">บัญชีจะถูกบันทึกและจัดเก็บไว้ในอุปกรณ์เครื่องนี้เท่านั้น แตะที่บัญชีเพื่อลบออกจากอุปกรณ์นี้อย่างถาวร</string>
     <!--preferences: device registration-->
     <string name="pref_device_registration_device_profile_category">โปรไฟล์อุปกรณ์</string>
     <string name="pref_device_registration_select_profile_title">เลือกโปรไฟล์</string>
-    <string name="pref_device_registration_import_custom_profile_title">นำเข้ารหาโปรไฟล์แบบกำหนดเอง</string>
-    <string name="pref_device_registration_import_custom_profile_summary">นำเข้ารหาโปรไฟล์จากไฟล์</string>
-    <string name="pref_device_registration_serial_title">ซีเรียล</string>
-    <string name="pref_device_registration_android_id">ID Android</string>
-    <string name="pref_checkin_enable_summary">ลงทะเบียนอุปกรณ์ของคุณกับบริการ Google และสร้างตัวระบุอุปกรณ์ที่เฉพาะเจาะจง microG ตัดส่วนที่ระบุตัวตนอื่นนอกจากชื่อบัญชี Google ออกจากข้อมูลลงทะเบียน</string>
+    <string name="pref_device_registration_import_custom_profile_title">นำเข้าโปรไฟล์ที่กำหนดเอง</string>
+    <string name="pref_device_registration_import_custom_profile_summary">นำเข้าโปรไฟล์อุปกรณ์จากไฟล์</string>
+    <string name="pref_device_registration_serial_title">\"หมายเลขประจำเครื่อง\"</string>
+    <string name="pref_device_registration_android_id">Android ID</string>
+    <string name="pref_checkin_enable_summary">ลงทะเบียนอุปกรณ์ของคุณกับบริการของ Google และสร้างตัวระบุอุปกรณ์ที่ไม่ซ้ำกัน microG จะลบข้อมูลระบุที่ไม่ใช่ชื่อบัญชี Google ของคุณออกจากข้อมูลการลงทะเบียน</string>
     <!--preferences: cloud messaging-->
     <string name="prefcat_push_apps_title">แอปพลิเคชันที่ใช้การแจ้งเตือนแบบอัตโนมัติ</string>
     <string name="pref_push_app_allow_register_title">อนุญาตให้ลงทะเบียน</string>
-    <string name="pref_push_app_allow_register_summary">อนุญาตให้แอปพลิเคชันลงทะเบียนรับการแจ้งเตือนแบบอัตโนมัติ</string>
+    <string name="pref_push_app_allow_register_summary">อนุญาตให้แอปลงทะเบียนรับการแจ้งเตือนแบบพุช</string>
     <string name="pref_push_app_wake_for_delivery_title">เริ่มแอปพลิเคชันเมื่อมีการส่งข้อความแบบอัตโนมัติ</string>
-    <string name="pref_push_app_wake_for_delivery_summary">เริ่มแอปพลิเคชันเมื่อมีการส่งข้อความแบบอัตโนมัติ</string>
-    <string name="pref_gcm_enable_mcs_summary">Provider ของการแจ้งเตือนแบบ Push คือ Cloud messaging ซึ่งใช้สำหรับแอปพลิเคชันที่ได้รับการปรับปรุงแล้ว สำหรับการใช้งานต้องเปิดการลงทะเบียนของอุปกรณ์</string>
+    <string name="pref_push_app_wake_for_delivery_summary">เริ่มแอปขณะที่อยู่ในพื้นหลังเพื่อรับข้อความพุชที่เข้ามา</string>
+    <string name="pref_gcm_enable_mcs_summary">การส่งข้อความผ่านคลาวด์เป็นผู้ให้บริการการแจ้งเตือนแบบพุชที่ใช้สำหรับแอปพลิเคชันที่ปรับเปลี่ยนได้ หากต้องการใช้งานคุณต้องเปิดใช้งานการลงทะเบียนอุปกรณ์</string>
     <string name="pref_gcm_confirm_new_apps_title">ยืนยันแอปพลิเคชันใหม่</string>
-    <string name="pref_gcm_confirm_new_apps_summary">ถามก่อนลงทะเบียนแอปพลิเคชันใหม่เพื่อรับการแจ้งเตือนแบบ Push</string>
+    <string name="pref_gcm_confirm_new_apps_summary">สอบถามก่อนลงทะเบียนแอปใหม่เพื่อให้รับการแจ้งเตือนแบบพุช</string>
     <string name="pref_gcm_remove_registers">ลบแอปพลิเคชันที่ลงทะเบียนทั้งหมด</string>
-    <string name="pref_gcm_remove_registers_summary">ใช้ตัวเลือกนี้เฉพาะเมื่อมีปัญหาในการลงทะเบียนแอปพลิเคชันหรือการรับการแจ้งเตือน</string>
+    <string name="pref_gcm_remove_registers_summary">ใช้ตัวเลือกนี้เมื่อมีปัญหาในการลงทะเบียนแอปหรือรับการแจ้งเตือน</string>
     <!--preferences: privacy-->
     <string name="pref_privacy_title">ความเป็นส่วนตัว</string>
     <string name="pref_privacy_summary">การตั้งค่าความเป็นส่วนตัวสำหรับการรับรองตัวตนและแอปพลิเคชัน</string>

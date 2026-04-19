@@ -22,11 +22,11 @@
     </plurals>
     <!--Conditions-->
     <plurals name="cond_perm_summary">
-        <item quantity="one">microG hizmetlerinin düzgün çalışması için gerekli izinlerden biri verilmemiş.</item>
-        <item quantity="other">microG hizmetlerinin düzgün çalışması için gerekli izinlerden bazıları verilmemiş.</item>
+        <item quantity="one">microG Hizmetlerinin düzgün çalışması için gerekli izinlerden biri verilmemiş.</item>
+        <item quantity="other">microG Hizmetlerinin düzgün çalışması için gerekli izinler verilmemiş.</item>
     </plurals>
     <plurals name="cond_perm_action">
         <item quantity="one">Eksik izni isteyin</item>
-        <item quantity="other">Eksik izni isteyin</item>
+        <item quantity="other">Eksik izinleri isteyin</item>
     </plurals>
 </resources>

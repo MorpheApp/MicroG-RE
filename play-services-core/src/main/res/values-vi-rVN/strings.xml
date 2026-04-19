@@ -126,7 +126,7 @@ Một số ứng dụng có thể không đăng ký lại được và sẽ cầ
     <string name="self_check_name_battery_optimizations">Tắt tối ưu hóa pin</string>
     <string name="self_check_resolution_battery_optimizations">Bấm vào đây để tắt tối ưu hóa pin. Nếu vẫn bật, bạn có thể sẽ bỏ lỡ các thông báo đẩy từ YouTube và các ứng dụng khác</string>
     <string name="self_check_name_oem_restriction">Hạn chế hoạt động nền</string>
-    <string name="self_check_resolution_oem_restriction">Hệ thống có thể đang tự hạn chế hoạt động nền. Bấm vào đây để mở \'Don’t Kill My App!\' và xem cách tắt</string>
+    <string name="self_check_resolution_oem_restriction">Hệ thống có thể đang tự hạn chế hoạt động nền. Bấm vào đây để mở \"Don’t Kill My App!\" và xem cách tắt</string>
     <!--self check: signature-->
     <string name="self_check_name_system_spoofs">Giả mạo chữ ký hệ thống</string>
     <string name="self_check_resolution_system_spoofs">Vui lòng đọc tài liệu để biết các bước cần thực hiện</string>

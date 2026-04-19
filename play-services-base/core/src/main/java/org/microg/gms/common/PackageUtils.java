@@ -118,7 +118,6 @@ public class PackageUtils {
         String[] packagesForUid = context.getPackageManager().getPackagesForUid(Binder.getCallingUid());
         if (packagesForUid != null && packagesForUid.length != 0) {
             for (String packageName : packagesForUid) {
-                packageName = PackageSpoofUtils.spoofPackageName(context.getPackageManager(), packageName);
                 if (isGooglePackage(context, packageName) || GMS_PACKAGE_NAME.equals(packageName))
                     return true;
             }
