@@ -24,7 +24,7 @@
     <string name="update_checker_no_internet">Ingen internetanslutning</string>
     <string name="update_checker_generic_error">Något gick fel … Försök igen senare</string>
     <!--Settings About-->
-    <string name="about_morphe_description">Morphe är ett projekt med öppen källkod för att modifiera Android-appar med korrigeringar</string>
+    <string name="about_morphe_description">Morphe är ett projekt med öppen källkod för att modifiera Android-appar med tillägg</string>
     <string name="about_version_str">Version %1$s</string>
     <string name="about_default_license">Alla rättigheter förbehållna</string>
     <!--Self Check-->

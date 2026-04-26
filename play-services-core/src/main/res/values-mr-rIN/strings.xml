@@ -11,6 +11,7 @@
     <!-- %1$s is an app name, such as "YouTube" -->
     <!-- %1$s is an app name, such as "YouTube" -->
     <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="signin_subtext_sharing">To continue, microG will share the name, email address and profile picture of your Google Account with %1$s</string>
     <!--auth: buttons-->
     <!--auth: messages-->
     <!--auth: notifications-->
