@@ -105,10 +105,11 @@ class AuthSignInActivity : AppCompatActivity() {
             val photo = PeopleManager.getOwnerAvatarBitmap(this@AuthSignInActivity, account.name, false)
             if (photo == null) {
                 lifecycleScope.launchWhenStarted {
-                    val bitmap = withContext(Dispatchers.IO) {
+                    withContext(Dispatchers.IO) {
                         PeopleManager.getOwnerAvatarBitmap(this@AuthSignInActivity, account.name, true)
+                    }?.let {
+                        updateAction(photoView, it)
                     }
-                    updateAction(photoView, bitmap)
                 }
             }
             val displayName = getDisplayName(account)

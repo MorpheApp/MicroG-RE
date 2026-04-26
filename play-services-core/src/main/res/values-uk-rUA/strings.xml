@@ -126,7 +126,7 @@
     <string name="self_check_cat_gms_packages">Встановлені пакети</string>
     <string name="self_check_cat_fake_sig">Підтримка підміни підпису</string>
     <!--self check: patched apps-->
-    <string name="self_check_source_morphe">Патчі Morphe</string>
+    <string name="self_check_source_morphe">патчами Morphe</string>
     <string name="self_check_source_alternative">альтернативні патчі</string>
     <!-- %1$s is an app name, such as "Morphe" -->
     <string name="self_check_patched_app_installed">Працює з %1$s</string>
@@ -139,7 +139,7 @@
     <string name="self_check_name_overlay">Дозволено показувати поверх інших застосунків</string>
     <string name="self_check_resolution_overlay">Натисніть тут, щоб надати цей дозвіл. Цей дозвіл потрібен для показу спливаючих сповіщень поверх інших застосунків</string>
     <!--self check: system-->
-    <string name="self_check_name_battery_optimizations">Оптимізація батареї вимкнено</string>
+    <string name="self_check_name_battery_optimizations">Оптимізацію батареї вимкнено</string>
     <string name="self_check_resolution_battery_optimizations">Натисніть тут, щоб вимкнути оптимізацію батареї. Якщо її не вимкнено, у вас можуть виникнути проблеми з отриманням сповіщень від YouTube та інших зареєстрованих застосунків</string>
     <string name="self_check_name_oem_restriction">Обмеження фонових процесів</string>
     <string name="self_check_resolution_oem_restriction">Ваша система може обмежувати фонові процеси. Натисніть тут, щоб відкрити сайт \"Don’t Kill My App\" та дізнатися, як вимкнути ці обмеження</string>

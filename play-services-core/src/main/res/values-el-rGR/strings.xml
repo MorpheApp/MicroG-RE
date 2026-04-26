@@ -21,7 +21,7 @@
     <!-- %1$s is an app name, such as "YouTube" -->
     <string name="signin_confirm_title">Επιτρέψτε τη σύνδεση σε %1$s</string>
     <!-- %1$s is an app name, such as "YouTube" -->
-    <string name="signin_subtext_sharing">Για να συνεχίσετε, το microG θα μοιραστεί το όνομα, τη διεύθυνση email και την εικόνα προφίλ του λογαριασμού Google σας με %1$s</string>
+    <string name="signin_subtext_sharing">Για να συνεχίσετε, το microG θα μοιραστεί το όνομα, τη διεύθυνση email και την εικόνα προφίλ του λογαριασμού σας Google με το %1$s</string>
     <!--auth: buttons-->
     <!--auth: messages-->
     <string name="auth_before_connect">"Συνδέστε τον λογαριασμό Google με microG.

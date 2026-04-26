@@ -21,12 +21,12 @@
     <!-- %1$s is an app name, such as "YouTube" -->
     <string name="signin_confirm_title">%1$s\'de oturum açmaya izin ver</string>
     <!-- %1$s is an app name, such as "YouTube" -->
-    <string name="signin_subtext_sharing">Devam etmek için; microG Google hesabınızın adı, e-posta adresi ve profil resmini %1$s ile paylaşlayacaktır</string>
+    <string name="signin_subtext_sharing">Devam etmek için; microG Google Hesabınızın adı, e-posta adresi ve profil resmini %1$s ile paylaşacaktır</string>
     <!--auth: buttons-->
     <!--auth: messages-->
     <string name="auth_before_connect">"Google hesabınızı microG'ye bağlayın.
 
-Google hesabına bağlanmak için <b>Giriş yap</b> düğmesini kullanın veya bu üreticiye ait bir cihazınız varsa <b>Huawei</b> düğmesini kullanın. Düğmelerden birine basarak hesabınıza giriş yapabileceğiniz sayfaya yönlendirileceksiniz."</string>
+Google hesabına bağlanmak için <b>Oturum açın</b> düğmesini kullanın veya bu üreticiye ait bir cihazınız varsa <b>Huawei</b> düğmesini kullanın. Düğmelerden birine bastığınızda hesabınıza giriş yapabileceğiniz sayfaya yönlendirileceksiniz."</string>
     <string name="auth_connecting">"Cihazınız, oturum açmanız için Google sunucularıyla bağlantı kuruyor.
 
 Bu, birkaç saniye sürebilir"</string>
@@ -47,7 +47,7 @@ Bu, birkaç dakika sürebilir"</string>
     <string name="dialog_title_remove_account">Hesabı kaldır</string>
     <string name="dialog_message_remove_account">"Bu hesabı kaldırmak istediğinizden emin misiniz?
 
-Bazı hizmetler ve işlevler kullanılamacaktır
+Bazı hizmetler ve işlevler kullanılamayacaktır
 
 Verileriniz kaybolmayacaktır"</string>
     <string name="dialog_confirm_button">Kaldır</string>
@@ -169,7 +169,7 @@ Gelecekte anlık bildirimler almaması için şimdi kaydını silmek ister misin
     <string name="pref_info_status">Durum</string>
     <!--preferences: account manager-->
     <string name="pref_account_title">Hesaplar</string>
-    <string name="pref_account_summary">Yeni bir Google hesabına giriş yapın</string>
+    <string name="pref_account_summary">Yeni bir Google hesabında oturum açın</string>
     <string name="pref_accounts_summary">Google hesaplarını ekleyin ve yönetin</string>
     <string name="pref_accounts_manage_accounts_title">Hesapları yönet</string>
     <string name="pref_accounts_manage_accounts_summary">Cihaz hesap yöneticisini açın</string>
