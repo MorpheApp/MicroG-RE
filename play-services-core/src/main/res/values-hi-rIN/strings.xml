@@ -21,7 +21,7 @@
     <!-- %1$s is an app name, such as "YouTube" -->
     <string name="signin_confirm_title">%1$s को साइन इन करने की अनुमति दें</string>
     <!-- %1$s is an app name, such as "YouTube" -->
-    <string name="signin_subtext_sharing">जारी रखने के लिए, माइक्रोजी अपने गूगल अकाउंट के नाम, ईमेल पता और प्रोफाइल चित्र को %1$s के साथ शेयर करेगा</string>
+    <string name="signin_subtext_sharing">जारी रखने के लिए, microG आपके Google खाते का नाम, ईमेल पता और प्रोफाइल चित्र %1$s के साथ साझा करेगा</string>
     <!--auth: buttons-->
     <!--auth: messages-->
     <string name="auth_before_connect">"गूगल अकाउंट को माइक्रोजी के साथ कनेक्ट करें

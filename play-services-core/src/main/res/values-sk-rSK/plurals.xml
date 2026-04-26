@@ -16,5 +16,23 @@
   -->
 <resources>
     <!--Google Cloud Messaging-->
+    <plurals name="gcm_registered_apps_counter">
+        <item quantity="one">%1$d zaregistrovaná aplikácia</item>
+        <item quantity="few">%1$d zaregistrované aplikácie</item>
+        <item quantity="many">%1$d zaregistrovaných aplikácií</item>
+        <item quantity="other">%1$d zaregistrovaných aplikácii</item>
+    </plurals>
     <!--Conditions-->
+    <plurals name="cond_perm_summary">
+        <item quantity="one">Povolenie požadované pre správnu funkčnosť microG služieb nie je udelené</item>
+        <item quantity="few">Povolenia požadované pre správnu funkčnosť microG služieb nie sú udelené</item>
+        <item quantity="many">Povolenia požadované pre správnu funkčnosť microG služieb nie sú udelené.</item>
+        <item quantity="other">Povolenia požadované pre správnu funkčnosť microG služieb nie sú udelené</item>
+    </plurals>
+    <plurals name="cond_perm_action">
+        <item quantity="one">Vyžiadaj chýbajúce povolenie</item>
+        <item quantity="few">Vyžiadaj chýbajúce povolenia</item>
+        <item quantity="many">Vyžiadať chýbajúce povolenia</item>
+        <item quantity="other">Vyžiadaj chýbajúce povolenia</item>
+    </plurals>
 </resources>

@@ -21,7 +21,6 @@
     <!-- %1$s is an app name, such as "YouTube" -->
     <string name="signin_confirm_title">Benarkan anda log masuk ke %1$s</string>
     <!-- %1$s is an app name, such as "YouTube" -->
-    <string name="signin_subtext_sharing">Untuk teruskan, microG akan kongsikan nama, alamat emel dan gambar profil akaun Google anda dengan %1$s</string>
     <!--auth: buttons-->
     <!--auth: messages-->
     <!--auth: notifications-->

@@ -21,7 +21,6 @@
     <!-- %1$s is an app name, such as "YouTube" -->
     <string name="signin_confirm_title">Dopustite prijavu u %1$s</string>
     <!-- %1$s is an app name, such as "YouTube" -->
-    <string name="signin_subtext_sharing">Za nastavak, microG će podijeliti ime, adresu e-pošte i profilnu sliku vašeg Google računa s %1$s</string>
     <!--auth: buttons-->
     <!--auth: messages-->
     <string name="auth_before_connect">"Povežite Google račun s microG.

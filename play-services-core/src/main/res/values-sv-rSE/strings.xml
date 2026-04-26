@@ -122,16 +122,16 @@ Vill du avregistrera den nu så att den inte tar emot pushmeddelanden i framtide
     <!--Self Check-->
     <!--self check: categories-->
     <string name="self_check_cat_system">System</string>
-    <string name="self_check_cat_patched_apps">Korrigerade appar</string>
+    <string name="self_check_cat_patched_apps">Modifierade appar</string>
     <string name="self_check_cat_gms_packages">Installerade paket</string>
     <string name="self_check_cat_fake_sig">Stöd för signaturförfalskning</string>
     <!--self check: patched apps-->
-    <string name="self_check_source_morphe">Morphe-korrigeringar</string>
-    <string name="self_check_source_alternative">alternativa korrigeringar</string>
+    <string name="self_check_source_morphe">Morphe-tillägg</string>
+    <string name="self_check_source_alternative">alternativa tillägg</string>
     <!-- %1$s is an app name, such as "Morphe" -->
     <string name="self_check_patched_app_installed">Körs med %1$s</string>
     <!-- %1$s is an app name, such as "YouTube" -->
-    <string name="self_check_resolution_patched_app_installed">Appar som använder %1$s hittades inte. Vänligen korrigera och installera den modifierade appen</string>
+    <string name="self_check_resolution_patched_app_installed">Appar som använder %1$s hittades inte. Installera den modifierade appen</string>
     <string name="self_check_action_download_morphe">Ladda ned Morphe</string>
     <!--self check: permission-->
     <string name="self_check_name_notifications">Aviseringar tillåts</string>
@@ -182,7 +182,7 @@ Vill du avregistrera den nu så att den inte tar emot pushmeddelanden i framtide
     <string name="pref_device_registration_import_custom_profile_title">Importera anpassad profil</string>
     <string name="pref_device_registration_import_custom_profile_summary">Importera enhetsprofil från fil</string>
     <string name="pref_device_registration_serial_title">Serienummer</string>
-    <string name="pref_device_registration_android_id">Android-ID</string>
+    <string name="pref_device_registration_android_id">Android-id</string>
     <string name="pref_checkin_enable_summary">Registrerar din enhet för Googles tjänster och skapar en unik enhetsidentifierare. microG tar bort alla identifierande bitar förutom namnet för ditt Google-konto från registreringsdata</string>
     <!--preferences: cloud messaging-->
     <string name="prefcat_push_apps_title">Appar som använder pushmeddelanden</string>

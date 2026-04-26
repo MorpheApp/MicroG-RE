@@ -21,7 +21,6 @@
     <!-- %1$s is an app name, such as "YouTube" -->
     <string name="signin_confirm_title">Permitir que conectes a %1$s</string>
     <!-- %1$s is an app name, such as "YouTube" -->
-    <string name="signin_subtext_sharing">Para continuar, microG compartirá nome, enderezo de correo electrónico e foto de perfil da súa conta Google con %1$s</string>
     <!--auth: buttons-->
     <!--auth: messages-->
     <string name="auth_before_connect">"Conecta a conta Google con microG.

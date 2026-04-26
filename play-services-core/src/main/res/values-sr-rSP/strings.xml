@@ -21,7 +21,7 @@
     <!-- %1$s is an app name, such as "YouTube" -->
     <string name="signin_confirm_title">Дозволи да се упишеш у %1$s</string>
     <!-- %1$s is an app name, such as "YouTube" -->
-    <string name="signin_subtext_sharing">Да би наставио, microG ће делити име, адресу е-поште и слику профила свог Google налога са %1$s</string>
+    <string name="signin_subtext_sharing">Да бисте наставили, microG ће поделити име, е-mail адресу и слику профила вашег Google налога са %1$s</string>
     <!--auth: buttons-->
     <!--auth: messages-->
     <string name="auth_before_connect">"Пoveži Google налог са microG.
