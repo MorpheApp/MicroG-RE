@@ -8,7 +8,7 @@
     <string name="gms_settings_name">microG-inställningar</string>
     <!--Authentication-->
     <!--auth: headers-->
-    <string name="auth_add_account">Lägg till ett konto</string>
+    <string name="auth_add_account">Lägg till konto</string>
     <string name="auth_sign_in">Logga in</string>
     <string name="auth_just_a_sec">Ett ögonblick …</string>
     <string name="auth_sorry">Tyvärr …</string>
