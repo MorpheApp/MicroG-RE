@@ -11,6 +11,7 @@
     <!-- %1$s is an app name, such as "YouTube" -->
     <!-- %1$s is an app name, such as "YouTube" -->
     <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="signin_subtext_sharing">Bo berdewam, microG nav, adres posta elektronîkî û wênegê profîla hesabê xwe yê Googleê bi %1$s parêdixe</string>
     <!--auth: buttons-->
     <!--auth: messages-->
     <!--auth: notifications-->

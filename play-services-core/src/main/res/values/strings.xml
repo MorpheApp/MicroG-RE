@@ -26,7 +26,7 @@
     <!-- %1$s is an app name, such as "YouTube" -->
     <string name="signin_confirm_title">Allow to sign you in to %1$s</string>
     <!-- %1$s is an app name, such as "YouTube" -->
-    <string name="signin_subtext_sharing">To continue, microG will share name, email address and profile picture of your Google Account with %1$s</string>
+    <string name="signin_subtext_sharing">To continue, microG will share the name, email address and profile picture of your Google Account with %1$s</string>
     <!--auth: buttons-->
     <string name="auth_huawei_button" translatable="false">Huawei</string>
     <!--auth: messages-->

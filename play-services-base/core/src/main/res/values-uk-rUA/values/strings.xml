@@ -17,7 +17,7 @@
     <string name="menu_settings">Налаштування</string>
     <!--Google Cloud Messaging-->
     <string name="list_no_item_none">Немає</string>
-    <string name="list_item_see_all">Дивитися все</string>
+    <string name="list_item_see_all">Показати всі</string>
     <!--gcm: network status-->
     <string name="service_status_disabled">Вимкнено</string>
     <string name="service_status_enabled">Увімкнено</string>
