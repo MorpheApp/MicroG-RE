@@ -5,10 +5,10 @@
   -->
 <resources>
     <!--App Names-->
-    <string name="gms_settings_name">microG-inställningar</string>
+    <string name="gms_settings_name">Inställningar för microG</string>
     <!--Authentication-->
     <!--auth: headers-->
-    <string name="auth_add_account">Lägg till ett konto</string>
+    <string name="auth_add_account">Lägg till konto</string>
     <string name="auth_sign_in">Logga in</string>
     <string name="auth_just_a_sec">Ett ögonblick …</string>
     <string name="auth_sorry">Tyvärr …</string>
@@ -71,7 +71,7 @@ Vissa appar kanske inte kan registrera sig igen efter denna åtgärd. Du kan beh
     <string name="gcm_unregister_confirm_message">"Vissa appar registrerar sig inte automatiskt igen och/eller erbjuder inget sätt att göra det manuellt. Dessa appar fungerar kanske inte korrekt efter avregistrering.
 Vill du fortsätta?"</string>
     <string name="gcm_remove_registers_toast_message">Alla appar har tagits bort från pushmeddelanden</string>
-    <string name="gcm_unregister_after_deny_message">"Du nekade en app att registrera sig för pushmeddelanden som redan är registrerad.
+    <string name="gcm_unregister_after_deny_message">"Du har nekat en app att registrera sig för pushmeddelanden som redan är registrerad.
 Vill du avregistrera den nu så att den inte tar emot pushmeddelanden i framtiden?"</string>
     <!--gcm: register messages infos-->
     <string name="gcm_no_message_yet">Inga meddelanden har tagits emot än</string>
@@ -117,7 +117,7 @@ Vill du avregistrera den nu så att den inte tar emot pushmeddelanden i framtide
     <string name="profile_name_native">Inbyggd</string>
     <string name="profile_name_real">Riktig</string>
     <string name="profile_name_user">Anpassad: %s</string>
-    <string name="profile_name_auto">Automatisk: %s</string>
+    <string name="profile_name_auto">Automatiskt: %s</string>
     <string name="profile_name_system">System: %s</string>
     <!--Self Check-->
     <!--self check: categories-->
@@ -190,11 +190,11 @@ Vill du avregistrera den nu så att den inte tar emot pushmeddelanden i framtide
     <string name="pref_push_app_allow_register_summary">Tillåt att appen registrerar sig för pushmeddelanden</string>
     <string name="pref_push_app_wake_for_delivery_title">Starta appen vid pushmeddelande</string>
     <string name="pref_push_app_wake_for_delivery_summary">Starta appen i bakgrunden för att ta emot inkommande pushmeddelanden</string>
-    <string name="pref_gcm_enable_mcs_summary">Cloud messaging är en pushmeddelandetjänst som används för modifierade appar. Om du vill använda den måste du aktivera enhetsregistrering</string>
+    <string name="pref_gcm_enable_mcs_summary">Cloud messaging är en pushmeddelandeleverantör som används för modifierade appar. Om du vill använda den måste du aktivera enhetsregistrering</string>
     <string name="pref_gcm_confirm_new_apps_title">Bekräfta nya appar</string>
     <string name="pref_gcm_confirm_new_apps_summary">Fråga innan en ny app registreras för att ta emot pushmeddelanden</string>
     <string name="pref_gcm_remove_registers">Ta bort alla registrerade appar</string>
-    <string name="pref_gcm_remove_registers_summary">Använd endast detta alternativ om du har problem med att registrera en app eller ta emot aviseringar</string>
+    <string name="pref_gcm_remove_registers_summary">Använd endast detta alternativ om du har problem med att registrera en app eller få aviseringar</string>
     <!--preferences: privacy-->
     <string name="pref_privacy_title">Integritet</string>
     <string name="pref_privacy_summary">Integritetsinställningar för autentisering och appar</string>
