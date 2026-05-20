@@ -133,14 +133,14 @@ Niektóre aplikacje mogą nie być w stanie zarejestrować się ponownie. Koniec
     <string name="self_check_action_download_morphe">Pobierz Morphe</string>
     <!--self check: permission-->
     <string name="self_check_name_notifications">Zezwolono na powiadomienia</string>
-    <string name="self_check_resolution_notifications">Stuknij tutaj, aby otworzyć ustawienia powiadomień. Powiadomienia służą do utrzymania GcmService w tle, gdy optymalizacja baterii jest włączona lub w innych przypadkach</string>
+    <string name="self_check_resolution_notifications">Dotknij tutaj, aby otworzyć ustawienia powiadomień. Powiadomienia służą do utrzymania GcmService w tle, gdy optymalizacja baterii jest włączona lub w innych przypadkach</string>
     <string name="self_check_name_overlay">Zezwolono na wyświetlanie nad innymi aplikacjami</string>
-    <string name="self_check_resolution_overlay">Stuknij tutaj, aby przyznać to uprawnienie. Jest ono wymagane do wyświetlania wyskakujących powiadomień nad innymi aplikacjami</string>
+    <string name="self_check_resolution_overlay">Dotknij tutaj, aby przyznać to uprawnienie. Jest ono wymagane do wyświetlania wyskakujących powiadomień nad innymi aplikacjami</string>
     <!--self check: system-->
     <string name="self_check_name_battery_optimizations">Wyłączono optymalizację baterii</string>
-    <string name="self_check_resolution_battery_optimizations">Stuknij tutaj, aby wyłączyć optymalizację baterii. Jeśli nie zostanie wyłączona, możesz doświadczyć problemów z otrzymywaniem powiadomień z YouTube i innych zarejestrowanych aplikacji</string>
+    <string name="self_check_resolution_battery_optimizations">Dotknij tutaj, aby wyłączyć optymalizację baterii. Jeśli nie zostanie wyłączona, możesz doświadczyć problemów z otrzymywaniem powiadomień z YouTube i innych zarejestrowanych aplikacji</string>
     <string name="self_check_name_oem_restriction">Ograniczenia procesów w tle</string>
-    <string name="self_check_resolution_oem_restriction">Twoje urządzenie może ograniczać procesy w tle. Stuknij tutaj, aby otworzyć stronę \"Don’t Kill My App!\" i dowiedzieć się, jak wyłączyć te ograniczenia</string>
+    <string name="self_check_resolution_oem_restriction">Twoje urządzenie może ograniczać procesy w tle. Dotknij tutaj, aby otworzyć stronę \"Don’t Kill My App!\" i dowiedzieć się, jak wyłączyć te ograniczenia</string>
     <!--self check: signature-->
     <string name="self_check_name_system_spoofs">System fałszuje podpis</string>
     <string name="self_check_resolution_system_spoofs">Sprawdź dokumentację, aby dowiedzieć się, które kroki mogą być wymagane</string>
@@ -173,7 +173,7 @@ Niektóre aplikacje mogą nie być w stanie zarejestrować się ponownie. Koniec
     <string name="pref_accounts_manage_accounts_summary">Otwórz menedżera kont urządzenia</string>
     <string name="pref_manage_all_history">Zarządzaj całą historią</string>
     <string name="pref_data_in_youtube">Twoje dane w YouTube</string>
-    <string name="pref_accounts_login_accounts_summary">Konta są zapisywane i przechowywane tylko na tym urządzeniu. Stuknij konto, aby je trwale usunąć z tego urządzenia</string>
+    <string name="pref_accounts_login_accounts_summary">Konta są zapisywane i przechowywane tylko na tym urządzeniu. Dotknij konto, aby je trwale usunąć z tego urządzenia</string>
     <!--preferences: device registration-->
     <string name="pref_device_registration_device_profile_category">Profil urządzenia</string>
     <string name="pref_device_registration_select_profile_title">Wybierz profil</string>

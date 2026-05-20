@@ -20,7 +20,7 @@
     <string name="list_item_see_all">Ver tudo</string>
     <!--gcm: network status-->
     <string name="service_status_disabled">Desativado</string>
-    <string name="service_status_enabled">Habilitado</string>
+    <string name="service_status_enabled">Ativado</string>
     <string name="service_status_automatic">Automático</string>
     <string name="service_status_manual">Manual</string>
     <string name="service_status_enabled_short">Ligado</string>

@@ -179,7 +179,7 @@ Voulez-vous la désenregistrer maintenant afin qu’elle ne reçoive plus de mes
     <string name="pref_accounts_login_accounts_summary">Les comptes sont enregistrés et stockés uniquement sur cet appareil. Appuyez sur un compte pour le supprimer définitivement de cet appareil</string>
     <!--preferences: device registration-->
     <string name="pref_device_registration_device_profile_category">Profil de l\'appareil</string>
-    <string name="pref_device_registration_select_profile_title">Sélectionner le profil</string>
+    <string name="pref_device_registration_select_profile_title">Sélectionner un profil</string>
     <string name="pref_device_registration_import_custom_profile_title">Importer un profil personnalisé</string>
     <string name="pref_device_registration_import_custom_profile_summary">Importer le profil de l\'appareil à partir d\'un fichier</string>
     <string name="pref_device_registration_serial_title">Série</string>

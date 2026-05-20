@@ -142,7 +142,7 @@
     <string name="self_check_name_battery_optimizations">已禁用电池优化</string>
     <string name="self_check_resolution_battery_optimizations">点击此处禁用电池优化。如未禁用，您可能会遇到来自YouTube和其他注册应用的通知问题。</string>
     <string name="self_check_name_oem_restriction">系统可能会限制后台进程。点击此处打开“Don’t Kill My App!”网站，了解如何禁用这些限制</string>
-    <string name="self_check_resolution_oem_restriction">系统伪造签名</string>
+    <string name="self_check_resolution_oem_restriction">您的系统可能会限制后台进程。点击此处打开“Don’t Kill My App!”网站，了解如何禁用这些限制</string>
     <!--self check: signature-->
     <string name="self_check_name_system_spoofs">请检查文档，查看可能需要执行的步骤</string>
     <string name="self_check_resolution_system_spoofs">Play Services</string>
@@ -212,7 +212,7 @@
     <string name="pref_auth_strip_device_name_title">剥离设备名称进行身份验证</string>
     <string name="pref_auth_strip_device_name_summary">如果启用，身份验证请求不会包含设备的名称，这可能允许未经授权的设备登录，但可能会有未预期的后果</string>
     <!--preferences: hide icon in launcher-->
-    <string name="pref_hide_launcher_icon">隐藏启动器图标</string>
+    <string name="pref_hide_launcher_icon">隐藏在启动器中的图标</string>
     <!--preferences: about-->
     <string name="pref_about_title">关于 MicroG RE</string>
     <string name="pref_github_summary">源代码仓库</string>

@@ -24,9 +24,9 @@
     <string name="signin_subtext_sharing">للمتابعة، سيشارك microG اسمك وعنوان بريدك الإلكتروني وصورة ملفك الشخصي لحساب Google مع %1$s</string>
     <!--auth: buttons-->
     <!--auth: messages-->
-    <string name="auth_before_connect">"ربط حساب Google بـ MicroG.
+    <string name="auth_before_connect">"ربط حساب Google بـ microG.
 
-لنقم بتسجيل الدخول إلى حساب Google، استخدم زر <b>تسجيل الدخول</b>، أو استخدم زر <b>هواوي</b> إذا كان لديك جهاز من هذه الشركة المصنعة. بالضغط على أحد الزرين، ستتم إعادة توجيهك إلى صفحة تسجيل الدخول إلى حسابك."</string>
+لنقم بتسجيل الدخول إلى حساب Google، استخدم زر <b>تسجيل الدخول</b>، أو استخدم زر <b>Huawei</b> إذا كان لديك جهاز من هذه الشركة المصنعة. بالضغط على أحد الزرين، ستتم إعادة توجيهك إلى صفحة تسجيل الدخول إلى حسابك."</string>
     <string name="auth_connecting">"يقوم جهازك بإنشاء اتصال بخوادم Google لتسجيل دخولك.
 
 قد يستغرق هذا بضع ثوانٍ."</string>
@@ -160,7 +160,7 @@
     <string name="prefcat_push_apps_registered_title">التطبيقات المسجلة</string>
     <string name="prefcat_push_apps_unregistered_title">التطبيقات الغير مسجلة</string>
     <string name="prefcat_gcm_registers">التسجيلات</string>
-    <string name="prefcat_push_networks_title">الشبكات المستخدمة لجلب الإشعارات</string>
+    <string name="prefcat_push_networks_title">الشبكات المستخدمة للإشعارات الفورية</string>
     <string name="prefcat_applications">التطبيقات</string>
     <string name="prefcat_authentication">المصادقة</string>
     <string name="prefcat_about">لمحة</string>
@@ -183,14 +183,14 @@
     <string name="pref_device_registration_import_custom_profile_summary">استيراد ملف تعريف الجهاز من ملف</string>
     <string name="pref_device_registration_serial_title">الرقم التسلسلي</string>
     <string name="pref_device_registration_android_id">Android ID</string>
-    <string name="pref_checkin_enable_summary">يقوم بتسجيل جهازك في خدمات Google وإنشاء مُعرّف فريد للجهاز. يقوم MicroG بإزالة البيانات التعريفية الأخرى غير اسم حساب Google الخاص بك من بيانات التسجيل</string>
+    <string name="pref_checkin_enable_summary">يقوم بتسجيل جهازك في خدمات Google وإنشاء مُعرّف فريد للجهاز. يقوم microG بإزالة البيانات التعريفية الأخرى غير اسم حساب Google الخاص بك من بيانات التسجيل</string>
     <!--preferences: cloud messaging-->
-    <string name="prefcat_push_apps_title">التطبيقات التي تستخدم جلب الإشعارات</string>
+    <string name="prefcat_push_apps_title">التطبيقات التي تستخدم الإشعارات الفورية</string>
     <string name="pref_push_app_allow_register_title">السماح بالتسجيل</string>
     <string name="pref_push_app_allow_register_summary">اسمح للتطبيق بالتسجيل لتلقي الإشعارات الفورية</string>
     <string name="pref_push_app_wake_for_delivery_title">تشغيل التطبيق عند تلقي رسالة إشعار</string>
     <string name="pref_push_app_wake_for_delivery_summary">قم بتشغيل التطبيق في الخلفية لتلقي رسائل الإشعارات الفورية الواردة</string>
-    <string name="pref_gcm_enable_mcs_summary">خدمة تسليم الرسائل هي خدمة إشعارات فورية تُستخدم للتطبيقات المُعدّلة. لاستخدامها، يجب تفعيل تسجيل الجهاز.</string>
+    <string name="pref_gcm_enable_mcs_summary">خدمة تسليم الرسائل هي خدمة إشعارات فورية تُستخدم للتطبيقات المُعدّلة. لاستخدامها، يجب تمكين تسجيل الجهاز.</string>
     <string name="pref_gcm_confirm_new_apps_title">تأكيد التطبيقات الجديدة</string>
     <string name="pref_gcm_confirm_new_apps_summary">اسأل قبل تسجيل تطبيق جديد لتلقي الإشعارات الفورية</string>
     <string name="pref_gcm_remove_registers">إزالة جميع التطبيقات المسجلة</string>
@@ -199,7 +199,7 @@
     <string name="pref_privacy_title">الخصوصية</string>
     <string name="pref_privacy_summary">إعدادات الخصوصية للمصادقة والتطبيقات</string>
     <string name="pref_network_google_enabled">سماح بالاتصال إلى خوادم Google</string>
-    <string name="pref_network_google_enabled_summary">في حال تعطيل هذه الخاصية، سيتم رفض جميع الاتصالات بخوادم Google التي تتم عادةً بواسطة MicroG. وهذا يلغي الإعدادات الخاصة بالخدمة.</string>
+    <string name="pref_network_google_enabled_summary">في حال تعطيل هذه الخاصية، سيتم رفض جميع الاتصالات بخوادم Google التي تتم عادةً بواسطة microG. وهذا يلغي الإعدادات الخاصة بالخدمة.</string>
     <string name="pref_network_google_use_tor">اتصل بـ Google عبر شبكة Tor</string>
     <string name="pref_network_google_use_tor_summary">"يتطلب تثبيت Orbot
 غير مدعوم حاليًا"</string>
@@ -225,7 +225,7 @@
     <string name="perm_extended_access_label">مزيد من الوصول إلى خدمات Google</string>
     <!--Conditions-->
     <string name="cond_gcm_bat_title">تم تمكين تحسينات البطارية</string>
-    <string name="cond_gcm_bat_summary">لقد تمكين خدمة تسليم الرسائل، ولكنّ تحسينات البطارية مُفعّلة لخدمات MicroG. لكي تصلك الإشعارات الفورية، يجب عليك تجاهل تحسينات البطارية.</string>
+    <string name="cond_gcm_bat_summary">لقد تمكين خدمة تسليم الرسائل، ولكنّ تحسينات البطارية مُفعّلة لخدمات microG. لكي تصلك الإشعارات الفورية، يجب عليك تجاهل تحسينات البطارية.</string>
     <string name="cond_gcm_bat_action">تجاهل التحسينات</string>
     <string name="cond_perm_title">الإذن مفقود</string>
 </resources>

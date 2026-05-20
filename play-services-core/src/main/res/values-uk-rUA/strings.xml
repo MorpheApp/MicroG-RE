@@ -116,7 +116,7 @@
     <!--checkin: profile names types entry's-->
     <string name="profile_name_native">Нативний</string>
     <string name="profile_name_real">Реальний</string>
-    <string name="profile_name_user">Користувацький: %s</string>
+    <string name="profile_name_user">Власний: %s</string>
     <string name="profile_name_auto">Автоматично: %s</string>
     <string name="profile_name_system">Системний: %s</string>
     <!--Self Check-->
@@ -179,7 +179,7 @@
     <!--preferences: device registration-->
     <string name="pref_device_registration_device_profile_category">Профіль пристрою</string>
     <string name="pref_device_registration_select_profile_title">Виберіть профіль</string>
-    <string name="pref_device_registration_import_custom_profile_title">Імпорт користувацького профілю</string>
+    <string name="pref_device_registration_import_custom_profile_title">Імпорт власного профілю</string>
     <string name="pref_device_registration_import_custom_profile_summary">Імпортувати профіль пристрою з файлу</string>
     <string name="pref_device_registration_serial_title">Серійний номер</string>
     <string name="pref_device_registration_android_id">Android ID</string>

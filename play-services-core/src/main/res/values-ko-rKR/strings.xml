@@ -218,7 +218,7 @@ Google 계정에 연결하려면 <b>로그인</b> 버튼을 사용하거나, 해
     <string name="pref_github_summary">소스 코드 리포지토리</string>
     <!--Permissions-->
     <string name="perm_status_broadcast_label">내부 상태 브로드캐스트 수신</string>
-    <string name="perm_gsf_read_gservices_label">Google 서비스 구성 읽기</string>
+    <string name="perm_gsf_read_gservices_label">Google 서비스 설정 읽기</string>
     <string name="perm_c2dm_receive_label">C2DM 메시지 수신</string>
     <string name="perm_c2dm_send_label">다른 앱에 C2DM 메시지 전송</string>
     <string name="perm_gtalk_svc_label">Google 서버와 메시지 교환 및 동기화 알림 수신</string>

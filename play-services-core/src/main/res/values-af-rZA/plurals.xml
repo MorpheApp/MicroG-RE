@@ -16,5 +16,17 @@
   -->
 <resources>
     <!--Google Cloud Messaging-->
+    <plurals name="gcm_registered_apps_counter">
+        <item quantity="one">%1$d geregistreerde program</item>
+        <item quantity="other">%1$d geregistreerde programme</item>
+    </plurals>
     <!--Conditions-->
+    <plurals name="cond_perm_summary">
+        <item quantity="one">\'n Toestemming wat vereis word vir behoorlike funksionaliteit van microG Dienste word nie toegestaan nie.</item>
+        <item quantity="other">Toestemmings wat vereis word vir behoorlike funksionaliteit van microG Dienste word nie toegestaan nie.</item>
+    </plurals>
+    <plurals name="cond_perm_action">
+        <item quantity="one">Versoek ontbrekende toestemming</item>
+        <item quantity="other">Versoek ontbrekende toestemmings</item>
+    </plurals>
 </resources>

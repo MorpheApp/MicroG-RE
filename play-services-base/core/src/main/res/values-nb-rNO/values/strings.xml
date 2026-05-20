@@ -5,11 +5,25 @@
   -->
 <resources>
     <!--Foreground service notification-->
+    <string name="foreground_service_notification_title">Aktiv i bakgrunnen</string>
     <!-- %1$s is a notification text such as "Exposure Notification" -->
+    <string name="foreground_service_notification_text" formatted="true">%1$s kjører i bakgrunnen</string>
     <!-- %1$s is a notification text such as "mnicroG Services" -->
+    <string name="foreground_service_notification_big_text">Ekskluder %1$s fra batterioptimalisering eller endre varslingsinnstillinger for å skjule dette varselet</string>
     <!--foreground service: notification actions-->
+    <string name="foreground_action_battery_optimization">Batterioptimalisering</string>
+    <string name="foreground_action_notification_settings">Innstillinger</string>
     <!--Actionbar menu-->
+    <string name="menu_settings">Innstillinger</string>
     <!--Google Cloud Messaging-->
+    <string name="list_no_item_none">Ingen</string>
+    <string name="list_item_see_all">Se alle</string>
     <!--gcm: network status-->
+    <string name="service_status_disabled">Deaktivert</string>
+    <string name="service_status_enabled">Aktivert</string>
+    <string name="service_status_automatic">Automatisk</string>
+    <string name="service_status_manual">Manuell</string>
+    <string name="service_status_enabled_short">På</string>
+    <string name="service_status_disabled_short">Av</string>
     <!--Patchers names-->
 </resources>

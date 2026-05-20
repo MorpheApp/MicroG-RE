@@ -39,5 +39,5 @@
     <!--UI preview-->
     <string name="about_root_title">microG UI演示</string>
     <string name="about_root_version">版本 v0.1.0</string>
-    <string name="about_root_libraries">包含库</string>
+    <string name="about_root_libraries">包含的库</string>
 </resources>

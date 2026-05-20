@@ -5,11 +5,25 @@
   -->
 <resources>
     <!--Foreground service notification-->
+    <string name="foreground_service_notification_title">لە پاشخاندا چالاکە</string>
     <!-- %1$s is a notification text such as "Exposure Notification" -->
+    <string name="foreground_service_notification_text" formatted="true">%1$s کاردەکات لە پاشخان</string>
     <!-- %1$s is a notification text such as "mnicroG Services" -->
+    <string name="foreground_service_notification_big_text">%1$s لە باشکردنی پاتری دەربهێنە یان ڕێکخستنەکانی ئاگادارکردنەوە بگۆڕە بۆ شاردنەوەی ئەم ئاگادارکردنەوە</string>
     <!--foreground service: notification actions-->
+    <string name="foreground_action_battery_optimization">باشکردنی پاتری</string>
+    <string name="foreground_action_notification_settings">ڕێکخستنەکان</string>
     <!--Actionbar menu-->
+    <string name="menu_settings">ڕێکخستنەکان</string>
     <!--Google Cloud Messaging-->
+    <string name="list_no_item_none">هیچ</string>
+    <string name="list_item_see_all">بینینی هەموو</string>
     <!--gcm: network status-->
+    <string name="service_status_disabled">لەکارخراو</string>
+    <string name="service_status_enabled">چالاککراو</string>
+    <string name="service_status_automatic">خۆکار</string>
+    <string name="service_status_manual">بەدەستی</string>
+    <string name="service_status_enabled_short">هەڵکراو</string>
+    <string name="service_status_disabled_short">کوژاوە</string>
     <!--Patchers names-->
 </resources>

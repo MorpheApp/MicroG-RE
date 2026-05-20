@@ -16,5 +16,17 @@
   -->
 <resources>
     <!--Google Cloud Messaging-->
+    <plurals name="gcm_registered_apps_counter">
+        <item quantity="one">%1$d registrert app</item>
+        <item quantity="other">%1$d registrerte apper</item>
+    </plurals>
     <!--Conditions-->
+    <plurals name="cond_perm_summary">
+        <item quantity="one">En tillatelse som kreves for korrekt funksjonalitet til microG Services er ikke gitt.</item>
+        <item quantity="other">Tillatelser som kreves for korrekt funksjonalitet til microG Services er ikke gitt.</item>
+    </plurals>
+    <plurals name="cond_perm_action">
+        <item quantity="one">Be om tillatelse som mangler</item>
+        <item quantity="other">Be om manglende tillatelser</item>
+    </plurals>
 </resources>

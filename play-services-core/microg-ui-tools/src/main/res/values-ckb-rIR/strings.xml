@@ -16,11 +16,28 @@
   -->
 <resources>
     <!--Updater-->
+    <string name="update_checker_button">پشکنینی نوێکردنەوەکان</string>
+    <string name="update_checker_download_button">دابەزاندن</string>
     <!--updater: messages-->
+    <string name="update_checker_no_update">نوێکردنەوە بەردەست نیە</string>
+    <string name="update_checker_update_available">نوێکردنەوەی نوێ بەردەستە %s</string>
+    <string name="update_checker_no_internet">هێڵی ئینتەرنێت نییە</string>
+    <string name="update_checker_generic_error">شتێک بەهەڵەداچوو… تکایە دواتر هەوڵ بدەرەوە</string>
     <!--Settings About-->
+    <string name="about_morphe_description">Morphe پڕۆژەیەکی سەرچاوە کراوەیە کە دیزاینکراوە بۆ دەستکاریکردنی ئەپەکانی ئەندرۆید بەڕێگەی پینەکردنەکان</string>
+    <string name="about_version_str">وەشانی  %1$s</string>
+    <string name="about_default_license">هەموو مافەکان پارێزراون</string>
     <!--Self Check-->
     <!--self-check: permission-->
+    <string name="self_check_cat_permissions">ڕێگەپێدانەکان</string>
+    <string name="self_check_name_permission">ڕێگەپێدان بۆ %1$s:</string>
+    <string name="self_check_resolution_permission">بۆ پێدانی مۆڵەت لێرە دەست لێبدە.  پێنەدانی مۆڵەتەکە دەتوانێت ببێتە هۆی هەڵسوکەوتی خراپ لە بەرنامەکاندا</string>
     <!--Settings Preferences-->
     <!--preferences: self-check-->
+    <string name="self_check_title">خۆپشکنین</string>
+    <string name="self_check_desc">دڵنیابە لەوەی کە ئامێرەکە بە دروستی ڕێکخراوە بۆ بەکارهێنانی microG</string>
     <!--UI preview-->
+    <string name="about_root_title">microG ڕووکاری دیمۆ</string>
+    <string name="about_root_version">وەشانی v0.1.0</string>
+    <string name="about_root_libraries">کتێبخانەکانی لەگەڵدایە</string>
 </resources>

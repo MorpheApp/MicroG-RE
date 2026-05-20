@@ -5,55 +5,226 @@
   -->
 <resources>
     <!--App Names-->
+    <string name="gms_settings_name">microG Instellings</string>
     <!--Authentication-->
     <!--auth: headers-->
+    <string name="auth_add_account">Voeg rekening by</string>
+    <string name="auth_sign_in">Teken in</string>
+    <string name="auth_just_a_sec">Net \'n oomblik…</string>
+    <string name="auth_sorry">Jammer…</string>
     <!--auth: sign-->
+    <string name="signin_picker_title">Kies \'n rekening</string>
     <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="signin_picker_subtitle">om voort te gaan met %1$s</string>
+    <string name="signin_confirm_button_text">Sta toe en deel</string>
+    <string name="signin_picker_add_account_label">Voeg nog \'n rekening by</string>
     <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="signin_confirm_title">Staak om jou aan te teken by %1$s</string>
     <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="signin_subtext_sharing">Om voort te gaan, sal microG die naam, e-posadres en profielfoto van jou Google-rekening met %1$s deel</string>
     <!--auth: buttons-->
     <!--auth: messages-->
+    <string name="auth_before_connect">"Koppel Google-rekening met microG.
+
+Kom ons koppel aan 'n Google-rekening, gebruik die <b>Meld aan</b>-knoppie of gebruik die <b>Huawei</b>-knoppie as jy 'n toestel met hierdie vervaardiger het. Deur op een van die knoppies te druk, word jy herlei na die bladsy om by jou rekening aan te teken."</string>
+    <string name="auth_connecting">"Jou toestel maak 'n verbinding met Google se bedieners om jou aan te teken.
+
+Dit kan 'n paar sekondes neem"</string>
+    <string name="auth_no_network_error_desc">"Jy het nie 'n netwerkverbinding nie.
+
+Dit kan 'n tydelike probleem wees of jou Android-toestel is moontlik nie voorsien vir data dienste nie. Probeer weer wanneer dit aan 'n mobiele netwerk gekoppel is, of verbind met 'n Wi-Fi-netwerk"</string>
+    <string name="auth_general_error_desc">"Daar was 'n probleem met kommunikasie met Google se bedieners.
+
+Probeer dit later weer"</string>
+    <string name="auth_finalize">"Jou toestel kontak Google om inligting op jou rekening te stoor.
+
+Dit kan 'n paar minute neem"</string>
     <!--auth: notifications-->
+    <string name="auth_notification_title">Verifikasie vereis</string>
     <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="auth_notification_content">%1$s vereis jou toestemming om toegang tot jou Google-rekening te verkry</string>
     <!--Account Manager-->
+    <string name="dialog_title_remove_account">Verwyder rekening</string>
+    <string name="dialog_message_remove_account">"Is jy seker jy wil hierdie rekening verwyder?
+
+Sommige dienste en funksies sal nie beskikbaar wees nie
+
+Jou data sal nie verlore gaan nie"</string>
+    <string name="dialog_confirm_button">Verwyder</string>
+    <string name="dialog_cancel_button">Kanselleer</string>
+    <string name="snackbar_remove_account">Rekening %s verwyder</string>
+    <string name="snackbar_undo_button">Ontdoen</string>
     <!--Google Cloud Messaging-->
+    <string name="service_name_mcs">Wolkboodskappe</string>
+    <string name="gcm_enable_switch">Stootkennisgewings</string>
     <!--gcm: register dialogs-->
+    <string name="gcm_registered">Geregistreer</string>
+    <string name="gcm_unregister_app">Deregistreer</string>
+    <string name="gcm_remove_registers_dialog_title">Alle registrasies verwyder?</string>
     <!-- %1$s is an app name, such as "YouTube"? -->
+    <string name="gcm_unregister_confirm_title">Deregistreer %1$s?</string>
+    <string name="gcm_remove_registers_dialog_message">"Dit sal alle geregistreerde programme van die ontvangs van stootkennisgewings op 'n slag verwyder
+
+Jy sal 'n nuwe securityToken en AndroidID benodig om toepassings te registreer. Kyk na die toestelregistrasiestatus
+
+Sommige programme kan nie na hierdie aksie weer registreer nie. Jy moet moontlik die data vir hierdie programme uitvee voordat hulle weer registrasie kan versoek"</string>
+    <string name="gcm_unregister_confirm_message">"Sommige programme registreer nie outomaties weer nie en/of bied nie 'n opsie om dit handmatig te doen nie. Hierdie programme werk moontlik nie korrek nadat dit gedeelregistreer is nie. Gaan voort?"</string>
+    <string name="gcm_remove_registers_toast_message">Alle programme is verwyder van stootkennisgewing</string>
+    <string name="gcm_unregister_after_deny_message">"Jy het 'n program geweier om vir stootkennisgewings te registreer wat reeds geregistreer is.
+Wil jy dit nou deregistreer sodat dit nie in die toekoms stootboodskappe ontvang nie?"</string>
     <!--gcm: register messages infos-->
+    <string name="gcm_no_message_yet">Geen boodskappe ontvang tot dusver</string>
     <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
+    <string name="gcm_last_message_at">Vorige boodskap: %1$s</string>
     <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
+    <string name="gcm_registered_since">Geregistreer vanaf: %1$s</string>
     <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
+    <string name="gcm_messages_counter">Boodskappe: %1$d (%2$d grepe)</string>
     <!--gcm: network states-->
+    <string name="gcm_network_state_disconnected">Ontkoppel</string>
     <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
+    <string name="gcm_network_state_connected">Gekoppel vanaf %1$s</string>
     <!--gcm: network types entry's-->
+    <string name="network_type_mobile">Mobiele netwerk</string>
+    <string name="network_type_wifi">Wi-Fi</string>
+    <string name="network_type_roaming">Swerwing</string>
+    <string name="network_type_other">Ander netwerke</string>
     <!--gcm: push notifications ping entry's-->
+    <string name="push_notifications_summary_off">AF</string>
+    <string name="push_notifications_summary_automatic">AAN / Outomaties: %s</string>
+    <string name="push_notifications_summary_manual">AAN / Handmatig: %s</string>
+    <string name="push_notifications_summary_values_seconds">%s sekondes</string>
+    <string name="push_notifications_summary_values_minutes">%s minute</string>
     <!--gcm: ask push permission dialog-->
     <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="gcm_allow_app_popup">Laat %1$s toe om te registreer vir stoot kennisgewings?</string>
+    <string name="allow">Staak</string>
+    <string name="deny">Weier</string>
     <!--gcm: ask permission tos-->
+    <string name="ask_permission_tos">Deur voort te gaan, staar hierdie app en Google jou inligting toe om dit in ooreenstemming met hul onderskeie diensvoorwaardes en privaatheidsbeleide te gebruik</string>
     <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="ask_scope_permission_title">%1$s wil graag:</string>
+    <string name="ask_service_permission_title">%1$s wil graag gebruik:</string>
     <!--Device Registration-->
+    <string name="service_name_checkin">Toestelregistrasie</string>
+    <string name="checkin_enable_switch">Registreer toestel</string>
     <!--checkin: registration status-->
+    <string name="checkin_not_registered">Nie geregistreer nie</string>
     <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
+    <string name="checkin_last_registration">Laaste registrasie: %1$s</string>
     <!--checkin: profile names types entry's-->
+    <string name="profile_name_native">Ingebore</string>
+    <string name="profile_name_real">Regtig</string>
+    <string name="profile_name_user">Pasgemaak: %s</string>
+    <string name="profile_name_auto">Outomaties: %s</string>
+    <string name="profile_name_system">Stelsel: %s</string>
     <!--Self Check-->
     <!--self check: categories-->
+    <string name="self_check_cat_system">Stelsel</string>
+    <string name="self_check_cat_patched_apps">Gepatste toepassings</string>
+    <string name="self_check_cat_gms_packages">Geïnstalleerde pakkette</string>
+    <string name="self_check_cat_fake_sig">Handtekening vervalsings ondersteuning</string>
     <!--self check: patched apps-->
+    <string name="self_check_source_morphe">Morphe-pakkette</string>
+    <string name="self_check_source_alternative">Alternatiewe pakkette</string>
     <!-- %1$s is an app name, such as "Morphe" -->
+    <string name="self_check_patched_app_installed">Loop met %1$s</string>
     <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="self_check_resolution_patched_app_installed">Toepassings wat %1$s gebruik nie gevind nie. Patches en installeer die gewysigde app</string>
+    <string name="self_check_action_download_morphe">Laai Morphe af</string>
     <!--self check: permission-->
+    <string name="self_check_name_notifications">Kennisgewings toegelaat</string>
+    <string name="self_check_resolution_notifications">Tik hier om instellings vir kennisgewings te open. Kennisgewings word gebruik om GcmService in die agtergrond te hou wanneer batteryoptimalisering geaktiveer is of onder ander toestande</string>
+    <string name="self_check_name_overlay">Toon oor ander programme toegelaat</string>
+    <string name="self_check_resolution_overlay">Tik hier om hierdie toestemming te gee. Hierdie toestemming is nodig om pop-up waarskuwings bo ander programme te wys</string>
     <!--self check: system-->
+    <string name="self_check_name_battery_optimizations">Battery optimalisaties gedeaktiveer</string>
+    <string name="self_check_resolution_battery_optimizations">Tik hier om battery optimalisasies uit te skakel. Indien nie gedeaktiveer nie, kan jy probleme ondervind met die ontvangs van kennisgewings van YouTube en ander geregistreerde toepassings</string>
+    <string name="self_check_name_oem_restriction">Beperkings op agtergrondproses</string>
+    <string name="self_check_resolution_oem_restriction">Jou stelsel kan agtergrondprosesse beperk. Tik hier om Don’t Kill My App! webwerf te open en leer hoe om hierdie beperkings uit te skakel</string>
     <!--self check: signature-->
+    <string name="self_check_name_system_spoofs">Stelsel namaak handtekening</string>
+    <string name="self_check_resolution_system_spoofs">Kyk asseblief na die dokumentasie oor watter stappe dalk nodig is</string>
     <!--self check: package-->
+    <string name="self_check_pkg_gms">Play Dienste</string>
     <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="self_check_name_app_installed">%1$s geïnstalleer</string>
     <!-- %1$s is an app name, such as "YouTube" -->
+    <string name="self_check_resolution_app_installed">Installeer die toepassing %1$s of \'n versoenbare een. Kyk na die dokumentasie oor watter toepassings versoenbaar is</string>
     <!--Settings Preferences-->
     <!--preferences: categories-->
+    <string name="prefcat_accounts_login_accounts_title">Aangemeld</string>
+    <string name="prefcat_accounts_options_title">Opsies</string>
+    <string name="prefcat_youtube_activity">YouTube aktiwiteit</string>
+    <string name="prefcat_push_apps_registered_title">Geregistreerde toepassings</string>
+    <string name="prefcat_push_apps_unregistered_title">Nieregistreerde toepassings</string>
+    <string name="prefcat_gcm_registers">Registrasies</string>
+    <string name="prefcat_push_networks_title">Netwerke om te gebruik vir stootkennisgewings</string>
+    <string name="prefcat_applications">Toepassings</string>
+    <string name="prefcat_authentication">Verifikasie</string>
+    <string name="prefcat_about">Oor</string>
+    <string name="prefcat_details">Besonderhede</string>
+    <string name="prefcat_advanced">Gevorderd</string>
+    <string name="pref_info_status">Status</string>
     <!--preferences: account manager-->
+    <string name="pref_account_title">Rekeninge</string>
+    <string name="pref_account_summary">Meld aan by \'n nuwe Google-rekening</string>
+    <string name="pref_accounts_summary">Voeg Google-rekeninge by en bestuur</string>
+    <string name="pref_accounts_manage_accounts_title">Bestuur rekeninge</string>
+    <string name="pref_accounts_manage_accounts_summary">Open die toestel se rekening bestuurder</string>
+    <string name="pref_manage_all_history">Bestuur alle geskiedenis</string>
+    <string name="pref_data_in_youtube">Jou data in YouTube</string>
+    <string name="pref_accounts_login_accounts_summary">Rekeninge word slegs op hierdie toestel gestoor en gestoor. Tik op \'n rekening om dit permanent van hierdie toestel te verwyder</string>
     <!--preferences: device registration-->
+    <string name="pref_device_registration_device_profile_category">Toestel profiel</string>
+    <string name="pref_device_registration_select_profile_title">Kies profiel</string>
+    <string name="pref_device_registration_import_custom_profile_title">Importeer pasgemaakte profiel</string>
+    <string name="pref_device_registration_import_custom_profile_summary">Importeer toestel profiel vanaf lêer</string>
+    <string name="pref_device_registration_serial_title">Reeks</string>
+    <string name="pref_device_registration_android_id">Android ID</string>
+    <string name="pref_checkin_enable_summary">Registreer jou toestel by Google dienste en skep \'n unieke toestel identifiseerder. microG stroop identifiserende stukkies anders as jou Google-rekeningnaam van registrasie data</string>
     <!--preferences: cloud messaging-->
+    <string name="prefcat_push_apps_title">Toepassings wat stootkennisgewings gebruik</string>
+    <string name="pref_push_app_allow_register_title">Staak registrasie toe</string>
+    <string name="pref_push_app_allow_register_summary">Staak die app toe om vir stootkennisgewings te registreer</string>
+    <string name="pref_push_app_wake_for_delivery_title">Begin app op stoot boodskap</string>
+    <string name="pref_push_app_wake_for_delivery_summary">Begin die app terwyl in die agtergrond om die inkomende stootboodskappe te ontvang</string>
+    <string name="pref_gcm_enable_mcs_summary">Wolk boodskappe is \'n stootkennisgewingsverskaffer wat gebruik word vir gewysigde toepassings. Om dit te gebruik moet u toestelregistrasie aanskakel</string>
+    <string name="pref_gcm_confirm_new_apps_title">Bevestig nuwe toepassings</string>
+    <string name="pref_gcm_confirm_new_apps_summary">Vra voor die registrasie van \'n nuwe app om stootkennisgewings te ontvang</string>
+    <string name="pref_gcm_remove_registers">Verwyder alle geregistreerde toepassings</string>
+    <string name="pref_gcm_remove_registers_summary">Gebruik hierdie opsie slegs as u probleme ondervind om \'n app te registreer of om kennisgewings te ontvang</string>
     <!--preferences: privacy-->
+    <string name="pref_privacy_title">Privaatheid</string>
+    <string name="pref_privacy_summary">Privaatheid instellings vir verifikasie en toepassings</string>
+    <string name="pref_network_google_enabled">Staak aan Google-bedieners om te koppel</string>
+    <string name="pref_network_google_enabled_summary">Indien gedeaktiveer, sal alle verbindings met Google-bedieners wat gewoonlik deur microG gedoen word, geweier word. Dit oorskryf diensspesifieke instellings</string>
+    <string name="pref_network_google_use_tor">Koppel aan Google via Tor netwerk</string>
+    <string name="pref_network_google_use_tor_summary">"Vereis Orbot om geïnstalleer te wees
+Nog nie ondersteun nie"</string>
+    <string name="pref_auth_trust_google_title">Vertrou Google vir app toestemmings</string>
+    <string name="pref_auth_trust_google_summary">Wanneer gedeaktiveer, sal die gebruiker gevra word voordat \'n app se toestemming versoek na Google gestuur word. Sommige toepassings sal nie die Google-rekening kan gebruik as dit gedeaktiveer is nie</string>
+    <string name="pref_auth_visible_title">Staak toepassings toe om rekeninge te vind</string>
+    <string name="pref_auth_visible_summary">Wanneer geaktiveer, sal alle toepassings op hierdie toestel die e-posadres van jou Google-rekeninge kan sien sonder vooraf toestemming</string>
+    <string name="pref_auth_include_android_id_title">Verifikasie met toestelregistrasie</string>
+    <string name="pref_auth_include_android_id_summary">Wanneer gedeaktiveer, sal verifikasieverspreke nie gekoppel wees aan die toestelregistrasie nie, wat ongemagtigde toestelle in staat stel om aan te meld, maar kan onvoorspelbare gevolge hê</string>
+    <string name="pref_auth_strip_device_name_title">Strip toestel naam vir verifikasie</string>
+    <string name="pref_auth_strip_device_name_summary">Wanneer geaktiveer, sal verifikasieverspreke nie die toestel se naam insluit nie, wat ongemagtigde toestelle in staat kan stel om aan te meld, maar kan onvoorspelbare gevolge hê</string>
     <!--preferences: hide icon in launcher-->
+    <string name="pref_hide_launcher_icon">Versteik ikoon in lanseerder</string>
     <!--preferences: about-->
+    <string name="pref_about_title">Oor MicroG RE</string>
+    <string name="pref_github_summary">Bron kode repo</string>
     <!--Permissions-->
+    <string name="perm_status_broadcast_label">luister na interne status uitsendings</string>
+    <string name="perm_gsf_read_gservices_label">lees Google diens konfigurasie</string>
+    <string name="perm_c2dm_receive_label">luister na C2DM boodskappe</string>
+    <string name="perm_c2dm_send_label">stuur C2DM boodskappe na ander toepassings</string>
+    <string name="perm_gtalk_svc_label">uitruil boodskappe en ontvang sinkronisasiekennisgewings van Google bedieners</string>
+    <string name="perm_extended_access_label">Uitgebreide toegang tot Google dienste</string>
     <!--Conditions-->
+    <string name="cond_gcm_bat_title">Battery optimalisaties geaktiveer</string>
+    <string name="cond_gcm_bat_summary">Jy het Wolk boodskappe geaktiveer, maar het battery-optimalisasies aktief vir microG Dienste. Vir stootkennisgewings om aan te kom, moet jy battery-optimalisasies ignoreer.</string>
+    <string name="cond_gcm_bat_action">Ignoreer optimerings</string>
+    <string name="cond_perm_title">Toestemming ontbrek</string>
 </resources>

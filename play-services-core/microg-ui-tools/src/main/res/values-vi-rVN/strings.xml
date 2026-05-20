@@ -20,7 +20,7 @@
     <string name="update_checker_download_button">Tải về</string>
     <!--updater: messages-->
     <string name="update_checker_no_update">Hiện không có bản cập nhật nào</string>
-    <string name="update_checker_update_available">Đã có bản cập nhật: %s</string>
+    <string name="update_checker_update_available">Đã có bản cập nhật mới: %s</string>
     <string name="update_checker_no_internet">Không có kết nối mạng</string>
     <string name="update_checker_generic_error">Đã xảy ra lỗi... Vui lòng thử lại sau</string>
     <!--Settings About-->

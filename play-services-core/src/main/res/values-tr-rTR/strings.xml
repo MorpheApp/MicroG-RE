@@ -52,7 +52,7 @@ Bazı hizmetler ve işlevler kullanılamayacaktır
 Verileriniz kaybolmayacaktır"</string>
     <string name="dialog_confirm_button">Kaldır</string>
     <string name="dialog_cancel_button">İptal et</string>
-    <string name="snackbar_remove_account">Hesap %s kaldırıldı</string>
+    <string name="snackbar_remove_account">%s hesabı kaldırıldı</string>
     <string name="snackbar_undo_button">Geri al</string>
     <!--Google Cloud Messaging-->
     <string name="service_name_mcs">Bulut mesajlaşma</string>
@@ -132,7 +132,7 @@ Gelecekte anlık bildirimler almaması için şimdi kaydını silmek ister misin
     <string name="self_check_patched_app_installed">%1$s ile çalışıyor</string>
     <!-- %1$s is an app name, such as "YouTube" -->
     <string name="self_check_resolution_patched_app_installed">%1$s kullanan uygulama bulunamadı. Lütfen yamayı uygulayın ve değiştirilmiş uygulamayı yükleyin</string>
-    <string name="self_check_action_download_morphe">Morphe\'i indirin</string>
+    <string name="self_check_action_download_morphe">Morphe\'yi indirin</string>
     <!--self check: permission-->
     <string name="self_check_name_notifications">Bildirimlere izin verildi</string>
     <string name="self_check_resolution_notifications">Bildirim ayarlarını açmak için buraya dokunun. Bildirimler, pil optimizasyonu etkinleştirildiğinde veya diğer koşullar altında GcmService\'in arka planda çalışmaya devam etmesini sağlamak için kullanılır</string>
@@ -199,7 +199,7 @@ Gelecekte anlık bildirimler almaması için şimdi kaydını silmek ister misin
     <string name="pref_privacy_title">Gizlilik</string>
     <string name="pref_privacy_summary">Kimlik doğrulama ve uygulamalar için gizlilik ayarları</string>
     <string name="pref_network_google_enabled">Google sunucularına bağlanmaya izin ver</string>
-    <string name="pref_network_google_enabled_summary">Devre dışı bırakılırsa, microG tarafından Google sunucularına yapılan tüm bağlantılar reddedilecektir. Bu, hizmete özgü ayarları geçersiz kılar.</string>
+    <string name="pref_network_google_enabled_summary">Devre dışı bırakılırsa, microG tarafından Google sunucularına yapılan tüm bağlantılar reddedilecektir. Bu, hizmete özgü ayarları geçersiz kılar</string>
     <string name="pref_network_google_use_tor">Tor ağı üzerinden Google\'a bağlanın</string>
     <string name="pref_network_google_use_tor_summary">"Orbot'un yüklü olması gerekir
 Henüz desteklenmiyor"</string>
@@ -217,7 +217,7 @@ Henüz desteklenmiyor"</string>
     <string name="pref_about_title">MicroG RE hakkında</string>
     <string name="pref_github_summary">Kaynak kod deposu</string>
     <!--Permissions-->
-    <string name="perm_status_broadcast_label">dahili durum yayınlarını dinleyin</string>
+    <string name="perm_status_broadcast_label">dahili durum yayınlarını dinle</string>
     <string name="perm_gsf_read_gservices_label">Google hizmet yapılandırmasını oku</string>
     <string name="perm_c2dm_receive_label">C2DM mesajlarını dinle</string>
     <string name="perm_c2dm_send_label">diğer uygulamalara C2DM mesajları gönder</string>

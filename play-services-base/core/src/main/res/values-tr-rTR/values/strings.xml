@@ -9,7 +9,7 @@
     <!-- %1$s is a notification text such as "Exposure Notification" -->
     <string name="foreground_service_notification_text" formatted="true">%1$s arka planda çalışıyor</string>
     <!-- %1$s is a notification text such as "mnicroG Services" -->
-    <string name="foreground_service_notification_big_text">Ayarlar için %1$s\'yi batarya optimizasyonlarından hariç tutun ya da bildirim ayarlarını değiştirin ve bu bildirimi gizleyin</string>
+    <string name="foreground_service_notification_big_text">Pil optimizasyonundan %1$s\'i hariç tutun ya da bu bildirimi gizlemek için bildirim ayarlarını değiştirin</string>
     <!--foreground service: notification actions-->
     <string name="foreground_action_battery_optimization">Pil optimizasyonu</string>
     <string name="foreground_action_notification_settings">Ayarlar</string>
@@ -20,9 +20,9 @@
     <string name="list_item_see_all">Tümünü gör</string>
     <!--gcm: network status-->
     <string name="service_status_disabled">Devre dışı</string>
-    <string name="service_status_enabled">Etkinleştirildi</string>
+    <string name="service_status_enabled">Etkin</string>
     <string name="service_status_automatic">Otomatik</string>
-    <string name="service_status_manual">El ile</string>
+    <string name="service_status_manual">Manuel</string>
     <string name="service_status_enabled_short">Açık</string>
     <string name="service_status_disabled_short">Kapalı</string>
     <!--Patchers names-->

@@ -70,11 +70,11 @@
 אף על פי שיש אפליקציות שמאיימות שלא יוכלו לרשום שוב לאחר פעולה זו. ייתכן שיהיה צורך לנקות את הנתונים של אפליקציות אלה לפני שיתרשמו שוב"</string>
     <string name="gcm_unregister_confirm_message">"חלק מהאפליקציות לא מתרשמות אוטומטית ו/או לא סופק אופציה לרשום מחדש באופן ידני. האפליקציות האלה עשויות שלא לעבוד כראוי לאחר הסרת הרישום.
 להמשך?"</string>
-    <string name="gcm_remove_registers_toast_message">כל האפליקציות הוסרו מriceiving הודעות push</string>
-    <string name="gcm_unregister_after_deny_message">"שלחתה אפליקציה להירשם להודעות ענן שברגע זה רשומה.
-האם ברצונך להסיר אותה עכשיו כך שלא תקבל הודעות ענן בעתיד?"</string>
+    <string name="gcm_remove_registers_toast_message">לכל היישומונים הוסרה הרשאת קבלת התרעות</string>
+    <string name="gcm_unregister_after_deny_message">"מנעת מיישום רשום להירשם לקבלת התרעות.
+האם ברצונך להסיר את ההרשאה לקבלת התרעות העתידיות?"</string>
     <!--gcm: register messages infos-->
-    <string name="gcm_no_message_yet">עדי לא קיבלת הודעות</string>
+    <string name="gcm_no_message_yet">טרם קיבלת הודעות</string>
     <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
     <string name="gcm_last_message_at">הודעה אחרונה: %1$s</string>
     <!-- %1$s is a date time, such as  app name, such as "Yesterday, 02:20 PM" -->
@@ -87,18 +87,18 @@
     <string name="gcm_network_state_connected">חובר מאז %1$s</string>
     <!--gcm: network types entry's-->
     <string name="network_type_mobile">רשת מובייל</string>
-    <string name="network_type_wifi">ויפי</string>
+    <string name="network_type_wifi">רשת אלחוטית</string>
     <string name="network_type_roaming">רשת חיצונית</string>
     <string name="network_type_other">רשת אחרת</string>
     <!--gcm: push notifications ping entry's-->
-    <string name="push_notifications_summary_off">OFF</string>
-    <string name="push_notifications_summary_automatic">ON / אוטומטי: %s</string>
-    <string name="push_notifications_summary_manual">ON / ידני: %s</string>
+    <string name="push_notifications_summary_off">כבוי</string>
+    <string name="push_notifications_summary_automatic">מופעל / אוטומטי: %s</string>
+    <string name="push_notifications_summary_manual">מופעל / ידני: %s</string>
     <string name="push_notifications_summary_values_seconds">%s שניות</string>
     <string name="push_notifications_summary_values_minutes">%s דקות</string>
     <!--gcm: ask push permission dialog-->
     <!-- %1$s is an app name, such as "YouTube" -->
-    <string name="gcm_allow_app_popup">אפשר ל- %1$s לרשום לגירוס?</string>
+    <string name="gcm_allow_app_popup">אפשר ל- %1$s להירשם לקבלת התרעות?</string>
     <string name="allow">אישור</string>
     <string name="deny">הדחי</string>
     <!--gcm: ask permission tos-->

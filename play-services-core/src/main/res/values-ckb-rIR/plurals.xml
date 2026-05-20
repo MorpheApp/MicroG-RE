@@ -16,5 +16,17 @@
   -->
 <resources>
     <!--Google Cloud Messaging-->
+    <plurals name="gcm_registered_apps_counter">
+        <item quantity="one">%1$d  ئەپی تۆمارکراو</item>
+        <item quantity="other">%1$d ئەپە تۆمارکراوەکان</item>
+    </plurals>
     <!--Conditions-->
+    <plurals name="cond_perm_summary">
+        <item quantity="one">مۆڵەتی پێویست بۆ کارکردنی دروستی خزمەتگوزارییەکانی microG نادرێت.</item>
+        <item quantity="other"> مۆڵەتەکانی پێویست بۆ کارکردنی دروستی خزمەتگوزارییەکانی microG نادرێن.</item>
+    </plurals>
+    <plurals name="cond_perm_action">
+        <item quantity="one">داوای مۆڵەتی ونبوو بکە</item>
+        <item quantity="other">داوای مۆڵەتە ونبووەکان بکە</item>
+    </plurals>
 </resources>
