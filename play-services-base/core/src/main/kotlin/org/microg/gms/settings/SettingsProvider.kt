@@ -19,6 +19,7 @@ import org.microg.gms.common.PackageUtils.warnIfNotMainProcess
 import org.microg.gms.settings.SettingsContract.Auth
 import org.microg.gms.settings.SettingsContract.CheckIn
 import org.microg.gms.settings.SettingsContract.Gcm
+import org.microg.gms.settings.SettingsContract.Location
 import org.microg.gms.settings.SettingsContract.Profile
 import org.microg.gms.settings.SettingsContract.getAuthority
 import java.io.File
@@ -69,6 +70,7 @@ class SettingsProvider : ContentProvider() {
         CheckIn.getContentUri(context!!) -> queryCheckIn(projection ?: CheckIn.PROJECTION)
         Gcm.getContentUri(context!!) -> queryGcm(projection ?: Gcm.PROJECTION)
         Auth.getContentUri(context!!) -> queryAuth(projection ?: Auth.PROJECTION)
+        Location.getContentUri(context!!) -> queryLocation(projection ?: Location.PROJECTION)
         Profile.getContentUri(context!!) -> queryProfile(projection ?: Profile.PROJECTION)
         else -> null
     }
@@ -85,6 +87,7 @@ class SettingsProvider : ContentProvider() {
             CheckIn.getContentUri(context!!) -> updateCheckIn(values)
             Gcm.getContentUri(context!!) -> updateGcm(values)
             Auth.getContentUri(context!!) -> updateAuth(values)
+            Location.getContentUri(context!!) -> updateLocation(values)
             Profile.getContentUri(context!!) -> updateProfile(values)
             else -> return 0
         }
@@ -234,6 +237,62 @@ class SettingsProvider : ContentProvider() {
             when (key) {
                 Profile.PROFILE -> editor.putString(key, value as String?)
                 Profile.SERIAL -> editor.putString(key, value as String?)
+                else -> throw IllegalArgumentException("Unknown key: $key")
+            }
+        }
+        editor.apply()
+    }
+
+    private fun queryLocation(p: Array<out String>): Cursor = MatrixCursor(p).addRow(p) { key ->
+        when (key) {
+            Location.WIFI_ICHNAEA -> getSettingsBoolean(key, hasUnifiedNlpLocationBackend("org.microg.nlp.backend.ichnaea"))
+            Location.WIFI_MOVING -> getSettingsBoolean(key, hasUnifiedNlpLocationBackend("de.sorunome.unifiednlp.trains"))
+            Location.WIFI_LEARNING -> getSettingsBoolean(key, false)
+            Location.WIFI_CACHING -> getSettingsBoolean(key, getSettingsBoolean(Location.WIFI_LEARNING, false) == 1)
+            Location.CELL_ICHNAEA -> getSettingsBoolean(key, hasUnifiedNlpLocationBackend("org.microg.nlp.backend.ichnaea"))
+            Location.CELL_LEARNING -> getSettingsBoolean(key, true)
+            Location.CELL_CACHING -> getSettingsBoolean(key, getSettingsBoolean(Location.CELL_LEARNING, true) == 1)
+            Location.GEOCODER_NOMINATIM -> getSettingsBoolean(key, hasUnifiedNlpGeocoderBackend("org.microg.nlp.backend.nominatim"))
+            Location.ICHNAEA_ENDPOINT -> getSettingsString(key)
+            Location.ONLINE_SOURCE -> getSettingsString(key)
+            Location.ICHNAEA_CONTRIBUTE -> getSettingsBoolean(key, false)
+            Location.MAPS_TIMELINE -> getSettingsBoolean(key, false)
+            Location.MAPS_TIMELINE_UPLOAD -> getSettingsBoolean(key, false)
+            else -> throw IllegalArgumentException("Unknown key: $key")
+        }
+    }
+
+    private fun hasUnifiedNlpPrefixInStringSet(key: String, vararg prefixes: String) =
+        getUnifiedNlpSettingsStringSetCompat(key, emptySet()).any { entry ->
+            prefixes.any { prefix -> entry.startsWith(prefix) }
+        }
+
+    private fun hasUnifiedNlpLocationBackend(vararg packageNames: String) =
+        hasUnifiedNlpPrefixInStringSet("location_backends", *packageNames.map { "$it/" }.toTypedArray())
+
+    private fun hasUnifiedNlpGeocoderBackend(vararg packageNames: String) =
+        hasUnifiedNlpPrefixInStringSet("geocoder_backends", *packageNames.map { "$it/" }.toTypedArray())
+
+    private fun updateLocation(values: ContentValues) {
+        if (values.size() == 0) return
+        val editor = preferences.edit()
+        values.valueSet().forEach { (key, value) ->
+            when (key) {
+                Location.WIFI_ICHNAEA -> editor.putBoolean(key, value as Boolean)
+                Location.WIFI_MOVING -> editor.putBoolean(key, value as Boolean)
+                Location.WIFI_LEARNING -> editor.putBoolean(key, value as Boolean)
+                Location.CELL_ICHNAEA -> editor.putBoolean(key, value as Boolean)
+                Location.CELL_LEARNING -> editor.putBoolean(key, value as Boolean)
+                Location.GEOCODER_NOMINATIM -> editor.putBoolean(key, value as Boolean)
+                Location.ICHNAEA_ENDPOINT -> (value as String).let {
+                    if (it.isBlank()) editor.remove(key) else editor.putString(key, it)
+                }
+                Location.ONLINE_SOURCE -> (value as? String).let {
+                    if (it.isNullOrBlank()) editor.remove(key) else editor.putString(key, it)
+                }
+                Location.ICHNAEA_CONTRIBUTE -> editor.putBoolean(key, value as Boolean)
+                Location.MAPS_TIMELINE -> editor.putBoolean(key, value as Boolean)
+                Location.MAPS_TIMELINE_UPLOAD -> editor.putBoolean(key, value as Boolean)
                 else -> throw IllegalArgumentException("Unknown key: $key")
             }
         }

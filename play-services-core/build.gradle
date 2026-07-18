@@ -7,6 +7,8 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 configurations {
+    mapboxRuntimeOnly
+    vtmRuntimeOnly
     defaultRuntimeOnly
 }
 
@@ -17,6 +19,10 @@ dependencies {
         //noinspection DependencyNotationArgument
         implementation project(projectName)
     }
+
+    mapboxRuntimeOnly project(':play-services-maps-core-mapbox')
+    vtmRuntimeOnly project(':play-services-maps-core-vtm')
+    defaultRuntimeOnly project(':play-services-location-core-provider')
 
     // AndroidX Legacy
     implementation "androidx.legacy:legacy-support-v4:$androidXLegacyVersion"
@@ -110,8 +116,14 @@ android {
         }
     }
 
-    flavorDimensions = ['target']
+    flavorDimensions = ['maps', 'target']
     productFlavors {
+        "mapbox" {
+            dimension 'maps'
+        }
+        "vtm" {
+            dimension 'maps'
+        }
         "default" {
             dimension 'target'
         }

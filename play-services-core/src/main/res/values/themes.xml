@@ -24,6 +24,9 @@
         <item name="android:colorBackgroundCacheHint">@null</item>
     </style>
 
+    <!-- Compatibility alias used by the upstream Location implementation. -->
+    <style name="Theme.App.Translucent" parent="@style/AppTheme.Transparent" />
+
     <!--app theme base-->
 
     <style name="AppTheme.Base" parent="@style/Theme.Material3Expressive.Light.NoActionBar">

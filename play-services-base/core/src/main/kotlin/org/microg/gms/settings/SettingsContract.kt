@@ -95,6 +95,42 @@ object SettingsContract {
         )
     }
 
+    object Location {
+        private const val id = "location"
+        fun getContentUri(context: Context) = Uri.withAppendedPath(getAuthorityUri(context), id)
+        fun getContentType(context: Context) = "vnd.android.cursor.item/vnd.${getAuthority(context)}.$id"
+
+        const val WIFI_ICHNAEA = "location_wifi_mls"
+        const val WIFI_MOVING = "location_wifi_moving"
+        const val WIFI_LEARNING = "location_wifi_learning"
+        const val WIFI_CACHING = "location_wifi_caching"
+        const val CELL_ICHNAEA = "location_cell_mls"
+        const val CELL_LEARNING = "location_cell_learning"
+        const val CELL_CACHING = "location_cell_caching"
+        const val GEOCODER_NOMINATIM = "location_geocoder_nominatim"
+        const val ICHNAEA_ENDPOINT = "location_ichnaea_endpoint"
+        const val ONLINE_SOURCE = "location_online_source"
+        const val ICHNAEA_CONTRIBUTE = "location_ichnaea_contribute"
+        const val MAPS_TIMELINE = "location_timeline"
+        const val MAPS_TIMELINE_UPLOAD = "location_timeline_upload"
+
+        val PROJECTION = arrayOf(
+            WIFI_ICHNAEA,
+            WIFI_MOVING,
+            WIFI_LEARNING,
+            WIFI_CACHING,
+            CELL_ICHNAEA,
+            CELL_LEARNING,
+            CELL_CACHING,
+            GEOCODER_NOMINATIM,
+            ICHNAEA_ENDPOINT,
+            ONLINE_SOURCE,
+            ICHNAEA_CONTRIBUTE,
+            MAPS_TIMELINE,
+            MAPS_TIMELINE_UPLOAD,
+        )
+    }
+
     object Profile {
         private const val id = "profile"
         fun getContentUri(context: Context) = Uri.withAppendedPath(getAuthorityUri(context), id)

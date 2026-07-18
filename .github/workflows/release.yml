@@ -47,13 +47,13 @@ jobs:
             fi
           done
       - name: "Execute Gradle build"
-        run: "./gradlew --no-daemon clean :play-services-core:assembleDefaultRelease"
+        run: "./gradlew --no-daemon clean :play-services-core:assembleMapboxDefaultRelease"
 
       - uses: ilharp/sign-android-release@v2
         name: "Sign app APK"
         id: sign_app
         with:
-          releaseDir: play-services-core/build/outputs/apk/default/release
+          releaseDir: play-services-core/build/outputs/apk/mapboxDefault/release
           signingKey: ${{ secrets.KEYSTORE_B64 }}
           keyAlias: ${{ secrets.KEYSTORE_ENTRY_ALIAS }}
           keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
