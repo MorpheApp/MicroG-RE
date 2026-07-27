@@ -43,6 +43,7 @@ class AuthProxyService : BaseService(TAG, GmsService.AUTH_PROXY) {
 class AuthServiceImpl(private val context: Context, override val lifecycle: Lifecycle, private val packageName: String) : IAuthService.Stub(), LifecycleOwner {
     override fun performProxyRequest(callbacks: IAuthCallbacks, request: ProxyRequest) {
         Log.d(TAG, "performProxyRequest($packageName, $request)")
+        @Suppress("DEPRECATION")
         lifecycleScope.launchWhenStarted {
             callbacks.onProxyResponse(ProxyResponse().apply { gmsStatusCode = CommonStatusCodes.CANCELED })
         }
@@ -50,6 +51,7 @@ class AuthServiceImpl(private val context: Context, override val lifecycle: Life
 
     override fun getSpatulaHeader(callbacks: IAuthCallbacks) {
         Log.d(TAG, "getSpatulaHeader($packageName)")
+        @Suppress("DEPRECATION")
         lifecycleScope.launchWhenStarted {
             val result = withContext(Dispatchers.IO) { AppCertManager(context).getSpatulaHeader(packageName) }
             Log.d(TAG, "Result: $result")

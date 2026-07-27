@@ -21,14 +21,14 @@ sourceSets {
 }
 
 compileJava {
-    sourceCompatibility = JavaVersion.VERSION_18
-    targetCompatibility = JavaVersion.VERSION_18
+    sourceCompatibility = rootProject.ext.javaVersion
+    targetCompatibility = rootProject.ext.javaVersion
 }
 
 compileKotlin {
-    kotlinOptions.jvmTarget = "18"
+    kotlinOptions.jvmTarget = rootProject.ext.javaVersion.toString()
 }
 
 compileTestKotlin {
-    kotlinOptions.jvmTarget = "18"
+    kotlinOptions.jvmTarget = rootProject.ext.javaVersion.toString()
 }

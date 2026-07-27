@@ -35,10 +35,14 @@ buildscript {
 
     ext.androidBuildGradleVersion = '8.13.2'
 
+    // Central Java version — auto-detects installed JVM, caps at Java 21
+    // To force a specific version: ext.javaVersion = JavaVersion.VERSION_21
+    ext.javaVersion = [JavaVersion.current(), JavaVersion.VERSION_21].min()
+
 //    ext.androidBuildVersionTools = '34.0.0'
 
     ext.androidMinSdk = 24
-    ext.androidTargetSdk = 29
+    ext.androidTargetSdk = 36
     ext.androidCompileSdk = 36
 
     ext.localProperties = new Properties()

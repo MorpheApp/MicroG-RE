@@ -52,6 +52,7 @@ class SignInConfigurationService : Service() {
 
                     MSG_SET_DEFAULT_SIGN_IN_INFO -> {
                         val packageName = msg.data?.getString(MSG_DATA_PACKAGE_NAME)
+                        @Suppress("DEPRECATION")
                         val account = msg.data?.getParcelable<Account>(MSG_DATA_ACCOUNT)
                         val googleSignInOptions = msg.data?.getString(MSG_DATA_SIGN_IN_OPTIONS)
                         packageName?.let { setDefaultSignInInfo(it, account, googleSignInOptions) }
@@ -153,7 +154,10 @@ class SignInConfigurationService : Service() {
                 data = bundleOf(
                     MSG_DATA_PACKAGE_NAME to packageName
                 )
-            }).data?.getParcelable(MSG_DATA_ACCOUNT)
+            }).data?.let {
+                @Suppress("DEPRECATION")
+                it.getParcelable(MSG_DATA_ACCOUNT)
+            }
         }
 
         suspend fun getDefaultOptions(context: Context, packageName: String): GoogleSignInOptions? {

@@ -55,6 +55,7 @@ private suspend fun sendToServiceInfoReceiver(intent: Intent, context: Context):
         override fun onReceive(context: Context, intent: Intent) {
             context.unregisterReceiver(this)
             val serviceInfo = try {
+                @Suppress("DEPRECATION")
                 intent.getSerializableExtra(EXTRA_SERVICE_INFO) as ServiceInfo
             } catch (e: Exception) {
                 it.resumeWithException(e)

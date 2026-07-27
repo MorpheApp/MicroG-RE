@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-java@v5
         with:
           distribution: "temurin"
-          java-version: "18"
+          java-version: "21"
       - name: "Generate and submit gradle dependency graph"
         uses: gradle/actions/dependency-submission@v4
         with:

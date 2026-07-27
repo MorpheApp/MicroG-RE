@@ -4,9 +4,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+@file:OptIn(ExperimentalCoroutinesApi::class)
 package com.google.android.gms.tasks
 
 import kotlinx.coroutines.*
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlin.coroutines.*
 
 /**
@@ -87,6 +89,7 @@ private fun <T> Task<T>.asDeferredImpl(cancellationTokenSource: CancellationToke
         }
     }
     // Prevent casting to CompletableDeferred and manual completion.
+    @Suppress("INVISIBLE_MEMBER", "INVISIBLE_REFERENCE")
     return object : Deferred<T> by deferred {}
 }
 

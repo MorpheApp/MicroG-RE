@@ -146,8 +146,9 @@ class MainActivity : AppCompatActivity() {
         val callingPackage = intent?.getStringExtra(EXTRA_CALLING_PACKAGE_NAME) ?: callingActivity?.packageName ?: Constants.GMS_PACKAGE_NAME
 
         val ignoreAccount = intent?.getBooleanExtra(EXTRA_IGNORE_ACCOUNT, false) ?: false
-        val accountName = if (ignoreAccount) null else {
+            val accountName = if (ignoreAccount) null else {
             val accounts = AccountManager.get(this).getAccountsByType(AuthConstants.DEFAULT_ACCOUNT_TYPE)
+            @Suppress("DEPRECATION")
             val accountName = intent.getStringExtra(EXTRA_ACCOUNT_NAME) ?: intent.getParcelableExtra<Account>("account")?.name ?: getSelectedAccountName()
             accounts.find { it.name.equals(accountName) }?.name
         }
@@ -186,6 +187,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     @SuppressLint("MissingSuperCall")
+    @Suppress("DEPRECATION", "OVERRIDE_DEPRECATION")
     override fun onBackPressed() {
         if (this::webView.isInitialized && webView.canGoBack()) {
             webView.goBack()
