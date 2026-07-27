@@ -17,6 +17,7 @@
 package org.microg.gms.gcm;
 
 import android.app.PendingIntent;
+import android.os.Build;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
@@ -117,7 +118,7 @@ public class CloudMessagingRpc {
         if (selfAuthIntent == null) {
             Intent intent = new Intent();
             intent.setPackage("com.google.example.invalidpackage");
-            selfAuthIntent = PendingIntent.getBroadcast(context, 0, intent, 0);
+            selfAuthIntent = PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_IMMUTABLE);
         }
         return selfAuthIntent;
     }
