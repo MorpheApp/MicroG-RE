@@ -187,7 +187,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     @SuppressLint("MissingSuperCall")
-    @Suppress("DEPRECATION", "OVERRIDE_DEPRECATION")
+    @Suppress("DEPRECATION", "OVERRIDE_DEPRECATION", "GestureBackNavigation")
     override fun onBackPressed() {
         if (this::webView.isInitialized && webView.canGoBack()) {
             webView.goBack()
