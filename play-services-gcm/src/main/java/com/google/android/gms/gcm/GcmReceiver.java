@@ -17,6 +17,7 @@
 package com.google.android.gms.gcm;
 
 import android.Manifest;
+import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -25,7 +26,7 @@ import android.content.pm.ResolveInfo;
 import android.content.pm.ServiceInfo;
 import android.util.Base64;
 import android.util.Log;
-import androidx.legacy.content.WakefulBroadcastReceiver;
+import org.microg.gms.common.ForegroundServiceContext;
 
 import static android.os.Build.VERSION.SDK_INT;
 import static org.microg.gms.gcm.GcmConstants.ACTION_C2DM_REGISTRATION;
@@ -56,7 +57,7 @@ import static org.microg.gms.gcm.GcmConstants.GCMID_REFRESH;
  * The <code>com.google.android.c2dm.permission.SEND</code> permission is held by Google Play
  * services. This prevents other apps from invoking the broadcast receiver.
  */
-public class GcmReceiver extends WakefulBroadcastReceiver {
+public class GcmReceiver extends BroadcastReceiver {
     private static final String TAG = "GcmReceiver";
 
     public void onReceive(Context context, Intent intent) {
@@ -102,7 +103,7 @@ public class GcmReceiver extends WakefulBroadcastReceiver {
         try {
             ComponentName startedComponent;
             if (context.checkCallingOrSelfPermission(Manifest.permission.WAKE_LOCK) == PackageManager.PERMISSION_GRANTED) {
-                startedComponent = startWakefulService(context, intent);
+                startedComponent = new ForegroundServiceContext(context).startService(intent);
             } else {
                 Log.d(TAG, "Missing wake lock permission, service start may be delayed");
                 startedComponent = context.startService(intent);

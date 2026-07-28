@@ -16,6 +16,7 @@
 
 package org.microg.gms.gcm;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -23,7 +24,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.util.Log;
 
-import androidx.legacy.content.WakefulBroadcastReceiver;
+import androidx.core.content.ContextCompat;
 
 import org.microg.gms.checkin.CheckinPreferences;
 import org.microg.gms.checkin.LastCheckinInfo;
@@ -35,7 +36,7 @@ import static org.microg.gms.gcm.McsConstants.ACTION_CONNECT;
 import static org.microg.gms.gcm.McsConstants.ACTION_HEARTBEAT;
 import static org.microg.gms.gcm.McsConstants.EXTRA_REASON;
 
-public class TriggerReceiver extends WakefulBroadcastReceiver {
+public class TriggerReceiver extends BroadcastReceiver {
     private static final String TAG = "GmsGcmTrigger";
     public static final String FORCE_TRY_RECONNECT = "org.microg.gms.gcm.FORCE_TRY_RECONNECT";
     private static boolean registered = false;
@@ -46,7 +47,7 @@ public class TriggerReceiver extends WakefulBroadcastReceiver {
     public synchronized static void register(Context context) {
         if (SDK_INT >= N && !registered) {
             IntentFilter intentFilter = new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE");
-            context.getApplicationContext().registerReceiver(new TriggerReceiver(), intentFilter);
+            ContextCompat.registerReceiver(context.getApplicationContext(), new TriggerReceiver(), intentFilter, ContextCompat.RECEIVER_NOT_EXPORTED);
             registered = true;
         }
     }
@@ -96,7 +97,7 @@ public class TriggerReceiver extends WakefulBroadcastReceiver {
 
             if (!McsService.isConnected(context) || force) {
                 Log.d(TAG, "Not connected to GCM but should be, asking the service to start up. Triggered by: " + intent);
-                startWakefulService(new ForegroundServiceContext(context), new Intent(ACTION_CONNECT, null, context, McsService.class)
+                new ForegroundServiceContext(context).startService(new Intent(ACTION_CONNECT, null, context, McsService.class)
                         .putExtra(EXTRA_REASON, intent));
             } else {
                 if (ConnectivityManager.CONNECTIVITY_ACTION.equals(intent.getAction())) {
@@ -104,7 +105,7 @@ public class TriggerReceiver extends WakefulBroadcastReceiver {
                     McsService.scheduleReconnect(context);
                 } else {
                     Log.d(TAG, "Ignoring " + intent + ": service is running. heartbeat instead.");
-                    startWakefulService(new ForegroundServiceContext(context), new Intent(ACTION_HEARTBEAT, null, context, McsService.class)
+                    new ForegroundServiceContext(context).startService(new Intent(ACTION_HEARTBEAT, null, context, McsService.class)
                             .putExtra(EXTRA_REASON, intent));
                 }
             }

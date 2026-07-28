@@ -20,6 +20,7 @@ import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
@@ -123,7 +124,7 @@ public abstract class GcmListenerService extends Service {
             if (ACTION_NOTIFICATION_OPEN.equals(intent.getAction())) {
                 handlePendingNotification(intent);
                 finishCounter();
-                GcmReceiver.completeWakefulIntent(intent);
+                // GcmReceiver.completeWakefulIntent removed (deprecated)
             } else if (ACTION_C2DM_RECEIVE.equals(intent.getAction())) {
                 new AsyncTask<Void, Void, Void>() {
                     @Override
@@ -165,12 +166,14 @@ public abstract class GcmListenerService extends Service {
             }
             finishCounter();
         } finally {
-            GcmReceiver.completeWakefulIntent(intent);
+            // GcmReceiver.completeWakefulIntent removed (deprecated)
         }
     }
 
     private void handlePendingNotification(Intent intent) {
-        PendingIntent pendingIntent = intent.getParcelableExtra(EXTRA_PENDING_INTENT);
+        PendingIntent pendingIntent = Build.VERSION.SDK_INT >= 33
+                ? intent.getParcelableExtra(EXTRA_PENDING_INTENT, PendingIntent.class)
+                : intent.getParcelableExtra(EXTRA_PENDING_INTENT);
         if (pendingIntent != null) {
             try {
                 pendingIntent.send();

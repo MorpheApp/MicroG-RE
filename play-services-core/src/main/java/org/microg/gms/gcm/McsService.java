@@ -42,7 +42,6 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
-import androidx.legacy.content.WakefulBroadcastReceiver;
 
 import com.squareup.wire.Message;
 
@@ -157,7 +156,6 @@ public class McsService extends Service implements Handler.Callback {
                 rootHandler = new Handler(Looper.myLooper(), McsService.this);
                 if (connectIntent != null) {
                     rootHandler.sendMessage(rootHandler.obtainMessage(MSG_CONNECT, connectIntent));
-                    WakefulBroadcastReceiver.completeWakefulIntent(connectIntent);
                 }
             }
             Looper.loop();
@@ -324,11 +322,8 @@ public class McsService extends Service implements Handler.Callback {
                 } else if (ACTION_ACK.equals(intent.getAction())) {
                     rootHandler.sendMessage(rootHandler.obtainMessage(MSG_ACK, reason));
                 }
-                WakefulBroadcastReceiver.completeWakefulIntent(intent);
             } else if (connectIntent == null) {
                 connectIntent = intent;
-            } else if (intent != null) {
-                WakefulBroadcastReceiver.completeWakefulIntent(intent);
             }
         }
         return START_REDELIVER_INTENT;
@@ -338,10 +333,14 @@ public class McsService extends Service implements Handler.Callback {
         String messageId = intent.getStringExtra(EXTRA_MESSAGE_ID);
         String collapseKey = intent.getStringExtra(EXTRA_COLLAPSE_KEY);
 
-        Messenger messenger = intent.getParcelableExtra(EXTRA_MESSENGER);
+        Messenger messenger = SDK_INT >= 33
+                ? intent.getParcelableExtra(EXTRA_MESSENGER, Messenger.class)
+                : intent.getParcelableExtra(EXTRA_MESSENGER);
         intent.removeExtra(EXTRA_MESSENGER);
 
-        Parcelable app = intent.getParcelableExtra(EXTRA_APP);
+        Parcelable app = SDK_INT >= 33
+                ? intent.getParcelableExtra(EXTRA_APP, PendingIntent.class)
+                : intent.getParcelableExtra(EXTRA_APP);
         String packageName = null;
         if (app instanceof PendingIntent) {
             packageName = PackageUtils.packageFromPendingIntent((PendingIntent) app);
