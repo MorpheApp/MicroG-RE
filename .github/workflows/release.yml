@@ -85,6 +85,7 @@ jobs:
         with:
           tag_name: ${{ inputs.tag_name || (startsWith(github.ref, 'refs/tags/') && github.ref_name || format('v1.0.{0}', github.run_number)) }}
           name: ${{ inputs.tag_name || (startsWith(github.ref, 'refs/tags/') && github.ref_name || format('v1.0.{0}', github.run_number)) }}
+          target_commitish: ${{ github.sha }}
           files: ${{ steps.sign_app.outputs.signedFile }}
           generate_release_notes: true
           token: ${{ secrets.GH_TOKEN }}
