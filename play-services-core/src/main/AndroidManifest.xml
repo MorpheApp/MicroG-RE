@@ -81,19 +81,12 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_REMOTE_MESSAGING" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
-    <uses-permission
-        android:name="android.permission.CHANGE_DEVICE_IDLE_TEMP_WHITELIST"
-        tools:ignore="ProtectedPermissions" />
-    <uses-permission
-        android:name="android.permission.UPDATE_APP_OPS_STATS"
-        tools:ignore="ProtectedPermissions" />
 
     <application
         android:allowBackup="false"
         android:testOnly="false"
         android:enableOnBackInvokedCallback="true"
         android:forceQueryable="true"
-        android:fullBackupOnly="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/gms_app_name"
         android:multiArch="true"
@@ -145,13 +138,6 @@
                 <action android:name="${basePackageName}.android.c2dm.intent.RECEIVE" />
 
                 <category android:name="android.server.checkin.CHECKIN" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.provider.Telephony.SECRET_CODE" />
-
-                <data
-                    android:host="642432546"
-                    android:scheme="android_secret_code" />
             </intent-filter>
         </receiver>
 
@@ -213,13 +199,6 @@
 
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
                 <action android:name="android.intent.action.PACKAGE_RESTARTED" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.provider.Telephony.SECRET_CODE" />
-
-                <data
-                    android:host="42678278"
-                    android:scheme="android_secret_code" />
             </intent-filter>
         </receiver>
 
