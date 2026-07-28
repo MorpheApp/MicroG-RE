@@ -89,7 +89,8 @@
         tools:ignore="ProtectedPermissions" />
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
+        android:testOnly="false"
         android:enableOnBackInvokedCallback="true"
         android:forceQueryable="true"
         android:fullBackupOnly="true"
