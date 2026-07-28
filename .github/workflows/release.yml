@@ -62,16 +62,46 @@ jobs:
       - name: "Execute Gradle build"
         run: "./gradlew --no-daemon clean :play-services-core:assembleDefaultRelease"
 
-      - uses: ilharp/sign-android-release@v2
-        name: "Sign app APK"
+      - name: "Zipalign & Sign APK with Android SDK apksigner (v1, v2, v3 schemes)"
         id: sign_app
-        with:
-          releaseDir: play-services-core/build/outputs/apk/default/release
-          signingKey: ${{ secrets.KEYSTORE_BASE64 }}
-          keyAlias: ${{ secrets.KEY_ALIAS }}
-          keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
-          keyPassword: ${{ secrets.KEY_PASSWORD }}
-          buildToolsVersion: 36.0.0
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: |
+          # 1. Locate unsigned APK
+          RAW_APK=$(find play-services-core/build/outputs/apk/default/release -name "*.apk" | head -n 1)
+          echo "Found compiled APK: $RAW_APK"
+
+          # 2. Decode keystore from base64
+          echo "$KEYSTORE_BASE64" | base64 -d > release.keystore
+
+          # 3. Get Android SDK build-tools path
+          BUILD_TOOLS=$(ls -d $ANDROID_HOME/build-tools/* | tail -n 1)
+          echo "Using Android build-tools from: $BUILD_TOOLS"
+
+          # 4. Zipalign APK for 4-byte alignment
+          $BUILD_TOOLS/zipalign -v -p 4 "$RAW_APK" microg-aligned.apk
+
+          # 5. Sign APK with apksigner (v1 + v2 + v3 schemes)
+          $BUILD_TOOLS/apksigner sign \
+            --ks release.keystore \
+            --ks-key-alias "$KEY_ALIAS" \
+            --ks-pass pass:"$KEYSTORE_PASSWORD" \
+            --key-pass pass:"$KEY_PASSWORD" \
+            --v1-signing-enabled true \
+            --v2-signing-enabled true \
+            --v3-signing-enabled true \
+            --out microg-RE-release-signed.apk \
+            microg-aligned.apk
+
+          # 6. Verify signature
+          echo "Verifying APK signature scheme..."
+          $BUILD_TOOLS/apksigner verify --verbose microg-RE-release-signed.apk
+
+          # 7. Output signed file path
+          echo "signedFile=microg-RE-release-signed.apk" >> $GITHUB_OUTPUT
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v7
