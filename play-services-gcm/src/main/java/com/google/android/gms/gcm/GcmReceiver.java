@@ -26,7 +26,6 @@ import android.content.pm.ResolveInfo;
 import android.content.pm.ServiceInfo;
 import android.util.Base64;
 import android.util.Log;
-import org.microg.gms.common.ForegroundServiceContext;
 
 import static android.os.Build.VERSION.SDK_INT;
 import static org.microg.gms.gcm.GcmConstants.ACTION_C2DM_REGISTRATION;
@@ -103,7 +102,7 @@ public class GcmReceiver extends BroadcastReceiver {
         try {
             ComponentName startedComponent;
             if (context.checkCallingOrSelfPermission(Manifest.permission.WAKE_LOCK) == PackageManager.PERMISSION_GRANTED) {
-                startedComponent = new ForegroundServiceContext(context).startService(intent);
+                startedComponent = context.startService(intent);
             } else {
                 Log.d(TAG, "Missing wake lock permission, service start may be delayed");
                 startedComponent = context.startService(intent);
