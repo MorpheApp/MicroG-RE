@@ -33,12 +33,12 @@ buildscript {
     ext.wearableVersion = '0.1.1'
     ext.wireVersion = '5.3.10'
 
-    ext.androidBuildGradleVersion = '8.13.2'
+    ext.androidBuildGradleVersion = '9.3.1'
 
 //    ext.androidBuildVersionTools = '34.0.0'
 
     ext.androidMinSdk = 24
-    ext.androidTargetSdk = 29
+    ext.androidTargetSdk = 35
     ext.androidCompileSdk = 36
 
     ext.localProperties = new Properties()

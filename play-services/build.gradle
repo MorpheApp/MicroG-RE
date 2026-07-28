@@ -24,7 +24,6 @@ android {
 
     defaultConfig {
         minSdkVersion androidMinSdk
-        targetSdkVersion androidTargetSdk
     }
 
     compileOptions {
@@ -33,6 +32,10 @@ android {
     }
     lint {
         disable 'InvalidPackage'
+        targetSdk 29
+    }
+    testOptions {
+        targetSdk 29
     }
 
 }

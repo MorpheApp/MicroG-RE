@@ -23,6 +23,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.util.Log;
 
+import androidx.core.content.ContextCompat;
 import androidx.legacy.content.WakefulBroadcastReceiver;
 
 import org.microg.gms.checkin.CheckinPreferences;
@@ -46,7 +47,7 @@ public class TriggerReceiver extends WakefulBroadcastReceiver {
     public synchronized static void register(Context context) {
         if (SDK_INT >= N && !registered) {
             IntentFilter intentFilter = new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE");
-            context.getApplicationContext().registerReceiver(new TriggerReceiver(), intentFilter);
+            ContextCompat.registerReceiver(context.getApplicationContext(), new TriggerReceiver(), intentFilter, ContextCompat.RECEIVER_EXPORTED);
             registered = true;
         }
     }

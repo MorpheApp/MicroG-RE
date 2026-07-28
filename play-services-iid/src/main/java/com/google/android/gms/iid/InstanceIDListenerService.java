@@ -25,6 +25,7 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.Looper;
 import android.os.Message;
+import androidx.core.content.ContextCompat;
 import androidx.legacy.content.WakefulBroadcastReceiver;
 
 import static org.microg.gms.gcm.GcmConstants.ACTION_C2DM_REGISTRATION;
@@ -82,7 +83,7 @@ public class InstanceIDListenerService extends Service {
     public void onCreate() {
         IntentFilter filter = new IntentFilter(ACTION_C2DM_REGISTRATION);
         filter.addCategory(getPackageName());
-        registerReceiver(registrationReceiver, filter);
+        ContextCompat.registerReceiver(this, registrationReceiver, filter, ContextCompat.RECEIVER_EXPORTED);
     }
 
     public void onDestroy() {

@@ -76,19 +76,17 @@
 
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission
-        android:name="android.permission.CHANGE_DEVICE_IDLE_TEMP_WHITELIST"
-        tools:ignore="ProtectedPermissions" />
-    <uses-permission
-        android:name="android.permission.UPDATE_APP_OPS_STATS"
-        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_REMOTE_MESSAGING" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
+        android:testOnly="false"
         android:enableOnBackInvokedCallback="true"
         android:forceQueryable="true"
-        android:fullBackupOnly="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/gms_app_name"
         android:multiArch="true"
@@ -116,6 +114,8 @@
         <!-- Device Checkin -->
 
         <service android:name="org.microg.gms.checkin.CheckinService"
+            android:exported="true"
+            android:foregroundServiceType="dataSync"
             tools:ignore="ExportedService,IntentFilterExportedReceiver">
             <intent-filter>
                 <action android:name="com.google.android.gms.checkin.BIND_TO_SERVICE" />
@@ -123,6 +123,7 @@
         </service>
 
         <receiver android:name="org.microg.gms.checkin.TriggerReceiver"
+            android:exported="true"
             tools:ignore="IntentFilterExportedReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -138,18 +139,12 @@
 
                 <category android:name="android.server.checkin.CHECKIN" />
             </intent-filter>
-            <intent-filter>
-                <action android:name="android.provider.Telephony.SECRET_CODE" />
-
-                <data
-                    android:host="642432546"
-                    android:scheme="android_secret_code" />
-            </intent-filter>
         </receiver>
 
         <!-- Cloud Messaging -->
         <service
             android:name="org.microg.gms.gcm.PushRegisterService"
+            android:exported="true"
             android:process=":persistent"
             tools:ignore="ExportedService,IntentFilterExportedReceiver">
             <intent-filter>
@@ -162,6 +157,7 @@
 
         <receiver
             android:name="org.microg.gms.gcm.PushRegisterReceiver"
+            android:exported="true"
             android:process=":persistent"
             tools:ignore="ExportedReceiver,IntentFilterExportedReceiver">
             <intent-filter>
@@ -171,10 +167,12 @@
 
         <service
             android:name="org.microg.gms.gcm.McsService"
+            android:foregroundServiceType="remoteMessaging"
             android:process=":persistent" />
 
         <receiver
             android:name="org.microg.gms.gcm.SendReceiver"
+            android:exported="true"
             android:process=":persistent"
             tools:ignore="ExportedReceiver,IntentFilterExportedReceiver">
             <intent-filter>
@@ -188,6 +186,7 @@
 
         <receiver
             android:name="org.microg.gms.gcm.TriggerReceiver"
+            android:exported="true"
             android:process=":persistent"
             tools:ignore="IntentFilterExportedReceiver">
             <intent-filter>
@@ -201,17 +200,11 @@
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
                 <action android:name="android.intent.action.PACKAGE_RESTARTED" />
             </intent-filter>
-            <intent-filter>
-                <action android:name="android.provider.Telephony.SECRET_CODE" />
-
-                <data
-                    android:host="42678278"
-                    android:scheme="android_secret_code" />
-            </intent-filter>
         </receiver>
 
         <receiver
             android:name="org.microg.gms.gcm.UnregisterReceiver"
+            android:exported="true"
             android:process=":persistent"
             tools:ignore="IntentFilterExportedReceiver">
             <intent-filter>
@@ -226,6 +219,7 @@
         <!-- People -->
 
         <service android:name="org.microg.gms.people.PeopleService"
+            android:exported="true"
             tools:ignore="ExportedService,IntentFilterExportedReceiver">
             <intent-filter>
                 <action android:name="com.google.android.gms.people.service.START" />
@@ -247,6 +241,7 @@
         <!-- Auth -->
 
         <service android:name="org.microg.gms.auth.loginservice.GoogleLoginService"
+            android:exported="true"
             tools:ignore="ExportedService,IntentFilterExportedReceiver">
             <intent-filter>
                 <action android:name="android.accounts.AccountAuthenticator" />
@@ -324,6 +319,7 @@
         </activity>
 
         <service android:name="org.microg.gms.auth.credentials.CredentialsService"
+            android:exported="true"
             tools:ignore="ExportedService,IntentFilterExportedReceiver">
             <intent-filter>
                 <action android:name="${basePackageName}.android.gms.auth.api.credentials.service.START" />
@@ -331,6 +327,7 @@
         </service>
 
         <service android:name="org.microg.gms.auth.proxy.AuthProxyService"
+            android:exported="true"
             tools:ignore="ExportedService,IntentFilterExportedReceiver">
             <intent-filter>
                 <action android:name="${basePackageName}.android.gms.auth.service.START" />
@@ -338,6 +335,7 @@
         </service>
 
         <service android:name="org.microg.gms.auth.appcert.AppCertService"
+            android:exported="true"
             tools:ignore="ExportedService,IntentFilterExportedReceiver">
             <intent-filter>
                 <action android:name="${basePackageName}.android.gms.auth.be.appcert.AppCertService" />
@@ -345,6 +343,7 @@
         </service>
 
         <service android:name="org.microg.gms.credential.CredentialManagerService"
+            android:exported="true"
             tools:ignore="ExportedService,IntentFilterExportedReceiver">
             <intent-filter>
                 <action android:name="${basePackageName}.android.gms.credential.manager.service.firstparty.START" />
@@ -363,6 +362,7 @@
         </activity>
 
         <service android:name="org.microg.gms.signin.SignInService"
+            android:exported="true"
             tools:ignore="ExportedService,IntentFilterExportedReceiver">
             <intent-filter>
                 <action android:name="${basePackageName}.android.gms.signin.service.START" />
@@ -371,6 +371,7 @@
         </service>
 
         <service android:name="org.microg.gms.auth.signin.AuthSignInService"
+            android:exported="true"
             tools:ignore="ExportedService,IntentFilterExportedReceiver">
             <intent-filter>
                 <action android:name="${basePackageName}.android.gms.auth.api.signin.service.START" />
@@ -528,6 +529,7 @@
         </service>
 
         <service android:name="org.microg.gms.DummyService"
+            android:exported="true"
             tools:ignore="ExportedService,IntentFilterExportedReceiver">
             <intent-filter>
                 <action android:name="com.google.android.contextmanager.service.ContextManagerService.START" />

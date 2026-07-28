@@ -61,7 +61,7 @@ public class TriggerReceiver extends WakefulBroadcastReceiver {
                             .addCapability(NET_CAPABILITY_INTERNET)
                             .build();
                     Intent i = new Intent(context, TriggerReceiver.class);
-                    PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, i, FLAG_UPDATE_CURRENT);
+                    PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, i, FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
                     cm.registerNetworkCallback(networkRequest, pendingIntent);
                 }
             } else {

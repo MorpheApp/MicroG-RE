@@ -24,7 +24,6 @@ android {
 
     defaultConfig {
         minSdkVersion androidMinSdk
-        targetSdkVersion androidTargetSdk
 
         buildConfigField "String", "APP_VERSION_NAME", "\"${rootProject.ext.appVersionName}\""
         buildConfigField "String", "GMS_VERSION_NAME", "\"GMS: ${rootProject.ext.baseVersion}\""
@@ -40,6 +39,10 @@ android {
     }
     lint {
         disable 'MissingTranslation'
+        targetSdk 36
+    }
+    testOptions {
+        targetSdk 36
     }
 }
 

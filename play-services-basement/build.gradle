@@ -50,7 +50,6 @@ android {
 
     defaultConfig {
         minSdkVersion androidMinSdk
-        targetSdkVersion androidTargetSdk
         buildConfigField "int", "VERSION_CODE", "$appVersionCode"
         consumerProguardFile 'consumer-rules.pro'
         buildConfigField "String", "BASE_PACKAGE_NAME", "\"$basePackageName\""
@@ -59,6 +58,12 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_18
         targetCompatibility JavaVersion.VERSION_18
+    }
+    lint {
+        targetSdk 36
+    }
+    testOptions {
+        targetSdk 36
     }
 }
 

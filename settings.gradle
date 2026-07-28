@@ -1,3 +1,7 @@
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
+}
+
 def sublude(name) {
   def projectName = ':' + name.substring(1).replace(':', '-')
   include projectName
