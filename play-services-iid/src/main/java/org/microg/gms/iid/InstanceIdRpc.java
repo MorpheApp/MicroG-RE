@@ -49,7 +49,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-import static android.app.PendingIntent.FLAG_IMMUTABLE;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 import static android.os.Build.VERSION.SDK_INT;
 import static com.google.android.gms.iid.InstanceID.ERROR_BACKOFF;
@@ -260,7 +259,7 @@ public class InstanceIdRpc {
         if (selfAuthToken == null) {
             Intent intent = new Intent();
             intent.setPackage("com.google.example.invalidpackage");
-            selfAuthToken = PendingIntent.getBroadcast(context, 0, intent, FLAG_IMMUTABLE);
+            selfAuthToken = PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_IMMUTABLE);
         }
         return selfAuthToken;
     }

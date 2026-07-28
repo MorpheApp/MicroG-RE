@@ -8,11 +8,11 @@ package org.microg.gms.gcm
 
 import android.app.Activity
 import android.app.PendingIntent
-import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.os.*
 import android.util.Log
+import androidx.legacy.content.WakefulBroadcastReceiver
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LifecycleService
@@ -123,7 +123,7 @@ class PushRegisterService : LifecycleService() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         if (intent != null) {
-            // WakefulBroadcastReceiver.completeWakefulIntent removed (deprecated)
+            WakefulBroadcastReceiver.completeWakefulIntent(intent)
             Log.d(TAG, "onStartCommand: $intent")
             lifecycleScope.launchWhenStarted {
                 handleIntent(intent)
@@ -198,11 +198,7 @@ class PushRegisterService : LifecycleService() {
 
     private fun sendReplyToMessenger(intent: Intent, outIntent: Intent): Boolean {
         try {
-            val messenger = if (Build.VERSION.SDK_INT >= 33) {
-                intent.getParcelableExtra(EXTRA_MESSENGER, Messenger::class.java)
-            } else {
-                intent.getParcelableExtra<Messenger>(EXTRA_MESSENGER)
-            } ?: return false
+            val messenger = intent.getParcelableExtra<Messenger>(EXTRA_MESSENGER) ?: return false
             val message = Message.obtain()
             message.obj = outIntent
             messenger.send(message)
@@ -378,7 +374,7 @@ internal class PushRegisterHandler(
 }
 
 @Suppress("DEPRECATION")
-class PushRegisterReceiver : BroadcastReceiver() {
+class PushRegisterReceiver : WakefulBroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         val intent2 = Intent(context, PushRegisterService::class.java)
         if (intent.extras!!.get("delete") != null) {
@@ -387,6 +383,6 @@ class PushRegisterReceiver : BroadcastReceiver() {
             intent2.action = ACTION_C2DM_REGISTER
         }
         intent2.putExtras(intent.extras!!)
-        ForegroundServiceContext(context).startService(intent2)
+        startWakefulService(context, intent2)
     }
 }

@@ -41,7 +41,7 @@ class DeviceRegistrationFragment : PreferenceFragmentCompat() {
     private lateinit var statusCategory: PreferenceCategory
     private lateinit var status: Preference
     private lateinit var androidId: Preference
-    private val handler = Handler(android.os.Looper.getMainLooper())
+    private val handler = Handler()
     private val updateRunnable = Runnable { updateStatus() }
     private lateinit var profileFileImport: ActivityResultLauncher<String>
 
@@ -160,7 +160,6 @@ class DeviceRegistrationFragment : PreferenceFragmentCompat() {
         handler.removeCallbacks(updateRunnable)
         handler.postDelayed(updateRunnable, UPDATE_INTERVAL)
         val appContext = requireContext().applicationContext
-        @Suppress("DEPRECATION")
         lifecycleScope.launchWhenResumed {
             configureProfilePreference()
             serial.summary = ProfileManager.getSerial(appContext)

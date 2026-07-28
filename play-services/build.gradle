@@ -24,15 +24,18 @@ android {
 
     defaultConfig {
         minSdkVersion androidMinSdk
-        targetSdkVersion androidTargetSdk
     }
 
     compileOptions {
-        sourceCompatibility rootProject.ext.javaVersion
-        targetCompatibility rootProject.ext.javaVersion
+        sourceCompatibility JavaVersion.VERSION_18
+        targetCompatibility JavaVersion.VERSION_18
     }
     lint {
         disable 'InvalidPackage'
+        targetSdk 29
+    }
+    testOptions {
+        targetSdk 29
     }
 
 }

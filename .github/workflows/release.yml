@@ -1,15 +1,17 @@
 name: Release
-permissions: {}
+
+permissions:
+  contents: write
 
 on:
   workflow_dispatch:
-#  push:
-#    branches:
-#      - main
+  push:
+    tags:
+      - 'v*'
 
 jobs:
   build:
-    name: "Gradle build"
+    name: "Gradle build & GitHub Release"
     runs-on: ubuntu-latest
 
     steps:
@@ -17,11 +19,13 @@ jobs:
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
+
       - name: "Setup Java"
         uses: actions/setup-java@v5
         with:
           distribution: "temurin"
-          java-version: "21"
+          java-version: "18"
+
       - name: "Setup Gradle"
         uses: gradle/actions/setup-gradle@v4
         with:
@@ -29,6 +33,7 @@ jobs:
           build-scan-publish: true
           build-scan-terms-of-use-url: "https://gradle.com/help/legal-terms-of-use"
           build-scan-terms-of-use-agree: "yes"
+
       - name: "Setup matchers"
         run: |
           # Setting up matchers...
@@ -46,6 +51,7 @@ jobs:
               echo "Matcher configured: ${NAME:?}"
             fi
           done
+
       - name: "Execute Gradle build"
         run: "./gradlew --no-daemon clean :play-services-core:assembleDefaultRelease"
 
@@ -54,7 +60,7 @@ jobs:
         id: sign_app
         with:
           releaseDir: play-services-core/build/outputs/apk/default/release
-          signingKey: ${{ secrets.KEYSTORE_BASE64 }}
+          signingKey: ${{ secrets.KEYSTORE_B64 }}
           keyAlias: ${{ secrets.KEY_ALIAS }}
           keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
           keyPassword: ${{ secrets.KEY_PASSWORD }}
@@ -65,5 +71,13 @@ jobs:
         with:
           name: MicroG-RE
           archive: false
-          path: ${{steps.sign_app.outputs.signedFile}}
+          path: ${{ steps.sign_app.outputs.signedFile }}
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ steps.sign_app.outputs.signedFile }}
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

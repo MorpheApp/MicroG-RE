@@ -35,14 +35,19 @@ android {
 
     defaultConfig {
         minSdkVersion androidMinSdk
-        targetSdkVersion androidTargetSdk
 
         buildConfigField "String", "BASE_PACKAGE_NAME", "\"$basePackageName\""
     }
 
     compileOptions {
-        sourceCompatibility rootProject.ext.javaVersion
-        targetCompatibility rootProject.ext.javaVersion
+        sourceCompatibility JavaVersion.VERSION_18
+        targetCompatibility JavaVersion.VERSION_18
+    }
+    lint {
+        targetSdk 36
+    }
+    testOptions {
+        targetSdk 36
     }
 }
 

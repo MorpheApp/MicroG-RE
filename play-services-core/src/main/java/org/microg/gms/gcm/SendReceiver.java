@@ -16,17 +16,16 @@
 
 package org.microg.gms.gcm;
 
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
-import org.microg.gms.common.ForegroundServiceContext;
+import androidx.legacy.content.WakefulBroadcastReceiver;
 
 import static org.microg.gms.gcm.McsConstants.ACTION_SEND;
 
-public class SendReceiver extends BroadcastReceiver {
+public class SendReceiver extends WakefulBroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         if (intent.getExtras() == null) return;
@@ -40,6 +39,6 @@ public class SendReceiver extends BroadcastReceiver {
         Intent i = new Intent(context, McsService.class);
         i.setAction(ACTION_SEND);
         i.putExtras(extras);
-        new ForegroundServiceContext(context).startService(i);
+        startWakefulService(context, i);
     }
 }

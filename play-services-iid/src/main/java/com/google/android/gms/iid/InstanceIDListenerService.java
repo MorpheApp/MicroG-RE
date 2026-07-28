@@ -26,6 +26,7 @@ import android.os.IBinder;
 import android.os.Looper;
 import android.os.Message;
 import androidx.core.content.ContextCompat;
+import androidx.legacy.content.WakefulBroadcastReceiver;
 
 import static org.microg.gms.gcm.GcmConstants.ACTION_C2DM_REGISTRATION;
 import static org.microg.gms.gcm.GcmConstants.ACTION_INSTANCE_ID;
@@ -82,7 +83,7 @@ public class InstanceIDListenerService extends Service {
     public void onCreate() {
         IntentFilter filter = new IntentFilter(ACTION_C2DM_REGISTRATION);
         filter.addCategory(getPackageName());
-        ContextCompat.registerReceiver(this, registrationReceiver, filter, ContextCompat.RECEIVER_NOT_EXPORTED);
+        ContextCompat.registerReceiver(this, registrationReceiver, filter, ContextCompat.RECEIVER_EXPORTED);
     }
 
     public void onDestroy() {
@@ -97,18 +98,14 @@ public class InstanceIDListenerService extends Service {
         try {
             if (intent != null) {
                 if (ACTION_INSTANCE_ID.equals(intent.getAction()) && intent.hasExtra(EXTRA_GSF_INTENT)) {
-                    Intent gsfIntent = android.os.Build.VERSION.SDK_INT >= 33
-                            ? intent.getParcelableExtra(EXTRA_GSF_INTENT, Intent.class)
-                            : (Intent) intent.getParcelableExtra(EXTRA_GSF_INTENT);
-                    startService(gsfIntent);
+                    startService((Intent) intent.getParcelableExtra(EXTRA_GSF_INTENT));
                     return START_STICKY;
                 }
 
                 handleIntent(intent);
 
-                if (intent.hasExtra(EXTRA_FROM)) {
-                    // WakefulBroadcastReceiver.completeWakefulIntent removed (deprecated)
-                }
+                if (intent.hasExtra(EXTRA_FROM))
+                    WakefulBroadcastReceiver.completeWakefulIntent(intent);
             }
         } finally {
             stop();

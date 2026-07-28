@@ -47,7 +47,6 @@ private const val REQUEST_CODE_ADD_ACCOUNT = 100
 class AuthSignInActivity : AppCompatActivity() {
     private val config: SignInConfiguration?
         get() = runCatching {
-            @Suppress("DEPRECATION")
             intent?.extras?.also { it.classLoader = SignInConfiguration::class.java.classLoader }?.getParcelable<SignInConfiguration>("config")
         }.getOrNull()
 
@@ -82,7 +81,6 @@ class AuthSignInActivity : AppCompatActivity() {
     }
 
     private fun openAddAccount() {
-        @Suppress("DEPRECATION")
         startActivityForResult(Intent(this, LoginActivity::class.java), REQUEST_CODE_ADD_ACCOUNT)
     }
 
@@ -106,7 +104,6 @@ class AuthSignInActivity : AppCompatActivity() {
         if (account.name != DEFAULT_ACCOUNT) {
             val photo = PeopleManager.getOwnerAvatarBitmap(this@AuthSignInActivity, account.name, false)
             if (photo == null) {
-                @Suppress("DEPRECATION")
                 lifecycleScope.launchWhenStarted {
                     withContext(Dispatchers.IO) {
                         PeopleManager.getOwnerAvatarBitmap(this@AuthSignInActivity, account.name, true)
@@ -149,7 +146,6 @@ class AuthSignInActivity : AppCompatActivity() {
             if (accounts[position].name == DEFAULT_ACCOUNT) {
                 openAddAccount()
             } else {
-                @Suppress("DEPRECATION")
                 lifecycleScope.launchWhenStarted {
                     try {
                         signIn(accounts[position])
@@ -174,7 +170,6 @@ class AuthSignInActivity : AppCompatActivity() {
         binding.button1.setOnClickListener {
             binding.button1.isEnabled = false
             binding.button2.isEnabled = false
-            @Suppress("DEPRECATION")
             lifecycleScope.launchWhenStarted {
                 try {
                     signIn(account)

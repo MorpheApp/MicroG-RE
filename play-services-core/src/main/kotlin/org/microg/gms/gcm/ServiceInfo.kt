@@ -9,9 +9,9 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
-import android.os.Build
 import android.util.Log
 import androidx.core.content.ContextCompat
+import androidx.core.content.IntentCompat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.Serializable
@@ -57,22 +57,17 @@ private suspend fun sendToServiceInfoReceiver(intent: Intent, context: Context):
         override fun onReceive(context: Context, intent: Intent) {
             context.unregisterReceiver(this)
             val serviceInfo = try {
-                if (Build.VERSION.SDK_INT >= 33) {
-                    intent.getSerializableExtra(EXTRA_SERVICE_INFO, ServiceInfo::class.java)
-                } else {
-                    @Suppress("DEPRECATION")
-                    intent.getSerializableExtra(EXTRA_SERVICE_INFO) as ServiceInfo
-                }
+                IntentCompat.getSerializableExtra(intent, EXTRA_SERVICE_INFO, ServiceInfo::class.java)
             } catch (e: Exception) {
                 it.resumeWithException(e)
                 return
             }
+            if (serviceInfo == null) {
+                it.resumeWithException(NullPointerException("ServiceInfo is null"))
+                return
+            }
             try {
-                if (serviceInfo != null) {
-                    it.resume(serviceInfo)
-                } else {
-                    it.resumeWithException(NullPointerException("ServiceInfo was null"))
-                }
+                it.resume(serviceInfo)
             } catch (e: Exception) {
                 Log.w(TAG, e)
             }

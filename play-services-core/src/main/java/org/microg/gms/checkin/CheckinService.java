@@ -24,14 +24,16 @@ import android.app.IntentService;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.os.ResultReceiver;
 import android.util.Log;
 
-import com.google.android.gms.R;import com.google.android.gms.checkin.internal.ICheckinService;
+import androidx.legacy.content.WakefulBroadcastReceiver;
+
+import com.google.android.gms.R;
+import com.google.android.gms.checkin.internal.ICheckinService;
 
 import org.microg.gms.auth.AuthConstants;
 import org.microg.gms.common.ForegroundServiceInfo;
@@ -88,15 +90,10 @@ public class CheckinService extends IntentService {
                     }
                     McsService.scheduleReconnect(this);
                     if (intent.hasExtra(EXTRA_CALLBACK_INTENT)) {
-                        Intent callbackIntent = Build.VERSION.SDK_INT >= 33
-                                ? intent.getParcelableExtra(EXTRA_CALLBACK_INTENT, Intent.class)
-                                : intent.getParcelableExtra(EXTRA_CALLBACK_INTENT);
-                        startService(callbackIntent);
+                        startService((Intent) intent.getParcelableExtra(EXTRA_CALLBACK_INTENT));
                     }
                     if (intent.hasExtra(EXTRA_RESULT_RECEIVER)) {
-                        ResultReceiver receiver = Build.VERSION.SDK_INT >= 33
-                                ? intent.getParcelableExtra(EXTRA_RESULT_RECEIVER, ResultReceiver.class)
-                                : intent.getParcelableExtra(EXTRA_RESULT_RECEIVER);
+                        ResultReceiver receiver = intent.getParcelableExtra(EXTRA_RESULT_RECEIVER);
                         if (receiver != null) {
                             Bundle bundle = new Bundle();
                             bundle.putLong(EXTRA_NEW_CHECKIN_TIME, info.getLastCheckin());
@@ -109,7 +106,7 @@ public class CheckinService extends IntentService {
             Log.w(TAG, e);
         } finally {
             if (intent != null) {
-                // WakefulBroadcastReceiver.completeWakefulIntent removed (deprecated)
+                WakefulBroadcastReceiver.completeWakefulIntent(intent);
             }
             schedule(this);
             stopSelf();

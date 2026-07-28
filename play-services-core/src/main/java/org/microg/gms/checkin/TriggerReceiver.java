@@ -17,13 +17,14 @@
 package org.microg.gms.checkin;
 
 import android.app.PendingIntent;
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.NetworkRequest;
 import android.util.Log;
+
+import androidx.legacy.content.WakefulBroadcastReceiver;
 
 import org.microg.gms.common.ForegroundServiceContext;
 
@@ -33,7 +34,7 @@ import static android.os.Build.VERSION.SDK_INT;
 import static org.microg.gms.checkin.CheckinService.EXTRA_FORCE_CHECKIN;
 import static org.microg.gms.checkin.CheckinService.REGULAR_CHECKIN_INTERVAL;
 
-public class TriggerReceiver extends BroadcastReceiver {
+public class TriggerReceiver extends WakefulBroadcastReceiver {
     private static final String TAG = "GmsCheckinTrigger";
     private static boolean registered = false;
 
@@ -53,7 +54,7 @@ public class TriggerReceiver extends BroadcastReceiver {
                 if (networkInfo != null && networkInfo.isConnected() || force) {
                     Intent subIntent = new Intent(context, CheckinService.class);
                     subIntent.putExtra(EXTRA_FORCE_CHECKIN, force);
-                    new ForegroundServiceContext(context).startService(subIntent);
+                    startWakefulService(new ForegroundServiceContext(context), subIntent);
                 } else if (SDK_INT >= 23) {
                     // no network, register a network callback to retry when we have internet
                     NetworkRequest networkRequest = new NetworkRequest.Builder()

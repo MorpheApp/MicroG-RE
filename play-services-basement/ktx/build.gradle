@@ -31,13 +31,13 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility rootProject.ext.javaVersion
-        targetCompatibility rootProject.ext.javaVersion
+        sourceCompatibility JavaVersion.VERSION_18
+        targetCompatibility JavaVersion.VERSION_18
     }
 
     kotlinOptions {
         //noinspection GrDeprecatedAPIUsage
-        jvmTarget = rootProject.ext.javaVersion.toString()
+        jvmTarget = '18'
     }
 }
 

@@ -76,7 +76,11 @@
 
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_REMOTE_MESSAGING" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
     <uses-permission
         android:name="android.permission.CHANGE_DEVICE_IDLE_TEMP_WHITELIST"
         tools:ignore="ProtectedPermissions" />
@@ -117,6 +121,7 @@
 
         <service android:name="org.microg.gms.checkin.CheckinService"
             android:exported="true"
+            android:foregroundServiceType="dataSync"
             tools:ignore="ExportedService,IntentFilterExportedReceiver">
             <intent-filter>
                 <action android:name="com.google.android.gms.checkin.BIND_TO_SERVICE" />
@@ -124,7 +129,7 @@
         </service>
 
         <receiver android:name="org.microg.gms.checkin.TriggerReceiver"
-            android:exported="false"
+            android:exported="true"
             tools:ignore="IntentFilterExportedReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -175,6 +180,7 @@
 
         <service
             android:name="org.microg.gms.gcm.McsService"
+            android:foregroundServiceType="remoteMessaging"
             android:process=":persistent" />
 
         <receiver
@@ -193,7 +199,7 @@
 
         <receiver
             android:name="org.microg.gms.gcm.TriggerReceiver"
-            android:exported="false"
+            android:exported="true"
             android:process=":persistent"
             tools:ignore="IntentFilterExportedReceiver">
             <intent-filter>
@@ -218,7 +224,7 @@
 
         <receiver
             android:name="org.microg.gms.gcm.UnregisterReceiver"
-            android:exported="false"
+            android:exported="true"
             android:process=":persistent"
             tools:ignore="IntentFilterExportedReceiver">
             <intent-filter>

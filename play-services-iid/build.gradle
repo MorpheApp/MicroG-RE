@@ -17,7 +17,6 @@ android {
 
     defaultConfig {
         minSdkVersion androidMinSdk
-        targetSdkVersion androidTargetSdk
 
         //noinspection GroovyConstructorNamedArguments
         manifestPlaceholders = [
@@ -26,8 +25,14 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility rootProject.ext.javaVersion
-        targetCompatibility rootProject.ext.javaVersion
+        sourceCompatibility JavaVersion.VERSION_18
+        targetCompatibility JavaVersion.VERSION_18
+    }
+    lint {
+        targetSdk 36
+    }
+    testOptions {
+        targetSdk 36
     }
 }
 

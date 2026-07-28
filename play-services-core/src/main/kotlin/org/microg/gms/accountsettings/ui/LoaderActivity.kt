@@ -92,7 +92,6 @@ class LoaderActivity : AppCompatActivity() {
             if (canAskForAccount) {
                 val intent = Intent(this, AccountPickerActivity::class.java)
                 intent.putExtra(EXTRA_ALLOWABLE_ACCOUNT_TYPES, arrayOf(DEFAULT_ACCOUNT_TYPE))
-                @Suppress("DEPRECATION")
                 startActivityForResult(intent, REQUEST_ACCOUNT_PICKER)
                 canAskForAccount = false
                 return
