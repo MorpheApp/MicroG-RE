@@ -78,6 +78,7 @@ jobs:
         with:
           files: ${{ steps.sign_app.outputs.signedFile }}
           generate_release_notes: true
+          token: ${{ secrets.GH_TOKEN }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
