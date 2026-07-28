@@ -55,23 +55,15 @@ jobs:
       - name: "Execute Gradle build"
         run: "./gradlew --no-daemon clean :play-services-core:assembleDefaultRelease"
 
-      - name: "Generate fallback keystore if secrets are missing"
-        if: ${{ secrets.KEYSTORE_B64 == '' && secrets.KEYSTORE_BASE64 == '' && secrets.SIGNING_KEY == '' && secrets.ANDROID_SIGNING_KEY == '' }}
-        run: |
-          keytool -genkey -v -keystore fallback.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Android Release,O=MicroG,C=US"
-          echo "FALLBACK_KEYSTORE_B64=$(base64 -w 0 fallback.keystore)" >> $GITHUB_ENV
-          echo "FALLBACK_ALIAS=androiddebugkey" >> $GITHUB_ENV
-          echo "FALLBACK_PASS=android" >> $GITHUB_ENV
-
       - uses: ilharp/sign-android-release@v2
         name: "Sign app APK"
         id: sign_app
         with:
           releaseDir: play-services-core/build/outputs/apk/default/release
-          signingKey: ${{ secrets.KEYSTORE_B64 || secrets.KEYSTORE_BASE64 || secrets.SIGNING_KEY || secrets.ANDROID_SIGNING_KEY || env.FALLBACK_KEYSTORE_B64 }}
-          keyAlias: ${{ secrets.KEY_ALIAS || secrets.ALIAS || secrets.KEY_STORE_ALIAS || env.FALLBACK_ALIAS }}
-          keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD || secrets.KEY_STORE_PASSWORD || env.FALLBACK_PASS }}
-          keyPassword: ${{ secrets.KEY_PASSWORD || secrets.KEYSTORE_PASSWORD || secrets.STORE_PASSWORD || env.FALLBACK_PASS }}
+          signingKey: ${{ secrets.KEYSTORE_BASE64 }}
+          keyAlias: ${{ secrets.KEY_ALIAS }}
+          keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
+          keyPassword: ${{ secrets.KEY_PASSWORD }}
           buildToolsVersion: 36.0.0
 
       - name: Upload artifacts
@@ -86,8 +78,7 @@ jobs:
         with:
           files: ${{ steps.sign_app.outputs.signedFile }}
           generate_release_notes: true
-          token: ${{ secrets.GH_TOKEN || secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN || secrets.GITHUB_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN || secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
