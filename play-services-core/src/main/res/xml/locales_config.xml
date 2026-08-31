@@ -66,6 +66,7 @@
     <locale android:name="te-IN" />
     <locale android:name="th-TH" />
     <locale android:name="tr-TR" />
+    <locale android:name="ug" />
     <locale android:name="uk-UA" />
     <locale android:name="ur-IN" />
     <locale android:name="uz-UZ" />
