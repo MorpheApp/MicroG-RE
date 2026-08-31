@@ -62,7 +62,6 @@
         <item>am-ET</item>
         <item>ar-SA</item>
         <item>as-IN</item>
-        <item>ast</item>
         <item>az-AZ</item>
         <item>be-BY</item>
         <item>bg-BG</item>
@@ -75,7 +74,6 @@
         <item>de-DE</item>
         <item>el-GR</item>
         <item>en</item>
-        <item>eo</item>
         <item>es-ES</item>
         <item>et-EE</item>
         <item>eu-ES</item>
@@ -101,10 +99,8 @@
         <item>lo-LA</item>
         <item>lt-LT</item>
         <item>lv-LV</item>
-        <item>lzh</item>
         <item>mai-IN</item>
         <item>mk-MK</item>
-        <item>ml</item>
         <item>mn-MN</item>
         <item>mr-IN</item>
         <item>ms-MY</item>
@@ -128,7 +124,6 @@
         <item>te-IN</item>
         <item>th-TH</item>
         <item>tr-TR</item>
-        <item>ug</item>
         <item>uk-UA</item>
         <item>ur-IN</item>
         <item>uz-UZ</item>
