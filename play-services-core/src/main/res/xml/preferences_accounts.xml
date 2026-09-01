@@ -31,6 +31,27 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="prefcat_account_backup"
+        android:layout="@layout/preference_material_category"
+        android:title="@string/prefcat_accounts_backup_title"
+        app:allowDividerAbove="false">
+
+        <Preference
+            android:icon="@drawable/ic_backup"
+            android:key="pref_accounts_export"
+            android:layout="@layout/preference_material_top"
+            android:summary="@string/pref_accounts_backup_summary"
+            android:title="@string/pref_accounts_backup_title" />
+
+        <Preference
+            android:icon="@drawable/ic_restore"
+            android:key="pref_accounts_import"
+            android:layout="@layout/preference_material_bottom"
+            android:summary="@string/pref_accounts_restore_summary"
+            android:title="@string/pref_accounts_restore_title" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:layout="@layout/preference_material_category"
         android:title="@string/prefcat_youtube_activity"
         app:allowDividerAbove="false">
