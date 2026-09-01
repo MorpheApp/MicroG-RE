@@ -202,7 +202,10 @@
 
     <application
         android:allowBackup="true"
+        android:backupAgent="org.microg.gms.backup.GmsBackupAgent"
+        android:dataExtractionRules="@xml/data_extraction_rules"
         android:forceQueryable="true"
+        android:fullBackupContent="@xml/backup_rules"
         android:fullBackupOnly="true"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"

@@ -111,6 +111,7 @@ dependencies {
     implementation "com.google.guava:guava:$guavaVersion"
     implementation "com.google.crypto.tink:tink-android:$tinkVersion"
     implementation "io.coil-kt:coil-compose:2.4.0"
+    implementation "com.google.code.gson:gson:2.14.0"
 }
 
 android {
