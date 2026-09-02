@@ -237,6 +237,8 @@ Please set up a password, PIN, or pattern lock screen."</string>
 
     <string name="pref_about_title">About MicroG RE</string>
     <string name="pref_hide_launcher_icon">Hide icon in launcher</string>
+    <string name="hide_launcher_icon_dialog_message">If enabled, MicroG will be hidden in your app launcher. MicroG can be opened from the app info found in your device system app list.</string>
+    <string name="hide_launcher_icon_updating_title">Please wait while the app is updated</string>
     <string name="pref_language_title">Language</string>
     <string name="pref_language_system_default">System default</string>
     <string name="pref_github" translatable="false">GitHub</string>
@@ -254,6 +256,11 @@ Please set up a password, PIN, or pattern lock screen."</string>
     <string name="update_ignore">Ignore</string>
     <string name="update_downloading_title">Downloading update…</string>
     <string name="update_download_failed">Download failed. Check your connection and try again.</string>
+    <string name="update_signature_mismatch">App cannot be updated, signatures are different.</string>
+    <string name="update_failed_title">Update failed</string>
+    <string name="update_permission_required_title">Permission required</string>
+    <string name="update_permission_required_message">To install updates, please allow MicroG to install unknown apps in system settings.</string>
+    <string name="update_open_settings">Settings</string>
     <string name="update_check_failed">Could not check for updates. Check your connection and try again.</string>
     <string name="update_up_to_date_title">You\'re up to date</string>
     <string name="update_up_to_date_message">MicroG-RE v%s is the latest version.</string>

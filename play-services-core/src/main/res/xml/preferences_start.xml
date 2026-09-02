@@ -77,7 +77,7 @@
             android:title="@string/service_name_location"/>
     </PreferenceCategory>
     <SwitchPreferenceCompat
-        android:defaultValue="true"
+        android:defaultValue="false"
         android:icon="@drawable/ic_hide_icon"
         android:key="pref_hide_launcher_icon"
         android:layout="@layout/preference_material_middle"

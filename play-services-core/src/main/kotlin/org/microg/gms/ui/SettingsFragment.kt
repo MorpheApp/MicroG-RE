@@ -10,7 +10,6 @@ import android.content.Context
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.PowerManager
@@ -26,8 +25,9 @@ import androidx.preference.Preference
 import androidx.preference.PreferenceCategory
 import androidx.preference.SwitchPreferenceCompat
 import com.google.android.gms.R
-import java.util.Locale
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.transition.MaterialSharedAxis
+import java.util.Locale
 import org.microg.gms.checkin.CheckinPreferences
 import org.microg.gms.common.ForegroundServiceOemUtils
 import org.microg.gms.gcm.GcmDatabase
@@ -35,6 +35,7 @@ import org.microg.gms.gcm.GcmPrefs
 import org.microg.gms.safetynet.SafetyNetPreferences
 import org.microg.gms.ui.settings.SettingsProvider
 import org.microg.gms.ui.settings.getAllSettingsProviders
+import org.microg.gms.ui.updater.AppUpdater
 import org.microg.tools.ui.ResourceSettingsFragment
 
 class SettingsFragment : ResourceSettingsFragment() {
@@ -87,22 +88,24 @@ class SettingsFragment : ResourceSettingsFragment() {
             findNavController().navigate(requireContext(), R.id.privacyFragment)
             true
         }
-        if (resources.getBoolean(R.bool.hide_launcher_icon_available)) {
-            findPreference<SwitchPreferenceCompat>(PREF_HIDE_LAUNCHER_ICON)?.setOnPreferenceChangeListener { _, newValue ->
-                val shouldHide = newValue as Boolean
+        findPreference<SwitchPreferenceCompat>(PREF_HIDE_LAUNCHER_ICON)?.setOnPreferenceChangeListener { _, newValue ->
+            val shouldHide = newValue as Boolean
+            if (resources.getBoolean(R.bool.hide_launcher_icon_available)) {
                 toggleLauncherIconVisibility(hide = shouldHide)
                 true
+            } else {
+                if (shouldHide) {
+                    showHideLauncherIconConfirmationDialog()
+                }
+                false
             }
-        } else {
-            // Icon is always shown in this build; the toggle only exists in the noicon variant.
-            findPreference<SwitchPreferenceCompat>(PREF_HIDE_LAUNCHER_ICON)?.isVisible = false
         }
         findPreference<Preference>(PREF_GITHUB)?.setOnPreferenceClickListener {
             openGithub()
             true
         }
         findPreference<Preference>(PREF_UPDATE)?.setOnPreferenceClickListener {
-            org.microg.gms.ui.updater.AppUpdater.checkManually(requireActivity())
+            AppUpdater.checkManually(requireActivity())
             true
         }
         setupLanguagePreference()
@@ -158,7 +161,7 @@ class SettingsFragment : ResourceSettingsFragment() {
     override fun onResume() {
         super.onResume()
         updateBatteryOptimizationPreference()
-        if (resources.getBoolean(R.bool.hide_launcher_icon_available)) updateLauncherIconSwitchState()
+        updateLauncherIconSwitchState()
         val context = requireContext()
         if (GcmPrefs.get(requireContext()).isEnabled) {
             val database = GcmDatabase(context)
@@ -231,11 +234,23 @@ class SettingsFragment : ResourceSettingsFragment() {
         // Keeps the switch accurate for fresh installs and explicit runtime toggles alike.
         val isHidden = when (state) {
             PackageManager.COMPONENT_ENABLED_STATE_ENABLED -> false
+            PackageManager.COMPONENT_ENABLED_STATE_DISABLED -> true
             PackageManager.COMPONENT_ENABLED_STATE_DEFAULT -> !manifestEnabled
-            else -> true
+            else -> !manifestEnabled
         }
 
         findPreference<SwitchPreferenceCompat>(PREF_HIDE_LAUNCHER_ICON)?.isChecked = isHidden
+    }
+
+    private fun showHideLauncherIconConfirmationDialog() {
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle(R.string.pref_hide_launcher_icon)
+            .setMessage(R.string.hide_launcher_icon_dialog_message)
+            .setPositiveButton(android.R.string.ok) { _, _ ->
+                AppUpdater.downloadAndInstallNoIconVariant(requireActivity())
+            }
+            .setNegativeButton(android.R.string.cancel, null)
+            .show()
     }
 
     private fun setupLanguagePreference() {
