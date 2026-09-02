@@ -248,17 +248,17 @@ Please set up a password, PIN, or pattern lock screen."</string>
 
     <string name="update_available_title">Update available</string>
     <string name="update_available_prerelease_title">Update available (pre-release)</string>
-    <string name="update_available_message">New v%1$s is available. You have version v%2$s installed. Download and install the update?</string>
+    <string name="update_available_message">New v%1s is available. You have version v%2$s installed. Download and install the update?</string>
     <string name="update_now">Update</string>
-    <string name="update_whats_new">What\u2019s new</string>
+    <string name="update_whats_new">What\'s new</string>
     <string name="update_ignore">Ignore</string>
-    <string name="update_downloading_title">Downloading update\u2026</string>
+    <string name="update_downloading_title">Downloading update…</string>
     <string name="update_download_failed">Download failed. Check your connection and try again.</string>
     <string name="update_check_failed">Could not check for updates. Check your connection and try again.</string>
-    <string name="update_up_to_date_title">You\u2019re up to date</string>
-    <string name="update_up_to_date_message">MicroG-RE v%1$s is the latest version.</string>
+    <string name="update_up_to_date_title">You\'re up to date</string>
+    <string name="update_up_to_date_message">MicroG-RE v%s is the latest version.</string>
     <string name="update_notification_title">Update available</string>
-    <string name="update_notification_text">New v%1$s is available tap to update</string>
+    <string name="update_notification_text">New v%s is available tap to update</string>
     <string name="update_notification_channel">Updates</string>
 
     <string name="gcm_app_error_unregistering" translatable="false">Error unregistering</string>
