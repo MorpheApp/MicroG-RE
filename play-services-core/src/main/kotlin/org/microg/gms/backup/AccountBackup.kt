@@ -1,3 +1,4 @@
+// https://gitlab.e.foundation/e/os/GmsCore/-/commit/1ef309b660ed6dfd880864236207518f672c4af4
 /*
  * SPDX-FileCopyrightText: 2026 Murena SAS
  * SPDX-License-Identifier: Apache-2.0
