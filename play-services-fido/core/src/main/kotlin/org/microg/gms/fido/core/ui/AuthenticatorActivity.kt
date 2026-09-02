@@ -7,6 +7,7 @@ package org.microg.gms.fido.core.ui
 
 import android.content.Intent
 import android.graphics.Color
+import org.microg.gms.fido.core.BuildConfig
 import android.graphics.drawable.ColorDrawable
 import android.os.Build.VERSION.SDK_INT
 import android.os.Bundle
@@ -44,7 +45,7 @@ import org.microg.gms.utils.getFirstSignatureDigest
 import org.microg.gms.utils.toBase64
 
 const val TAG = "FidoUi"
-const val ACTION_FIDO_AUTHENTICATE = "org.microg.gms.fido.AUTHENTICATE"
+const val ACTION_FIDO_AUTHENTICATE = BuildConfig.BASE_PACKAGE_NAME + ".gms.fido.AUTHENTICATE"
 
 class AuthenticatorActivity : AppCompatActivity(), TransportHandlerCallback {
     val options: RequestOptions?
