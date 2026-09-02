@@ -757,34 +757,12 @@
                 android:resource="@xml/credentials_provider_passkey" />
         </service>
 
-        <service
-            android:name="com.google.android.gms.auth.api.credentials.credman.service.RemoteService"
-            android:exported="true"
-            android:permission="android.permission.BIND_CREDENTIAL_PROVIDER_SERVICE"
-            tools:targetApi="34">
-            <intent-filter>
-                <action android:name="android.service.credentials.system.CredentialProviderService"/>
-            </intent-filter>
-            <meta-data
-                android:name="android.credentials.provider"
-                android:resource="@xml/credentials_provider_remote" />
-        </service>
-
-        <service
-            android:name="com.google.android.gms.auth.api.credentials.credman.service.GoogleIdService"
-            android:exported="true"
-            android:icon="@drawable/ic_google_logo"
-            android:label="@string/credentials_service_sign_in_with_google_label"
-            android:permission="android.permission.BIND_CREDENTIAL_PROVIDER_SERVICE"
-            tools:targetApi="34">
-            <intent-filter>
-                <action android:name="android.service.credentials.system.CredentialProviderService"/>
-            </intent-filter>
-            <meta-data
-                android:name="android.credentials.provider"
-                android:resource="@xml/credentials_provider_google_id" />
-        </service>
-
+        <!-- The android.service.credentials.system.* provider services (GoogleIdService /
+             RemoteService) are privileged-only in real Play services; declaring them in a
+             re-signed (non-system) package makes the platform's CredentialManager UI-launch
+             path fail with NameNotFoundException when building the provider picker. The regular
+             PasswordAndPasskeyService provider above is the path third-party installs are
+             queried through, so the system-level providers are intentionally not declared. -->
 
         <activity
             android:name="org.microg.gms.auth.credentials.provider.PublicKeyProxyActivity"
