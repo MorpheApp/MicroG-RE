@@ -1,4 +1,12 @@
-// https://gitlab.e.foundation/e/os/GmsCore/-/commit/1ef309b660ed6dfd880864236207518f672c4af4
+/*
+ * This file contains code modified from
+ * https://gitlab.e.foundation/e/os/GmsCore
+ * https://gitlab.e.foundation/e/os/GmsCore/-/commit/1ef309b660ed6dfd880864236207518f672c4af4
+ *
+ * Modified and refactored by Morphe on September 1st 2026.
+ * https://github.com/MorpheApp/MicroG-RE
+ */
+
 /*
  * SPDX-FileCopyrightText: 2026 Murena SAS
  * SPDX-License-Identifier: Apache-2.0
