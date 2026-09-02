@@ -76,9 +76,7 @@ class UpdateCheckReceiver : BroadcastReceiver() {
             try {
                 val noiconVariant =
                     context.resources.getBoolean(com.google.android.gms.R.bool.hide_launcher_icon_available)
-                val includePrerelease = context.getSharedPreferences(
-                    context.packageName + "_preferences", Context.MODE_PRIVATE
-                ).getBoolean(AppUpdater.PREFS_INCLUDE_PRERELEASE, false)
+                val includePrerelease = AppUpdater.includePrerelease(context)
                 val update = AppUpdater.fetchLatestUpdate(noiconVariant, includePrerelease)
                 if (update == null || !AppUpdater.isNewerThanInstalled(update)) return@Thread
                 val ignored = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)

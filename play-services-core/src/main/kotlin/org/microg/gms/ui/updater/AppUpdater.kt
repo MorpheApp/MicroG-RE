@@ -766,9 +766,11 @@ object AppUpdater {
     private fun prefs(context: Context): SharedPreferences =
         context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
 
-    /** True when the "include pre-release builds" settings toggle is enabled. */
-    private fun includePrerelease(context: Context): Boolean =
-        prefsDefault(context).getBoolean(PREFS_INCLUDE_PRERELEASE, false)
+    /** True when the "include pre-release builds" settings toggle is enabled OR current version is a dev build. */
+    @JvmStatic
+    fun includePrerelease(context: Context): Boolean =
+        BuildConfig.VERSION_NAME.contains("dev", ignoreCase = true) ||
+                prefsDefault(context).getBoolean(PREFS_INCLUDE_PRERELEASE, false)
 
     private fun setPrereleasePref(context: Context, value: Boolean) {
         prefsDefault(context).edit().putBoolean(PREFS_INCLUDE_PRERELEASE, value).apply()
