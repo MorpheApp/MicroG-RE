@@ -175,7 +175,7 @@ const val GOOGLE_ID_BUNDLE_KEY_PROFILE_PICTURE_URI = "com.google.android.librari
 const val GOOGLE_ID_FILTER_BY_AUTHORIZED_ACCOUNTS = "com.google.android.libraries.identity.googleid.BUNDLE_KEY_FILTER_BY_AUTHORIZED_ACCOUNTS"
 
 // Credential types
-const val TYPE_GOOGLE_ID_TOKEN_CREDENTIAL = "com.google.android.libraries.identity.googleid.TYPE_GOOGLE_ID_TOKEN_CREDENTIAL"
+const val TYPE_GOOGLE_ID_TOKEN_CREDENTIAL = "app.revanced.android.libraries.identity.googleid.TYPE_GOOGLE_ID_TOKEN_CREDENTIAL"
 
 data class GoogleIdRequestParams(
     val isSignInWithGoogle: Boolean,
