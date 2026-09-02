@@ -173,6 +173,15 @@
     <string name="pref_language_title">Мова</string>
     <string name="pref_language_system_default">Системна</string>
     <string name="pref_github_summary">Репозиторій вихідного коду</string>
+    <string name="pref_update_title">Перевірка наявності оновлень</string>
+    <string name="update_available_title">Доступне оновлення</string>
+    <string name="update_now">Оновити</string>
+    <string name="update_whats_new">Що нового</string>
+    <string name="update_downloading_title">Завантаження оновлення…</string>
+    <string name="update_failed_title">Помилка оновлення</string>
+    <string name="update_open_settings">Налаштування</string>
+    <string name="update_notification_title">Доступне оновлення</string>
+    <string name="update_notification_channel">Оновлення</string>
     <string name="gcm_unregister_app">Скасувати реєстрацію</string>
     <string name="gcm_no_message_yet">Поки що повідомлень не отримано</string>
     <string name="gcm_last_message_at">Останнє повідомлення: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

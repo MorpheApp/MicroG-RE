@@ -87,6 +87,10 @@ Isto pode tardar uns segundos.
     <string name="pref_about_title">Acerca de MicroG RE</string>
     <string name="pref_hide_launcher_icon">Ocultar icona no lanzador</string>
     <string name="pref_github_summary">Repositorio de código fonte</string>
+    <string name="update_available_title">Actualización dispoñible</string>
+    <string name="update_failed_title">Erro ao actualizar</string>
+    <string name="update_open_settings">Axustes</string>
+    <string name="update_notification_title">Actualización dispoñible</string>
     <string name="gcm_unregister_app">Cancelar rexistro</string>
     <string name="gcm_no_message_yet">Non se recibiron mensaxes ata agora</string>
     <string name="gcm_registered">Rexistrado</string>

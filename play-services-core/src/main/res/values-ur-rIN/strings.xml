@@ -7,6 +7,9 @@
     <!-- Self check -->
     <!-- Settings strings -->
     <string name="prefcat_accounts_settings_title">ترتیبات</string>
+    <string name="update_available_title">اپڈیٹ دستیاب ہے</string>
+    <string name="update_open_settings">ترتیبات</string>
+    <string name="update_notification_title">اپڈیٹ دستیاب ہے</string>
     <string name="credentials_assisted_continue">जारी रखें</string>
     <!-- Passkey management -->
 </resources>

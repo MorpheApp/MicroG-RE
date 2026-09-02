@@ -47,6 +47,8 @@
     <string name="pref_data_in_youtube">ទិន្នន័យរបស់អ្នកនៅក្នុង YouTube</string>
     <string name="pref_privacy_title">ឯកជនភាព</string>
     <string name="pref_about_title">អំពី MicroG RE</string>
+    <string name="update_failed_title">ការអាប់ដេតបានបរាជ័យ</string>
+    <string name="update_open_settings">ការកំណត់</string>
     <string name="gcm_unregister_app">មិនបានចុះបញ្ជីទេ</string>
     <string name="gcm_registered">បានចុះបញ្ជី</string>
     <string name="gcm_network_state_disconnected">បានផ្តាច់</string>

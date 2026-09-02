@@ -15,12 +15,19 @@
   ~ limitations under the License.
   -->
 <resources>
+    <string name="lib_name">ئامرازەکانی ڕووکاری microG</string>
+    <string name="lib_license">مۆڵەتی ئەپاش 2.0، تیمی مایکرۆجی</string>
     <string name="about_version_str">وەشانی  %1$s</string>
     <string name="about_default_license">هەموو مافەکان پارێزراون.</string>
+    <string name="prefcat_setup">دامەزراندن</string>
     <string name="self_check_title">خۆپشکنین</string>
+    <string name="self_check_desc">بزانە ئایا سیستەمەکە بە دروستی ڕێکخراوە بۆ بەکارهێنانی microG.</string>
+    <string name="self_check_cat_permissions">ڕێگەدان بەخشرا</string>
     <string name="self_check_name_permission">ڕێگەپێدان بۆ %1$s:</string>
+    <string name="self_check_name_permission_interact_across_profiles">ڕێگەدان بۆ کارلێککردن لەگەڵ پڕۆفایلی کار:</string>
     <string name="self_check_resolution_permission">بۆ پێدانی مۆڵەت لێرە دەست لێبدە.  پێنەدانی مۆڵەتەکە دەتوانێت ببێتە هۆی هەڵسوکەوتی خراپ لە بەرنامەکاندا.</string>
     <string name="about_root_title">microG ڕووکاری دیمۆ</string>
+    <string name="about_root_summary">پوختە</string>
     <string name="about_root_version">وەشانی v0.1.0</string>
     <string name="about_root_libraries">کتێبخانەکانی لەگەڵدایە</string>
     <!--Updater-->

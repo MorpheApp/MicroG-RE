@@ -83,6 +83,7 @@
     <string name="pref_about_title">За “MicroG RE„</string>
     <string name="pref_hide_launcher_icon">Сокриј ја иконата во launcher-от</string>
     <string name="pref_github_summary">Репозиториум на source code</string>
+    <string name="update_open_settings">Поставки</string>
     <string name="gcm_unregister_app">Поништете ја регистрацијата</string>
     <string name="gcm_no_message_yet">Досега нема примени пораки</string>
     <string name="gcm_registered">Регистриран</string>

@@ -7,5 +7,6 @@
     <!-- Self check -->
     <!-- Settings strings -->
     <string name="prefcat_about">Quant a</string>
+    <string name="update_failed_title">Actualització fallida</string>
     <!-- Passkey management -->
 </resources>

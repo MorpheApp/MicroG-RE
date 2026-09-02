@@ -35,6 +35,7 @@ Ev dikare çend deqîqan bidome."</string>
     <!-- Settings strings -->
     <string name="prefcat_accounts_settings_title">Nastîn</string>
     <string name="pref_hide_launcher_icon">Îkona launcherê veşêre</string>
+    <string name="update_open_settings">Nastîn</string>
     <string name="games_delete_profile_dialog_message">Ev çalakî nikare bê paşve kirin.</string>
     <string name="games_delete_profile_fail">Nehate ku profîla we were jêbirin. Paşê carek din biceribînin.</string>
     <string name="games_delete_game_data_confirm_dialog_title">Daneyên ji bo %1$s jê bibe</string>

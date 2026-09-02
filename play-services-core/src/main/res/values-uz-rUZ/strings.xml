@@ -31,6 +31,7 @@ Bu bir necha daqiqa davom etishi mumkin."</string>
     <!-- Settings strings -->
     <string name="prefcat_accounts_settings_title">Sozlamalar</string>
     <string name="pref_hide_launcher_icon">Ishga tushirgichda ikonkani yashirish</string>
+    <string name="update_failed_title">Yangilanishda xatolik</string>
     <string name="gcm_registered_since">Ro\'yxatdan o\'tgan: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
     <string name="gcm_unregister_confirm_title">Ro\'yxatdan o\'chirilsinmi: <xliff:g example="F-Droid">%1$s</xliff:g>?</string>
     <string name="gcm_unregister_confirm_message">Ba\'zi ilovalar avtomatik ravishda qayta ro\'yxatdan o\'tmaydi va/yoki buni qo\'lda qilish imkoniyatini taqdim etmaydi. Ro\'yxatdan o\'chirilgandan so\'ng bu ilovalar to\'g\'ri ishlamasligi mumkin.\nDavom etasizmi?</string>

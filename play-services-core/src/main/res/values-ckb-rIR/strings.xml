@@ -90,6 +90,10 @@
     <string name="pref_about_title">دەربارەی MicroG RE</string>
     <string name="pref_hide_launcher_icon">شاردنەوەی ئایکۆن لە ڕووکار</string>
     <string name="pref_github_summary">کۆگای سەرچاوە کۆد</string>
+    <string name="pref_update_title">بپشکنە بۆ نوێکردنەوەکان</string>
+    <string name="update_failed_title">نوێکردنەوە شکستس هێنا</string>
+    <string name="update_open_settings">ڕێکخستنەکان</string>
+    <string name="update_notification_channel">نوێکردنەوەکان</string>
     <string name="gcm_unregister_app">تۆمارنەکراو</string>
     <string name="gcm_no_message_yet">تا ئێستا هیچ نامەیەک وەرنەگیراوە</string>
     <string name="gcm_registered">تۆمارکراو</string>

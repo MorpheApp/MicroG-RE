@@ -28,6 +28,10 @@ Jūsų duomenys nebus prarasti"</string>
     <!-- Settings strings -->
     <string name="prefcat_about">Apie</string>
     <string name="prefcat_accounts_settings_title">Nustatymai</string>
+    <string name="pref_update_title">Patikrinti ar yra atnaujinimų</string>
+    <string name="update_failed_title">Nepavyko atnaujinti</string>
+    <string name="update_open_settings">Nustatymai</string>
+    <string name="update_notification_channel">Atnaujinimai</string>
     <string name="gcm_unregister_app">Atregistruoti</string>
     <string name="gcm_no_message_yet">Nėra gautų pranešimų</string>
     <string name="gcm_registered">Užregistruota</string>

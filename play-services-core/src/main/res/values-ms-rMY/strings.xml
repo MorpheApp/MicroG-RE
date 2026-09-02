@@ -17,6 +17,8 @@
     <!-- Settings strings -->
     <string name="prefcat_about">Mengenai</string>
     <string name="prefcat_accounts_settings_title">Tetapan</string>
+    <string name="update_failed_title">Kemas kini gagal</string>
+    <string name="update_open_settings">Tetapan</string>
     <string name="prefcat_advanced">Lebih mahir</string>
     <string name="profile_name_native">Asli</string>
     <string name="credentials_assisted_continue">Teruskan</string>
