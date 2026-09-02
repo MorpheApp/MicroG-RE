@@ -135,6 +135,11 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Needed to read arbitrary apps' signatures (FIDO2 caller verification, privileged-app
+         checks, spoofing lookups). Real GMS gets this as a system app; a sideloaded GMS
+         replacement must declare it to stay visible to all packages on API 30+. -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
     <uses-permission android:name="android.permission.USE_EXACT_ALARM" tools:ignore="ExactAlarm" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -202,7 +207,10 @@
 
     <application
         android:allowBackup="true"
+        android:backupAgent="org.microg.gms.backup.GmsBackupAgent"
+        android:dataExtractionRules="@xml/data_extraction_rules"
         android:forceQueryable="true"
+        android:fullBackupContent="@xml/backup_rules"
         android:fullBackupOnly="true"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -754,34 +762,12 @@
                 android:resource="@xml/credentials_provider_passkey" />
         </service>
 
-        <service
-            android:name="com.google.android.gms.auth.api.credentials.credman.service.RemoteService"
-            android:exported="true"
-            android:permission="android.permission.BIND_CREDENTIAL_PROVIDER_SERVICE"
-            tools:targetApi="34">
-            <intent-filter>
-                <action android:name="android.service.credentials.system.CredentialProviderService"/>
-            </intent-filter>
-            <meta-data
-                android:name="android.credentials.provider"
-                android:resource="@xml/credentials_provider_remote" />
-        </service>
-
-        <service
-            android:name="com.google.android.gms.auth.api.credentials.credman.service.GoogleIdService"
-            android:exported="true"
-            android:icon="@drawable/ic_google_logo"
-            android:label="@string/credentials_service_sign_in_with_google_label"
-            android:permission="android.permission.BIND_CREDENTIAL_PROVIDER_SERVICE"
-            tools:targetApi="34">
-            <intent-filter>
-                <action android:name="android.service.credentials.system.CredentialProviderService"/>
-            </intent-filter>
-            <meta-data
-                android:name="android.credentials.provider"
-                android:resource="@xml/credentials_provider_google_id" />
-        </service>
-
+        <!-- The android.service.credentials.system.* provider services (GoogleIdService /
+             RemoteService) are privileged-only in real Play services; declaring them in a
+             re-signed (non-system) package makes the platform's CredentialManager UI-launch
+             path fail with NameNotFoundException when building the provider picker. The regular
+             PasswordAndPasskeyService provider above is the path third-party installs are
+             queried through, so the system-level providers are intentionally not declared. -->
 
         <activity
             android:name="org.microg.gms.auth.credentials.provider.PublicKeyProxyActivity"
@@ -1654,6 +1640,17 @@
         <meta-data
             android:name="org.microg.gms.settings.gcm_enable_mcs_service"
             android:value="true" />
+
+        <receiver
+            android:name="org.microg.gms.ui.updater.UpdateCheckReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="org.microg.gms.ui.updater.CHECK" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

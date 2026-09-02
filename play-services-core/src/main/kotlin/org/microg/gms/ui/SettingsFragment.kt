@@ -101,6 +101,10 @@ class SettingsFragment : ResourceSettingsFragment() {
             openGithub()
             true
         }
+        findPreference<Preference>(PREF_UPDATE)?.setOnPreferenceClickListener {
+            org.microg.gms.ui.updater.AppUpdater.checkManually(requireActivity())
+            true
+        }
         setupLanguagePreference()
 
         findPreference<Preference>(PREF_ABOUT)!!.apply {
@@ -308,6 +312,7 @@ class SettingsFragment : ResourceSettingsFragment() {
         const val PREF_ACCOUNTS = "pref_accounts"
         const val PREF_HIDE_LAUNCHER_ICON = "pref_hide_launcher_icon"
         const val PREF_GITHUB = "pref_github"
+        const val PREF_UPDATE = "pref_update"
         const val PREF_LANGUAGE = "pref_language"
         const val PREF_PRIVACY = "pref_privacy"
         const val PREF_IGNORE_BATTERY_OPTIMIZATION = "pref_ignore_battery_optimization"
