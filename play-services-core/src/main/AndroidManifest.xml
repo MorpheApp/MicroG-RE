@@ -1666,6 +1666,17 @@
         <meta-data
             android:name="org.microg.gms.settings.gcm_enable_mcs_service"
             android:value="true" />
+
+        <receiver
+            android:name="org.microg.gms.ui.updater.UpdateCheckReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="org.microg.gms.ui.updater.CHECK" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

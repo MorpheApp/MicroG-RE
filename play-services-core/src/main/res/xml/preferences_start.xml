@@ -108,6 +108,12 @@
         android:key="prefcat_footer"
         android:layout="@layout/preference_material_category_none" />
     <Preference
+        android:icon="@drawable/ic_download"
+        android:key="pref_update"
+        android:layout="@layout/preference_material_middle"
+        android:summary="@string/pref_update_summary"
+        android:title="@string/pref_update_title" />
+    <Preference
         android:icon="@drawable/ic_information"
         android:key="pref_about"
         android:layout="@layout/preference_material_bottom"
