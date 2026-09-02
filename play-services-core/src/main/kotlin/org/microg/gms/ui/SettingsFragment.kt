@@ -37,6 +37,8 @@ import org.microg.gms.ui.settings.SettingsProvider
 import org.microg.gms.ui.settings.getAllSettingsProviders
 import org.microg.gms.ui.updater.AppUpdater
 import org.microg.tools.ui.ResourceSettingsFragment
+import androidx.core.content.edit
+import androidx.preference.PreferenceManager
 
 class SettingsFragment : ResourceSettingsFragment() {
     private val createdPreferences = mutableListOf<Preference>()
@@ -88,16 +90,23 @@ class SettingsFragment : ResourceSettingsFragment() {
             findNavController().navigate(requireContext(), R.id.privacyFragment)
             true
         }
-        findPreference<SwitchPreferenceCompat>(PREF_HIDE_LAUNCHER_ICON)?.setOnPreferenceChangeListener { _, newValue ->
-            val shouldHide = newValue as Boolean
-            if (resources.getBoolean(R.bool.hide_launcher_icon_available)) {
-                toggleLauncherIconVisibility(hide = shouldHide)
-                true
-            } else {
-                if (shouldHide) {
-                    showHideLauncherIconConfirmationDialog()
+        // Preference switch state is controlled exclusively by the launcher alias enabled state.
+        PreferenceManager.getDefaultSharedPreferences(requireContext()).edit {
+            remove(PREF_HIDE_LAUNCHER_ICON)
+        }
+        findPreference<SwitchPreferenceCompat>(PREF_HIDE_LAUNCHER_ICON)?.apply {
+            isPersistent = false
+            setOnPreferenceChangeListener { _, newValue ->
+                val shouldHide = newValue as Boolean
+                if (resources.getBoolean(R.bool.hide_launcher_icon_available)) {
+                    toggleLauncherIconVisibility(hide = shouldHide)
+                    true
+                } else {
+                    if (shouldHide) {
+                        showHideLauncherIconConfirmationDialog()
+                    }
+                    false
                 }
-                false
             }
         }
         findPreference<Preference>(PREF_GITHUB)?.setOnPreferenceClickListener {
@@ -220,26 +229,35 @@ class SettingsFragment : ResourceSettingsFragment() {
     }
 
     private fun updateLauncherIconSwitchState() {
-        val ctx = context ?: return
+        findPreference<SwitchPreferenceCompat>(PREF_HIDE_LAUNCHER_ICON)?.apply {
+            isPersistent = false
+            isChecked = isLauncherIconHidden()
+        }
+    }
+
+    private fun isLauncherIconHidden(): Boolean {
+        val ctx = context ?: return false
         val component = ComponentName(ctx, ACTIVITY_LAUNCHER_CONTROL)
         val pm = ctx.packageManager
-        val state = pm.getComponentEnabledSetting(component)
-        val manifestEnabled = try {
-            pm.getActivityInfo(component, 0).enabled
-        } catch (e: PackageManager.NameNotFoundException) {
-            true
-        }
-        // Effective state: a runtime ENABLED setting wins, a runtime disable wins, and
-        // otherwise the manifest default (android:enabled on the launcher alias) applies.
-        // Keeps the switch accurate for fresh installs and explicit runtime toggles alike.
-        val isHidden = when (state) {
-            PackageManager.COMPONENT_ENABLED_STATE_ENABLED -> false
-            PackageManager.COMPONENT_ENABLED_STATE_DISABLED -> true
-            PackageManager.COMPONENT_ENABLED_STATE_DEFAULT -> !manifestEnabled
-            else -> !manifestEnabled
+
+        when (pm.getComponentEnabledSetting(component)) {
+            PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+            PackageManager.COMPONENT_ENABLED_STATE_DISABLED_USER,
+            PackageManager.COMPONENT_ENABLED_STATE_DISABLED_UNTIL_USED -> return true
+            PackageManager.COMPONENT_ENABLED_STATE_ENABLED -> return false
+            else -> {}
         }
 
-        findPreference<SwitchPreferenceCompat>(PREF_HIDE_LAUNCHER_ICON)?.isChecked = isHidden
+        val intent = Intent(Intent.ACTION_MAIN)
+            .addCategory(Intent.CATEGORY_LAUNCHER)
+            .setPackage(ctx.packageName)
+
+        val resolveList = pm.queryIntentActivities(intent, 0)
+        val isLauncherIconPresent = resolveList.any {
+            it.activityInfo?.name == ACTIVITY_LAUNCHER_CONTROL
+        }
+
+        return !isLauncherIconPresent
     }
 
     private fun showHideLauncherIconConfirmationDialog() {

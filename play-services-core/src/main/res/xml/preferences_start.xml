@@ -81,6 +81,7 @@
         android:icon="@drawable/ic_hide_icon"
         android:key="pref_hide_launcher_icon"
         android:layout="@layout/preference_material_middle"
+        android:persistent="false"
         android:title="@string/pref_hide_launcher_icon" />
     <Preference
         android:icon="@drawable/ic_self_check"
