@@ -58,7 +58,7 @@ This can take a couple of minutes."</string>
     <string name="auth_action_step_enable_checkin">Enable device registration</string>
     <string name="auth_action_step_enable_checkin_description">"Your device needs to register to Google at least once.
 
-You can disable Google device registration after account setup is complete.</string>
+You can disable Google device registration after account setup is complete."</string>
     <string name="auth_action_step_enable_gcm">Enable Cloud Messaging</string>
     <string name="auth_action_step_enable_gcm_description">You can disable Cloud Messaging after account setup is complete.</string>
     <string name="auth_action_step_allow_microg_gcm">Allow Cloud Messaging for microG</string>
