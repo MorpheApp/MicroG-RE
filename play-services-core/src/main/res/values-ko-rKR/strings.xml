@@ -14,7 +14,6 @@
     <string name="dialog_cancel_button">취소</string>
     <string name="snackbar_remove_account">계정 \'%s\'을 제거하였습니다</string>
     <string name="snackbar_undo_button">계정 삭제</string>
-    <string name="limited_services_app_name">MicroG 제한된 서비스</string>
     <string name="gms_settings_name">MicroG 설정</string>
     <string name="gms_settings_summary">MicroG 서비스를 설정하세요.</string>
     <string name="just_a_sec">잠시만 기다리세요…</string>
@@ -41,8 +40,8 @@
     <string name="deny">거부</string>
     <string name="auth_notification_title">인증 필요</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g>는 Google 계정에 액세스하기 위해 승인이 필요합니다.</string>
-    <string name="auth_package_override_request_title"><b><xliff:g example="F-Droid">%1$s</xliff:g></b>가 <xliff:g example="account@example.com">%2$s</xliff:g>에 대한 액세스 권한을 갖도록 허용하시겠습니까?</string>
-    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b>가 <b><xliff:g example="F-Droid Inc.">%3$s</xliff:g>에서 제공하는 <xliff:g example="F-Droid">%2$s</xliff:g></b>인 것처럼 귀하의 계정에 액세스하려고 합니다. 이로 인해 해당 앱에 귀하의 계정에 대한 높은 수준의 권한이 부여될 수 있습니다.</string>
+    <string name="auth_package_override_request_title"><b><xliff:g example="F-Droid">%1$s</xliff:g></b>에 <xliff:g example="account@example.com">%2$s</xliff:g>에 대한 권한 액세스를 허용하시겠습니까?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b>에서 <b><xliff:g example="F-Droid Inc.">%3$s</xliff:g>에서 제공하는 <xliff:g example="F-Droid">%2$s</xliff:g></b>인 것처럼 귀하의 계정에 액세스하려고 합니다. 이로 인해 해당 앱에 귀하의 계정에 대한 권한 있는 액세스 권한이 부여될 수 있습니다.</string>
     <string name="auth_action_notification_channel_name">Google 계정 알림</string>
     <string name="auth_action_notification_channel_description">Google 계정 중 하나를 사용하기 전에 추가 설정이 필요하거나 계정이 microG와 호환되지 않을 때 알림을 보냅니다.</string>
     <string name="auth_action_notification_title">계정 작업 필요</string>
@@ -51,9 +50,9 @@
     <string name="auth_action_activity_header">Google 계정 설정 완료</string>
     <string name="auth_action_activity_explanation">이 기기에서 Google 계정 \'%s\'을 사용하려면 다음 단계를 완료하세요.</string>
     <string name="auth_action_step_enable_checkin">기기 등록 활성화</string>
-    <string name="auth_action_step_enable_checkin_description">기기를 Google에 최소 한 번 등록해야 합니다.
+    <string name="auth_action_step_enable_checkin_description">"사용자 기기는 Google에 최소 한 번 등록해야 합니다.
 
-계정 설정이 완료되면 Google 기기 등록을 비활성화할 수 있습니다.</string>
+계정 설정 완료 후 Google 기기 등록을 비활성화할 수 있습니다.  "</string>
     <string name="auth_action_step_enable_gcm">클라우드 메시징 활성화</string>
     <string name="auth_action_step_enable_gcm_description">계정 설정이 완료되면 클라우드 메시징을 비활성화할 수 있습니다.</string>
     <string name="auth_action_step_allow_microg_gcm">microG에 대한 클라우드 메시징 허용</string>
@@ -157,9 +156,9 @@
     <string name="pref_accounts_manage_accounts_summary">기기 계정 관리자 열기</string>
     <string name="prefcat_accounts_backup_title">계정 백업</string>
     <string name="pref_accounts_backup_title">계정 백업</string>
-    <string name="pref_accounts_backup_summary">Google 계정을 파일로 내보냅니다.</string>
+    <string name="pref_accounts_backup_summary">Google 계정을 파일로 내보내기</string>
     <string name="pref_accounts_restore_title">계정 복원</string>
-    <string name="pref_accounts_restore_summary">Google 계정을 파일에서 가져옵니다.</string>
+    <string name="pref_accounts_restore_summary">Google 계정을 파일에서 가져오기</string>
     <string name="pref_accounts_backup_warning_title">계정을 백업하시겠습니까?</string>
     <string name="pref_accounts_backup_warning_message">이 기능은 계정과 로그인 토큰 (SID/LSID) 을 파일에 기록합니다. 이 파일을 얻은 사람은 누구나 계정에 액세스할 수 있으므로 안전하게 보관하고 절대 공유하지 마세요.</string>
     <string name="button_backup_accounts">백업</string>
@@ -191,7 +190,7 @@
     <string name="pref_update_summary">GitHub에서 최신 버전을 확인하세요.</string>
     <string name="update_include_prerelease">Pre-release / 개발자 빌드 포함</string>
     <string name="update_available_title">업데이트 사용 가능</string>
-    <string name="update_available_prerelease_title">업데이트 가능 (Pre-release)</string>
+    <string name="update_available_prerelease_title">업데이트 사용 가능 (Pre-release)</string>
     <string name="update_available_message">새로운 %1s 버전이 있습니다. 현재 %2$s 버전이 설치되어 있습니다. 업데이트를 다운로드하여 설치하시겠습니까?</string>
     <string name="update_now">업데이트</string>
     <string name="update_whats_new">새로운 기능</string>
@@ -455,7 +454,7 @@
     <string name="pref_passkey_manager_empty_title">저장된 패스키 없음</string>
     <string name="pref_passkey_manager_description">서드파티 앱이 패스키를 등록하면 microG는 로컬 기록을 유지합니다. 앱이 microG에 알리지 않고 패스키를 삭제하면 기록이 남아 있을 수 있습니다. 여기에서 이러한 잔여 항목을 제거할 수 있습니다.</string>
     <string name="pref_passkey_manager_delete_dialog_title">패스키 삭제</string>
-    <string name="pref_passkey_manager_delete_dialog_message">\"%1$s\"에서\"\'%2$s\"의 패스키를 삭제합니다. 이 작업은 되돌릴 수 없습니다. 다시 로그인하려면 새 패스키를 등록해야 합니다.</string>
+    <string name="pref_passkey_manager_delete_dialog_message">\"%1$s\"에서\"\'%2$s\"에 대한 패스키를 삭제합니다. 이 작업은 되돌릴 수 없습니다. 다시 로그인하려면 새 패스키를 등록해야 합니다.</string>
     <string name="pref_passkey_manager_delete_dialog_confirm">삭제</string>
     <string name="pref_passkey_manager_unknown_user">알 수 없는 사용자</string>
     <string name="pref_passkey_manager_transport_screen_lock">화면 잠금</string>

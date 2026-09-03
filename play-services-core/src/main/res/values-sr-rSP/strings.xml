@@ -14,7 +14,6 @@ Vaši podaci neće biti izgubljeni"</string>
     <string name="dialog_cancel_button">Одустати</string>
     <string name="snackbar_remove_account">Нalog %s је уклањен</string>
     <string name="snackbar_undo_button">Поврати</string>
-    <string name="limited_services_app_name">MicroG Ограничене услуге</string>
     <string name="gms_settings_name">MicroG Подешавања</string>
     <string name="gms_settings_summary">Подеси MicroG услуге.</string>
     <string name="just_a_sec">Само тренутак... (one: Само тренутак... few: Само тренутка... other: Само тренутака...) </string>
@@ -41,8 +40,6 @@ Vaši podaci neće biti izgubljeni"</string>
     <string name="deny">Одустати</string>
     <string name="auth_notification_title">Уклонити</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> захтева вашу ауторизацију да приступи вашем Google налогу.</string>
-    <string name="auth_package_override_request_title"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> привилегован приступ <xliff:g example="account@example.com">%2$s</xliff:g>? абонирати се на обавештења.</string>
-    <string name="auth_package_override_request_message">&lt;b&gt;&lt;xliff:g example="F-Droid"&gt;%1$s&lt;/xliff:g&gt;&lt;/b&gt; жели да приступи вашем налогу као да је &lt;b&gt;&lt;xliff:g example="F-Droid"&gt;%2$s&lt;/xliff:g&gt; од &lt;b&gt;&lt;xliff:g example="F-Droid Inc."&gt;%3$s&lt;/xliff:g&gt;&lt;/b&gt;. Ово би јој могло дати привилегован приступ вашем налогу. </string>
     <string name="auth_action_notification_channel_name">Упозорења Google налога</string>
     <string name="auth_action_notification_channel_description">Обавештава када један од ваших Google налога захтева додатно подешавање пре него што се може користити или када је налог некомпатибилан са microG-ом.</string>
     <string name="auth_action_notification_title">Потребна акција на налогу</string>
@@ -51,9 +48,6 @@ Vaši podaci neće biti izgubljeni"</string>
     <string name="auth_action_activity_header">Завршите подешавање вашег Google налога</string>
     <string name="auth_action_activity_explanation">Довршите следеће кораке да бисте могли да користите ваш Google налог %s на овом уређају.</string>
     <string name="auth_action_step_enable_checkin">Омогући регистрацију уређаја</string>
-    <string name="auth_action_step_enable_checkin_description">\"Ваш уређај мора да се региструје код Google-а бар једном.
-
-Можете онемогућити регистрацију Google уређаја након што је подешавање налога завршено.</string>
     <string name="auth_action_step_enable_gcm">Омогући Cloud Messaging</string>
     <string name="auth_action_step_enable_gcm_description">Можете онемогућити Cloud Messaging након што је подешавање налога завршено.</string>
     <string name="auth_action_step_allow_microg_gcm">Дозволи Cloud Messaging за microG</string>

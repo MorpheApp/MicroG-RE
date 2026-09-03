@@ -14,7 +14,6 @@
     <string name="dialog_cancel_button">キャンセル</string>
     <string name="snackbar_remove_account">アカウント %s を削除しました</string>
     <string name="snackbar_undo_button">元に戻す</string>
-    <string name="limited_services_app_name">MicroG Limited Services</string>
     <string name="gms_settings_name">MicroG 設定</string>
     <string name="gms_settings_summary">MicroG サービスをセットアップします。.</string>
     <string name="just_a_sec">少々お待ちください…</string>
@@ -41,8 +40,6 @@
     <string name="deny">拒否</string>
     <string name="auth_notification_title">認証が必要です</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> はあなたのGoogleアカウントへのアクセスを承認する必要があります。</string>
-    <string name="auth_package_override_request_title"><b><xliff:g example="F-Droid">%1$s</xliff:g></b>に<xliff:g example="account@example.com">%2$s</xliff:g>への特権アクセスを許可しますか？</string>
-    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b>は、あたかも<b><xliff:g example="F-Droid">%2$s</xliff:g>（提供:<xliff:g example="F-Droid Inc.">%3$s</xliff:g>）</b>であるかのように、あなたのアカウントにアクセスしようとしています。これにより、このアプリにあなたのアカウントへの特権アクセスが許可される可能性があります。</string>
     <string name="auth_action_notification_channel_name">Googleアカウントアラート</string>
     <string name="auth_action_notification_channel_description">Googleアカウントの1つが使用前に追加設定を必要とする場合、またはアカウントがmicroGと互換性がない場合に通知します。</string>
     <string name="auth_action_notification_title">アカウントアクションが必要です</string>
@@ -51,9 +48,6 @@
     <string name="auth_action_activity_header">Googleアカウントの設定を完了してください</string>
     <string name="auth_action_activity_explanation">このデバイスでGoogleアカウント %s を使用するには、次の手順を完了してください。</string>
     <string name="auth_action_step_enable_checkin">デバイス登録を有効にする</string>
-    <string name="auth_action_step_enable_checkin_description">デバイスは少なくとも1回Googleに登録する必要があります。
-
-アカウント設定の完了後、Googleデバイス登録を無効にすることができます。</string>
     <string name="auth_action_step_enable_gcm">クラウドメッセージングを有効にする</string>
     <string name="auth_action_step_enable_gcm_description">アカウント設定の完了後、クラウドメッセージングを無効にすることができます。</string>
     <string name="auth_action_step_allow_microg_gcm">microGのクラウドメッセージングを許可</string>

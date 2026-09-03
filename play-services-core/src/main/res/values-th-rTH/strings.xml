@@ -14,7 +14,6 @@
     <string name="dialog_cancel_button">ยกเลิก</string>
     <string name="snackbar_remove_account">บัญชีที่ %s ถูกลบแล้ว</string>
     <string name="snackbar_undo_button">ยกเลิก</string>
-    <string name="limited_services_app_name">MicroG บริการจำกัด</string>
     <string name="gms_settings_name">การตั้งค่า MicroG</string>
     <string name="gms_settings_summary">ตั้งค่าบริการ MicroG</string>
     <string name="just_a_sec">รอสักครู่...</string>
@@ -41,8 +40,6 @@
     <string name="deny">ไม่อนุญาต</string>
     <string name="auth_notification_title">จำเป็นต้องมีการระบุตัวตน</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> ต้องการการอนุญาตจากคุณเพื่อเข้าถึงบัญชี Google ของคุณ</string>
-    <string name="auth_package_override_request_title">อนุญาตให้ <b><xliff:g example="F-Droid">%1$s</xliff:g></b> เข้าถึงสิทธิ์พิเศษไปยัง <xliff:g example="account@example.com">%2$s</xliff:g> ไหม?</string>
-    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> ต้องการเข้าถึงบัญชีของคุณราวกับว่าเป็น <b><xliff:g example="F-Droid">%2$s</xliff:g> โดย <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b> ซึ่งอาจให้สิทธิ์พิเศษในการเข้าถึงบัญชีของคุณ</string>
     <string name="auth_action_notification_channel_name">การแจ้งเตือนบัญชี Google</string>
     <string name="auth_action_notification_channel_description">แจ้งเตือนเมื่อบัญชี Google ใดบัญชีหนึ่งของคุณต้องการการตั้งค่าเพิ่มเติมก่อนใช้งาน หรือเมื่อบัญชีไม่เข้ากันกับ microG</string>
     <string name="auth_action_notification_title">จำเป็นต้องดำเนินการกับบัญชี</string>
@@ -51,9 +48,6 @@
     <string name="auth_action_activity_header">ตั้งค่าบัญชี Google ของคุณให้เสร็จสมบูรณ์</string>
     <string name="auth_action_activity_explanation">ทำตามขั้นตอนต่อไปนี้เพื่อให้สามารถใช้บัญชี Google %s ของคุณบนอุปกรณ์นี้ได้</string>
     <string name="auth_action_step_enable_checkin">เปิดใช้งานการลงทะเบียนอุปกรณ์</string>
-    <string name="auth_action_step_enable_checkin_description">\"อุปกรณ์ของคุณต้องลงทะเบียนกับ Google อย่างน้อยหนึ่งครั้ง
-
-คุณสามารถปิดการลงทะเบียนอุปกรณ์กับ Google ได้หลังจากตั้งค่าบัญชีเสร็จสมบูรณ์แล้ว</string>
     <string name="auth_action_step_enable_gcm">เปิดใช้งาน Cloud Messaging</string>
     <string name="auth_action_step_enable_gcm_description">คุณสามารถปิดใช้งาน Cloud Messaging ได้หลังจากตั้งค่าบัญชีเสร็จสมบูรณ์แล้ว</string>
     <string name="auth_action_step_allow_microg_gcm">อนุญาต Cloud Messaging สำหรับ microG</string>

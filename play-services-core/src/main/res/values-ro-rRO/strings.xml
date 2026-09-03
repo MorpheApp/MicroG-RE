@@ -14,7 +14,6 @@ Datele tale nu vor fi pierdute"</string>
     <string name="dialog_cancel_button">Anulați</string>
     <string name="snackbar_remove_account">Contul %s a fost eliminat</string>
     <string name="snackbar_undo_button">Anulați</string>
-    <string name="limited_services_app_name">MicroG Servicii limitate</string>
     <string name="gms_settings_name">MicroG Setări</string>
     <string name="gms_settings_summary">Configurați serviciile MicroG.</string>
     <string name="just_a_sec">Doar o secundă…</string>
@@ -41,8 +40,12 @@ Acest lucru poate dura câteva minute."</string>
     <string name="deny">Refuzați</string>
     <string name="auth_notification_title">Autentificare necesară</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> necesită autorizarea dvs. pentru a accesa contul dvs. Google.</string>
-    <string name="auth_package_override_request_title">Permiteți <b><xliff:g example="F-Droid">%1$s</xliff:g></b> acces privilegiat la <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
-    <string name="auth_package_override_request_message">&lt;b&gt;&lt;xliff:g example="F-Droid"&gt;%1$s&lt;/xliff:g&gt;&lt;/b&gt; dorește să acceseze contul dvs. ca și cum ar fi &lt;b&gt;&lt;xliff:g example="F-Droid"&gt;%2$s&lt;/xliff:g&gt;&lt;/b&gt; de către &lt;xliff:g example="F-Droid Inc."&gt;%3$s&lt;/xliff:g&gt;&lt;/b&gt;. Aceasta ar putea acorda acces privilegiat la contul dvs.</string>
+    <string name="auth_package_override_request_title">Permiți <b>
+  <xliff:g example="F-Droid">%1$s</xliff:g>
+</b> acces privilegiat la <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b>
+  <xliff:g example="F-Droid">%1$s</xliff:g>
+</b> dorește să acceseze contul tău ca și cum ar fi <b><xliff:g example="F-Droid">%2$s</xliff:g> de <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Acest lucru i-ar putea acorda acces privilegiat la contul tău.</string>
     <string name="auth_action_notification_channel_name">Alerte cont Google</string>
     <string name="auth_action_notification_channel_description">Notifică atunci când unul dintre conturile dvs. Google necesită configurare suplimentară înainte de a putea fi utilizat sau când un cont este incompatibil cu microG.</string>
     <string name="auth_action_notification_title">Acțiune cont necesară</string>
@@ -51,9 +54,9 @@ Acest lucru poate dura câteva minute."</string>
     <string name="auth_action_activity_header">Finalizați configurarea contului dvs. Google</string>
     <string name="auth_action_activity_explanation">Completați următorii pași pentru a putea utiliza contul dvs. Google %s pe acest dispozitiv.</string>
     <string name="auth_action_step_enable_checkin">Activați înregistrarea dispozitivului</string>
-    <string name="auth_action_step_enable_checkin_description">\"Dispozitivul dvs. trebuie să se înregistreze la Google cel puțin o dată.
+    <string name="auth_action_step_enable_checkin_description">"Dispozitivul tău trebuie să se înregistreze la Google cel puțin o dată.
 
-Puteți dezactiva înregistrarea dispozitivului Google după finalizarea configurării contului.</string>
+Poți dezactiva înregistrarea dispozitivului la Google după finalizarea configurării contului."</string>
     <string name="auth_action_step_enable_gcm">Activați Cloud Messaging</string>
     <string name="auth_action_step_enable_gcm_description">Puteți dezactiva Cloud Messaging după finalizarea configurării contului.</string>
     <string name="auth_action_step_allow_microg_gcm">Permiteți Cloud Messaging pentru microG</string>

@@ -14,7 +14,6 @@ Vaše dáta sa týmto nestratia"</string>
     <string name="dialog_cancel_button">Zrušiť</string>
     <string name="snackbar_remove_account">Účet %s bol odstránený</string>
     <string name="snackbar_undo_button">Vrátiť späť</string>
-    <string name="limited_services_app_name">MicroG obmedzené služby</string>
     <string name="gms_settings_name">Nastavenia microG</string>
     <string name="gms_settings_summary">Nastavte služby MicroG.</string>
     <string name="just_a_sec">Prosím počkajte...</string>
@@ -41,8 +40,12 @@ Môže to trvať niekoľko minút."</string>
     <string name="deny">Odmietnuť</string>
     <string name="auth_notification_title">Vyžaduje sa overenie</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> vyžaduje vaše oprávnenie na prístup k vášmu účtu Google.</string>
-    <string name="auth_package_override_request_title">Povoliť <b><xliff:g example="F-Droid">%1$s</xliff:g></b> privilegovaný prístup k <xliff:g example="account@example.com">%2$s</xliff:g>? </string>
-    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> chce získať prístup k vášmu účtu, ako keby bol <b><xliff:g example="F-Droid">%2$s</xliff:g></b> od <b><xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Toto by mu mohlo udeliť privilegovaný prístup k vášmu účtu.</string>
+    <string name="auth_package_override_request_title">Povoliť <b>
+  <xliff:g example="F-Droid">%1$s</xliff:g>
+</b> privilegovaný prístup k <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b>
+  <xliff:g example="F-Droid">%1$s</xliff:g>
+</b> chce získať prístup k vášmu účtu, ako keby bol <b><xliff:g example="F-Droid">%2$s</xliff:g> od <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Toto by mu mohlo udeliť privilegovaný prístup k vášmu účtu.</string>
     <string name="auth_action_notification_channel_name">Upozornenia účtu Google</string>
     <string name="auth_action_notification_channel_description">Upozorňuje, keď niektorý z vašich účtov Google vyžaduje dodatočnú konfiguráciu pred použitím, alebo keď je účet nekompatibilný s microG.</string>
     <string name="auth_action_notification_title">Vyžaduje sa akcia na účte</string>
@@ -51,9 +54,9 @@ Môže to trvať niekoľko minút."</string>
     <string name="auth_action_activity_header">Dokončite nastavenie svojho účtu Google</string>
     <string name="auth_action_activity_explanation">Dokončite nasledujúce kroky, aby ste mohli používať svoj účet Google %s na tomto zariadení.</string>
     <string name="auth_action_step_enable_checkin">Povoliť registráciu zariadenia</string>
-    <string name="auth_action_step_enable_checkin_description">\"Vaše zariadenie sa musí aspoň raz zaregistrovať v službe Google.
+    <string name="auth_action_step_enable_checkin_description">"Vaše zariadenie sa musí aspoň raz zaregistrovať v službe Google.
 
-Registráciu zariadenia Google môžete vypnúť po dokončení nastavenia účtu.</string>
+Registráciu zariadenia v službe Google môžete vypnúť po dokončení nastavenia účtu."</string>
     <string name="auth_action_step_enable_gcm">Povoliť Cloud Messaging</string>
     <string name="auth_action_step_enable_gcm_description">Cloud Messaging môžete vypnúť po dokončení nastavenia účtu.</string>
     <string name="auth_action_step_allow_microg_gcm">Povoliť Cloud Messaging pre microG</string>

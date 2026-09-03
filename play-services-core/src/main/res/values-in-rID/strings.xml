@@ -14,7 +14,6 @@ Data Anda tidak akan hilang"</string>
     <string name="dialog_cancel_button">Batal</string>
     <string name="snackbar_remove_account">Akun %s dihapus</string>
     <string name="snackbar_undo_button">Urungkan</string>
-    <string name="limited_services_app_name">Layanan Terbatas microG</string>
     <string name="gms_settings_name">Pengaturan MicroG</string>
     <string name="gms_settings_summary">Penyiapan layanan MicroG.</string>
     <string name="just_a_sec">Tunggu sebentar…</string>
@@ -41,8 +40,12 @@ Proses ini dapat memakan waktu beberapa saat."</string>
     <string name="deny">Tolak</string>
     <string name="auth_notification_title">Autentikasi diperlukan</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> memerlukan izin Anda untuk mengakses akun Google Anda.</string>
-    <string name="auth_package_override_request_title">Izinkan <b><xliff:g example="F-Droid">%1$s</xliff:g></b> akses istimewa ke <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
-    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> ingin mengakses akun Anda seolah-olah itu adalah <b><xliff:g example="F-Droid">%2$s</xliff:g> oleh <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Hal ini mungkin memberikan akses istimewa ke akun Anda.</string>
+    <string name="auth_package_override_request_title">Izinkan <b>
+  <xliff:g example="F-Droid">%1$s</xliff:g>
+</b> akses istimewa ke <xliff:g example="account@example.com">%2$s</xliff:g>?\"}]}```json{</string>
+    <string name="auth_package_override_request_message"><b>
+  <xliff:g example="F-Droid">%1$s</xliff:g>
+</b> ingin mengakses akun Anda seolah-olah itu adalah <b><xliff:g example="F-Droid">%2$s</xliff:g> oleh <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Ini dapat memberikan akses istimewa ke akun Anda.</string>
     <string name="auth_action_notification_channel_name">Peringatan akun Google</string>
     <string name="auth_action_notification_channel_description">Memberikan pemberitahuan ketika salah satu akun Google Anda memerlukan penyiapan tambahan sebelum dapat digunakan atau ketika akun tersebut tidak kompatibel dengan microG.</string>
     <string name="auth_action_notification_title">Tindakan akun diperlukan</string>
@@ -51,9 +54,9 @@ Proses ini dapat memakan waktu beberapa saat."</string>
     <string name="auth_action_activity_header">Selesaikan penyiapan akun Google Anda</string>
     <string name="auth_action_activity_explanation">Lakukan langkah-langkah berikut untuk dapat menggunakan akun Google Anda %s di perangkat ini.</string>
     <string name="auth_action_step_enable_checkin">Aktifkan pendaftaran perangkat</string>
-    <string name="auth_action_step_enable_checkin_description">\"Perangkat Anda perlu mendaftar ke Google setidaknya sekali.
+    <string name="auth_action_step_enable_checkin_description">"Perangkat Anda perlu mendaftar ke Google setidaknya sekali.
 
-Anda dapat menonaktifkan pendaftaran perangkat Google setelah penyiapan akun selesai.</string>
+Anda dapat menonaktifkan pendaftaran perangkat Google setelah penyiapan akun selesai."</string>
     <string name="auth_action_step_enable_gcm">Aktifkan Cloud Messaging</string>
     <string name="auth_action_step_enable_gcm_description">Anda dapat menonaktifkan Cloud Messaging setelah proses penyiapan akun selesai.</string>
     <string name="auth_action_step_allow_microg_gcm">Izinkan Cloud Messaging untuk microG</string>

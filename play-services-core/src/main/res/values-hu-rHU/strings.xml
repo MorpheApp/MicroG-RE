@@ -14,7 +14,6 @@ Az adatai nem vesznek el"</string>
     <string name="dialog_cancel_button">Mégse</string>
     <string name="snackbar_remove_account">A(z) %s fiók eltávolítva</string>
     <string name="snackbar_undo_button">Visszavonás</string>
-    <string name="limited_services_app_name">MicroG Korlátozott Szolgáltatások</string>
     <string name="gms_settings_name">MicroG beállítások</string>
     <string name="gms_settings_summary">MicroG szolgáltatások beállítása.</string>
     <string name="just_a_sec">Egy pillanat...</string>
@@ -42,8 +41,12 @@ Ez eltarthat néhány percig."</string>
     <string name="deny">Megtagad</string>
     <string name="auth_notification_title">Hitelesítés szükséges</string>
     <string name="auth_notification_content">A <xliff:g example="F-Droid">%1$s</xliff:g> alkalmazáshoz engedélye szükséges a Google-fiók eléréséhez.</string>
-    <string name="auth_package_override_request_title">Engedélyezd a <b><xliff:g example="F-Droid">%1$s</xliff:g></b> számára a kivételes hozzáférést a(z) <xliff:g example="account@example.com">%2$s</xliff:g> fiókhoz?</string>
-    <string name="auth_package_override_request_message">A <b><xliff:g example="F-Droid">%1$s</xliff:g></b> be szeretné jelentkezni a fiókodba, mintha a <b><xliff:g example="F-Droid">%2$s</xliff:g></b> lenne a(z) <xliff:g example="F-Droid Inc.">%3$s</xliff:g> által. Ez kivételes hozzáférést biztosíthat a fiókodhoz.</string>
+    <string name="auth_package_override_request_title">Engedélyezi a(z) <b>
+  <xliff:g example="F-Droid">%1$s</xliff:g>
+</b> kiemelt hozzáférését a következőhöz: <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b>
+  <xliff:g example="F-Droid">%1$s</xliff:g>
+</b> hozzáférést szeretne a fiókjához, mintha ő lenne a(z) <b><xliff:g example="F-Droid">%2$s</xliff:g> a <xliff:g example="F-Droid Inc.">%3$s</xliff:g> által</b>. Ez kiemelt hozzáférést biztosíthat a fiókjához.</string>
     <string name="auth_action_notification_channel_name">Google-fiókra vonatkozó figyelmeztetések</string>
     <string name="auth_action_notification_channel_description">Értesítést küld, ha az egyik Google-fiókja további beállítást igényel a használat előtt, vagy ha egy fiók nem kompatibilis a microG szolgáltatással.</string>
     <string name="auth_action_notification_title">Fiókművelet szükséges</string>
@@ -52,9 +55,9 @@ Ez eltarthat néhány percig."</string>
     <string name="auth_action_activity_header">Google-fiók beállításának befejezése</string>
     <string name="auth_action_activity_explanation">Hajtsa végre a következő lépéseket, hogy használhassa Google-fiókját %s ezen az eszközön.</string>
     <string name="auth_action_step_enable_checkin">Eszközregisztráció engedélyezése</string>
-    <string name="auth_action_step_enable_checkin_description">Az eszközt legalább egyszer regisztrálni kell a Google-nál.
+    <string name="auth_action_step_enable_checkin_description">"Az eszközének legalább egyszer regisztrálnia kell a Google-nál.
 
-A Google-eszközregisztrációt a fiókbeállítás befejezése után letilthatja.</string>
+A Google-eszközregisztrációt a fiókbeállítás befejezése után letilthatja."</string>
     <string name="auth_action_step_enable_gcm">Cloud Messaging engedélyezése</string>
     <string name="auth_action_step_enable_gcm_description">A Cloud Messaging szolgáltatást a fiókbeállítás befejezése után letilthatja.</string>
     <string name="auth_action_step_allow_microg_gcm">Cloud Messaging engedélyezése a microG számára</string>

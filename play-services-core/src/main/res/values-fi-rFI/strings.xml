@@ -14,7 +14,6 @@ Tietosi eivät katoa."</string>
     <string name="dialog_cancel_button">Peruuta</string>
     <string name="snackbar_remove_account">Tili %s poistettu</string>
     <string name="snackbar_undo_button">Kumoa</string>
-    <string name="limited_services_app_name">MicroG rajoitetut palvelut</string>
     <string name="gms_settings_name">MicroG-asetukset</string>
     <string name="gms_settings_summary">Määritä MicroG-palvelut.</string>
     <string name="just_a_sec">Hetki vain…</string>
@@ -41,8 +40,12 @@ Tämä voi olla tilapäinen ongelma, tai Android-laitteellasi ei ole ehkä mobii
     <string name="deny">Estä</string>
     <string name="auth_notification_title">Tunnistautuminen vaaditaan</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> vaatii valtuutuksen Google-tilisi käyttämiseenk.</string>
-    <string name="auth_package_override_request_title">Salli <b><xliff:g example="F-Droid">%1$s</xliff:g></b>:lle korotettu pääsy <xliff:g example="account@example.com">%2$s</xliff:g>-tilille? </string>
-    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> haluaa käyttää tiliäsi ikään kuin se olisi <b><xliff:g example="F-Droid">%2$s</xliff:g></b>-sovellus, jonka on kehittänyt <b><xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Tämä saattaa myöntää sille korotetun pääsyn tiliisi.</string>
+    <string name="auth_package_override_request_title">Salli <b>
+  <xliff:g example="F-Droid">%1$s</xliff:g>
+</b> etuoikeutettu pääsy <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b>
+  <xliff:g example="F-Droid">%1$s</xliff:g>
+</b> haluaa käyttää tiliäsi ikään kuin se olisi <b><xliff:g example="F-Droid">%2$s</xliff:g>, jonka on tehnyt <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Tämä saattaa myöntää etuoikeutetun pääsyn tilillesi.</string>
     <string name="auth_action_notification_channel_name">Google-tilin hälytykset</string>
     <string name="auth_action_notification_channel_description">Iloiteta, kun yksi Google-tileistäsi vaatii lis määirtykse ennen käyttöä töi tili ei ole yteensopiva mie foreG:n kanssa.</string>
     <string name="auth_action_notification_title">Tilille vaaditaan toimeenpide</string>
@@ -51,9 +54,9 @@ Tämä voi olla tilapäinen ongelma, tai Android-laitteellasi ei ole ehkä mobii
     <string name="auth_action_activity_header">Viimeäle Google-tilisi määrykse</string>
     <string name="auth_action_activity_explanation">Suorita seuaavavaiheet, niin voit käytä önä jotta voit käytä Google-tiläsi %s tällälaitteella.</string>
     <string name="auth_action_step_enable_checkin">Ota laiede nrekiste r ötymö käyttöön</string>
-    <string name="auth_action_step_enable_checkin_description">\"Laiteesi täytyy kisterötyä Googleen viäntäin kerran.
+    <string name="auth_action_step_enable_checkin_description">"Laitteesi on rekisteröidyttävä Googleen vähintään kerran.
 
-Voit poistaa Google-laiteenran rekisteröinin käytöstä tiliin m äriä työijen after.</string>
+Voit poistaa Google-laitteen rekisteröinnin käytöstä tilin asennuksen jälkeen.}"</string>
     <string name="auth_action_step_enable_gcm">Ota Cloud Messaging käyttöön</string>
     <string name="auth_action_step_enable_gcm_description">Voit poistaa Cloud Messaging käytöstä tilin määrence complete.</string>
     <string name="auth_action_step_allow_microg_gcm">Salli Cloud Messaging microG:lle</string>

@@ -14,7 +14,6 @@ Vaši podatki ne bodo izgubljeni"</string>
     <string name="dialog_cancel_button">Prekliči</string>
     <string name="snackbar_remove_account">Račun %s je bil odstranjen</string>
     <string name="snackbar_undo_button">Razveljavi</string>
-    <string name="limited_services_app_name">MicroG Limited Services</string>
     <string name="gms_settings_name">Nastavitve MicroG</string>
     <string name="gms_settings_summary">Nastavite storitve MicroG.</string>
     <string name="just_a_sec">Samo trenutek…</string>
@@ -41,8 +40,12 @@ To lahko traja nekaj minut."</string>
     <string name="deny">Zavrni</string>
     <string name="auth_notification_title">Potrebna je avtentikacija</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> potrebuje vašo avtorizacijo za dostop do vašega Google računa.</string>
-    <string name="auth_package_override_request_title">Dovoli <b><xliff:g example="F-Droid">%1$s</xliff:g></b> privilegiran dostop do <xliff:g example="account@example.com">%2$s</xliff:g>? </string>
-    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> želi dostopati do vašega računa, kot da bi bil <b><xliff:g example="F-Droid">%2$s</xliff:g></b> s strani <b><xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. To bi mu lahko omogočilo privilegiran dostop do vašega računa.</string>
+    <string name="auth_package_override_request_title">Ali naj <b>
+  <xliff:g example="F-Droid">%1$s</xliff:g>
+</b> dobi privilegiran dostop do <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b>
+  <xliff:g example="F-Droid">%1$s</xliff:g>
+</b> želi dostopati do vašega računa, kot da bi šlo za <b><xliff:g example="F-Droid">%2$s</xliff:g> podjetja <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. To bi lahko tej aplikaciji omogočilo privilegiran dostop do vašega računa.</string>
     <string name="auth_action_notification_channel_name">Opozorila Google računa</string>
     <string name="auth_action_notification_channel_description">Obvešča, kdaj en od vaših Google računov potrebuje dodatno nastavitev, preden ga lahko uporabite ali kdaj je račun nezdružljiv z microG.</string>
     <string name="auth_action_notification_title">Zahteva se ukrep računa</string>
@@ -51,9 +54,9 @@ To lahko traja nekaj minut."</string>
     <string name="auth_action_activity_header">Dokončajte nastavitev vašega Google računa</string>
     <string name="auth_action_activity_explanation">Izvedite naslednje korake, da lahko uporabite svoj Google račun %s na tej napravi.</string>
     <string name="auth_action_step_enable_checkin">Omogoči registracijo naprave</string>
-    <string name="auth_action_step_enable_checkin_description">\"Vaša naprava se mora enkrat registrirati pri Google.
+    <string name="auth_action_step_enable_checkin_description">"Vaša naprava se mora vsaj enkrat registrirati pri Googlu.
 
-Registracijo Google naprave lahko onemogočite po končani nastavitvi računa.</string>
+Registracijo naprave pri Googlu lahko onemogočite, ko je nastavitev računa končana."</string>
     <string name="auth_action_step_enable_gcm">Omogoči Cloud Messaging</string>
     <string name="auth_action_step_enable_gcm_description">Cloud Messaging lahko onemogočite po končani nastavitvi računa.</string>
     <string name="auth_action_step_allow_microg_gcm">Dovoliti Cloud Messaging za microG</string>

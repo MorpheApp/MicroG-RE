@@ -14,7 +14,6 @@ Vos données ne seront pas perdues"</string>
     <string name="dialog_cancel_button">Annuler</string>
     <string name="snackbar_remove_account">Compte %s supprimé</string>
     <string name="snackbar_undo_button">Annuler</string>
-    <string name="limited_services_app_name">MicroG Limited Services</string>
     <string name="gms_settings_name">Paramètres MicroG</string>
     <string name="gms_settings_summary">Configurer les services microG.</string>
     <string name="just_a_sec">Juste un instant…</string>
@@ -42,8 +41,12 @@ Cela peut prendre quelques minutes."</string>
     <string name="deny">Refuser</string>
     <string name="auth_notification_title">Authentification nécessaire</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> nécessite votre autorisation pour accéder à votre compte Google.</string>
-    <string name="auth_package_override_request_title">Autoriser <b><xliff:g example="F-Droid">%1$s</xliff:g></b> à accéder à <xliff:g example="account@example.com">%2$s</xliff:g> avec un accès privilégié ?</string>
-    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> souhaite accéder à votre compte comme si c\'était <b><xliff:g example="F-Droid">%2$s</xliff:g> par <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Cela pourrait lui accorder un accès privilégié à votre compte.</string>
+    <string name="auth_package_override_request_title">Autoriser <b>
+  <xliff:g example="F-Droid">%1$s</xliff:g>
+</b> à accéder à <xliff:g example="account@example.com">%2$s</xliff:g> avec un accès privilégié ?</string>
+    <string name="auth_package_override_request_message"><b>
+  <xliff:g example="F-Droid">%1$s</xliff:g>
+</b> souhaite accéder à votre compte comme si c\'était <b><xliff:g example="F-Droid">%2$s</xliff:g> par <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Cela pourrait lui accorder un accès privilégié à votre compte.</string>
     <string name="auth_action_notification_channel_name">Alertes du compte Google</string>
     <string name="auth_action_notification_channel_description">Notifie lorsqu\'un de vos comptes Google nécessite une configuration supplémentaire avant de pouvoir être utilisé ou lorsqu\'un compte est incompatible avec microG.</string>
     <string name="auth_action_notification_title">Action nécessaire pour le compte</string>
@@ -52,9 +55,9 @@ Cela peut prendre quelques minutes."</string>
     <string name="auth_action_activity_header">Terminez la configuration de votre compte Google</string>
     <string name="auth_action_activity_explanation">Effectuez les étapes suivantes afin de pouvoir utiliser votre compte Google %s sur cet appareil</string>
     <string name="auth_action_step_enable_checkin">Activer l\'enregistrement de l\'appareil</string>
-    <string name="auth_action_step_enable_checkin_description">Votre appareil doit être enregistré auprès de Google au moins une fois.
+    <string name="auth_action_step_enable_checkin_description">"Votre appareil doit être enregistré auprès de Google au moins une fois.
 
-Vous pouvez désactiver l\'enregistrement de l\'appareil auprès de Google une fois la configuration du compte terminée.</string>
+Vous pouvez désactiver l'enregistrement de l'appareil auprès de Google une fois la configuration du compte terminée."</string>
     <string name="auth_action_step_enable_gcm">Activer Cloud Messaging</string>
     <string name="auth_action_step_enable_gcm_description">Vous pouvez désactiver Cloud Messaging une fois la configuration du compte terminée.</string>
     <string name="auth_action_step_allow_microg_gcm">Autoriser Cloud Messaging pour microG</string>
@@ -216,16 +219,17 @@ Veuillez configurer un écran de verrouillage avec un mot de passe, un code PIN 
     <string name="gcm_last_message_at">Dernier message : <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
     <string name="gcm_registered">Enregistrer</string>
     <string name="gcm_registered_since">Enregistré depuis : <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
-    <string name="gcm_unregister_confirm_title">Désinscrire <xliff:g example="F-Droid">%1$s</xliff:g> ?</string>
-    <string name="gcm_unregister_confirm_message">Certaines applications ne se réenregistrent pas automatiquement et/ou ne proposent pas d\'option pour le faire manuellement. Ces applications risquent de ne pas fonctionner correctement après leur désinscription.\nContinuer ?</string>
-    <string name="gcm_unregister_after_deny_message">Vous avez refusé à une application déjà enregistrée le droit de s\'inscrire aux notifications push.\nVoulez-vous la désinscrire maintenant pour qu\'elle ne reçoive plus de messages push à l\'avenir ?</string>
+    <string name="gcm_unregister_confirm_title">Désenregistrer <xliff:g example="F-Droid">%1$s</xliff:g> ?</string>
+    <string name="gcm_unregister_confirm_message">Certaines applications ne se réenregistrent pas automatiquement et/ou ne proposent pas d\'option pour le faire manuellement. Ces applications risquent de ne pas fonctionner correctement après leur désenregistrement.\nContinuer ?</string>
+    <string name="gcm_unregister_after_deny_message">Vous avez refusé à une application déjà enregistrée le droit de s\'enregistrer pour les notifications push.
+Voulez-vous la désenregistrer maintenant pour qu’elle ne reçoive plus de messages push à l’avenir ?</string>
     <string name="gcm_messages_counter">Messages : <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> octets)</string>
     <string name="gcm_network_state_disconnected">Déconnecté</string>
     <string name="gcm_network_state_connected">Connecté depuis <xliff:g example="2 hours ago">%1$s</xliff:g></string>
     <string name="gcm_enable_switch">Recevoir des notifications push</string>
-    <string name="gcm_allow_app_popup">Autoriser <xliff:g example="F-Droid">%1$s</xliff:g> à s\'inscrire aux notifications push ?</string>
+    <string name="gcm_allow_app_popup">Autoriser <xliff:g example="F-Droid">%1$s</xliff:g> à s\'enregistrer pour les notifications push ?</string>
     <string name="pref_push_app_allow_register_title">Autoriser l\'enregistrement</string>
-    <string name="pref_push_app_allow_register_summary">Autoriser l\'application à s\'inscrire aux notifications push.</string>
+    <string name="pref_push_app_allow_register_summary">Autoriser l\'application à s\'enregistrer pour les notifications push.</string>
     <string name="pref_push_app_wake_for_delivery_title">Démarrer l\'application lors de la réception d\'un message push</string>
     <string name="pref_push_app_wake_for_delivery_summary">Démarrer l\'application en arrière-plan pour recevoir les messages push entrants.</string>
     <string name="prefcat_push_apps_title">Applications utilisant les notifications push</string>
@@ -321,7 +325,7 @@ Vérifiez le statut d'enregistrement de l'appareil. Certaines applications pourr
     <string name="pref_workprofile_intro">Lors de la configuration d\'un profil professionnel pour votre lieu de travail ou votre établissement d\'enseignement,        la configuration peut tenter de se connecter à Google pour autoriser le téléchargement d\'applications sur ce profil.</string>
     <string name="pref_workprofile_disclaimer">Il relève de votre responsabilité de vous assurer que votre utilisation de microG est conforme aux politiques de l\'entreprise.
         microG est fourni dans la mesure du possible et ne peut garantir un fonctionnement exactement conforme aux attentes.</string>
-    <string name="pref_auto_create_player">Autoriser l\'inscription au compte Play Jeux</string>
+    <string name="pref_auto_create_player">Autoriser l\'enregistrement au compte Play Jeux</string>
     <string name="pref_auto_create_player_intro">Lorsque vous jouez à des jeux, vous devez utiliser un compte Play Jeux pour vous connecter et enregistrer les fonctionnalités liées aux jeux, telles que les succès, les classements, les sauvegardes, etc. Après désactivation, les comptes Google qui ne sont pas liés à un compte Play Jeux ne seront pas enregistrés automatiquement, et il sera impossible de se connecter au jeu et d\'y jouer.</string>
     <string name="pref_allow_upload_game_played">Autoriser l\'envoi des jeux joués</string>
     <string name="pref_allow_upload_game_played_summary">Lorsque désactivée, le jeu ne transmettra pas le statut de jeu joué après la connexion au jeu, et certains jeux pourraient ne pas pouvoir se connecter.</string>

@@ -14,7 +14,6 @@
     <string name="dialog_cancel_button">取消</string>
     <string name="snackbar_remove_account">已移除帳戶 %s</string>
     <string name="snackbar_undo_button">復原</string>
-    <string name="limited_services_app_name">MicroG 受限服務</string>
     <string name="gms_settings_name">MicroG 設定</string>
     <string name="gms_settings_summary">設定 MicroG 服務。</string>
     <string name="just_a_sec">請稍候…</string>
@@ -41,8 +40,12 @@
     <string name="deny">拒絕</string>
     <string name="auth_notification_title">需要驗證</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> 需要您的授權才能存取您的 Google 帳戶。</string>
-    <string name="auth_package_override_request_title">是否允許 <b><xliff:g example="F-Droid">%1$s</xliff:g></b> 取得 <xliff:g example="account@example.com">%2$s</xliff:g> 的特殊權限？</string>
-    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> 想要以 <b><xliff:g example="F-Droid">%2$s</xliff:g></b> 的身分（由 <xliff:g example="F-Droid Inc.">%3$s</xliff:g> 開發）存取您的帳戶。這可能會授予該應用程式您帳戶的特殊權限。</string>
+    <string name="auth_package_override_request_title">是否允許 <b>
+  <xliff:g example="F-Droid">%1$s</xliff:g>
+</b> 對 <xliff:g example="account@example.com">%2$s</xliff:g> 具有特殊存取權限？</string>
+    <string name="auth_package_override_request_message"><b>
+  <xliff:g example="F-Droid">%1$s</xliff:g>
+</b> 想要以 <b><xliff:g example="F-Droid">%2$s</xliff:g></b> 的身份存取您的帳戶，由 <xliff:g example="F-Droid Inc.">%3$s</xliff:g> 提供。這可能會授予它對您帳戶的特殊存取權限。</string>
     <string name="auth_action_notification_channel_name">Google 帳戶警示</string>
     <string name="auth_action_notification_channel_description">當您的某個 Google 帳戶需要額外設定才能使用，或帳戶與 microG 不相容時，會發出通知。</string>
     <string name="auth_action_notification_title">需要帳戶操作</string>
@@ -51,9 +54,9 @@
     <string name="auth_action_activity_header">完成您的 Google 帳戶設定</string>
     <string name="auth_action_activity_explanation">完成以下步驟，即可在此裝置上使用您的 Google 帳戶 %s。</string>
     <string name="auth_action_step_enable_checkin">啟用裝置註冊</string>
-    <string name="auth_action_step_enable_checkin_description">「您的裝置必須至少向 Google 註冊一次。
+    <string name="auth_action_step_enable_checkin_description">"您的裝置至少需要註冊一次 Google。
 
-您可以在帳戶設定完成後停用 Google 裝置註冊。」</string>
+帳戶設定完成後，您可以停用 Google 裝置註冊。"</string>
     <string name="auth_action_step_enable_gcm">啟用雲端訊息</string>
     <string name="auth_action_step_enable_gcm_description">帳戶設定完成後，您可以停用雲端訊息。</string>
     <string name="auth_action_step_allow_microg_gcm">允許 microG 使用雲端訊息</string>

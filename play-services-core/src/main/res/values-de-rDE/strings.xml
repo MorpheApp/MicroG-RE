@@ -14,7 +14,6 @@ Ihre Daten gehen nicht verloren "</string>
     <string name="dialog_cancel_button">Abbrechen</string>
     <string name="snackbar_remove_account">Konto %s entfernt</string>
     <string name="snackbar_undo_button">Rückgängig machen</string>
-    <string name="limited_services_app_name">MicroG Eingeschränkte Dienste</string>
     <string name="gms_settings_name">MicroG-Einstellungen</string>
     <string name="gms_settings_summary">MicroG-Dienste einrichten.</string>
     <string name="just_a_sec">Einen Moment…</string>
@@ -41,8 +40,12 @@ Dies kann einige Minuten dauern "</string>
     <string name="deny">Verweigern</string>
     <string name="auth_notification_title">Authentifizierung erforderlich</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> benötigt Ihre Autorisierung, um auf Ihr Google-Konto zuzugreifen.</string>
-    <string name="auth_package_override_request_title"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> privilegierten Zugriff auf <xliff:g example="account@example.com">%2$s</xliff:g> gewähren?</string>
-    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> möchte auf Ihr Konto zugreifen, als wäre es <b><xliff:g example="F-Droid">%2$s</xliff:g></b> von <b><xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Dies kann ihm privilegierten Zugriff auf Ihr Konto gewähren.</string>
+    <string name="auth_package_override_request_title">Erlauben Sie <b>
+  <xliff:g example="F-Droid">%1$s</xliff:g>
+</b> privilegierten Zugriff auf <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b>
+  <xliff:g example="F-Droid">%1$s</xliff:g>
+</b> möchte auf Ihr Konto zugreifen, als ob es <b><xliff:g example="F-Droid">%2$s</xliff:g> von <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b> wäre. Dies könnte ihm privilegierten Zugriff auf Ihr Konto gewähren.</string>
     <string name="auth_action_notification_channel_name">Google-Konto-Benachrichtigungen</string>
     <string name="auth_action_notification_channel_description">Benachrichtigt, wenn eines Ihrer Google-Konten eine zusätzliche Einrichtung benötigt, bevor es verwendet werden kann, oder wenn ein Konto mit microG inkompatibel ist.</string>
     <string name="auth_action_notification_title">Kontoaktion erforderlich</string>
@@ -51,9 +54,9 @@ Dies kann einige Minuten dauern "</string>
     <string name="auth_action_activity_header">Schließen Sie die Einrichtung Ihres Google-Kontos ab</string>
     <string name="auth_action_activity_explanation">Führen Sie die folgenden Schritte aus, um Ihr Google-Konto %s auf diesem Gerät verwenden zu können.</string>
     <string name="auth_action_step_enable_checkin">Geräteregistrierung aktivieren</string>
-    <string name="auth_action_step_enable_checkin_description">\"Ihr Gerät muss sich mindestens einmal bei Google registrieren.
+    <string name="auth_action_step_enable_checkin_description">"Ihr Gerät muss sich mindestens einmal bei Google registrieren.
 
-Sie können die Google-Geräteregistrierung deaktivieren, nachdem die Kontoeinrichtung abgeschlossen ist.</string>
+Sie können die Google-Geräteregistrierung deaktivieren, nachdem die Kontoeinrichtung abgeschlossen ist."</string>
     <string name="auth_action_step_enable_gcm">Cloud-Messaging aktivieren</string>
     <string name="auth_action_step_enable_gcm_description">Sie können Cloud-Messaging nach Abschluss der Kontoeinrichtung deaktivieren.</string>
     <string name="auth_action_step_allow_microg_gcm">Cloud-Messaging für microG erlauben</string>

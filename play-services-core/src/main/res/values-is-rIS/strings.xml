@@ -14,7 +14,6 @@ Gögnin þín verða ekki glötuð"</string>
     <string name="dialog_cancel_button">Hætta við</string>
     <string name="snackbar_remove_account">Reikningur %s fjarlægður</string>
     <string name="snackbar_undo_button">Afturreima</string>
-    <string name="limited_services_app_name">MicroG Takmarkaðar þjónustur</string>
     <string name="gms_settings_name">MicroG stillingar</string>
     <string name="gms_settings_summary">Settu upp MicroG þjónustur.</string>
     <string name="just_a_sec">Augnablik... </string>
@@ -41,8 +40,12 @@ This can take a couple of minutes."</string>
     <string name="deny">Banna</string>
     <string name="auth_notification_title">Staðfesting krafist</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> krefst heimildar þinnar til að fá aðgang að Google-reikningnum þínum.</string>
-    <string name="auth_package_override_request_title">Allow <b><xliff:g example="F-Droid">%1$s</xliff:g></b> privileged access to <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
-    <string name="auth_package_override_request_message">&lt;b&gt;&lt;xliff:g example="F-Droid"&gt;%1$s&lt;/xliff:g&gt;&lt;/b&gt; vill fá aðgang að reikningnum þínum eins og það væri &lt;b&gt;&lt;xliff:g example="F-Droid"&gt;%2$s&lt;/xliff:g&gt; frá &lt;b&gt;&lt;xliff:g example="F-Droid Inc."&gt;%3$s&lt;/xliff:g&gt;&lt;/b&gt;. Þetta gæti veitt því aukinn aðgang að reikningnum þínum.}],</string>
+    <string name="auth_package_override_request_title">Leyfa <b>
+  <xliff:g example="F-Droid">%1$s</xliff:g>
+</b> forréttindaaðgang að <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b>
+  <xliff:g example="F-Droid">%1$s</xliff:g>
+</b> vill fá aðgang að reikningnum þínum eins og það væri <b><xliff:g example="F-Droid">%2$s</xliff:g> eftir <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Þetta gæti veitt því forréttindaaðgang að reikningnum þínum.</string>
     <string name="auth_action_notification_channel_name">Google reikningsviðvaranir</string>
     <string name="auth_action_notification_channel_description">Lætur vita þegar einn af Google-reikningum þínum þarfnast frekari uppsetningar áður en hægt er að nota hann, eða þegar reikningur er ósamrýmanlegur microG.</string>
     <string name="auth_action_notification_title">Aðgerð á reikningi nauðsynleg</string>
@@ -51,9 +54,9 @@ This can take a couple of minutes."</string>
     <string name="auth_action_activity_header">Ljúktu við uppsetningu Google-reikningsins þíns.</string>
     <string name="auth_action_activity_explanation">Ljúktu við eftirfarandi skref til að geta notað Google-reikninginn þinn %s á þessu tæki.</string>
     <string name="auth_action_step_enable_checkin">Virkja skráningu tækis</string>
-    <string name="auth_action_step_enable_checkin_description">\"Tækið þitt þarf að skrá sig hjá Google að minnsta kosti einu sinni.
+    <string name="auth_action_step_enable_checkin_description">"Tækið þitt þarf að skrá sig hjá Google að minnsta kosti einu sinni.
 
-Þú getur slökkt á skráningu tækis hjá Google eftir að uppsetningu reiknings er lokið.</string>
+Þú getur slökkt á skráningu tækis hjá Google eftir að uppsetning reiknings er lokið."</string>
     <string name="auth_action_step_enable_gcm">Virkja skýjaskilaboð</string>
     <string name="auth_action_step_enable_gcm_description">Þú getur slökkt á skýjaskilaboðum eftir að uppsetningu reiknings er lokið.</string>
     <string name="auth_action_step_allow_microg_gcm">Leyfa skýjaskilaboð fyrir microG</string>

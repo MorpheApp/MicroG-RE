@@ -14,7 +14,6 @@ Verileriniz kaybolmayacaktır"</string>
     <string name="dialog_cancel_button">İptal et</string>
     <string name="snackbar_remove_account">%s hesabı kaldırıldı</string>
     <string name="snackbar_undo_button">Geri al</string>
-    <string name="limited_services_app_name">MicroG Sınırlı Hizmetler</string>
     <string name="gms_settings_name">MicroG Ayarları</string>
     <string name="gms_settings_summary">MicroG hizmetlerini kur.</string>
     <string name="just_a_sec">Bir saniye…</string>
@@ -41,8 +40,14 @@ Bu, birkaç dakika sürebilir."</string>
     <string name="deny">Reddet</string>
     <string name="auth_notification_title">Kimlik doğrulaması gerekli</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g>, Google hesabınıza erişmek için yetkilendirmenizi gerektiriyor.</string>
-    <string name="auth_package_override_request_title">İzin ver <b><xliff:g example="F-Droid">%1$s</xliff:g></b> uygulamasının <xliff:g example="account@example.com">%2$s</xliff:g> hesabına ayrıcalıklı erişimine? askıya alınan</string>
-    <string name="auth_package_override_request_message">&lt;b&gt;&lt;xliff:g example="F-Droid"&gt;%1$s&lt;/xliff:g&gt;&lt;/b&gt; hesabınıza &lt;b&gt;&lt;xliff:g example="F-Droid"&gt;%2$s&lt;/xliff:g&gt;&lt;/b&gt; gibi erişmek istiyor, &lt;xliff:g example="F-Droid Inc."&gt;%3$s&lt;/xliff:g&gt;&lt;/b&gt; tarafından. Bu, hesabınıza ayrıcalıklı erişim sağlayabilir.</string>
+    <string name="auth_package_override_request_title"><b>
+  <xliff:g example="F-Droid">%1$s</xliff:g>
+</b> uygulamasının <xliff:g example="account@example.com">%2$s</xliff:g> hesabına ayrıcalıklı erişimine izin verilsin mi?</string>
+    <string name="auth_package_override_request_message">&lt;b&gt;
+  &lt;xliff:g example="F-Droid"&gt;%1$s&lt;/xliff:g&gt;
+&lt;/b&gt; hesabınıza &lt;b&gt;
+  &lt;xliff:g example="F-Droid"&gt;%2$s&lt;/xliff:g&gt;
+&lt;/b&gt; gibi erişmek istiyor - &lt;xliff:g example="F-Droid Inc."&gt;%3$s&lt;/xliff:g&gt; tarafından&lt;/b&gt;. Bu, hesabınıza ayrıcalıklı erişim sağlayabilir.</string>
     <string name="auth_action_notification_channel_name">Google hesap uyarıları</string>
     <string name="auth_action_notification_channel_description">Google hesaplarınızdan biri kullanılmadan önce ek kurulum gerektirdiğinde veya bir hesap microG ile uyumsuz olduğunda bildirir.</string>
     <string name="auth_action_notification_title">Hesap işlemi gerekli</string>
@@ -51,9 +56,9 @@ Bu, birkaç dakika sürebilir."</string>
     <string name="auth_action_activity_header">Google hesabınızın kurulumunu tamamlayın</string>
     <string name="auth_action_activity_explanation">Bu özelliği kullanabilmek için aşağıdaki adımları tamamlayın: %s cihazınızda Google hesabınızı kullanın.</string>
     <string name="auth_action_step_enable_checkin">Cihaz kaydını etkinleştir</string>
-    <string name="auth_action_step_enable_checkin_description">\"Cihazınızın Google\'a en az bir kez kayıt olması gerekiyor.
+    <string name="auth_action_step_enable_checkin_description">"Cihazınızın Google'a en az bir kez kayıt olması gerekir.
 
-Hesap kurulumu tamamlandıktan sonra cihaz kaydını devre dışı bırakabilirsiniz.</string>
+Hesap kurulumu tamamlandıktan sonra Google cihaz kaydını devre dışı bırakabilirsiniz."</string>
     <string name="auth_action_step_enable_gcm">Bulut Mesajlaşmayı etkinleştir</string>
     <string name="auth_action_step_enable_gcm_description">Hesap kurulumu tamamlandıktan sonra Bulut Mesajlaşmayı devre dışı bırakabilirsiniz.</string>
     <string name="auth_action_step_allow_microg_gcm">microG için Bulut Mesajlaşmaya izin ver</string>

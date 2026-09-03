@@ -14,7 +14,6 @@ Twoje dane nie zostaną utracone"</string>
     <string name="dialog_cancel_button">Anuluj</string>
     <string name="snackbar_remove_account">Konto %s usunięte</string>
     <string name="snackbar_undo_button">Cofnij</string>
-    <string name="limited_services_app_name">Ograniczone usługi microG</string>
     <string name="gms_settings_name">Ustawienia MicroG</string>
     <string name="gms_settings_summary">Skonfiguruj usługi microG.</string>
     <string name="just_a_sec">Chwileczkę…</string>
@@ -41,8 +40,11 @@ To może potrwać kilka minut."</string>
     <string name="deny">Odrzuć</string>
     <string name="auth_notification_title">Wymagana autoryzacja</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> wymaga Twojej autoryzacji, aby uzyskać dostęp do konta Google.</string>
-    <string name="auth_package_override_request_title">Zezwolić <b><xliff:g example="F-Droid">%1$s</xliff:g></b> na uprzywilejowany dostęp do <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
-    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> chce uzyskać dostęp do Twojego konta, tak jakby to była aplikacja <b><xliff:g example="F-Droid">%2$s</xliff:g> od <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Może to przyznać jej uprzywilejowany dostęp do Twojego konta.</string>
+    <string name="auth_package_override_request_title">Zezwolić <b>
+  <xliff:g example="F-Droid">%1$s</xliff:g></b> na uprzywilejowany dostęp do <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b>
+  <xliff:g example="F-Droid">%1$s</xliff:g>
+  </b> chce uzyskać dostęp do Twojego konta, tak jakby to była aplikacja <b><xliff:g example="F-Droid">%2$s</xliff:g> od <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Może to przyznać jej uprzywilejowany dostęp do Twojego konta.</string>
     <string name="auth_action_notification_channel_name">Alerty konta Google</string>
     <string name="auth_action_notification_channel_description">Powiadamia, gdy jedno z Twoich kont Google wymaga dodatkowej konfiguracji przed użyciem lub gdy konto jest niezgodne z microG.</string>
     <string name="auth_action_notification_title">Wymagane działanie na koncie</string>
@@ -51,9 +53,9 @@ To może potrwać kilka minut."</string>
     <string name="auth_action_activity_header">Dokończ konfigurację konta Google</string>
     <string name="auth_action_activity_explanation">Wykonaj te kroki, aby móc korzystać z konta Google %s na tym urządzeniu.</string>
     <string name="auth_action_step_enable_checkin">Włącz rejestrację urządzenia</string>
-    <string name="auth_action_step_enable_checkin_description">Twoje urządzenie musi zarejestrować się w Google co najmniej raz.
+    <string name="auth_action_step_enable_checkin_description">"Twoje urządzenie musi zarejestrować się w Google co najmniej raz.
 
-Możesz wyłączyć rejestrację urządzenia w Google po zakończeniu konfiguracji konta.</string>
+Możesz wyłączyć rejestrację urządzenia w Google po zakończeniu konfiguracji konta."</string>
     <string name="auth_action_step_enable_gcm">Włącz Cloud Messaging</string>
     <string name="auth_action_step_enable_gcm_description">Możesz wyłączyć Cloud Messaging po zakończeniu konfiguracji konta.</string>
     <string name="auth_action_step_allow_microg_gcm">Zezwól na Cloud Messaging dla microG</string>
@@ -161,10 +163,10 @@ Skonfiguruj hasło, kod PIN lub wzór blokady ekranu."</string>
     <string name="pref_accounts_restore_title">Przywróć konta</string>
     <string name="pref_accounts_restore_summary">Importuj konta Google z pliku</string>
     <string name="pref_accounts_backup_warning_title">Utworzyć kopię zapasową kont?</string>
-    <string name="pref_accounts_backup_warning_message">To zapisze Twoje konta i tokeny logowania (SID/LSID) do pliku. Każdy, kto zdobędzie ten plik, będzie mógł uzyskać dostęp do Twoich kont, więc przechowuj go w bezpiecznym miejscu i nigdy go nie udostępniaj.</string>
-    <string name="button_backup_accounts">Utwórz kopię zapasową</string>
+    <string name="pref_accounts_backup_warning_message">Spowoduje to zapisanie kont i tokenów logowania (SID/LSID) do pliku. Każdy, kto go zdobędzie, zyska dostęp do Twoich kont. Przechowuj plik w bezpiecznym miejscu i nigdy go nie udostępniaj.</string>
+    <string name="button_backup_accounts">Utwórz kopię</string>
     <string name="snackbar_accounts_backed_up">Utworzono kopię zapasową kont</string>
-    <string name="snackbar_accounts_restored">Przywrócone konta (%1$d)</string>
+    <string name="snackbar_accounts_restored">Przywrócone konta: %1$d</string>
     <string name="snackbar_accounts_export_failed">Nie udało się utworzyć kopii zapasowej</string>
     <string name="snackbar_accounts_import_failed">Nie udało się przywrócić</string>
     <string name="prefcat_youtube_activity">Aktywność w YouTube</string>
@@ -182,17 +184,17 @@ Skonfiguruj hasło, kod PIN lub wzór blokady ekranu."</string>
     <string name="pref_gcm_confirm_new_apps_summary">Pytaj przed rejestracją nowej aplikacji do otrzymywania powiadomień push</string>
     <string name="pref_about_title">Informacje</string>
     <string name="pref_hide_launcher_icon">Ukryj ikonę w launcherze</string>
-    <string name="hide_launcher_icon_dialog_message">Jeśli ta opcja jest włączona, MicroG zostanie ukryty w programie uruchamiającym aplikacje. MicroG można otworzyć z informacji o aplikacji, znajdującej się na liście aplikacji systemowych urządzenia.</string>
-    <string name="hide_launcher_icon_updating_title">Proszę czekać, aż aplikacja zostanie zaktualizowana</string>
+    <string name="hide_launcher_icon_dialog_message">Jeśli ta opcja jest włączona, MicroG zostanie ukryty na liście aplikacji. Można go otworzyć z poziomu informacji o aplikacji w ustawieniach systemowych urządzenia.</string>
+    <string name="hide_launcher_icon_updating_title">Poczekaj, trwa aktualizacja aplikacji</string>
     <string name="pref_language_title">Język</string>
     <string name="pref_language_system_default">Domyślny systemowy</string>
     <string name="pref_github_summary">Repozytorium kodu źródłowego</string>
-    <string name="pref_update_title">Sprawdzaj aktualizacje</string>
-    <string name="pref_update_summary">Sprawdź w serwisie GitHub nowszą wersję.</string>
+    <string name="pref_update_title">Sprawdź aktualizacje</string>
+    <string name="pref_update_summary">Sprawdź dostępność nowszej wersji na GitHubie.</string>
     <string name="update_include_prerelease">Uwzględniaj wersje przedpremierowe / deweloperskie</string>
     <string name="update_available_title">Dostępna aktualizacja</string>
     <string name="update_available_prerelease_title">Dostępna aktualizacja (przedpremierowa)</string>
-    <string name="update_available_message">Nowa wersja v%1s jest dostępna. Masz zainstalowaną wersję v%2$s. Pobrać i zainstalować aktualizację?</string>
+    <string name="update_available_message">Dostępna jest nowa wersja v%1s. Obecnie zainstalowana to v%2$s. Pobrać i zainstalować aktualizację?</string>
     <string name="update_now">Aktualizuj</string>
     <string name="update_whats_new">Co nowego</string>
     <string name="update_ignore">Ignoruj</string>
@@ -201,13 +203,13 @@ Skonfiguruj hasło, kod PIN lub wzór blokady ekranu."</string>
     <string name="update_signature_mismatch">Nie można zaktualizować aplikacji, ponieważ podpisy są różne.</string>
     <string name="update_failed_title">Błąd aktualizacji</string>
     <string name="update_permission_required_title">Wymagane uprawnienie</string>
-    <string name="update_permission_required_message">Aby instalować aktualizacje, zezwól aplikacji MicroG na instalowanie nieznanych aplikacji w ustawieniach systemowych.</string>
+    <string name="update_permission_required_message">Aby instalować aktualizacje, zezwól aplikacji MicroG na instalowanie nieznanych aplikacji w ustawieniach systemu.</string>
     <string name="update_open_settings">Ustawienia</string>
-    <string name="update_check_failed">Nie można sprawdzić dostępności aktualizacji. Sprawdź połączenie i spróbuj ponownie.</string>
+    <string name="update_check_failed">Nie udało się sprawdzić aktualizacji. Sprawdź połączenie i spróbuj ponownie.</string>
     <string name="update_up_to_date_title">Masz aktualną wersję</string>
     <string name="update_up_to_date_message">MicroG-RE v%s jest najnowszą wersją.</string>
     <string name="update_notification_title">Dostępna aktualizacja</string>
-    <string name="update_notification_text">Nowa wersja v%s jest dostępna — dotknij, aby zaktualizować</string>
+    <string name="update_notification_text">Dostępna jest nowa wersja v%s. Dotknij, aby zaktualizować.</string>
     <string name="update_notification_channel">Aktualizacje</string>
     <string name="gcm_unregister_app">Wyrejestruj</string>
     <string name="gcm_no_message_yet">Brak otrzymanych powiadomień</string>

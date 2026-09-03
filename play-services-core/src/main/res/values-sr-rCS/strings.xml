@@ -14,7 +14,6 @@ Vaši podaci neće biti izgubljeni"</string>
     <string name="dialog_cancel_button">Odustani</string>
     <string name="snackbar_remove_account">Nalog %s uklonjen</string>
     <string name="snackbar_undo_button">Poništi</string>
-    <string name="limited_services_app_name">MicroG ograničene usluge</string>
     <string name="gms_settings_name">MicroG postavke</string>
     <string name="gms_settings_summary">Podesi MicroG usluge.</string>
     <string name="just_a_sec">Upoznaјте se…</string>
@@ -41,8 +40,12 @@ Ovo može potrajati nekoliko minuta."</string>
     <string name="deny">Odbij</string>
     <string name="auth_notification_title">Potrebna je autentikacija</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> zahteva vašu autorizaciju za pristup vašem Google nalogu.</string>
-    <string name="auth_package_override_request_title">Dozvoli aplikaciji <b><xliff:g example="F-Droid">%1$s</xliff:g></b> privilegovani pristup nalogu <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
-    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> želi da pristupi vašem nalogu kao da je <b><xliff:g example="F-Droid">%2$s</xliff:g> od strane <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Ovo joj može dati privilegovani pristup vašem nalogu.</string>
+    <string name="auth_package_override_request_title">Dozvoli <b>
+  <xliff:g example="F-Droid">%1$s</xliff:g>
+</b> privilegovani pristup za <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b>
+  <xliff:g example="F-Droid">%1$s</xliff:g>
+</b> želi da pristupi vašem nalogu kao da je <b><xliff:g example="F-Droid">%2$s</xliff:g> od <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Ovo bi mu moglo omogućiti privilegovani pristup vašem nalogu.</string>
     <string name="auth_action_notification_channel_name">Upozorenja za Google nalog</string>
     <string name="auth_action_notification_channel_description">Obaveštava kada jedan od vaših Google naloga zahteva dodatno podešavanje pre nego što se može koristiti ili kada nalog nije kompatibilan sa microG-om.</string>
     <string name="auth_action_notification_title">Potrebna je akcija na nalogu</string>
@@ -51,7 +54,9 @@ Ovo može potrajati nekoliko minuta."</string>
     <string name="auth_action_activity_header">Završite podešavanje vašeg Google naloga</string>
     <string name="auth_action_activity_explanation">Dovršite sledeće korake da biste mogli da koristite svoj Google nalog %s na ovom uređaju.</string>
     <string name="auth_action_step_enable_checkin">Omogući registraciju uređaja</string>
-    <string name="auth_action_step_enable_checkin_description">\"Vaš uređaj treba da se registruje na Google bar jednom.\n\nMožete onemogućiti registraciju uređaja na Google po završetku podešavanja naloga.</string>
+    <string name="auth_action_step_enable_checkin_description">"Vaš uređaj mora da se registruje na Google bar jednom.
+
+Možete onemogućiti registraciju uređaja na Google nakon što je podešavanje naloga završeno."</string>
     <string name="auth_action_step_enable_gcm">Omogući Cloud Messaging</string>
     <string name="auth_action_step_enable_gcm_description">Možete onemogućiti Cloud Messaging nakon što je podešavanje naloga završeno.</string>
     <string name="auth_action_step_allow_microg_gcm">Dozvoli Cloud Messaging za microG</string>

@@ -10,7 +10,6 @@
     <string name="dialog_cancel_button">Annuleren</string>
     <string name="snackbar_remove_account">U bent niet geregistreerd %s</string>
     <string name="snackbar_undo_button">Ongedaan maken</string>
-    <string name="limited_services_app_name">MicroG Beperkte Services</string>
     <string name="gms_settings_name">MicroG Instellingen</string>
     <string name="gms_settings_summary">Stel MicroG-services in.</string>
     <string name="just_a_sec">Een ogenblik geduld…</string>
@@ -35,8 +34,12 @@ Probeer het later opnieuw."</string>
     <string name="deny">Weigeren</string>
     <string name="auth_notification_title">Authenticatie vereist</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> heeft uw toestemming nodig om toegang te krijgen tot uw Google-account.</string>
-    <string name="auth_package_override_request_title">Sta <b><xliff:g example="F-Droid">%1$s</xliff:g></b> bevoorrechte toegang toe tot <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
-    <string name="auth_package_override_request_message">&lt;b&gt;&lt;xliff:g example="F-Droid"&gt;%1$s&lt;/xliff:g&gt;&lt;/b&gt; wil toegang tot uw account alsof het &lt;b&gt;&lt;xliff:g example="F-Droid"&gt;%2$s&lt;/xliff:g&gt;&lt;/b&gt; door &lt;xliff:g example="F-Droid Inc."&gt;%3$s&lt;/xliff:g&gt;&lt;/b&gt; is. Dit kan het bevoorrechte toegang tot uw account verlenen.</string>
+    <string name="auth_package_override_request_title">Sta <b>
+  <xliff:g example="F-Droid">%1$s</xliff:g>
+</b> bevoorrechte toegang tot <xliff:g example="account@example.com">%2$s</xliff:g> toe?</string>
+    <string name="auth_package_override_request_message"><b>
+  <xliff:g example="F-Droid">%1$s</xliff:g>
+</b> wil toegang tot je account alsof het <b><xliff:g example="F-Droid">%2$s</xliff:g> door <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b> was. Dit kan het bevoorrechte toegang tot je account verlenen.</string>
     <string name="auth_action_notification_channel_name">Google account meldingen</string>
     <string name="auth_action_notification_channel_description">Waarschuwt wanneer een van uw Google-accounts extra installatie vereist voordat het kan worden gebruikt of wanneer een account niet compatibel is met microG.</string>
     <string name="auth_action_notification_title">Accountactie vereist</string>
@@ -45,9 +48,9 @@ Probeer het later opnieuw."</string>
     <string name="auth_action_activity_header">Maak de installatie af</string>
     <string name="auth_action_activity_explanation">Voltooi de volgende stappen om uw Google-account %s op dit apparaat te kunnen gebruiken.</string>
     <string name="auth_action_step_enable_checkin">Apparaatregistratie inschakelen</string>
-    <string name="auth_action_step_enable_checkin_description">\"Uw apparaat moet minstens één keer registreren bij Google.
+    <string name="auth_action_step_enable_checkin_description">"Je apparaat moet zich ten minste één keer bij Google registreren.
 
-U kunt apparaatregistratie bij Google uitschakelen nadat de accountinstallatie voltooid is.</string>
+Je kunt Google-apparaatregistratie uitschakelen nadat het instellen van het account is voltooid."</string>
     <string name="auth_action_step_enable_gcm">Cloud Messaging inschakelen</string>
     <string name="auth_action_step_enable_gcm_description">U kunt Cloud Messaging uitschakelen nadat de accountinstallatie voltooid is.</string>
     <string name="auth_action_step_allow_microg_gcm">Cloud Messaging voor microG toestaan</string>
