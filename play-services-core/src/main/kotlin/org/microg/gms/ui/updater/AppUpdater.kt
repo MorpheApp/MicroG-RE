@@ -259,6 +259,15 @@ object AppUpdater {
     /** Posts a notification that an update is available (used by the background worker). */
     @JvmStatic
     fun postUpdateNotification(context: Context, update: UpdateInfo) {
+        // On Android 13+ a background receiver cannot prompt for POST_NOTIFICATIONS; if it
+        // is missing the notification would be silently dropped, so skip posting entirely.
+        if (Build.VERSION.SDK_INT >= 33 &&
+            ContextCompat.checkSelfPermission(
+                context, Manifest.permission.POST_NOTIFICATIONS
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            return
+        }
         ensureNotificationChannel(context)
         val pending = PendingIntent.getActivity(
             context,
