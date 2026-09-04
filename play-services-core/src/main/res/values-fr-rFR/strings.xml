@@ -41,12 +41,8 @@ Cela peut prendre quelques minutes."</string>
     <string name="deny">Refuser</string>
     <string name="auth_notification_title">Authentification nécessaire</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> nécessite votre autorisation pour accéder à votre compte Google.</string>
-    <string name="auth_package_override_request_title">Autoriser <b>
-  <xliff:g example="F-Droid">%1$s</xliff:g>
-</b> à accéder à <xliff:g example="account@example.com">%2$s</xliff:g> avec un accès privilégié ?</string>
-    <string name="auth_package_override_request_message"><b>
-  <xliff:g example="F-Droid">%1$s</xliff:g>
-</b> souhaite accéder à votre compte comme si c\'était <b><xliff:g example="F-Droid">%2$s</xliff:g> par <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Cela pourrait lui accorder un accès privilégié à votre compte.</string>
+    <string name="auth_package_override_request_title">Autoriser <b><xliff:g example="F-Droid">%1$s</xliff:g></b> à accéder à <xliff:g example="account@example.com">%2$s</xliff:g> avec un accès privilégié ?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> souhaite accéder à votre compte comme si c\'était <b><xliff:g example="F-Droid">%2$s</xliff:g> par <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Cela pourrait lui accorder un accès privilégié à votre compte.</string>
     <string name="auth_action_notification_channel_name">Alertes du compte Google</string>
     <string name="auth_action_notification_channel_description">Notifie lorsqu\'un de vos comptes Google nécessite une configuration supplémentaire avant de pouvoir être utilisé ou lorsqu\'un compte est incompatible avec microG.</string>
     <string name="auth_action_notification_title">Action nécessaire pour le compte</string>
@@ -214,6 +210,10 @@ Veuillez configurer un écran de verrouillage avec un mot de passe, un code PIN 
     <string name="update_notification_title">Mise à jour disponible</string>
     <string name="update_notification_text">La nouvelle version v%s est disponible. Appuyez pour mettre à jour</string>
     <string name="update_notification_channel">Mises à jour</string>
+    <string name="update_notification_permission_title">Notifications</string>
+    <string name="update_notification_permission_allow">Autoriser</string>
+    <string name="update_notification_permission_not_now">Pas maintenant</string>
+    <string name="update_notification_permission_open_settings">Ouvrir les paramètres</string>
     <string name="gcm_unregister_app">Désenregistrer</string>
     <string name="gcm_no_message_yet">Aucun message reçu pour le moment</string>
     <string name="gcm_last_message_at">Dernier message : <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
@@ -222,7 +222,7 @@ Veuillez configurer un écran de verrouillage avec un mot de passe, un code PIN 
     <string name="gcm_unregister_confirm_title">Désenregistrer <xliff:g example="F-Droid">%1$s</xliff:g> ?</string>
     <string name="gcm_unregister_confirm_message">Certaines applications ne se réenregistrent pas automatiquement et/ou ne proposent pas d\'option pour le faire manuellement. Ces applications risquent de ne pas fonctionner correctement après leur désenregistrement.\nContinuer ?</string>
     <string name="gcm_unregister_after_deny_message">Vous avez refusé à une application déjà enregistrée le droit de s\'enregistrer pour les notifications push.
-Voulez-vous la désenregistrer maintenant pour qu’elle ne reçoive plus de messages push à l’avenir ?</string>
+Voulez-vous la désenregistrer maintenant pour qu\'elle ne reçoive plus de messages push à l\'avenir ?</string>
     <string name="gcm_messages_counter">Messages : <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> octets)</string>
     <string name="gcm_network_state_disconnected">Déconnecté</string>
     <string name="gcm_network_state_connected">Connecté depuis <xliff:g example="2 hours ago">%1$s</xliff:g></string>

@@ -40,8 +40,8 @@
     <string name="deny">거부</string>
     <string name="auth_notification_title">인증 필요</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g>는 Google 계정에 액세스하기 위해 승인이 필요합니다.</string>
-    <string name="auth_package_override_request_title"><b><xliff:g example="F-Droid">%1$s</xliff:g></b>에 <xliff:g example="account@example.com">%2$s</xliff:g>에 대한 권한 액세스를 허용하시겠습니까?</string>
-    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b>에서 <b><xliff:g example="F-Droid Inc.">%3$s</xliff:g>에서 제공하는 <xliff:g example="F-Droid">%2$s</xliff:g></b>인 것처럼 귀하의 계정에 액세스하려고 합니다. 이로 인해 해당 앱에 귀하의 계정에 대한 권한 있는 액세스 권한이 부여될 수 있습니다.</string>
+    <string name="auth_package_override_request_title"><b><xliff:g example="F-Droid">%1$s</xliff:g></b>가 <xliff:g example="account@example.com">%2$s</xliff:g>에 대한 액세스 권한을 갖도록 허용하시겠습니까?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b>가 <b><xliff:g example="F-Droid Inc.">%3$s</xliff:g>에서 제공하는 <xliff:g example="F-Droid">%2$s</xliff:g></b>인 것처럼 귀하의 계정에 액세스하려고 합니다. 이로 인해 해당 앱에 귀하의 계정에 대한 높은 수준의 권한이 부여될 수 있습니다.</string>
     <string name="auth_action_notification_channel_name">Google 계정 알림</string>
     <string name="auth_action_notification_channel_description">Google 계정 중 하나를 사용하기 전에 추가 설정이 필요하거나 계정이 microG와 호환되지 않을 때 알림을 보냅니다.</string>
     <string name="auth_action_notification_title">계정 작업 필요</string>
@@ -204,10 +204,15 @@
     <string name="update_open_settings">설정</string>
     <string name="update_check_failed">업데이트를 확인할 수 없습니다. 연결 상태를 확인하고 다시 시도하세요.</string>
     <string name="update_up_to_date_title">최신 버전입니다</string>
-    <string name="update_up_to_date_message">MicroG-RE %s 버전이 최신 버전입니다.</string>
+    <string name="update_up_to_date_message">MicroG-RE %s 버전이 최신입니다.</string>
     <string name="update_notification_title">업데이트 사용 가능</string>
     <string name="update_notification_text">새로운 %s 버전을 사용할 수 있습니다. 업데이트하려면 탭하세요</string>
     <string name="update_notification_channel">업데이트</string>
+    <string name="update_notification_permission_title">알림</string>
+    <string name="update_notification_permission_message">새 업데이트가 제공되면 알려드릴 수 있도록 MicroG-RE는 알림을 보낼 권한이 필요합니다. 업데이트 알림을 받으려면 알림을 허용해 주세요</string>
+    <string name="update_notification_permission_allow">허용</string>
+    <string name="update_notification_permission_not_now">나중에</string>
+    <string name="update_notification_permission_open_settings">설정 열기</string>
     <string name="gcm_unregister_app">등록 해제</string>
     <string name="gcm_no_message_yet">현재까지 수신된 메시지가 없음</string>
     <string name="gcm_last_message_at">마지막 메시지: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

@@ -40,12 +40,8 @@
     <string name="deny">Заборонити</string>
     <string name="auth_notification_title">Потрібна автентифікація</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> потребує вашого дозволу для доступу до облікового запису Google.</string>
-    <string name="auth_package_override_request_title">Дозволити <b>
- <xliff:g example="F-Droid">%1$s</xliff:g>
-</b> привілейований доступ до <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
-    <string name="auth_package_override_request_message"><b>
- <xliff:g example="F-Droid">%1$s</xliff:g>
-</b> хоче отримати доступ до вашого облікового запису так, ніби це <b><xliff:g example="F-Droid">%2$s</xliff:g> від <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Це може надати йому привілейований доступ до вашого облікового запису.</string>
+    <string name="auth_package_override_request_title">Дозволити <b><xliff:g example="F-Droid">%1$s</xliff:g></b> привілейований доступ до <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> хоче отримати доступ до вашого облікового запису так, ніби це <b><xliff:g example="F-Droid">%2$s</xliff:g> від <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Це може надати йому привілейований доступ до вашого облікового запису.</string>
     <string name="auth_action_notification_channel_name">Сповіщення облікового запису Google</string>
     <string name="auth_action_notification_channel_description">Сповіщає, коли один із ваших облікових записів Google потребує додаткового налаштування перед використанням або коли обліковий запис несумісний з microG.</string>
     <string name="auth_action_notification_title">Потрібна дія з обліковим записом</string>
@@ -212,6 +208,10 @@
     <string name="update_notification_title">Доступне оновлення</string>
     <string name="update_notification_text">Доступна нова версія v%s, натисніть, щоб оновити</string>
     <string name="update_notification_channel">Оновлення</string>
+    <string name="update_notification_permission_title">Сповіщення</string>
+    <string name="update_notification_permission_allow">Дозволити</string>
+    <string name="update_notification_permission_not_now">Не зараз</string>
+    <string name="update_notification_permission_open_settings">Відкрити налаштування</string>
     <string name="gcm_unregister_app">Скасувати реєстрацію</string>
     <string name="gcm_no_message_yet">Поки що повідомлень не отримано</string>
     <string name="gcm_last_message_at">Останнє повідомлення: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

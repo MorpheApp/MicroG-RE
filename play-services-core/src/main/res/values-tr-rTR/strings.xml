@@ -40,14 +40,6 @@ Bu, birkaç dakika sürebilir."</string>
     <string name="deny">Reddet</string>
     <string name="auth_notification_title">Kimlik doğrulaması gerekli</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g>, Google hesabınıza erişmek için yetkilendirmenizi gerektiriyor.</string>
-    <string name="auth_package_override_request_title"><b>
-  <xliff:g example="F-Droid">%1$s</xliff:g>
-</b> uygulamasının <xliff:g example="account@example.com">%2$s</xliff:g> hesabına ayrıcalıklı erişimine izin verilsin mi?</string>
-    <string name="auth_package_override_request_message">&lt;b&gt;
-  &lt;xliff:g example="F-Droid"&gt;%1$s&lt;/xliff:g&gt;
-&lt;/b&gt; hesabınıza &lt;b&gt;
-  &lt;xliff:g example="F-Droid"&gt;%2$s&lt;/xliff:g&gt;
-&lt;/b&gt; gibi erişmek istiyor - &lt;xliff:g example="F-Droid Inc."&gt;%3$s&lt;/xliff:g&gt; tarafından&lt;/b&gt;. Bu, hesabınıza ayrıcalıklı erişim sağlayabilir.</string>
     <string name="auth_action_notification_channel_name">Google hesap uyarıları</string>
     <string name="auth_action_notification_channel_description">Google hesaplarınızdan biri kullanılmadan önce ek kurulum gerektirdiğinde veya bir hesap microG ile uyumsuz olduğunda bildirir.</string>
     <string name="auth_action_notification_title">Hesap işlemi gerekli</string>
@@ -214,6 +206,8 @@ Lütfen bir parola, PIN veya desen ekran kilidi ayarlayın."</string>
     <string name="update_notification_title">Güncelleme mevcut</string>
     <string name="update_notification_text">Yeni v%s sürümü mevcut, güncellemek için dokunun</string>
     <string name="update_notification_channel">Güncellemeler</string>
+    <string name="update_notification_permission_title">Bildirimler</string>
+    <string name="update_notification_permission_allow">İzin ver</string>
     <string name="gcm_unregister_app">Kaydı sil</string>
     <string name="gcm_no_message_yet">Henüz hiçbir mesaj alınmadı</string>
     <string name="gcm_last_message_at">Son mesaj: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

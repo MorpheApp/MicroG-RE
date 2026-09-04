@@ -40,12 +40,8 @@ Isso pode levar alguns minutos."</string>
     <string name="deny">Negar</string>
     <string name="auth_notification_title">Autenticação necessária</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> requer sua autorização para acessar sua conta do Google.</string>
-    <string name="auth_package_override_request_title">Permitir que <b>
-  <xliff:g example="F-Droid">%1$s</xliff:g>
-</b> tenha acesso privilegiado a <xliff:g example="account@example.com">%2$s</xliff:g>?,</string>
-    <string name="auth_package_override_request_message"><b>
-  <xliff:g example="F-Droid">%1$s</xliff:g>
-</b> quer acessar sua conta como se fosse <b><xliff:g example="F-Droid">%2$s</xliff:g> por <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Isso pode conceder a ele acesso privilegiado à sua conta.</string>
+    <string name="auth_package_override_request_title">Permitir que <b><xliff:g example="F-Droid">%1$s</xliff:g></b> tenha acesso privilegiado a <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> quer acessar sua conta como se fosse <b><xliff:g example="F-Droid">%2$s</xliff:g> da <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Isso pode conceder a ele acesso privilegiado à sua conta.</string>
     <string name="auth_action_notification_channel_name">Alertas de conta do Google</string>
     <string name="auth_action_notification_channel_description">Notifica quando uma das suas contas do Google requer configuração adicional antes de ser usada ou quando uma conta é incompatível com microG.</string>
     <string name="auth_action_notification_title">Ação necessária na conta</string>
@@ -212,6 +208,8 @@ Configure uma senha, PIN ou padrão de bloqueio de tela."</string>
     <string name="update_notification_title">Atualização disponível</string>
     <string name="update_notification_text">Nova versão v%s está disponível. Toque para atualizar.</string>
     <string name="update_notification_channel">Atualizações</string>
+    <string name="update_notification_permission_title">Notificações</string>
+    <string name="update_notification_permission_allow">Permitir</string>
     <string name="gcm_unregister_app">Revogar registro</string>
     <string name="gcm_no_message_yet">Nenhuma mensagem recebida até agora</string>
     <string name="gcm_last_message_at">Última mensagem: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

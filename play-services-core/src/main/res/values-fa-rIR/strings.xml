@@ -62,6 +62,7 @@
     <string name="prefcat_authentication">احراز هویت</string>
     <string name="update_failed_title">بروزرسانی شکست خورد</string>
     <string name="update_open_settings">تنظیمات</string>
+    <string name="update_notification_permission_allow">اجازه</string>
     <string name="gcm_unregister_app">لغو ثبت</string>
     <string name="gcm_no_message_yet">تاکنون هیچ پیامی دریافت نشده است</string>
     <string name="gcm_registered">ثبت شده</string>

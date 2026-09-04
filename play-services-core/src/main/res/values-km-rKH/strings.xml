@@ -49,6 +49,7 @@
     <string name="pref_about_title">អំពី MicroG RE</string>
     <string name="update_failed_title">ការអាប់ដេតបានបរាជ័យ</string>
     <string name="update_open_settings">ការកំណត់</string>
+    <string name="update_notification_permission_allow">អនុញ្ញាត</string>
     <string name="gcm_unregister_app">មិនបានចុះបញ្ជីទេ</string>
     <string name="gcm_registered">បានចុះបញ្ជី</string>
     <string name="gcm_network_state_disconnected">បានផ្តាច់</string>

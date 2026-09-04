@@ -30,14 +30,6 @@
     <string name="about_root_summary">Sažetak</string>
     <string name="about_root_version">Verzija v0.1.0</string>
     <string name="about_root_libraries">Uključene knjižnice</string>
-    <!--Updater-->
-    <string name="update_checker_button">Provjeri ažuriranja</string>
-    <string name="update_checker_download_button">Preuzmi</string>
-    <!--updater: messages-->
-    <string name="update_checker_no_update">Nema dostupnih ažuriranja</string>
-    <string name="update_checker_update_available">Dostupno je novo ažuriranje: %s</string>
-    <string name="update_checker_no_internet">Nema internet veze</string>
-    <string name="update_checker_generic_error">Dogodila se pogreška… Molimo pokušajte kasnije</string>
     <!--Settings About-->
     <string name="about_morphe_description">Morphe je projekt otvorenog koda osmišljen za modificiranje Android aplikacija putem patcheva</string>
 </resources>

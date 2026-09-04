@@ -30,14 +30,6 @@
     <string name="about_root_summary">Opsomming</string>
     <string name="about_root_version">Weergawe v0.1.0</string>
     <string name="about_root_libraries">Ingesluit biblioteke</string>
-    <!--Updater-->
-    <string name="update_checker_button">Kyk vir opgraderings</string>
-    <string name="update_checker_download_button">Aflaai</string>
-    <!--updater: messages-->
-    <string name="update_checker_no_update">Geen opdatering beskikbaar</string>
-    <string name="update_checker_update_available">Nuwe opdatering beskikbaar: %s</string>
-    <string name="update_checker_no_internet">Geen internetverbinding</string>
-    <string name="update_checker_generic_error">Iets het fout gegaan… Probeer asseblief weer later</string>
     <!--Settings About-->
     <string name="about_morphe_description">Morphe is \'n oopbronprojek wat ontwerp is om Android-programme deur veranderinge te wysig</string>
 </resources>

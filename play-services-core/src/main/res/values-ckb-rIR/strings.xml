@@ -94,6 +94,8 @@
     <string name="update_failed_title">نوێکردنەوە شکستس هێنا</string>
     <string name="update_open_settings">ڕێکخستنەکان</string>
     <string name="update_notification_channel">نوێکردنەوەکان</string>
+    <string name="update_notification_permission_allow">ڕێگەپێدان</string>
+    <string name="update_notification_permission_not_now">ئێستا نا</string>
     <string name="gcm_unregister_app">تۆمارنەکراو</string>
     <string name="gcm_no_message_yet">تا ئێستا هیچ نامەیەک وەرنەگیراوە</string>
     <string name="gcm_registered">تۆمارکراو</string>

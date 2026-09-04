@@ -191,6 +191,9 @@ Vui lòng thiết lập mật khẩu, mã PIN hoặc khóa màn hình bằng m�
     <string name="update_notification_title">Đã có bản cập nhật</string>
     <string name="update_notification_text">Có bản v%s mới, nhấn để cập nhật</string>
     <string name="update_notification_channel">Cập nhật</string>
+    <string name="update_notification_permission_title">Thông báo</string>
+    <string name="update_notification_permission_allow">Cho phép</string>
+    <string name="update_notification_permission_not_now">Từ từ</string>
     <string name="gcm_unregister_app">Hủy đăng ký</string>
     <string name="gcm_no_message_yet">Không có thông báo nào gần đây</string>
     <string name="gcm_last_message_at">Tin nhắn cuối: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

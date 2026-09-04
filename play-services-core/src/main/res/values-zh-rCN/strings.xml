@@ -40,12 +40,6 @@
     <string name="deny">拒绝</string>
     <string name="auth_notification_title">需要身份验证</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> 需要您的授权才能访问您的 Google 帐户。</string>
-    <string name="auth_package_override_request_title">允许 <b>
-  <xliff:g example="F-Droid">%1$s</xliff:g>
-</b> 对 <xliff:g example="account@example.com">%2$s</xliff:g> 拥有特权访问权限？</string>
-    <string name="auth_package_override_request_message"><b>
-  <xliff:g example="F-Droid">%1$s</xliff:g>
-</b> 想要像 <b><xliff:g example="F-Droid">%2$s</xliff:g>（由 <xliff:g example="F-Droid Inc.">%3$s</xliff:g> 提供）</b>一样访问你的账户。这可能会授予它对你账户的特权访问权限。</string>
     <string name="auth_action_notification_channel_name">Google 帐户提醒</string>
     <string name="auth_action_notification_channel_description">当您的某个 Google 帐户需要额外设置才能使用，或某个帐户与 microG 不兼容时发出通知。</string>
     <string name="auth_action_notification_title">需要帐户操作</string>
@@ -211,6 +205,8 @@
     <string name="update_notification_title">有可用更新</string>
     <string name="update_notification_text">新版本 v%s 可用，点击更新</string>
     <string name="update_notification_channel">更新</string>
+    <string name="update_notification_permission_title">通知</string>
+    <string name="update_notification_permission_not_now">暂不</string>
     <string name="gcm_unregister_app">取消注册</string>
     <string name="gcm_no_message_yet">尚未收到任何消息</string>
     <string name="gcm_last_message_at">最后一条消息：<xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

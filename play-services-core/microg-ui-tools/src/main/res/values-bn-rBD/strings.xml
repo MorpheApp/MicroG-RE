@@ -30,14 +30,6 @@
     <string name="about_root_summary">সারাংশ</string>
     <string name="about_root_version">বিকরণ v0.1.0</string>
     <string name="about_root_libraries">সহ-লাইব্রেরি</string>
-    <!--Updater-->
-    <string name="update_checker_button">আপডেট চেক করুন</string>
-    <string name="update_checker_download_button">ডাউনলোড করুন</string>
-    <!--updater: messages-->
-    <string name="update_checker_no_update">আপডেট পাওয়া যায়নি</string>
-    <string name="update_checker_update_available">নতুন আপডেট উপলব্ধ: %s</string>
-    <string name="update_checker_no_internet">ইন্টারনেট সংযোগ নেই</string>
-    <string name="update_checker_generic_error">কিছু ভুল হয়েছে… পরে আবার চেষ্টা করুন</string>
     <!--Settings About-->
     <string name="about_morphe_description">Morphe একটি খোলা-উৎসাহী প্রকল্প, যা Android অ্যাপ্লিকেশনকে প্যাচের মাধ্যমে পরিবর্তন করে</string>
 </resources>

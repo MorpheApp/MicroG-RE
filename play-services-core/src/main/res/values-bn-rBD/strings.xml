@@ -203,6 +203,7 @@
     <string name="update_notification_title">আপডেট উপলব্ধ</string>
     <string name="update_notification_text">নতুন v%s উপলব্ধ, আপডেট করতে ট্যাপ করুন</string>
     <string name="update_notification_channel">আপডেট</string>
+    <string name="update_notification_permission_title">নোটিস্য়াসেগ</string>
     <string name="gcm_unregister_app">অনুগ্রহ করুন</string>
     <string name="gcm_no_message_yet">আপনার কাছে এখনো কোনো বার্তা পায়নি</string>
     <string name="gcm_last_message_at">শেষ বার্তা: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

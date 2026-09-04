@@ -30,14 +30,6 @@
     <string name="about_root_summary">پوختە</string>
     <string name="about_root_version">وەشانی v0.1.0</string>
     <string name="about_root_libraries">کتێبخانەکانی لەگەڵدایە</string>
-    <!--Updater-->
-    <string name="update_checker_button">پشکنینی نوێکردنەوەکان</string>
-    <string name="update_checker_download_button">دابەزاندن</string>
-    <!--updater: messages-->
-    <string name="update_checker_no_update">نوێکردنەوە بەردەست نیە</string>
-    <string name="update_checker_update_available">نوێکردنەوەی نوێ بەردەستە %s</string>
-    <string name="update_checker_no_internet">هێڵی ئینتەرنێت نییە</string>
-    <string name="update_checker_generic_error">شتێک بەهەڵەداچوو… تکایە دواتر هەوڵ بدەرەوە</string>
     <!--Settings About-->
     <string name="about_morphe_description">Morphe پڕۆژەیەکی سەرچاوە کراوەیە کە دیزاینکراوە بۆ دەستکاریکردنی ئەپەکانی ئەندرۆید بەڕێگەی پینەکردنەکان</string>
 </resources>

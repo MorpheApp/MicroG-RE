@@ -91,6 +91,7 @@ Isto pode tardar uns segundos.
     <string name="update_failed_title">Erro ao actualizar</string>
     <string name="update_open_settings">Axustes</string>
     <string name="update_notification_title">Actualización dispoñible</string>
+    <string name="update_notification_permission_allow">Permitir</string>
     <string name="gcm_unregister_app">Cancelar rexistro</string>
     <string name="gcm_no_message_yet">Non se recibiron mensaxes ata agora</string>
     <string name="gcm_registered">Rexistrado</string>

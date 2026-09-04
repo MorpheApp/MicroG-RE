@@ -203,6 +203,7 @@ Vaši podaci neće biti izgubljeni"</string>
     <string name="update_notification_title">Ažuriranje dostupno</string>
     <string name="update_notification_text">Nova verzija v%s je dostupna, dodirnite za ažuriranje</string>
     <string name="update_notification_channel">Ažuriranja</string>
+    <string name="update_notification_permission_title">Обавештења</string>
     <string name="gcm_unregister_app">Уклонити регистрацију</string>
     <string name="gcm_no_message_yet">До сада није примљено ниједна порука</string>
     <string name="gcm_last_message_at">Последња порука: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

@@ -40,12 +40,6 @@ Ovo može potrajati nekoliko minuta."</string>
     <string name="deny">Odbij</string>
     <string name="auth_notification_title">Potrebna je autentikacija</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> zahteva vašu autorizaciju za pristup vašem Google nalogu.</string>
-    <string name="auth_package_override_request_title">Dozvoli <b>
-  <xliff:g example="F-Droid">%1$s</xliff:g>
-</b> privilegovani pristup za <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
-    <string name="auth_package_override_request_message"><b>
-  <xliff:g example="F-Droid">%1$s</xliff:g>
-</b> želi da pristupi vašem nalogu kao da je <b><xliff:g example="F-Droid">%2$s</xliff:g> od <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Ovo bi mu moglo omogućiti privilegovani pristup vašem nalogu.</string>
     <string name="auth_action_notification_channel_name">Upozorenja za Google nalog</string>
     <string name="auth_action_notification_channel_description">Obaveštava kada jedan od vaših Google naloga zahteva dodatno podešavanje pre nego što se može koristiti ili kada nalog nije kompatibilan sa microG-om.</string>
     <string name="auth_action_notification_title">Potrebna je akcija na nalogu</string>
@@ -210,6 +204,7 @@ Možete onemogućiti registraciju uređaja na Google nakon što je podešavanje 
     <string name="update_notification_title">Dostupno ažuriranje</string>
     <string name="update_notification_text">Nova v%s je dostupna, dodirni da ažuriraš</string>
     <string name="update_notification_channel">Ažuriranja</string>
+    <string name="update_notification_permission_title">Obaveštenja</string>
     <string name="gcm_unregister_app">Ukloni registraciju</string>
     <string name="gcm_no_message_yet">Nema primljenih poruka</string>
     <string name="gcm_last_message_at">Poslednja poruka: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

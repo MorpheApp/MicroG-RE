@@ -48,6 +48,9 @@
     <string name="auth_action_activity_header">ตั้งค่าบัญชี Google ของคุณให้เสร็จสมบูรณ์</string>
     <string name="auth_action_activity_explanation">ทำตามขั้นตอนต่อไปนี้เพื่อให้สามารถใช้บัญชี Google %s ของคุณบนอุปกรณ์นี้ได้</string>
     <string name="auth_action_step_enable_checkin">เปิดใช้งานการลงทะเบียนอุปกรณ์</string>
+    <string name="auth_action_step_enable_checkin_description">"อุปกรณ์ของคุณต้องลงทะเบียนกับ Google อย่างน้อยหนึ่งครั้ง
+
+คุณสามารถปิดการลงทะเบียนอุปกรณ์กับ Google ได้หลังจากตั้งค่าบัญชีเสร็จสมบูรณ์แล้ว"</string>
     <string name="auth_action_step_enable_gcm">เปิดใช้งาน Cloud Messaging</string>
     <string name="auth_action_step_enable_gcm_description">คุณสามารถปิดใช้งาน Cloud Messaging ได้หลังจากตั้งค่าบัญชีเสร็จสมบูรณ์แล้ว</string>
     <string name="auth_action_step_allow_microg_gcm">อนุญาต Cloud Messaging สำหรับ microG</string>
@@ -203,6 +206,9 @@
     <string name="update_notification_title">มีอัปเดต</string>
     <string name="update_notification_text">มีเวอร์ชันใหม่ v%s ให้ใช้งาน แตะเพื่ออัปเดต</string>
     <string name="update_notification_channel">อัปเดต</string>
+    <string name="update_notification_permission_title">การแจ้งเตือน</string>
+    <string name="update_notification_permission_not_now">ไม่ใช่ตอนนี้</string>
+    <string name="update_notification_permission_open_settings">เปิดการตั้งค่า</string>
     <string name="gcm_unregister_app">ยกเลิกการลงทะเบียน</string>
     <string name="gcm_no_message_yet">ยังไม่ได้รับข้อความใดเลย</string>
     <string name="gcm_last_message_at">ข้อความล่าสุด: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

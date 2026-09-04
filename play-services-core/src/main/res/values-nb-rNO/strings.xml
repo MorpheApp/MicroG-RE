@@ -40,12 +40,8 @@ Dette kan ta et par minutter."</string>
     <string name="deny">Nekt</string>
     <string name="auth_notification_title">Autentisering kreves</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> krever din autorisasjon for å få tilgang til Google-kontoen din.</string>
-    <string name="auth_package_override_request_title">Tillat <b>
-  <xliff:g example="F-Droid">%1$s</xliff:g>
-</b> privilegert tilgang til <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
-    <string name="auth_package_override_request_message"><b>
-  <xliff:g example="F-Droid">%1$s</xliff:g>
-</b> ønsker å få tilgang til kontoen din som om det var <b><xliff:g example="F-Droid">%2$s</xliff:g> av <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Dette kan gi den privilegert tilgang til kontoen din.</string>
+    <string name="auth_package_override_request_title">Tillat at <b><xliff:g example="F-Droid">%1$s</xliff:g></b> får privilegert tilgang til <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> vil ha tilgang til kontoen din som om den var <b><xliff:g example="F-Droid">%2$s</xliff:g> fra <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Dette kan innvilge den priviligert tilgang til kontoen din.</string>
     <string name="auth_action_notification_channel_name">Google-kontovarsler</string>
     <string name="auth_action_notification_channel_description">Varsler når en av Google-kontoene dine krever ekstra oppsett før den kan brukes, eller når en konto er inkompatibel med microG.</string>
     <string name="auth_action_notification_title">Kontohandling påkrevd</string>

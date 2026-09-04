@@ -41,12 +41,6 @@ Ez eltarthat néhány percig."</string>
     <string name="deny">Megtagad</string>
     <string name="auth_notification_title">Hitelesítés szükséges</string>
     <string name="auth_notification_content">A <xliff:g example="F-Droid">%1$s</xliff:g> alkalmazáshoz engedélye szükséges a Google-fiók eléréséhez.</string>
-    <string name="auth_package_override_request_title">Engedélyezi a(z) <b>
-  <xliff:g example="F-Droid">%1$s</xliff:g>
-</b> kiemelt hozzáférését a következőhöz: <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
-    <string name="auth_package_override_request_message"><b>
-  <xliff:g example="F-Droid">%1$s</xliff:g>
-</b> hozzáférést szeretne a fiókjához, mintha ő lenne a(z) <b><xliff:g example="F-Droid">%2$s</xliff:g> a <xliff:g example="F-Droid Inc.">%3$s</xliff:g> által</b>. Ez kiemelt hozzáférést biztosíthat a fiókjához.</string>
     <string name="auth_action_notification_channel_name">Google-fiókra vonatkozó figyelmeztetések</string>
     <string name="auth_action_notification_channel_description">Értesítést küld, ha az egyik Google-fiókja további beállítást igényel a használat előtt, vagy ha egy fiók nem kompatibilis a microG szolgáltatással.</string>
     <string name="auth_action_notification_title">Fiókművelet szükséges</string>
@@ -212,6 +206,8 @@ A Google-eszközregisztrációt a fiókbeállítás befejezése után letilthatj
     <string name="update_notification_title">Frissítés elérhető</string>
     <string name="update_notification_text">Új v%s verzió érhető el. Érintse meg a frissítéshez.</string>
     <string name="update_notification_channel">Frissítések</string>
+    <string name="update_notification_permission_title">Értesítések</string>
+    <string name="update_notification_permission_allow">Engedélyezés</string>
     <string name="gcm_unregister_app">Regisztráció törlése</string>
     <string name="gcm_no_message_yet">Eddig nem érkezett üzenet</string>
     <string name="gcm_last_message_at">Utolsó üzenet: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

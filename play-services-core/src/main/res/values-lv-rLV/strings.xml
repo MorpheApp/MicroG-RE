@@ -22,6 +22,7 @@
     <string name="pref_privacy_title">Konfidencialitāte</string>
     <string name="prefcat_applications">Lietotnes</string>
     <string name="update_open_settings">Iestatījumi</string>
+    <string name="update_notification_permission_title">Paziņojumi</string>
     <string name="pref_device_registration_serial_title">Sērijas numurs</string>
     <string name="pref_device_registration_import_custom_profile_summary">Ievietot ierīces profilu no datnes</string>
     <string name="pref_device_registration_select_profile_title">Atlasiet profilu</string>

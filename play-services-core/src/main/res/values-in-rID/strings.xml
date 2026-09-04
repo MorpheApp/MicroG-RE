@@ -40,12 +40,8 @@ Proses ini dapat memakan waktu beberapa saat."</string>
     <string name="deny">Tolak</string>
     <string name="auth_notification_title">Autentikasi diperlukan</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> memerlukan izin Anda untuk mengakses akun Google Anda.</string>
-    <string name="auth_package_override_request_title">Izinkan <b>
-  <xliff:g example="F-Droid">%1$s</xliff:g>
-</b> akses istimewa ke <xliff:g example="account@example.com">%2$s</xliff:g>?\"}]}```json{</string>
-    <string name="auth_package_override_request_message"><b>
-  <xliff:g example="F-Droid">%1$s</xliff:g>
-</b> ingin mengakses akun Anda seolah-olah itu adalah <b><xliff:g example="F-Droid">%2$s</xliff:g> oleh <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Ini dapat memberikan akses istimewa ke akun Anda.</string>
+    <string name="auth_package_override_request_title">Izinkan <b><xliff:g example="F-Droid">%1$s</xliff:g></b> akses istimewa ke <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> ingin mengakses akun Anda seolah-olah itu adalah <b><xliff:g example="F-Droid">%2$s</xliff:g> oleh <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Hal ini mungkin memberikan akses istimewa ke akun Anda.</string>
     <string name="auth_action_notification_channel_name">Peringatan akun Google</string>
     <string name="auth_action_notification_channel_description">Memberikan pemberitahuan ketika salah satu akun Google Anda memerlukan penyiapan tambahan sebelum dapat digunakan atau ketika akun tersebut tidak kompatibel dengan microG.</string>
     <string name="auth_action_notification_title">Tindakan akun diperlukan</string>
@@ -212,6 +208,7 @@ Silakan atur kata sandi, PIN, atau pola kunci layar."</string>
     <string name="update_notification_title">Pembaruan tersedia</string>
     <string name="update_notification_text">Versi baru v%s tersedia, ketuk untuk memperbarui</string>
     <string name="update_notification_channel">Pembaruan</string>
+    <string name="update_notification_permission_title">Notifikasi</string>
     <string name="gcm_unregister_app">Batalkan pendaftaran</string>
     <string name="gcm_no_message_yet">Belum ada pesan yang diterima hingga saat ini</string>
     <string name="gcm_last_message_at">Pesan terakhir: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
