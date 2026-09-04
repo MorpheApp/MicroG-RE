@@ -392,8 +392,13 @@ object AppUpdater {
                 runUpdateFlow(activity, current)
             }
 
-        // Pre-release / dev channel toggle: switching it re-checks with the new channel and
-        // swaps the offer in place if a newer build is available there.
+        // A dev build is always on the dev channel (forced by the version-name match) and
+        // cannot be toggled off without a clean install, so only show the switch on stable
+        // builds where opting in or out is meaningful.
+        if (isDevBuild()) {
+            view.findViewById<android.view.View>(R.id.update_prerelease_row)
+                .visibility = android.view.View.GONE
+        }
         val switch = view.findViewById<com.google.android.material.materialswitch.MaterialSwitch>(R.id.update_prerelease_switch)
         switch.isChecked = includePrerelease(activity)
         switch.setOnCheckedChangeListener { _, checked ->
@@ -463,6 +468,12 @@ object AppUpdater {
             .setView(view)
             .setPositiveButton(android.R.string.ok, null)
             .create()
+        // Only a stable build can opt into the dev channel; on a dev build the channel is
+        // forced by the version name, so hide the switch to avoid an unchangeable toggle.
+        if (isDevBuild()) {
+            view.findViewById<android.view.View>(R.id.up_to_date_prerelease_row)
+                .visibility = android.view.View.GONE
+        }
         // Let an up-to-date stable user opt into the dev channel right here: flipping the
         // switch re-checks for pre-release builds and jumps to the update dialog if one is
         // newer. Previously the toggle only existed once an update was already offered.
@@ -806,10 +817,12 @@ object AppUpdater {
     private fun prefs(context: Context): SharedPreferences =
         context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
 
+    private fun isDevBuild(): Boolean = BuildConfig.VERSION_NAME.contains("dev", ignoreCase = true)
+
     /** True when the "include pre-release builds" settings toggle is enabled OR current version is a dev build. */
     @JvmStatic
     fun includePrerelease(context: Context): Boolean =
-        BuildConfig.VERSION_NAME.contains("dev", ignoreCase = true) ||
+        isDevBuild() ||
                 prefsDefault(context).getBoolean(PREFS_INCLUDE_PRERELEASE, false)
 
     /**
