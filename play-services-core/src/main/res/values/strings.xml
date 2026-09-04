@@ -267,6 +267,11 @@ Please set up a password, PIN, or pattern lock screen."</string>
     <string name="update_notification_title">Update available</string>
     <string name="update_notification_text">New v%s is available tap to update</string>
     <string name="update_notification_channel">Updates</string>
+    <string name="update_notification_permission_title">Notifications</string>
+    <string name="update_notification_permission_message">To let you know when a new update is available, MicroG-RE needs permission to send notifications. Please allow notifications so update alerts can reach you.</string>
+    <string name="update_notification_permission_allow">Allow</string>
+    <string name="update_notification_permission_not_now">Not now</string>
+    <string name="update_notification_permission_open_settings">Open settings</string>
 
     <string name="gcm_app_error_unregistering" translatable="false">Error unregistering</string>
     <string name="gcm_app_not_installed_anymore" translatable="false">No longer installed</string>

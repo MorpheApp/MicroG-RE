@@ -68,11 +68,13 @@ object AppUpdater {
     private const val PREFS_NAME = "org.microg.gms_updater"
     private const val PREFS_IGNORED_VERSION = "ignored_version"
     private const val PREFS_LAST_CHECK = "last_check"
+    private const val PREFS_NOTIF_ASKED = "notif_permission_asked"
 
     /** Settings switch key (default SharedPreferences): include pre-release / dev builds. */
     const val PREFS_INCLUDE_PRERELEASE = "pref_include_prerelease"
     private const val NOTIFICATION_CHANNEL = "updates"
     private const val NOTIFICATION_ID = 0x5555
+    private const val REQUEST_NOTIFICATION_PERMISSION = 0x5556
     private const val MAX_NOTES_LENGTH = 8000
     private const val DOWNLOAD_DIR = "updater"
     private const val DOWNLOAD_FILE = "microg-re-update.apk"
@@ -126,7 +128,7 @@ object AppUpdater {
             toast(activity, R.string.update_download_failed)
             return
         }
-        requestNotificationPermissionIfNeeded(activity)
+        ensureUpdateNotificationPermission(activity)
 
         var isCancelled = false
         var activeConnection: HttpURLConnection? = null
@@ -170,7 +172,7 @@ object AppUpdater {
     /** Downloads the 'noicon' build variant and prompts the user to update the app. */
     @JvmStatic
     fun downloadAndInstallNoIconVariant(activity: Activity) {
-        requestNotificationPermissionIfNeeded(activity)
+        ensureUpdateNotificationPermission(activity)
 
         var isCancelled = false
         var activeConnection: HttpURLConnection? = null
@@ -796,11 +798,60 @@ object AppUpdater {
         Toast.makeText(context, context.getString(resId), Toast.LENGTH_SHORT).show()
     }
 
-    private fun requestNotificationPermissionIfNeeded(activity: Activity) {
-        if (Build.VERSION.SDK_INT >= 33 &&
-            ContextCompat.checkSelfPermission(activity, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED
-        ) {
-            ActivityCompat.requestPermissions(activity, arrayOf(Manifest.permission.POST_NOTIFICATIONS), 0x5555)
+    /**
+     * Makes sure the update-notification permission is granted on Android 13+.
+     *
+     * Older Android grants it at install time. On 13+ a background receiver can never
+     * prompt, so this must be asked from a foreground activity (settings open or a
+     * download action). Escalates step by step: first the system prompt, then a dialog
+     * explaining notifications are required for update alerts, then a deep link to the
+     * app notification settings when the user checked "don't ask again".
+     */
+    @JvmStatic
+    fun ensureUpdateNotificationPermission(activity: Activity) {
+        if (Build.VERSION.SDK_INT < 33) return
+        val permission = Manifest.permission.POST_NOTIFICATIONS
+        if (ContextCompat.checkSelfPermission(activity, permission) == PackageManager.PERMISSION_GRANTED) return
+
+        val prefs = prefs(activity)
+        val alreadyAsked = prefs.getBoolean(PREFS_NOTIF_ASKED, false)
+        val canAskAgain = ActivityCompat.shouldShowRequestPermissionRationale(activity, permission)
+        when {
+            // Never asked before: show the system prompt directly.
+            !alreadyAsked -> {
+                prefs.edit().putBoolean(PREFS_NOTIF_ASKED, true).apply()
+                ActivityCompat.requestPermissions(
+                    activity, arrayOf(permission), REQUEST_NOTIFICATION_PERMISSION
+                )
+            }
+            // Denied once: explain why it is needed, then ask again.
+            canAskAgain -> MaterialAlertDialogBuilder(activity)
+                .setTitle(R.string.update_notification_permission_title)
+                .setMessage(R.string.update_notification_permission_message)
+                .setPositiveButton(R.string.update_notification_permission_allow) { _, _ ->
+                    ActivityCompat.requestPermissions(
+                        activity, arrayOf(permission), REQUEST_NOTIFICATION_PERMISSION
+                    )
+                }
+                .setNegativeButton(R.string.update_notification_permission_not_now, null)
+                .show()
+            // Permanently denied ("don't ask again"): the system prompt is gone, so the
+            // only remaining path is the per-app notification settings screen.
+            else -> MaterialAlertDialogBuilder(activity)
+                .setTitle(R.string.update_notification_permission_title)
+                .setMessage(R.string.update_notification_permission_message)
+                .setPositiveButton(R.string.update_notification_permission_open_settings) { _, _ ->
+                    try {
+                        activity.startActivity(
+                            Intent(android.provider.Settings.ACTION_APP_NOTIFICATION_SETTINGS)
+                                .putExtra(android.provider.Settings.EXTRA_APP_PACKAGE, activity.packageName)
+                        )
+                    } catch (e: Exception) {
+                        Log.e(TAG, "Opening app notification settings failed", e)
+                    }
+                }
+                .setNegativeButton(R.string.update_notification_permission_not_now, null)
+                .show()
         }
     }
 
