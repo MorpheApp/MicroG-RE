@@ -207,6 +207,7 @@
         androidx.compose.ui.tooling.data, androidx.compose.ui.tooling.preview, androidx.compose.ui.tooling,androidx.compose.material" />
 
     <application
+        android:name="org.microg.gms.ui.updater.UpdaterApplication"
         android:allowBackup="true"
         android:backupAgent="org.microg.gms.backup.GmsBackupAgent"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -1661,6 +1662,9 @@
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
             </intent-filter>
         </receiver>
     </application>

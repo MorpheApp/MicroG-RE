@@ -70,6 +70,7 @@
     </ScrollView>
 
     <LinearLayout
+        android:id="@+id/update_prerelease_row"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
