@@ -455,11 +455,40 @@ object AppUpdater {
     }
 
     private fun showUpToDateDialog(activity: Activity, update: UpdateInfo) {
-        MaterialAlertDialogBuilder(activity)
+        val view = activity.layoutInflater.inflate(R.layout.dialog_up_to_date, null)
+        view.findViewById<android.widget.TextView>(R.id.up_to_date_message).text =
+            activity.getString(R.string.update_up_to_date_message, update.version)
+        val dialog = MaterialAlertDialogBuilder(activity)
             .setTitle(R.string.update_up_to_date_title)
-            .setMessage(activity.getString(R.string.update_up_to_date_message, update.version))
+            .setView(view)
             .setPositiveButton(android.R.string.ok, null)
-            .show()
+            .create()
+        // Let an up-to-date stable user opt into the dev channel right here: flipping the
+        // switch re-checks for pre-release builds and jumps to the update dialog if one is
+        // newer. Previously the toggle only existed once an update was already offered.
+        val switch =
+            view.findViewById<com.google.android.material.materialswitch.MaterialSwitch>(R.id.up_to_date_prerelease_switch)
+        switch.isChecked = includePrerelease(activity)
+        switch.setOnCheckedChangeListener { _, checked ->
+            setPrereleasePref(activity, checked)
+            if (!checked) return@setOnCheckedChangeListener
+            Thread {
+                val candidate = fetchLatestUpdate(
+                    activity.resources.getBoolean(R.bool.hide_launcher_icon_available),
+                    includePrerelease = true
+                )
+                runOnUiThread(activity) {
+                    // Nothing newer found: leave the dialog as-is, it already states that
+                    // the installed version is the latest. On fetch failure the same holds
+                    // for the stable line, so stay silent there too.
+                    if (candidate != null && isNewerThanInstalled(candidate)) {
+                        dialog.dismiss()
+                        showUpdateDialog(activity, candidate)
+                    }
+                }
+            }.start()
+        }
+        dialog.show()
     }
 
     private fun showErrorDialog(context: Context, message: String) {
