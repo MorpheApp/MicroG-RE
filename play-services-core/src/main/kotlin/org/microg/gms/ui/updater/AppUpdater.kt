@@ -783,6 +783,23 @@ object AppUpdater {
         BuildConfig.VERSION_NAME.contains("dev", ignoreCase = true) ||
                 prefsDefault(context).getBoolean(PREFS_INCLUDE_PRERELEASE, false)
 
+    /**
+     * Records that this install is on the dev channel.
+     *
+     * Without this, the automatic dev opt-in (version-name based) would silently vanish
+     * when the user upgrades in place to a later stable release, and they would have to
+     * remember to re-enable the pre-release toggle. Persisting it once keeps dev updates
+     * flowing after moving to stable; turning the toggle off explicitly still opts out.
+     */
+    @JvmStatic
+    fun persistDevChannelIfNeeded(context: Context) {
+        if (!BuildConfig.VERSION_NAME.contains("dev", ignoreCase = true)) return
+        val prefs = prefsDefault(context)
+        if (!prefs.contains(PREFS_INCLUDE_PRERELEASE)) {
+            prefs.edit().putBoolean(PREFS_INCLUDE_PRERELEASE, true).apply()
+        }
+    }
+
     private fun setPrereleasePref(context: Context, value: Boolean) {
         prefsDefault(context).edit().putBoolean(PREFS_INCLUDE_PRERELEASE, value).apply()
     }

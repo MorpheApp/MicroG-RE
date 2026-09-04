@@ -31,5 +31,6 @@ class UpdaterApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         UpdateCheckScheduler.schedule(this)
+        AppUpdater.persistDevChannelIfNeeded(this)
     }
 }
