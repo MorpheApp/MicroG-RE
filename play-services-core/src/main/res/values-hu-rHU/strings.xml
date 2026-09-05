@@ -14,9 +14,8 @@ Az adatai nem vesznek el"</string>
     <string name="dialog_cancel_button">Mégse</string>
     <string name="snackbar_remove_account">A(z) %s fiók eltávolítva</string>
     <string name="snackbar_undo_button">Visszavonás</string>
-    <string name="limited_services_app_name">MicroG Korlátozott Szolgáltatások</string>
     <string name="gms_settings_name">MicroG beállítások</string>
-    <string name="gms_settings_summary">MicroG szolgáltatások beállítása.}],</string>
+    <string name="gms_settings_summary">MicroG szolgáltatások beállítása.</string>
     <string name="just_a_sec">Egy pillanat...</string>
     <string name="ask_permission_tos">Tovább folytatva lehetővé teszi, hogy ez az alkalmazás és a Google az Ön adatait a saját szolgáltatási feltételeiknek és adatvédelmi irányelveiknek megfelelően használja.</string>
     <string name="ask_scope_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> a következőket szeretné:</string>
@@ -42,8 +41,6 @@ Ez eltarthat néhány percig."</string>
     <string name="deny">Megtagad</string>
     <string name="auth_notification_title">Hitelesítés szükséges</string>
     <string name="auth_notification_content">A <xliff:g example="F-Droid">%1$s</xliff:g> alkalmazáshoz engedélye szükséges a Google-fiók eléréséhez.</string>
-    <string name="auth_package_override_request_title">Engedélyezd a <b><xliff:g example="F-Droid">%1$s</xliff:g></b> számára a kivételes hozzáférést a(z) <xliff:g example="account@example.com">%2$s</xliff:g> fiókhoz?</string>
-    <string name="auth_package_override_request_message">A <b><xliff:g example="F-Droid">%1$s</xliff:g></b> be szeretné jelentkezni a fiókodba, mintha a <b><xliff:g example="F-Droid">%2$s</xliff:g></b> lenne a(z) <xliff:g example="F-Droid Inc.">%3$s</xliff:g> által. Ez kivételes hozzáférést biztosíthat a fiókodhoz.</string>
     <string name="auth_action_notification_channel_name">Google-fiókra vonatkozó figyelmeztetések</string>
     <string name="auth_action_notification_channel_description">Értesítést küld, ha az egyik Google-fiókja további beállítást igényel a használat előtt, vagy ha egy fiók nem kompatibilis a microG szolgáltatással.</string>
     <string name="auth_action_notification_title">Fiókművelet szükséges</string>
@@ -52,9 +49,9 @@ Ez eltarthat néhány percig."</string>
     <string name="auth_action_activity_header">Google-fiók beállításának befejezése</string>
     <string name="auth_action_activity_explanation">Hajtsa végre a következő lépéseket, hogy használhassa Google-fiókját %s ezen az eszközön.</string>
     <string name="auth_action_step_enable_checkin">Eszközregisztráció engedélyezése</string>
-    <string name="auth_action_step_enable_checkin_description">Az eszközt legalább egyszer regisztrálni kell a Google-nál.
+    <string name="auth_action_step_enable_checkin_description">"Az eszközének legalább egyszer regisztrálnia kell a Google-nál.
 
-A Google-eszközregisztrációt a fiókbeállítás befejezése után letilthatja.</string>
+A Google-eszközregisztrációt a fiókbeállítás befejezése után letilthatja."</string>
     <string name="auth_action_step_enable_gcm">Cloud Messaging engedélyezése</string>
     <string name="auth_action_step_enable_gcm_description">A Cloud Messaging szolgáltatást a fiókbeállítás befejezése után letilthatja.</string>
     <string name="auth_action_step_allow_microg_gcm">Cloud Messaging engedélyezése a microG számára</string>
@@ -156,6 +153,18 @@ A Google-eszközregisztrációt a fiókbeállítás befejezése után letilthatj
     <string name="prefcat_accounts_options_title">Beállítások</string>
     <string name="pref_accounts_manage_accounts_title">Fiókok kezelése</string>
     <string name="pref_accounts_manage_accounts_summary">Fiókkezelő megnyitása</string>
+    <string name="prefcat_accounts_backup_title">Fiókok biztonsági mentése</string>
+    <string name="pref_accounts_backup_title">Fiókok biztonsági mentése</string>
+    <string name="pref_accounts_backup_summary">Google-fiókok exportálása fájlba</string>
+    <string name="pref_accounts_restore_title">Fiókok visszaállítása</string>
+    <string name="pref_accounts_restore_summary">Google-fiókok importálása fájlból</string>
+    <string name="pref_accounts_backup_warning_title">Fiókok biztonsági mentése?</string>
+    <string name="pref_accounts_backup_warning_message">Ez a fiókokat és bejelentkezési tokeneket (SID/LSID) egy fájlba írja. Bárki, aki hozzáfér ehhez a fájlhoz, hozzáférhet a fiókjaihoz, ezért tartsa biztonságban, és soha ne ossza meg.</string>
+    <string name="button_backup_accounts">Biztonsági mentés</string>
+    <string name="snackbar_accounts_backed_up">Fiókok biztonsági mentése kész</string>
+    <string name="snackbar_accounts_restored">Visszaállítva %1$d fiók(ok)</string>
+    <string name="snackbar_accounts_export_failed">A biztonsági mentés sikertelen</string>
+    <string name="snackbar_accounts_import_failed">A visszaállítás sikertelen</string>
     <string name="prefcat_youtube_activity">YouTube-tevékenység</string>
     <string name="pref_manage_all_history">Összes előzmény kezelése</string>
     <string name="pref_data_in_youtube">Adataid a YouTube szolgáltatásban</string>
@@ -171,9 +180,34 @@ A Google-eszközregisztrációt a fiókbeállítás befejezése után letilthatj
     <string name="pref_gcm_confirm_new_apps_summary">Kérdezzen rá, mielőtt új alkalmazást regisztrálna a push értesítések fogadásához</string>
     <string name="pref_about_title">A MicroG RE-ről</string>
     <string name="pref_hide_launcher_icon">Ikon elrejtése az indítóban</string>
+    <string name="hide_launcher_icon_dialog_message">Ha engedélyezve van, a MicroG elrejtőzik az alkalmazásindítóban. A MicroG az eszköz rendszeralkalmazás-listájában található alkalmazásinformációkból nyitható meg.</string>
+    <string name="hide_launcher_icon_updating_title">Kérjük, várj, amíg az alkalmazás frissül</string>
     <string name="pref_language_title">Nyelv</string>
     <string name="pref_language_system_default">Rendszer alapértelmezett</string>
     <string name="pref_github_summary">Forráskód tárolóhely</string>
+    <string name="pref_update_title">Frissítések keresése</string>
+    <string name="pref_update_summary">Ellenőrizze a GitHubot az újabb verzióért.</string>
+    <string name="update_include_prerelease">Előzetes / fejlesztői verziók</string>
+    <string name="update_available_title">Frissítés elérhető</string>
+    <string name="update_available_prerelease_title">Frissítés érhető el (előzetes verzió)</string>
+    <string name="update_now">Frissítés</string>
+    <string name="update_whats_new">Újdonságok</string>
+    <string name="update_ignore">Kihagy</string>
+    <string name="update_downloading_title">Frissítés letöltése…</string>
+    <string name="update_download_failed">A letöltés sikertelen. Ellenőrizze a kapcsolatot, és próbálja újra.</string>
+    <string name="update_signature_mismatch">Az alkalmazás nem frissíthető, mert az aláírások különböznek.</string>
+    <string name="update_failed_title">A frissítés sikertelen</string>
+    <string name="update_permission_required_title">Engedély szükséges</string>
+    <string name="update_permission_required_message">A frissítések telepítéséhez engedélyezd, hogy a MicroG ismeretlen alkalmazásokat telepítsen a rendszerbeállításokban.</string>
+    <string name="update_open_settings">Beállítások</string>
+    <string name="update_check_failed">Nem sikerült ellenőrizni a frissítéseket. Ellenőrizze a kapcsolatot, és próbálja újra.</string>
+    <string name="update_up_to_date_title">Naprakész</string>
+    <string name="update_up_to_date_message">A MicroG-RE v%s a legújabb verzió.</string>
+    <string name="update_notification_title">Frissítés elérhető</string>
+    <string name="update_notification_text">Új v%s verzió érhető el. Érintse meg a frissítéshez.</string>
+    <string name="update_notification_channel">Frissítések</string>
+    <string name="update_notification_permission_title">Értesítések</string>
+    <string name="update_notification_permission_allow">Engedélyezés</string>
     <string name="gcm_unregister_app">Regisztráció törlése</string>
     <string name="gcm_no_message_yet">Eddig nem érkezett üzenet</string>
     <string name="gcm_last_message_at">Utolsó üzenet: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

@@ -30,14 +30,6 @@
     <string name="about_root_summary">요약</string>
     <string name="about_root_version">버전 v0.1.0</string>
     <string name="about_root_libraries">포함된 라이브러리</string>
-    <!--Updater-->
-    <string name="update_checker_button">업데이트 확인</string>
-    <string name="update_checker_download_button">다운로드</string>
-    <!--updater: messages-->
-    <string name="update_checker_no_update">새 업데이트가 없습니다</string>
-    <string name="update_checker_update_available">업데이트 사용 가능: %s</string>
-    <string name="update_checker_no_internet">인터넷 연결이 되지 않음</string>
-    <string name="update_checker_generic_error">문제가 발생하였습니다… 나중에 다시 시도하세요</string>
     <!--Settings About-->
     <string name="about_morphe_description">Morphe는 패치를 통해 Android 앱을 수정하도록 설계된 오픈 소스 프로젝트입니다</string>
 </resources>

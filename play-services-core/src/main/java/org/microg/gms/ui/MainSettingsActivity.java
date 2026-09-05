@@ -19,6 +19,8 @@ import com.google.android.material.appbar.CollapsingToolbarLayout;
 
 import org.microg.gms.common.Constants;
 import org.microg.gms.ui.settings.SettingsProvider;
+import org.microg.gms.ui.updater.AppUpdater;
+import org.microg.gms.ui.updater.UpdateCheckScheduler;
 
 import static org.microg.gms.ui.UtilsKt.buildAlertDialog;
 import static org.microg.gms.ui.settings.SettingsProviderKt.getAllSettingsProviders;
@@ -79,6 +81,20 @@ public class MainSettingsActivity extends AppCompatActivity {
         });
 
         showDialogIfNeeded();
+
+        UpdateCheckScheduler.schedule(this);
+        AppUpdater.checkOnLaunch(this);
+        // The daily update notification needs POST_NOTIFICATIONS on Android 13+; a
+        // background receiver can never prompt, so ask while the settings screen is open.
+        AppUpdater.ensureUpdateNotificationPermission(this);
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        // Tapping the update notification can deliver the check extra to an already-running activity.
+        setIntent(intent);
+        AppUpdater.checkOnLaunch(this);
     }
 
     @Override

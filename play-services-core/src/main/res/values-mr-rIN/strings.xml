@@ -6,5 +6,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Self check -->
     <!-- Settings strings -->
+    <string name="update_failed_title">सुधारणा अयशस्वी झाली</string>
     <!-- Passkey management -->
 </resources>

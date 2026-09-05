@@ -128,27 +128,28 @@ suspend fun performSignIn(context: Context, packageName: String, options: Google
         consentResult = performConsentView(context, packageName, account, authResponse.resolutionDataBase64)
         if (consentResult == null) return Pair(null, null)
         authResponse = authManager.let {
-            it.putDynamicFiled(CONSENT_RESULT, consentResult)
+            it.putDynamicField(CONSENT_RESULT, consentResult)
             withContext(Dispatchers.IO) { it.requestAuth(true) }
         }
     }
     if (authResponse.auth == null) return Pair(null, null)
     Log.d(TAG, "id token requested: ${options?.isIdTokenRequested == true}, serverClientId = ${options?.serverClientId}, permitted = ${authManager.isPermitted}")
     val idTokenResponse = getIdTokenManager(context, packageName, options, account, includeGrantedScopes)?.let {
-        if (idNonce != null) {
-            it.setTokenRequestOptions(Base64.encodeToString(RequestOptions.build {
-                remote = 1
-                version = 6
+        it.setTokenRequestOptions(Base64.encodeToString(RequestOptions.build {
+            remote = 1
+            version = 6
+            if (idNonce != null) {
                 nonceWrapper = NonceWrapper.build { nonce = idNonce }
-            }.encode(), Base64.DEFAULT))
-        }
+            }
+        }.encode(), Base64.DEFAULT))
+
         it.isPermitted = authResponse.auth != null
-        consentResult?.let { result -> it.putDynamicFiled(CONSENT_RESULT, result) }
+        consentResult?.let { result -> it.putDynamicField(CONSENT_RESULT, result) }
         withContext(Dispatchers.IO) { it.requestAuth(true) }
     }
     val serverAuthTokenResponse = getServerAuthTokenManager(context, packageName, options, account, includeGrantedScopes)?.let {
         it.isPermitted = authResponse.auth != null
-        consentResult?.let { result -> it.putDynamicFiled(CONSENT_RESULT, result) }
+        consentResult?.let { result -> it.putDynamicField(CONSENT_RESULT, result) }
         withContext(Dispatchers.IO) { it.requestAuth(true) }
     }
     val googleUserId = authManager.getUserData("GoogleUserId")

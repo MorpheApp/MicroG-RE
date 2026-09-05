@@ -55,7 +55,7 @@
     <string name="pref_location_timeline_upload_title">ซิงโครไนซ์กับบัญชี Google</string>
     <string name="pref_location_timeline_upload_summary">"ซิงโครไนซ์ประวัติตำแหน่งไปยังเซิร์ฟเวอร์ของ Google เพื่อให้แสดงบนอุปกรณ์อื่นได้"</string>
     <!-- RE strings -->
-    <string name="prefcat_location_maps_title">กูเกิล แผนที่</string>
+    <string name="prefcat_location_maps_title">Google Maps</string>
     <string name="pref_map_engine_title">ตัวเรนเดอร์แผนที่</string>
     <!-- "Mapbox (MapLibre)" must be left untranslated .-->
     <string name="pref_map_engine_summary">เลือกเอนจินที่ใช้ในการเรนเดอร์แผนที่ในแอป แนะนำให้ใช้ Mapbox (MapLibre)</string>

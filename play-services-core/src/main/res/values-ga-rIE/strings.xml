@@ -14,7 +14,6 @@ Ní chaillfear do shonraí"</string>
     <string name="dialog_cancel_button">Cealaigh</string>
     <string name="snackbar_remove_account">Baineadh an cuntas %s</string>
     <string name="snackbar_undo_button">Cuir ar ceal</string>
-    <string name="limited_services_app_name">Seirbhísí Teoranta MicroG</string>
     <string name="gms_settings_name">Socruithe MicroG</string>
     <string name="gms_settings_summary">Socraigh seirbhísí MicroG.</string>
     <string name="just_a_sec">Soicind amháin…</string>
@@ -53,9 +52,9 @@ Féadfaidh sé seo cúpla nóiméad a thógáil."</string>
     <string name="auth_action_activity_header">Críochnaigh bunú do chuntais Google</string>
     <string name="auth_action_activity_explanation">Comhlánaigh na céimeanna seo a leanas le bheith in ann do chuntas Google %s a úsáid ar an ngléas seo.</string>
     <string name="auth_action_step_enable_checkin">Cumasaigh clárú gléasanna</string>
-    <string name="auth_action_step_enable_checkin_description">\"Ní mór do ghléas clárú le Google uair amháin ar a laghad.
+    <string name="auth_action_step_enable_checkin_description">"Ní mór do ghléas clárú le Google ar a laghad uair amháin.
 
-Is féidir leat clárú gléis Google a dhíchumasú tar éis duit an cuntas a shocrú.\"</string>
+Is féidir leat clárú an ghléis le Google a dhíchumasú tar éis an cuntas a shocrú."</string>
     <string name="auth_action_step_enable_gcm">Cumasaigh Teachtaireachtaí Néil</string>
     <string name="auth_action_step_enable_gcm_description">Is féidir leat Teachtaireachtaí Néil a dhíchumasú tar éis duit an cuntas a shocrú.</string>
     <string name="auth_action_step_allow_microg_gcm">Ceadaigh Teachtaireachtaí Néil do microG</string>
@@ -157,6 +156,18 @@ Socraigh pasfhocal, PIN, nó patrún glas scáileáin le do thoil."</string>
     <string name="prefcat_accounts_options_title">Roghanna</string>
     <string name="pref_accounts_manage_accounts_title">Bainistigh cuntais</string>
     <string name="pref_accounts_manage_accounts_summary">Oscail bainisteoir cuntas gléasanna</string>
+    <string name="prefcat_accounts_backup_title">Cúltaca cuntais</string>
+    <string name="pref_accounts_backup_title">Cúltaca de chuntais</string>
+    <string name="pref_accounts_backup_summary">Cuntais Google a easpórtáil chuig comhad</string>
+    <string name="pref_accounts_restore_title">Athchóirigh cuntais</string>
+    <string name="pref_accounts_restore_summary">Cuntais Google a allmhairiú ó chomhad</string>
+    <string name="pref_accounts_backup_warning_title">Cuntais chúltaca?</string>
+    <string name="pref_accounts_backup_warning_message">Scríobhann sé seo do chuntais agus do chomharthaí logála isteach (SID/LSID) chuig comhad. Is féidir le duine ar bith a fhaigheann an comhad seo rochtain a fháil ar do chuntais, mar sin coinnigh slán é agus ná roinn é choíche.</string>
+    <string name="button_backup_accounts">Cúltaca</string>
+    <string name="snackbar_accounts_backed_up">Cuntais cúltaca</string>
+    <string name="snackbar_accounts_restored">Athchóiríodh {1, plural, one {# chuntas} two {# chuntas} few {# chuntas} many {# gcuntas} other {# cuntais}}%1$d</string>
+    <string name="snackbar_accounts_export_failed">Theip ar an gcúltaca</string>
+    <string name="snackbar_accounts_import_failed">Theip ar an athchóiriú</string>
     <string name="prefcat_youtube_activity">Gníomhaíocht YouTube</string>
     <string name="pref_manage_all_history">Bainistigh an stair go léir</string>
     <string name="pref_data_in_youtube">Do shonraí i YouTube</string>
@@ -172,9 +183,37 @@ Socraigh pasfhocal, PIN, nó patrún glas scáileáin le do thoil."</string>
     <string name="pref_gcm_confirm_new_apps_summary">Iarr fógraí brú a fháil sula gcláraíonn tú aip nua</string>
     <string name="pref_about_title">Maidir le MicroG RE</string>
     <string name="pref_hide_launcher_icon">Folaigh deilbhín sa lainseálaí</string>
+    <string name="hide_launcher_icon_dialog_message">Má tá sé cumasaithe, beidh MicroG i bhfolach i do lainseálaí aipeanna. Is féidir MicroG a oscailt ón bhfaisnéis aipeanna atá le fáil i liosta aipeanna chórais do ghléis.</string>
+    <string name="hide_launcher_icon_updating_title">Fan le do thoil fad a bheidh an aip á nuashonrú</string>
     <string name="pref_language_title">Teanga</string>
     <string name="pref_language_system_default">Réamhshocrú an chórais</string>
     <string name="pref_github_summary">Stór cód foinse</string>
+    <string name="pref_update_title">Seiceáil le haghaidh nuashonruithe</string>
+    <string name="pref_update_summary">Seiceáil GitHub le haghaidh leagan níos nuaí.</string>
+    <string name="update_include_prerelease">Cuir réamh-eisiúint / tógálacha forbartha san áireamh</string>
+    <string name="update_available_title">Nuashonrú ar fáil</string>
+    <string name="update_available_prerelease_title">Nuashonrú ar fáil (réamh-eisiúint)</string>
+    <string name="update_available_message">Tá leagan nua v%1s ar fáil. Tá leagan v%2$s suiteáilte agat. An bhfuil tú ag iarraidh an nuashonrú a íoslódáil agus a shuiteáil?</string>
+    <string name="update_now">Nuashonrú</string>
+    <string name="update_whats_new">Cad atá nua</string>
+    <string name="update_ignore">Déan neamhaird</string>
+    <string name="update_downloading_title">Ag íoslódáil an nuashonraithe…</string>
+    <string name="update_download_failed">Theip ar an íoslódáil. Seiceáil do nasc agus déan iarracht eile.</string>
+    <string name="update_signature_mismatch">Ní féidir an aip a nuashonrú, tá sínithe difriúil.</string>
+    <string name="update_failed_title">Theip ar an nuashonrú</string>
+    <string name="update_permission_required_title">Cead ag teastáil</string>
+    <string name="update_permission_required_message">Chun nuashonruithe a shuiteáil, lig do MicroG aipeanna anaithnide a shuiteáil i socruithe an chórais.</string>
+    <string name="update_open_settings">Settings</string>
+    <string name="update_check_failed">Níorbh fhéidir seiceáil le haghaidh nuashonruithe. Seiceáil do nasc agus déan iarracht eile.</string>
+    <string name="update_up_to_date_title">Tá tú cothrom le dáta</string>
+    <string name="update_up_to_date_message">Is é MicroG-RE v%s an leagan is déanaí.</string>
+    <string name="update_notification_title">Nuashonrú ar fáil</string>
+    <string name="update_notification_text">Tá v%s nua ar fáil, tapáil chun nuashonrú a dhéanamh</string>
+    <string name="update_notification_channel">Nuashonruithe</string>
+    <string name="update_notification_permission_title">Fógraí</string>
+    <string name="update_notification_permission_allow">Ceadaigh</string>
+    <string name="update_notification_permission_not_now">Ní anois</string>
+    <string name="update_notification_permission_open_settings">Oscail socruithe</string>
     <string name="gcm_unregister_app">Díchláraigh</string>
     <string name="gcm_no_message_yet">Níl aon teachtaireachtaí faighte go dtí seo</string>
     <string name="gcm_last_message_at">Teachtaireacht dheireanach: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

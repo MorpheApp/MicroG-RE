@@ -14,7 +14,6 @@ Seus dados não serão perdidos"</string>
     <string name="dialog_cancel_button">Cancelar</string>
     <string name="snackbar_remove_account">Conta %s removida</string>
     <string name="snackbar_undo_button">Desfazer</string>
-    <string name="limited_services_app_name">MicroG Serviços Limitados</string>
     <string name="gms_settings_name">Configurações do MicroG</string>
     <string name="gms_settings_summary">Configurar serviços MicroG.</string>
     <string name="just_a_sec">Só um segundo…</string>
@@ -41,8 +40,6 @@ Isso pode levar alguns minutos."</string>
     <string name="deny">Negar</string>
     <string name="auth_notification_title">Autorização necessária</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> requer sua autorização para acessar sua conta do Google.</string>
-    <string name="auth_package_override_request_title">Permitir que <b><xliff:g example="F-Droid">%1$s</xliff:g></b> tenha acesso privilegiado a <xliff:g example="account@example.com">%2$s</xliff:g>?\"},</string>
-    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> quer acessar sua conta como se fosse <b><xliff:g example="F-Droid">%2$s</xliff:g> por <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Isso pode conceder a ele acesso privilegiado à sua conta.</string>
     <string name="auth_action_notification_channel_name">Alertas de conta do Google</string>
     <string name="auth_action_notification_channel_description">Notifica quando uma das suas contas do Google requer configuração adicional antes de ser usada ou quando uma conta é incompatível com o microG.</string>
     <string name="auth_action_notification_title">Ação de conta necessária</string>
@@ -51,9 +48,9 @@ Isso pode levar alguns minutos."</string>
     <string name="auth_action_activity_header">Termine de configurar sua conta do Google</string>
     <string name="auth_action_activity_explanation">Complete as seguintes etapas para poder usar sua conta do Google %s neste dispositivo.</string>
     <string name="auth_action_step_enable_checkin">Ativar registro do dispositivo</string>
-    <string name="auth_action_step_enable_checkin_description">Seu dispositivo precisa se registrar no Google pelo menos uma vez.
+    <string name="auth_action_step_enable_checkin_description">"O seu dispositivo precisa de se registar no Google pelo menos uma vez.
 
-Você pode desativar o registro do dispositivo após a configuração da conta estar completa.</string>
+Pode desativar o registo do dispositivo no Google depois de a configuração da conta estar concluída."</string>
     <string name="auth_action_step_enable_gcm">Ativar Cloud Messaging</string>
     <string name="auth_action_step_enable_gcm_description">Você pode desativar o Cloud Messaging após a configuração da conta estar completa.</string>
     <string name="auth_action_step_allow_microg_gcm">Permitir Cloud Messaging para microG</string>
@@ -155,6 +152,18 @@ Por favor, configure uma senha, PIN ou padrão de bloqueio de tela."</string>
     <string name="prefcat_accounts_options_title">Opções</string>
     <string name="pref_accounts_manage_accounts_title">Gerenciar contas</string>
     <string name="pref_accounts_manage_accounts_summary">Abrir gerenciador de contas do dispositivo</string>
+    <string name="prefcat_accounts_backup_title">Cópia de segurança de contas</string>
+    <string name="pref_accounts_backup_title">Fazer cópia de segurança das contas</string>
+    <string name="pref_accounts_backup_summary">Exportar contas do Google para um ficheiro</string>
+    <string name="pref_accounts_restore_title">Restaurar contas</string>
+    <string name="pref_accounts_restore_summary">Importar contas do Google de um ficheiro</string>
+    <string name="pref_accounts_backup_warning_title">Fazer cópia de segurança das contas?</string>
+    <string name="pref_accounts_backup_warning_message">Isto grava as suas contas e os tokens de início de sessão (SID/LSID) num ficheiro. Qualquer pessoa que obtenha este ficheiro pode aceder às suas contas, por isso mantenha-o em segurança e nunca o partilhe.</string>
+    <string name="button_backup_accounts">Fazer cópia de segurança</string>
+    <string name="snackbar_accounts_backed_up">Cópia de segurança das contas concluída</string>
+    <string name="snackbar_accounts_restored">Restaurámos %1$d conta(s)</string>
+    <string name="snackbar_accounts_export_failed">Falhou a cópia de segurança</string>
+    <string name="snackbar_accounts_import_failed">Falhou a restauração</string>
     <string name="prefcat_youtube_activity">Atividade do YouTube</string>
     <string name="pref_manage_all_history">Gerenciar todo o histórico</string>
     <string name="pref_data_in_youtube">Seus dados no YouTube</string>
@@ -170,9 +179,35 @@ Por favor, configure uma senha, PIN ou padrão de bloqueio de tela."</string>
     <string name="pref_gcm_confirm_new_apps_summary">Perguntar antes de registrar um novo aplicativo para receber notificações push</string>
     <string name="pref_about_title">Sobre o MicroG RE</string>
     <string name="pref_hide_launcher_icon">Ocultar ícone no iniciador</string>
+    <string name="hide_launcher_icon_dialog_message">Se ativado, o MicroG será ocultado no inicializador de aplicações. O MicroG pode ser aberto a partir das informações da aplicação encontradas na lista de aplicações do sistema do seu disositivo.</string>
+    <string name="hide_launcher_icon_updating_title">Aguarde enquanto a aplicação está a ser atualizada</string>
     <string name="pref_language_title">Idioma</string>
     <string name="pref_language_system_default">Padrão do sistema</string>
     <string name="pref_github_summary">Repositório do código-fonte</string>
+    <string name="pref_update_title">Verificar por atualizações</string>
+    <string name="pref_update_summary">Verifique no GitHub se existe uma versão mais recente.</string>
+    <string name="update_include_prerelease">Incluir compilações de pré-lançamento / de desenvolvimento</string>
+    <string name="update_available_title">Atualização disponíve</string>
+    <string name="update_available_prerelease_title">Atualização disponíve (pré-lançamento)</string>
+    <string name="update_available_message">A nova v%1s está disponíve. Tem a versão v%2$s instalada. Quer descarregar e instalar a atualização?</string>
+    <string name="update_now">Atualizar</string>
+    <string name="update_whats_new">Novidades</string>
+    <string name="update_ignore">Ignorar</string>
+    <string name="update_downloading_title">A transferir atualização…</string>
+    <string name="update_download_failed">Falhou a transferência. Verifique a sua ligação e tente novamente.</string>
+    <string name="update_signature_mismatch">A aplicação não pode ser atualizada, as assinaturas são diferentes.</string>
+    <string name="update_failed_title">Falhou a atualização</string>
+    <string name="update_permission_required_title">Permissão necessária</string>
+    <string name="update_permission_required_message">Para instalar atualizações, por favor permita que o MicroG instale aplicações de origens desconhecidas nas definições do sistema.</string>
+    <string name="update_open_settings">D​efinições</string>
+    <string name="update_check_failed">Não foi possível verificar se existem atualizações. Verifique a sua ligação e tente novamente.</string>
+    <string name="update_up_to_date_title">Está atualizado</string>
+    <string name="update_up_to_date_message">MicroG-RE v%s é a versão mais recente.</string>
+    <string name="update_notification_title">Atualização disponíve</string>
+    <string name="update_notification_text">Nova v%s disponíve, toque para atualizar</string>
+    <string name="update_notification_channel">Atualizações</string>
+    <string name="update_notification_permission_title">Notificações</string>
+    <string name="update_notification_permission_open_settings">Abrir definições</string>
     <string name="gcm_unregister_app">Desregistrar</string>
     <string name="gcm_no_message_yet">Não há mensagens recebidas ainda</string>
     <string name="gcm_last_message_at">Última mensagem: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

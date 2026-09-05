@@ -22,14 +22,6 @@
     <string name="about_root_title">Demostración da IU de microG</string>
     <string name="about_root_version">Versión v0.1.0</string>
     <string name="about_root_libraries">Librarías incluídas</string>
-    <!--Updater-->
-    <string name="update_checker_button">Comprobar actualizacións</string>
-    <string name="update_checker_download_button">Descargar</string>
-    <!--updater: messages-->
-    <string name="update_checker_no_update">Non hai actualizacións dispoñíbeis</string>
-    <string name="update_checker_update_available">Nova actualización dispoñíbel: %s</string>
-    <string name="update_checker_no_internet">Non hai conexión a Internet</string>
-    <string name="update_checker_generic_error">Algo saíu mal... Ténteo de novo máis tarde</string>
     <!--Settings About-->
     <string name="about_morphe_description">Morphe é un proxecto de código aberto deseñado para modificar aplicacións Android mediante parches</string>
 </resources>

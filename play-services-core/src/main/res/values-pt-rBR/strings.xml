@@ -14,7 +14,6 @@ Seus dados não serão perdidos"</string>
     <string name="dialog_cancel_button">Cancelar</string>
     <string name="snackbar_remove_account">Conta %s removida</string>
     <string name="snackbar_undo_button">Desfazer</string>
-    <string name="limited_services_app_name">Serviços Limitados do MicroG</string>
     <string name="gms_settings_name">Configurações do microG</string>
     <string name="gms_settings_summary">Configurar serviços do MicroG.</string>
     <string name="just_a_sec">Só um segundo…</string>
@@ -51,9 +50,9 @@ Isso pode levar alguns minutos."</string>
     <string name="auth_action_activity_header">Conclua a configuração da sua conta do Google</string>
     <string name="auth_action_activity_explanation">Conclua as seguintes etapas para poder usar sua conta do Google %s neste dispositivo.</string>
     <string name="auth_action_step_enable_checkin">Ativar registro do dispositivo</string>
-    <string name="auth_action_step_enable_checkin_description">\"Seu dispositivo precisa se registrar no Google pelo menos uma vez.
+    <string name="auth_action_step_enable_checkin_description">"Seu dispositivo precisa se registrar no Google pelo menos uma vez.
 
-Você pode desativar o registro do dispositivo Google após a conclusão da configuração da conta.</string>
+Você pode desativar o registro do dispositivo no Google após a conclusão da configuração da conta."</string>
     <string name="auth_action_step_enable_gcm">Ativar Cloud Messaging</string>
     <string name="auth_action_step_enable_gcm_description">Você pode desativar o Cloud Messaging após a conclusão da configuração da conta.</string>
     <string name="auth_action_step_allow_microg_gcm">Permitir Cloud Messaging para microG</string>
@@ -155,6 +154,18 @@ Configure uma senha, PIN ou padrão de bloqueio de tela."</string>
     <string name="prefcat_accounts_options_title">Opções</string>
     <string name="pref_accounts_manage_accounts_title">Gerenciar contas</string>
     <string name="pref_accounts_manage_accounts_summary">Abrir gerenciador de contas do dispositivo</string>
+    <string name="prefcat_accounts_backup_title">Backup de contas</string>
+    <string name="pref_accounts_backup_title">Fazer backup das contas</string>
+    <string name="pref_accounts_backup_summary">Exportar contas do Google para um arquivo</string>
+    <string name="pref_accounts_restore_title">Restaurar contas</string>
+    <string name="pref_accounts_restore_summary">Importar contas do Google de um arquivo</string>
+    <string name="pref_accounts_backup_warning_title">Fazer backup das contas?</string>
+    <string name="pref_accounts_backup_warning_message">Isso grava suas contas e tokens de login (SID/LSID) em um arquivo. Qualquer pessoa que obtiver este arquivo pode acessar suas contas, então mantenha-o seguro e nunca o compartilhe.</string>
+    <string name="button_backup_accounts">Fazer backup</string>
+    <string name="snackbar_accounts_backed_up">Backup das contas realizado</string>
+    <string name="snackbar_accounts_restored">Restored %1$d account(s)</string>
+    <string name="snackbar_accounts_export_failed">Falha no backup</string>
+    <string name="snackbar_accounts_import_failed">Falha ao restaurar</string>
     <string name="prefcat_youtube_activity">Atividades no YouTube</string>
     <string name="pref_manage_all_history">Gerenciar todo o histórico</string>
     <string name="pref_data_in_youtube">Seus dados no YouTube</string>
@@ -170,9 +181,35 @@ Configure uma senha, PIN ou padrão de bloqueio de tela."</string>
     <string name="pref_gcm_confirm_new_apps_summary">Perguntar antes de registrar um novo aplicativo para receber notificações push</string>
     <string name="pref_about_title">Sobre o MicroG RE</string>
     <string name="pref_hide_launcher_icon">Ocultar ícone do launcher</string>
+    <string name="hide_launcher_icon_dialog_message">Se ativado, MicroG será ocultado no seu launcher de aplicativos. MicroG pode ser aberto a partir das informações do aplicativo encontradas na lista de aplicativos do sistema do seu dispositivo.</string>
+    <string name="hide_launcher_icon_updating_title">Por favor, aguarde enquanto o aplicativo é atualizado.</string>
     <string name="pref_language_title">Idioma</string>
     <string name="pref_language_system_default">Padrão do sistema</string>
     <string name="pref_github_summary">Repositório com o código-fonte</string>
+    <string name="pref_update_title">Verificar atualizações</string>
+    <string name="pref_update_summary">Verificar no GitHub se há uma versão mais recente.</string>
+    <string name="update_include_prerelease">Incluir versões de pré-lançamento / desenvolvimento</string>
+    <string name="update_available_title">Atualização disponível</string>
+    <string name="update_available_prerelease_title">Atualização disponível (pré-lançamento)</string>
+    <string name="update_available_message">Nova versão v%1s está disponível. Você tem a versão v%2$s instalada. Baixar e instalar a atualização?</string>
+    <string name="update_now">Atualizar</string>
+    <string name="update_whats_new">O que há de novo</string>
+    <string name="update_ignore">Ignorar</string>
+    <string name="update_downloading_title">Baixando atualização…</string>
+    <string name="update_download_failed">Falha no download. Verifique sua conexão e tente novamente.</string>
+    <string name="update_signature_mismatch">O aplicativo não pode ser atualizado, as assinaturas são diferentes.</string>
+    <string name="update_failed_title">Falha na atualização</string>
+    <string name="update_permission_required_title">Permissão necessária</string>
+    <string name="update_permission_required_message">Para instalar atualizações, permita que o MicroG instale aplicativos desconhecidos nas configurações do sistema.</string>
+    <string name="update_open_settings">Configurações</string>
+    <string name="update_check_failed">Não foi possível verificar atualizações. Verifique sua conexão e tente novamente.</string>
+    <string name="update_up_to_date_title">Você está atualizado</string>
+    <string name="update_up_to_date_message">MicroG-RE v%s é a versão mais recente.</string>
+    <string name="update_notification_title">Atualização disponível</string>
+    <string name="update_notification_text">Nova versão v%s está disponível. Toque para atualizar.</string>
+    <string name="update_notification_channel">Atualizações</string>
+    <string name="update_notification_permission_title">Notificações</string>
+    <string name="update_notification_permission_allow">Permitir</string>
     <string name="gcm_unregister_app">Revogar registro</string>
     <string name="gcm_no_message_yet">Nenhuma mensagem recebida até agora</string>
     <string name="gcm_last_message_at">Última mensagem: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

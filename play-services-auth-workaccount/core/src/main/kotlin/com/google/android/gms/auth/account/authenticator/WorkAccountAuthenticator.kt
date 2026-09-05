@@ -151,7 +151,7 @@ class WorkAccountAuthenticator(val context: Context) : AbstractAccountAuthentica
 //                .tokenRequestOptions(tokenRequestOptions)
                     .systemPartition(true)
                     .hasPermission(true)
-//                .putDynamicFiledMap(dynamicFields)
+//                .putDynamicFieldMap(dynamicFields)
                     .appIsGms()
                     .callerIsApp()
                     .response

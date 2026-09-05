@@ -14,7 +14,6 @@
     <string name="dialog_cancel_button">取消</string>
     <string name="snackbar_remove_account">已移除帳戶 %s</string>
     <string name="snackbar_undo_button">復原</string>
-    <string name="limited_services_app_name">MicroG 受限服務</string>
     <string name="gms_settings_name">MicroG 設定</string>
     <string name="gms_settings_summary">設定 MicroG 服務。</string>
     <string name="just_a_sec">請稍候…</string>
@@ -41,8 +40,6 @@
     <string name="deny">拒絕</string>
     <string name="auth_notification_title">需要驗證</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> 需要您的授權才能存取您的 Google 帳戶。</string>
-    <string name="auth_package_override_request_title">是否允許 <b><xliff:g example="F-Droid">%1$s</xliff:g></b> 取得 <xliff:g example="account@example.com">%2$s</xliff:g> 的特殊權限？</string>
-    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> 想要以 <b><xliff:g example="F-Droid">%2$s</xliff:g></b> 的身分（由 <xliff:g example="F-Droid Inc.">%3$s</xliff:g> 開發）存取您的帳戶。這可能會授予該應用程式您帳戶的特殊權限。</string>
     <string name="auth_action_notification_channel_name">Google 帳戶警示</string>
     <string name="auth_action_notification_channel_description">當您的某個 Google 帳戶需要額外設定才能使用，或帳戶與 microG 不相容時，會發出通知。</string>
     <string name="auth_action_notification_title">需要帳戶操作</string>
@@ -51,9 +48,9 @@
     <string name="auth_action_activity_header">完成您的 Google 帳戶設定</string>
     <string name="auth_action_activity_explanation">完成以下步驟，即可在此裝置上使用您的 Google 帳戶 %s。</string>
     <string name="auth_action_step_enable_checkin">啟用裝置註冊</string>
-    <string name="auth_action_step_enable_checkin_description">「您的裝置必須至少向 Google 註冊一次。
+    <string name="auth_action_step_enable_checkin_description">"您的裝置至少需要註冊一次 Google。
 
-您可以在帳戶設定完成後停用 Google 裝置註冊。」</string>
+帳戶設定完成後，您可以停用 Google 裝置註冊。"</string>
     <string name="auth_action_step_enable_gcm">啟用雲端訊息</string>
     <string name="auth_action_step_enable_gcm_description">帳戶設定完成後，您可以停用雲端訊息。</string>
     <string name="auth_action_step_allow_microg_gcm">允許 microG 使用雲端訊息</string>
@@ -155,6 +152,18 @@
     <string name="prefcat_accounts_options_title">選項</string>
     <string name="pref_accounts_manage_accounts_title">管理帳戶</string>
     <string name="pref_accounts_manage_accounts_summary">開啟裝置帳戶管理員</string>
+    <string name="prefcat_accounts_backup_title">帳戶備份</string>
+    <string name="pref_accounts_backup_title">備份帳戶</string>
+    <string name="pref_accounts_backup_summary">將 Google 帳戶匯出至檔案</string>
+    <string name="pref_accounts_restore_title">還原帳戶</string>
+    <string name="pref_accounts_restore_summary">從檔案匯入 Google 帳戶</string>
+    <string name="pref_accounts_backup_warning_title">要備份帳戶嗎？</string>
+    <string name="pref_accounts_backup_warning_message">這會將您的帳戶和登入權杖 (SID/LSID) 寫入檔案。任何取得此檔案的人都能存取您的帳戶，請妥善保管並切勿分享。</string>
+    <string name="button_backup_accounts">備份</string>
+    <string name="snackbar_accounts_backed_up">帳戶已備份</string>
+    <string name="snackbar_accounts_restored">已還原 %1$d 個帳戶(s)（原為 account(s)）</string>
+    <string name="snackbar_accounts_export_failed">備份失敗</string>
+    <string name="snackbar_accounts_import_failed">還原失敗</string>
     <string name="prefcat_youtube_activity">YouTube 活動</string>
     <string name="pref_manage_all_history">管理所有歷史記錄</string>
     <string name="pref_data_in_youtube">您的 YouTube 資訊</string>
@@ -170,9 +179,34 @@
     <string name="pref_gcm_confirm_new_apps_summary">在重新註冊應用程式以接收推播通知前詢問。</string>
     <string name="pref_about_title">關於 MicroG RE</string>
     <string name="pref_hide_launcher_icon">隱藏啟動器圖示</string>
+    <string name="hide_launcher_icon_dialog_message">若啟用，MicroG 將在應用程式啟動器中隱藏。可從裝置系統應用程式清單中的應用程式資訊開啟 MicroG。</string>
+    <string name="hide_launcher_icon_updating_title">請稍候，應用程式正在更新</string>
     <string name="pref_language_title">語言</string>
     <string name="pref_language_system_default">系統預設</string>
     <string name="pref_github_summary">原始碼儲存庫</string>
+    <string name="pref_update_title">檢查更新</string>
+    <string name="pref_update_summary">前往 GitHub 檢查是否有更新版本。</string>
+    <string name="update_include_prerelease">包含預發布版 / 開發版</string>
+    <string name="update_available_title">有可用更新</string>
+    <string name="update_available_prerelease_title">有可用更新（預發布版）</string>
+    <string name="update_available_message">新版本 v%1s 可用。您目前安裝的版本為 v%2$s。要下載並安裝更新嗎？</string>
+    <string name="update_now">更新</string>
+    <string name="update_whats_new">更新內容</string>
+    <string name="update_ignore">忽略</string>
+    <string name="update_downloading_title">正在下載更新……</string>
+    <string name="update_download_failed">下載失敗。請檢查連線後再試一次。</string>
+    <string name="update_signature_mismatch">無法更新應用程式，簽章不同。</string>
+    <string name="update_failed_title">更新失敗</string>
+    <string name="update_permission_required_title">需要權限</string>
+    <string name="update_permission_required_message">若要安裝更新，請在系統設定中允許 MicroG 安裝未知應用程式。</string>
+    <string name="update_open_settings">設定</string>
+    <string name="update_check_failed">無法檢查更新。請檢查連線後再試一次。</string>
+    <string name="update_up_to_date_title">您已是最新版本</string>
+    <string name="update_up_to_date_message">MicroG-RE v%s 是最新版本。</string>
+    <string name="update_notification_title">有可用更新</string>
+    <string name="update_notification_text">新版本 v%s 可用，點擊以更新</string>
+    <string name="update_notification_channel">更新</string>
+    <string name="update_notification_permission_title">通知</string>
     <string name="gcm_unregister_app">取消註冊</string>
     <string name="gcm_no_message_yet">尚未收到任何訊息</string>
     <string name="gcm_last_message_at">上次訊息：<xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

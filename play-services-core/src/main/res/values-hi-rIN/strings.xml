@@ -14,7 +14,6 @@
     <string name="dialog_cancel_button">रद्द करें</string>
     <string name="snackbar_remove_account">अकाउंट %s हटाया गया</string>
     <string name="snackbar_undo_button">पूछे करें</string>
-    <string name="limited_services_app_name">MicroG सीमित सेवाएं</string>
     <string name="gms_settings_name">MicroG सेटिंग्स</string>
     <string name="gms_settings_summary">MicroG सेवाओं का सेटअप करें।</string>
     <string name="just_a_sec">बस एक सेकंड...
@@ -84,8 +83,6 @@ Here is the response.```json
     <string name="deny">अनुमति न दें</string>
     <string name="auth_notification_title">सत्यापन आवश्यक</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> को आपके Google खाते तक पहुंचने के लिए आपके प्राधिकरण की आवश्यकता है।</string>
-    <string name="auth_package_override_request_title">क्या आप <b><xliff:g example="F-Droid">%1$s</xliff:g></b> को <xliff:g example="account@example.com">%2$s</xliff:g> तक विशेष पहुंच की अनुमति देंगे?,</string>
-    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> आपके खाते को एक्सेस करना चाहता है जैसे कि यह <b><xliff:g example="F-Droid">%2$s</xliff:g></b> हो (जो <b><xliff:g example="F-Droid Inc.">%3$s</xliff:g></b> द्वारा बनाया गया हो)। इससे इसे आपके खाते की विशेष पहुंच मिल सकती है।</string>
     <string name="auth_action_notification_channel_name">Google खाता अलर्ट</string>
     <string name="auth_action_notification_channel_description">जब आपके Google खातों में से किसी एक को उपयोग से पहले अतिरिक्त सेटअप की आवश्यकता होती है या जब कोई खाता microG के साथ असंगत होता है, तो सूचित करता है।</string>
     <string name="auth_action_notification_title">खाता कार्रवाई आवश्यक</string>
@@ -94,9 +91,9 @@ Here is the response.```json
     <string name="auth_action_activity_header">अपना Google खाता सेट करना समाप्त करें</string>
     <string name="auth_action_activity_explanation">इस डिवाइस पर अपने Google खाते %s का उपयोग करने में सक्षम होने के लिए निम्न चरणों को पूरा करें।</string>
     <string name="auth_action_step_enable_checkin">डिवाइस पंजीकरण सक्षम करें</string>
-    <string name="auth_action_step_enable_checkin_description">\"आपके डिवाइस को कम से कम एक बार Google पर पंजीकृत करने की आवश्यकता है।
+    <string name="auth_action_step_enable_checkin_description">"आपके डिवाइस को कम से कम एक बार Google में पंजीकृत होना आवश्यक है।
 
-खाता सेटअप पूरा होने के बाद आप Google डिवाइस पंजीकरण अक्षम कर सकते हैं।</string>
+खाता सेटअप पूरा होने के बाद आप Google डिवाइस पंजीकरण अक्षम कर सकते हैं।"</string>
     <string name="auth_action_step_enable_gcm">क्लाउड मैसेजिंग सक्षम करें</string>
     <string name="auth_action_step_enable_gcm_description">खाता सेटअप पूरा होने के बाद आप क्लाउड मैसेजिंग अक्षम कर सकते हैं।</string>
     <string name="auth_action_step_allow_microg_gcm">microG के लिए क्लाउड मैसेजिंग की अनुमति दें</string>
@@ -198,6 +195,18 @@ Here is the response.```json
     <string name="prefcat_accounts_options_title">ऑप्शंस</string>
     <string name="pref_accounts_manage_accounts_title">अकाउंट प्रबंधित करें</string>
     <string name="pref_accounts_manage_accounts_summary">डिवाइस अकाउंट मैनेजर खोलें</string>
+    <string name="prefcat_accounts_backup_title">खाते का बैकअप</string>
+    <string name="pref_accounts_backup_title">खातों का बैकअप लें</string>
+    <string name="pref_accounts_backup_summary">Google खातों को फ़ाइल में निर्यात करें</string>
+    <string name="pref_accounts_restore_title">खाते पुनर्सथापित करें</string>
+    <string name="pref_accounts_restore_summary">फ़ाइल से Google खाते आयात करें</string>
+    <string name="pref_accounts_backup_warning_title">खातों का बैकअप लें?</string>
+    <string name="pref_accounts_backup_warning_message">यह आपके खातों और लॉगिन टोकन (SID/LSID) को एक फ़ाइल में लिखता है। जिस किसी को भी यह फ़ाइल मिल जाए, वह आपके खातों तक पहुंच सकता है, इसलिए इस सुरकषित रखें और कभी साझा न करें।</string>
+    <string name="button_backup_accounts">बैकअप लें</string>
+    <string name="snackbar_accounts_backed_up">खातों का बैकअप ले लिया गया</string>
+    <string name="snackbar_accounts_restored">खाता/खाते पुनर्स्थापित: %1$d</string>
+    <string name="snackbar_accounts_export_failed">बैकअप विफल</string>
+    <string name="snackbar_accounts_import_failed">पुनर्स्थापन विफल</string>
     <string name="prefcat_youtube_activity">यूट्यूब एक्टिविटी</string>
     <string name="pref_manage_all_history">सभी इतिहास प्रबंधित करें</string>
     <string name="pref_data_in_youtube">आपके यूट्यूब में आपके डेटा</string>
@@ -213,9 +222,33 @@ Here is the response.```json
     <string name="pref_gcm_confirm_new_apps_summary">एक नए ऐप को पुश नोटिफिकेशन के लिए रजिस्टर करने की अनुमति मांगें</string>
     <string name="pref_about_title">माइक्रोजी RE के बारे में</string>
     <string name="pref_hide_launcher_icon">लॉन्चर में आइकन छुपाएं</string>
+    <string name="hide_launcher_icon_dialog_message">यद सकषम किया जाता है, तो MicroG आपके ऐप लॉन्चर में छिपा दिया जाएगा। MicroG को आपके डिवाइस सिस्टम ऐप सूची में मौजूद ऐप जानकारी से खोला जा सकता है।</string>
+    <string name="hide_launcher_icon_updating_title">ऐप अपडेट होने तक कृपया परतीक्षा करें</string>
     <string name="pref_language_title">भाषा</string>
     <string name="pref_language_system_default">सिस्टम डिफ़ॉल्ट</string>
     <string name="pref_github_summary">%1$s में साइन इन करें</string>
+    <string name="pref_update_title">अपडेट की जांच करें</string>
+    <string name="pref_update_summary">नए संकरण के लिए GitHub पर जांच करें।</string>
+    <string name="update_include_prerelease">प्री-रिलीज़ / डेव बिल्ड शामिल करें</string>
+    <string name="update_available_title">अपडेट उपलब्ध है</string>
+    <string name="update_available_prerelease_title">अपडेट उपलब्ध है (प्री-रिलीज़)</string>
+    <string name="update_available_message">नया v%1s उपलब्ध है। आपके पास v%2$s संस्करण इंस्टॉल है। अपडेट डाउनलोड करके इंस्टॉल करें?</string>
+    <string name="update_now">अपडेट</string>
+    <string name="update_whats_new">नया क्या है</string>
+    <string name="update_ignore">अनदेखा करें</string>
+    <string name="update_downloading_title">अपडेट डाउनलोड हो रहा है…</string>
+    <string name="update_download_failed">डाउनलड विफल हुआ। अपना कनेक्शन जांचें और दोबारा प्रयास करें।</string>
+    <string name="update_signature_mismatch">ऐप को अपडेट नहीं किया जा सकता क्ोकि हस्ताक्षर अलग हैं।</string>
+    <string name="update_failed_title">उपडेट विफल हुआ</string>
+    <string name="update_permission_required_title">अनुमति आवश्यक है</string>
+    <string name="update_permission_required_message">अपडेट इंस्टॉल करने के लिए, कृपया सिस्टम सेटिंग्स में MicroG को अज्ञात ऐप्स इंस्टॉल करने की अनुमति दें।</string>
+    <string name="update_open_settings">सेटिंग्स</string>
+    <string name="update_check_failed">अपडेट की जांच नहीं हो सकी। अपना कनेकशन जांचें और दोबारा परयास करें।</string>
+    <string name="update_up_to_date_title">आप अप-टू-डेट हैं</string>
+    <string name="update_up_to_date_message">MicroG-RE v%s नवीनतम संस्करण है।</string>
+    <string name="update_notification_title">अपडेट उपलब्ध है</string>
+    <string name="update_notification_text">नया v%s उपलब्ध है, अपडेट करने के लिए टैप करें</string>
+    <string name="update_notification_channel">अपडेट</string>
     <string name="gcm_unregister_app">रजिस्टर हटाएं</string>
     <string name="gcm_no_message_yet">अभी तक कोई संदेश प्राप्त नहीं हुआ है</string>
     <string name="gcm_last_message_at">अंतिम संदेश: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

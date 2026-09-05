@@ -14,7 +14,6 @@ Vaši podaci neće biti izgubljeni"</string>
     <string name="dialog_cancel_button">Odustani</string>
     <string name="snackbar_remove_account">Račun %s uklonjen</string>
     <string name="snackbar_undo_button">Poništi</string>
-    <string name="limited_services_app_name">MicroG Ograničene usluge</string>
     <string name="gms_settings_name">MikroG postavke</string>
     <string name="gms_settings_summary">Postavljanje microG usluga.</string>
     <string name="just_a_sec">Samo trenutak…</string>
@@ -53,9 +52,9 @@ To može potrajati nekoliko minuta..
     <string name="auth_action_activity_header">Dovršite postavljanje svog Google računa</string>
     <string name="auth_action_activity_explanation">Dovršite sljedeće korake kako biste mogli koristiti svoj Google račun %s na ovom uređaju.</string>
     <string name="auth_action_step_enable_checkin">Omogući registraciju uređaja</string>
-    <string name="auth_action_step_enable_checkin_description">Vaš uređaj se mora barem jednom registrirati na Googleu.
+    <string name="auth_action_step_enable_checkin_description">"Vaš uređaj mora se barem jednom registrirati na Googleu.
 
-Registraciju Google uređaja možete onemogućiti nakon što je postavljanje računa dovršeno.</string>
+Registraciju svojeg uređaja na Googleu možete onemogućiti nakon što je postavljanje računa dovršeno."</string>
     <string name="auth_action_step_enable_gcm">Omogući Cloud Messaging</string>
     <string name="auth_action_step_enable_gcm_description">Cloud Messaging možete onemogućiti nakon što je postavljanje računa dovršeno.</string>
     <string name="auth_action_step_allow_microg_gcm">Omogući Cloud Messaging za microG</string>
@@ -155,6 +154,18 @@ Registraciju Google uređaja možete onemogućiti nakon što je postavljanje ra�
     <string name="prefcat_accounts_options_title">Opcije</string>
     <string name="pref_accounts_manage_accounts_title">Upravljanje računima</string>
     <string name="pref_accounts_manage_accounts_summary">Otvorite upravitelj računa uređaja</string>
+    <string name="prefcat_accounts_backup_title">Sigurnosna kopija računa</string>
+    <string name="pref_accounts_backup_title">Sigurnosna kopija računa</string>
+    <string name="pref_accounts_backup_summary">Izvezi Google račune u datoteku</string>
+    <string name="pref_accounts_restore_title">Vrati račune</string>
+    <string name="pref_accounts_restore_summary">Uvezi Google račune iz datoteke</string>
+    <string name="pref_accounts_backup_warning_title">Napraviti sigurnosnu kopiju računa?</string>
+    <string name="pref_accounts_backup_warning_message">Ovo zapisuje vaše račune i tokenе za prijavu (SID/LSID) u datoteku. Svatko tko dobije ovu datoteku može pristupiti vašim računima, stoga je čuvajte na sigurnom i nikada je ne dijelite.</string>
+    <string name="button_backup_accounts">Sigurnosna kopija</string>
+    <string name="snackbar_accounts_backed_up">Računi su sigurnosno kopirani</string>
+    <string name="snackbar_accounts_restored">Obnovljeno %1$d račun(a)</string>
+    <string name="snackbar_accounts_export_failed">Sigurnosno kopiranje nije uspjelo</string>
+    <string name="snackbar_accounts_import_failed">Vraćanje nije uspjelo</string>
     <string name="prefcat_youtube_activity">YouTube aktivnost</string>
     <string name="pref_manage_all_history">Upravljaj svom poviješću</string>
     <string name="pref_data_in_youtube">Vaši podaci na YouTube</string>
@@ -170,9 +181,37 @@ Registraciju Google uređaja možete onemogućiti nakon što je postavljanje ra�
     <string name="pref_gcm_confirm_new_apps_summary">Prije registracije nove aplikacije pitaj za primanje push obavijesti</string>
     <string name="pref_about_title">O MicroG RE</string>
     <string name="pref_hide_launcher_icon">Sakrij ikonu u pokretaču</string>
+    <string name="hide_launcher_icon_dialog_message">Ako je omogućeno, MicroG će biti skriven u pokretaču aplikacija. MicroG se može otvoriti iz informacija o aplikaciji koje se nalaze na popisu sistemskih aplikacija vašeg uređaja.</string>
+    <string name="hide_launcher_icon_updating_title">Pričekajte dok se aplikacija ažurira</string>
     <string name="pref_language_title">Jezik</string>
     <string name="pref_language_system_default">Zadano</string>
     <string name="pref_github_summary">Repozitorij izvornog koda</string>
+    <string name="pref_update_title">Provjeri ažuriranja</string>
+    <string name="pref_update_summary">Provjeri GitHub za noviju verziju.</string>
+    <string name="update_include_prerelease">Uključi predizdanja / razvojne verzije</string>
+    <string name="update_available_title">Dostupno ažuriranje</string>
+    <string name="update_available_prerelease_title">Ažuriranje dostupno (predizdanje)</string>
+    <string name="update_available_message">Dostupna je nova verzija v%1s. Imate instaliranu verziju v%2$s. Preuzeti i instalirati ažuriranje?</string>
+    <string name="update_now">Ažuriraj</string>
+    <string name="update_whats_new">Što je novo</string>
+    <string name="update_ignore">Zanemari</string>
+    <string name="update_downloading_title">Preuzimanje ažuriranja…</string>
+    <string name="update_download_failed">Preuzimanje nije uspjelo. Provjerite vezu i pokušajte ponovno.</string>
+    <string name="update_signature_mismatch">Aplikaciju nije moguće ažurirati, potpisi se razlikuju.</string>
+    <string name="update_failed_title">Ažuriranje nije uspjelo</string>
+    <string name="update_permission_required_title">Potrebna dozvola</string>
+    <string name="update_permission_required_message">Da biste instalirali ažuriranja, omogućite MicroG-u instalaciju nepoznatih aplikacija u postavkama sustava.</string>
+    <string name="update_open_settings">Postavke</string>
+    <string name="update_check_failed">Nije moguće provjeriti ažuriranja. Provjerite vezu i pokušajte ponovno.</string>
+    <string name="update_up_to_date_title">Imate najnoviju verziju</string>
+    <string name="update_up_to_date_message">MicroG-RE v%s je najnovija verzija.</string>
+    <string name="update_notification_title">Dostupno ažuriranje</string>
+    <string name="update_notification_text">Nova verzija v%s je dostupna, dodirnite za ažuriranje</string>
+    <string name="update_notification_channel">Ažuriranja</string>
+    <string name="update_notification_permission_title">Obavijesti</string>
+    <string name="update_notification_permission_allow">Dopusti</string>
+    <string name="update_notification_permission_not_now">Ne sada</string>
+    <string name="update_notification_permission_open_settings">Otvori postavke</string>
     <string name="gcm_unregister_app">Neregistrirano</string>
     <string name="gcm_no_message_yet">Nema primljenih poruka do sada</string>
     <string name="gcm_last_message_at">Zadnja poruka: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
