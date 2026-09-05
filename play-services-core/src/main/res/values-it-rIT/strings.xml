@@ -40,6 +40,8 @@ Potrebbe richiedere un paio di minuti."</string>
     <string name="deny">Rifiuta</string>
     <string name="auth_notification_title">Autorizzazione richiesta</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> richiede la tua autorizzazione per accedere al tuo account Google.</string>
+    <string name="auth_package_override_request_title">Consenti a <b><xliff:g example="F-Droid">%1$s</xliff:g></b> l\'accesso privilegiato a <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> vuole accedere al tuo account come se fosse <b><xliff:g example="F-Droid">%2$s</xliff:g> di <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Questo potrebbe concedergli l\'accesso privilegiato al tuo account.</string>
     <string name="auth_action_notification_channel_name">Avvisi account Google</string>
     <string name="auth_action_notification_channel_description">Notifica quando uno dei tuoi account Google richiede una configurazione aggiuntiva prima di poter essere utilizzato o quando un account è incompatibile con microG.</string>
     <string name="auth_action_notification_title">Azione account richiesta</string>
@@ -207,6 +209,9 @@ Imposta una password, un PIN o un blocco schermo con schema."</string>
     <string name="update_notification_text">Nuova versione v%s disponibile, tocca per aggiornare</string>
     <string name="update_notification_channel">Aggiornamenti</string>
     <string name="update_notification_permission_title">Notifiche</string>
+    <string name="update_notification_permission_message">Per farti sapere quando è disponibile un nuovo aggiornamento, MicroG-RE ha bisogno del permesso di inviare notifiche. Ti preghiamo di consentire le notifiche, così gli avvisi di aggiornamento possono raggiungerti.</string>
+    <string name="update_notification_permission_allow">Consenti</string>
+    <string name="update_notification_permission_not_now">Non ora</string>
     <string name="update_notification_permission_open_settings">Impostazioni avanzate</string>
     <string name="gcm_unregister_app">Annulla la registrazione</string>
     <string name="gcm_no_message_yet">Nessun messaggio ricevuto finora</string>

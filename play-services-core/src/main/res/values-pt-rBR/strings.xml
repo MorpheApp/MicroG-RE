@@ -209,7 +209,10 @@ Configure uma senha, PIN ou padrão de bloqueio de tela."</string>
     <string name="update_notification_text">Nova versão v%s está disponível. Toque para atualizar.</string>
     <string name="update_notification_channel">Atualizações</string>
     <string name="update_notification_permission_title">Notificações</string>
+    <string name="update_notification_permission_message">Para avisar você quando uma nova atualização estiver disponível, o MicroG-RE precisa de permissão para enviar notificações. Por favor, permita as notificações para que os alertas de atualização cheguem até você.</string>
     <string name="update_notification_permission_allow">Permitir</string>
+    <string name="update_notification_permission_not_now">Agora não</string>
+    <string name="update_notification_permission_open_settings">Abrir configurações</string>
     <string name="gcm_unregister_app">Revogar registro</string>
     <string name="gcm_no_message_yet">Nenhuma mensagem recebida até agora</string>
     <string name="gcm_last_message_at">Última mensagem: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

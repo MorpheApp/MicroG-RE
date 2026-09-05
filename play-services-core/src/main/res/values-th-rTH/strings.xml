@@ -40,6 +40,8 @@
     <string name="deny">ไม่อนุญาต</string>
     <string name="auth_notification_title">จำเป็นต้องมีการระบุตัวตน</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> ต้องการการอนุญาตจากคุณเพื่อเข้าถึงบัญชี Google ของคุณ</string>
+    <string name="auth_package_override_request_title">อนุญาตให้ <b><xliff:g example="F-Droid">%1$s</xliff:g></b> เข้าถึง <xliff:g example="account@example.com">%2$s</xliff:g> โดยมีสิทธิ์พิเศษหรือไม่?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> ต้องการเข้าถึงบัญชีของคุณเสมือนเป็น <b><xliff:g example="F-Droid">%2$s</xliff:g> โดย <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b> ซึ่งอาจให้สิทธิ์การเข้าถึงบัญชีของคุณในระดับพิเศษ.</string>
     <string name="auth_action_notification_channel_name">การแจ้งเตือนบัญชี Google</string>
     <string name="auth_action_notification_channel_description">แจ้งเตือนเมื่อบัญชี Google ใดบัญชีหนึ่งของคุณต้องการการตั้งค่าเพิ่มเติมก่อนใช้งาน หรือเมื่อบัญชีไม่เข้ากันกับ microG</string>
     <string name="auth_action_notification_title">จำเป็นต้องดำเนินการกับบัญชี</string>
@@ -207,6 +209,8 @@
     <string name="update_notification_text">มีเวอร์ชันใหม่ v%s ให้ใช้งาน แตะเพื่ออัปเดต</string>
     <string name="update_notification_channel">อัปเดต</string>
     <string name="update_notification_permission_title">การแจ้งเตือน</string>
+    <string name="update_notification_permission_message">เพื่อแจ้งให้คุณทราบเมื่อมีการอัปเดตใหม่ MicroG-RE จำเป็นต้องได้รับอนุญาตให้ส่งการแจ้งเตือน โปรดอนุญาตการแจ้งเตือนเพื่อให้การแจ้งเตือนการอัปเดตถึงคุณ</string>
+    <string name="update_notification_permission_allow">อนุญาต</string>
     <string name="update_notification_permission_not_now">ไม่ใช่ตอนนี้</string>
     <string name="update_notification_permission_open_settings">เปิดการตั้งค่า</string>
     <string name="gcm_unregister_app">ยกเลิกการลงทะเบียน</string>

@@ -40,6 +40,8 @@ Dies kann einige Minuten dauern "</string>
     <string name="deny">Verweigern</string>
     <string name="auth_notification_title">Authentifizierung erforderlich</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> benötigt Ihre Autorisierung, um auf Ihr Google-Konto zuzugreifen.</string>
+    <string name="auth_package_override_request_title">Erlauben Sie <b><xliff:g example="F-Droid">%1$s</xliff:g></b> privilegierten Zugriff auf <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> möchte auf Ihr Konto zugreifen, als wäre es <b><xliff:g example="F-Droid">%2$s</xliff:g> von <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Dies könnte ihm privilegierten Zugriff auf Ihr Konto gewähren.</string>
     <string name="auth_action_notification_channel_name">Google-Konto-Benachrichtigungen</string>
     <string name="auth_action_notification_channel_description">Benachrichtigt, wenn eines Ihrer Google-Konten eine zusätzliche Einrichtung benötigt, bevor es verwendet werden kann, oder wenn ein Konto mit microG inkompatibel ist.</string>
     <string name="auth_action_notification_title">Kontoaktion erforderlich</string>
@@ -208,6 +210,8 @@ Bitte richten Sie eine Bildschirmsperre mit Passwort, PIN oder Muster ein."</str
     <string name="update_notification_text">Neue Version v%s ist verfügbar. Tippe zum Aktualisieren</string>
     <string name="update_notification_channel">Updates</string>
     <string name="update_notification_permission_title">Benachrichtigungen</string>
+    <string name="update_notification_permission_message">Um Sie zu informieren, wenn ein neues Update verfügbar ist, benötigt MicroG-RE die Berechtigung, Benachrichtigungen zu senden. Bitte erlauben Sie Benachrichtigungen, damit Sie Update-Benachrichtigungen erhalten können.</string>
+    <string name="update_notification_permission_allow">Erlauben</string>
     <string name="update_notification_permission_not_now">Nicht jetzt</string>
     <string name="update_notification_permission_open_settings">Einstellungen öffnen</string>
     <string name="gcm_unregister_app">Registrierung aufheben</string>

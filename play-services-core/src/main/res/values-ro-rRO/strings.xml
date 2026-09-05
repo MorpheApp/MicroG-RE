@@ -40,6 +40,8 @@ Acest lucru poate dura câteva minute."</string>
     <string name="deny">Refuzați</string>
     <string name="auth_notification_title">Autentificare necesară</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> necesită autorizarea dvs. pentru a accesa contul dvs. Google.</string>
+    <string name="auth_package_override_request_title">Permite-i aplicației <b><xliff:g example="F-Droid">%1$s</xliff:g></b> acces privilegiat la <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> dorește să acceseze contul tău ca și cum ar fi <b><xliff:g example="F-Droid">%2$s</xliff:g> de <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Acest lucru i-ar putea acorda acces privilegiat la contul tău.</string>
     <string name="auth_action_notification_channel_name">Alerte cont Google</string>
     <string name="auth_action_notification_channel_description">Notifică atunci când unul dintre conturile dvs. Google necesită configurare suplimentară înainte de a putea fi utilizat sau când un cont este incompatibil cu microG.</string>
     <string name="auth_action_notification_title">Acțiune cont necesară</string>
@@ -207,6 +209,10 @@ Vă rugăm să configurați o parolă, un PIN sau un model de blocare."</string>
     <string name="update_notification_text">Noua versiune v%s este disponibila. Atinge pentru a actualiza</string>
     <string name="update_notification_channel">Actualizări</string>
     <string name="update_notification_permission_title">Notificări</string>
+    <string name="update_notification_permission_message">Pentru a te anunța atunci când este disponibilă o nouă actualizare, MicroG-RE are nevoie de permisiunea de a trimite notificări. Te rugăm să permiți notificările, astfel încât alertele de actualizare să ajungă la tine.</string>
+    <string name="update_notification_permission_allow">Permite</string>
+    <string name="update_notification_permission_not_now">Nu acum</string>
+    <string name="update_notification_permission_open_settings">Deschide setările</string>
     <string name="gcm_unregister_app">Dezinstalați aplicația</string>
     <string name="gcm_no_message_yet">Nu au fost primite încă mesaje</string>
     <string name="gcm_last_message_at">Ultimul mesaj: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

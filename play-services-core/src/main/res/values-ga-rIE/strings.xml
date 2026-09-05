@@ -211,6 +211,7 @@ Socraigh pasfhocal, PIN, nó patrún glas scáileáin le do thoil."</string>
     <string name="update_notification_text">Tá v%s nua ar fáil, tapáil chun nuashonrú a dhéanamh</string>
     <string name="update_notification_channel">Nuashonruithe</string>
     <string name="update_notification_permission_title">Fógraí</string>
+    <string name="update_notification_permission_message">Chun tú a chur ar an eolas nuair a bheidh nuashonrú nua ar fáil, teastaíonn cead ó MicroG-RE chun fógraí a sheoladh. Ceadaigh na fógraí le do thoil ionas go sroichfidh foláirimh nuashonraithe thú.</string>
     <string name="update_notification_permission_allow">Ceadaigh</string>
     <string name="update_notification_permission_not_now">Ní anois</string>
     <string name="update_notification_permission_open_settings">Oscail socruithe</string>

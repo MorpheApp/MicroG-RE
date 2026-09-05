@@ -209,6 +209,7 @@
     <string name="update_notification_text">إصدار جديد متاح v%s، انقر للتحديث</string>
     <string name="update_notification_channel">التحديثات</string>
     <string name="update_notification_permission_title">الإشعارات</string>
+    <string name="update_notification_permission_message">لإبلاغك عند توفر تحديث جديد، يحتاج MicroG-RE إلى إذن لإرسال الإشعارات. يرجى السماح بالإشعارات حتى تتمكن من استلام تنبيهات التحديث.</string>
     <string name="update_notification_permission_allow">السماح</string>
     <string name="update_notification_permission_not_now">ليس الآن</string>
     <string name="update_notification_permission_open_settings">فتح الإعدادات</string>

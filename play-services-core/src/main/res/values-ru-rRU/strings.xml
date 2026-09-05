@@ -40,6 +40,8 @@
     <string name="deny">Отказаться</string>
     <string name="auth_notification_title">Требуется авторизация</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> требует вашего разрешения на доступ к вашей учетной записи Google.</string>
+    <string name="auth_package_override_request_title">Разрешить <b><xliff:g example="F-Droid">%1$s</xliff:g></b> привилегированный доступ к <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> хочет получить доступ к вашему аккаунту, как будто это <b><xliff:g example="F-Droid">%2$s</xliff:g> от <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Это может предоставить ему привилегированный доступ к вашему аккаунту.</string>
     <string name="auth_action_notification_channel_name">Оповещения учетной записи Google</string>
     <string name="auth_action_notification_channel_description">Уведомляет, когда одна из ваших учетных записей Google требует дополнительной настройки перед использованием или когда учетная запись несовместима с microG.</string>
     <string name="auth_action_notification_title">Требуется действие с учетной записью</string>
@@ -207,6 +209,10 @@
     <string name="update_notification_text">Доступна новая версия v%s, нажмите для обновления</string>
     <string name="update_notification_channel">Обновления</string>
     <string name="update_notification_permission_title">Уведомления</string>
+    <string name="update_notification_permission_message">Чтобы вы знали о доступных обновлениях, MicroG-RE необходимо разрешение на отправку уведомлений. Пожалуйста, разрешите уведомления, чтобы оповещения об обновлениях могли доходить до вас.</string>
+    <string name="update_notification_permission_allow">Разрешить</string>
+    <string name="update_notification_permission_not_now">Не сейчас</string>
+    <string name="update_notification_permission_open_settings">Открыть настройки</string>
     <string name="gcm_unregister_app">Отменить регистрацию</string>
     <string name="gcm_no_message_yet">Сообщений не получено</string>
     <string name="gcm_last_message_at">Последнее сообщение: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

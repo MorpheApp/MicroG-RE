@@ -209,6 +209,10 @@ Silakan atur kata sandi, PIN, atau pola kunci layar."</string>
     <string name="update_notification_text">Versi baru v%s tersedia, ketuk untuk memperbarui</string>
     <string name="update_notification_channel">Pembaruan</string>
     <string name="update_notification_permission_title">Notifikasi</string>
+    <string name="update_notification_permission_message">Untuk memberi tahu Anda saat pembaruan baru tersedia, MicroG-RE memerlukan izin untuk mengirim notifikasi. Mohon izinkan notifikasi agar peringatan pembaruan dapat sampai kepada Anda.</string>
+    <string name="update_notification_permission_allow">Izinkan</string>
+    <string name="update_notification_permission_not_now">Nanti saja</string>
+    <string name="update_notification_permission_open_settings">Buka setelan</string>
     <string name="gcm_unregister_app">Batalkan pendaftaran</string>
     <string name="gcm_no_message_yet">Belum ada pesan yang diterima hingga saat ini</string>
     <string name="gcm_last_message_at">Pesan terakhir: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

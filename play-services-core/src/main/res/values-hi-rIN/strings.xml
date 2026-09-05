@@ -83,6 +83,8 @@ Here is the response.```json
     <string name="deny">अनुमति न दें</string>
     <string name="auth_notification_title">सत्यापन आवश्यक</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> को आपके Google खाते तक पहुंचने के लिए आपके प्राधिकरण की आवश्यकता है।</string>
+    <string name="auth_package_override_request_title">क्या <b><xliff:g example="F-Droid">%1$s</xliff:g></b> को <xliff:g example="account@example.com">%2$s</xliff:g> तक विशेषाधिकार पहुंच की अनुमति दें?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> आपके खाते को ऐसे एक्सेस करना चाहता है जैसे कि यह <b><xliff:g example="F-Droid Inc.">%3$s</xliff:g> द्वारा <xliff:g example="F-Droid">%2$s</xliff:g></b> हो। इससे उसे आपके खाते तक विशेषाधिकार पहुंच मिल सकती है।</string>
     <string name="auth_action_notification_channel_name">Google खाता अलर्ट</string>
     <string name="auth_action_notification_channel_description">जब आपके Google खातों में से किसी एक को उपयोग से पहले अतिरिक्त सेटअप की आवश्यकता होती है या जब कोई खाता microG के साथ असंगत होता है, तो सूचित करता है।</string>
     <string name="auth_action_notification_title">खाता कार्रवाई आवश्यक</string>
@@ -249,6 +251,11 @@ Here is the response.```json
     <string name="update_notification_title">अपडेट उपलब्ध है</string>
     <string name="update_notification_text">नया v%s उपलब्ध है, अपडेट करने के लिए टैप करें</string>
     <string name="update_notification_channel">अपडेट</string>
+    <string name="update_notification_permission_title">सूचनाएँ</string>
+    <string name="update_notification_permission_message">नया अपडेट उपलब्ध होने पर आपको सूचित करने के लिए, MicroG-RE को सूचनाएँ भेजने की अनुमति चाहिए। कृपया सूचनाओं की अनुमति दें ताकि अपडेट अलर्ट आप तक पहुँच सकें।</string>
+    <string name="update_notification_permission_allow">अनुमति दें</string>
+    <string name="update_notification_permission_not_now">अभी नहीं</string>
+    <string name="update_notification_permission_open_settings">सेटिंग खोलें</string>
     <string name="gcm_unregister_app">रजिस्टर हटाएं</string>
     <string name="gcm_no_message_yet">अभी तक कोई संदेश प्राप्त नहीं हुआ है</string>
     <string name="gcm_last_message_at">अंतिम संदेश: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

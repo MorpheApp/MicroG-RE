@@ -34,6 +34,8 @@ Probeer het later opnieuw."</string>
     <string name="deny">Weigeren</string>
     <string name="auth_notification_title">Authenticatie vereist</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> heeft uw toestemming nodig om toegang te krijgen tot uw Google-account.</string>
+    <string name="auth_package_override_request_title">Mag <b><xliff:g example="F-Droid">%1$s</xliff:g></b> bevoorrechte toegang krijgen tot <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> wil toegang tot uw account alsof het <b><xliff:g example="F-Droid">%2$s</xliff:g> door <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b> was. Dit kan het bevoorrechte toegang tot uw account verlenen.</string>
     <string name="auth_action_notification_channel_name">Google account meldingen</string>
     <string name="auth_action_notification_channel_description">Waarschuwt wanneer een van uw Google-accounts extra installatie vereist voordat het kan worden gebruikt of wanneer een account niet compatibel is met microG.</string>
     <string name="auth_action_notification_title">Accountactie vereist</string>
@@ -201,7 +203,10 @@ Stel een wachtwoord, PIN of patroonvergrendelscherm in."</string>
     <string name="update_notification_text">Nieuwe v%s is beschikbaar, tik om te updaten</string>
     <string name="update_notification_channel">Updates</string>
     <string name="update_notification_permission_title">Meldingen</string>
+    <string name="update_notification_permission_message">Om u te laten weten wanneer er een nieuwe update beschikbaar is, heeft MicroG-RE toestemming nodig om meldingen te sturen. Sta meldingen toe, zodat u updatewaarschuwingen kunt ontvangen.</string>
     <string name="update_notification_permission_allow">Toestaan</string>
+    <string name="update_notification_permission_not_now">Niet nu</string>
+    <string name="update_notification_permission_open_settings">Instellingen openen</string>
     <string name="gcm_unregister_app">Uitschrijven</string>
     <string name="gcm_no_message_yet">Nog geen berichten ontvangen.</string>
     <string name="gcm_last_message_at">Laatste bericht: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

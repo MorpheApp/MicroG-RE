@@ -209,6 +209,7 @@ Registraciju svojeg uređaja na Googleu možete onemogućiti nakon što je posta
     <string name="update_notification_text">Nova verzija v%s je dostupna, dodirnite za ažuriranje</string>
     <string name="update_notification_channel">Ažuriranja</string>
     <string name="update_notification_permission_title">Obavijesti</string>
+    <string name="update_notification_permission_message">Kako bismo vas obavijestili kada je dostupno novo ažuriranje, MicroG-RE treba dopuštenje za slanje obavijesti. Omogućite obavijesti kako bi vas stizala upozorenja o ažuriranjima.</string>
     <string name="update_notification_permission_allow">Dopusti</string>
     <string name="update_notification_permission_not_now">Ne sada</string>
     <string name="update_notification_permission_open_settings">Otvori postavke</string>

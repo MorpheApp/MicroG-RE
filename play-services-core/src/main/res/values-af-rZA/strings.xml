@@ -40,6 +40,8 @@ Dit kan 'n paar minute neem."</string>
     <string name="deny">Weier</string>
     <string name="auth_notification_title">Verifikasie vereis</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> vereis jou magtiging om toegang tot jou Google-rekening te verkry.</string>
+    <string name="auth_package_override_request_title">Laat <b><xliff:g example="F-Droid">%1$s</xliff:g></b> bevoorregte toegang tot <xliff:g example="account@example.com">%2$s</xliff:g> toe?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> wil toegang tot jou rekening verkry asof dit <b><xliff:g example="F-Droid">%2$s</xliff:g> deur <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b> was. Dit mag daaraan bevoorregte toegang tot jou rekening verleen.</string>
     <string name="auth_action_notification_channel_name">Google-rekeningwaarskuwings</string>
     <string name="auth_action_notification_channel_description">Stel jou in kennis wanneer een van jou Google-rekeninge bykomende opstelling benodig voordat dit gebruik kan word, of wanneer \'n rekening nie met microG versoenbaar is nie.</string>
     <string name="auth_action_notification_title">Rekeningaksie vereis</string>
@@ -206,6 +208,11 @@ Stel asseblief 'n wagkord, PIN of patroonslot op."</string>
     <string name="update_notification_title">Opdatering beskikbaar</string>
     <string name="update_notification_text">Nuut v%s is beskikbaar, tik om op te dateer</string>
     <string name="update_notification_channel">Opdaterings</string>
+    <string name="update_notification_permission_title">Kennisgewings</string>
+    <string name="update_notification_permission_message">Om jou te laat weet wanneer \'n nuwe opdatering beskikbaar is, het MicroG-RE toestemming nodig om kennisgewings te stuur. Laat asseblief kennisgewings toe sodat opdateringswaarskuwings jou kan bereik.</string>
+    <string name="update_notification_permission_allow">Laat toe</string>
+    <string name="update_notification_permission_not_now">Nie nou nie</string>
+    <string name="update_notification_permission_open_settings">Maak instellings oop</string>
     <string name="gcm_unregister_app">Deregistreer</string>
     <string name="gcm_no_message_yet">Geen boodskappe ontvang tot dusver</string>
     <string name="gcm_last_message_at">Laaste eerste: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

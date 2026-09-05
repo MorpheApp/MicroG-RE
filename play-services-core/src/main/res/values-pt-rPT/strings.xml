@@ -40,6 +40,8 @@ Isso pode levar alguns minutos."</string>
     <string name="deny">Negar</string>
     <string name="auth_notification_title">Autorização necessária</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> requer sua autorização para acessar sua conta do Google.</string>
+    <string name="auth_package_override_request_title">Permitir que <b><xliff:g example="F-Droid">%1$s</xliff:g></b> tenha acesso privilegiado a <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> quer acessar sua conta como se fosse <b><xliff:g example="F-Droid">%2$s</xliff:g> de <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Isso pode conceder-lhe acesso privilegiado à sua conta.</string>
     <string name="auth_action_notification_channel_name">Alertas de conta do Google</string>
     <string name="auth_action_notification_channel_description">Notifica quando uma das suas contas do Google requer configuração adicional antes de ser usada ou quando uma conta é incompatível com o microG.</string>
     <string name="auth_action_notification_title">Ação de conta necessária</string>
@@ -207,6 +209,9 @@ Por favor, configure uma senha, PIN ou padrão de bloqueio de tela."</string>
     <string name="update_notification_text">Nova v%s disponíve, toque para atualizar</string>
     <string name="update_notification_channel">Atualizações</string>
     <string name="update_notification_permission_title">Notificações</string>
+    <string name="update_notification_permission_message">Para avisar você quando houver uma nova atualização, o MicroG-RE precisa de permissão para enviar notificações. Permita as notificações para que os alertas de atualização possam chegar até você.</string>
+    <string name="update_notification_permission_allow">Permitir</string>
+    <string name="update_notification_permission_not_now">Agora não</string>
     <string name="update_notification_permission_open_settings">Abrir definições</string>
     <string name="gcm_unregister_app">Desregistrar</string>
     <string name="gcm_no_message_yet">Não há mensagens recebidas ainda</string>

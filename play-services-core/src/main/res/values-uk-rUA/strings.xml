@@ -209,6 +209,7 @@
     <string name="update_notification_text">Доступна нова версія v%s, натисніть, щоб оновити</string>
     <string name="update_notification_channel">Оновлення</string>
     <string name="update_notification_permission_title">Сповіщення</string>
+    <string name="update_notification_permission_message">Щоб повідомляти вас про наявність нового оновлення, MicroG-RE потребує дозволу на надсилання сповіщень. Будь ласка, дозвольте сповіщення, щоб отримувати повідомлення про оновлення.</string>
     <string name="update_notification_permission_allow">Дозволити</string>
     <string name="update_notification_permission_not_now">Не зараз</string>
     <string name="update_notification_permission_open_settings">Відкрити налаштування</string>

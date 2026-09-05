@@ -40,6 +40,8 @@ To lahko traja nekaj minut."</string>
     <string name="deny">Zavrni</string>
     <string name="auth_notification_title">Potrebna je avtentikacija</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> potrebuje vašo avtorizacijo za dostop do vašega Google računa.</string>
+    <string name="auth_package_override_request_title">Dovoli <b><xliff:g example="F-Droid">%1$s</xliff:g></b> privilegiran dostop do <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> želi dostopati do vašega računa, kot da bi šlo za <b><xliff:g example="F-Droid">%2$s</xliff:g> s strani <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. To bi aplikaciji lahko omogočilo privilegiran dostop do vašega računa.</string>
     <string name="auth_action_notification_channel_name">Opozorila Google računa</string>
     <string name="auth_action_notification_channel_description">Obvešča, kdaj en od vaših Google računov potrebuje dodatno nastavitev, preden ga lahko uporabite ali kdaj je račun nezdružljiv z microG.</string>
     <string name="auth_action_notification_title">Zahteva se ukrep računa</string>
@@ -206,6 +208,11 @@ Nastavite geslo, PIN ali vzorec za zaklepanje zaslona."</string>
     <string name="update_notification_title">Na voljo je posodobitev</string>
     <string name="update_notification_text">Na voljo je nova različica v%s, tapnite za posodobitev</string>
     <string name="update_notification_channel">Posodobitve</string>
+    <string name="update_notification_permission_title">Obvestila</string>
+    <string name="update_notification_permission_message">Da bi vas obvestili, ko je na voljo nova posodobitev, MicroG-RE potrebuje dovoljenje za pošiljanje obvestil. Prosimo, dovolite obvestila, da bodo opozorila o posodobitvah lahko dosegla vas.</string>
+    <string name="update_notification_permission_allow">Dovoli</string>
+    <string name="update_notification_permission_not_now">Ne zdaj</string>
+    <string name="update_notification_permission_open_settings">Odpri nastavitve</string>
     <string name="gcm_unregister_app">Odregistriraj</string>
     <string name="gcm_no_message_yet">Do zdaj ni bilo prejetih sporočil</string>
     <string name="gcm_last_message_at">Zadnje sporočilo: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

@@ -40,6 +40,8 @@ Maaari itong magtagal ng ilang minuto."</string>
     <string name="deny">Tanggihan</string>
     <string name="auth_notification_title">Kailangan ng authentication</string>
     <string name="auth_notification_content">Nangangailangan ng iyong pahintulot ang <xliff:g example="F-Droid">%1$s</xliff:g> upang ma-access ang iyong Google account.</string>
+    <string name="auth_package_override_request_title">Pahintulutan ang <b><xliff:g example="F-Droid">%1$s</xliff:g></b> na magkaroon ng pribilehiyong pag-access sa <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> ay gustong i-access ang iyong account na parang ito ay <b><xliff:g example="F-Droid">%2$s</xliff:g> ng <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Maaari nitong ipagkaloob dito ang pribilehiyong pag-access sa iyong account.</string>
     <string name="auth_action_notification_channel_name">Mga alerto sa Google account</string>
     <string name="auth_action_notification_channel_description">Pinapaalam kapag ang isa sa iyong mga Google account ay nangangailangan ng karagdagang pag-setup bago ito magamit o kapag ang isang account ay hindi tugma sa microG.</string>
     <string name="auth_action_notification_title">Kailangan ng authentication</string>
@@ -206,7 +208,11 @@ Mangyaring mag-set up ng password, PIN, o pattern lock screen."</string>
     <string name="update_notification_title">May available na update</string>
     <string name="update_notification_text">May bagong v%s na available, i-tap upang i-update</string>
     <string name="update_notification_channel">Mga update</string>
+    <string name="update_notification_permission_title">Mga abiso</string>
+    <string name="update_notification_permission_message">Para maipaalam sa iyo kapag may bagong update, kailangan ng MicroG-RE ng pahintulot na magpadala ng mga abiso. Mangyaring payagan ang mga abiso upang maabot ka ng mga alerto sa update.</string>
     <string name="update_notification_permission_allow">Payagan</string>
+    <string name="update_notification_permission_not_now">Hindi ngayon</string>
+    <string name="update_notification_permission_open_settings">Buksan ang mga setting</string>
     <string name="gcm_unregister_app">Hindi narehistro</string>
     <string name="gcm_no_message_yet">Walang natanggap na mga mensahe sa ngayon</string>
     <string name="gcm_last_message_at">Huling mensahe: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

@@ -209,6 +209,7 @@ Hesabın qurulması tamamlandıqdan sonra Google cihaz qeydiyyatını qapada bil
     <string name="update_notification_text">Yeni v%s mövcuddur, yeniləmək üçün toxun</string>
     <string name="update_notification_channel">Yenilənmələr</string>
     <string name="update_notification_permission_title">Bildirişlər</string>
+    <string name="update_notification_permission_message">Yenilənmə mövcud olduqda sizə xəbər vermək üçün MicroG-RE-nin bildiriş göndərmək üçün icazəyə ehtiyacı var. Xahiş olunur, yenilənmə xəbərdarlıqlarını sizə çatdırması üçün bildirişlərə icazə verin.</string>
     <string name="update_notification_permission_allow">İcazə verin</string>
     <string name="update_notification_permission_not_now">İndi deyil</string>
     <string name="update_notification_permission_open_settings">Tənzimləmələri aç</string>

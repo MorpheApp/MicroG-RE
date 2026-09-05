@@ -208,6 +208,11 @@ Vennligst sett opp et passord, en PIN-kode eller et mønsterlås."</string>
     <string name="update_notification_title">Oppdatering tilgjengelig</string>
     <string name="update_notification_text">Ny v%s er tilgjengelig, trykk for å oppdatere</string>
     <string name="update_notification_channel">Oppdateringer</string>
+    <string name="update_notification_permission_title">Varsler</string>
+    <string name="update_notification_permission_message">For å gi deg beskjed når en ny oppdatering er tilgjengelig, trenger MicroG-RE tillatelse til å sende varsler. Tillat varsler slik at oppdateringsvarsler kan nå deg.</string>
+    <string name="update_notification_permission_allow">Tillat</string>
+    <string name="update_notification_permission_not_now">Ikke nå</string>
+    <string name="update_notification_permission_open_settings">Åpne innstillinger</string>
     <string name="gcm_unregister_app">Avregistrer</string>
     <string name="gcm_no_message_yet">Ingen meldinger mottatt så langt</string>
     <string name="gcm_last_message_at">Siste melding: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

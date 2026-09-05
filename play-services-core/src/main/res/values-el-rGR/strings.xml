@@ -209,8 +209,10 @@
     <string name="update_notification_text">Νέα έκδοση v%s είναι διαθέσιμη. Πατήστε για ενημέρωση</string>
     <string name="update_notification_channel">Ενημερώσεις</string>
     <string name="update_notification_permission_title">Ειδοποιήσεις</string>
+    <string name="update_notification_permission_message">Για να σας ενημερώνει όταν είναι διαθέσιμη μια νέα ενημέρωση, το MicroG-RE χρειάζεται άδεια για να στέλνει ειδοποιήσεις. Παρακαλώ επιτρέψτε τις ειδοποιήσεις για να μπορούν να φτάνουν οι ειδοποιήσεις ενημέρωσης.</string>
     <string name="update_notification_permission_allow">Να επιτρέπεται</string>
     <string name="update_notification_permission_not_now">Όχι τώρα</string>
+    <string name="update_notification_permission_open_settings">Άνοιγμα ρυθμίσεων</string>
     <string name="gcm_unregister_app">Κατάργηση εγγραφής</string>
     <string name="gcm_no_message_yet">Καμία ειδοποίηση ως τώρα</string>
     <string name="gcm_last_message_at">Τελευταίο μήνυμα: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

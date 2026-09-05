@@ -211,6 +211,7 @@ Veuillez configurer un écran de verrouillage avec un mot de passe, un code PIN 
     <string name="update_notification_text">La nouvelle version v%s est disponible. Appuyez pour mettre à jour</string>
     <string name="update_notification_channel">Mises à jour</string>
     <string name="update_notification_permission_title">Notifications</string>
+    <string name="update_notification_permission_message">Pour vous informer lorsqu\'une nouvelle mise à jour est disponible, MicroG-RE a besoin de l\'autorisation d’envoyer des notifications. Veuillez autoriser les notifications afin de recevoir les alertes de mise à jour.</string>
     <string name="update_notification_permission_allow">Autoriser</string>
     <string name="update_notification_permission_not_now">Pas maintenant</string>
     <string name="update_notification_permission_open_settings">Ouvrir les paramètres</string>

@@ -40,6 +40,8 @@ Môže to trvať niekoľko minút."</string>
     <string name="deny">Odmietnuť</string>
     <string name="auth_notification_title">Vyžaduje sa overenie</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> vyžaduje vaše oprávnenie na prístup k vášmu účtu Google.</string>
+    <string name="auth_package_override_request_title">Povoliť <b><xliff:g example="F-Droid">%1$s</xliff:g></b> privilegovaný prístup k účtu <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> chce získať prístup k vášmu účtu, ako keby to bola <b><xliff:g example="F-Droid">%2$s</xliff:g> od spoločnosti <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Toto by jej mohlo udeliť privilegovaný prístup k vášmu účtu.</string>
     <string name="auth_action_notification_channel_name">Upozornenia účtu Google</string>
     <string name="auth_action_notification_channel_description">Upozorňuje, keď niektorý z vašich účtov Google vyžaduje dodatočnú konfiguráciu pred použitím, alebo keď je účet nekompatibilný s microG.</string>
     <string name="auth_action_notification_title">Vyžaduje sa akcia na účte</string>
@@ -207,7 +209,10 @@ Nastavte si heslo, PIN alebo zámok obrazovky so vzorom."</string>
     <string name="update_notification_text">Nová verzia v%s je dostupná, klepnutím aktualizujte</string>
     <string name="update_notification_channel">Aktualizácie</string>
     <string name="update_notification_permission_title">Upozornenia</string>
+    <string name="update_notification_permission_message">Aby ste sa dozvedeli, keď bude k dispozícii nová aktualizácia, MicroG-RE potrebuje povolenie na odosielanie oznámení. Povoľte oznámenia, aby vás upozornenia na aktualizácie mohli zastihnúť.</string>
     <string name="update_notification_permission_allow">Povoliť</string>
+    <string name="update_notification_permission_not_now">Nie teraz</string>
+    <string name="update_notification_permission_open_settings">Otvoriť nastavenia</string>
     <string name="gcm_unregister_app">Zrušiť registráciu</string>
     <string name="gcm_no_message_yet">Zatiaľ neboli prijaté žiadne notifikácie.</string>
     <string name="gcm_last_message_at">Posledná správa: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

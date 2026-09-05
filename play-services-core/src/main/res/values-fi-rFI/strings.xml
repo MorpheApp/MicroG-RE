@@ -40,6 +40,8 @@ Tämä voi olla tilapäinen ongelma, tai Android-laitteellasi ei ole ehkä mobii
     <string name="deny">Estä</string>
     <string name="auth_notification_title">Tunnistautuminen vaaditaan</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> vaatii valtuutuksen Google-tilisi käyttämiseenk.</string>
+    <string name="auth_package_override_request_title">Sallitaanko <b><xliff:g example="F-Droid">%1$s</xliff:g></b>:lle erityispääsy <xliff:g example="account@example.com">%2$s</xliff:g> -tilille?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> haluaa käyttää tiliäsi ikään kuin se olisi <b><xliff:g example="F-Droid">%2$s</xliff:g>, tekijä <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Tämä saattaa myöntää sille erityispääsyn tilillesi.</string>
     <string name="auth_action_notification_channel_name">Google-tilin hälytykset</string>
     <string name="auth_action_notification_channel_description">Iloiteta, kun yksi Google-tileistäsi vaatii lis määirtykse ennen käyttöä töi tili ei ole yteensopiva mie foreG:n kanssa.</string>
     <string name="auth_action_notification_title">Tilille vaaditaan toimeenpide</string>
@@ -205,6 +207,10 @@ Voit poistaa Google-laitteen rekisteröinnin käytöstä tilin asennuksen jälke
     <string name="update_notification_text">Uusi v%s on saatavillla, napauta päivittääksesi</string>
     <string name="update_notification_channel">Päivitykset</string>
     <string name="update_notification_permission_title">Ilmoitukset</string>
+    <string name="update_notification_permission_message">Jotta saat tiedon, kun uusi päivitys on saatavilla, MicroG-RE tarvitsee luvan ilmoitusten lähettämiseen. Salli ilmoitukset, jotta päivitysilmoitukset tavoittavat sinut.</string>
+    <string name="update_notification_permission_allow">Salli</string>
+    <string name="update_notification_permission_not_now">Ei nyt</string>
+    <string name="update_notification_permission_open_settings">Avaa asetukset</string>
     <string name="gcm_unregister_app">Poista rekisteröinti</string>
     <string name="gcm_no_message_yet">Ei vielä vastaanotettuja viestejä</string>
     <string name="gcm_last_message_at">Viimeisin viesti: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

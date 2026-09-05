@@ -209,6 +209,10 @@ Skonfiguruj hasło, kod PIN lub wzór blokady ekranu."</string>
     <string name="update_notification_text">Dostępna jest nowa wersja v%s. Dotknij, aby zaktualizować.</string>
     <string name="update_notification_channel">Aktualizacje</string>
     <string name="update_notification_permission_title">Powiadomienia</string>
+    <string name="update_notification_permission_message">Aby informować Cię o dostępnych aktualizacjach, MicroG-RE wymaga uprawnienia do wysyłania powiadomień. Zezwól na nie, aby otrzymywać alerty o aktualizacjach.</string>
+    <string name="update_notification_permission_allow">Zezwól</string>
+    <string name="update_notification_permission_not_now">Nie teraz</string>
+    <string name="update_notification_permission_open_settings">Otwórz ustawienia</string>
     <string name="gcm_unregister_app">Wyrejestruj</string>
     <string name="gcm_no_message_yet">Brak otrzymanych powiadomień</string>
     <string name="gcm_last_message_at">Ostatnia wiadomość: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
