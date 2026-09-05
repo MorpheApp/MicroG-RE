@@ -780,7 +780,7 @@
         <service
             android:name="com.google.android.gms.auth.api.credentials.credman.service.GoogleIdService"
             android:exported="true"
-            android:icon="@drawable/ic_google_logo"
+            android:icon="@mipmap/ic_launcher"
             android:label="@string/credentials_service_sign_in_with_google_label"
             android:permission="android.permission.BIND_CREDENTIAL_PROVIDER_SERVICE"
             tools:targetApi="34">
