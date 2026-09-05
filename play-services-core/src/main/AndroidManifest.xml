@@ -781,7 +781,7 @@
             android:name="com.google.android.gms.auth.api.credentials.credman.service.GoogleIdService"
             android:exported="true"
             android:icon="@mipmap/ic_launcher"
-            android:label="@string/credentials_service_sign_in_with_google_label"
+            android:label="@string/morphe_sign_in_with_google_microg_label"
             android:permission="android.permission.BIND_CREDENTIAL_PROVIDER_SERVICE"
             tools:targetApi="34">
             <intent-filter>
