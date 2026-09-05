@@ -14,7 +14,6 @@ Datele tale nu vor fi pierdute"</string>
     <string name="dialog_cancel_button">Anulați</string>
     <string name="snackbar_remove_account">Contul %s a fost eliminat</string>
     <string name="snackbar_undo_button">Anulați</string>
-    <string name="limited_services_app_name">MicroG Servicii limitate</string>
     <string name="gms_settings_name">MicroG Setări</string>
     <string name="gms_settings_summary">Configurați serviciile MicroG.</string>
     <string name="just_a_sec">Doar o secundă…</string>
@@ -41,8 +40,6 @@ Acest lucru poate dura câteva minute."</string>
     <string name="deny">Refuzați</string>
     <string name="auth_notification_title">Autentificare necesară</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> necesită autorizarea dvs. pentru a accesa contul dvs. Google.</string>
-    <string name="auth_package_override_request_title">Permiteți <b><xliff:g example="F-Droid">%1$s</xliff:g></b> acces privilegiat la <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
-    <string name="auth_package_override_request_message">&lt;b&gt;&lt;xliff:g example="F-Droid"&gt;%1$s&lt;/xliff:g&gt;&lt;/b&gt; dorește să acceseze contul dvs. ca și cum ar fi &lt;b&gt;&lt;xliff:g example="F-Droid"&gt;%2$s&lt;/xliff:g&gt;&lt;/b&gt; de către &lt;xliff:g example="F-Droid Inc."&gt;%3$s&lt;/xliff:g&gt;&lt;/b&gt;. Aceasta ar putea acorda acces privilegiat la contul dvs.</string>
     <string name="auth_action_notification_channel_name">Alerte cont Google</string>
     <string name="auth_action_notification_channel_description">Notifică atunci când unul dintre conturile dvs. Google necesită configurare suplimentară înainte de a putea fi utilizat sau când un cont este incompatibil cu microG.</string>
     <string name="auth_action_notification_title">Acțiune cont necesară</string>
@@ -51,9 +48,9 @@ Acest lucru poate dura câteva minute."</string>
     <string name="auth_action_activity_header">Finalizați configurarea contului dvs. Google</string>
     <string name="auth_action_activity_explanation">Completați următorii pași pentru a putea utiliza contul dvs. Google %s pe acest dispozitiv.</string>
     <string name="auth_action_step_enable_checkin">Activați înregistrarea dispozitivului</string>
-    <string name="auth_action_step_enable_checkin_description">\"Dispozitivul dvs. trebuie să se înregistreze la Google cel puțin o dată.
+    <string name="auth_action_step_enable_checkin_description">"Dispozitivul tău trebuie să se înregistreze la Google cel puțin o dată.
 
-Puteți dezactiva înregistrarea dispozitivului Google după finalizarea configurării contului.</string>
+Poți dezactiva înregistrarea dispozitivului la Google după finalizarea configurării contului."</string>
     <string name="auth_action_step_enable_gcm">Activați Cloud Messaging</string>
     <string name="auth_action_step_enable_gcm_description">Puteți dezactiva Cloud Messaging după finalizarea configurării contului.</string>
     <string name="auth_action_step_allow_microg_gcm">Permiteți Cloud Messaging pentru microG</string>
@@ -155,6 +152,18 @@ Vă rugăm să configurați o parolă, un PIN sau un model de blocare."</string>
     <string name="prefcat_accounts_options_title">Opțiuni</string>
     <string name="pref_accounts_manage_accounts_title">Deschideți gerentul de conturi al dispozitivului</string>
     <string name="pref_accounts_manage_accounts_summary">Gestionați toate istoricul</string>
+    <string name="prefcat_accounts_backup_title">Backup conturi</string>
+    <string name="pref_accounts_backup_title">Salvează conturile</string>
+    <string name="pref_accounts_backup_summary">Exportă conturile Google într-un fișier</string>
+    <string name="pref_accounts_restore_title">Restaurează conturile</string>
+    <string name="pref_accounts_restore_summary">Importă conturile Google dintr-un fișier</string>
+    <string name="pref_accounts_backup_warning_title">Salvezi conturile?</string>
+    <string name="pref_accounts_backup_warning_message">Aceasta scrie conturile și tokenurile de conectare (SID/LSID) într-un fișier. Oricine obține acest fișier poate accesa conturile tale, așa că păstrează-l în siguranță și nu îl partaja niciodată.</string>
+    <string name="button_backup_accounts">Salvează</string>
+    <string name="snackbar_accounts_backed_up">Conturi salvate</string>
+    <string name="snackbar_accounts_restored">Conturi restaurate (%1$d)</string>
+    <string name="snackbar_accounts_export_failed">Salvarea a eșuat</string>
+    <string name="snackbar_accounts_import_failed">Restaurarea a eșuat</string>
     <string name="prefcat_youtube_activity">Activitate YouTube</string>
     <string name="pref_manage_all_history">Datele dumneavoastră de la YouTube</string>
     <string name="pref_data_in_youtube">Conturile sunt salvate și stocate doar pe acest dispozitiv. Apăsați un cont pentru a-l elimina de pe acest dispozitiv permanent</string>
@@ -170,9 +179,34 @@ Vă rugăm să configurați o parolă, un PIN sau un model de blocare."</string>
     <string name="pref_gcm_confirm_new_apps_summary">Pergăteți înainte de a înregistra o aplicație nouă pentru a primi notificări push</string>
     <string name="pref_about_title">Despre MicroG RE</string>
     <string name="pref_hide_launcher_icon">Ascunde pictograma din lansator</string>
+    <string name="hide_launcher_icon_dialog_message">Dacă este activată, MicroG va fi ascuns din lansatorul de aplicații. MicroG poate fi deschis din informațiile aplicației găsite în lista de aplicații de sistem a dispozitivului.</string>
+    <string name="hide_launcher_icon_updating_title">Te rugăm să aștepți în timp ce aplicația este actualizată</string>
     <string name="pref_language_title">Limbă</string>
     <string name="pref_language_system_default">Implicit de sistem</string>
     <string name="pref_github_summary">Repozitorul codului sursă</string>
+    <string name="pref_update_title">Verifică actualizările</string>
+    <string name="pref_update_summary">Verifică pe GitHub dacă există o versiune mai nouă.</string>
+    <string name="update_include_prerelease">Include versiuni pre-lansare / de dezvoltare</string>
+    <string name="update_available_title">Actualizare disponibilă</string>
+    <string name="update_available_prerelease_title">Actualizare disponibilă (pre-lansare)</string>
+    <string name="update_available_message">Noua versiune v%1s este disponibilă. Ai instalată versiunea v%2$s. Vrei să descarci și să instalezi actualizarea?</string>
+    <string name="update_now">Actualizează</string>
+    <string name="update_whats_new">Noutăți</string>
+    <string name="update_ignore">Ignoră</string>
+    <string name="update_downloading_title">Se descarcă actualizarea…</string>
+    <string name="update_download_failed">Descărcarea a eșuat. Verifică conexiunea și încearcă din nou.</string>
+    <string name="update_signature_mismatch">Aplicația nu poate fi actualizată, semnăturile sunt diferite.</string>
+    <string name="update_failed_title">Actualizarea a eșuat</string>
+    <string name="update_permission_required_title">Permisiune necesară</string>
+    <string name="update_permission_required_message">Pentru a instala actualizări, te rugăm să permiți MicroG să instaleze aplicații din surse necunoscute în setările de sistem.</string>
+    <string name="update_open_settings">Setări</string>
+    <string name="update_check_failed">Nu s-a putut verifica existența actualizărilor. Verifică conexiunea și încearcă din nou.</string>
+    <string name="update_up_to_date_title">Ești la zi</string>
+    <string name="update_up_to_date_message">MicroG-RE v%s este cea mai recentă versiune.</string>
+    <string name="update_notification_title">Actualizare disponibilă</string>
+    <string name="update_notification_text">Noua versiune v%s este disponibila. Atinge pentru a actualiza</string>
+    <string name="update_notification_channel">Actualizări</string>
+    <string name="update_notification_permission_title">Notificări</string>
     <string name="gcm_unregister_app">Dezinstalați aplicația</string>
     <string name="gcm_no_message_yet">Nu au fost primite încă mesaje</string>
     <string name="gcm_last_message_at">Ultimul mesaj: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

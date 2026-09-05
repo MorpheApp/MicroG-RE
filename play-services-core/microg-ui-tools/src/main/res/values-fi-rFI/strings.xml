@@ -30,14 +30,6 @@
     <string name="about_root_summary">Yhteenveto</string>
     <string name="about_root_version">Versio v0.1.0</string>
     <string name="about_root_libraries">Sisältyvät kirjastot</string>
-    <!--Updater-->
-    <string name="update_checker_button">Tarkista päivitykset</string>
-    <string name="update_checker_download_button">Lataa</string>
-    <!--updater: messages-->
-    <string name="update_checker_no_update">Päivityksiä ei saatavilla</string>
-    <string name="update_checker_update_available">Uusi päivitys saatavilla: %s</string>
-    <string name="update_checker_no_internet">Ei internetyhteyttä</string>
-    <string name="update_checker_generic_error">Jokin meni pieleen… Yritä myöhemmin uudelleen</string>
     <!--Settings About-->
     <string name="about_morphe_description">Morphe on avoimen lähdekoodin projekti, joka on suunniteltu Android-sovellusten muokkaamiseen paikkauksien avulla</string>
 </resources>

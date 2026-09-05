@@ -14,7 +14,6 @@
     <string name="dialog_cancel_button">キャンセル</string>
     <string name="snackbar_remove_account">アカウント %s を削除しました</string>
     <string name="snackbar_undo_button">元に戻す</string>
-    <string name="limited_services_app_name">MicroG Limited Services</string>
     <string name="gms_settings_name">MicroG 設定</string>
     <string name="gms_settings_summary">MicroG サービスをセットアップします。.</string>
     <string name="just_a_sec">少々お待ちください…</string>
@@ -41,8 +40,6 @@
     <string name="deny">拒否</string>
     <string name="auth_notification_title">認証が必要です</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> はあなたのGoogleアカウントへのアクセスを承認する必要があります。</string>
-    <string name="auth_package_override_request_title"><b><xliff:g example="F-Droid">%1$s</xliff:g></b>に<xliff:g example="account@example.com">%2$s</xliff:g>への特権アクセスを許可しますか？</string>
-    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b>は、あたかも<b><xliff:g example="F-Droid">%2$s</xliff:g>（提供:<xliff:g example="F-Droid Inc.">%3$s</xliff:g>）</b>であるかのように、あなたのアカウントにアクセスしようとしています。これにより、このアプリにあなたのアカウントへの特権アクセスが許可される可能性があります。</string>
     <string name="auth_action_notification_channel_name">Googleアカウントアラート</string>
     <string name="auth_action_notification_channel_description">Googleアカウントの1つが使用前に追加設定を必要とする場合、またはアカウントがmicroGと互換性がない場合に通知します。</string>
     <string name="auth_action_notification_title">アカウントアクションが必要です</string>
@@ -51,9 +48,6 @@
     <string name="auth_action_activity_header">Googleアカウントの設定を完了してください</string>
     <string name="auth_action_activity_explanation">このデバイスでGoogleアカウント %s を使用するには、次の手順を完了してください。</string>
     <string name="auth_action_step_enable_checkin">デバイス登録を有効にする</string>
-    <string name="auth_action_step_enable_checkin_description">デバイスは少なくとも1回Googleに登録する必要があります。
-
-アカウント設定の完了後、Googleデバイス登録を無効にすることができます。</string>
     <string name="auth_action_step_enable_gcm">クラウドメッセージングを有効にする</string>
     <string name="auth_action_step_enable_gcm_description">アカウント設定の完了後、クラウドメッセージングを無効にすることができます。</string>
     <string name="auth_action_step_allow_microg_gcm">microGのクラウドメッセージングを許可</string>
@@ -155,6 +149,18 @@
     <string name="prefcat_accounts_options_title">オプション</string>
     <string name="pref_accounts_manage_accounts_title">アカウントの管理</string>
     <string name="pref_accounts_manage_accounts_summary">デバイスのアカウント マネージャーを開きます</string>
+    <string name="prefcat_accounts_backup_title">アカウントのバックアップ</string>
+    <string name="pref_accounts_backup_title">アカウントをバックアップ</string>
+    <string name="pref_accounts_backup_summary">Googleアカウントをファイルにエクスポート</string>
+    <string name="pref_accounts_restore_title">アカウントを復元</string>
+    <string name="pref_accounts_restore_summary">Googleアカウントをファイルからインポート</string>
+    <string name="pref_accounts_backup_warning_title">アカウントをバックアップしますか？</string>
+    <string name="pref_accounts_backup_warning_message">この操作により、アカウントとログイントークン（SID/LSID）がファイルに書き込まれます。このファイルを入手した人は誰でもアカウントにアクセスできるため、安全に保管し、共有しないでください。</string>
+    <string name="button_backup_accounts">バックアップ</string>
+    <string name="snackbar_accounts_backed_up">アカウントをバックアップしました</string>
+    <string name="snackbar_accounts_restored">%1$d個のアカウントを復元しました</string>
+    <string name="snackbar_accounts_export_failed">バックアップに失敗しました</string>
+    <string name="snackbar_accounts_import_failed">復元に失敗しました</string>
     <string name="prefcat_youtube_activity">YouTube アクティビティ</string>
     <string name="pref_manage_all_history">すべての履歴を管理します</string>
     <string name="pref_data_in_youtube">YouTube でのデータ</string>
@@ -170,9 +176,35 @@
     <string name="pref_gcm_confirm_new_apps_summary">新しいアプリをプッシュ通知登録する前に確認します</string>
     <string name="pref_about_title">MicroG RE について</string>
     <string name="pref_hide_launcher_icon">ランチャーにアイコンを非表示</string>
+    <string name="hide_launcher_icon_dialog_message">有効にすると、MicroGはアプリランチャーに表示されなくなります。MicroGは、端末のシステムアプリ一覧にあるアプリ情報から開くことができます。</string>
+    <string name="hide_launcher_icon_updating_title">アプリの更新中はお待ちください。</string>
     <string name="pref_language_title">言語</string>
     <string name="pref_language_system_default">システムのデフォルト</string>
     <string name="pref_github_summary">ソース コード リポジトリ</string>
+    <string name="pref_update_title">更新の確認</string>
+    <string name="pref_update_summary">新しいバージョンがないかGitHubで確認してください。</string>
+    <string name="update_include_prerelease">プレリリース/開発ビルドを含める</string>
+    <string name="update_available_title">更新が利用可能です</string>
+    <string name="update_available_prerelease_title">アップデートが利用可能です（プレリリース）</string>
+    <string name="update_available_message">新しいバージョンv%1sが利用可能です。現在インストールされているバージョンはv%2$sです。アップデートをダウンロードしてインストールしますか？</string>
+    <string name="update_now">アップデート</string>
+    <string name="update_whats_new">新着情報</string>
+    <string name="update_ignore">無視</string>
+    <string name="update_downloading_title">アップデートをダウンロード中…</string>
+    <string name="update_download_failed">ダウンロードに失敗しました。接続を確認して、もう一度お試しください。</string>
+    <string name="update_signature_mismatch">アプリを更新できません。署名が異なります。</string>
+    <string name="update_failed_title">更新に失敗しました</string>
+    <string name="update_permission_required_title">権限が必要です</string>
+    <string name="update_permission_required_message">アップデートをインストールするには、システム設定でMicroGに不明なアプリのインストールを許可してください。</string>
+    <string name="update_open_settings">設定</string>
+    <string name="update_check_failed">アップデートを確認できませんでした。接続を確認して、もう一度お試しください。</string>
+    <string name="update_up_to_date_title">最新版です</string>
+    <string name="update_up_to_date_message">MicroG-RE v%s は最新バージョンです。</string>
+    <string name="update_notification_title">更新が利用可能です</string>
+    <string name="update_notification_text">新しいバージョンv%sが利用可能です。タップして更新</string>
+    <string name="update_notification_channel">アップデート</string>
+    <string name="update_notification_permission_title">通知</string>
+    <string name="update_notification_permission_open_settings">「設定」を開く</string>
     <string name="gcm_unregister_app">登録を解除</string>
     <string name="gcm_no_message_yet">まだメッセージを受信していません</string>
     <string name="gcm_last_message_at">最終メッセージ: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

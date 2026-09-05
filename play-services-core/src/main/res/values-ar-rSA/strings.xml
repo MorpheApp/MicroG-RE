@@ -14,7 +14,6 @@
     <string name="dialog_cancel_button">إلغاء</string>
     <string name="snackbar_remove_account">تمت إزالة الحساب %s</string>
     <string name="snackbar_undo_button">تراجع</string>
-    <string name="limited_services_app_name">خدمات MicroG المحدودة</string>
     <string name="gms_settings_name">إعدادات MicroG</string>
     <string name="gms_settings_summary">إعداد خدمات MicroG.</string>
     <string name="just_a_sec">انتظر قليلا...</string>
@@ -51,9 +50,9 @@
     <string name="auth_action_activity_header">أكمل إعداد حساب Google الخاص بك</string>
     <string name="auth_action_activity_explanation">أكمل الخطوات التالية لتتمكن من استخدام حساب Google %s على هذا الجهاز.</string>
     <string name="auth_action_step_enable_checkin">تمكين تسجيل الجهاز</string>
-    <string name="auth_action_step_enable_checkin_description">يجب تسجيل جهازك لدى Google مرة واحدة على الأقل.
+    <string name="auth_action_step_enable_checkin_description">"يحتاج جهازك إلى التسجيل في Google لمرة واحدة على الأقل.
 
-يمكنك تعطيل تسجيل الجهاز لدى Google بعد اكتمال إعداد الحساب.</string>
+بإمكانك تعطيل تسجيل جهازك في Google بعد الانتهاء من إعداد الحساب."</string>
     <string name="auth_action_step_enable_gcm">تمكين Cloud Messaging</string>
     <string name="auth_action_step_enable_gcm_description">يمكنك تعطيل Cloud Messaging بعد اكتمال إعداد الحساب.</string>
     <string name="auth_action_step_allow_microg_gcm">السماح لـ microG باستخدام Cloud Messaging</string>
@@ -155,6 +154,18 @@
     <string name="prefcat_accounts_options_title">الخيارات</string>
     <string name="pref_accounts_manage_accounts_title">إدارة الحسابات</string>
     <string name="pref_accounts_manage_accounts_summary">فتح إدارة حسابات الجهاز</string>
+    <string name="prefcat_accounts_backup_title">النسخ الاحتياطي للحسابات</string>
+    <string name="pref_accounts_backup_title">نسخ الحسابات احتياطيًا</string>
+    <string name="pref_accounts_backup_summary">تصدير حسابات Google إلى ملف</string>
+    <string name="pref_accounts_restore_title">استعادة الحسابات</string>
+    <string name="pref_accounts_restore_summary">استيراد حسابات Google من ملف</string>
+    <string name="pref_accounts_backup_warning_title">نسخ الحسابات احتياطيًا؟</string>
+    <string name="pref_accounts_backup_warning_message">سيؤدي هذا إلى حفظ حساباتك ورموز تسجيل الدخول (SID/LSID) في ملف. يمكن لأي شخص يحصل على هذا الملف الوصول إلى حساباتك، لذا احرص على حمايته ولا تشاركه أبدًا.</string>
+    <string name="button_backup_accounts">نسخ احتياطي</string>
+    <string name="snackbar_accounts_backed_up">تم نسخ الحسابات احتياطيًا</string>
+    <string name="snackbar_accounts_restored">تمت استعادة %1$d من الحسابات</string>
+    <string name="snackbar_accounts_export_failed">فشل النسخ الاحتياطي</string>
+    <string name="snackbar_accounts_import_failed">فشلت الاستعادة</string>
     <string name="prefcat_youtube_activity">نشاط YouTube</string>
     <string name="pref_manage_all_history">إدارة كل السجلّ</string>
     <string name="pref_data_in_youtube">بياناتك في YouTube</string>
@@ -170,9 +181,37 @@
     <string name="pref_gcm_confirm_new_apps_summary">اسأل قبل تسجيل تطبيق جديد لتلقي الإشعارات الفورية</string>
     <string name="pref_about_title">حول MicroG RE</string>
     <string name="pref_hide_launcher_icon">إخفاء الأيقونة من الصفحة الرئيسية</string>
+    <string name="hide_launcher_icon_dialog_message">عند التمكين، سيتم إخفاء MicroG من مشغل التطبيقات. يمكنك فتح MicroG من صفحة معلومات التطبيق الموجودة في قائمة تطبيقات النظام بجهازك.</string>
+    <string name="hide_launcher_icon_updating_title">يرجى الانتظار حتى يتم تحديث التطبيق</string>
     <string name="pref_language_title">اللغة</string>
     <string name="pref_language_system_default">الإعداد الافتراضي للنظام</string>
     <string name="pref_github_summary">مستودع الشفرة المصدرية</string>
+    <string name="pref_update_title">التحقق من توفر تحديثات</string>
+    <string name="pref_update_summary">التحقق من GitHub للبحث عن إصدار أحدث.</string>
+    <string name="update_include_prerelease">تضمين إصدارات ما قبل الإطلاق / المخصصة للمطورين</string>
+    <string name="update_available_title">تحديث متاح</string>
+    <string name="update_available_prerelease_title">تحديث متاح (إصدار ما قبل الإطلاق)</string>
+    <string name="update_available_message">إصدار جديد متاح v%1s. الإصدار المثبت لديك هو v%2$s. هل ترغب في تنزيل التحديث وتثبيته؟</string>
+    <string name="update_now">تحديث</string>
+    <string name="update_whats_new">ما الجديد</string>
+    <string name="update_ignore">تجاهل</string>
+    <string name="update_downloading_title">جارٍ تنزيل التحديث...</string>
+    <string name="update_download_failed">فشل التنزيل. تحقق من الاتصال بالإنترنت ثم أعد المحاولة.</string>
+    <string name="update_signature_mismatch">تعذر تحديث التطبيق، التوقيعات الرقمية غير متطابقة.</string>
+    <string name="update_failed_title">فشل التحديث</string>
+    <string name="update_permission_required_title">الإذن مطلوب</string>
+    <string name="update_permission_required_message">لتثبيت التحديثات، يرجى منح MicroG إذن تثبيت التطبيقات غير المعروفة من إعدادات النظام.</string>
+    <string name="update_open_settings">الإعدادات</string>
+    <string name="update_check_failed">تعذر التحقق من توفر تحديثات. تحقق من الاتصال بالإنترنت ثم أعد المحاولة.</string>
+    <string name="update_up_to_date_title">التطبيق محدث إلى آخر إصدار</string>
+    <string name="update_up_to_date_message">الإصدار MicroG-RE v%s هو أحدث إصدار.</string>
+    <string name="update_notification_title">تحديث متاح</string>
+    <string name="update_notification_text">إصدار جديد متاح v%s، انقر للتحديث</string>
+    <string name="update_notification_channel">التحديثات</string>
+    <string name="update_notification_permission_title">الإشعارات</string>
+    <string name="update_notification_permission_allow">السماح</string>
+    <string name="update_notification_permission_not_now">ليس الآن</string>
+    <string name="update_notification_permission_open_settings">فتح الإعدادات</string>
     <string name="gcm_unregister_app">إلغاء التسجيل</string>
     <string name="gcm_no_message_yet">لم تتلقى رسائل حتى الآن</string>
     <string name="gcm_last_message_at">آخر رسالة: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

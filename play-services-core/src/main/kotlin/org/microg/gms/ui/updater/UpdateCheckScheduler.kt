@@ -65,7 +65,11 @@ object UpdateCheckScheduler {
 class UpdateCheckReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent?) {
-        if (intent?.action == Intent.ACTION_BOOT_COMPLETED) {
+        // Reschedule after reboot or in-place upgrade (AlarmManager alarms survive the
+        // upgrade, but re-register and covers devices that cleared them).
+        if (intent?.action == Intent.ACTION_BOOT_COMPLETED ||
+            intent?.action == Intent.ACTION_MY_PACKAGE_REPLACED
+        ) {
             UpdateCheckScheduler.schedule(context)
             return
         }

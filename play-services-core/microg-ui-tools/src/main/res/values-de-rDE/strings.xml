@@ -30,14 +30,6 @@
     <string name="about_root_summary">Zusammenfassung</string>
     <string name="about_root_version">Version v0.1.0</string>
     <string name="about_root_libraries">Enthaltene Bibliotheken</string>
-    <!--Updater-->
-    <string name="update_checker_button">Auf Updates prüfen</string>
-    <string name="update_checker_download_button">Herunterladen</string>
-    <!--updater: messages-->
-    <string name="update_checker_no_update">Kein Update verfügbar</string>
-    <string name="update_checker_update_available">Neues Update verfügbar: %s</string>
-    <string name="update_checker_no_internet">Keine Internetverbindung</string>
-    <string name="update_checker_generic_error">Etwas ist schiefgelaufen… Bitte versuchen Sie es später erneut</string>
     <!--Settings About-->
     <string name="about_morphe_description">Morphe ist ein Open-Source-Projekt, das dazu entworfen wurde, Android-Apps durch Patches zu modifizieren</string>
 </resources>

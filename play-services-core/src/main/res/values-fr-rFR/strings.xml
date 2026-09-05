@@ -14,7 +14,6 @@ Vos données ne seront pas perdues"</string>
     <string name="dialog_cancel_button">Annuler</string>
     <string name="snackbar_remove_account">Compte %s supprimé</string>
     <string name="snackbar_undo_button">Annuler</string>
-    <string name="limited_services_app_name">MicroG Limited Services</string>
     <string name="gms_settings_name">Paramètres MicroG</string>
     <string name="gms_settings_summary">Configurer les services microG.</string>
     <string name="just_a_sec">Juste un instant…</string>
@@ -52,9 +51,9 @@ Cela peut prendre quelques minutes."</string>
     <string name="auth_action_activity_header">Terminez la configuration de votre compte Google</string>
     <string name="auth_action_activity_explanation">Effectuez les étapes suivantes afin de pouvoir utiliser votre compte Google %s sur cet appareil</string>
     <string name="auth_action_step_enable_checkin">Activer l\'enregistrement de l\'appareil</string>
-    <string name="auth_action_step_enable_checkin_description">Votre appareil doit être enregistré auprès de Google au moins une fois.
+    <string name="auth_action_step_enable_checkin_description">"Votre appareil doit être enregistré auprès de Google au moins une fois.
 
-Vous pouvez désactiver l\'enregistrement de l\'appareil auprès de Google une fois la configuration du compte terminée.</string>
+Vous pouvez désactiver l'enregistrement de l'appareil auprès de Google une fois la configuration du compte terminée."</string>
     <string name="auth_action_step_enable_gcm">Activer Cloud Messaging</string>
     <string name="auth_action_step_enable_gcm_description">Vous pouvez désactiver Cloud Messaging une fois la configuration du compte terminée.</string>
     <string name="auth_action_step_allow_microg_gcm">Autoriser Cloud Messaging pour microG</string>
@@ -157,6 +156,18 @@ Veuillez configurer un écran de verrouillage avec un mot de passe, un code PIN 
     <string name="prefcat_accounts_options_title">Options</string>
     <string name="pref_accounts_manage_accounts_title">Gérer les comptes</string>
     <string name="pref_accounts_manage_accounts_summary">Ouvrir le gestionnaire de comptes de l\'appareil</string>
+    <string name="prefcat_accounts_backup_title">Sauvegarde de compte</string>
+    <string name="pref_accounts_backup_title">Sauvegarder les comptes</string>
+    <string name="pref_accounts_backup_summary">Exporter les comptes Google dans un fichier</string>
+    <string name="pref_accounts_restore_title">Restaurer les comptes</string>
+    <string name="pref_accounts_restore_summary">Importer les comptes Google depuis un fichier</string>
+    <string name="pref_accounts_backup_warning_title">Sauvegarder les comptes ?</string>
+    <string name="pref_accounts_backup_warning_message">Cela enregistre vos comptes et vos jetons de connexion (SID/LSID) dans un fichier. Toute personne qui obtient ce fichier peut accéder à vos comptes. Conservez-le donc en lieu sûr et ne le partagez jamais.</string>
+    <string name="button_backup_accounts">Sauvegarder</string>
+    <string name="snackbar_accounts_backed_up">Comptes sauvegardés</string>
+    <string name="snackbar_accounts_restored">%1$d compte(s) restauré(s)</string>
+    <string name="snackbar_accounts_export_failed">Échec de la sauvegarde</string>
+    <string name="snackbar_accounts_import_failed">Échec de la restauration</string>
     <string name="prefcat_youtube_activity">Activité YouTube</string>
     <string name="pref_manage_all_history">Gérer tout l\'historique</string>
     <string name="pref_data_in_youtube">Vos données sur YouTube</string>
@@ -172,24 +183,53 @@ Veuillez configurer un écran de verrouillage avec un mot de passe, un code PIN 
     <string name="pref_gcm_confirm_new_apps_summary">Demander avant d\'enregistrer une nouvelle application pour recevoir des notifications push</string>
     <string name="pref_about_title">À propos de MicroG RE</string>
     <string name="pref_hide_launcher_icon">Masquer l\'icône dans le lanceur</string>
+    <string name="hide_launcher_icon_dialog_message">Si activée, MicroG sera masqué dans le lanceur d\'applications. MicroG peut être ouvert depuis les informations de l\'application situées dans la liste des applications de votre appareil.</string>
+    <string name="hide_launcher_icon_updating_title">Veuillez patienter pendant la mise à jour de l\'application</string>
     <string name="pref_language_title">Langue</string>
     <string name="pref_language_system_default">Par défaut du système</string>
     <string name="pref_github_summary">Dépôt du code source</string>
+    <string name="pref_update_title">Vérifier les mises à jour</string>
+    <string name="pref_update_summary">Vérifier sur GitHub si une version plus récente est disponible.</string>
+    <string name="update_include_prerelease">Inclure les préversions / de développement</string>
+    <string name="update_available_title">Mise à jour disponible</string>
+    <string name="update_available_prerelease_title">Mise à jour disponible (préversion)</string>
+    <string name="update_available_message">La nouvelle version v%1s est disponible. Vous avez la version v%2$s installée. Télécharger et installer la mise à jour ?</string>
+    <string name="update_now">Mettre à jour</string>
+    <string name="update_whats_new">Nouveautés</string>
+    <string name="update_ignore">Ignorer</string>
+    <string name="update_downloading_title">Téléchargement de la mise à jour…</string>
+    <string name="update_download_failed">Échec du téléchargement. Vérifiez votre connexion et réessayez.</string>
+    <string name="update_signature_mismatch">L\'application ne peut pas être mise à jour, les signatures sont différentes.</string>
+    <string name="update_failed_title">Échec de la mise à jour</string>
+    <string name="update_permission_required_title">Autorisation nécessaire</string>
+    <string name="update_permission_required_message">Pour installer les mises à jour, veuillez autoriser MicroG à installer des applications inconnues dans les paramètres du système.</string>
+    <string name="update_open_settings">Paramètres</string>
+    <string name="update_check_failed">Impossible de vérifier les mises à jour. Vérifiez votre connexion et réessayez.</string>
+    <string name="update_up_to_date_title">Vous êtes à jour</string>
+    <string name="update_up_to_date_message">MicroG-RE v%s est la dernière version.</string>
+    <string name="update_notification_title">Mise à jour disponible</string>
+    <string name="update_notification_text">La nouvelle version v%s est disponible. Appuyez pour mettre à jour</string>
+    <string name="update_notification_channel">Mises à jour</string>
+    <string name="update_notification_permission_title">Notifications</string>
+    <string name="update_notification_permission_allow">Autoriser</string>
+    <string name="update_notification_permission_not_now">Pas maintenant</string>
+    <string name="update_notification_permission_open_settings">Ouvrir les paramètres</string>
     <string name="gcm_unregister_app">Désenregistrer</string>
     <string name="gcm_no_message_yet">Aucun message reçu pour le moment</string>
     <string name="gcm_last_message_at">Dernier message : <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
     <string name="gcm_registered">Enregistrer</string>
     <string name="gcm_registered_since">Enregistré depuis : <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
-    <string name="gcm_unregister_confirm_title">Désinscrire <xliff:g example="F-Droid">%1$s</xliff:g> ?</string>
-    <string name="gcm_unregister_confirm_message">Certaines applications ne se réenregistrent pas automatiquement et/ou ne proposent pas d\'option pour le faire manuellement. Ces applications risquent de ne pas fonctionner correctement après leur désinscription.\nContinuer ?</string>
-    <string name="gcm_unregister_after_deny_message">Vous avez refusé à une application déjà enregistrée le droit de s\'inscrire aux notifications push.\nVoulez-vous la désinscrire maintenant pour qu\'elle ne reçoive plus de messages push à l\'avenir ?</string>
+    <string name="gcm_unregister_confirm_title">Désenregistrer <xliff:g example="F-Droid">%1$s</xliff:g> ?</string>
+    <string name="gcm_unregister_confirm_message">Certaines applications ne se réenregistrent pas automatiquement et/ou ne proposent pas d\'option pour le faire manuellement. Ces applications risquent de ne pas fonctionner correctement après leur désenregistrement.\nContinuer ?</string>
+    <string name="gcm_unregister_after_deny_message">Vous avez refusé à une application déjà enregistrée le droit de s\'enregistrer pour les notifications push.
+Voulez-vous la désenregistrer maintenant pour qu\'elle ne reçoive plus de messages push à l\'avenir ?</string>
     <string name="gcm_messages_counter">Messages : <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> octets)</string>
     <string name="gcm_network_state_disconnected">Déconnecté</string>
     <string name="gcm_network_state_connected">Connecté depuis <xliff:g example="2 hours ago">%1$s</xliff:g></string>
     <string name="gcm_enable_switch">Recevoir des notifications push</string>
-    <string name="gcm_allow_app_popup">Autoriser <xliff:g example="F-Droid">%1$s</xliff:g> à s\'inscrire aux notifications push ?</string>
+    <string name="gcm_allow_app_popup">Autoriser <xliff:g example="F-Droid">%1$s</xliff:g> à s\'enregistrer pour les notifications push ?</string>
     <string name="pref_push_app_allow_register_title">Autoriser l\'enregistrement</string>
-    <string name="pref_push_app_allow_register_summary">Autoriser l\'application à s\'inscrire aux notifications push.</string>
+    <string name="pref_push_app_allow_register_summary">Autoriser l\'application à s\'enregistrer pour les notifications push.</string>
     <string name="pref_push_app_wake_for_delivery_title">Démarrer l\'application lors de la réception d\'un message push</string>
     <string name="pref_push_app_wake_for_delivery_summary">Démarrer l\'application en arrière-plan pour recevoir les messages push entrants.</string>
     <string name="prefcat_push_apps_title">Applications utilisant les notifications push</string>
@@ -285,7 +325,7 @@ Vérifiez le statut d'enregistrement de l'appareil. Certaines applications pourr
     <string name="pref_workprofile_intro">Lors de la configuration d\'un profil professionnel pour votre lieu de travail ou votre établissement d\'enseignement,        la configuration peut tenter de se connecter à Google pour autoriser le téléchargement d\'applications sur ce profil.</string>
     <string name="pref_workprofile_disclaimer">Il relève de votre responsabilité de vous assurer que votre utilisation de microG est conforme aux politiques de l\'entreprise.
         microG est fourni dans la mesure du possible et ne peut garantir un fonctionnement exactement conforme aux attentes.</string>
-    <string name="pref_auto_create_player">Autoriser l\'inscription au compte Play Jeux</string>
+    <string name="pref_auto_create_player">Autoriser l\'enregistrement au compte Play Jeux</string>
     <string name="pref_auto_create_player_intro">Lorsque vous jouez à des jeux, vous devez utiliser un compte Play Jeux pour vous connecter et enregistrer les fonctionnalités liées aux jeux, telles que les succès, les classements, les sauvegardes, etc. Après désactivation, les comptes Google qui ne sont pas liés à un compte Play Jeux ne seront pas enregistrés automatiquement, et il sera impossible de se connecter au jeu et d\'y jouer.</string>
     <string name="pref_allow_upload_game_played">Autoriser l\'envoi des jeux joués</string>
     <string name="pref_allow_upload_game_played_summary">Lorsque désactivée, le jeu ne transmettra pas le statut de jeu joué après la connexion au jeu, et certains jeux pourraient ne pas pouvoir se connecter.</string>

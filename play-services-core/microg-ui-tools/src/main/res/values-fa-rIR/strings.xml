@@ -23,14 +23,6 @@
     <string name="about_root_version">نسخه v0.1.0
 </string>
     <string name="about_root_libraries">کتابخانه‌های شامل شده</string>
-    <!--Updater-->
-    <string name="update_checker_button">بررسی به‌روزرسانی‌ها</string>
-    <string name="update_checker_download_button">دانلود</string>
-    <!--updater: messages-->
-    <string name="update_checker_no_update">هیچ به روزرسانی ای در دسترس نیست</string>
-    <string name="update_checker_update_available">به‌روزرسانی جدید موجود است: %s</string>
-    <string name="update_checker_no_internet">اتصال اینترنت وجود ندارد</string>
-    <string name="update_checker_generic_error">مشکلی پیش آمد… لطفاً بعداً دوباره تلاش کنید</string>
     <!--Settings About-->
     <string name="about_morphe_description">Morphe یک پروژه متن‌باز است که برای تغییر برنامه‌های اندروید از طریق پچ‌ها طراحی شده است</string>
 </resources>

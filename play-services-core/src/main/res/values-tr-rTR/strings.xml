@@ -14,7 +14,6 @@ Verileriniz kaybolmayacaktır"</string>
     <string name="dialog_cancel_button">İptal et</string>
     <string name="snackbar_remove_account">%s hesabı kaldırıldı</string>
     <string name="snackbar_undo_button">Geri al</string>
-    <string name="limited_services_app_name">MicroG Sınırlı Hizmetler</string>
     <string name="gms_settings_name">MicroG Ayarları</string>
     <string name="gms_settings_summary">MicroG hizmetlerini kur.</string>
     <string name="just_a_sec">Bir saniye…</string>
@@ -41,8 +40,6 @@ Bu, birkaç dakika sürebilir."</string>
     <string name="deny">Reddet</string>
     <string name="auth_notification_title">Kimlik doğrulaması gerekli</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g>, Google hesabınıza erişmek için yetkilendirmenizi gerektiriyor.</string>
-    <string name="auth_package_override_request_title">İzin ver <b><xliff:g example="F-Droid">%1$s</xliff:g></b> uygulamasının <xliff:g example="account@example.com">%2$s</xliff:g> hesabına ayrıcalıklı erişimine? askıya alınan</string>
-    <string name="auth_package_override_request_message">&lt;b&gt;&lt;xliff:g example="F-Droid"&gt;%1$s&lt;/xliff:g&gt;&lt;/b&gt; hesabınıza &lt;b&gt;&lt;xliff:g example="F-Droid"&gt;%2$s&lt;/xliff:g&gt;&lt;/b&gt; gibi erişmek istiyor, &lt;xliff:g example="F-Droid Inc."&gt;%3$s&lt;/xliff:g&gt;&lt;/b&gt; tarafından. Bu, hesabınıza ayrıcalıklı erişim sağlayabilir.</string>
     <string name="auth_action_notification_channel_name">Google hesap uyarıları</string>
     <string name="auth_action_notification_channel_description">Google hesaplarınızdan biri kullanılmadan önce ek kurulum gerektirdiğinde veya bir hesap microG ile uyumsuz olduğunda bildirir.</string>
     <string name="auth_action_notification_title">Hesap işlemi gerekli</string>
@@ -51,9 +48,9 @@ Bu, birkaç dakika sürebilir."</string>
     <string name="auth_action_activity_header">Google hesabınızın kurulumunu tamamlayın</string>
     <string name="auth_action_activity_explanation">Bu özelliği kullanabilmek için aşağıdaki adımları tamamlayın: %s cihazınızda Google hesabınızı kullanın.</string>
     <string name="auth_action_step_enable_checkin">Cihaz kaydını etkinleştir</string>
-    <string name="auth_action_step_enable_checkin_description">\"Cihazınızın Google\'a en az bir kez kayıt olması gerekiyor.
+    <string name="auth_action_step_enable_checkin_description">"Cihazınızın Google'a en az bir kez kayıt olması gerekir.
 
-Hesap kurulumu tamamlandıktan sonra cihaz kaydını devre dışı bırakabilirsiniz.</string>
+Hesap kurulumu tamamlandıktan sonra Google cihaz kaydını devre dışı bırakabilirsiniz."</string>
     <string name="auth_action_step_enable_gcm">Bulut Mesajlaşmayı etkinleştir</string>
     <string name="auth_action_step_enable_gcm_description">Hesap kurulumu tamamlandıktan sonra Bulut Mesajlaşmayı devre dışı bırakabilirsiniz.</string>
     <string name="auth_action_step_allow_microg_gcm">microG için Bulut Mesajlaşmaya izin ver</string>
@@ -155,6 +152,18 @@ Lütfen bir parola, PIN veya desen ekran kilidi ayarlayın."</string>
     <string name="prefcat_accounts_options_title">Seçenekler</string>
     <string name="pref_accounts_manage_accounts_title">Hesapları yönet</string>
     <string name="pref_accounts_manage_accounts_summary">Cihaz hesap yöneticisini açın</string>
+    <string name="prefcat_accounts_backup_title">Hesap yedekleme</string>
+    <string name="pref_accounts_backup_title">Hesapları yedekle</string>
+    <string name="pref_accounts_backup_summary">Google hesaplarını bir dosyaya dışa aktar</string>
+    <string name="pref_accounts_restore_title">Hesapları geri yükle</string>
+    <string name="pref_accounts_restore_summary">Google hesaplarını bir dosyadan içe aktar</string>
+    <string name="pref_accounts_backup_warning_title">Hesaplar yedeklensin mi?</string>
+    <string name="pref_accounts_backup_warning_message">Bu, hesaplarınızı ve oturum açma belirteçlerini (SID/LSID) bir dosyaya yazar. Bu dosyayı elde eden herkes hesaplarınıza erişebilir, bu yüzden onu güvende tutun ve asla paylaşmayın.</string>
+    <string name="button_backup_accounts">Yedekle</string>
+    <string name="snackbar_accounts_backed_up">Hesaplar yedeklendi</string>
+    <string name="snackbar_accounts_restored">%1$d hesap(lar) geri yüklendi</string>
+    <string name="snackbar_accounts_export_failed">Yedekleme başarısız oldu</string>
+    <string name="snackbar_accounts_import_failed">Geri yükleme başarısız oldu</string>
     <string name="prefcat_youtube_activity">YouTube Etkinliği</string>
     <string name="pref_manage_all_history">Tüm geçmişi yönet</string>
     <string name="pref_data_in_youtube">YouTube\'daki verileriniz</string>
@@ -170,9 +179,35 @@ Lütfen bir parola, PIN veya desen ekran kilidi ayarlayın."</string>
     <string name="pref_gcm_confirm_new_apps_summary">Anlık bildirimler almak için yeni bir uygulama kaydederken izin isteyin</string>
     <string name="pref_about_title">MicroG RE hakkında</string>
     <string name="pref_hide_launcher_icon"> Launcher\'da simgeyi gizle</string>
+    <string name="hide_launcher_icon_dialog_message">Etkinleştirilirse MicroG, uygulama başlatıcınızda gizlenir. MicroG, cihazınızın sistem uygulama listesindeki uygulama bilgilerinden açılabılir.</string>
+    <string name="hide_launcher_icon_updating_title">Uygulama güncellenirken lütfen bekleyin</string>
     <string name="pref_language_title">Dil</string>
     <string name="pref_language_system_default">Sistem varsayılanı</string>
     <string name="pref_github_summary">Kaynak kod deposu</string>
+    <string name="pref_update_title">Güncellemeleri kontrol et</string>
+    <string name="pref_update_summary">Daha yeni bir sürüm için GitHüb\'ı kontrol eder.</string>
+    <string name="update_include_prerelease">Ön sürüm / geliştirici yapılarını dahil et</string>
+    <string name="update_available_title">Güncelleme mevcut</string>
+    <string name="update_available_prerelease_title">Güncelleme mevcut (ön sürüm)</string>
+    <string name="update_available_message">Yeni v%1s sürümü mevcut. v%2$s sürümü yüklü. Güncellemeyi indirip yüklemek ister misiniz?</string>
+    <string name="update_now">Güncelle</string>
+    <string name="update_whats_new">Yenilikler</string>
+    <string name="update_ignore">Yoksay</string>
+    <string name="update_downloading_title">Güncelleme indiriliyor…</string>
+    <string name="update_download_failed">İndirme başarısız oldu. Bağlantınızı kontrol edip tekrar deneyin.</string>
+    <string name="update_signature_mismatch">Uygulama güncellenemiyor, imzalar farklı.</string>
+    <string name="update_failed_title">Güncelleme başarısız</string>
+    <string name="update_permission_required_title">İzin gerekli</string>
+    <string name="update_permission_required_message">Güncellemeleri yüklemek için lütfen sistem ayarlarından MicroG\'nin bilinmeyen uygulamalar yüklemesine izin verin.</string>
+    <string name="update_open_settings">Ayarlar</string>
+    <string name="update_check_failed">Güncellemeler kontrol edilemedi. Bağlantınızı kontrol edip tekrar deneyin.</string>
+    <string name="update_up_to_date_title">Güncel sürümdesiniz</string>
+    <string name="update_up_to_date_message">MicroG-RE v%s en son sürümdür.</string>
+    <string name="update_notification_title">Güncelleme mevcut</string>
+    <string name="update_notification_text">Yeni v%s sürümü mevcut, güncellemek için dokunun</string>
+    <string name="update_notification_channel">Güncellemeler</string>
+    <string name="update_notification_permission_title">Bildirimler</string>
+    <string name="update_notification_permission_allow">İzin ver</string>
     <string name="gcm_unregister_app">Kaydı sil</string>
     <string name="gcm_no_message_yet">Henüz hiçbir mesaj alınmadı</string>
     <string name="gcm_last_message_at">Son mesaj: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

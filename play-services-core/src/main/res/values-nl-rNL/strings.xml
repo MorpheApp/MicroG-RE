@@ -10,7 +10,6 @@
     <string name="dialog_cancel_button">Annuleren</string>
     <string name="snackbar_remove_account">U bent niet geregistreerd %s</string>
     <string name="snackbar_undo_button">Ongedaan maken</string>
-    <string name="limited_services_app_name">MicroG Beperkte Services</string>
     <string name="gms_settings_name">MicroG Instellingen</string>
     <string name="gms_settings_summary">Stel MicroG-services in.</string>
     <string name="just_a_sec">Een ogenblik geduld…</string>
@@ -35,8 +34,6 @@ Probeer het later opnieuw."</string>
     <string name="deny">Weigeren</string>
     <string name="auth_notification_title">Authenticatie vereist</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> heeft uw toestemming nodig om toegang te krijgen tot uw Google-account.</string>
-    <string name="auth_package_override_request_title">Sta <b><xliff:g example="F-Droid">%1$s</xliff:g></b> bevoorrechte toegang toe tot <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
-    <string name="auth_package_override_request_message">&lt;b&gt;&lt;xliff:g example="F-Droid"&gt;%1$s&lt;/xliff:g&gt;&lt;/b&gt; wil toegang tot uw account alsof het &lt;b&gt;&lt;xliff:g example="F-Droid"&gt;%2$s&lt;/xliff:g&gt;&lt;/b&gt; door &lt;xliff:g example="F-Droid Inc."&gt;%3$s&lt;/xliff:g&gt;&lt;/b&gt; is. Dit kan het bevoorrechte toegang tot uw account verlenen.</string>
     <string name="auth_action_notification_channel_name">Google account meldingen</string>
     <string name="auth_action_notification_channel_description">Waarschuwt wanneer een van uw Google-accounts extra installatie vereist voordat het kan worden gebruikt of wanneer een account niet compatibel is met microG.</string>
     <string name="auth_action_notification_title">Accountactie vereist</string>
@@ -45,9 +42,9 @@ Probeer het later opnieuw."</string>
     <string name="auth_action_activity_header">Maak de installatie af</string>
     <string name="auth_action_activity_explanation">Voltooi de volgende stappen om uw Google-account %s op dit apparaat te kunnen gebruiken.</string>
     <string name="auth_action_step_enable_checkin">Apparaatregistratie inschakelen</string>
-    <string name="auth_action_step_enable_checkin_description">\"Uw apparaat moet minstens één keer registreren bij Google.
+    <string name="auth_action_step_enable_checkin_description">"Je apparaat moet zich ten minste één keer bij Google registreren.
 
-U kunt apparaatregistratie bij Google uitschakelen nadat de accountinstallatie voltooid is.</string>
+Je kunt Google-apparaatregistratie uitschakelen nadat het instellen van het account is voltooid."</string>
     <string name="auth_action_step_enable_gcm">Cloud Messaging inschakelen</string>
     <string name="auth_action_step_enable_gcm_description">U kunt Cloud Messaging uitschakelen nadat de accountinstallatie voltooid is.</string>
     <string name="auth_action_step_allow_microg_gcm">Cloud Messaging voor microG toestaan</string>
@@ -149,6 +146,18 @@ Stel een wachtwoord, PIN of patroonvergrendelscherm in."</string>
     <string name="prefcat_accounts_options_title">Opties</string>
     <string name="pref_accounts_manage_accounts_title">Accounts beheren</string>
     <string name="pref_accounts_manage_accounts_summary">Open de apparaataccountbeheer</string>
+    <string name="prefcat_accounts_backup_title">Accountback-up</string>
+    <string name="pref_accounts_backup_title">Accounts back-uppen</string>
+    <string name="pref_accounts_backup_summary">Google-accounts naar een bestand exporteren</string>
+    <string name="pref_accounts_restore_title">Accounts herstellen</string>
+    <string name="pref_accounts_restore_summary">Google-accounts uit een bestand importeren</string>
+    <string name="pref_accounts_backup_warning_title">Accounts back-uppen?</string>
+    <string name="pref_accounts_backup_warning_message">Hiermee worden je accounts en aanmeldtokens (SID/LSID) naar een bestand geschreven. Iedereen die dit bestand verkrijgt, heeft toegang tot je accounts. Bewaar het daarom veilig en deel het nooit.</string>
+    <string name="button_backup_accounts">Back-up maken</string>
+    <string name="snackbar_accounts_backed_up">Back-up van accounts gemaakt</string>
+    <string name="snackbar_accounts_restored">%1$d account(s) hersteld</string>
+    <string name="snackbar_accounts_export_failed">Back-up mislukt</string>
+    <string name="snackbar_accounts_import_failed">Herstel mislukt</string>
     <string name="prefcat_youtube_activity">Importeer aangepast profiel</string>
     <string name="pref_manage_all_history">Beheer alle geschiedenis</string>
     <string name="pref_data_in_youtube">Jouw gegevens op YouTube</string>
@@ -164,9 +173,35 @@ Stel een wachtwoord, PIN of patroonvergrendelscherm in."</string>
     <string name="pref_gcm_confirm_new_apps_summary">Vraag vooraf of je pushmeldingen wilt ontvangen voordat je een nieuwe app registreert</string>
     <string name="pref_about_title">Over MicroG RE</string>
     <string name="pref_hide_launcher_icon">Verberg pictogram in launcher</string>
+    <string name="hide_launcher_icon_dialog_message">Als dit is ingeschakeld, wordt MicroG verborgen in je app-launcher. MicroG kan worden geopend via de app-info die je in de lijst met systeemapps van je apparaat vindt.</string>
+    <string name="hide_launcher_icon_updating_title">Wacht even terwijl de app wordt bijgewerkt</string>
     <string name="pref_language_title">Taal</string>
     <string name="pref_language_system_default">Systeemstandaard</string>
     <string name="pref_github_summary">Broncode-opslagplaats</string>
+    <string name="pref_update_title">Controleer op updates</string>
+    <string name="pref_update_summary">Controleer GitHub op een nieuwere versie.</string>
+    <string name="update_include_prerelease">Pre-release-/devbuilds opnemen</string>
+    <string name="update_available_title">Update beschikbaar</string>
+    <string name="update_available_prerelease_title">Update beschikbaar (pre-release)</string>
+    <string name="update_available_message">Nieuwe v%1s is beschikbaar. Je hebt versie v%2$s geïnstalleerd. Wil je de update downloaden en installeren?</string>
+    <string name="update_now">Bijwerken</string>
+    <string name="update_whats_new">Wat is er nieuw</string>
+    <string name="update_ignore">Negeren</string>
+    <string name="update_downloading_title">Update wordt gedownload…</string>
+    <string name="update_download_failed">Download mislukt. Controleer je verbinding en probeer het opnieuw.</string>
+    <string name="update_signature_mismatch">App kan niet worden bijgewerkt, handtekeningen zijn anders.</string>
+    <string name="update_failed_title">Update mislukt</string>
+    <string name="update_permission_required_title">Toestemming vereist</string>
+    <string name="update_permission_required_message">Om updates te installeren, sta MicroG toe om onbekende apps te installeren in de systeeminstellingen.</string>
+    <string name="update_open_settings">Instellingen</string>
+    <string name="update_check_failed">Kan niet controleren op updates. Controleer je verbinding en probeer het opnieuw.</string>
+    <string name="update_up_to_date_title">Je bent up-to-date</string>
+    <string name="update_up_to_date_message">MicroG-RE v%s is de nieuwste versie.</string>
+    <string name="update_notification_title">Update beschikbaar</string>
+    <string name="update_notification_text">Nieuwe v%s is beschikbaar, tik om te updaten</string>
+    <string name="update_notification_channel">Updates</string>
+    <string name="update_notification_permission_title">Meldingen</string>
+    <string name="update_notification_permission_allow">Toestaan</string>
     <string name="gcm_unregister_app">Uitschrijven</string>
     <string name="gcm_no_message_yet">Nog geen berichten ontvangen.</string>
     <string name="gcm_last_message_at">Laatste bericht: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

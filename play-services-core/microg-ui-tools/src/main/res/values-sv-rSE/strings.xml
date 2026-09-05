@@ -30,14 +30,6 @@
     <string name="about_root_summary">Sammanfattning</string>
     <string name="about_root_version">Version v0.1.0</string>
     <string name="about_root_libraries">Inkluderade bibliotek</string>
-    <!--Updater-->
-    <string name="update_checker_button">Sök efter uppdateringar</string>
-    <string name="update_checker_download_button">Ladda ned</string>
-    <!--updater: messages-->
-    <string name="update_checker_no_update">Ingen uppdatering är tillgänglig</string>
-    <string name="update_checker_update_available">Ny uppdatering är tillgänglig: %s</string>
-    <string name="update_checker_no_internet">Ingen internetanslutning</string>
-    <string name="update_checker_generic_error">Något gick fel … Försök igen senare</string>
     <!--Settings About-->
     <string name="about_morphe_description">Morphe är ett projekt med öppen källkod för att modifiera Android-appar med tillägg</string>
 </resources>

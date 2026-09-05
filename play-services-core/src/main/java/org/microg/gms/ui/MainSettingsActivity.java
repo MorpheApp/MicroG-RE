@@ -84,6 +84,9 @@ public class MainSettingsActivity extends AppCompatActivity {
 
         UpdateCheckScheduler.schedule(this);
         AppUpdater.checkOnLaunch(this);
+        // The daily update notification needs POST_NOTIFICATIONS on Android 13+; a
+        // background receiver can never prompt, so ask while the settings screen is open.
+        AppUpdater.ensureUpdateNotificationPermission(this);
     }
 
     @Override

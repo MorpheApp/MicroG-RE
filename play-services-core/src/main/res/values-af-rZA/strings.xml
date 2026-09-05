@@ -14,7 +14,6 @@ Jou data sal nie verlore gaan nie"</string>
     <string name="dialog_cancel_button">Kanselleer</string>
     <string name="snackbar_remove_account">Rekening %s verwyder</string>
     <string name="snackbar_undo_button">Ontdoen</string>
-    <string name="limited_services_app_name">MicroG Beperkte Dienste</string>
     <string name="gms_settings_name">MicroG Instellings</string>
     <string name="gms_settings_summary">Stel MicroG-dienste op.</string>
     <string name="just_a_sec">Net \'n oomblik…</string>
@@ -41,8 +40,6 @@ Dit kan 'n paar minute neem."</string>
     <string name="deny">Weier</string>
     <string name="auth_notification_title">Verifikasie vereis</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> vereis jou magtiging om toegang tot jou Google-rekening te verkry.</string>
-    <string name="auth_package_override_request_title">Laat <b><xliff:g example="F-Droid">%1$s</xliff:g></b> bevoorregte toegang tot <xliff:g example="account@example.com">%2$s</xliff:g> toe?\"</string>
-    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> wil toegang tot jou rekening verkry asof dit <b><xliff:g example="F-Droid">%2$s</xliff:g> deur <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b> was. Dit kan dit bevoorregte toegang tot jou rekening gee.</string>
     <string name="auth_action_notification_channel_name">Google-rekeningwaarskuwings</string>
     <string name="auth_action_notification_channel_description">Stel jou in kennis wanneer een van jou Google-rekeninge bykomende opstelling benodig voordat dit gebruik kan word, of wanneer \'n rekening nie met microG versoenbaar is nie.</string>
     <string name="auth_action_notification_title">Rekeningaksie vereis</string>
@@ -51,9 +48,9 @@ Dit kan 'n paar minute neem."</string>
     <string name="auth_action_activity_header">Voltooi die opstelling van jou Google-rekening</string>
     <string name="auth_action_activity_explanation">Voltooi die volgende stappe om jou Google-rekening %s op hierdie toestel te gebruik.</string>
     <string name="auth_action_step_enable_checkin">Aktiveer toestelregistrasie</string>
-    <string name="auth_action_step_enable_checkin_description">\"Jou toestel moet minstens eenkeer by Google registreer.
+    <string name="auth_action_step_enable_checkin_description">"Jou toestel moet minstens een keer by Google registreer.
 
-Jy kan Google-moet istituongregiek na die rekeningopstellung voltooi word.</string>
+Jy kan Google-toestelregistrasie deaktiveer nadat die rekeningopstelling voltooi is."</string>
     <string name="auth_action_step_enable_gcm">Aktiveer Cloud Messaging</string>
     <string name="auth_action_step_enable_gcm_description">Jy kan Cloud Messaging deaktiveer nadat die rekeningopstelling voltooi is.</string>
     <string name="auth_action_step_allow_microg_gcm">Laat toe dat microG Cloud Messaging gebruik</string>
@@ -155,6 +152,18 @@ Stel asseblief 'n wagkord, PIN of patroonslot op."</string>
     <string name="prefcat_accounts_options_title">Opsies</string>
     <string name="pref_accounts_manage_accounts_title">Bestuur rekeninge</string>
     <string name="pref_accounts_manage_accounts_summary">Open die toestel se rekening bestuurder</string>
+    <string name="prefcat_accounts_backup_title">Rekeningrugsteun</string>
+    <string name="pref_accounts_backup_title">Rugsteun rekeninge</string>
+    <string name="pref_accounts_backup_summary">Voer Google-rekeninge na \'n lêer uit</string>
+    <string name="pref_accounts_restore_title">Herstel rekeninge</string>
+    <string name="pref_accounts_restore_summary">Voer Google-rekeninge vanaf \'n lêer in</string>
+    <string name="pref_accounts_backup_warning_title">Rugsteun rekeninge?</string>
+    <string name="pref_accounts_backup_warning_message">Dit skryf jou rekeninge en aanmeldtokens (SID/LSID) na \'n lêer. Enigiemand wat hierdie lêer bekom, kan toegang tot jou rekeninge kry, so hou dit veilig en deel dit nooit.</string>
+    <string name="button_backup_accounts">Rugsteun</string>
+    <string name="snackbar_accounts_backed_up">Rekeninge is gerugsteun</string>
+    <string name="snackbar_accounts_restored">Herstel %1$d rekening(e)</string>
+    <string name="snackbar_accounts_export_failed">Rugsteun misluk</string>
+    <string name="snackbar_accounts_import_failed">Herstel misluk</string>
     <string name="prefcat_youtube_activity">YouTube aktiwiteit</string>
     <string name="pref_manage_all_history">Bestuur alle geskiedenis</string>
     <string name="pref_data_in_youtube">Jou data in YouTube</string>
@@ -170,9 +179,33 @@ Stel asseblief 'n wagkord, PIN of patroonslot op."</string>
     <string name="pref_gcm_confirm_new_apps_summary">Vra voor die registrasie van \'n nuwe app om stootkennisgewings te ontvang</string>
     <string name="pref_about_title">Oor MicroG RE</string>
     <string name="pref_hide_launcher_icon">Verberg ikoon in launcher</string>
+    <string name="hide_launcher_icon_dialog_message">Indien geaktiveer, sal MicroG in jou toepassingslaaier versteek word. MicroG kan geopen word vanaf die toep-inligting in jou toestel se stelseltoep-lys.</string>
+    <string name="hide_launcher_icon_updating_title">Wag asseblief terwyl die toep opgedateer word.</string>
     <string name="pref_language_title">Taal</string>
     <string name="pref_language_system_default">Stelsellaam</string>
     <string name="pref_github_summary">Bron kode repo</string>
+    <string name="pref_update_title">Kyk vir opdaterings</string>
+    <string name="pref_update_summary">Kyk op GitHub vir \'n nuwer weergawe.</string>
+    <string name="update_include_prerelease">Sluit pre-release / ontwikkelaar-samestellings in</string>
+    <string name="update_available_title">Opdatering beskikbaar</string>
+    <string name="update_available_prerelease_title">Opdatering beskikbaar (pre-release)</string>
+    <string name="update_available_message">Nuwe v%1s is beskikbaar. Jy het weergawe v%2$s geïnstalleer. Laai af en installeer die opdatering? Some text has been removed, but here is the correct translation: </string>
+    <string name="update_now">Opdateer</string>
+    <string name="update_whats_new">Wat is nuut</string>
+    <string name="update_ignore">Ignoreer</string>
+    <string name="update_downloading_title">Laai opdatering af…</string>
+    <string name="update_download_failed">Aflaai misluk. Kontroleer jou verbinding en probeer weer.</string>
+    <string name="update_signature_mismatch">Die toep kan nie opgedateer word nie, die handtekeninge verskil.</string>
+    <string name="update_failed_title">Opdatering het misluk</string>
+    <string name="update_permission_required_title">Toestemming vereis</string>
+    <string name="update_permission_required_message">Om opdaterings te installeer, laat asseblief toe dat MicroG onbekende toeps in stelselinstellings installeer.</string>
+    <string name="update_open_settings">Instellings</string>
+    <string name="update_check_failed">Kon nie vir opdaterings kyk nie. Kontroleer jou verbinding en probeer weer.</string>
+    <string name="update_up_to_date_title">Jy is op datum</string>
+    <string name="update_up_to_date_message">MicroG-RE v%s is die jongste weergawe.</string>
+    <string name="update_notification_title">Opdatering beskikbaar</string>
+    <string name="update_notification_text">Nuut v%s is beskikbaar, tik om op te dateer</string>
+    <string name="update_notification_channel">Opdaterings</string>
     <string name="gcm_unregister_app">Deregistreer</string>
     <string name="gcm_no_message_yet">Geen boodskappe ontvang tot dusver</string>
     <string name="gcm_last_message_at">Laaste eerste: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

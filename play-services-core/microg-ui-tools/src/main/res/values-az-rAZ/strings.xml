@@ -30,14 +30,6 @@
     <string name="about_root_summary">Xülasə</string>
     <string name="about_root_version">Versiya v0.1.0</string>
     <string name="about_root_libraries">Yerləşdirilən kitabxanalar</string>
-    <!--Updater-->
-    <string name="update_checker_button">Yeniləmələri yoxla</string>
-    <string name="update_checker_download_button">Yüklə</string>
-    <!--updater: messages-->
-    <string name="update_checker_no_update">Yenilənmə əlçatan deyil</string>
-    <string name="update_checker_update_available">Yeni yenilənmə əlçatandır: %s</string>
-    <string name="update_checker_no_internet">İnternet bağlantısı yoxdur</string>
-    <string name="update_checker_generic_error">Nəsə səhv oldu... Zəhmət olmasa, daha sonra təkrar cəhd edin</string>
     <!--Settings About-->
     <string name="about_morphe_description">Morphe, Android tətbiqlərini yamaqlar metoduyla dəyişdirmək üçün hazırlanan açıq mənbəli layihədir</string>
 </resources>

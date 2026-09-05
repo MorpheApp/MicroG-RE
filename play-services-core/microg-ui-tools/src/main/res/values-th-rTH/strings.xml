@@ -30,14 +30,6 @@
     <string name="about_root_summary">สรุป</string>
     <string name="about_root_version">เวอร์ชัน v0.1.0</string>
     <string name="about_root_libraries">ชุดคำสั่งที่รวมอยู่</string>
-    <!--Updater-->
-    <string name="update_checker_button">ตรวจสอบอัปเดต</string>
-    <string name="update_checker_download_button">ดาวน์โหลด</string>
-    <!--updater: messages-->
-    <string name="update_checker_no_update">ไม่มีการอัปเดตที่พร้อมใช้งาน</string>
-    <string name="update_checker_update_available">มีการอัปเดตใหม่ที่พร้อมใช้งาน: %s</string>
-    <string name="update_checker_no_internet">ไม่มีการเชื่อมต่ออินเทอร์เน็ต</string>
-    <string name="update_checker_generic_error">มีบางอย่างผิดพลาด… กรุณาลองใหม่อีกครั้ง</string>
     <!--Settings About-->
     <string name="about_morphe_description">Morphe เป็นโปรเจ็กต์โอเพนซอร์สที่ออกแบบมาเพื่อปรับเปลี่ยนแอปพลิเคชันแอนดรอยด์ผ่านการปรับปรุง</string>
 </resources>

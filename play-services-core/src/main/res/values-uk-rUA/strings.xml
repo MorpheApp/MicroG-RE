@@ -7,14 +7,13 @@
     <string name="dialog_title_remove_account">Видалити обліковий запис</string>
     <string name="dialog_message_remove_account">"Ви впевнені, що хочете видалити цей обліковий запис?
 
-Деякі служби та функції будуть недоступні
+Деякі сервіси та функції будуть недоступні
 
 Ваші дані не будуть втрачені"</string>
     <string name="dialog_confirm_button">Видалити</string>
     <string name="dialog_cancel_button">Скасувати</string>
     <string name="snackbar_remove_account">Обліковий запис %s видалено</string>
     <string name="snackbar_undo_button">Скасувати</string>
-    <string name="limited_services_app_name">MicroG Limited Services</string>
     <string name="gms_settings_name">Налаштування MicroG</string>
     <string name="gms_settings_summary">Налаштування служб MicroG.</string>
     <string name="just_a_sec">Зачекайте...</string>
@@ -51,9 +50,9 @@
     <string name="auth_action_activity_header">Завершіть налаштування облікового запису Google</string>
     <string name="auth_action_activity_explanation">Виконайте наведені нижче кроки, щоб мати можливість використовувати обліковий запис Google %s на цьому пристрої.</string>
     <string name="auth_action_step_enable_checkin">Увімкнути реєстрацію пристрою</string>
-    <string name="auth_action_step_enable_checkin_description">\"Ваш пристрій має хоча б один раз зареєструватися в Google.
+    <string name="auth_action_step_enable_checkin_description">"Ваш пристрій має хоча б один раз зареєструватися в Google.
 
-Ви можете вимкнути реєстрацію пристрою в Google після завершення налаштування облікового запису.</string>
+Ви можете вимкнути реєстрацію пристрою в Google після завершення налаштування облікового запису."</string>
     <string name="auth_action_step_enable_gcm">Увімкнути Cloud Messaging</string>
     <string name="auth_action_step_enable_gcm_description">Ви можете вимкнути Cloud Messaging після завершення налаштування облікового запису.</string>
     <string name="auth_action_step_allow_microg_gcm">Дозволити Cloud Messaging для microG</string>
@@ -71,13 +70,13 @@
     <string name="signin_confirm_title">Дозволити вхід у <xliff:g example="F-Droid">%1$s</xliff:g></string>
     <string name="signin_confirm_button_text">Дозволити та поділитися</string>
     <string name="signin_subtext_sharing">Щоб продовжити, microG передасть ім’я, адресу електронної пошти та фото профілю вашого облікового запису Google до <xliff:g example="F-Droid">%1$s</xliff:g>.</string>
-    <string name="perm_status_broadcast_label">слухати внутрішні статус-оповіщення</string>
-    <string name="perm_gsf_read_gservices_label">читати конфігурацію служби Google</string>
-    <string name="perm_c2dm_receive_label">слухати повідомлення C2DM</string>
+    <string name="perm_status_broadcast_label">прослуховувати внутрішні трансляції статусу</string>
+    <string name="perm_gsf_read_gservices_label">читати конфігурацію сервісу Google</string>
+    <string name="perm_c2dm_receive_label">прослуховувати повідомлення C2DM</string>
     <string name="perm_c2dm_send_label">надсилати повідомлення C2DM іншим застосункам</string>
-    <string name="perm_gtalk_svc_label">обмінюватися повідомленнями та отримувати сповіщення про синхронізацію від серверів Google</string>
+    <string name="perm_gtalk_svc_label">обмінюватися повідомленнями та отримувати сповіщення синхронізації від серверів Google</string>
     <string name="perm_extended_access_label">Розширений доступ до сервісів Google</string>
-    <string name="perm_provision_label">налаштовувати служби microG</string>
+    <string name="perm_provision_label">надавати сервіси microG</string>
     <string name="perm_provision_description">Дозволяє застосунку налаштовувати служби microG без втручання користувача</string>
     <string name="perm_car_speed_label">Швидкість автомобіля</string>
     <string name="perm_car_speed_description">"Доступ до швидкості вашого автомобіля"</string>
@@ -140,7 +139,7 @@
     <string name="pref_auth_two_step_verification_title">Отримувати запити двоетапної перевірки</string>
     <string name="pref_auth_two_step_verification_summary">Якщо ввімкнено, пристрій може отримувати запити двоетапної перевірки від Google (потрібен Cloud Messaging).</string>
     <string name="pref_auth_allow_find_devices_title">Дозволити відповідати на запити Google Device Finder</string>
-    <string name="pref_auth_allow_find_devices_summary">Якщо ввімкнено, пристрій може відповідати на сповіщення «Знайти пристрій» від Google (потрібен Cloud Messaging).</string>
+    <string name="pref_auth_allow_find_devices_summary">Якщо ввімкнено, пристрій може реагувати на сповіщення \"Знайти мій пристрій\" від Google (потрібен Cloud Messaging).</string>
     <string name="pref_checkin_enable_summary">Реєструє ваш пристрій у сервісах Google та створює унікальний ідентифікатор пристрою. microG видаляє з реєстраційних даних ідентифікаційні фрагменти, окрім імені вашого облікового запису Google.</string>
     <string name="pref_device_registration_android_id">Android ID</string>
     <string name="checkin_not_registered">Не зареєстровано</string>
@@ -155,6 +154,18 @@
     <string name="prefcat_accounts_options_title">Опції</string>
     <string name="pref_accounts_manage_accounts_title">Керувати обліковими записами</string>
     <string name="pref_accounts_manage_accounts_summary">Відкрити диспетчер облікових записів пристрою</string>
+    <string name="prefcat_accounts_backup_title">Резервна копія облікових записів</string>
+    <string name="pref_accounts_backup_title">Створити резервну копію облікових записів</string>
+    <string name="pref_accounts_backup_summary">Експортувати облікові записи Google у файл</string>
+    <string name="pref_accounts_restore_title">Відновити облікові записи</string>
+    <string name="pref_accounts_restore_summary">Імпортувати облікові записи Google з файлу</string>
+    <string name="pref_accounts_backup_warning_title">Створити резервну копію облікових записів?</string>
+    <string name="pref_accounts_backup_warning_message">Це записує ваші облікові записи та токени входу (SID/LSID) у файл. Будь-хто, хто отримає цей файл, може отримати доступ до ваших облікових записів, тому зберігайте його в безпеці та ніколи не діліться ним.</string>
+    <string name="button_backup_accounts">Створити резервну копію</string>
+    <string name="snackbar_accounts_backed_up">Облікові записи збережено в резервній копії</string>
+    <string name="snackbar_accounts_restored">Відновлено %1$d акаунт(ів)</string>
+    <string name="snackbar_accounts_export_failed">Не вдалося створити резервну копію</string>
+    <string name="snackbar_accounts_import_failed">Не вдалося відновити</string>
     <string name="prefcat_youtube_activity">Активність на YouTube</string>
     <string name="pref_manage_all_history">Керувати всією історією</string>
     <string name="pref_data_in_youtube">Ваші дані в YouTube</string>
@@ -170,9 +181,37 @@
     <string name="pref_gcm_confirm_new_apps_summary">Запитувати перед реєстрацією нового застосунку для отримання push-сповіщень</string>
     <string name="pref_about_title">Про MicroG RE</string>
     <string name="pref_hide_launcher_icon">Приховати іконку в лаунчері</string>
+    <string name="hide_launcher_icon_dialog_message">Якщо увімкнено, MicroG буде приховано в лаунчері. MicroG можна відкрити через інформацію про застосунок у системному списку застосунків пристрою.</string>
+    <string name="hide_launcher_icon_updating_title">Зачекайте, поки застосунок оновлюється</string>
     <string name="pref_language_title">Мова</string>
     <string name="pref_language_system_default">Системна</string>
     <string name="pref_github_summary">Репозиторій вихідного коду</string>
+    <string name="pref_update_title">Перевірка наявності оновлень</string>
+    <string name="pref_update_summary">Перевірте GitHub на наявність новішої версії.</string>
+    <string name="update_include_prerelease">Включати передрелізи / збірки для розробників</string>
+    <string name="update_available_title">Доступне оновлення</string>
+    <string name="update_available_prerelease_title">Доступне оновлення (передреліз)</string>
+    <string name="update_available_message">Доступна нова версія v%1s. У вас встановлена версія v%2$s. Завантажити та встановити оновлення?</string>
+    <string name="update_now">Оновити</string>
+    <string name="update_whats_new">Що нового</string>
+    <string name="update_ignore">Ігнорувати</string>
+    <string name="update_downloading_title">Завантаження оновлення…</string>
+    <string name="update_download_failed">Помилка завантаження. Перевірте з\'єднання та спробуйте ще раз.</string>
+    <string name="update_signature_mismatch">Неможливо оновити застосунок, оскільки підписи відрізняються.</string>
+    <string name="update_failed_title">Помилка оновлення</string>
+    <string name="update_permission_required_title">Потрібен дозвіл</string>
+    <string name="update_permission_required_message">Щоб встановлювати оновлення, дозвольте MicroG встановлювати невідомі застосунки в налаштуваннях системи.</string>
+    <string name="update_open_settings">Налаштування</string>
+    <string name="update_check_failed">Не вдалося перевірити наявність оновлень. Перевірте з\'єднання та спробуйте ще раз.</string>
+    <string name="update_up_to_date_title">У вас актуальна версія</string>
+    <string name="update_up_to_date_message">MicroG-RE v%s є останньою версією.</string>
+    <string name="update_notification_title">Доступне оновлення</string>
+    <string name="update_notification_text">Доступна нова версія v%s, натисніть, щоб оновити</string>
+    <string name="update_notification_channel">Оновлення</string>
+    <string name="update_notification_permission_title">Сповіщення</string>
+    <string name="update_notification_permission_allow">Дозволити</string>
+    <string name="update_notification_permission_not_now">Не зараз</string>
+    <string name="update_notification_permission_open_settings">Відкрити налаштування</string>
     <string name="gcm_unregister_app">Скасувати реєстрацію</string>
     <string name="gcm_no_message_yet">Поки що повідомлень не отримано</string>
     <string name="gcm_last_message_at">Останнє повідомлення: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>

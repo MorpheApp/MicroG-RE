@@ -15,7 +15,7 @@ Your data will not be lost"</string>
     <string name="dialog_cancel_button">Cancel</string>
     <string name="snackbar_remove_account">Account %s removed</string>
     <string name="snackbar_undo_button">Undo</string>
-    <string name="limited_services_app_name">MicroG Limited Services</string>
+    <string name="limited_services_app_name" translatable="false">MicroG Limited Services</string>
     <string name="gms_settings_name">MicroG Settings</string>
     <string name="gms_settings_summary">Setup MicroG services.</string>
 
@@ -58,7 +58,7 @@ This can take a couple of minutes."</string>
     <string name="auth_action_step_enable_checkin">Enable device registration</string>
     <string name="auth_action_step_enable_checkin_description">"Your device needs to register to Google at least once.
 
-You can disable Google device registration after account setup is complete.</string>
+You can disable Google device registration after account setup is complete."</string>
     <string name="auth_action_step_enable_gcm">Enable Cloud Messaging</string>
     <string name="auth_action_step_enable_gcm_description">You can disable Cloud Messaging after account setup is complete.</string>
     <string name="auth_action_step_allow_microg_gcm">Allow Cloud Messaging for microG</string>
@@ -267,6 +267,11 @@ Please set up a password, PIN, or pattern lock screen."</string>
     <string name="update_notification_title">Update available</string>
     <string name="update_notification_text">New v%s is available tap to update</string>
     <string name="update_notification_channel">Updates</string>
+    <string name="update_notification_permission_title">Notifications</string>
+    <string name="update_notification_permission_message">To let you know when a new update is available, MicroG-RE needs permission to send notifications. Please allow notifications so update alerts can reach you.</string>
+    <string name="update_notification_permission_allow">Allow</string>
+    <string name="update_notification_permission_not_now">Not now</string>
+    <string name="update_notification_permission_open_settings">Open settings</string>
 
     <string name="gcm_app_error_unregistering" translatable="false">Error unregistering</string>
     <string name="gcm_app_not_installed_anymore" translatable="false">No longer installed</string>
