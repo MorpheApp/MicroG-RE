@@ -166,7 +166,7 @@ public class AuthRequest extends HttpFormClient.Request {
     }
 
     public AuthRequest callerIsGms() {
-        return caller(Constants.GMS_PACKAGE_NAME, Constants.GMS_PACKAGE_SIGNATURE_SHA1);
+        return caller(Constants.GOOGLE_GMS_PACKAGE_NAME, Constants.GMS_PACKAGE_SIGNATURE_SHA1);
     }
 
     public AuthRequest callerIsApp() {
@@ -255,7 +255,7 @@ public class AuthRequest extends HttpFormClient.Request {
         return this;
     }
 
-    public AuthRequest putDynamicFiledMap(Map<Object, Object> dynamicFields) {
+    public AuthRequest putDynamicFieldMap(Map<Object, Object> dynamicFields) {
         this.dynamicFields = dynamicFields;
         return this;
     }
