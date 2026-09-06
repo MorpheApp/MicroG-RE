@@ -10,5 +10,6 @@
     <!-- Settings strings -->
     <string name="prefcat_about">Маалымат</string>
     <string name="prefcat_accounts_settings_title">Оңдоолор </string>
+    <string name="update_open_settings">Оңдоолор </string>
     <!-- Passkey management -->
 </resources>

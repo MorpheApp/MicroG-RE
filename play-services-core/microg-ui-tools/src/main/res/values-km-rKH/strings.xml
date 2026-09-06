@@ -22,14 +22,6 @@
     <string name="about_root_title">គំរូបង្ហាញ microG UI</string>
     <string name="about_root_version">កំណែ v0.1.0</string>
     <string name="about_root_libraries">បណ្ណាល័យត្រូវបានរួមបញ្ចូល</string>
-    <!--Updater-->
-    <string name="update_checker_button">ពិនិត្យបច្ចុប្បន្នភាព</string>
-    <string name="update_checker_download_button">ដោនឡូដ</string>
-    <!--updater: messages-->
-    <string name="update_checker_no_update">មិនទាន់មានការអាប់ដេតឡើយ</string>
-    <string name="update_checker_update_available">ការអាប់ដេតថ្មីមានហើយ៖ %s</string>
-    <string name="update_checker_no_internet">មិនមានការតភ្ជាប់អ៊ីនធឺណិតឡើយ</string>
-    <string name="update_checker_generic_error">មានអ្វីមួយខុសប្រក្រតី… សូមព្យាយាមម្តងទៀតនៅពេលក្រោយ</string>
     <!--Settings About-->
     <string name="about_morphe_description">Morphe គឺជាគម្រោងប្រភពបើកចំហដែលត្រូវបានរចនាឡើង ដើម្បីកែសម្រួលកម្មវិធីអាន់ដ្រយ តាមរយៈបំណះ</string>
 </resources>

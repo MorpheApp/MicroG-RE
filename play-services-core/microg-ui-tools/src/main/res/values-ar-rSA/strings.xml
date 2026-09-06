@@ -31,14 +31,6 @@
     <string name="about_root_summary">ملخص</string>
     <string name="about_root_version">الإصدار v0.1.0</string>
     <string name="about_root_libraries">المكتبات المضمنة</string>
-    <!--Updater-->
-    <string name="update_checker_button">تحقق من التحديثات</string>
-    <string name="update_checker_download_button">تنزيل</string>
-    <!--updater: messages-->
-    <string name="update_checker_no_update">لا يوجد تحديث متاح</string>
-    <string name="update_checker_update_available">تحديث متاح: %s</string>
-    <string name="update_checker_no_internet">لا يوجد اتصال بالإنترنت</string>
-    <string name="update_checker_generic_error">حدث خطأ ما... يرجى المحاولة مرة أخرى لاحقًا</string>
     <!--Settings About-->
     <string name="about_morphe_description">Morphe هو مشروع مفتوح المصدر مصمم لتعديل تطبيقات Android من خلال التعديلات.</string>
 </resources>

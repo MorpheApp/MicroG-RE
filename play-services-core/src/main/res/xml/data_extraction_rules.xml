@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <include domain="sharedpref" path="app.revanced.android.gms_preferences.xml" />
+        <include domain="sharedpref" path="checkin.xml" />
+        <include domain="sharedpref" path="unified_nlp.xml" />
+        <include domain="file" path="accounts_backup.json" />
+    </cloud-backup>
+    <device-transfer>
+        <include domain="sharedpref" path="app.revanced.android.gms_preferences.xml" />
+        <include domain="sharedpref" path="checkin.xml" />
+        <include domain="sharedpref" path="unified_nlp.xml" />
+        <include domain="file" path="accounts_backup.json" />
+    </device-transfer>
+</data-extraction-rules>

@@ -10,6 +10,7 @@ import android.accounts.AccountManager
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.drawable.Drawable
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
@@ -19,6 +20,8 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory
 import androidx.core.net.toUri
@@ -43,8 +46,12 @@ import kotlinx.coroutines.withContext
 import org.microg.gms.account.AccountPreference
 import org.microg.gms.auth.AuthConstants
 import org.microg.gms.auth.login.LoginActivity
+import org.microg.gms.backup.AccountBackup
 import org.microg.gms.people.DatabaseHelper
 import org.microg.gms.people.PeopleManager
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 const val PREFCAT_ACCOUNTS = "prefcat_current_accounts"
 const val PREF_PRIVACY = "pref_privacy"
@@ -54,6 +61,8 @@ class AccountsFragment : PreferenceFragmentCompat() {
 
     private val tag = "AccountsFragment"
     private lateinit var fab: ExtendedFloatingActionButton
+    private lateinit var exportAccountsLauncher: ActivityResultLauncher<String>
+    private lateinit var importAccountsLauncher: ActivityResultLauncher<Array<String>>
 
     // TODO: This should use some better means of accessing the database
     private fun getDisplayName(account: Account): String? {
@@ -81,6 +90,12 @@ class AccountsFragment : PreferenceFragmentCompat() {
         returnTransition = MaterialSharedAxis(MaterialSharedAxis.X, false)
         exitTransition = MaterialSharedAxis(MaterialSharedAxis.X, true)
         reenterTransition = MaterialSharedAxis(MaterialSharedAxis.X, false)
+        exportAccountsLauncher = registerForActivityResult(ActivityResultContracts.CreateDocument("application/json")) { uri ->
+            if (uri != null) exportAccountsTo(uri)
+        }
+        importAccountsLauncher = registerForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+            if (uri != null) importAccountsFrom(uri)
+        }
     }
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
@@ -119,6 +134,14 @@ class AccountsFragment : PreferenceFragmentCompat() {
             startActivityIntent(Intent(Settings.ACTION_SYNC_SETTINGS))
             true
         }
+        findPreference<Preference>("pref_accounts_export")?.setOnPreferenceClickListener {
+            showExportWarningDialog()
+            true
+        }
+        findPreference<Preference>("pref_accounts_import")?.setOnPreferenceClickListener {
+            importAccountsLauncher.launch(arrayOf("application/json", "application/octet-stream", "text/*"))
+            true
+        }
         findPreference<Preference>("pref_manage_history")?.setOnPreferenceClickListener {
             openUrl("https://myactivity.google.com/product/youtube")
             true
@@ -131,6 +154,51 @@ class AccountsFragment : PreferenceFragmentCompat() {
 
     private fun openUrl(url: String) {
         startActivityIntent(Intent(Intent.ACTION_VIEW, url.toUri()))
+    }
+
+    private fun showExportWarningDialog() {
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle(R.string.pref_accounts_backup_warning_title)
+            .setMessage(R.string.pref_accounts_backup_warning_message)
+            .setPositiveButton(R.string.button_backup_accounts) { _, _ ->
+                val timestamp = SimpleDateFormat("yyyyMMdd-HHmm", Locale.US).format(Date())
+                exportAccountsLauncher.launch("microg-accounts-$timestamp.json")
+            }
+            .setNegativeButton(R.string.dialog_cancel_button, null)
+            .show()
+    }
+
+    private fun exportAccountsTo(uri: Uri) {
+        val rootView = view ?: return
+        try {
+            val json = AccountBackup.serializeAccounts(requireContext())
+            requireContext().contentResolver.openOutputStream(uri)?.use { output ->
+                output.write(json.toByteArray(Charsets.UTF_8))
+            }
+            Snackbar.make(rootView, R.string.snackbar_accounts_backed_up, Snackbar.LENGTH_LONG).show()
+        } catch (e: Exception) {
+            Log.e(tag, "Failed to export accounts", e)
+            Snackbar.make(rootView, R.string.snackbar_accounts_export_failed, Snackbar.LENGTH_LONG).show()
+        }
+    }
+
+    private fun importAccountsFrom(uri: Uri) {
+        val rootView = view ?: return
+        try {
+            val json = requireContext().contentResolver.openInputStream(uri)?.use { input ->
+                input.readBytes().toString(Charsets.UTF_8)
+            } ?: ""
+            val restored = AccountBackup.restoreAccounts(requireContext(), json)
+            if (restored < 0) {
+                Snackbar.make(rootView, R.string.snackbar_accounts_import_failed, Snackbar.LENGTH_LONG).show()
+                return
+            }
+            Snackbar.make(rootView, getString(R.string.snackbar_accounts_restored, restored), Snackbar.LENGTH_LONG).show()
+            updateSettings()
+        } catch (e: Exception) {
+            Log.e(tag, "Failed to import accounts", e)
+            Snackbar.make(rootView, R.string.snackbar_accounts_import_failed, Snackbar.LENGTH_LONG).show()
+        }
     }
 
     private fun updateSettings() {

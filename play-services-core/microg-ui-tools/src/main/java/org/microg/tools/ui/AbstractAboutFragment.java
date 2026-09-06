@@ -16,7 +16,6 @@
 
 package org.microg.tools.ui;
 
-import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -31,14 +30,11 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresPermission;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.color.MaterialColors;
 import com.google.android.material.listitem.ListItemLayout;
 import com.google.android.material.transition.MaterialSharedAxis;
-
-import org.microg.tools.updater.UpdateChecker;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -124,7 +120,6 @@ public abstract class AbstractAboutFragment extends Fragment {
 
     @Nullable
     @Override
-    @RequiresPermission(Manifest.permission.ACCESS_NETWORK_STATE) // (UpdateChecker) Added in core module manifest, solved when an apk is generated
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View aboutRoot = inflater.inflate(R.layout.about_root, container, false);
 
@@ -134,11 +129,6 @@ public abstract class AbstractAboutFragment extends Fragment {
 //            ((ImageView) appCard.findViewById(R.id.app_icon)).setImageDrawable(getIcon(requireContext()));
 //            ((TextView) appCard.findViewById(R.id.app_title)).setText(getAppName());
             ((TextView) appCard.findViewById(R.id.app_version)).setText(appCard.getContext().getString(R.string.about_version_str, getAppVersion()));
-
-            appCard.findViewById(R.id.app_check_updates).setOnClickListener(v -> {
-                new UpdateChecker(requireContext()).checkForUpdates(v, () -> {
-                });
-            });
 
             View appInfo = appCard.findViewById(R.id.app_info);
             if (appInfo != null) {

@@ -30,14 +30,6 @@
     <string name="about_root_summary">Ikhtisar</string>
     <string name="about_root_version">Versi v0.1.0</string>
     <string name="about_root_libraries">Pustaka yang disertakan</string>
-    <!--Updater-->
-    <string name="update_checker_button">Periksa pembaruan</string>
-    <string name="update_checker_download_button">Unduh</string>
-    <!--updater: messages-->
-    <string name="update_checker_no_update">Tidak ada pembaruan tersedia</string>
-    <string name="update_checker_update_available">Tersedia pembaruan baru: %s</string>
-    <string name="update_checker_no_internet">Tidak ada sambungan internet</string>
-    <string name="update_checker_generic_error">Ada kesalahan… Silakan coba lagi nanti</string>
     <!--Settings About-->
     <string name="about_morphe_description">Morphe adalah proyek sumber terbuka yang dirancang untuk memodifikasi aplikasi Android melalui tambalan</string>
 </resources>

@@ -30,14 +30,6 @@
     <string name="about_root_summary">Összefoglaló</string>
     <string name="about_root_version">Verzió v0.1.0</string>
     <string name="about_root_libraries">Beágyazott könyvtárak</string>
-    <!--Updater-->
-    <string name="update_checker_button">Frissítés ellenőrzése</string>
-    <string name="update_checker_download_button">Letöltés</string>
-    <!--updater: messages-->
-    <string name="update_checker_no_update">Nincs elérhető frissítés</string>
-    <string name="update_checker_update_available">Új frissítés érhető el: %s</string>
-    <string name="update_checker_no_internet">Nincs internetkapcsolat</string>
-    <string name="update_checker_generic_error">Valami hiba történt… Kérem, próbálja meg később</string>
     <!--Settings About-->
     <string name="about_morphe_description">A Morphe egy nyílt forráskódú projekt, amelynek célja az Android alkalmazások módosítása patchek segítségével.</string>
 </resources>

@@ -15,7 +15,7 @@ Your data will not be lost"</string>
     <string name="dialog_cancel_button">Cancel</string>
     <string name="snackbar_remove_account">Account %s removed</string>
     <string name="snackbar_undo_button">Undo</string>
-    <string name="limited_services_app_name">MicroG Limited Services</string>
+    <string name="limited_services_app_name" translatable="false">MicroG Limited Services</string>
     <string name="gms_settings_name">MicroG Settings</string>
     <string name="gms_settings_summary">Setup MicroG services.</string>
 
@@ -58,7 +58,7 @@ This can take a couple of minutes."</string>
     <string name="auth_action_step_enable_checkin">Enable device registration</string>
     <string name="auth_action_step_enable_checkin_description">"Your device needs to register to Google at least once.
 
-You can disable Google device registration after account setup is complete.</string>
+You can disable Google device registration after account setup is complete."</string>
     <string name="auth_action_step_enable_gcm">Enable Cloud Messaging</string>
     <string name="auth_action_step_enable_gcm_description">You can disable Cloud Messaging after account setup is complete.</string>
     <string name="auth_action_step_allow_microg_gcm">Allow Cloud Messaging for microG</string>
@@ -202,6 +202,18 @@ Please set up a password, PIN, or pattern lock screen."</string>
     <string name="prefcat_accounts_options_title">Options</string>
     <string name="pref_accounts_manage_accounts_title">Manage accounts</string>
     <string name="pref_accounts_manage_accounts_summary">Open device accounts manager</string>
+    <string name="prefcat_accounts_backup_title">Account backup</string>
+    <string name="pref_accounts_backup_title">Back up accounts</string>
+    <string name="pref_accounts_backup_summary">Export Google accounts to a file</string>
+    <string name="pref_accounts_restore_title">Restore accounts</string>
+    <string name="pref_accounts_restore_summary">Import Google accounts from a file</string>
+    <string name="pref_accounts_backup_warning_title">Back up accounts?</string>
+    <string name="pref_accounts_backup_warning_message">This writes your accounts and login tokens (SID/LSID) to a file. Anyone who obtains this file can access your accounts, so keep it safe and never share it.</string>
+    <string name="button_backup_accounts">Back up</string>
+    <string name="snackbar_accounts_backed_up">Accounts backed up</string>
+    <string name="snackbar_accounts_restored">Restored %1$d account(s)</string>
+    <string name="snackbar_accounts_export_failed">Backup failed</string>
+    <string name="snackbar_accounts_import_failed">Restore failed</string>
     <string name="prefcat_youtube_activity">YouTube Activity</string>
     <string name="pref_manage_all_history">Manage all history</string>
     <string name="pref_data_in_youtube">Your data in YouTube</string>
@@ -225,11 +237,41 @@ Please set up a password, PIN, or pattern lock screen."</string>
 
     <string name="pref_about_title">About MicroG RE</string>
     <string name="pref_hide_launcher_icon">Hide icon in launcher</string>
+    <string name="hide_launcher_icon_dialog_message">If enabled, MicroG will be hidden in your app launcher. MicroG can be opened from the app info found in your device system app list.</string>
+    <string name="hide_launcher_icon_updating_title">Please wait while the app is updated</string>
     <string name="pref_language_title">Language</string>
     <string name="pref_language_system_default">System default</string>
     <string name="pref_github" translatable="false">GitHub</string>
     <string name="pref_github_summary">Source code repository</string>
+    <string name="pref_update_title">Check for updates</string>
+    <string name="pref_update_summary">Check GitHub for a newer version.</string>
+    <string name="update_include_prerelease">Include pre-release / dev builds</string>
     <string name="pref_about_summary" translatable="false">Version information and used libraries</string>
+
+    <string name="update_available_title">Update available</string>
+    <string name="update_available_prerelease_title">Update available (pre-release)</string>
+    <string name="update_available_message">New v%1s is available. You have version v%2$s installed. Download and install the update?</string>
+    <string name="update_now">Update</string>
+    <string name="update_whats_new">What\'s new</string>
+    <string name="update_ignore">Ignore</string>
+    <string name="update_downloading_title">Downloading update…</string>
+    <string name="update_download_failed">Download failed. Check your connection and try again.</string>
+    <string name="update_signature_mismatch">App cannot be updated, signatures are different.</string>
+    <string name="update_failed_title">Update failed</string>
+    <string name="update_permission_required_title">Permission required</string>
+    <string name="update_permission_required_message">To install updates, please allow MicroG to install unknown apps in system settings.</string>
+    <string name="update_open_settings">Settings</string>
+    <string name="update_check_failed">Could not check for updates. Check your connection and try again.</string>
+    <string name="update_up_to_date_title">You\'re up to date</string>
+    <string name="update_up_to_date_message">MicroG-RE v%s is the latest version.</string>
+    <string name="update_notification_title">Update available</string>
+    <string name="update_notification_text">New v%s is available tap to update</string>
+    <string name="update_notification_channel">Updates</string>
+    <string name="update_notification_permission_title">Notifications</string>
+    <string name="update_notification_permission_message">To let you know when a new update is available, MicroG-RE needs permission to send notifications. Please allow notifications so update alerts can reach you.</string>
+    <string name="update_notification_permission_allow">Allow</string>
+    <string name="update_notification_permission_not_now">Not now</string>
+    <string name="update_notification_permission_open_settings">Open settings</string>
 
     <string name="gcm_app_error_unregistering" translatable="false">Error unregistering</string>
     <string name="gcm_app_not_installed_anymore" translatable="false">No longer installed</string>
@@ -524,6 +566,8 @@ Some apps may not be able to register again after this action. You may need to c
     <string name="self_check_resolution_overlay" translatable="false">Tap here to grant this permission. This permission is required to show popup alerts on top of other apps</string>
     <string name="self_check_name_oem_restriction">Background process restrictions</string>
     <string name="self_check_resolution_oem_restriction">Your system may restrict background processes. Tap here to open Don\'t Kill My App! site and learn how to disable these restrictions</string>
+
+    <string name="morphe_sign_in_with_google_microg_label">Sign in with Google via MicroG RE</string>
 
     <string name="self_check_patched_app_installed">Running with %1$s</string>
     <string name="self_check_action_download_morphe">Download Morphe</string>

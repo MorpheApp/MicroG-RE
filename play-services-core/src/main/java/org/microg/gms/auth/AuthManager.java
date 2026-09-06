@@ -96,12 +96,13 @@ public class AuthManager {
 
     public String buildTokenKey(String service) {
         Uri.Builder builder = Uri.EMPTY.buildUpon();
+
         if (delegationType != 0 && delegateeUserId != null)
             builder.appendQueryParameter("delegation_type", Integer.toString(delegationType))
                     .appendQueryParameter("delegatee_user_id", delegateeUserId);
         if (tokenRequestOptions != null) builder.appendQueryParameter("token_request_options", tokenRequestOptions);
         if (includeEmail != null) builder.appendQueryParameter("include_email", includeEmail);
-        if (includeProfile != null) builder.appendQueryParameter("include_profile", includeEmail);
+        if (includeProfile != null) builder.appendQueryParameter("include_profile", includeProfile);
         String query = builder.build().getEncodedQuery();
         return packageName + ":" + getPackageSignature() + ":" + service + (query != null ? ("?" + query) : "");
     }
@@ -173,7 +174,7 @@ public class AuthManager {
         this.tokenRequestOptions = tokenRequestOptions;
     }
 
-    public void putDynamicFiled(Object key, Object value) {
+    public void putDynamicField(Object key, Object value) {
         this.dynamicFields.put(key, value);
     }
 
@@ -345,7 +346,7 @@ public class AuthManager {
                 .tokenRequestOptions(tokenRequestOptions)
                 .systemPartition(isSystemApp())
                 .hasPermission(!ignoreStoredPermission && isPermitted())
-                .putDynamicFiledMap(dynamicFields);
+                .putDynamicFieldMap(dynamicFields);
         if (isGmsApp) {
             request.appIsGms();
         }

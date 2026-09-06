@@ -9,7 +9,6 @@ import android.accounts.Account
 import android.accounts.AccountManager
 import android.content.ContentValues
 import android.content.Context
-import android.database.Cursor
 import android.net.Uri
 import androidx.core.content.contentValuesOf
 import androidx.core.net.toUri
@@ -42,13 +41,10 @@ import org.microg.gms.auth.AuthManager
 import org.microg.gms.auth.consent.CONSENT_RESULT
 import org.microg.gms.auth.signin.consentRequestOptions
 import org.microg.gms.auth.signin.performConsentView
-import org.microg.gms.auth.signin.performSignIn
 import org.microg.gms.checkin.LastCheckinInfo
 import org.microg.gms.common.Constants
 import org.microg.gms.common.Utils
 import org.microg.gms.profile.Build
-import org.microg.gms.settings.SettingsContract.CheckIn
-import org.microg.gms.settings.SettingsContract.getSettings
 import org.microg.gms.utils.singleInstanceOf
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
@@ -272,7 +268,7 @@ suspend fun performGamesSignIn(
     if ("remote_consent" == authResponse.issueAdvice && authResponse.resolutionDataBase64 != null) {
         val consentResult = performConsentView(context, packageName, account, authResponse.resolutionDataBase64)
         if (consentResult == null) return false
-        authManager.putDynamicFiled(CONSENT_RESULT, consentResult)
+        authManager.putDynamicField(CONSENT_RESULT, consentResult)
         authResponse = withContext(Dispatchers.IO) { authManager.requestAuthWithBackgroundResolution(true) }
     }
     if (authResponse.auth == null) return false

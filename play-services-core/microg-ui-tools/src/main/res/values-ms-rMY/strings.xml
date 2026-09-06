@@ -15,8 +15,5 @@
   ~ limitations under the License.
   -->
 <resources>
-    <!--Updater-->
-    <!--updater: messages-->
-    <string name="update_checker_no_update">Tiada kemas kini tersedia</string>
     <!--Settings About-->
 </resources>

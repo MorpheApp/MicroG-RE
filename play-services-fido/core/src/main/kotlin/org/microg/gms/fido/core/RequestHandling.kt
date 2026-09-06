@@ -187,7 +187,9 @@ suspend fun RequestOptions.checkIsValid(context: Context, origin: String, packag
         val sha256facetId = allApplicableFacetIds.firstOrNull { it.startsWith("android:apk-key-hash-sha256:") }
             ?: throw RequestHandlingException(NOT_ALLOWED_ERR, "RP ID $rpId not allowed from origin $origin")
         val fp = Base64.decode(sha256facetId.substring(28), HASH_BASE64_FLAGS).toHexString(":")
-        if (!isAssetLinked(context, rpId, fp, packageName)) {
+        // A native app declaring its own apk-key-hash as RP ID is self-referencing and
+        // valid without asset links (standard WebAuthn-on-Android behavior, matches real GMS/Chrome).
+        if (rpId !in allApplicableFacetIds && !isAssetLinked(context, rpId, fp, packageName)) {
             throw RequestHandlingException(NOT_ALLOWED_ERR, "RP ID $rpId not allowed from origin $origin (expected fingerprint $fp)")
         }
     } else {

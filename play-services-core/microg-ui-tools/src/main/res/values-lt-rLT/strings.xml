@@ -23,14 +23,6 @@
     <string name="about_root_title">microG UI Demo</string>
     <string name="about_root_version">Versija v0.</string>
     <string name="about_root_libraries">Įtrauktos bibliotekos</string>
-    <!--Updater-->
-    <string name="update_checker_button">Patikrinti atnaujinimus</string>
-    <string name="update_checker_download_button">Atsisiųsti</string>
-    <!--updater: messages-->
-    <string name="update_checker_no_update">Atnaujinimo nėra</string>
-    <string name="update_checker_update_available">Atnaujinimas prieinamas: %s</string>
-    <string name="update_checker_no_internet">Nėra interneto</string>
-    <string name="update_checker_generic_error">Kažkas nepavyko… Bandykite dar kartą vėliau</string>
     <!--Settings About-->
     <string name="about_morphe_description">Morphe yra atviro kodo projektas, sukurtas modifikuoti Android programėles per pataisymus</string>
 </resources>

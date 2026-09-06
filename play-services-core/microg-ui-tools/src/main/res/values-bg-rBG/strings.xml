@@ -30,14 +30,6 @@
     <string name="about_root_summary">Резюме</string>
     <string name="about_root_version">Версия v0.1.0</string>
     <string name="about_root_libraries">Включени библиотеки</string>
-    <!--Updater-->
-    <string name="update_checker_button">Проверете актуализациите</string>
-    <string name="update_checker_download_button">Свалите</string>
-    <!--updater: messages-->
-    <string name="update_checker_no_update">Няма налични актуализации</string>
-    <string name="update_checker_update_available">Има налична актуализация: %s</string>
-    <string name="update_checker_no_internet">Няма връзка с интернет</string>
-    <string name="update_checker_generic_error">Нещо се обърка... Моля, опитайте отново по-късно</string>
     <!--Settings About-->
     <string name="about_morphe_description">Morphe е отворен проект, насочен към модифициране на Android приложения чрез патчове</string>
 </resources>

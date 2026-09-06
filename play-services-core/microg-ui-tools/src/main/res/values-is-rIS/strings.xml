@@ -30,14 +30,6 @@
     <string name="about_root_summary">Samantekt</string>
     <string name="about_root_version">Útgáfa v0.1.0</string>
     <string name="about_root_libraries">Innifalin safn</string>
-    <!--Updater-->
-    <string name="update_checker_button">Athuga uppfærslur</string>
-    <string name="update_checker_download_button">Sæja niður</string>
-    <!--updater: messages-->
-    <string name="update_checker_no_update">Engin uppfærsla í boði</string>
-    <string name="update_checker_update_available">Ný uppfærsla í boði: %s</string>
-    <string name="update_checker_no_internet">Engin nettenging</string>
-    <string name="update_checker_generic_error">Eitthvað fór rangt… Vinsamlegast reyndu aftur síðar</string>
     <!--Settings About-->
     <string name="about_morphe_description">Morphe er forritið með opnum hugbúnaði sem er hannað til að breyta Android forritum með patching</string>
 </resources>

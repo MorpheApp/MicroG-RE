@@ -7,5 +7,7 @@
     <!-- Self check -->
     <!-- Settings strings -->
     <string name="prefcat_accounts_settings_title">Налады</string>
+    <string name="update_failed_title">Абнаўленне не ўдалося</string>
+    <string name="update_open_settings">Налады</string>
     <!-- Passkey management -->
 </resources>

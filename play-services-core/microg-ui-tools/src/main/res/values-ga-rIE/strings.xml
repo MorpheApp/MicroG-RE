@@ -30,14 +30,6 @@
     <string name="about_root_summary">Achoimre</string>
     <string name="about_root_version">Leagan v0.1.0</string>
     <string name="about_root_libraries">Leabharlanna san áireamh</string>
-    <!--Updater-->
-    <string name="update_checker_button">Seiceáil nuashonruithe</string>
-    <string name="update_checker_download_button">Íoslódáil</string>
-    <!--updater: messages-->
-    <string name="update_checker_no_update">Níl aon nuashonrú ar fáil</string>
-    <string name="update_checker_update_available">Nuashonrú nua ar fáil: %s</string>
-    <string name="update_checker_no_internet">Gan nasc idirlín</string>
-    <string name="update_checker_generic_error">Chuaigh rud éigin mícheart… Déan iarracht arís ar ball</string>
     <!--Settings About-->
     <string name="about_morphe_description">Is tionscadal foinse oscailte é Morphe atá deartha chun aipeanna Android a mhodhnú trí phaistí.</string>
 </resources>

@@ -30,6 +30,7 @@ import androidx.credentials.provider.CustomCredentialEntry
 import com.google.android.gms.R
 import org.microg.gms.auth.credentials.provider.GoogleIdRequestParams.Companion.toGoogleIdRequestParams
 import org.microg.gms.auth.AuthConstants
+import org.microg.gms.base.core.BuildConfig
 
 private const val TAG = "GoogleIdService"
 
@@ -175,7 +176,7 @@ const val GOOGLE_ID_BUNDLE_KEY_PROFILE_PICTURE_URI = "com.google.android.librari
 const val GOOGLE_ID_FILTER_BY_AUTHORIZED_ACCOUNTS = "com.google.android.libraries.identity.googleid.BUNDLE_KEY_FILTER_BY_AUTHORIZED_ACCOUNTS"
 
 // Credential types
-const val TYPE_GOOGLE_ID_TOKEN_CREDENTIAL = "com.google.android.libraries.identity.googleid.TYPE_GOOGLE_ID_TOKEN_CREDENTIAL"
+const val TYPE_GOOGLE_ID_TOKEN_CREDENTIAL = "${BuildConfig.BASE_PACKAGE_NAME}.android.libraries.identity.googleid.TYPE_GOOGLE_ID_TOKEN_CREDENTIAL"
 
 data class GoogleIdRequestParams(
     val isSignInWithGoogle: Boolean,

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <include domain="sharedpref" path="app.revanced.android.gms_preferences.xml" />
+    <include domain="sharedpref" path="checkin.xml" />
+    <include domain="sharedpref" path="unified_nlp.xml" />
+    <include domain="file" path="accounts_backup.json" />
+</full-backup-content>

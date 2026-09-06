@@ -30,14 +30,6 @@
     <string name="about_root_summary">Tóm tắt</string>
     <string name="about_root_version">Phiên bản v0.1.0</string>
     <string name="about_root_libraries">Thư viện đi kèm</string>
-    <!--Updater-->
-    <string name="update_checker_button">Kiểm tra cập nhật</string>
-    <string name="update_checker_download_button">Tải về</string>
-    <!--updater: messages-->
-    <string name="update_checker_no_update">Hiện không có bản cập nhật nào</string>
-    <string name="update_checker_update_available">Đã có bản cập nhật mới: %s</string>
-    <string name="update_checker_no_internet">Không có kết nối mạng</string>
-    <string name="update_checker_generic_error">Đã xảy ra lỗi... Vui lòng thử lại sau</string>
     <!--Settings About-->
     <string name="about_morphe_description">Morphe là một dự án nguồn mở, được thiết kế để sửa đổi ứng dụng Android thông qua các bản vá</string>
 </resources>

@@ -8,5 +8,6 @@
     <!-- Settings strings -->
     <string name="prefcat_about">விபரம்</string>
     <string name="prefcat_accounts_settings_title">அமைப்புகள்</string>
+    <string name="update_open_settings">அமைப்புகள்</string>
     <!-- Passkey management -->
 </resources>

@@ -30,14 +30,6 @@
     <string name="about_root_summary">Σύνοψη</string>
     <string name="about_root_version">Έκδοση v0.1.0</string>
     <string name="about_root_libraries">Περιλαμβανόμενες βιβλιοθήκες</string>
-    <!--Updater-->
-    <string name="update_checker_button">Έλεγχος για ενημερώσεις</string>
-    <string name="update_checker_download_button">Λήψη</string>
-    <!--updater: messages-->
-    <string name="update_checker_no_update">Δεν υπάρχουν διαθέσιμες ενημερώσεις</string>
-    <string name="update_checker_update_available">Νέα ενημέρωση διαθέσιμη: %s</string>
-    <string name="update_checker_no_internet">Δεν υπάρχει σύνδεση με το διαδίκτυο</string>
-    <string name="update_checker_generic_error">Κάτι πήγε στραβά… Παρακαλώ δοκιμάστε αργότερα</string>
     <!--Settings About-->
     <string name="about_morphe_description">Το Morphe είναι ένα πρότζεκτ ανοιχτού κώδικα σχεδιασμένο να τροποποιεί εφαρμογές Android μέσω patches</string>
 </resources>

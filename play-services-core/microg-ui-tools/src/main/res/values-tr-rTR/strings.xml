@@ -30,14 +30,6 @@
     <string name="about_root_summary">Özet</string>
     <string name="about_root_version">Sürüm v0.1.0</string>
     <string name="about_root_libraries">İçerilen kütüphaneler</string>
-    <!--Updater-->
-    <string name="update_checker_button">Güncellemeleri kontrol et</string>
-    <string name="update_checker_download_button">İndir</string>
-    <!--updater: messages-->
-    <string name="update_checker_no_update">Güncelleme yok</string>
-    <string name="update_checker_update_available">Yeni güncelleme mevcut: %s</string>
-    <string name="update_checker_no_internet">İnternet bağlantısı yok</string>
-    <string name="update_checker_generic_error">Bir hata oluştu… Lütfen daha sonra tekrar deneyin</string>
     <!--Settings About-->
     <string name="about_morphe_description">Morphe, yamalar aracılığıyla Android uygulamalarını değiştirmek için tasarlanmış açık kaynaklı bir projedir</string>
 </resources>

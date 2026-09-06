@@ -30,14 +30,6 @@
     <string name="about_root_summary">Rezumat</string>
     <string name="about_root_version">Versiune v0.1.0</string>
     <string name="about_root_libraries">Bibliotece incluse</string>
-    <!--Updater-->
-    <string name="update_checker_button">Verifică actualizări</string>
-    <string name="update_checker_download_button">Descărcare</string>
-    <!--updater: messages-->
-    <string name="update_checker_no_update">Nu există actualizări disponibile</string>
-    <string name="update_checker_update_available">Există actualizări disponibile: %s</string>
-    <string name="update_checker_no_internet">Nu există conexiune la internet</string>
-    <string name="update_checker_generic_error">Ceva nu a mers bine… Te rugăm să încerci din nou mai târziu</string>
     <!--Settings About-->
     <string name="about_morphe_description">Morphe este un proiect open-source conceput pentru a modifica aplicații Android prin intermediul unor pachete</string>
 </resources>
