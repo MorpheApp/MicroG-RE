@@ -209,6 +209,7 @@
     <string name="update_notification_text">إصدار جديد متاح v%s، انقر للتحديث</string>
     <string name="update_notification_channel">التحديثات</string>
     <string name="update_notification_permission_title">الإشعارات</string>
+    <string name="update_notification_permission_message">لإبلاغك عند توفر تحديث جديد، يحتاج MicroG-RE إلى إذن لإرسال الإشعارات. يرجى السماح بالإشعارات حتى تتمكن من استلام تنبيهات التحديث.</string>
     <string name="update_notification_permission_allow">السماح</string>
     <string name="update_notification_permission_not_now">ليس الآن</string>
     <string name="update_notification_permission_open_settings">فتح الإعدادات</string>
@@ -476,6 +477,7 @@
     <string name="self_check_resolution_notifications">انقر هنا لفتح إعدادات الإشعارات. تُستخدم الإشعارات للحفاظ على تشغيل خدمة GcmService في الخلفية عند تمكين تحسين البطارية أو في ظروف أخرى.</string>
     <string name="self_check_name_oem_restriction">قيود عملية الخلفية</string>
     <string name="self_check_resolution_oem_restriction">قد يقيّد نظامك العمليات في الخلفية. انقر هنا لفتح موقع Don\'t Kill My App! وتعلم كيفية تعطيل هذه القيود</string>
+    <string name="morphe_sign_in_with_google_microg_label">تسجيل الدخول باستخدام Google عبر MicroG RE</string>
     <string name="self_check_patched_app_installed">قيد التشغيل باستخدام %1$s</string>
     <string name="self_check_action_download_morphe">تنزيل Morphe</string>
 </resources>

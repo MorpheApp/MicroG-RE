@@ -211,6 +211,7 @@ Veuillez configurer un écran de verrouillage avec un mot de passe, un code PIN 
     <string name="update_notification_text">La nouvelle version v%s est disponible. Appuyez pour mettre à jour</string>
     <string name="update_notification_channel">Mises à jour</string>
     <string name="update_notification_permission_title">Notifications</string>
+    <string name="update_notification_permission_message">Pour vous informer lorsqu\'une nouvelle mise à jour est disponible, MicroG-RE a besoin de l\'autorisation d’envoyer des notifications. Veuillez autoriser les notifications afin de recevoir les alertes de mise à jour.</string>
     <string name="update_notification_permission_allow">Autoriser</string>
     <string name="update_notification_permission_not_now">Pas maintenant</string>
     <string name="update_notification_permission_open_settings">Ouvrir les paramètres</string>
@@ -488,6 +489,7 @@ Vérifiez le statut d'enregistrement de l'appareil. Certaines applications pourr
     <string name="self_check_resolution_notifications">Appuyez ici pour ouvrir les paramètres de notifications. Les notifications sont utilisées pour maintenir GcmService en exécution en arrière-plan lorsque l\'optimisation de la batterie est activée ou dans d\'autres conditions</string>
     <string name="self_check_name_oem_restriction">Restrictions des processus en arrière-plan</string>
     <string name="self_check_resolution_oem_restriction">Votre système peut restreindre les processus en arrière-plan. Appuyez ici pour ouvrir le site Don\'t Kill My App! et savoir comment désactiver ces restrictions</string>
+    <string name="morphe_sign_in_with_google_microg_label">Se connecter avec Google via MicroG RE</string>
     <string name="self_check_patched_app_installed">Exécuté avec %1$s</string>
     <string name="self_check_action_download_morphe">Télécharger Morphe</string>
 </resources>

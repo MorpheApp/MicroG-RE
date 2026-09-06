@@ -209,6 +209,7 @@ Hesabın qurulması tamamlandıqdan sonra Google cihaz qeydiyyatını qapada bil
     <string name="update_notification_text">Yeni v%s mövcuddur, yeniləmək üçün toxun</string>
     <string name="update_notification_channel">Yenilənmələr</string>
     <string name="update_notification_permission_title">Bildirişlər</string>
+    <string name="update_notification_permission_message">Yenilənmə mövcud olduqda sizə xəbər vermək üçün MicroG-RE-nin bildiriş göndərmək üçün icazəyə ehtiyacı var. Xahiş olunur, yenilənmə xəbərdarlıqlarını sizə çatdırması üçün bildirişlərə icazə verin.</string>
     <string name="update_notification_permission_allow">İcazə verin</string>
     <string name="update_notification_permission_not_now">İndi deyil</string>
     <string name="update_notification_permission_open_settings">Tənzimləmələri aç</string>
@@ -473,6 +474,7 @@ Bəzi tətbiqlər bu proses sonrası təkrar qeydə alınmaya bilər. Tətbiqlə
     <string name="self_check_resolution_notifications">Bildiriş tənzimləmələrini açmaq üçün bura toxun. Bildirişlər, batareya optimallaşması işləkdirsə yaxud digər şərtlər altında GcmService-in fonda işləməsini saxlamaq üçün istifadə olunur.</string>
     <string name="self_check_name_oem_restriction">Fon prosesi məhdudiyyətləri</string>
     <string name="self_check_resolution_oem_restriction">Sisteminiz fon proseslərini məhdudlaşdıra bilər. \"Tətbiqimi Öldürməyin!\" saytını açmaq və bu məhdudiyyətləri necə bağlayacağınızı öyrənmək üçün bura toxunun</string>
+    <string name="morphe_sign_in_with_google_microg_label">MicroG RE vasitəsilə Google ilə daxil olun</string>
     <string name="self_check_patched_app_installed">%1$s ilə işləyir</string>
     <string name="self_check_action_download_morphe">Morphe-ni Yüklə</string>
 </resources>

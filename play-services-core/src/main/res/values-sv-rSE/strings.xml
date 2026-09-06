@@ -40,6 +40,8 @@ Det här kan ta några minuter."</string>
     <string name="deny">Neka</string>
     <string name="auth_notification_title">Autentisering krävs</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> requires your authorization to access your Google account.</string>
+    <string name="auth_package_override_request_title">Tillåt <b><xliff:g example="F-Droid">%1$s</xliff:g></b> privilegierad åtkomst till <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> vill komma åt ditt konto som om det vore <b><xliff:g example="F-Droid">%2$s</xliff:g> av <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Detta kan ge det privilegierad åtkomst till ditt konto.</string>
     <string name="auth_action_notification_channel_name">Google account alerts</string>
     <string name="auth_action_notification_channel_description">Notifies when one of your Google accounts requires additional setup before it can be used or when an account is incompatible with microG.</string>
     <string name="auth_action_notification_title">Account action required</string>
@@ -207,6 +209,7 @@ Please set up a password, PIN, or pattern lock screen."</string>
     <string name="update_notification_text">Ny v%s är tillgänglig, tryck för att uppdatera</string>
     <string name="update_notification_channel">Uppdateringar</string>
     <string name="update_notification_permission_title">Aviseringar</string>
+    <string name="update_notification_permission_message">För att du ska få veta när en ny uppdatering är tillgänglig behöver MicroG-RE behörighet att skicka aviseringar. Tillåt aviseringar så att uppdateringsaviseringar kan nå dig.</string>
     <string name="update_notification_permission_allow">Tillåt</string>
     <string name="update_notification_permission_not_now">Inte nu</string>
     <string name="update_notification_permission_open_settings">Öppna inställningarna</string>
@@ -473,6 +476,7 @@ Vissa appar kanske inte kan registrera sig igen efter denna åtgärd. Du kan beh
     <string name="self_check_resolution_notifications">Tryck här för att öppna aviseringsinställningarna. Aviseringar används för att hålla GcmService igång i bakgrunden när batterioptimering är aktiverad eller under andra omständigheter</string>
     <string name="self_check_name_oem_restriction">Begränsningar för bakgrundsprocesser</string>
     <string name="self_check_resolution_oem_restriction">Your system may restrict background processes. Tap here to open Don\'t Kill My App! site and learn how to disable these restrictions</string>
+    <string name="morphe_sign_in_with_google_microg_label">Logga in med Google via MicroG RE</string>
     <string name="self_check_patched_app_installed">Körs med %1$s</string>
     <string name="self_check_action_download_morphe">Ladda ned Morphe</string>
 </resources>

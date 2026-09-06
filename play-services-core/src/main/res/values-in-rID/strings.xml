@@ -209,6 +209,10 @@ Silakan atur kata sandi, PIN, atau pola kunci layar."</string>
     <string name="update_notification_text">Versi baru v%s tersedia, ketuk untuk memperbarui</string>
     <string name="update_notification_channel">Pembaruan</string>
     <string name="update_notification_permission_title">Notifikasi</string>
+    <string name="update_notification_permission_message">Untuk memberi tahu Anda saat pembaruan baru tersedia, MicroG-RE memerlukan izin untuk mengirim notifikasi. Mohon izinkan notifikasi agar peringatan pembaruan dapat sampai kepada Anda.</string>
+    <string name="update_notification_permission_allow">Izinkan</string>
+    <string name="update_notification_permission_not_now">Nanti saja</string>
+    <string name="update_notification_permission_open_settings">Buka setelan</string>
     <string name="gcm_unregister_app">Batalkan pendaftaran</string>
     <string name="gcm_no_message_yet">Belum ada pesan yang diterima hingga saat ini</string>
     <string name="gcm_last_message_at">Pesan terakhir: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
@@ -472,6 +476,7 @@ Beberapa aplikasi mungkin tidak dapat mendaftar lagi setelah melakukan ini. Anda
     <string name="self_check_resolution_notifications">Ketuk di sini untuk membuka pengaturan pemberitahuan. Pemberitahuan digunakan untuk menjaga GcmService berjalan di latar belakang ketika optimasi baterai diaktifkan atau dalam keadaan lain</string>
     <string name="self_check_name_oem_restriction">Batasi proses latar belakang</string>
     <string name="self_check_resolution_oem_restriction">Sistem Anda mungkin membatasi proses latar belakang. Klik di sini untuk membuka situs Don’t Kill My App! dan mempelajari bagaimana menonaktifkan batasan ini</string>
+    <string name="morphe_sign_in_with_google_microg_label">Masuk dengan Google melalui MicroG RE</string>
     <string name="self_check_patched_app_installed">Berjalan dengan %1$s</string>
     <string name="self_check_action_download_morphe">Unduh Morphe</string>
 </resources>

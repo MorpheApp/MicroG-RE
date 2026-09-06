@@ -211,6 +211,7 @@ Socraigh pasfhocal, PIN, nó patrún glas scáileáin le do thoil."</string>
     <string name="update_notification_text">Tá v%s nua ar fáil, tapáil chun nuashonrú a dhéanamh</string>
     <string name="update_notification_channel">Nuashonruithe</string>
     <string name="update_notification_permission_title">Fógraí</string>
+    <string name="update_notification_permission_message">Chun tú a chur ar an eolas nuair a bheidh nuashonrú nua ar fáil, teastaíonn cead ó MicroG-RE chun fógraí a sheoladh. Ceadaigh na fógraí le do thoil ionas go sroichfidh foláirimh nuashonraithe thú.</string>
     <string name="update_notification_permission_allow">Ceadaigh</string>
     <string name="update_notification_permission_not_now">Ní anois</string>
     <string name="update_notification_permission_open_settings">Oscail socruithe</string>
@@ -479,6 +480,7 @@ Tá cur i bhfeidhm saor ó SafetyNet i microG GmsCore, ach éilíonn an príomho
     <string name="self_check_resolution_notifications">Beartaigh anseo chun socruithe fógraí a oscailt. Úsáidtear fógraí chun GcmService a choinneáil ag rith sa chúlra nuair a bhíonn uasmhéadú ceallraí cumasaithe nó faoi choinníollacha eile.</string>
     <string name="self_check_name_oem_restriction">Srianta próisis chúlra</string>
     <string name="self_check_resolution_oem_restriction">D’fhéadfadh do chóras srian a chur le próisis chúlra. Tapáil anseo chun suíomh Ná Maraigh Mo Aip! a oscailt agus foghlaim conas na srianta seo a dhíchumasú.</string>
+    <string name="morphe_sign_in_with_google_microg_label">Sínigh isteach le Google trí MicroG RE</string>
     <string name="self_check_patched_app_installed">Ag rith le %1$s</string>
     <string name="self_check_action_download_morphe">Íoslódáil Morphe</string>
 </resources>
