@@ -5,12 +5,16 @@
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="foreground_service_notification_title">فعال در پس‌زمینه</string>
+    <string name="foreground_service_notification_text"><xliff:g example="Exposure Notification">%1$s</xliff:g> در پس‌زمینه در حال اجراست.</string>
+    <string name="foreground_service_notification_big_text"><xliff:g example="microG Services">%1$s</xliff:g> را از بهینه‌سازی باتری مستثنا کنید یا تنظیمات اعلان را تغییر دهید تا این اعلان پنهان شود.</string>
     <string name="foreground_action_battery_optimization">بهینه‌سازی باتری</string>
     <string name="foreground_action_notification_settings">تنظیمات</string>
     <string name="menu_advanced">پیشرفته</string>
     <string name="menu_settings">تنظیمات</string>
+    <string name="menu_game_managed">حساب‌های بازی مدیریت‌شده</string>
     <string name="list_no_item_none">موردی وجود ندارد</string>
     <string name="list_item_see_all">مشاهده همه</string>
+    <string name="open_app">بازکردن</string>
     <string name="service_status_disabled">غیرفعال</string>
     <string name="service_status_enabled">فعال</string>
     <string name="service_status_automatic">خودکار</string>

@@ -92,7 +92,9 @@ public class SelfCheckFragment extends AbstractSelfCheckFragment {
             }
             permissions.add(GET_ACCOUNTS);
             permissions.add(READ_PHONE_STATE);
-            permissions.add(RECEIVE_SMS);
+            // RE changes start
+            // permissions.add(RECEIVE_SMS);
+            // RE changes end
             checks.add(new PermissionCheckGroup(permissions.toArray(new String[0])) {
                 @Override
                 public void doChecks(Context context, ResultCollector collector) {

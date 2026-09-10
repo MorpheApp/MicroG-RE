@@ -21,11 +21,11 @@
     <string name="about_default_license">All rights reserved.</string>
     <string name="prefcat_setup">セットアップ</string>
     <string name="self_check_title">セルフチェック</string>
-    <string name="self_check_desc">システムがmicroGを使用するために正しく設定されているか確認してください。</string>
+    <string name="self_check_desc">microG を使用するためにシステムが正しく設定されているか確認してください。</string>
     <string name="self_check_cat_permissions">付与された権限</string>
     <string name="self_check_name_permission">%1$s の権限:</string>
     <string name="self_check_name_permission_interact_across_profiles">仕事用プロファイルと連携する権限：</string>
-    <string name="self_check_resolution_permission">ここをタップして権限を許可してください。この権限を許可しない場合、不安定なアプリケーションになります.</string>
+    <string name="self_check_resolution_permission">ここをタップして権限を付与してください。権限を付与しないと、アプリが正常に動作しなくなる可能性があります。</string>
     <string name="about_root_title">microG UI デモ</string>
     <string name="about_root_summary">概要</string>
     <string name="about_root_version">バージョン v0.1.0</string>

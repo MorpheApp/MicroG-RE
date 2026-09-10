@@ -15,13 +15,20 @@
   ~ limitations under the License.
   -->
 <resources>
+    <string name="lib_name">ابزارهای رابط microG</string>
+    <string name="lib_license">مجوز Apache 2.0، تیم microG</string>
     <string name="about_version_str">نسخه %1$s</string>
     <string name="about_default_license">تمام حقوق محفوظ است.</string>
+    <string name="prefcat_setup">راه‌اندازی</string>
     <string name="self_check_title">بررسی خودکار</string>
+    <string name="self_check_desc">بررسی کنید آیا سیستم برای استفاده از microG درست راه‌اندازی شده است.</string>
+    <string name="self_check_cat_permissions">مجوزهای اعطاشده</string>
     <string name="self_check_name_permission">دسترسی برای %1$s:</string>
+    <string name="self_check_name_permission_interact_across_profiles">مجوز تعامل با نمایهٔ کاری:</string>
+    <string name="self_check_resolution_permission">برای اعطای مجوز اینجا ضربه بزنید. اعطانکردن مجوز ممکن است باعث رفتار نادرست برنامه‌ها شود.</string>
     <string name="about_root_title">نمایش رابط کاربری microG</string>
-    <string name="about_root_version">نسخه v0.1.0
-</string>
+    <string name="about_root_summary">خلاصه</string>
+    <string name="about_root_version">نسخهٔ v0.1.0</string>
     <string name="about_root_libraries">کتابخانه‌های شامل شده</string>
     <!--Settings About-->
     <string name="about_morphe_description">Morphe یک پروژه متن‌باز است که برای تغییر برنامه‌های اندروید از طریق پچ‌ها طراحی شده است</string>

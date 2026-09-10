@@ -444,7 +444,7 @@ Beberapa aplikasi mungkin tidak dapat mendaftar lagi setelah melakukan ini. Anda
     <string name="location_sharing_description">Kelola berbagi lokasi real-time Anda di seluruh aplikasi dan layanan Google dari perangkat ini</string>
     <string name="location_sharing_learn_more">Pelajari lebih lanjut tentang &quot;Berbagi Lokasi&quot;</string>
     <string name="location_sharing_switch_text">Gunakan Berbagi Lokasi</string>
-    <string name="location_sharing_turn_off_notify_hint">Jika Anda mematikan Bagikan Lokasi untuk perangkat ini, orang-orang yang Anda bagikan lokasinya tidak akan menerima pemberitahuan.</string>
+    <string name="location_sharing_turn_off_notify_hint">Jika Anda mematikan Berbagi Lokasi untuk perangkat ini, orang-orang yang berbagi lokasi dengan Anda tidak akan diberi tahu.</string>
     <string name="location_sharing_off_previous_hint">Hanya lokasi terakhir yang Anda bagikan yang akan tersedia hingga Anda mengaktifkannya kembali.</string>
     <string name="location_sharing_disabled">Tidak ada berbagi lokasi aktif untuk akun ini</string>
     <string name="location_sharing_turn_on_hint">Setelah Anda mulai membagikan lokasi Anda dari aplikasi atau layanan Google, Anda dapat mengelola Pembagian Lokasi dari sini.\n\nUntuk mulai membagikan lokasi Anda, buka Google Maps atau Family Link.</string>
