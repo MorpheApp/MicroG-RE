@@ -15,16 +15,16 @@
   ~ limitations under the License.
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="gcm_registered_apps_counter">
+        <item quantity="one"><xliff:g example="1">%1$d</xliff:g> برنامهٔ ثبت‌شده</item>
+        <item quantity="other"><xliff:g example="123">%1$d</xliff:g> برنامهٔ ثبت‌شده</item>
+    </plurals>
     <plurals name="cond_perm_summary">
-        <item quantity="one">یک دسترسی مورد نیاز برای عملکرد صحیح سرویس‌های microG، داده نشده است.
-</item>
-        <item quantity="other">دسترسی‌های مورد نیاز برای عملکرد صحیح سرویس‌های microG، داده نشده‌اند.
-</item>
+        <item quantity="one">مجوز لازم برای عملکرد صحیح سرویس‌های microG داده نشده است.</item>
+        <item quantity="other">مجوز لازم برای عملکرد صحیح سرویس‌های microG داده نشده است.</item>
     </plurals>
     <plurals name="cond_perm_action">
-        <item quantity="one">درخواست دسترسی داده‌نشده
-</item>
-        <item quantity="other">درخواست دسترسی‌های داده‌نشده
-</item>
+        <item quantity="one">درخواست مجوزهای داده‌نشده</item>
+        <item quantity="other">درخواست مجوزهای داده‌نشده</item>
     </plurals>
 </resources>
