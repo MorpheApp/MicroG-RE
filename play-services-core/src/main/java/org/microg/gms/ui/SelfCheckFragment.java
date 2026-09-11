@@ -138,7 +138,10 @@ public class SelfCheckFragment extends AbstractSelfCheckFragment {
                         CrossProfileApps crossProfile = context.getSystemService(CrossProfileApps.class);
                         boolean interactAllowed = context.checkSelfPermission("android.permission.INTERACT_ACROSS_USERS") == PackageManager.PERMISSION_GRANTED
                                 || crossProfile.canInteractAcrossProfiles();
-                        boolean canRequest = crossProfile.canRequestInteractAcrossProfiles();
+                        // The settings page this opens needs a managed work profile and crashes
+                        // without one, so it is only offered when the device has one.
+                        boolean canRequest = crossProfile.canRequestInteractAcrossProfiles()
+                                && WorkProfiles.hasManagedWorkProfile(context);
                         collector.addResult(
                                 context.getString(org.microg.tools.ui.R.string.self_check_name_permission_interact_across_profiles),
                                 interactAllowed ? Result.Positive : (canRequest ? Result.Negative : Result.Neutral),
