@@ -375,22 +375,21 @@ object AppUpdater {
         }
         refreshDialog(current)
 
+        // The buttons are part of the dialog instead of the layout, so the platform can stack
+        // them when their labels do not fit on one line. A layout owned button row pushes the
+        // last button out of the dialog on large font sizes and in languages whose labels are
+        // longer than the English ones.
         val dialog = MaterialAlertDialogBuilder(activity)
             .setView(view)
-            .create()
-        view.findViewById<android.widget.Button>(R.id.update_cancel)
-            .setOnClickListener { dialog.dismiss() }
-        view.findViewById<android.widget.Button>(R.id.update_ignore)
-            .setOnClickListener {
+            // Cancel is the neutral button so it stays the leftmost one, as in the layout before.
+            // The dialog dismisses itself after a button was pressed.
+            .setNeutralButton(android.R.string.cancel) { _, _ -> }
+            .setNegativeButton(R.string.update_ignore) { _, _ ->
                 prefs(activity).edit().putString(PREFS_IGNORED_VERSION, current.version).apply()
                 dismissUpdateNotification(activity)
-                dialog.dismiss()
             }
-        view.findViewById<android.widget.Button>(R.id.update_now)
-            .setOnClickListener {
-                dialog.dismiss()
-                runUpdateFlow(activity, current)
-            }
+            .setPositiveButton(R.string.update_now) { _, _ -> runUpdateFlow(activity, current) }
+            .create()
 
         // A dev build is always on the dev channel (forced by the version-name match) and
         // cannot be toggled off without a clean install, so only show the switch on stable

@@ -93,46 +93,4 @@
             android:scaleX="0.8"
             android:scaleY="0.8" />
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:gravity="end"
-        android:orientation="horizontal">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/update_cancel"
-            style="@style/Widget.Material3.Button.TextButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:insetLeft="0dp"
-            android:insetRight="0dp"
-            android:minWidth="0dp"
-            android:text="@android:string/cancel" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/update_ignore"
-            style="@style/Widget.Material3.Button.TextButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:insetLeft="0dp"
-            android:insetRight="0dp"
-            android:layout_marginStart="4dp"
-            android:minWidth="0dp"
-            android:text="@string/update_ignore" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/update_now"
-            style="@style/Widget.Material3.Button.TextButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:insetLeft="0dp"
-            android:insetRight="0dp"
-            android:layout_marginStart="4dp"
-            android:minWidth="0dp"
-            android:text="@string/update_now"
-            android:textColor="?attr/colorPrimary"
-            android:textStyle="bold" />
-    </LinearLayout>
 </LinearLayout>
