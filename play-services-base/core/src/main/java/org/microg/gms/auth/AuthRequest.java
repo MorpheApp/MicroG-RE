@@ -15,6 +15,9 @@ import org.microg.gms.common.Utils;
 import org.microg.gms.profile.ProfileManager;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.Locale;
 import java.util.Map;
 
@@ -105,6 +108,50 @@ public class AuthRequest extends HttpFormClient.Request {
     @Override
     protected void prepare() {
         userAgent = String.format(USER_AGENT, deviceName, buildVersion);
+        // The auth endpoint expects certificate SHA-1 fingerprints, not the
+        // certificate's DER encoding (which Signature.toCharsString() returns).
+        appSignature = normalizeSignatureDigest(appSignature);
+        callerSignature = normalizeSignatureDigest(callerSignature);
+    }
+
+    /**
+     * Normalize a certificate value for the legacy auth endpoint. Spoofed
+     * signatures are normally already fingerprints, while values obtained
+     * directly from PackageManager may be DER encoded as hexadecimal.
+     */
+    static String normalizeSignatureDigest(String signature) {
+        if (signature == null || signature.isEmpty()) return signature;
+
+        String value = signature.trim();
+        if (value.matches("(?i)[0-9a-f]{40}")) return value.toLowerCase(Locale.ROOT);
+
+        byte[] certificate = decodeHex(value);
+        if (certificate == null) {
+            // Keep this defensive fallback useful for callers which provide a
+            // non-hex certificate representation rather than failing a token
+            // request with an unnormalized value.
+            certificate = value.getBytes(StandardCharsets.UTF_8);
+        }
+        try {
+            byte[] digest = MessageDigest.getInstance("SHA-1").digest(certificate);
+            StringBuilder result = new StringBuilder(digest.length * 2);
+            for (byte b : digest) result.append(String.format(Locale.ROOT, "%02x", b & 0xff));
+            return result.toString();
+        } catch (NoSuchAlgorithmException e) {
+            throw new IllegalStateException("SHA-1 is not available", e);
+        }
+    }
+
+    private static byte[] decodeHex(String value) {
+        if ((value.length() & 1) != 0) return null;
+        byte[] result = new byte[value.length() / 2];
+        for (int i = 0; i < value.length(); i += 2) {
+            int high = Character.digit(value.charAt(i), 16);
+            int low = Character.digit(value.charAt(i + 1), 16);
+            if (high < 0 || low < 0) return null;
+            result[i / 2] = (byte) ((high << 4) | low);
+        }
+        return result;
     }
 
     public AuthRequest build(Context context) {

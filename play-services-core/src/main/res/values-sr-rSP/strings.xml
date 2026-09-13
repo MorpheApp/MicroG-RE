@@ -16,7 +16,6 @@ Vaši podaci neće biti izgubljeni"</string>
     <string name="snackbar_undo_button">Поврати</string>
     <string name="gms_settings_name">MicroG Подешавања</string>
     <string name="gms_settings_summary">Подеси MicroG услуге.</string>
-    <string name="just_a_sec">Само тренутак... (one: Само тренутак... few: Само тренутка... other: Само тренутака...) </string>
     <string name="ask_permission_tos">Настављањем, дозвољавате овој апликацији и Google-у да користе ваше информације у складу са њиховим условима коришћења и политикама приватности.</string>
     <string name="ask_scope_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> би желео да:</string>
     <string name="ask_service_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> би желео да користи:</string>
@@ -50,6 +49,9 @@ Vaši podaci neće biti izgubljeni"</string>
     <string name="auth_action_activity_header">Завршите подешавање вашег Google налога</string>
     <string name="auth_action_activity_explanation">Довршите следеће кораке да бисте могли да користите ваш Google налог %s на овом уређају.</string>
     <string name="auth_action_step_enable_checkin">Омогући регистрацију уређаја</string>
+    <string name="auth_action_step_enable_checkin_description">"Ваш уређај мора да се региструје на Google-у најмање једном.
+
+Можете да онемогућите регистрацију уређаја на Google-у након што је подешавање налога завршено."</string>
     <string name="auth_action_step_enable_gcm">Омогући Cloud Messaging</string>
     <string name="auth_action_step_enable_gcm_description">Можете онемогућити Cloud Messaging након што је подешавање налога завршено.</string>
     <string name="auth_action_step_allow_microg_gcm">Дозволи Cloud Messaging за microG</string>
