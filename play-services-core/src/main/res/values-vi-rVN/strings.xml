@@ -38,6 +38,9 @@
     <string name="auth_action_activity_header">Hoàn tất thiết lập tài khoản Google của bạn</string>
     <string name="auth_action_activity_explanation">Hoàn tất các bước sau để có thể sử dụng tài khoản Google %s của bạn trên thiết bị này.</string>
     <string name="auth_action_step_enable_checkin">Bật đăng ký thiết bị</string>
+    <string name="auth_action_step_enable_checkin_description">"Thiết bị của bạn cần đăng ký với Google ít nhất một lần.
+
+Bạn có thể tắt tính năng đăng ký thiết bị Google sau khi hoàn tất thiết lập tài khoản."</string>
     <string name="auth_action_step_enable_gcm">Bật Cloud Messaging</string>
     <string name="auth_action_step_enable_gcm_description">Bạn có thể tắt Cloud Messaging sau khi hoàn tất thiết lập tài khoản.</string>
     <string name="auth_action_step_allow_microg_gcm">Cho phép Cloud Messaging cho microG</string>

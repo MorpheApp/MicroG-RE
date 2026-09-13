@@ -19,7 +19,7 @@
     <string name="lib_license">Apache License 2.0, microG Team</string>
     <string name="about_version_str">バージョン %1$s</string>
     <string name="about_default_license">All rights reserved.</string>
-    <string name="prefcat_setup">セットアップ</string>
+    <string name="prefcat_setup">設定</string>
     <string name="self_check_title">セルフチェック</string>
     <string name="self_check_desc">microG を使用するためにシステムが正しく設定されているか確認してください。</string>
     <string name="self_check_cat_permissions">付与された権限</string>

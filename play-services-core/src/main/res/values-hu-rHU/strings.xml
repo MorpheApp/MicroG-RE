@@ -192,6 +192,7 @@ A Google-eszközregisztrációt a fiókbeállítás befejezése után letilthatj
     <string name="update_include_prerelease">Előzetes / fejlesztői verziók</string>
     <string name="update_available_title">Frissítés elérhető</string>
     <string name="update_available_prerelease_title">Frissítés érhető el (előzetes verzió)</string>
+    <string name="update_available_message">Új v%1s érhető el. A telepített verzió: v%2$s. Szeretné letölteni és telepíteni a frissítést?</string>
     <string name="update_now">Frissítés</string>
     <string name="update_whats_new">Újdonságok</string>
     <string name="update_ignore">Kihagy</string>
