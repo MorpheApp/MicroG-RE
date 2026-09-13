@@ -50,6 +50,9 @@
     <string name="auth_action_activity_header">আপনার Google অ্যাকাউন্ট সেটআপ সম্পূর্ণ করুন</string>
     <string name="auth_action_activity_explanation">এই ডিভাইসে আপনার Google অ্যাকাউন্ট %s ব্যবহার করতে নিম্নলিখিত ধাপগুলি সম্পূর্ণ করুন।</string>
     <string name="auth_action_step_enable_checkin">ডিভাইস নিবন্ধন সক্রিয় করুন</string>
+    <string name="auth_action_step_enable_checkin_description">"আপনার ডিভাইসটিকে অন্তত একবার Google-এ নিবন্ধন করতে হবে.
+
+অ্যাকাউন্ট সেটআপ সম্পূর্ণ হওয়ার পরে আপনি Google ডিভাইস নিবন্ধন নিষ্ক্রিয় করতে পারেন."</string>
     <string name="auth_action_step_enable_gcm">ক্লাউড মেসেজিং সক্রিয় করুন</string>
     <string name="auth_action_step_enable_gcm_description">অ্যাকাউন্ট সেটআপ সম্পূর্ণ হওয়ার পরে আপনি ক্লাউড মেসেজিং অক্ষম করতে পারেন।</string>
     <string name="auth_action_step_allow_microg_gcm">microG-এর জন্য ক্লাউড মেসেজিং অনুমতি দিন</string>

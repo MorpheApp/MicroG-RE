@@ -17,7 +17,7 @@
     <string name="gms_settings_name">MicroG 設定</string>
     <string name="gms_settings_summary">MicroG サービスを設定します。</string>
     <string name="just_a_sec">少々お待ちください…</string>
-    <string name="ask_permission_tos">続行することにより、このアプリと Google が、それぞれの利用規約およびプライバシーポリシーに従ってあなたの情報を使用することに同意したものとみなされます.</string>
+    <string name="ask_permission_tos">続行することで、このアプリおよび Google が、それぞれの利用規約およびプライバシー ポリシーに従って、お客様の情報を使用することに同意したものとみなされます。</string>
     <string name="ask_scope_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> は次を使用しようとしています：</string>
     <string name="ask_service_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> は次を使用しようとしています：</string>
     <string name="account_manager_title">Google アカウント マネージャー</string>
@@ -33,20 +33,20 @@
     <string name="auth_general_error_desc">"Google サーバーとの通信に問題が発生しました。
 
 後でもう一度お試しください。"</string>
-    <string name="auth_finalize">"デバイスがアカウントに情報を保存するために Google に接続しています。
+    <string name="auth_finalize">"お使いのデバイスが、アカウントに情報を保存するために Google に接続しています。
 
-この処理には数分かかる場合があります."</string>
+これには数分かかる場合があります。"</string>
     <string name="allow">許可</string>
     <string name="deny">拒否</string>
     <string name="auth_notification_title">認証が必要です</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> は、Google アカウントへのアクセスを許可する必要があります。</string>
     <string name="auth_package_override_request_title"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> に <xliff:g example="account@example.com">%2$s</xliff:g> への特権アクセスを許可しますか？</string>
     <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> は、<b><xliff:g example="F-Droid">%2$s</xliff:g>（提供元: <xliff:g example="F-Droid Inc.">%3$s</xliff:g>）</b> としてあなたのアカウントにアクセスしようとしています。これにより、あなたのアカウントへの特権アクセスが許可される可能性があります。</string>
-    <string name="auth_action_notification_channel_name">Google アカウントアラート</string>
+    <string name="auth_action_notification_channel_name">Google アカウント アラート</string>
     <string name="auth_action_notification_channel_description">Google アカウントのいずれかを使用する前に追加の設定が必要な場合、またはアカウントが microG と互換性がない場合に通知します。</string>
-    <string name="auth_action_notification_title">アカウントアクションが必要です</string>
+    <string name="auth_action_notification_title">アカウント操作が必要です</string>
     <string name="auth_action_notification_content">Google アカウントには追加の設定が必要です。</string>
-    <string name="auth_action_reauth_notification_title">アカウントアクションが必要です</string>
+    <string name="auth_action_reauth_notification_title">アカウント操作が必要です</string>
     <string name="auth_action_activity_header">Google アカウントの設定を完了してください</string>
     <string name="auth_action_activity_explanation">このデバイスで Google アカウント %s を使用できるようにするには、以下の手順を完了してください。</string>
     <string name="auth_action_step_enable_checkin">デバイス登録を有効にする</string>
@@ -86,8 +86,8 @@
     <string name="perm_car_fuel_description">"車の燃料レベル情報にアクセス"</string>
     <string name="perm_car_mileage_label">車の走行距離</string>
     <string name="perm_car_mileage_description">"車の走行距離情報にアクセス"</string>
-    <string name="perm_car_vendor_extension_label">車両ベンダーチャネル</string>
-    <string name="perm_car_vendor_extension_description">"車固有の情報を交換するための車両ベンダーチャネルにアクセス"</string>
+    <string name="perm_car_vendor_extension_label">自動車販売チャネル</string>
+    <string name="perm_car_vendor_extension_description">"自動車販売チャネルにアクセスして、車固有の情報を交換します"</string>
     <string name="service_name_checkin">デバイス登録</string>
     <string name="service_name_mcs">クラウド メッセージング</string>
     <string name="service_name_device_attestation">デバイス証明</string>
@@ -113,11 +113,11 @@
     <string name="self_check_pkg_vending">microG コンパニオン / Play ストア</string>
     <string name="self_check_pkg_gsf">microG サービス フレームワーク</string>
     <string name="self_check_name_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> がインストールされています: </string>
-    <string name="self_check_resolution_app_installed">アプリケーション <xliff:g example="F-Droid">%1$s</xliff:g> または互換性のあるものをインストールしてください。互換性のあるアプリケーションについてはドキュメントを確認してください。</string>
+    <string name="self_check_resolution_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> または互換性のあるアプリをインストールしてください。互換性のあるアプリについては、ドキュメントをご確認ください。</string>
     <string name="self_check_name_correct_sig"><xliff:g example="F-Droid">%1$s</xliff:g> の署名は正しいです: </string>
     <string name="self_check_resolution_correct_sig">インストールされている <xliff:g example="F-Droid">%1$s</xliff:g> は互換性がないか、署名偽装が有効になっていません。互換性のあるアプリと ROM については、ドキュメントをご確認ください。</string>
-    <string name="self_check_name_battery_optimizations">バッテリー最適化を無視: </string>
-    <string name="self_check_resolution_battery_optimizations">バッテリー最適化を無効にするにはここをタッチしてください。これを行わないとアプリケーションが誤動作する可能性があります。</string>
+    <string name="self_check_name_battery_optimizations">バッテリーの最適化を無視: </string>
+    <string name="self_check_resolution_battery_optimizations">バッテリーの最適化を無効にするには、ここをタップしてください。無効にしないと、アプリが正常に動作しなくなる可能性があります。</string>
     <!-- Settings strings -->
     <string name="prefcat_about">このアプリについて</string>
     <string name="prefcat_details">詳細</string>
@@ -133,11 +133,11 @@
     <string name="pref_auth_visible_title">アプリによるアカウントの検出を許可</string>
     <string name="pref_auth_visible_summary">有効にすると、このデバイス上のすべてのアプリが、事前の許可なしに Google アカウントのメールアドレスを確認できるようになります。</string>
     <string name="pref_auth_include_android_id_title">デバイス登録による認証</string>
-    <string name="pref_auth_include_android_id_summary">無効にすると、認証要求がデバイス登録にリンクされず、不正なデバイスがサインインできる可能性がありますが、予期しない結果が生じる可能性があります。</string>
+    <string name="pref_auth_include_android_id_summary">無効にすると、認証要求はデバイス登録にリンクされなくなるため、不正なデバイスがサインインできる可能性がありますが、予期せぬ結果を招く可能性があります。</string>
     <string name="pref_auth_strip_device_name_title">認証時にデバイス名を削除</string>
-    <string name="pref_auth_strip_device_name_summary">有効にすると、認証リクエストにデバイス名が含まれず、未承認のデバイスからでもログインできるようになる可能性がありますが、予期せぬ結果をもたらすおそれがあります.</string>
+    <string name="pref_auth_strip_device_name_summary">有効にすると、認証要求にデバイス名が含まれなくなるため、不正なデバイスがサインインできる可能性がありますが、予期せぬ結果を招く可能性があります。</string>
     <string name="pref_auth_two_step_verification_title">2 段階認証の通知を受け取る</string>
-    <string name="pref_auth_two_step_verification_summary">有効にすると、デバイスはGoogleから2段階認証プロンプトを受信できます（クラウドメッセージングが必要です）。</string>
+    <string name="pref_auth_two_step_verification_summary">この機能を有効にすると、デバイスは Google からの 2 段階認証の通知を受信できるようになります（クラウド メッセージングが必要です）。</string>
     <string name="pref_auth_allow_find_devices_title">Find Hub への応答を許可</string>
     <string name="pref_auth_allow_find_devices_summary">この機能を有効にすると、デバイスは Google からの「Find My Device」通知に応答できるようになります（クラウド メッセージングが必要です）。</string>
     <string name="pref_checkin_enable_summary">お使いのデバイスを Google サービスに登録し、固有のデバイス識別子を作成します。microG は、登録データから Google アカウント名以外の識別情報を削除します。</string>
@@ -160,7 +160,7 @@
     <string name="pref_accounts_restore_title">アカウントを復元</string>
     <string name="pref_accounts_restore_summary">Google アカウントをファイルからインポート</string>
     <string name="pref_accounts_backup_warning_title">アカウントをバックアップしますか？</string>
-    <string name="pref_accounts_backup_warning_message">この操作により、アカウントとログイントークン（SID/LSID）がファイルに書き込まれます。このファイルを入手した人は誰でもアカウントにアクセスできるため、安全に保管し、共有しないでください。</string>
+    <string name="pref_accounts_backup_warning_message">この操作により、アカウント情報とログイン トークン（SID/LSID）がファイルに書き込みます。このファイルを入手した人は誰でもお客様のアカウントにアクセスできるため、安全に保管し、決して他人と共有しないでください。</string>
     <string name="button_backup_accounts">バックアップ</string>
     <string name="snackbar_accounts_backed_up">アカウントをバックアップしました</string>
     <string name="snackbar_accounts_restored">%1$d 個のアカウントを復元しました</string>
@@ -280,10 +280,10 @@
     <string name="pref_safetynet_recent_eval_type">評価タイプ</string>
     <string name="pref_safetynet_recent_response_status">応答ステータス</string>
     <string name="pref_safetynet_recent_cat_response">応答データ</string>
-    <string name="pref_safetynet_recent_cat_request">リクエストデータ</string>
+    <string name="pref_safetynet_recent_cat_request">リクエスト データ</string>
     <string name="pref_safetynet_recent_nonce">Nonce（16 進数）</string>
     <string name="pref_safetynet_recent_request_time">リクエスト時刻</string>
-    <string name="pref_safetynet_recent_request_type">リクエストタイプ</string>
+    <string name="pref_safetynet_recent_request_type">リクエスト タイプ</string>
     <string name="pref_safetynet_recent_cat_basic">基本データ</string>
     <string name="pref_safetynet_recent_token">トークン</string>
     <string name="pref_safetynet_recent_copied">クリップボードにコピーしました!</string>
@@ -336,7 +336,7 @@
     <string name="credentials_assisted_continue_as_user_button_label">%1$s として続行</string>
     <string name="credentials_assisted_sign_back_title">Google で %1$s に再度ログイン</string>
     <string name="credentials_assisted_signin_consent_header">%1$s としてログイン</string>
-    <string name="credentials_assisted_signin_consent">続行すると、Google はあなたの名前、メールアドレス、プロフィール画像を %1$s と共有します。%1$s のプライバシーポリシーと利用規約をご覧ください。</string>
+    <string name="credentials_assisted_signin_consent">続行すると、Google はあなたの名前、メールアドレス、プロフィール画像を %1$s と共有します。%1$s のプライバシー ポリシーと利用規約をご覧ください。</string>
     <string name="credentials_assisted_signin_description">Google アカウントで「Google でログイン」の設定を管理できます。</string>
     <string name="credentials_assisted_choose_account_label">アカウントを選択</string>
     <string name="credentials_assisted_choose_account_subtitle">%1$s にログインするアカウント</string>
@@ -344,7 +344,7 @@
     <string name="credentials_assisted_signin_button_text_long">Google でログイン</string>
     <string name="credentials_assisted_signin_add_account">アカウントを追加</string>
     <string name="credentials_service_sign_in_with_google_label">Google でログイン</string>
-    <string name="credentials_service_remote_custom_subtitle">セキュリティキー、スマートフォン、タブレット</string>
+    <string name="credentials_service_remote_custom_subtitle">セキュリティ キー、スマートフォン、タブレット</string>
     <string name="limited_services_dialog_information">現在、microG 限定サービスを使用しています。通常の microG サービスとは異なり、この限定サービスは microG ライブラリを使用するアプリでのみ動作し、Google Play ストアのアプリでは動作しません。つまり、ほとんどのアプリはこのサービスを無視します。</string>
     <string name="limited_services_dialog_information_ack">理解しました</string>
     <string name="games_achievement_list_title">実績</string>
@@ -367,28 +367,28 @@
     <string name="games_state_description_signed_out">サインアウト済み</string>
     <string name="games_state_description_delete">削除</string>
     <string name="games_change_button_text">変更</string>
-    <string name="games_change_default_account_section_title">ゲームのデフォルトアカウントを変更</string>
-    <string name="games_change_default_account_description">デフォルトアカウント: %1$s</string>
-    <string name="games_change_default_account_explanation">このアカウントはゲームへの自動サインイン、ゲームの進行状況の保存、設定の保存に使用されます。デフォルトアカウントを変更したりサインアウトすると、プレイしたゲームの進行状況や設定がリセットされる可能性があります。</string>
+    <string name="games_change_default_account_section_title">ゲームのデフォルト アカウントを変更</string>
+    <string name="games_change_default_account_description">デフォルト アカウント: %1$s</string>
+    <string name="games_change_default_account_explanation">このアカウントは、ゲームへの自動ログイン、ゲームの進行状況の保存、設定の保存に使用されます。デフォルト アカウントを変更したり、ログアウトしたりすると、プレイしたゲームの進行状況や設定がリセットされる場合があります。</string>
     <string name="games_change_per_game_title">ゲームごとにアカウントを変更</string>
-    <string name="games_change_per_game_description">選択したゲームのアカウントを変更またはサインアウトすると、そのゲームの進行状況や設定がリセットされる可能性があります。</string>
-    <string name="games_change_default_account_for_all_games_dialog_title">新しいデフォルトアカウントのオプションを選択</string>
-    <string name="games_change_default_account_for_all_games_dialog_description">現在のデフォルトアカウント: %1$s</string>
-    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_title">新規ゲームのみデフォルトアカウントを変更</string>
+    <string name="games_change_per_game_description">選択したゲームのアカウントを変更したり、ゲームからログアウトしたりすると、ゲームの進行状況や設定がリセットされる場合があります。</string>
+    <string name="games_change_default_account_for_all_games_dialog_title">新しいデフォルト アカウントのオプションを選択</string>
+    <string name="games_change_default_account_for_all_games_dialog_description">現在のデフォルト アカウント: %1$s</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_title">新しいゲームのみデフォルト アカウントを変更 </string>
     <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_description">プレイしたゲームの進行状況や設定へのアクセスは失われません。ただし、進行状況はアカウント間で分割されます。</string>
-    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_title">すべてのゲームのデフォルトアカウントを変更</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_title"> すべてのゲームのデフォルト アカウントを変更 </string>
     <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_description">プレイしたゲームの進行状況や設定へのアクセスが失われる可能性があります。変更を適用するためにゲームを再起動します。</string>
-    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_title">すべてのゲームからサインアウト</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_title"> すべてのゲームからログアウト </string>
     <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_description">プレイしたゲームの進行状況や設定へのアクセスが失われる可能性があります。変更を適用するためにゲームを再起動します。</string>
     <string name="games_change_per_game_dialog_title">このゲームのオプションを選択</string>
-    <string name="games_change_per_game_dialog_description">アカウントを変更またはサインアウトすると、そのゲームの進行状況や設定がリセットされる可能性があります</string>
+    <string name="games_change_per_game_dialog_description">アカウントを変更したり、ログアウトしたりすると、ゲームの進行状況や設定がリセットされる場合があります</string>
     <string name="games_change_per_game_dialog_option_use_player">%1$s を使用</string>
-    <string name="games_change_per_game_dialog_option_use_player_snackbar_success_message">このゲームには %1$s でサインインします</string>
+    <string name="games_change_per_game_dialog_option_use_player_snackbar_success_message">%1$s でこのゲームにログインします</string>
     <string name="games_change_per_game_dialog_option_sign_out">ログアウト</string>
-    <string name="games_change_per_game_dialog_option_sign_out_snackbar_success_message">このゲームからサインアウトしました</string>
-    <string name="games_change_sign_out_of_all_games_snackbar_success_message">すべてのゲームからサインアウトしました</string>
-    <string name="games_change_default_account_for_all_games_snackbar_success_message">すべてのゲームに %1$s でサインインします</string>
-    <string name="games_change_default_account_for_new_games_snackbar_success_message">新規ゲームには %1$s でサインインします</string>
+    <string name="games_change_per_game_dialog_option_sign_out_snackbar_success_message">このゲームからログアウトしました</string>
+    <string name="games_change_sign_out_of_all_games_snackbar_success_message">すべてのゲームからログアウトしました</string>
+    <string name="games_change_default_account_for_all_games_snackbar_success_message">%1$s ですべてのゲームにログインします</string>
+    <string name="games_change_default_account_for_new_games_snackbar_success_message">%1$s で新しいゲームにログインします</string>
     <string name="games_account_display_content">現在のアカウント: %1$s</string>
     <string name="games_delete_profile_header">Play Games アカウントとすべてのデータを削除</string>
     <string name="games_delete_profile_explanation">Google Play Games アカウント、XP、およびすべてのプロフィール データを完全に削除します。この操作を行うと、プレイしたゲームのスコア、進行状況（セーブデータ）、および設定も削除される場合があります。</string>
@@ -434,11 +434,11 @@
     <string name="camera_permission_dialog_button">OK</string>
     <string name="camera_permission_dialog_message">microG サービスは、%1$s のコードをスキャンするために、デバイスのカメラにアクセスする必要があります。\n\n有効にするには、設定で microG サービスにカメラのアクセス権限を付与してください。</string>
     <string name="camera_permission_dialog_title">カメラ権限が必要です</string>
-    <string name="pref_app_install_settings_title">アプリインストーラー設定</string>
+    <string name="pref_app_install_settings_title">アプリ インストーラーの設定</string>
     <string name="pref_app_install_switch_title">アプリのインストールを許可</string>
     <string name="pref_app_install_other_apps_note">承認により、他のソースから提供されたアプリのインストールが許可されます。</string>
     <string name="pref_app_install_permission_instruction">インストールされたアプリが正しく動作するように、microG Companion に他のソースからダウンロードしたアプリのインストールを許可してください。</string>
-    <string name="prefcat_app_install_list_title">アプリインストーラーを使用するアプリ</string>
+    <string name="prefcat_app_install_list_title">アプリ インストーラーを使用するアプリ</string>
     <string name="service_name_google_location_sharing">Google 位置情報共有</string>
     <string name="location_sharing_description">このデバイスから、Google アプリとサービス全体でリアルタイムの位置情報共有を管理できます</string>
     <string name="location_sharing_learn_more">「位置情報共有」の詳細</string>
@@ -446,7 +446,7 @@
     <string name="location_sharing_turn_off_notify_hint">このデバイスの位置情報共有をオフにすると、共有している相手には通知されません。</string>
     <string name="location_sharing_off_previous_hint">再度オンにするまで、最後に共有した位置情報のみが利用可能です。</string>
     <string name="location_sharing_disabled">このアカウントのアクティブな位置情報共有はありません</string>
-    <string name="location_sharing_turn_on_hint">Google アプリまたはサービスから位置情報の共有を開始すると、ここから位置情報の共有を管理できます。\n\n位置情報の共有を開始するには、Google マップまたはファミリーリンクにアクセスしてください。</string>
+    <string name="location_sharing_turn_on_hint">Google アプリまたはサービスから位置情報の共有を開始すると、ここから位置情報の共有を管理できます。\n\n位置情報の共有を開始するには、Google マップまたはファミリー リンクにアクセスしてください。</string>
     <string name="location_sharing_turn_off_title">位置情報共有をオフ</string>
     <string name="location_sharing_turn_off_hint">同じ Google アカウントにログインしている他のデバイスや、Google 以外のアプリから位置情報が共有されている可能性があります。位置情報共有の設定が適用される可能性のある場所をすべて確認してください。\n\n位置情報を共有した相手には、最後に共有した位置情報が引き続き表示されます。</string>
     <string name="location_sharing_turn_off_cancel">オンを維持</string>
@@ -474,8 +474,8 @@
     <string name="self_check_name_notifications">通知の許可</string>
     <string name="self_check_resolution_notifications">ここをタップして通知設定を開いてください。通知は、バッテリーの最適化が有効になっている場合やその他の条件下で GcmService をバックグラウンドで実行し続けるために使用されます</string>
     <string name="self_check_name_oem_restriction">バックグラウンド処理の制限</string>
-    <string name="self_check_resolution_oem_restriction">システムがバックグラウンドプロセスを制限している可能性があります。タップして「Don\'t Kill My App!」サイトを開き、これらの制限を無効にする方法を確認してください</string>
-    <string name="morphe_sign_in_with_google_microg_label">MicroG RE 経由で Google にサインイン</string>
+    <string name="self_check_resolution_oem_restriction">お使いのシステムによっては、バックグラウンド プロセスが制限されている場合があります。ここをタップして「Don\'t Kill My App!」サイトを開き、これらの制限を無効にする方法をご確認ください</string>
+    <string name="morphe_sign_in_with_google_microg_label">MicroG RE 経由で Google にログイン</string>
     <string name="self_check_patched_app_installed">%1$s が適用されたアプリのインストール</string>
     <string name="self_check_action_download_morphe">Morphe をダウンロード</string>
 </resources>
