@@ -245,7 +245,7 @@ Please set up a password, PIN, or pattern lock screen."</string>
     <string name="pref_github_summary">Source code repository</string>
     <string name="pref_update_title">Check for updates</string>
     <string name="pref_update_summary">Check GitHub for a newer version.</string>
-    <string name="update_include_prerelease">Include pre-release / dev builds</string>
+    <string name="update_include_prerelease">Include dev builds</string>
     <string name="pref_about_summary" translatable="false">Version information and used libraries</string>
 
     <string name="update_available_title">Update available</string>

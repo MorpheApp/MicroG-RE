@@ -334,6 +334,39 @@ object AppUpdater {
         }.start()
     }
 
+    /**
+     * Keeps the action buttons inside the dialog.
+     *
+     * The dialog is a floating window with a capped height, and whatever does not fit is clipped
+     * at the bottom - exactly where the buttons sit. Everything else in the layout has a fixed
+     * height, so the release notes are the one part that has to give: give them whatever room is
+     * left over once the rest is laid out and let them scroll inside it. Without this a long
+     * changelog silently hides the last action.
+     */
+    private fun capReleaseNotes(
+        activity: Activity,
+        root: android.view.View,
+        scroll: android.widget.ScrollView,
+        notes: android.widget.TextView,
+    ) {
+        val available = root.height
+        if (available <= 0 || root.width <= 0) return
+        val density = activity.resources.displayMetrics.density
+        val wanted = notes.height
+
+        // Measure the dialog again without the notes to learn how much room the rest of it needs.
+        scroll.layoutParams = scroll.layoutParams.apply { height = 0 }
+        root.measure(
+            android.view.View.MeasureSpec.makeMeasureSpec(root.width, android.view.View.MeasureSpec.EXACTLY),
+            android.view.View.MeasureSpec.makeMeasureSpec(0, android.view.View.MeasureSpec.UNSPECIFIED)
+        )
+        val rest = root.measuredHeight
+        val allowed = (available - rest)
+            .coerceIn((48 * density).toInt(), (120 * density).toInt())
+        scroll.layoutParams = scroll.layoutParams.apply { height = minOf(wanted, allowed) }
+        scroll.requestLayout()
+    }
+
     private fun showUpdateDialog(activity: Activity, update: UpdateInfo) {
         val view = activity.layoutInflater.inflate(R.layout.dialog_update, null)
         var current = update
@@ -360,13 +393,7 @@ object AppUpdater {
                 // Cap the notes area after layout so long changelogs scroll instead of pushing
                 // the action buttons off the bottom of the dialog.
                 notesScroll.layoutParams.height = android.view.ViewGroup.LayoutParams.WRAP_CONTENT
-                notesScroll.post {
-                    val capPx = (280 * activity.resources.displayMetrics.density).toInt()
-                    if (notesView.height > capPx) {
-                        notesScroll.layoutParams.height = capPx
-                        notesScroll.requestLayout()
-                    }
-                }
+                notesScroll.post { capReleaseNotes(activity, view, notesScroll, notesView) }
             } else {
                 notesView.visibility = android.view.View.GONE
                 notesHeader.visibility = android.view.View.GONE
@@ -378,19 +405,22 @@ object AppUpdater {
         val dialog = MaterialAlertDialogBuilder(activity)
             .setView(view)
             .create()
-        view.findViewById<android.widget.Button>(R.id.update_cancel)
-            .setOnClickListener { dialog.dismiss() }
-        view.findViewById<android.widget.Button>(R.id.update_ignore)
+        // The actions are a full width vertical stack in the layout instead of the platform
+        // button bar, so a translation whose labels are longer than the English ones cannot
+        // clip them or leave the left half of the bar empty.
+        view.findViewById<com.google.android.material.button.MaterialButton>(R.id.update_action_update)
+            .setOnClickListener {
+                dialog.dismiss()
+                runUpdateFlow(activity, current)
+            }
+        view.findViewById<com.google.android.material.button.MaterialButton>(R.id.update_action_ignore)
             .setOnClickListener {
                 prefs(activity).edit().putString(PREFS_IGNORED_VERSION, current.version).apply()
                 dismissUpdateNotification(activity)
                 dialog.dismiss()
             }
-        view.findViewById<android.widget.Button>(R.id.update_now)
-            .setOnClickListener {
-                dialog.dismiss()
-                runUpdateFlow(activity, current)
-            }
+        view.findViewById<com.google.android.material.button.MaterialButton>(R.id.update_action_cancel)
+            .setOnClickListener { dialog.dismiss() }
 
         // A dev build is always on the dev channel (forced by the version-name match) and
         // cannot be toggled off without a clean install, so only show the switch on stable
@@ -401,7 +431,7 @@ object AppUpdater {
         }
         val switch = view.findViewById<com.google.android.material.materialswitch.MaterialSwitch>(R.id.update_prerelease_switch)
         switch.isChecked = includePrerelease(activity)
-        switch.setOnCheckedChangeListener { _, checked ->
+        bindPrereleaseRow(view, R.id.update_prerelease_row, switch) { checked ->
             setPrereleasePref(activity, checked)
             Thread {
                 val candidate = fetchLatestUpdate(
@@ -459,12 +489,27 @@ object AppUpdater {
         return html
     }
 
+    /**
+     * Turns the pre-release switch into a settings style row: pressing anywhere on the row
+     * toggles the switch, so the control is not a lone switch with a small touch target.
+     */
+    private fun bindPrereleaseRow(
+        view: android.view.View,
+        rowId: Int,
+        switch: com.google.android.material.materialswitch.MaterialSwitch,
+        onChanged: (Boolean) -> Unit
+    ) {
+        view.findViewById<android.view.View>(rowId).setOnClickListener { switch.toggle() }
+        switch.setOnCheckedChangeListener { _, checked -> onChanged(checked) }
+    }
+
     private fun showUpToDateDialog(activity: Activity, update: UpdateInfo) {
         val view = activity.layoutInflater.inflate(R.layout.dialog_up_to_date, null)
+        view.findViewById<android.widget.TextView>(R.id.up_to_date_title)
+            .setText(R.string.update_up_to_date_title)
         view.findViewById<android.widget.TextView>(R.id.up_to_date_message).text =
             activity.getString(R.string.update_up_to_date_message, update.version)
         val dialog = MaterialAlertDialogBuilder(activity)
-            .setTitle(R.string.update_up_to_date_title)
             .setView(view)
             .setPositiveButton(android.R.string.ok, null)
             .create()
@@ -480,9 +525,9 @@ object AppUpdater {
         val switch =
             view.findViewById<com.google.android.material.materialswitch.MaterialSwitch>(R.id.up_to_date_prerelease_switch)
         switch.isChecked = includePrerelease(activity)
-        switch.setOnCheckedChangeListener { _, checked ->
+        bindPrereleaseRow(view, R.id.up_to_date_prerelease_row, switch) { checked ->
             setPrereleasePref(activity, checked)
-            if (!checked) return@setOnCheckedChangeListener
+            if (!checked) return@bindPrereleaseRow
             Thread {
                 val candidate = fetchLatestUpdate(
                     activity.resources.getBoolean(R.bool.hide_launcher_icon_available),

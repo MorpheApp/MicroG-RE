@@ -127,7 +127,11 @@ class PushNotificationAppFragment : PreferenceFragmentCompat() {
                     sb.append(getString(R.string.gcm_registered_since, DateUtils.getRelativeDateTimeString(context, registration.timestamp, DateUtils.MINUTE_IN_MILLIS, DateUtils.WEEK_IN_MILLIS, DateUtils.FORMAT_SHOW_TIME)))
                 }
             }
-            status.summary = sb.toString()
+            // This info block is laid out with a title, there is no summary line in
+            // preference_material_information: feeding the summary left the card showing an
+            // information icon with no text at all.
+            status.title = sb.takeIf { it.isNotEmpty() }
+            status.isVisible = sb.isNotEmpty()
 
             database.close()
         }

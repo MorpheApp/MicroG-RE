@@ -45,6 +45,7 @@ import java.util.List;
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
 import static android.view.View.INVISIBLE;
+import static org.microg.tools.selfcheck.SelfCheckGroup.Result.Advisory;
 import static org.microg.tools.selfcheck.SelfCheckGroup.Result.Negative;
 import static org.microg.tools.selfcheck.SelfCheckGroup.Result.Neutral;
 import static org.microg.tools.selfcheck.SelfCheckGroup.Result.Positive;
@@ -168,7 +169,7 @@ public abstract class AbstractSelfCheckFragment extends Fragment {
                     resultIcon.setVisibility(VISIBLE);
                     if (result == Positive) {
                         resultIcon.setImageResource(R.drawable.ic_positive);
-                    } else if (result == Negative) {
+                    } else if (result == Negative || result == Advisory) {
                         resultIcon.setImageResource(R.drawable.ic_negative);
                     } else if (result == Neutral) {
                         resultIcon.setImageResource(R.drawable.ic_neutral);
