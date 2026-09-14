@@ -115,13 +115,14 @@ public class SelfCheckFragment extends AbstractSelfCheckFragment {
                                 }
                         );
                     }
-                    // Add SYSTEM_ALERT_WINDOW appops permission
+                    // Add SYSTEM_ALERT_WINDOW appops permission. Advisory: the targeted apps work
+                    // without it, so the row is listed but cannot fail the check.
                     try {
                         PermissionInfo info = pm.getPermissionInfo("android.permission.SYSTEM_ALERT_WINDOW", 0);
                         CharSequence permLabel = info.loadLabel(pm);
                         collector.addResult(
                                 context.getString(org.microg.tools.ui.R.string.self_check_name_permission, permLabel),
-                                Settings.canDrawOverlays(context) ? Result.Positive : Result.Negative,
+                                Settings.canDrawOverlays(context) ? Result.Positive : Result.Advisory,
                                 context.getString(org.microg.tools.ui.R.string.self_check_resolution_permission),
                                 fragment -> {
                                     Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:" + context.getPackageName()));
@@ -131,7 +132,8 @@ public class SelfCheckFragment extends AbstractSelfCheckFragment {
                     } catch (Exception e) {
                         Log.w("SelfCheckPerms", e);
                     }
-                    // Add INTERACT_ACROSS_PROFILES appop permission (INTERACT_ACROSS_USERS is superior)
+                    // Add INTERACT_ACROSS_PROFILES appop permission (INTERACT_ACROSS_USERS is superior),
+                    // advisory for the same reason as the permission above.
                     // Only show Negative when a request is actually possible (work profile exists);
                     // otherwise Neutral so the row isn't a dead end.
                     if (SDK_INT >= 30) try {
@@ -144,7 +146,7 @@ public class SelfCheckFragment extends AbstractSelfCheckFragment {
                                 && WorkProfiles.hasManagedWorkProfile(context);
                         collector.addResult(
                                 context.getString(org.microg.tools.ui.R.string.self_check_name_permission_interact_across_profiles),
-                                interactAllowed ? Result.Positive : (canRequest ? Result.Negative : Result.Neutral),
+                                interactAllowed ? Result.Positive : (canRequest ? Result.Advisory : Result.Neutral),
                                 context.getString(org.microg.tools.ui.R.string.self_check_resolution_permission),
                                 canRequest ? fragment -> {
                                     Intent intent = crossProfile.createRequestInteractAcrossProfilesIntent();
