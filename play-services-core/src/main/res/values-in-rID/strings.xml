@@ -324,7 +324,7 @@ Beberapa aplikasi mungkin tidak dapat mendaftar lagi setelah melakukan ini. Anda
     <string name="pref_workprofile_disclaimer">Anda bertanggung jawab untuk memastikan bahwa penggunaan microG Anda sesuai dengan kebijakan perusahaan.
         microG disediakan berdasarkan upaya terbaik dan tidak dapat menjamin bahwa perilakunya akan persis seperti yang diharapkan.</string>
     <string name="pref_auto_create_player">Izinkan pendaftaran akun Play Games</string>
-    <string name="pref_auto_create_player_intro">Saat bermain game, Anda perlu menggunakan akun Play Games untuk masuk dan mencatat fungsi terkait game, seperti pencapaian, papan peringkat, arsip, dan sebagainya. Setelah dinonaktifkan, akun Google yang tidak terikat dengan akun Play Games tidak akan terdaftar secara otomatis, dan game tidak akan dapat masuk dan dimainkan.</string>
+    <string name="pref_auto_create_player_intro">Saat bermain game, Anda perlu menggunakan akun Play Games untuk masuk dan mencatat berbagai fungsi terkait game, seperti pencapaian, papan peringkat, data tersimpan, dan sebagainya. Jika fitur ini dinonaktifkan, akun Google yang tidak ditautkan ke akun Play Games tidak akan didaftarkan secara otomatis, sehingga game tidak dapat digunakan untuk masuk maupun dimainkan.</string>
     <string name="pref_allow_upload_game_played">Izinkan pengunggahan permainan yang dimainkan</string>
     <string name="pref_allow_upload_game_played_summary">Ketika dinonaktifkan, permainan tidak akan melaporkan status permainan yang dimainkan setelah masuk ke dalam permainan, dan beberapa permainan mungkin tidak dapat masuk.</string>
     <string name="pref_change_default_game_player">Ubah akun untuk permainan</string>
