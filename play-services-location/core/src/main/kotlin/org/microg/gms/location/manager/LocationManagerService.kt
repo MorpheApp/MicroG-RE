@@ -45,7 +45,8 @@ class LocationManagerService : BaseService(TAG, GmsService.GOOGLE_LOCATION_MANAG
     }
 
     override fun handleServiceRequest(callback: IGmsCallbacks, request: GetServiceRequest, service: GmsService?) {
-        val packageName = PackageUtils.getAndCheckCallingPackage(this, request.packageName)
+        // AppOps and ClientIdentity must refer to the package that owns the Binder UID.
+        val packageName = PackageUtils.getAndCheckCallingPackageWithoutSpoofing(this, request.packageName)
             ?: throw IllegalArgumentException("Missing package name")
         locationManager.start()
         callback.onPostInitCompleteWithConnectionInfo(
