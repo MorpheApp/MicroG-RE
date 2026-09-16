@@ -231,7 +231,7 @@ Here is the response.```json
     <string name="pref_github_summary">%1$s में साइन इन करें</string>
     <string name="pref_update_title">अपडेट की जांच करें</string>
     <string name="pref_update_summary">नए संकरण के लिए GitHub पर जांच करें।</string>
-    <string name="update_include_prerelease">प्री-रिलीज़ / डेव बिल्ड शामिल करें</string>
+    <string name="update_include_prerelease">डेव बिल्ड्स शामिल करें</string>
     <string name="update_available_title">अपडेट उपलब्ध है</string>
     <string name="update_available_prerelease_title">अपडेट उपलब्ध है (प्री-रिलीज़)</string>
     <string name="update_available_message">नया v%1s उपलब्ध है। आपके पास v%2$s संस्करण इंस्टॉल है। अपडेट डाउनलोड करके इंस्टॉल करें?</string>

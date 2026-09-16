@@ -187,7 +187,6 @@ Vaši podaci neće biti izgubljeni"</string>
     <string name="pref_github_summary">Репозиториј изворног кода</string>
     <string name="pref_update_title">Proveri ažuriranja</string>
     <string name="pref_update_summary">Proveri na GitHub-u za noviju verziju.</string>
-    <string name="update_include_prerelease">Uključi preliminarne/dev verzije</string>
     <string name="update_available_title">Ažuriranje je dostupno</string>
     <string name="update_available_prerelease_title">Ažuriranje dostupno (preliminarno)</string>
     <string name="update_available_message">Nova verzija v%1s je dostupna. Imate verziju v%2$s. Preuzeti i instalirati ažuriranje?</string>

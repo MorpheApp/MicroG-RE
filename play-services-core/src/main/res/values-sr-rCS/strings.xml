@@ -186,7 +186,6 @@ Možete onemogućiti registraciju uređaja na Google nakon što je podešavanje 
     <string name="pref_github_summary">Repozitorijum izvora koda</string>
     <string name="pref_update_title">Proveri ažuriranja</string>
     <string name="pref_update_summary">Proveri na GitHub-u da li postoji novija verzija.</string>
-    <string name="update_include_prerelease">Uključi predizdanja / razvojne verzije</string>
     <string name="update_available_title">Dostupno ažuriranje</string>
     <string name="update_available_prerelease_title">Dostupno ažuriranje (predizdanje)</string>
     <string name="update_available_message">Nova v%1s je dostupna. Imaš instaliranu verziju v%2$s. Preuzmi i instaliraj ažuriranje?</string>

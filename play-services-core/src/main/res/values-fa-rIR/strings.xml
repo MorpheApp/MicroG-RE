@@ -188,7 +188,6 @@
     <string name="pref_github_summary">مخزن کد منبع</string>
     <string name="pref_update_title">بررسی به‌روزرسانی‌ها</string>
     <string name="pref_update_summary">بررسی نسخهٔ جدیدتر در GitHub.</string>
-    <string name="update_include_prerelease">گنجاندن ساخت‌های پیش‌انتشار / توسعه‌ای</string>
     <string name="update_available_title">به‌روزرسانی در دسترس است</string>
     <string name="update_available_prerelease_title">به‌روزرسانی در دسترس است (پیش‌انتشار)</string>
     <string name="update_available_message">نسخهٔ v%1s جدید در دسترس است. نسخهٔ v%2$s روی دستگاه شما نصب است. به‌روزرسانی دانلود و نصب شود؟</string>

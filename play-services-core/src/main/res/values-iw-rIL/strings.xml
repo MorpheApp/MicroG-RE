@@ -188,7 +188,7 @@
     <string name="pref_github_summary">ארכיון קוד מקור</string>
     <string name="pref_update_title">בדוק עדכונים</string>
     <string name="pref_update_summary">בדוק ב-GitHub לגרסה חדשה יותר.</string>
-    <string name="update_include_prerelease">כלול גרסאות פרה-הפצה / פיתוח</string>
+    <string name="update_include_prerelease">כלול גרסאות פיתוח</string>
     <string name="update_available_title">עדכון זמין</string>
     <string name="update_available_prerelease_title">עדכון זמין (פרה-הפצה)</string>
     <string name="update_available_message">גרסה חדשה v%1s זמינה. הגרסה המותקנת אצלך היא v%2$s. להוריד ולהתקין את העדכון?</string>

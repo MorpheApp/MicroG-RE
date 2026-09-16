@@ -97,7 +97,7 @@ Veuillez configurer un écran de verrouillage avec un mot de passe, un code PIN 
     <string name="games_title">Google Play Jeux</string>
     <string name="games_info_title"><xliff:g example="F-Droid">%1$s</xliff:g> souhaite utiliser Google Play Jeux.</string>
     <string name="games_info_content">Pour utiliser Google Play Jeux, il est nécessaire d\'installer l\'application Google Play Jeux. L\'application peut continuer sans Play Jeux, mais il est possible qu\'elle se comporte de manière inattendue.</string>
-    <string name="pick_place_title">Choisir un lieu</string>
+    <string name="pick_place_title">Sélectionner un lieu</string>
     <string name="place_picker_select_title">Sélectionner cet emplacement</string>
     <string name="place_picker_nearby_places">Lieux à proximité</string>
     <string name="network_type_mobile">Réseau mobile</string>
@@ -190,7 +190,7 @@ Veuillez configurer un écran de verrouillage avec un mot de passe, un code PIN 
     <string name="pref_github_summary">Dépôt du code source</string>
     <string name="pref_update_title">Vérifier les mises à jour</string>
     <string name="pref_update_summary">Vérifier sur GitHub si une version plus récente est disponible.</string>
-    <string name="update_include_prerelease">Inclure les préversions / de développement</string>
+    <string name="update_include_prerelease">Inclure les versions de développement</string>
     <string name="update_available_title">Mise à jour disponible</string>
     <string name="update_available_prerelease_title">Mise à jour disponible (préversion)</string>
     <string name="update_available_message">La nouvelle version v%1s est disponible. Vous avez la version v%2$s installée. Télécharger et installer la mise à jour ?</string>

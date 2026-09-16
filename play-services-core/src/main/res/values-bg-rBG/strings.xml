@@ -190,7 +190,7 @@
     <string name="pref_github_summary">Репозиторій коду</string>
     <string name="pref_update_title">Проверка за актуализации</string>
     <string name="pref_update_summary">Проверете в GitHub за по-нова версия.</string>
-    <string name="update_include_prerelease">Включване на предварителни / разработчишки компилации</string>
+    <string name="update_include_prerelease">Включване на dev компилации</string>
     <string name="update_available_title">Налична е актуализация</string>
     <string name="update_available_prerelease_title">Налична е актуализация (предварителна версия)</string>
     <string name="update_available_message">Налична е нова v%1s. Вие имате инсталирана версия v%2$s. Искате ли да изтеглите и инсталирате актуализацията?</string>

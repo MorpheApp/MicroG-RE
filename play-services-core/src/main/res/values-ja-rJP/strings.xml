@@ -188,7 +188,6 @@
     <string name="pref_github_summary">ソース コード リポジトリ</string>
     <string name="pref_update_title">更新の確認</string>
     <string name="pref_update_summary">GitHub で新しいバージョンを確認してください。</string>
-    <string name="update_include_prerelease">プレリリース / 開発ビルドを含める</string>
     <string name="update_available_title">更新が利用可能です</string>
     <string name="update_available_prerelease_title">更新が利用可能です（プレリリース）</string>
     <string name="update_available_message">新しいバージョン v%1s が利用可能です。現在、バージョン v%2$s がインストールされています。更新をダウンロードしてインストールしますか？</string>

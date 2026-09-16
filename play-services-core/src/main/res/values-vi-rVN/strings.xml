@@ -176,7 +176,7 @@ Vui lòng thiết lập mật khẩu, mã PIN hoặc khóa màn hình bằng m�
     <string name="pref_github_summary">Kho lưu trữ mã nguồn</string>
     <string name="pref_update_title">Kiểm tra cập nhật</string>
     <string name="pref_update_summary">Kiểm tra GitHub để tìm phiên bản mới hơn.</string>
-    <string name="update_include_prerelease">Bao gồm các bản phát hành trước / các bản dành cho nhà phát triển</string>
+    <string name="update_include_prerelease">Bao gồm các bản dựng dev</string>
     <string name="update_available_title">Đã có bản cập nhật</string>
     <string name="update_available_prerelease_title">Có bản cập nhật (bản phát hành trước)</string>
     <string name="update_available_message">Có phiên bản mới v%1s. Bạn đang cài phiên bản v%2$s. Tải xuống và cài đặt bản cập nhật?</string>

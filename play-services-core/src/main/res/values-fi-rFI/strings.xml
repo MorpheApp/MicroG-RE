@@ -186,7 +186,7 @@ Voit poistaa Google-laitteen rekisteröinnin käytöstä tilin asennuksen jälke
     <string name="pref_github_summary">Lähdekoodivarasto</string>
     <string name="pref_update_title">Tarkista päivitykset</string>
     <string name="pref_update_summary">Tarkista GitHubista uudempi versio.</string>
-    <string name="update_include_prerelease">Sisällytä esijulkaisu-/kehitysversiot</string>
+    <string name="update_include_prerelease">Sisällytä kehitysversiot</string>
     <string name="update_available_title">Päivitys on saatavilla</string>
     <string name="update_available_prerelease_title">Päivitys on saatavilla (esijulkaisu)</string>
     <string name="update_available_message">Uusi v%1s on saatavilla. Sinulla on versio v%2$s asennettuna. Lataa ja asenna päivitys?</string>

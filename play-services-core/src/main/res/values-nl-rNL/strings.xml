@@ -182,7 +182,7 @@ Stel een wachtwoord, PIN of patroonvergrendelscherm in."</string>
     <string name="pref_github_summary">Broncode-opslagplaats</string>
     <string name="pref_update_title">Controleer op updates</string>
     <string name="pref_update_summary">Controleer GitHub op een nieuwere versie.</string>
-    <string name="update_include_prerelease">Pre-release-/devbuilds opnemen</string>
+    <string name="update_include_prerelease">Ontwikkelbuilds opnemen</string>
     <string name="update_available_title">Update beschikbaar</string>
     <string name="update_available_prerelease_title">Update beschikbaar (pre-release)</string>
     <string name="update_available_message">Nieuwe v%1s is beschikbaar. Je hebt versie v%2$s geïnstalleerd. Wil je de update downloaden en installeren?</string>

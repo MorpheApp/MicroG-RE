@@ -188,7 +188,7 @@ Hesabın qurulması tamamlandıqdan sonra Google cihaz qeydiyyatını qapada bil
     <string name="pref_github_summary">Mənbə kodu bazası</string>
     <string name="pref_update_title">Yeniləmələri yoxla</string>
     <string name="pref_update_summary">Daha yeni versiya üçün GitHub-ı yoxla.</string>
-    <string name="update_include_prerelease">Erkən buraxılış / tərtibatçı quruluşlarını daxil et</string>
+    <string name="update_include_prerelease">Tərtibatçı quruluşlarını daxil et</string>
     <string name="update_available_title">Yenilənmə var</string>
     <string name="update_available_prerelease_title">Yenilənmə mövcuddur (erkən buraxılış)</string>
     <string name="update_available_message">Yeni v%1s mövcuddur. V%2$s versiyasın quraşdırmısınız. Yeniləməni yükləsin və quraşdırsın?</string>

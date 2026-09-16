@@ -18,7 +18,7 @@
     <string name="lib_name">microG UI инструменти</string>
     <string name="lib_license">Apache License 2.0, екипът на microG</string>
     <string name="about_version_str">Версия %1$s</string>
-    <string name="about_default_license">Всички права запазени.</string>
+    <string name="about_default_license">Всички права запазени</string>
     <string name="prefcat_setup">Настройка</string>
     <string name="self_check_title">Самотест</string>
     <string name="self_check_desc">Проверете дали системата е правилно настроена да използва microG.</string>

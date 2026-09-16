@@ -188,7 +188,7 @@ Configure una contraseña, un PIN o una pantalla de bloqueo de patrones."</strin
     <string name="pref_github_summary">Repositorio de código fuente</string>
     <string name="pref_update_title">Buscar actualizaciones</string>
     <string name="pref_update_summary">Consulta GitHub para ver si hay una versión más reciente.</string>
-    <string name="update_include_prerelease">Incluir compilaciones pre-lanzamiento / en desarrollo</string>
+    <string name="update_include_prerelease">Incluir versiones de desarrollo</string>
     <string name="update_available_title">Actualización disponible</string>
     <string name="update_available_prerelease_title">Actualización disponible (pre-lanzamiento)</string>
     <string name="update_available_message">La nueva versión v%1s está disponible. Tienes instalada la versión v%2$s. ¿Descargar e instalar la actualización?</string>

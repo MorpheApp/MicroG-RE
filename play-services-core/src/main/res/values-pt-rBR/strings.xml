@@ -188,7 +188,7 @@ Configure uma senha, PIN ou padrão de bloqueio de tela."</string>
     <string name="pref_github_summary">Repositório com o código-fonte</string>
     <string name="pref_update_title">Verificar atualizações</string>
     <string name="pref_update_summary">Verificar no GitHub se há uma versão mais recente.</string>
-    <string name="update_include_prerelease">Incluir versões de pré-lançamento / desenvolvimento</string>
+    <string name="update_include_prerelease">Incluir builds de desenvolvimento</string>
     <string name="update_available_title">Atualização disponível</string>
     <string name="update_available_prerelease_title">Atualização disponível (pré-lançamento)</string>
     <string name="update_available_message">Nova versão v%1s está disponível. Você tem a versão v%2$s instalada. Baixar e instalar a atualização?</string>

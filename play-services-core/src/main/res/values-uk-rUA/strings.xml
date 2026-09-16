@@ -188,7 +188,7 @@
     <string name="pref_github_summary">Репозиторій вихідного коду</string>
     <string name="pref_update_title">Перевірка наявності оновлень</string>
     <string name="pref_update_summary">Перевірте GitHub на наявність новішої версії.</string>
-    <string name="update_include_prerelease">Включати передрелізи / збірки для розробників</string>
+    <string name="update_include_prerelease">Включати dev-збірки</string>
     <string name="update_available_title">Доступне оновлення</string>
     <string name="update_available_prerelease_title">Доступне оновлення (передреліз)</string>
     <string name="update_available_message">Доступна нова версія v%1s. У вас встановлена версія v%2$s. Завантажити та встановити оновлення?</string>

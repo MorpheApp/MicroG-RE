@@ -188,7 +188,7 @@ Nastavte prosím heslo, PIN nebo obrazce na zámku."</string>
     <string name="pref_github_summary">Repozitář kódu zdrojů</string>
     <string name="pref_update_title">Zkontrolovat aktualizace</string>
     <string name="pref_update_summary">Podívejte se na GitHub, zda je novější verze.</string>
-    <string name="update_include_prerelease">Zahrnout předběžné verze / vývojové sestavení</string>
+    <string name="update_include_prerelease">Zahrnout vývojové verze</string>
     <string name="update_available_title">Aktualizace k dispozici</string>
     <string name="update_available_prerelease_title">Aktualizace k dispozici (předběžná)</string>
     <string name="update_available_message">Nová verze v%1s je k dispozici. Máte nainstalovanou verzi v%2$s. Stáhnout a nainstalovat aktualizaci?</string>

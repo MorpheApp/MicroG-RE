@@ -188,7 +188,6 @@
     <string name="pref_github_summary">Αποθετήριο πηγαίου κώδικα</string>
     <string name="pref_update_title">Έλεγχος για ενημερώσεις</string>
     <string name="pref_update_summary">Ελέγξτε στο GitHub για νεότερη έκδοση.</string>
-    <string name="update_include_prerelease">Συμπερίληψη εκδόσεων προ-έκδοσης / δοκιμαστικών εκδόσεων</string>
     <string name="update_available_title">Διαθέσιμη ενημέρωση</string>
     <string name="update_available_prerelease_title">Διαθέσιμη ενημέρωση (προ-έκδοση)</string>
     <string name="update_available_message">Νέα έκδοση v%1s είναι διαθέσιμη. Έχετε εγκαταστημένη την έκδοση v%2$s. Να γίνει λήψη και εγκατάσταση της ενημέρωσης;</string>

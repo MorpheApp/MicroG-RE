@@ -188,7 +188,7 @@ Skonfiguruj hasło, kod PIN lub wzór blokady ekranu."</string>
     <string name="pref_github_summary">Repozytorium kodu źródłowego</string>
     <string name="pref_update_title">Sprawdź aktualizacje</string>
     <string name="pref_update_summary">Sprawdź dostępność nowszej wersji na GitHubie.</string>
-    <string name="update_include_prerelease">Uwzględniaj wersje przedpremierowe / deweloperskie</string>
+    <string name="update_include_prerelease">Uwzględniaj wersje deweloperskie</string>
     <string name="update_available_title">Dostępna aktualizacja</string>
     <string name="update_available_prerelease_title">Dostępna aktualizacja (przedpremierowa)</string>
     <string name="update_available_message">Dostępna jest nowa wersja v%1s. Obecnie zainstalowana to v%2$s. Pobrać i zainstalować aktualizację?</string>

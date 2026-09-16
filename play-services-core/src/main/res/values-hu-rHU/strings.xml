@@ -189,7 +189,6 @@ A Google-eszközregisztrációt a fiókbeállítás befejezése után letilthatj
     <string name="pref_github_summary">Forráskód tárolóhely</string>
     <string name="pref_update_title">Frissítések keresése</string>
     <string name="pref_update_summary">Ellenőrizze a GitHubot az újabb verzióért.</string>
-    <string name="update_include_prerelease">Előzetes / fejlesztői verziók</string>
     <string name="update_available_title">Frissítés elérhető</string>
     <string name="update_available_prerelease_title">Frissítés érhető el (előzetes verzió)</string>
     <string name="update_available_message">Új v%1s érhető el. A telepített verzió: v%2$s. Szeretné letölteni és telepíteni a frissítést?</string>

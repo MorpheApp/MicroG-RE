@@ -188,7 +188,6 @@ Vinsamlegast stilltu lykilorð, PIN eða mynsturlás á skjánum."</string>
     <string name="pref_github_summary">Gagnagrunnur kóði</string>
     <string name="pref_update_title">Leita að uppfærslum</string>
     <string name="pref_update_summary">Leitaðu á GitHub að nýrri útgáfu.</string>
-    <string name="update_include_prerelease">Innihalda forútgáfur / þróunarútgáfur</string>
     <string name="update_available_title">Uppfærsla til staðar</string>
     <string name="update_available_prerelease_title">Uppfærsla til staðar (forútgáfa)</string>
     <string name="update_available_message">Ný útgáfa v%1s er til staðar. Þú hefur útgáfu v%2$s uppsetta. Sækja og setja upp uppfærsluna?  </string>

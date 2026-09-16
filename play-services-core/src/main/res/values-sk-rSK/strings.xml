@@ -188,7 +188,7 @@ Nastavte si heslo, PIN alebo zámok obrazovky so vzorom."</string>
     <string name="pref_github_summary">Repozitár zdrojového kódu</string>
     <string name="pref_update_title">Skontrolovať aktualizácie</string>
     <string name="pref_update_summary">Skontrolujte GitHub, či je k dispozícii novšia verzia.</string>
-    <string name="update_include_prerelease">Zahrnúť predbežné / vývojové verzie</string>
+    <string name="update_include_prerelease">Zahrnúť vývojové verzie</string>
     <string name="update_available_title">Aktualizácia je k dispozícii</string>
     <string name="update_available_prerelease_title">Dostupná aktualizácia (predbežná verzia)</string>
     <string name="update_available_message">Nová verzia v%1s je dostupná. Máte nainštalovanú verziu v%2$s. Stiahnuť a nainštalovať aktualizáciu?</string>

@@ -188,7 +188,7 @@
     <string name="pref_github_summary">原始碼儲存庫</string>
     <string name="pref_update_title">檢查更新</string>
     <string name="pref_update_summary">前往 GitHub 檢查是否有更新版本。</string>
-    <string name="update_include_prerelease">包含預發布版 / 開發版</string>
+    <string name="update_include_prerelease">包括開發期間版本</string>
     <string name="update_available_title">有可用更新</string>
     <string name="update_available_prerelease_title">有可用更新（預發布版）</string>
     <string name="update_available_message">新版本 v%1s 可用。您目前安裝的版本為 v%2$s。要下載並安裝更新嗎？</string>

@@ -188,7 +188,7 @@ Stel asseblief 'n wagkord, PIN of patroonslot op."</string>
     <string name="pref_github_summary">Bron kode repo</string>
     <string name="pref_update_title">Kyk vir opdaterings</string>
     <string name="pref_update_summary">Kyk op GitHub vir \'n nuwer weergawe.</string>
-    <string name="update_include_prerelease">Sluit pre-release / ontwikkelaar-samestellings in</string>
+    <string name="update_include_prerelease">Sluit ontwikkelingsweergawes in</string>
     <string name="update_available_title">Opdatering beskikbaar</string>
     <string name="update_available_prerelease_title">Opdatering beskikbaar (pre-release)</string>
     <string name="update_available_message">Nuwe v%1s is beskikbaar. Jy het weergawe v%2$s geïnstalleer. Laai af en installeer die opdatering? Some text has been removed, but here is the correct translation: </string>

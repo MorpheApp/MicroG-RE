@@ -188,7 +188,7 @@ Vă rugăm să configurați o parolă, un PIN sau un model de blocare."</string>
     <string name="pref_github_summary">Repozitorul codului sursă</string>
     <string name="pref_update_title">Verifică actualizările</string>
     <string name="pref_update_summary">Verifică pe GitHub dacă există o versiune mai nouă.</string>
-    <string name="update_include_prerelease">Include versiuni pre-lansare / de dezvoltare</string>
+    <string name="update_include_prerelease">Include versiuni de dezvoltare</string>
     <string name="update_available_title">Actualizare disponibilă</string>
     <string name="update_available_prerelease_title">Actualizare disponibilă (pre-lansare)</string>
     <string name="update_available_message">Noua versiune v%1s este disponibilă. Ai instalată versiunea v%2$s. Vrei să descarci și să instalezi actualizarea?</string>

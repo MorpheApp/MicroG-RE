@@ -188,7 +188,7 @@ Nastavite geslo, PIN ali vzorec za zaklepanje zaslona."</string>
     <string name="pref_github_summary">Repozitorij izvorne kode</string>
     <string name="pref_update_title">Preverite posodobitve</string>
     <string name="pref_update_summary">Preverite GitHub za novejšo različico.</string>
-    <string name="update_include_prerelease">Vključite predizdaje / razvojne različice</string>
+    <string name="update_include_prerelease">Vključi razvojne različice</string>
     <string name="update_available_title">Na voljo je posodobitev</string>
     <string name="update_available_prerelease_title">Posodobitev je na voljo (predizdaja)</string>
     <string name="update_available_message">Na voljo je nova različica v%1s. Nameščeno imate različico v%2$s. Ali prenesem in namestim posodobitev?</string>

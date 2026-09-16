@@ -188,7 +188,7 @@ Please set up a password, PIN, or pattern lock screen."</string>
     <string name="pref_github_summary">Lagringsplats för källkoden</string>
     <string name="pref_update_title">Sök efter uppdateringar</string>
     <string name="pref_update_summary">Kolla GitHub efter en nyare version.</string>
-    <string name="update_include_prerelease">Inkludera förhandsversioner / utvecklingsversioner</string>
+    <string name="update_include_prerelease">Inkludera utvecklingsversioner</string>
     <string name="update_available_title">Uppdatering är tillgänglig</string>
     <string name="update_available_prerelease_title">Uppdatering tillgänglig (förhandsversion)</string>
     <string name="update_available_message">Ny v%1s är tillgänglig. Du har version v%2$s installerad. Vill du ladda ner och installera uppdateringen?</string>

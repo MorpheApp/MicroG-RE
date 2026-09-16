@@ -188,7 +188,7 @@ Mangyaring mag-set up ng password, PIN, o pattern lock screen."</string>
     <string name="pref_github_summary">Repository ng source code</string>
     <string name="pref_update_title">Suriin ang mga update</string>
     <string name="pref_update_summary">Suriin ang GitHub para sa mas bagong bersyon.</string>
-    <string name="update_include_prerelease">Isama ang mga pre-release / dev builds</string>
+    <string name="update_include_prerelease">Isama ang mga dev builds</string>
     <string name="update_available_title">May available na update</string>
     <string name="update_available_prerelease_title">May available na update (pre-release)</string>
     <string name="update_available_message">May bagong v%1s na available. Mayroon kang naka-install na bersyon v%2$s. I-download at i-install ang update?</string>

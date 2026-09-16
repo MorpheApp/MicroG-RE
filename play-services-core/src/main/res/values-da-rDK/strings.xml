@@ -188,7 +188,7 @@ Indstil venligst en adgangskode, pinkode eller mønsterlås."</string>
     <string name="pref_github_summary">Kildekode-arkiv</string>
     <string name="pref_update_title">Søg efter opdateringer</string>
     <string name="pref_update_summary">Søg på GitHub efter en nyere version.</string>
-    <string name="update_include_prerelease">Inkluder præ-release / udviklerbuilds</string>
+    <string name="update_include_prerelease">Inkluder udviklingsbuilds</string>
     <string name="update_available_title">Opdatering tilgængelig</string>
     <string name="update_available_prerelease_title">Opdatering tilgængelig (præ-release)</string>
     <string name="update_available_message">Ny v%1s er tilgængelig. Du har version v%2$s installeret. Hent og installér opdateringen?</string>

@@ -190,7 +190,7 @@ Socraigh pasfhocal, PIN, nó patrún glas scáileáin le do thoil."</string>
     <string name="pref_github_summary">Stór cód foinse</string>
     <string name="pref_update_title">Seiceáil le haghaidh nuashonruithe</string>
     <string name="pref_update_summary">Seiceáil GitHub le haghaidh leagan níos nuaí.</string>
-    <string name="update_include_prerelease">Cuir réamh-eisiúint / tógálacha forbartha san áireamh</string>
+    <string name="update_include_prerelease">Cuir tógálacha forbartha san áireamh</string>
     <string name="update_available_title">Nuashonrú ar fáil</string>
     <string name="update_available_prerelease_title">Nuashonrú ar fáil (réamh-eisiúint)</string>
     <string name="update_available_message">Tá leagan nua v%1s ar fáil. Tá leagan v%2$s suiteáilte agat. An bhfuil tú ag iarraidh an nuashonrú a íoslódáil agus a shuiteáil?</string>

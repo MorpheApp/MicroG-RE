@@ -189,7 +189,7 @@ Bitte richten Sie eine Bildschirmsperre mit Passwort, PIN oder Muster ein."</str
     <string name="pref_github_summary">Quellcode-Repository</string>
     <string name="pref_update_title">Nach Updates suchen</string>
     <string name="pref_update_summary">Suche auf GitHub nach einer neueren Version.</string>
-    <string name="update_include_prerelease">Vorabversionen / Entwickler-Builds einschließen</string>
+    <string name="update_include_prerelease">Entwickler-Builds einschließen</string>
     <string name="update_available_title">Update verfügbar</string>
     <string name="update_available_prerelease_title">Update verfügbar (Vorabversion)</string>
     <string name="update_available_message">Neue Version v%1s ist verfügbar. Du hast Version v%2$s installiert. Möchtest du das Update herunterladen und installieren?</string>

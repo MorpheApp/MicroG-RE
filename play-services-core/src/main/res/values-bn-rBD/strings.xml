@@ -188,7 +188,7 @@
     <string name="pref_github_summary">সোর্স কোড রেপোজিটরি</string>
     <string name="pref_update_title">আপডেটের জন্য পরীক্ষা করুন</string>
     <string name="pref_update_summary">নতুন সংস্করণের জন্য GitHub দেখুন।</string>
-    <string name="update_include_prerelease">প্রি-রিলিজ / ডেভ বিল্ড অন্তর্ভুক্ত করুন</string>
+    <string name="update_include_prerelease">ডেভ বিল্ড অন্তর্ভুক্ত করুন</string>
     <string name="update_available_title">আপডেট উপলব্ধ</string>
     <string name="update_available_prerelease_title">আপডেট উপলব্ধ (প্রি-রিলিজ)</string>
     <string name="update_available_message">নতুন সংস্করণ v%1s উপলব্ধ। আপনার কাছে v%2$s সংস্করণ ইনস্টল আছে। আপডেটটি ডাউনলোড করে ইনস্টল করবেন?</string>
