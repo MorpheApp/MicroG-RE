@@ -17,7 +17,7 @@ jobs:
           fetch-depth: 0
 
       - name: "Setup Java"
-        uses: actions/setup-java@v6.0.1
+        uses: actions/setup-java@v6
         with:
           distribution: "temurin"
           java-version: "17"
@@ -39,7 +39,7 @@ jobs:
           keyAlias: ${{ secrets.KEYSTORE_ENTRY_ALIAS }}
           keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
           keyPassword: ${{ secrets.KEYSTORE_ENTRY_PASSWORD }}
-          buildToolsVersion: 35.0.0
+          buildToolsVersion: 37.0.0
 
       - name: "Compute version"
         id: version
@@ -67,11 +67,29 @@ jobs:
           keyAlias: ${{ secrets.KEYSTORE_ENTRY_ALIAS }}
           keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
           keyPassword: ${{ secrets.KEYSTORE_ENTRY_PASSWORD }}
-          buildToolsVersion: 35.0.0
+          buildToolsVersion: 37.0.0
 
       - name: "Prepare ARM64 icon APK"
         run: |
           cp "${{ steps.sign_arm64.outputs.signedFile }}" "dist/microg-${{ steps.version.outputs.tag }}-arm64-v8a.apk"
+
+      - name: "Build ARMv7 icon APK"
+        run: "./gradlew --no-daemon :play-services-core:assembleDefaultRelease -Pabi=armeabi-v7a"
+
+      - name: "Sign ARMv7 icon APK"
+        id: sign_armv7
+        uses: ilharp/sign-android-release@v2
+        with:
+          releaseDir: play-services-core/build/outputs/apk/default/release
+          signingKey: ${{ secrets.KEYSTORE_B64 }}
+          keyAlias: ${{ secrets.KEYSTORE_ENTRY_ALIAS }}
+          keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
+          keyPassword: ${{ secrets.KEYSTORE_ENTRY_PASSWORD }}
+          buildToolsVersion: 37.0.0
+
+      - name: "Prepare ARMv7 icon APK"
+        run: |
+          cp "${{ steps.sign_armv7.outputs.signedFile }}" "dist/microg-${{ steps.version.outputs.tag }}-armeabi-v7a.apk"
 
       - name: "Build universal noicon APK"
         run: "./gradlew --no-daemon :play-services-core:assembleDefaultRelease -PnoIcon=true"
@@ -85,7 +103,7 @@ jobs:
           keyAlias: ${{ secrets.KEYSTORE_ENTRY_ALIAS }}
           keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
           keyPassword: ${{ secrets.KEYSTORE_ENTRY_PASSWORD }}
-          buildToolsVersion: 35.0.0
+          buildToolsVersion: 37.0.0
 
       - name: "Prepare universal noicon APK"
         run: |
@@ -103,11 +121,29 @@ jobs:
           keyAlias: ${{ secrets.KEYSTORE_ENTRY_ALIAS }}
           keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
           keyPassword: ${{ secrets.KEYSTORE_ENTRY_PASSWORD }}
-          buildToolsVersion: 35.0.0
+          buildToolsVersion: 37.0.0
 
       - name: "Prepare ARM64 noicon APK"
         run: |
           cp "${{ steps.sign_noicon_arm64.outputs.signedFile }}" "dist/microg-${{ steps.version.outputs.tag }}-noicon-arm64-v8a.apk"
+
+      - name: "Build ARMv7 noicon APK"
+        run: "./gradlew --no-daemon :play-services-core:assembleDefaultRelease -PnoIcon=true -Pabi=armeabi-v7a"
+
+      - name: "Sign ARMv7 noicon APK"
+        id: sign_noicon_armv7
+        uses: ilharp/sign-android-release@v2
+        with:
+          releaseDir: play-services-core/build/outputs/apk/default/release
+          signingKey: ${{ secrets.KEYSTORE_B64 }}
+          keyAlias: ${{ secrets.KEYSTORE_ENTRY_ALIAS }}
+          keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
+          keyPassword: ${{ secrets.KEYSTORE_ENTRY_PASSWORD }}
+          buildToolsVersion: 37.0.0
+
+      - name: "Prepare ARMv7 noicon APK"
+        run: |
+          cp "${{ steps.sign_noicon_armv7.outputs.signedFile }}" "dist/microg-${{ steps.version.outputs.tag }}-noicon-armeabi-v7a.apk"
 
       - name: "List APKs"
         run: ls -lh dist/
@@ -136,6 +172,14 @@ jobs:
           archive: false
           path: dist/microg-${{ steps.version.outputs.tag }}-arm64-v8a.apk
 
+      - name: "Upload APK (ARMv7 icon)"
+        uses: actions/upload-artifact@v7
+        with:
+          name: MicroG-RE-armeabi-v7a
+          if-no-files-found: error
+          archive: false
+          path: dist/microg-${{ steps.version.outputs.tag }}-armeabi-v7a.apk
+
       - name: "Upload APK (universal noicon)"
         uses: actions/upload-artifact@v7
         with:
@@ -151,3 +195,11 @@ jobs:
           if-no-files-found: error
           archive: false
           path: dist/microg-${{ steps.version.outputs.tag }}-noicon-arm64-v8a.apk
+
+      - name: "Upload APK (ARMv7 noicon)"
+        uses: actions/upload-artifact@v7
+        with:
+          name: MicroG-RE-noicon-armeabi-v7a
+          if-no-files-found: error
+          archive: false
+          path: dist/microg-${{ steps.version.outputs.tag }}-noicon-armeabi-v7a.apk

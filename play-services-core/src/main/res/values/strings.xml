@@ -577,4 +577,15 @@ Some apps may not be able to register again after this action. You may need to c
     <string name="revanced_extended" translatable="false">ReVanced Extended</string>
     <string name="vanced" translatable="false">Vanced</string>
 
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Wrong architecture variant</string>
+    <string name="abi_mismatch_message">This MicroG-RE build only contains 64-bit (arm64) libraries, but this device is running a 32-bit userspace.
+
+Features that need Conscrypt (account login, streaming, BotGuard, Spoof video streams, SponsorBlock, Return YouTube Dislike, etc.) will not work properly and can cause playback issues or "Unable to find a default SSL provider".
+
+Install the ARMv7 or Universal APK instead.</string>
+    <string name="abi_mismatch_download_armv7">Download ARMv7 APK</string>
+    <string name="abi_mismatch_download_universal">Download Universal APK</string>
+    <string name="abi_mismatch_downloading_title">Downloading correct variant…</string>
+
 </resources>

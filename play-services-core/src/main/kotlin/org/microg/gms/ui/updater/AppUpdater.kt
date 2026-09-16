@@ -902,6 +902,193 @@ object AppUpdater {
         Toast.makeText(context, context.getString(resId), Toast.LENGTH_SHORT).show()
     }
 
+
+    // -----------------------------------------------------------------------------------
+    // ABI mismatch: arm64-only APK on a 32-bit process
+    // -----------------------------------------------------------------------------------
+
+    /**
+     * True when this process is 32-bit but the installed APK only shipped arm64
+     * native libs (typical of the -arm64-v8a release on a 32-bit userspace device).
+     */
+    @JvmStatic
+    fun isArm64OnlyOn32BitProcess(context: Context): Boolean {
+        if (android.os.Process.is64Bit()) return false
+        return isInstalledApkArm64Only(context)
+    }
+
+    /**
+     * Best-effort detection: nativeLibraryDir points at arm64 and the current process is 32-bit.
+     */
+    private fun isInstalledApkArm64Only(context: Context): Boolean {
+        return try {
+            val libDir = context.applicationInfo.nativeLibraryDir ?: return false
+            val path = libDir.lowercase()
+            path.contains("arm64") && !path.contains("armeabi")
+        } catch (e: Exception) {
+            Log.w(TAG, "ABI detection failed", e)
+            false
+        }
+    }
+
+    /**
+     * Shows a warning every time Settings open when the wrong ABI variant is installed.
+     */
+    @JvmStatic
+    fun maybeWarnWrongAbiVariant(activity: Activity) {
+        if (!isArm64OnlyOn32BitProcess(activity)) return
+        if (activity.isFinishing) return
+
+        MaterialAlertDialogBuilder(activity)
+            .setTitle(R.string.abi_mismatch_title)
+            .setMessage(R.string.abi_mismatch_message)
+            .setCancelable(true)
+            .setPositiveButton(R.string.abi_mismatch_download_armv7) { _, _ ->
+                downloadAndInstallArmv7Variant(activity)
+            }
+            .setNeutralButton(R.string.abi_mismatch_download_universal) { _, _ ->
+                downloadAndInstallUniversalVariant(activity)
+            }
+            .setNegativeButton(android.R.string.cancel, null)
+            .show()
+    }
+
+    /** Downloads the armeabi-v7a build and hands it to the system installer. */
+    @JvmStatic
+    fun downloadAndInstallArmv7Variant(activity: Activity) {
+        downloadAndInstallNamedVariant(
+            activity,
+            titleRes = R.string.abi_mismatch_downloading_title,
+            preferredNameContains = listOf("armeabi-v7a"),
+            preferNoicon = activity.resources.getBoolean(R.bool.hide_launcher_icon_available),
+            directFileNameBuilder = { version, noicon ->
+                if (noicon) "microg-$version-noicon-armeabi-v7a.apk"
+                else "microg-$version-armeabi-v7a.apk"
+            }
+        )
+    }
+
+    /** Downloads the universal build and hands it to the system installer. */
+    @JvmStatic
+    fun downloadAndInstallUniversalVariant(activity: Activity) {
+        downloadAndInstallNamedVariant(
+            activity,
+            titleRes = R.string.abi_mismatch_downloading_title,
+            preferredNameContains = emptyList(),
+            preferNoicon = activity.resources.getBoolean(R.bool.hide_launcher_icon_available),
+            directFileNameBuilder = { version, noicon ->
+                if (noicon) "microg-$version-noicon.apk" else "microg-$version.apk"
+            },
+            requireUniversalName = true
+        )
+    }
+
+    private fun downloadAndInstallNamedVariant(
+        activity: Activity,
+        titleRes: Int,
+        preferredNameContains: List<String>,
+        preferNoicon: Boolean,
+        directFileNameBuilder: (version: String, noicon: Boolean) -> String,
+        requireUniversalName: Boolean = false
+    ) {
+        ensureUpdateNotificationPermission(activity)
+
+        var isCancelled = false
+        var activeConnection: HttpURLConnection? = null
+
+        val progress = ProgressBar(activity, null, android.R.attr.progressBarStyleHorizontal).apply {
+            isIndeterminate = true
+            val padding = (16 * activity.resources.displayMetrics.density).toInt()
+            setPadding(padding, padding, padding, padding)
+        }
+
+        val dialog = MaterialAlertDialogBuilder(activity)
+            .setTitle(titleRes)
+            .setView(progress)
+            .setCancelable(false)
+            .setNegativeButton(android.R.string.cancel) { _, _ ->
+                isCancelled = true
+                Thread {
+                    try { activeConnection?.disconnect() } catch (_: Exception) {}
+                }.start()
+            }
+            .setOnCancelListener {
+                isCancelled = true
+                Thread {
+                    try { activeConnection?.disconnect() } catch (_: Exception) {}
+                }.start()
+            }
+            .create()
+        dialog.show()
+
+        Thread {
+            val candidateUrls = mutableListOf<String>()
+
+            try {
+                val text = httpGet("$RELEASES_URL?per_page=15")
+                if (text != null) {
+                    val all = Gson().fromJson(text, JsonArray::class.java)
+                    all?.forEach { el ->
+                        val root = el.asJsonObject ?: return@forEach
+                        val assets = root.getAsJsonArray("assets") ?: return@forEach
+                        val match = assets.mapNotNull { it.asJsonObject }.firstOrNull { obj ->
+                            val name = obj.get("name")?.asString?.lowercase() ?: return@firstOrNull false
+                            if (!name.endsWith(".apk")) return@firstOrNull false
+                            val hasNoicon = name.contains("noicon")
+                            if (hasNoicon != preferNoicon) return@firstOrNull false
+                            when {
+                                requireUniversalName ->
+                                    !name.contains("arm64-v8a") && !name.contains("armeabi-v7a")
+                                preferredNameContains.isNotEmpty() ->
+                                    preferredNameContains.any { name.contains(it) }
+                                else -> true
+                            }
+                        }
+                        val url = match?.get("browser_download_url")?.asString
+                        if (!url.isNullOrEmpty() && !candidateUrls.contains(url)) {
+                            candidateUrls.add(url)
+                        }
+                    }
+                }
+            } catch (_: Exception) {}
+
+            val cleanVersion = BuildConfig.VERSION_NAME.trim().removePrefix("v").removePrefix("V")
+                .substringBefore(" ").substringBefore("(")
+            val tag = "v$cleanVersion"
+            val fileName = directFileNameBuilder(cleanVersion, preferNoicon)
+            listOf(
+                "https://github.com/MorpheApp/MicroG-RE/releases/download/$tag/$fileName",
+                "https://github.com/MorpheApp/MicroG-RE/releases/latest/download/$fileName"
+            ).forEach { if (!candidateUrls.contains(it)) candidateUrls.add(it) }
+
+            val targetFile = File(activity.cacheDir, "$DOWNLOAD_DIR/microg-re-abi-update.apk")
+            var downloadedFile: File? = null
+            for (url in candidateUrls) {
+                if (isCancelled) break
+                Log.i(TAG, "Attempting ABI variant download from: $url")
+                val file = downloadUrlCancellable(url, targetFile, { isCancelled }) { conn ->
+                    activeConnection = conn
+                }
+                if (file != null && file.length() > 0L) {
+                    downloadedFile = file
+                    break
+                }
+            }
+
+            runOnUiThread(activity) {
+                dialog.dismiss()
+                if (isCancelled) return@runOnUiThread
+                if (downloadedFile == null) {
+                    Log.e(TAG, "ABI variant download failed for all candidate URLs")
+                    showErrorDialog(activity, activity.getString(R.string.update_download_failed))
+                } else {
+                    Log.i(TAG, "ABI variant downloaded: ${downloadedFile.length()} bytes")
+                    launchInstaller(activity, downloadedFile)
+                }
+            }
+        }.start()
+    }
+
     /**
      * Makes sure the update-notification permission is granted on Android 13+.
      *
