@@ -585,7 +585,6 @@ Features that need Conscrypt (account login, streaming, BotGuard, Spoof video st
 
 Install the ARMv7 or Universal APK instead.</string>
     <string name="abi_mismatch_download_armv7">Download ARMv7 APK</string>
-    <string name="abi_mismatch_download_universal">Download Universal APK</string>
     <string name="abi_mismatch_downloading_title">Downloading correct variant…</string>
 
 </resources>

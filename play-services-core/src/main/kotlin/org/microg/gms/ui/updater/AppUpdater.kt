@@ -946,9 +946,6 @@ object AppUpdater {
             .setPositiveButton(R.string.abi_mismatch_download_armv7) { _, _ ->
                 downloadAndInstallArmv7Variant(activity)
             }
-            .setNeutralButton(R.string.abi_mismatch_download_universal) { _, _ ->
-                downloadAndInstallUniversalVariant(activity)
-            }
             .setNegativeButton(android.R.string.cancel, null)
             .show()
     }
