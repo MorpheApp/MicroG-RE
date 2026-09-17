@@ -30,6 +30,7 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.os.Process
 import android.provider.Settings
 import android.text.method.LinkMovementMethod
 import android.util.Log
@@ -53,6 +54,7 @@ import java.io.File
 import java.io.FileOutputStream
 import java.net.HttpURLConnection
 import java.net.URL
+import java.util.zip.ZipFile
 
 /**
  * In-app updater for MicroG-RE.
@@ -977,22 +979,49 @@ object AppUpdater {
      */
     @JvmStatic
     fun isArm64OnlyOn32BitProcess(context: Context): Boolean {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) return false
-        if (android.os.Process.is64Bit()) return false
+        if (!isProcess32Bit()) return false
         return isInstalledApkArm64Only(context)
     }
 
+    private fun isProcess32Bit(): Boolean {
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            !Process.is64Bit()
+        } else {
+            Build.SUPPORTED_64_BIT_ABIS.isEmpty()
+        }
+    }
+
     /**
-     * Best-effort detection: nativeLibraryDir points at arm64 and the current process is 32-bit.
+     * Inspects the installed APK zip entries directly to check if it only contains
+     * arm64-v8a native libraries without any 32-bit (armeabi/armeabi-v7a) libraries.
      */
     private fun isInstalledApkArm64Only(context: Context): Boolean {
         return try {
-            val libDir = context.applicationInfo.nativeLibraryDir ?: return false
-            val path = libDir.lowercase()
-            path.contains("arm64") && !path.contains("armeabi")
+            val apkPath = context.applicationInfo.sourceDir ?: return false
+            var hasArm64 = false
+            var hasArm32 = false
+            ZipFile(File(apkPath)).use { zip ->
+                val entries = zip.entries()
+                while (entries.hasMoreElements()) {
+                    val name = entries.nextElement().name.lowercase()
+                    if (name.startsWith("lib/arm64") || name.contains("arm64-v8a")) {
+                        hasArm64 = true
+                    }
+                    if (name.startsWith("lib/armeabi") || name.contains("armeabi-v7a") || name.contains("armeabi")) {
+                        hasArm32 = true
+                    }
+                }
+            }
+            hasArm64 && !hasArm32
         } catch (e: Exception) {
-            Log.w(TAG, "ABI detection failed", e)
-            false
+            Log.w(TAG, "Failed to inspect APK zip entries", e)
+            try {
+                val libDir = context.applicationInfo.nativeLibraryDir ?: return false
+                val path = libDir.lowercase()
+                path.contains("arm64") && !path.contains("armeabi")
+            } catch (_: Exception) {
+                false
+            }
         }
     }
 
