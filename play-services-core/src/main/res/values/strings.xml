@@ -250,7 +250,7 @@ Please set up a password, PIN, or pattern lock screen."</string>
 
     <string name="update_available_title">Update available</string>
     <string name="update_available_prerelease_title">Update available (pre-release)</string>
-    <string name="update_available_message">New v%1s is available. You have version v%2$s installed. Download and install the update?</string>
+    <string name="update_available_message">New v%1$s is available. You have version v%2$s installed. Download and install the update?</string>
     <string name="update_now">Update</string>
     <string name="update_whats_new">What\'s new</string>
     <string name="update_ignore">Ignore</string>
@@ -578,12 +578,12 @@ Some apps may not be able to register again after this action. You may need to c
     <string name="vanced" translatable="false">Vanced</string>
 
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
-    <string name="abi_mismatch_title">Wrong architecture variant</string>
-    <string name="abi_mismatch_message">This MicroG-RE build only contains 64-bit (arm64) libraries, but this device is running a 32-bit userspace.
+    <string name="abi_mismatch_title">Wrong architecture variant installed</string>
+    <string name="abi_mismatch_message">"This MicroG-RE build only contains 64-bit (arm64) libraries, but this device is running a 32-bit userspace.
 
-Features that need Conscrypt (account login, streaming, BotGuard, Spoof video streams, SponsorBlock, Return YouTube Dislike, etc.) will not work properly and can cause playback issues or "Unable to find a default SSL provider".
+Features that need Conscrypt (account login, streaming, BotGuard, Spoof video streams, SponsorBlock, Return YouTube Dislike, etc.) will not work properly and can cause playback issues or \"Unable to find a default SSL provider\".
 
-Install the ARMv7 or Universal APK instead.</string>
+Install the ARMv7 or Universal APK instead."</string>
     <string name="abi_mismatch_download_armv7">Download ARMv7 APK</string>
     <string name="abi_mismatch_downloading_title">Downloading correct variant…</string>
 
