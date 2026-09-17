@@ -117,7 +117,7 @@ public class AuthManagerServiceImpl extends IAuthManagerService.Stub {
         String packageName = extras.getString(KEY_ANDROID_PACKAGE_NAME);
         if (packageName == null || packageName.isEmpty())
             packageName = extras.getString(KEY_CLIENT_PACKAGE_NAME);
-        packageName = PackageUtils.getAndCheckCallingPackage(context, packageName, extras.getInt(KEY_CALLER_UID, 0), extras.getInt(KEY_CALLER_PID, 0));
+        packageName = PackageUtils.getAndCheckCallingPackageWithoutSpoofing(context, packageName, extras.getInt(KEY_CALLER_UID, 0), extras.getInt(KEY_CALLER_PID, 0));
         boolean notify = extras.getBoolean(KEY_HANDLE_NOTIFICATION, false);
 
         scope = Objects.equals(AuthConstants.SCOPE_OAUTH2, scope) ? AuthConstants.SCOPE_EM_OP_PRO : scope;
