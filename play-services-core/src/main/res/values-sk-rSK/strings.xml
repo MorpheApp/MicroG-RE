@@ -188,10 +188,10 @@ Nastavte si heslo, PIN alebo zámok obrazovky so vzorom."</string>
     <string name="pref_github_summary">Repozitár zdrojového kódu</string>
     <string name="pref_update_title">Skontrolovať aktualizácie</string>
     <string name="pref_update_summary">Skontrolujte GitHub, či je k dispozícii novšia verzia.</string>
-    <string name="update_include_prerelease">Zahrnúť predbežné / vývojové verzie</string>
+    <string name="update_include_prerelease">Zahrnúť vývojové verzie</string>
     <string name="update_available_title">Aktualizácia je k dispozícii</string>
     <string name="update_available_prerelease_title">Dostupná aktualizácia (predbežná verzia)</string>
-    <string name="update_available_message">Nová verzia v%1s je dostupná. Máte nainštalovanú verziu v%2$s. Stiahnuť a nainštalovať aktualizáciu?</string>
+    <string name="update_available_message">Nová verzia v%1$s je k dispozícii. Máte nainštalovanú verziu v%2$s. Stiahnuť a nainštalovať aktualizáciu?</string>
     <string name="update_now">Aktualizovať</string>
     <string name="update_whats_new">Čo je nové</string>
     <string name="update_ignore">Ignorovať</string>
@@ -491,4 +491,13 @@ Ak chcete začať zdieľať svoju polohu, prejdite do Map Google alebo Family Li
     <string name="morphe_sign_in_with_google_microg_label">Prihlásiť sa cez Google pomocou MicroG RE</string>
     <string name="self_check_patched_app_installed">Beží na %1$s</string>
     <string name="self_check_action_download_morphe">Stiahnuť Morphe</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Nainštalovaný nesprávny variant architektúry</string>
+    <string name="abi_mismatch_message">"Táto zostava MicroG-RE obsahuje iba 64-bitové (arm64) knižnice, ale toto zariadenie používa 32-bitový používateľský priestor.
+
+Funkcie, ktoré vyžadujú Conscrypt (prihlásenie do účtu, streamovanie, BotGuard, spoofovanie video streamov, SponsorBlock, Return YouTube Dislike atď.), nebudú fungovať správne a môžu spôsobiť problémy s prehrávaním alebo chybu „Unable to find a default SSL provider“.
+
+Namiesto toho nainštalujte ARMv7 alebo Universal APK."</string>
+    <string name="abi_mismatch_download_armv7">Stiahnuť ARMv7 APK</string>
+    <string name="abi_mismatch_downloading_title">Sťahuje sa správny variant…</string>
 </resources>

@@ -188,10 +188,9 @@ Mangyaring mag-set up ng password, PIN, o pattern lock screen."</string>
     <string name="pref_github_summary">Repository ng source code</string>
     <string name="pref_update_title">Suriin ang mga update</string>
     <string name="pref_update_summary">Suriin ang GitHub para sa mas bagong bersyon.</string>
-    <string name="update_include_prerelease">Isama ang mga pre-release / dev builds</string>
+    <string name="update_include_prerelease">Isama ang mga dev builds</string>
     <string name="update_available_title">May available na update</string>
     <string name="update_available_prerelease_title">May available na update (pre-release)</string>
-    <string name="update_available_message">May bagong v%1s na available. Mayroon kang naka-install na bersyon v%2$s. I-download at i-install ang update?</string>
     <string name="update_now">I-update</string>
     <string name="update_whats_new">Ano ang bago</string>
     <string name="update_ignore">Ibalewala</string>
@@ -479,4 +478,5 @@ Maaaring hindi na muling makapagrehistro ang ilang aplikasyon pagkatapos ng pagk
     <string name="morphe_sign_in_with_google_microg_label">Mag-sign in sa Google sa pamamagitan ng MicroG RE</string>
     <string name="self_check_patched_app_installed">Tumatakbo kasama ang %1$s</string>
     <string name="self_check_action_download_morphe">I-download ang Morphe</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
 </resources>

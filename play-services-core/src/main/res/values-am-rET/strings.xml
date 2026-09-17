@@ -7,4 +7,5 @@
     <!-- Self check -->
     <!-- Settings strings -->
     <!-- Passkey management -->
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
 </resources>

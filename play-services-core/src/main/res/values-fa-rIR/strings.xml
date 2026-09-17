@@ -188,10 +188,9 @@
     <string name="pref_github_summary">مخزن کد منبع</string>
     <string name="pref_update_title">بررسی به‌روزرسانی‌ها</string>
     <string name="pref_update_summary">بررسی نسخهٔ جدیدتر در GitHub.</string>
-    <string name="update_include_prerelease">گنجاندن ساخت‌های پیش‌انتشار / توسعه‌ای</string>
     <string name="update_available_title">به‌روزرسانی در دسترس است</string>
     <string name="update_available_prerelease_title">به‌روزرسانی در دسترس است (پیش‌انتشار)</string>
-    <string name="update_available_message">نسخهٔ v%1s جدید در دسترس است. نسخهٔ v%2$s روی دستگاه شما نصب است. به‌روزرسانی دانلود و نصب شود؟</string>
+    <string name="update_available_message">نسخهٔ v%1$s جدید در دسترس است. نسخهٔ v%2$s روی دستگاه شما نصب است. به‌روزرسانی دانلود و نصب شود؟</string>
     <string name="update_now">به‌روزرسانی</string>
     <string name="update_whats_new">چه خبر؟</string>
     <string name="update_ignore">نادیده‌گرفتن</string>
@@ -479,4 +478,5 @@
     <string name="morphe_sign_in_with_google_microg_label">ورود با Google از طریق MicroG RE</string>
     <string name="self_check_patched_app_installed">در حال اجرا با %1$s</string>
     <string name="self_check_action_download_morphe">دانلود Morphe</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
 </resources>

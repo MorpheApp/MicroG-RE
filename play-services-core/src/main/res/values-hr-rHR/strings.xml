@@ -188,10 +188,10 @@ Registraciju svojeg uređaja na Googleu možete onemogućiti nakon što je posta
     <string name="pref_github_summary">Repozitorij izvornog koda</string>
     <string name="pref_update_title">Provjeri ažuriranja</string>
     <string name="pref_update_summary">Provjeri GitHub za noviju verziju.</string>
-    <string name="update_include_prerelease">Uključi predizdanja / razvojne verzije</string>
+    <string name="update_include_prerelease">Uključi razvojne verzije</string>
     <string name="update_available_title">Dostupno ažuriranje</string>
     <string name="update_available_prerelease_title">Ažuriranje dostupno (predizdanje)</string>
-    <string name="update_available_message">Dostupna je nova verzija v%1s. Imate instaliranu verziju v%2$s. Preuzeti i instalirati ažuriranje?</string>
+    <string name="update_available_message">Dostupna je nova verzija v%1$s. Imate instaliranu verziju v%2$s. Preuzeti i instalirati ažuriranje?</string>
     <string name="update_now">Ažuriraj</string>
     <string name="update_whats_new">Što je novo</string>
     <string name="update_ignore">Zanemari</string>
@@ -481,4 +481,6 @@ Neke se aplikacije možda neće moći ponovno registrirati nakon ove radnje. Mo�
     <string name="morphe_sign_in_with_google_microg_label">Prijava s Googleom putem MicroG RE</string>
     <string name="self_check_patched_app_installed">Pokrenuto s %1$s</string>
     <string name="self_check_action_download_morphe">Preuzmite Morphe</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Instalirana je pogrešna inačica arhitekture</string>
 </resources>

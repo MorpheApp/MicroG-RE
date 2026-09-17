@@ -102,4 +102,5 @@ Ev dikare çend deqîqan bidome."</string>
     <string name="pref_passkey_manager_transport_bluetooth">Bluetooth</string>
     <string name="pref_passkey_manager_transport_hybrid">Hîbrîd</string>
     <string name="pref_passkey_manager_credential_id_format_internal">ID: %1$s</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
 </resources>

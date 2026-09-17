@@ -189,7 +189,7 @@ A Google-eszközregisztrációt a fiókbeállítás befejezése után letilthatj
     <string name="pref_github_summary">Forráskód tárolóhely</string>
     <string name="pref_update_title">Frissítések keresése</string>
     <string name="pref_update_summary">Ellenőrizze a GitHubot az újabb verzióért.</string>
-    <string name="update_include_prerelease">Előzetes / fejlesztői verziók</string>
+    <string name="update_include_prerelease">Fejlesztői buildek belefoglalása</string>
     <string name="update_available_title">Frissítés elérhető</string>
     <string name="update_available_prerelease_title">Frissítés érhető el (előzetes verzió)</string>
     <string name="update_now">Frissítés</string>
@@ -481,4 +481,5 @@ Egyes alkalmazások nem tudnak újraregisztrálni a műveletet követően. Ezekn
     <string name="morphe_sign_in_with_google_microg_label">Bejelentkezés a Google-lel MicroG RE-n keresztül</string>
     <string name="self_check_patched_app_installed">Ezzel fut: %1$s</string>
     <string name="self_check_action_download_morphe">Morphe letöltése</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
 </resources>

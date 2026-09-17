@@ -188,10 +188,10 @@ Configure una contraseña, un PIN o una pantalla de bloqueo de patrones."</strin
     <string name="pref_github_summary">Repositorio de código fuente</string>
     <string name="pref_update_title">Buscar actualizaciones</string>
     <string name="pref_update_summary">Consulta GitHub para ver si hay una versión más reciente.</string>
-    <string name="update_include_prerelease">Incluir compilaciones pre-lanzamiento / en desarrollo</string>
+    <string name="update_include_prerelease">Incluir versiones de desarrollo</string>
     <string name="update_available_title">Actualización disponible</string>
     <string name="update_available_prerelease_title">Actualización disponible (pre-lanzamiento)</string>
-    <string name="update_available_message">La nueva versión v%1s está disponible. Tienes instalada la versión v%2$s. ¿Descargar e instalar la actualización?</string>
+    <string name="update_available_message">La nueva versión v%1$s está disponible. Tienes instalada la versión v%2$s. ¿Descargar e instalar la actualización?</string>
     <string name="update_now">Actualizar</string>
     <string name="update_whats_new">Novedades</string>
     <string name="update_ignore">Ignorar</string>
@@ -479,4 +479,13 @@ Es posible que algunas apps no puedan volver a registrarse después de esta acci
     <string name="morphe_sign_in_with_google_microg_label">Iniciar sesión con Google a través de MicroG RE</string>
     <string name="self_check_patched_app_installed">Ejecutándose con %1$s</string>
     <string name="self_check_action_download_morphe">Descargar Morphe</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Variante de arquitectura incorrecta instalada</string>
+    <string name="abi_mismatch_message">"Esta compilación de MicroG-RE solo contiene bibliotecas de 64 bits (arm64), pero este dispositivo ejecuta un espacio de usuario de 32 bits.
+
+Las funciones que necesitan Conscrypt (inicio de sesión en la cuenta, streaming, BotGuard, falsificar transmisiones de vídeo, SponsorBlock, Return YouTube Dislike, etc.) no funcionarán correctamente y pueden causar problemas de reproducción o el mensaje \"No se ha podido encontrar un proveedor SSL predeterminado\".
+
+Instala el APK ARMv7 o el APK universal en su lugar."</string>
+    <string name="abi_mismatch_download_armv7">Descargar APK ARMv7</string>
+    <string name="abi_mismatch_downloading_title">Descargando la variante correcta…</string>
 </resources>

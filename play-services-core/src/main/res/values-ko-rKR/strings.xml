@@ -40,8 +40,8 @@
     <string name="deny">거부</string>
     <string name="auth_notification_title">인증 필요</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g>는 Google 계정에 액세스하기 위해 승인이 필요합니다.</string>
-    <string name="auth_package_override_request_title"><b><xliff:g example="F-Droid">%1$s</xliff:g></b>가 <xliff:g example="account@example.com">%2$s</xliff:g>에 대한 액세스 권한을 갖도록 허용하시겠습니까?</string>
-    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b>가 <b><xliff:g example="F-Droid Inc.">%3$s</xliff:g>에서 제공하는 <xliff:g example="F-Droid">%2$s</xliff:g></b>인 것처럼 귀하의 계정에 액세스하려고 합니다. 이로 인해 해당 앱에 귀하의 계정에 대한 높은 수준의 권한이 부여될 수 있습니다.</string>
+    <string name="auth_package_override_request_title"><b><xliff:g example="F-Droid">%1$s</xliff:g></b>에 <xliff:g example="account@example.com">%2$s</xliff:g>에 대한 특권 액세스 권한을 허용하시겠습니까?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b>가 <b><xliff:g example="F-Droid Inc.">%3$s</xliff:g>에서 제공하는 <xliff:g example="F-Droid">%2$s</xliff:g></b>인 것처럼 귀하의 계정에 액세스하려고 합니다. 이로 인해 해당 앱에 귀하의 계정에 대한 높은 수준의 액세스 권한이 부여될 수 있습니다.</string>
     <string name="auth_action_notification_channel_name">Google 계정 알림</string>
     <string name="auth_action_notification_channel_description">Google 계정 중 하나를 사용하기 전에 추가 설정이 필요하거나 계정이 microG와 호환되지 않을 때 알림을 보냅니다.</string>
     <string name="auth_action_notification_title">계정 작업 필요</string>
@@ -188,10 +188,10 @@
     <string name="pref_github_summary">소스 코드 리포지토리</string>
     <string name="pref_update_title">업데이트 확인</string>
     <string name="pref_update_summary">GitHub에서 최신 버전을 확인하세요.</string>
-    <string name="update_include_prerelease">Pre-release / 개발자 빌드 포함</string>
+    <string name="update_include_prerelease">개발자 빌드 포함</string>
     <string name="update_available_title">업데이트 사용 가능</string>
     <string name="update_available_prerelease_title">업데이트 사용 가능 (Pre-release)</string>
-    <string name="update_available_message">새로운 %1s 버전이 있습니다. 현재 %2$s 버전이 설치되어 있습니다. 업데이트를 다운로드하여 설치하시겠습니까?</string>
+    <string name="update_available_message">새로운 %1$s 버전이 있습니다. 현재 %2$s 버전이 설치되어 있습니다. 업데이트를 다운로드하여 설치하시겠습니까?</string>
     <string name="update_now">업데이트</string>
     <string name="update_whats_new">새로운 기능</string>
     <string name="update_ignore">무시</string>
@@ -420,7 +420,7 @@
     <string name="family_management_cancel_invite_error">초대 취소에 문제가 발생하였습니다. 다시 시도하세요.</string>
     <string name="family_management_remove_member">구성원 제거</string>
     <string name="family_management_member_removed_success">%s님이 가족 그룹에서 제거되었습니다</string>
-    <string name="family_management_member_remove_failed">%s님 제거에 문제가 발생하였습니다. 다시 시도하세요.</string>
+    <string name="family_management_member_remove_failed">%s님을 제거하는 데 문제가 발생하였습니다. 다시 시도하세요.</string>
     <string name="family_management_leave_family_error_message">가족 그룹에서 나가는 데 문제가 발생하였습니다. 다시 시도하세요.</string>
     <string name="family_management_exist_group_success">가족 그룹을 떠났습니다…</string>
     <string name="family_management_delete_group_success">가족 그룹을 삭제하였습니다</string>
@@ -479,4 +479,13 @@
     <string name="morphe_sign_in_with_google_microg_label">MicroG RE를 통한 Google 로그인</string>
     <string name="self_check_patched_app_installed">\'%1$s\'로 실행하는 중</string>
     <string name="self_check_action_download_morphe">Morphe 다운로드</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">잘못된 아키텍처 변형이 설치됨</string>
+    <string name="abi_mismatch_message">"이 MicroG-RE 빌드에는 64비트(arm64) 라이브러리만 있는데, 이 기기는 32비트 사용자 공간에서 작동하고 있습니다.
+
+Conscrypt가 필요한 기능(계정 로그인, 스트리밍, BotGuard, 동영상 스트림 속이기, SponsorBlock, Return YouTube Dislike 등)이 제대로 동작하지 않을 수 있으며 재생 문제가 발생하거나 \"기본 SSL 제공자를 찾지 못할\" 수 있습니다.
+
+대신에 ARMv7 또는 Universal APK를 설치하세요."</string>
+    <string name="abi_mismatch_download_armv7">ARMv7 APK 다운로드</string>
+    <string name="abi_mismatch_downloading_title">올바른 변형을 다운로드하는 중…</string>
 </resources>
