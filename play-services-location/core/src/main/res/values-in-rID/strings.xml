@@ -32,7 +32,7 @@
     <string name="location_settings_dialog_message_location_services_gps_and_nlp">Gunakan GPS, Wi‑Fi, jaringan seluler, dan sensor</string>
     <string name="location_settings_dialog_message_grant_permissions">Beri izin lokasi ke Layanan microG</string>
     <string name="location_settings_dialog_message_gls_consent">Gunakan layanan lokasi microG; sebagai bagian dari layanan ini, microG dapat mengumpulkan data lokasi secara berkala dan menggunakan data ini secara anonim untuk meningkatkan akurasi lokasi dan layanan berbasis lokasi.</string>
-    <string name="location_settings_dialog_message_details_end_paragraph">Untuk detail, buka pengaturan lokasi.</string>
+    <string name="location_settings_dialog_message_details_end_paragraph">Untuk detail, buka setelan lokasi.</string>
     <string name="location_settings_dialog_btn_cancel">Tidak, terima kasih</string>
     <string name="location_settings_dialog_btn_sure">Oke</string>
     <string name="pref_location_custom_url_summary">Ini memungkinkan mengatur URL layanan khusus. Nilai yang tidak valid dapat menyebabkan layanan lokasi tidak responsif atau tidak tersedia sama sekali.</string>

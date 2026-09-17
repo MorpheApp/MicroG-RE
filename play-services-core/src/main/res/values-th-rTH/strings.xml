@@ -188,10 +188,9 @@
     <string name="pref_github_summary">สำเนาโค้ดต้นฉบับ</string>
     <string name="pref_update_title">ตรวจสอบอัปเดต</string>
     <string name="pref_update_summary">ตรวจสอบ GitHub เพื่อดูเวอร์ชันใหม่</string>
-    <string name="update_include_prerelease">รวมรุ่นก่อนวางจำหน่าย / รุ่นพัฒนา</string>
     <string name="update_available_title">มีอัปเดต</string>
     <string name="update_available_prerelease_title">มีอัปเดต (ก่อนวางจำหน่าย)</string>
-    <string name="update_available_message">มีเวอร์ชันใหม่ v%1s ให้ใช้งาน ขณะนี้คุณติดตั้งเวอร์ชัน v%2$s อยู่ คุณต้องการดาวน์โหลดและติดตั้งอัปเดตหรือไม่?</string>
+    <string name="update_available_message">มี v%1$s ใหม่ให้ใช้งานแล้ว คุณติดตั้งเวอร์ชัน v%2$s อยู่ ดาวน์โหลดและติดตั้งอัปเดตหรือไม่</string>
     <string name="update_now">อัปเดต</string>
     <string name="update_whats_new">มีอะไรใหม่</string>
     <string name="update_ignore">ไม่สนใจ</string>
@@ -479,4 +478,13 @@
     <string name="morphe_sign_in_with_google_microg_label">ลงชื่อเข้าใช้ด้วย Google ผ่าน MicroG RE</string>
     <string name="self_check_patched_app_installed">ทำงานกับ %1$s</string>
     <string name="self_check_action_download_morphe">ดาวน์โหลด Morphe</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">ติดตั้งสถาปัตยกรรมรุ่นที่ไม่ถูกต้อง</string>
+    <string name="abi_mismatch_message">"MicroG-RE บิลด์นี้มีเฉพาะไลบรารี 64 บิต (arm64) แต่อุปกรณ์นี้กำลังรัน userspace แบบ 32 บิต
+
+ฟีเจอร์ที่ต้องใช้ Conscrypt (การเข้าสู่ระบบบัญชี, การสตรีม, BotGuard, การปลอมแปลงสตรีมวิดีโอ, SponsorBlock, Return YouTube Dislike ฯลฯ) จะทำงานไม่ถูกต้อง และอาจทำให้เกิดปัญหาการเล่นหรือ \"Unable to find a default SSL provider\"
+
+ติดตั้ง ARMv7 หรือ Universal APK แทน"</string>
+    <string name="abi_mismatch_download_armv7">ดาวน์โหลด ARMv7 APK</string>
+    <string name="abi_mismatch_downloading_title">กำลังดาวน์โหลดเวอร์ชันที่ถูกต้อง…</string>
 </resources>

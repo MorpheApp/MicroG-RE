@@ -188,10 +188,9 @@
     <string name="pref_github_summary">源代码仓库</string>
     <string name="pref_update_title">检查更新</string>
     <string name="pref_update_summary">检查GitHub以获取新版本。</string>
-    <string name="update_include_prerelease">包含预发行版/开发版本</string>
     <string name="update_available_title">有可用更新</string>
     <string name="update_available_prerelease_title">有可用更新（预发行版）</string>
-    <string name="update_available_message">新版本 v%1s 可用。您当前安装的版本为 v%2$s。是否下载并安装更新？</string>
+    <string name="update_available_message">新版本 v%1$s 可用。您已安装版本 v%2$s。是否下载并安装更新？</string>
     <string name="update_now">更新</string>
     <string name="update_whats_new">更新内容</string>
     <string name="update_ignore">忽略</string>
@@ -479,4 +478,13 @@
     <string name="morphe_sign_in_with_google_microg_label">通过 MicroG RE 使用 Google 登录</string>
     <string name="self_check_patched_app_installed">使用 %1$s 运行</string>
     <string name="self_check_action_download_morphe">下载 Morphe</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">已安装错误的架构变体</string>
+    <string name="abi_mismatch_message">"此 MicroG-RE 版本仅包含 64 位（arm64）库，但此设备运行的是 32 位用户空间。
+
+需要 Conscrypt 的功能（账户登录、流媒体播放、BotGuard、视频流欺骗、SponsorBlock、Return YouTube Dislike 等）将无法正常工作，并可能导致播放问题或“Unable to find a default SSL provider”。
+
+请改为安装 ARMv7 或 Universal APK。"</string>
+    <string name="abi_mismatch_download_armv7">下载 ARMv7 APK</string>
+    <string name="abi_mismatch_downloading_title">正在下载正确的变体…</string>
 </resources>

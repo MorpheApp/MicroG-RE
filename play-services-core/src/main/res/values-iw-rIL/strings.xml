@@ -188,10 +188,10 @@
     <string name="pref_github_summary">ארכיון קוד מקור</string>
     <string name="pref_update_title">בדוק עדכונים</string>
     <string name="pref_update_summary">בדוק ב-GitHub לגרסה חדשה יותר.</string>
-    <string name="update_include_prerelease">כלול גרסאות פרה-הפצה / פיתוח</string>
+    <string name="update_include_prerelease">כלול גרסאות פיתוח</string>
     <string name="update_available_title">עדכון זמין</string>
     <string name="update_available_prerelease_title">עדכון זמין (פרה-הפצה)</string>
-    <string name="update_available_message">גרסה חדשה v%1s זמינה. הגרסה המותקנת אצלך היא v%2$s. להוריד ולהתקין את העדכון?</string>
+    <string name="update_available_message">זמינה גרסה חדשה v%1$s. הגרסה v%2$s מותקנת אצלך. להוריד ולהתקין את העדכון?</string>
     <string name="update_now">עדכן</string>
     <string name="update_whats_new">מה חדש</string>
     <string name="update_ignore">התעלם</string>
@@ -485,4 +485,9 @@
     <string name="morphe_sign_in_with_google_microg_label">התחבר עם Google באמצעות MicroG RE</string>
     <string name="self_check_patched_app_installed">רץ עם %1$s</string>
     <string name="self_check_action_download_morphe">הורד Morphe</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">הותקן גרסת ארכיטקטורה שגויה</string>
+    <string name="abi_mismatch_message">"מבנה MicroG-RE זה מכיל רק ספריות 64-bit (arm64), אבל המכשיר הזה מריץ מרחב משתמש של 32-bit.\n\nתכונות שדורשות Conscrypt (כניסה לחשבון, סטרימינג, BotGuard, זיוף הזרמות וידאו, SponsorBlock, Return YouTube Dislike, וכו') לא יעבדו כראוי ועלולות לגרום לבעיות בהפעלה או להודעת \"Unable to find a default SSL provider\".\n\nהתקן במקום זאת את ה-APK של ARMv7 או האוניברסלי."</string>
+    <string name="abi_mismatch_download_armv7">הורד APK של ARMv7</string>
+    <string name="abi_mismatch_downloading_title">מוריד את הגרסה הנכונה…</string>
 </resources>

@@ -188,10 +188,9 @@
     <string name="pref_github_summary">Αποθετήριο πηγαίου κώδικα</string>
     <string name="pref_update_title">Έλεγχος για ενημερώσεις</string>
     <string name="pref_update_summary">Ελέγξτε στο GitHub για νεότερη έκδοση.</string>
-    <string name="update_include_prerelease">Συμπερίληψη εκδόσεων προ-έκδοσης / δοκιμαστικών εκδόσεων</string>
+    <string name="update_include_prerelease">Συμπερίληψη εκδόσεων ανάπτυξης</string>
     <string name="update_available_title">Διαθέσιμη ενημέρωση</string>
     <string name="update_available_prerelease_title">Διαθέσιμη ενημέρωση (προ-έκδοση)</string>
-    <string name="update_available_message">Νέα έκδοση v%1s είναι διαθέσιμη. Έχετε εγκαταστημένη την έκδοση v%2$s. Να γίνει λήψη και εγκατάσταση της ενημέρωσης;</string>
     <string name="update_now">Ενημέρωση</string>
     <string name="update_whats_new">Τι νέο</string>
     <string name="update_ignore">Αγνόηση</string>
@@ -479,4 +478,5 @@
     <string name="morphe_sign_in_with_google_microg_label">Σύνδεση με Google μέσω MicroG RE</string>
     <string name="self_check_patched_app_installed">Εκτελείται με %1$s</string>
     <string name="self_check_action_download_morphe">Λήψη του Morphe</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
 </resources>

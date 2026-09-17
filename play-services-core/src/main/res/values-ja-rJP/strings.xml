@@ -188,10 +188,10 @@
     <string name="pref_github_summary">ソース コード リポジトリ</string>
     <string name="pref_update_title">更新の確認</string>
     <string name="pref_update_summary">GitHub で新しいバージョンを確認してください。</string>
-    <string name="update_include_prerelease">プレリリース / 開発ビルドを含める</string>
+    <string name="update_include_prerelease">開発ビルドを含める</string>
     <string name="update_available_title">更新が利用可能です</string>
     <string name="update_available_prerelease_title">更新が利用可能です（プレリリース）</string>
-    <string name="update_available_message">新しいバージョン v%1s が利用可能です。現在、バージョン v%2$s がインストールされています。更新をダウンロードしてインストールしますか？</string>
+    <string name="update_available_message">新しいバージョン v%1$s が利用可能です。現在、バージョン v%2$s がインストールされています。更新をダウンロードしてインストールしますか？</string>
     <string name="update_now">アップデート</string>
     <string name="update_whats_new">新着情報</string>
     <string name="update_ignore">無視</string>
@@ -478,4 +478,11 @@
     <string name="morphe_sign_in_with_google_microg_label">MicroG RE 経由で Google にログイン</string>
     <string name="self_check_patched_app_installed">%1$s が適用されたアプリのインストール</string>
     <string name="self_check_action_download_morphe">Morphe をダウンロード</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">誤ったアーキテクチャ バリアントがインストールされています</string>
+    <string name="abi_mismatch_message">"このMicroG-REビルドには64ビット(arm64)ライブラリしか含まれていませんが、このデバイスは32ビットユーザースペースで動作しています。
+
+Conscryptを必要とする機能（アカウントログイン、ストリーミング、BotGuard、動画ストリームの偽装、SponsorBlock、Return YouTube Dislikeなど）は正常に動作せず、再生の問題、または「Unable to find a default SSL provider」を引き起こす可能性があります。
+
+代わりにARMv7 APKまたはユニバーサルAPKをインストールしてください。"</string>
 </resources>

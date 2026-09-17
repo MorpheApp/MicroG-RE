@@ -259,4 +259,5 @@ Siz bilan almashayotgan odamlar sizning oxirgi joylashuvingizni ko\'rishda davom
     <string name="pref_passkey_manager_transport_hybrid">Gibrid</string>
     <string name="pref_passkey_manager_credential_id_format_internal">ID: %1$s</string>
     <string name="self_check_resolution_oem_restriction">Sizning tizimingiz fon jarayonlarini cheklashi mumkin. Bu yerga bosing va Don\'t Kill My App! saytini oching hamda bu cheklovlarni qanday o\'chirishni o\'rganing.</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
 </resources>

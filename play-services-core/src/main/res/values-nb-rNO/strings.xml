@@ -188,10 +188,10 @@ Vennligst sett opp et passord, en PIN-kode eller et mønsterlås."</string>
     <string name="pref_github_summary">Kildekode-repository</string>
     <string name="pref_update_title">Se etter oppdateringer</string>
     <string name="pref_update_summary">Sjekk GitHub for en nyere versjon.</string>
-    <string name="update_include_prerelease">Inkluder forhåndsutgivelser / utviklingsbyg</string>
+    <string name="update_include_prerelease">Inkluder utviklingsbygg</string>
     <string name="update_available_title">Oppdatering tilgjengelig</string>
     <string name="update_available_prerelease_title">Oppdatering tilgjengelig (forhåndsutgivelse)</string>
-    <string name="update_available_message">Ny v%1s er tilgjengelig. Du har versjon v%2$s installert. Last ned og installer oppdateringen?</string>
+    <string name="update_available_message">Ny v%1$s er tilgjengelig. Du har versjon v%2$s installert. Last ned og installer oppdateringen?</string>
     <string name="update_now">Oppdater</string>
     <string name="update_whats_new">Hva er nytt</string>
     <string name="update_ignore">Ignorer</string>
@@ -483,4 +483,13 @@ Noen apper kan kanskje ikke registrere seg på nytt etter denne handlingen. Du m
     <string name="morphe_sign_in_with_google_microg_label">Logg inn med Google via MicroG RE</string>
     <string name="self_check_patched_app_installed">Kjører med %1$s</string>
     <string name="self_check_action_download_morphe">Last ned Morphe</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Feil arkitekturvariant installert</string>
+    <string name="abi_mismatch_message">"Denne MicroG-RE-bygningen inneholder kun 64-bit (arm64)-biblioteker, men denne enheten kjører en 32-bit brukerrom.
+
+Funksjoner som trenger Conscrypt (kontopålogging, streaming, BotGuard, Forfalsk videostrømmer, SponsorBlock, Return YouTube Dislike, osv.) vil ikke fungere riktig og kan forårsake avspillingsproblemer eller \"Klarer ikke å finne en standard SSL-leverandør\".
+
+Installer ARMv7- eller Universal-APK-en i stedet."</string>
+    <string name="abi_mismatch_download_armv7">Last ned ARMv7 APK</string>
+    <string name="abi_mismatch_downloading_title">Laster ned riktig variant…</string>
 </resources>

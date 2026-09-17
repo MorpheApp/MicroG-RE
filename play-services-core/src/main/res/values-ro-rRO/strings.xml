@@ -188,10 +188,9 @@ Vă rugăm să configurați o parolă, un PIN sau un model de blocare."</string>
     <string name="pref_github_summary">Repozitorul codului sursă</string>
     <string name="pref_update_title">Verifică actualizările</string>
     <string name="pref_update_summary">Verifică pe GitHub dacă există o versiune mai nouă.</string>
-    <string name="update_include_prerelease">Include versiuni pre-lansare / de dezvoltare</string>
+    <string name="update_include_prerelease">Include versiuni de dezvoltare</string>
     <string name="update_available_title">Actualizare disponibilă</string>
     <string name="update_available_prerelease_title">Actualizare disponibilă (pre-lansare)</string>
-    <string name="update_available_message">Noua versiune v%1s este disponibilă. Ai instalată versiunea v%2$s. Vrei să descarci și să instalezi actualizarea?</string>
     <string name="update_now">Actualizează</string>
     <string name="update_whats_new">Noutăți</string>
     <string name="update_ignore">Ignoră</string>
@@ -479,4 +478,5 @@ Unele aplicații pot nu mai putea fi înregistrate din nou după această acțiu
     <string name="morphe_sign_in_with_google_microg_label">Conectează-te cu Google prin MicroG RE</string>
     <string name="self_check_patched_app_installed">Funcționează cu %1$s</string>
     <string name="self_check_action_download_morphe">Descărcați Morphe</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
 </resources>

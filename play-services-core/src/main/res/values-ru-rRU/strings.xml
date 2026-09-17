@@ -188,10 +188,9 @@
     <string name="pref_github_summary">Репозиторий кода</string>
     <string name="pref_update_title">Проверить наличие обновлений</string>
     <string name="pref_update_summary">Проверьте GitHub на наличие более новой версии.</string>
-    <string name="update_include_prerelease">Включать предварительные / dev-сборки</string>
+    <string name="update_include_prerelease">Включать сборки для разработчиков</string>
     <string name="update_available_title">Доступное обновление</string>
     <string name="update_available_prerelease_title">Доступно обновление (предварительная версия)</string>
-    <string name="update_available_message">Доступна новая версия v%1$s. Установлена версия v\%2$s. Загрузить и установить обновление?</string>
     <string name="update_now">Обновление</string>
     <string name="update_whats_new">Что нового</string>
     <string name="update_ignore">Игнорировать</string>
@@ -478,4 +477,5 @@
     <string name="morphe_sign_in_with_google_microg_label">Вход через Google с помощью MicroG RE</string>
     <string name="self_check_patched_app_installed">Работает с %1$s</string>
     <string name="self_check_action_download_morphe">Загрузить Morphe</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
 </resources>

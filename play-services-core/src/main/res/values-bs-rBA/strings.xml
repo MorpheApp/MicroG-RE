@@ -8,4 +8,5 @@
     <!-- Settings strings -->
     <string name="prefcat_about">O Morphe</string>
     <!-- Passkey management -->
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
 </resources>

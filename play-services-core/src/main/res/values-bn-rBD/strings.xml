@@ -188,10 +188,10 @@
     <string name="pref_github_summary">সোর্স কোড রেপোজিটরি</string>
     <string name="pref_update_title">আপডেটের জন্য পরীক্ষা করুন</string>
     <string name="pref_update_summary">নতুন সংস্করণের জন্য GitHub দেখুন।</string>
-    <string name="update_include_prerelease">প্রি-রিলিজ / ডেভ বিল্ড অন্তর্ভুক্ত করুন</string>
+    <string name="update_include_prerelease">ডেভ বিল্ড অন্তর্ভুক্ত করুন</string>
     <string name="update_available_title">আপডেট উপলব্ধ</string>
     <string name="update_available_prerelease_title">আপডেট উপলব্ধ (প্রি-রিলিজ)</string>
-    <string name="update_available_message">নতুন সংস্করণ v%1s উপলব্ধ। আপনার কাছে v%2$s সংস্করণ ইনস্টল আছে। আপডেটটি ডাউনলোড করে ইনস্টল করবেন?</string>
+    <string name="update_available_message">নতুন v%1$s উপলব্ধ। আপনার কাছে v%2$s সংস্করণ ইনস্টল করা আছে। আপনি কি আপডেটটি ডাউনলোড করে ইনস্টল করতে চান?</string>
     <string name="update_now">আপডেট</string>
     <string name="update_whats_new">নতুন কী</string>
     <string name="update_ignore">উপেক্ষা করুন</string>
@@ -489,4 +489,5 @@
     <string name="morphe_sign_in_with_google_microg_label">MicroG RE এর মাধ্যমে Google দিয়ে সাইন ইন করুন</string>
     <string name="self_check_patched_app_installed">%1$S-এ রানিং</string>
     <string name="self_check_action_download_morphe">ডাউনলোড মর্ফে</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
 </resources>

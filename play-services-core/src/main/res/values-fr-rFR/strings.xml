@@ -97,7 +97,7 @@ Veuillez configurer un écran de verrouillage avec un mot de passe, un code PIN 
     <string name="games_title">Google Play Jeux</string>
     <string name="games_info_title"><xliff:g example="F-Droid">%1$s</xliff:g> souhaite utiliser Google Play Jeux.</string>
     <string name="games_info_content">Pour utiliser Google Play Jeux, il est nécessaire d\'installer l\'application Google Play Jeux. L\'application peut continuer sans Play Jeux, mais il est possible qu\'elle se comporte de manière inattendue.</string>
-    <string name="pick_place_title">Choisir un lieu</string>
+    <string name="pick_place_title">Sélectionner un lieu</string>
     <string name="place_picker_select_title">Sélectionner cet emplacement</string>
     <string name="place_picker_nearby_places">Lieux à proximité</string>
     <string name="network_type_mobile">Réseau mobile</string>
@@ -190,10 +190,10 @@ Veuillez configurer un écran de verrouillage avec un mot de passe, un code PIN 
     <string name="pref_github_summary">Dépôt du code source</string>
     <string name="pref_update_title">Vérifier les mises à jour</string>
     <string name="pref_update_summary">Vérifier sur GitHub si une version plus récente est disponible.</string>
-    <string name="update_include_prerelease">Inclure les préversions / de développement</string>
+    <string name="update_include_prerelease">Inclure les versions de développement</string>
     <string name="update_available_title">Mise à jour disponible</string>
     <string name="update_available_prerelease_title">Mise à jour disponible (préversion)</string>
-    <string name="update_available_message">La nouvelle version v%1s est disponible. Vous avez la version v%2$s installée. Télécharger et installer la mise à jour ?</string>
+    <string name="update_available_message">La nouvelle version v%1$s est disponible. Vous avez la version v%2$s installée. Télécharger et installer la mise à jour ?</string>
     <string name="update_now">Mettre à jour</string>
     <string name="update_whats_new">Nouveautés</string>
     <string name="update_ignore">Ignorer</string>
@@ -492,4 +492,13 @@ Vérifiez le statut d'enregistrement de l'appareil. Certaines applications pourr
     <string name="morphe_sign_in_with_google_microg_label">Se connecter avec Google via MicroG RE</string>
     <string name="self_check_patched_app_installed">Exécuté avec %1$s</string>
     <string name="self_check_action_download_morphe">Télécharger Morphe</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Mauvaise variante d\'architecture installée</string>
+    <string name="abi_mismatch_message">"Cette version de MicroG-RE ne contient que des bibliothèques 64 bits (arm64), alors que cet appareil utilise un environnement utilisateur 32 bits.
+
+Les fonctionnalités qui nécessitent Conscrypt (connexion au compte, streaming, BotGuard, Falsifier les flux vidéo, SponsorBlock, Return YouTube Dislike, etc.) ne fonctionneront pas correctement et peuvent entraîner des problèmes de lecture ou afficher le message \"Impossible de trouver un fournisseur SSL par défaut\".
+
+Installez plutôt l'APK ARMv7 ou Universal."</string>
+    <string name="abi_mismatch_download_armv7">Télécharger l\'APK ARMv7</string>
+    <string name="abi_mismatch_downloading_title">Téléchargement de la variante correcte…</string>
 </resources>

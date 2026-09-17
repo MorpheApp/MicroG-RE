@@ -180,7 +180,7 @@
     <string name="pref_gcm_confirm_new_apps_title">تأكيد التطبيقات الجديدة</string>
     <string name="pref_gcm_confirm_new_apps_summary">اسأل قبل تسجيل تطبيق جديد لتلقي الإشعارات الفورية</string>
     <string name="pref_about_title">حول MicroG RE</string>
-    <string name="pref_hide_launcher_icon">إخفاء الأيقونة من الصفحة الرئيسية</string>
+    <string name="pref_hide_launcher_icon">إخفاء الأيقونة من الشاشة الرئيسية</string>
     <string name="hide_launcher_icon_dialog_message">عند التمكين، سيتم إخفاء MicroG من مشغل التطبيقات. يمكنك فتح MicroG من صفحة معلومات التطبيق الموجودة في قائمة تطبيقات النظام بجهازك.</string>
     <string name="hide_launcher_icon_updating_title">يرجى الانتظار حتى يتم تحديث التطبيق</string>
     <string name="pref_language_title">اللغة</string>
@@ -188,10 +188,10 @@
     <string name="pref_github_summary">مستودع الشفرة المصدرية</string>
     <string name="pref_update_title">التحقق من توفر تحديثات</string>
     <string name="pref_update_summary">التحقق من GitHub للبحث عن إصدار أحدث.</string>
-    <string name="update_include_prerelease">تضمين إصدارات ما قبل الإطلاق / المخصصة للمطورين</string>
+    <string name="update_include_prerelease">تضمين إصدارات التطوير</string>
     <string name="update_available_title">تحديث متاح</string>
     <string name="update_available_prerelease_title">تحديث متاح (إصدار ما قبل الإطلاق)</string>
-    <string name="update_available_message">إصدار جديد متاح v%1s. الإصدار المثبت لديك هو v%2$s. هل ترغب في تنزيل التحديث وتثبيته؟</string>
+    <string name="update_available_message">إصدار جديد متاح v%1$s. الإصدار المثبت لديك هو v%2$s. هل ترغب في تنزيل التحديث وتثبيته؟</string>
     <string name="update_now">تحديث</string>
     <string name="update_whats_new">ما الجديد</string>
     <string name="update_ignore">تجاهل</string>
@@ -480,4 +480,13 @@
     <string name="morphe_sign_in_with_google_microg_label">تسجيل الدخول باستخدام Google عبر MicroG RE</string>
     <string name="self_check_patched_app_installed">قيد التشغيل باستخدام %1$s</string>
     <string name="self_check_action_download_morphe">تنزيل Morphe</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">تم تثبيت نسخة معمارية غير صحيح</string>
+    <string name="abi_mismatch_message">"يحتوي هذا الإصدار من MicroG-RE على مكتبات 64-بت فقط (arm64)، لكن هذا الجهاز يعمل بنظام مستخدم 32-بت.
+
+الميزات التي تحتاج إلى Conscrypt (تسجيل الدخول إلى الحساب، البث، BotGuard، Spoof Video Streams، SponsorBlock، إستعادة عدد مرات لم يعجبني على YouTube، إلخ) لن تعمل بشكل صحيح وقد تسبب مشاكل في التشغيل أو رسالة \"تعذر العثور على موفر SSL افتراضي\".
+
+قم بتثبيت ملف APK الخاص بـ ARMv7 أو نسخة Universal APK بدلًا من ذلك."</string>
+    <string name="abi_mismatch_download_armv7">تنزيل ملف APK الخاص بـ ARMv7</string>
+    <string name="abi_mismatch_downloading_title">جارٍ تنزيل النسخة الصحيحة…</string>
 </resources>

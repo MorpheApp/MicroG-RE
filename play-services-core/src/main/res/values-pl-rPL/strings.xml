@@ -188,10 +188,10 @@ Skonfiguruj hasło, kod PIN lub wzór blokady ekranu."</string>
     <string name="pref_github_summary">Repozytorium kodu źródłowego</string>
     <string name="pref_update_title">Sprawdź aktualizacje</string>
     <string name="pref_update_summary">Sprawdź dostępność nowszej wersji na GitHubie.</string>
-    <string name="update_include_prerelease">Uwzględniaj wersje przedpremierowe / deweloperskie</string>
+    <string name="update_include_prerelease">Uwzględniaj wersje deweloperskie</string>
     <string name="update_available_title">Dostępna aktualizacja</string>
     <string name="update_available_prerelease_title">Dostępna aktualizacja (przedpremierowa)</string>
-    <string name="update_available_message">Dostępna jest nowa wersja v%1s. Obecnie zainstalowana to v%2$s. Pobrać i zainstalować aktualizację?</string>
+    <string name="update_available_message">Dostępna jest nowa wersja v%1$s. Obecnie zainstalowana to v%2$s. Pobrać i zainstalować aktualizację?</string>
     <string name="update_now">Aktualizuj</string>
     <string name="update_whats_new">Co nowego</string>
     <string name="update_ignore">Ignoruj</string>
@@ -479,4 +479,13 @@ Niektóre aplikacje mogą nie być w stanie zarejestrować się ponownie. Koniec
     <string name="morphe_sign_in_with_google_microg_label">Zaloguj się w Google przez MicroG RE</string>
     <string name="self_check_patched_app_installed">Działa przy użyciu %1$s</string>
     <string name="self_check_action_download_morphe">Pobierz Morphe</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Zainstalowano niewłaściwą architekturę</string>
+    <string name="abi_mismatch_message">"Ta kompilacja MicroG-RE zawiera wyłącznie biblioteki 64-bitowe (arm64), ale to urządzenie korzysta z 32-bitowego środowiska.
+
+Funkcje wymagające biblioteki Conscrypt (logowanie na konto, odtwarzanie, BotGuard, opcja \"Fałszowanie strumieni filmów\", SponsorBlock, Return YouTube Dislike itp.) nie będą działać prawidłowo. Może to powodować problemy z działaniem aplikacji lub błąd \"Unable to find a default SSL provider\".
+
+Zainstaluj zamiast tego plik APK w wersji ARMv7 lub Universal."</string>
+    <string name="abi_mismatch_download_armv7">Pobierz plik APK ARMv7</string>
+    <string name="abi_mismatch_downloading_title">Pobieranie właściwej wersji…</string>
 </resources>

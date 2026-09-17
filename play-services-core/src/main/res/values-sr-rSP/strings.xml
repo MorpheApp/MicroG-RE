@@ -16,6 +16,7 @@ Vaši podaci neće biti izgubljeni"</string>
     <string name="snackbar_undo_button">Поврати</string>
     <string name="gms_settings_name">MicroG Подешавања</string>
     <string name="gms_settings_summary">Подеси MicroG услуге.</string>
+    <string name="just_a_sec">Само тренутак…</string>
     <string name="ask_permission_tos">Настављањем, дозвољавате овој апликацији и Google-у да користе ваше информације у складу са њиховим условима коришћења и политикама приватности.</string>
     <string name="ask_scope_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> би желео да:</string>
     <string name="ask_service_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> би желео да користи:</string>
@@ -187,10 +188,10 @@ Vaši podaci neće biti izgubljeni"</string>
     <string name="pref_github_summary">Репозиториј изворног кода</string>
     <string name="pref_update_title">Proveri ažuriranja</string>
     <string name="pref_update_summary">Proveri na GitHub-u za noviju verziju.</string>
-    <string name="update_include_prerelease">Uključi preliminarne/dev verzije</string>
+    <string name="update_include_prerelease">Укључи развојне верзије</string>
     <string name="update_available_title">Ažuriranje je dostupno</string>
     <string name="update_available_prerelease_title">Ažuriranje dostupno (preliminarno)</string>
-    <string name="update_available_message">Nova verzija v%1s je dostupna. Imate verziju v%2$s. Preuzeti i instalirati ažuriranje?</string>
+    <string name="update_available_message">Доступна је нова верзија v%1$s. Имате инсталирану верзију v%2$s. Преузети и инсталирати ажурирање?</string>
     <string name="update_now">Ažuriraj</string>
     <string name="update_whats_new">Šta je novo</string>
     <string name="update_ignore">Ignoriši</string>
@@ -478,4 +479,13 @@ Vaši podaci neće biti izgubljeni"</string>
     <string name="morphe_sign_in_with_google_microg_label">Пријавите се са Google-ом преко MicroG RE</string>
     <string name="self_check_patched_app_installed">Ради са %1$s</string>
     <string name="self_check_action_download_morphe">Преузимање Morphe</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Инсталирана је погрешна варијанта архитектуре</string>
+    <string name="abi_mismatch_message">"Ова MicroG-RE верзија садржи само 64-битне (arm64) библиотеке, али овај уређај користи 32-битни кориснички простор.
+
+Функције које захтевају Conscrypt (пријава на налог, стримовање, BotGuard, лажирање видео стримова, SponsorBlock, Return YouTube Dislike, итд.) неће радити исправно и могу изазвати проблеме са репродукцијом или грешку \"Unable to find a default SSL provider\".
+
+Уместо тога инсталирајте ARMv7 или универзални APK."</string>
+    <string name="abi_mismatch_download_armv7">Преузмите ARMv7 APK</string>
+    <string name="abi_mismatch_downloading_title">Преузимање исправне варијанте…</string>
 </resources>
