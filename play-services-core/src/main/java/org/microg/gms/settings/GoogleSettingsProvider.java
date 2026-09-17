@@ -32,6 +32,7 @@ import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 
 public class GoogleSettingsProvider extends ContentProvider {
+    // RE changes start
     private static final String USE_LOCATION_FOR_SERVICES = "use_location_for_services";
 
     @Override
@@ -69,6 +70,7 @@ public class GoogleSettingsProvider extends ContentProvider {
         }
         return cursor;
     }
+    // RE changes end
 
     @Override
     public String getType(Uri uri) {

@@ -328,6 +328,7 @@ public class PackageUtils {
         return getAndCheckCallingPackage(context, suggestedPackageName, suggestedCallerUid, 0);
     }
 
+    // RE changes start
     @Nullable
     public static String getAndCheckCallingPackage(@NonNull Context context, @Nullable String suggestedPackageName, int suggestedCallerUid, int suggestedCallerPid) {
         String packageName = getAndCheckCallingPackageWithoutSpoofing(context, suggestedPackageName, suggestedCallerUid, suggestedCallerPid);
@@ -354,12 +355,14 @@ public class PackageUtils {
         }
         return getAndCheckPackageWithoutSpoofing(context, suggestedPackageName, callingUid, callingPid);
     }
+    // RE changes end
 
     @Nullable
     public static String getAndCheckPackage(Context context, String suggestedPackageName, int callingUid) {
         return getAndCheckPackage(context, suggestedPackageName, callingUid, 0);
     }
 
+    // RE changes start
     @Nullable
     public static String getAndCheckPackage(@NonNull Context context, @Nullable String suggestedPackageName, int callingUid, int callingPid) {
         String packageName = getAndCheckPackageWithoutSpoofing(context, suggestedPackageName, callingUid, callingPid);
@@ -392,6 +395,7 @@ public class PackageUtils {
         return packageName;
     }
 
+    // RE changes end
     @Nullable
     @Deprecated
     public static String packageFromProcessId(@NonNull Context context, int pid) {
