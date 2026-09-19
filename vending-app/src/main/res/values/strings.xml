@@ -5,9 +5,9 @@
   -->
 
 <resources>
-    <string name="app_name">microG Companion</string>
-    <string name="toast_installed">microG Companion cannot be used standalone. Opened microG Services settings instead.</string>
-    <string name="toast_not_installed">microG Companion cannot be used standalone. Please install microG Services to use microG.</string>
+    <string name="app_name">Yogesh Companion</string>
+    <string name="toast_installed">Yogesh Companion cannot be used standalone. Opened microG Services settings instead.</string>
+    <string name="toast_not_installed">Yogesh Companion cannot be used standalone. Please install microG Services to use microG.</string>
 
     <string name="license_notification_channel_name">License notifications</string>
     <string name="license_notification_channel_description">Notifies when an app tries to validate its license, but you are not signed in to any Google account.</string>
@@ -62,7 +62,7 @@
 
     <string name="app_install_permission_allowed">Allow</string>
     <string name="app_install_needs_permissions_title">App Installer</string>
-    <string name="app_install_allow_to_install_third_app">Allow \"microG Companion\" to install apps downloaded from \"%1$s\"</string>
+    <string name="app_install_allow_to_install_third_app">Allow \"Yogesh Companion\" to install apps downloaded from \"%1$s\"</string>
     <string name="app_install_refuse_permission_remind">If you decline, the application installation will fail.</string>
     <string name="app_install_refuse_permission_remind_sub">You can modify the authorization status permissions at any time in microG Service Settings.</string>
     <string name="app_install_not_remind_again">Keep this selection and don\'t ask again</string>

@@ -4,7 +4,7 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="gms_app_name" translatable="false">MicroG RE</string>
+    <string name="gms_app_name" translatable="false">Yogesh Services</string>
     <string name="dialog_title_remove_account">Remove account</string>
     <string name="dialog_message_remove_account">"Are you sure you want to remove this account?
 
@@ -15,8 +15,8 @@ Your data will not be lost"</string>
     <string name="dialog_cancel_button">Cancel</string>
     <string name="snackbar_remove_account">Account %s removed</string>
     <string name="snackbar_undo_button">Undo</string>
-    <string name="limited_services_app_name" translatable="false">MicroG Limited Services</string>
-    <string name="gms_settings_name">MicroG Settings</string>
+    <string name="limited_services_app_name" translatable="false">Yogesh Limited Services</string>
+    <string name="gms_settings_name">Yogesh Services Settings</string>
     <string name="gms_settings_summary">Setup MicroG services.</string>
 
     <string name="just_a_sec">Just a sec…</string>
@@ -235,7 +235,7 @@ Please set up a password, PIN, or pattern lock screen."</string>
     <string name="pref_gcm_confirm_new_apps_summary">Ask before registering a new app to receive push notifications</string>
     <string name="pref_gcm_ping_interval" translatable="false">Ping interval: <xliff:g example="10 minutes">%1$s</xliff:g></string>
 
-    <string name="pref_about_title">About MicroG RE</string>
+    <string name="pref_about_title">About Yogesh Services</string>
     <string name="pref_hide_launcher_icon">Hide icon in launcher</string>
     <string name="hide_launcher_icon_dialog_message">If enabled, MicroG will be hidden in your app launcher. MicroG can be opened from the app info found in your device system app list.</string>
     <string name="hide_launcher_icon_updating_title">Please wait while the app is updated</string>
@@ -246,7 +246,7 @@ Please set up a password, PIN, or pattern lock screen."</string>
     <string name="pref_update_title">Check for updates</string>
     <string name="pref_update_summary">Check GitHub for a newer version.</string>
     <string name="update_include_prerelease">Include pre-release / dev builds</string>
-    <string name="pref_about_summary" translatable="false">Version information and used libraries</string>
+    <string name="pref_about_summary" translatable="false">Yogesh edition • Version information and used libraries</string>
 
     <string name="update_available_title">Update available</string>
     <string name="update_available_prerelease_title">Update available (pre-release)</string>
@@ -572,6 +572,7 @@ Some apps may not be able to register again after this action. You may need to c
     <string name="self_check_patched_app_installed">Running with %1$s</string>
     <string name="self_check_action_download_morphe">Download Morphe</string>
     <string name="about_morphe" translatable="false">Morphe</string>
+    <string name="developer_name" translatable="false">Yogesh</string>
     <string name="revanced" translatable="false">ReVanced</string>
     <string name="youtube_advanced" translatable="false">YT Advanced</string>
     <string name="revanced_extended" translatable="false">ReVanced Extended</string>
