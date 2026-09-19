@@ -484,4 +484,11 @@ Sommige programme kan nie na hierdie aksie weer registreer nie. Jy moet moontlik
     <string name="self_check_action_download_morphe">Laai Morphe af</string>
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
     <string name="abi_mismatch_title">Verkeerde argitektuurvariant geïnstalleer</string>
+    <string name="abi_mismatch_message">"Hierdie MicroG-RE-bou bevat slegs 64-bis (arm64)-biblioteke, maar hierdie toestel gebruik 'n 32-bis-gebruikersruimte.
+
+Funksies wat Conscrypt benodig (rekeningaanmelding, streaming, BotGuard, vervalsing van videostrome, SponsorBlock, Return YouTube Dislike, ens.) sal nie behoorlik werk nie en kan afspeelprobleme of \"Kan nie 'n verstek-SSL-verskaffer vind nie\" veroorsaak.
+
+Installeer eerder die ARMv7- of universele APK."</string>
+    <string name="abi_mismatch_download_armv7">Laai ARMv7 APK af</string>
+    <string name="abi_mismatch_downloading_title">Laai korrekte variant af…</string>
 </resources>

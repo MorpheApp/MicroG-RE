@@ -119,7 +119,7 @@ Configure una contraseña, un PIN o una pantalla de bloqueo de patrones."</strin
     <string name="self_check_name_battery_optimizations">Optimizaciones de la batería ignoradas:</string>
     <string name="self_check_resolution_battery_optimizations">Toque aquí para desactivar las optimizaciones de la batería. No hacer esto puede provocar que las aplicaciones se comporten mal.</string>
     <!-- Settings strings -->
-    <string name="prefcat_about">Acerca de Morphe</string>
+    <string name="prefcat_about">Acerca de</string>
     <string name="prefcat_details">Detalles</string>
     <string name="cond_gcm_bat_title">Optimizaciones de la batería habilitadas</string>
     <string name="cond_gcm_bat_summary">Habilitó Mensajería en la Nube pero tiene optimizaciones de batería activas para los servicios microG. Para que lleguen notificaciones push debes ignorar las optimizaciones de la batería.</string>

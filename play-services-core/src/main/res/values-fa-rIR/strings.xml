@@ -479,4 +479,6 @@
     <string name="self_check_patched_app_installed">در حال اجرا با %1$s</string>
     <string name="self_check_action_download_morphe">دانلود Morphe</string>
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_download_armv7">دانلود ARMv7 APK</string>
+    <string name="abi_mismatch_downloading_title">درحال دانلود نسخه صحیح…</string>
 </resources>

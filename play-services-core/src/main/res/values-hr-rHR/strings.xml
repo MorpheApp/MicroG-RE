@@ -483,4 +483,11 @@ Neke se aplikacije možda neće moći ponovno registrirati nakon ove radnje. Mo�
     <string name="self_check_action_download_morphe">Preuzmite Morphe</string>
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
     <string name="abi_mismatch_title">Instalirana je pogrešna inačica arhitekture</string>
+    <string name="abi_mismatch_message">"Ova MicroG-RE verzija sadrži samo 64-bitne (arm64) knjižnice, ali ovaj uređaj pokreće 32-bitni korisnički prostor.
+
+Značajke kojima je potreban Conscrypt (prijava na račun, streaming, BotGuard, spoof video streamova, SponsorBlock, Return YouTube Dislike itd.) neće raditi ispravno i mogu uzrokovati probleme s reproduciranjem ili pogrešku \"Unable to find a default SSL provider\".
+
+Umjesto toga instalirajte ARMv7 ili Universal APK."</string>
+    <string name="abi_mismatch_download_armv7">Preuzmi ARMv7 APK</string>
+    <string name="abi_mismatch_downloading_title">Preuzimanje ispravne varijante…</string>
 </resources>

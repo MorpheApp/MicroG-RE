@@ -485,4 +485,6 @@
 Conscryptを必要とする機能（アカウントログイン、ストリーミング、BotGuard、動画ストリームの偽装、SponsorBlock、Return YouTube Dislikeなど）は正常に動作せず、再生の問題、または「Unable to find a default SSL provider」を引き起こす可能性があります。
 
 代わりにARMv7 APKまたはユニバーサルAPKをインストールしてください。"</string>
+    <string name="abi_mismatch_download_armv7">ARMv7 APK をダウンロード</string>
+    <string name="abi_mismatch_downloading_title">正しいバリアントをダウンロード中…</string>
 </resources>

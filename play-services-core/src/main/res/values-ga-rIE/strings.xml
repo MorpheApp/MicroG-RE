@@ -193,7 +193,7 @@ Socraigh pasfhocal, PIN, nó patrún glas scáileáin le do thoil."</string>
     <string name="update_include_prerelease">Cuir tógálacha forbartha san áireamh</string>
     <string name="update_available_title">Nuashonrú ar fáil</string>
     <string name="update_available_prerelease_title">Nuashonrú ar fáil (réamh-eisiúint)</string>
-    <string name="update_available_message">Tá leagan nua v%1$s ar fáil. Tá leagan v%2$s suiteáilte agat. An bhfuil tú ag iarraidh an nuashonrú a íoslódáil agus a shuiteáil?</string>
+    <string name="update_available_message">Tá leagan nua v%1$s ar fáil. Tá leagan v%2$s suiteáilte agat. An bhfuil fonn ort an nuashonrú a íoslódáil agus a shuiteáil?</string>
     <string name="update_now">Nuashonrú</string>
     <string name="update_whats_new">Cad atá nua</string>
     <string name="update_ignore">Déan neamhaird</string>

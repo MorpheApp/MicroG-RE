@@ -488,9 +488,9 @@ microG 以「盡力而為」的基礎提供，無法保證行為完全符合預�
     <string name="abi_mismatch_title">安裝了錯誤的架構變體</string>
     <string name="abi_mismatch_message">"此 MicroG-RE 版本僅包含 64 位元 (arm64) 庫，但此裝置正在執行 32 位元使用者空間。
 
-需要 Conscrypt 的功能（帳戶登入、串流媒體、BotGuard、偽裝影片串流、SponsorBlock、返回 YouTube Dislike 等）將無法正常工作，並可能導致播放問題或「無法找到預設 SSL 提供者」。
+需要 Conscrypt 的功能（帳戶登入、串流媒體、BotGuard、偽裝影片串流、SponsorBlock、恢復 YouTube Dislike 等）將無法正常工作，並可能導致播放問題或「無法找到預設 SSL 提供者」。
 
-請安裝 ARMv7 或通用 APK。"</string>
+請改為安裝 ARMv7 或通用 APK。"</string>
     <string name="abi_mismatch_download_armv7">下載ARMv7 APK</string>
     <string name="abi_mismatch_downloading_title">正在下載正確的變體...</string>
 </resources>

@@ -188,6 +188,7 @@
     <string name="pref_github_summary">สำเนาโค้ดต้นฉบับ</string>
     <string name="pref_update_title">ตรวจสอบอัปเดต</string>
     <string name="pref_update_summary">ตรวจสอบ GitHub เพื่อดูเวอร์ชันใหม่</string>
+    <string name="update_include_prerelease">รวมบิลด์สำหรับนักพัฒนา</string>
     <string name="update_available_title">มีอัปเดต</string>
     <string name="update_available_prerelease_title">มีอัปเดต (ก่อนวางจำหน่าย)</string>
     <string name="update_available_message">มี v%1$s ใหม่ให้ใช้งานแล้ว คุณติดตั้งเวอร์ชัน v%2$s อยู่ ดาวน์โหลดและติดตั้งอัปเดตหรือไม่</string>

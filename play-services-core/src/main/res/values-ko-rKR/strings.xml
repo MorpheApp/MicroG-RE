@@ -483,7 +483,7 @@
     <string name="abi_mismatch_title">잘못된 아키텍처 변형이 설치됨</string>
     <string name="abi_mismatch_message">"이 MicroG-RE 빌드에는 64비트(arm64) 라이브러리만 있는데, 이 기기는 32비트 사용자 공간에서 작동하고 있습니다.
 
-Conscrypt가 필요한 기능(계정 로그인, 스트리밍, BotGuard, 동영상 스트림 속이기, SponsorBlock, Return YouTube Dislike 등)이 제대로 동작하지 않을 수 있으며 재생 문제가 발생하거나 \"기본 SSL 제공자를 찾지 못할\" 수 있습니다.
+Conscrypt가 필요한 기능(계정 로그인, 스트리밍, BotGuard, 동영상 스트림 속이기, SponsorBlock, Return YouTube Dislike 등)이 제대로 동작하지 않을 수 있으며 재생 문제가 발생하거나 '기본 SSL 제공자를 찾을 수 없습니다'와 같은 오류 메시지가 표시될 수 있습니다.
 
 대신에 ARMv7 또는 Universal APK를 설치하세요."</string>
     <string name="abi_mismatch_download_armv7">ARMv7 APK 다운로드</string>

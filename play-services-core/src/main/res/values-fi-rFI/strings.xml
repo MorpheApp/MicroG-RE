@@ -189,6 +189,7 @@ Voit poistaa Google-laitteen rekisteröinnin käytöstä tilin asennuksen jälke
     <string name="update_include_prerelease">Sisällytä kehitysversiot</string>
     <string name="update_available_title">Päivitys on saatavilla</string>
     <string name="update_available_prerelease_title">Päivitys on saatavilla (esijulkaisu)</string>
+    <string name="update_available_message">Uusi v%1$s on saatavilla. Sinulla on asennettuna versio v%2$s. Lataa ja asenna päivitys?</string>
     <string name="update_now">Päivitä</string>
     <string name="update_whats_new">Mitä uutta</string>
     <string name="update_ignore">Ohita</string>
@@ -476,4 +477,12 @@ Jotkin sovellukset eivät välttämättä pysty rekisteröitymään uudelleen t�
     <string name="self_check_patched_app_installed">Toimii %1$s kanssa</string>
     <string name="self_check_action_download_morphe">Lataa Morphe</string>
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Väärä arkkitehtuurivariantti asennettu</string>
+    <string name="abi_mismatch_message">"Tämä MicroG-RE-koonti sisältää vain 64-bittisiä (arm64) kirjastoja, mutta tämä laite käyttää 32-bittistä käyttäjätilaa.
+
+Conscryptiä tarvitsevat ominaisuudet (tilille kirjautuminen, suoratoisto, BotGuard, videostreamien väärentäminen, SponsorBlock, Return YouTube Dislike jne.) eivät toimi kunnolla ja voivat aiheuttaa toisto-ongelmia tai \"Unable to find a default SSL provider\" -virheen.
+
+Asenna sen sijaan ARMv7- tai Universal-APK."</string>
+    <string name="abi_mismatch_download_armv7">Lataa ARMv7 APK</string>
+    <string name="abi_mismatch_downloading_title">Ladataan oikeaa varianttia…</string>
 </resources>
