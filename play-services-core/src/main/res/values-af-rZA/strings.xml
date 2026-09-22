@@ -188,10 +188,10 @@ Stel asseblief 'n wagkord, PIN of patroonslot op."</string>
     <string name="pref_github_summary">Bron kode repo</string>
     <string name="pref_update_title">Kyk vir opdaterings</string>
     <string name="pref_update_summary">Kyk op GitHub vir \'n nuwer weergawe.</string>
-    <string name="update_include_prerelease">Sluit pre-release / ontwikkelaar-samestellings in</string>
+    <string name="update_include_prerelease">Sluit ontwikkelingsweergawes in</string>
     <string name="update_available_title">Opdatering beskikbaar</string>
     <string name="update_available_prerelease_title">Opdatering beskikbaar (pre-release)</string>
-    <string name="update_available_message">Nuwe v%1s is beskikbaar. Jy het weergawe v%2$s geïnstalleer. Laai af en installeer die opdatering? Some text has been removed, but here is the correct translation: </string>
+    <string name="update_available_message">Nuwe v%1$s is beskikbaar. Jy het weergawe v%2$s geïnstalleer. Laai die opdatering af en installeer dit?</string>
     <string name="update_now">Opdateer</string>
     <string name="update_whats_new">Wat is nuut</string>
     <string name="update_ignore">Ignoreer</string>
@@ -482,4 +482,13 @@ Sommige programme kan nie na hierdie aksie weer registreer nie. Jy moet moontlik
     <string name="morphe_sign_in_with_google_microg_label">Teken in met Google via MicroG RE</string>
     <string name="self_check_patched_app_installed">Loop met %1$s</string>
     <string name="self_check_action_download_morphe">Laai Morphe af</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Verkeerde argitektuurvariant geïnstalleer</string>
+    <string name="abi_mismatch_message">"Hierdie MicroG-RE-bou bevat slegs 64-bis (arm64)-biblioteke, maar hierdie toestel gebruik 'n 32-bis-gebruikersruimte.
+
+Funksies wat Conscrypt benodig (rekeningaanmelding, streaming, BotGuard, vervalsing van videostrome, SponsorBlock, Return YouTube Dislike, ens.) sal nie behoorlik werk nie en kan afspeelprobleme of \"Kan nie 'n verstek-SSL-verskaffer vind nie\" veroorsaak.
+
+Installeer eerder die ARMv7- of universele APK."</string>
+    <string name="abi_mismatch_download_armv7">Laai ARMv7 APK af</string>
+    <string name="abi_mismatch_downloading_title">Laai korrekte variant af…</string>
 </resources>

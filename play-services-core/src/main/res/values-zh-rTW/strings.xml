@@ -32,7 +32,7 @@
 這可能是暫時性的問題，或者你的 Android 裝置可能未啟用數據服務。請在連線至行動網路後再試一次，或連線至 Wi-Fi 網路."</string>
     <string name="auth_general_error_desc">"與 Google 伺服器通訊時發生問題。
 
-請稍後再試."</string>
+請稍後再試。"</string>
     <string name="auth_finalize">"您的裝置正在與 Google 聯絡以將資訊儲存到您的帳戶。
 
 這可能需要幾分鐘的時間。"</string>
@@ -188,10 +188,10 @@
     <string name="pref_github_summary">原始碼儲存庫</string>
     <string name="pref_update_title">檢查更新</string>
     <string name="pref_update_summary">前往 GitHub 檢查是否有更新版本。</string>
-    <string name="update_include_prerelease">包含預發布版 / 開發版</string>
+    <string name="update_include_prerelease">包括開發版本</string>
     <string name="update_available_title">有可用更新</string>
     <string name="update_available_prerelease_title">有可用更新（預發布版）</string>
-    <string name="update_available_message">新版本 v%1s 可用。您目前安裝的版本為 v%2$s。要下載並安裝更新嗎？</string>
+    <string name="update_available_message">新的 v%1$s 可用。您安裝了 v%2$s 版本。要下載並安裝更新嗎？</string>
     <string name="update_now">更新</string>
     <string name="update_whats_new">更新內容</string>
     <string name="update_ignore">忽略</string>
@@ -484,4 +484,13 @@ microG 以「盡力而為」的基礎提供，無法保證行為完全符合預�
     <string name="morphe_sign_in_with_google_microg_label">透過 MicroG RE 使用 Google 登入</string>
     <string name="self_check_patched_app_installed">使用 %1$s 執行</string>
     <string name="self_check_action_download_morphe">下載 Morphe</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">安裝了錯誤的架構變體</string>
+    <string name="abi_mismatch_message">"此 MicroG-RE 版本僅包含 64 位元 (arm64) 庫，但此裝置正在執行 32 位元使用者空間。
+
+需要 Conscrypt 的功能（帳戶登入、串流媒體、BotGuard、偽裝影片串流、SponsorBlock、恢復 YouTube Dislike 等）將無法正常工作，並可能導致播放問題或「無法找到預設 SSL 提供者」。
+
+請改為安裝 ARMv7 或通用 APK。"</string>
+    <string name="abi_mismatch_download_armv7">下載ARMv7 APK</string>
+    <string name="abi_mismatch_downloading_title">正在下載正確的變體...</string>
 </resources>

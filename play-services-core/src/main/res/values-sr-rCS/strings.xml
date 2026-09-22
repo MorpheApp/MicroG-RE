@@ -186,10 +186,10 @@ Možete onemogućiti registraciju uređaja na Google nakon što je podešavanje 
     <string name="pref_github_summary">Repozitorijum izvora koda</string>
     <string name="pref_update_title">Proveri ažuriranja</string>
     <string name="pref_update_summary">Proveri na GitHub-u da li postoji novija verzija.</string>
-    <string name="update_include_prerelease">Uključi predizdanja / razvojne verzije</string>
+    <string name="update_include_prerelease">Uključi razvojne verzije</string>
     <string name="update_available_title">Dostupno ažuriranje</string>
     <string name="update_available_prerelease_title">Dostupno ažuriranje (predizdanje)</string>
-    <string name="update_available_message">Nova v%1s je dostupna. Imaš instaliranu verziju v%2$s. Preuzmi i instaliraj ažuriranje?</string>
+    <string name="update_available_message">Dostupna je nova verzija v%1$s. Imate instaliranu verziju v%2$s. Preuzeti i instalirati ažuriranje?</string>
     <string name="update_now">Ažuriraj</string>
     <string name="update_whats_new">Šta je novo</string>
     <string name="update_ignore">Ignoriši</string>
@@ -481,4 +481,13 @@ Neke aplikacije možda neće moći ponovo da se registruju nakon ovu akciju. Mor
     <string name="morphe_sign_in_with_google_microg_label">Prijava sa Google nalogom putem MicroG RE</string>
     <string name="self_check_patched_app_installed">Pokreće se sa %1$s</string>
     <string name="self_check_action_download_morphe">Preuzmi Morphe</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Instalirana je pogrešna varijanta arhitekture</string>
+    <string name="abi_mismatch_message">"Ova MicroG-RE verzija sadrži samo 64-bitne (arm64) biblioteke, ali ovaj uređaj koristi 32-bitni korisnički prostor.
+
+Funkcije koje zahtevaju Conscrypt (prijava na nalog, striming, BotGuard, lažiranje video tokova, SponsorBlock, Return YouTube Dislike, itd.) neće raditi ispravno i mogu izazvati probleme sa reprodukcijom ili grešku \"Unable to find a default SSL provider\".
+
+Umesto toga instalirajte ARMv7 ili univerzalni APK."</string>
+    <string name="abi_mismatch_download_armv7">Preuzmi ARMv7 APK</string>
+    <string name="abi_mismatch_downloading_title">Preuzimanje ispravne varijante…</string>
 </resources>

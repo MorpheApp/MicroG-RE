@@ -188,10 +188,10 @@
     <string name="pref_github_summary">Репозиторій вихідного коду</string>
     <string name="pref_update_title">Перевірка наявності оновлень</string>
     <string name="pref_update_summary">Перевірте GitHub на наявність новішої версії.</string>
-    <string name="update_include_prerelease">Включати передрелізи / збірки для розробників</string>
+    <string name="update_include_prerelease">Включати dev-збірки</string>
     <string name="update_available_title">Доступне оновлення</string>
     <string name="update_available_prerelease_title">Доступне оновлення (передреліз)</string>
-    <string name="update_available_message">Доступна нова версія v%1s. У вас встановлена версія v%2$s. Завантажити та встановити оновлення?</string>
+    <string name="update_available_message">Доступна нова версія v%1$s. У вас встановлено версію v%2$s. Завантажити та встановити оновлення?</string>
     <string name="update_now">Оновити</string>
     <string name="update_whats_new">Що нового</string>
     <string name="update_ignore">Ігнорувати</string>
@@ -479,4 +479,13 @@
     <string name="morphe_sign_in_with_google_microg_label">Увійти через Google за допомогою MicroG RE</string>
     <string name="self_check_patched_app_installed">Працює з %1$s</string>
     <string name="self_check_action_download_morphe">Завантажити Morphe</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Встановлено неправильний варіант архітектури</string>
+    <string name="abi_mismatch_message">"Ця збірка MicroG-RE містить лише 64-бітні (arm64) бібліотеки, але на цьому пристрої запущено 32-бітний користувацький простір.
+
+Функції, що потребують Conscrypt (вхід в облікові записи, стримінг, BotGuard, підміна відеопотоків, SponsorBlock, Return YouTube Dislike тощо), працюватимуть неправильно й можуть спричиняти проблеми з відтворенням або помилку \"Unable to find a default SSL provider\".
+
+Натомість встановіть APK ARMv7 або універсальний APK."</string>
+    <string name="abi_mismatch_download_armv7">Завантажити APK ARMv7</string>
+    <string name="abi_mismatch_downloading_title">Завантаження правильного варіанту…</string>
 </resources>

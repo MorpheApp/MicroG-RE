@@ -188,10 +188,10 @@ Nastavite geslo, PIN ali vzorec za zaklepanje zaslona."</string>
     <string name="pref_github_summary">Repozitorij izvorne kode</string>
     <string name="pref_update_title">Preverite posodobitve</string>
     <string name="pref_update_summary">Preverite GitHub za novejšo različico.</string>
-    <string name="update_include_prerelease">Vključite predizdaje / razvojne različice</string>
+    <string name="update_include_prerelease">Vključi razvojne različice</string>
     <string name="update_available_title">Na voljo je posodobitev</string>
     <string name="update_available_prerelease_title">Posodobitev je na voljo (predizdaja)</string>
-    <string name="update_available_message">Na voljo je nova različica v%1s. Nameščeno imate različico v%2$s. Ali prenesem in namestim posodobitev?</string>
+    <string name="update_available_message">Na voljo je nova v%1$s. Nameščena je različica v%2$s. Ali želite prenesti in namestiti posodobitev?</string>
     <string name="update_now">Posodobite</string>
     <string name="update_whats_new">Kaj je novega</string>
     <string name="update_ignore">Prezrite</string>
@@ -480,4 +480,13 @@ Nekatere aplikacije se morda ne bodo mogle ponovno registrirati po tej akciji. P
     <string name="morphe_sign_in_with_google_microg_label">Prijava z Googlom prek MicroG RE</string>
     <string name="self_check_patched_app_installed">Deluje z %1$s</string>
     <string name="self_check_action_download_morphe">Prenesi Morphe</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Nameščena je napačna arhitekturna različica</string>
+    <string name="abi_mismatch_message">"Ta gradnja MicroG-RE vsebuje samo 64-bitne (arm64) knjižnice, vendar ta naprava uporablja 32-bitni uporabniški prostor.
+
+Funkcije, ki potrebujejo Conscrypt (prijava v račun, pretakanje, BotGuard, ponarejanje video tokov, SponsorBlock, Return YouTube Dislike itd.) ne bodo delovale pravilno in lahko povzročijo težave s predvajanjem ali napako \"Ni mogoče najti privzetega ponudnika SSL\".
+
+Namesto tega namestite ARMv7 ali univerzalno APK."</string>
+    <string name="abi_mismatch_download_armv7">Prenesi ARMv7 APK</string>
+    <string name="abi_mismatch_downloading_title">Prenašanje pravilne različice…</string>
 </resources>

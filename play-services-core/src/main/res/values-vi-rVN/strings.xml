@@ -38,6 +38,9 @@
     <string name="auth_action_activity_header">Hoàn tất thiết lập tài khoản Google của bạn</string>
     <string name="auth_action_activity_explanation">Hoàn tất các bước sau để có thể sử dụng tài khoản Google %s của bạn trên thiết bị này.</string>
     <string name="auth_action_step_enable_checkin">Bật đăng ký thiết bị</string>
+    <string name="auth_action_step_enable_checkin_description">"Thiết bị của bạn cần đăng ký với Google ít nhất một lần.
+
+Bạn có thể tắt tính năng đăng ký thiết bị Google sau khi hoàn tất thiết lập tài khoản."</string>
     <string name="auth_action_step_enable_gcm">Bật Cloud Messaging</string>
     <string name="auth_action_step_enable_gcm_description">Bạn có thể tắt Cloud Messaging sau khi hoàn tất thiết lập tài khoản.</string>
     <string name="auth_action_step_allow_microg_gcm">Cho phép Cloud Messaging cho microG</string>
@@ -173,10 +176,10 @@ Vui lòng thiết lập mật khẩu, mã PIN hoặc khóa màn hình bằng m�
     <string name="pref_github_summary">Kho lưu trữ mã nguồn</string>
     <string name="pref_update_title">Kiểm tra cập nhật</string>
     <string name="pref_update_summary">Kiểm tra GitHub để tìm phiên bản mới hơn.</string>
-    <string name="update_include_prerelease">Bao gồm các bản phát hành trước / các bản dành cho nhà phát triển</string>
+    <string name="update_include_prerelease">Bao gồm các bản dựng dev</string>
     <string name="update_available_title">Đã có bản cập nhật</string>
     <string name="update_available_prerelease_title">Có bản cập nhật (bản phát hành trước)</string>
-    <string name="update_available_message">Có phiên bản mới v%1s. Bạn đang cài phiên bản v%2$s. Tải xuống và cài đặt bản cập nhật?</string>
+    <string name="update_available_message">Đã có phiên bản mới v%1$s. Bạn đã cài phiên bản v%2$s. Tải xuống và cài đặt bản cập nhật?</string>
     <string name="update_now">Cập nhật</string>
     <string name="update_whats_new">Có gì mới</string>
     <string name="update_ignore">Bỏ qua</string>
@@ -464,4 +467,13 @@ Một số ứng dụng có thể không đăng ký lại được và sẽ cầ
     <string name="morphe_sign_in_with_google_microg_label">Đăng nhập bằng Google qua MicroG RE</string>
     <string name="self_check_patched_app_installed">Chạy với %1$s</string>
     <string name="self_check_action_download_morphe">Tải Morphe</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Đã cài đặt biến thể kiến trúc không đúng.</string>
+    <string name="abi_mismatch_message">"Bản dựng MicroG-RE này chỉ chứa thư viện 64-bit (arm64), nhưng thiết bị này đang chạy không gian người dùng 32-bit.
+
+Các tính năng cần Conscrypt (đăng nhập tài khoản, phát trực tuyến, BotGuard, giả mạo luồng video, SponsorBlock, Return YouTube Dislike, v.v.) sẽ không hoạt động đúng và có thể gây ra sự cố phát lại hoặc \"Không thể tìm thấy nhà cung cấp SSL mặc định\".
+
+Thay vào đó, hãy cài đặt APK ARMv7 hoặc Universal."</string>
+    <string name="abi_mismatch_download_armv7">Tải xuống APK ARMv7</string>
+    <string name="abi_mismatch_downloading_title">Đang tải xuống biến thể phù hợp…</string>
 </resources>

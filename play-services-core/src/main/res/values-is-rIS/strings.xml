@@ -40,6 +40,8 @@ This can take a couple of minutes."</string>
     <string name="deny">Banna</string>
     <string name="auth_notification_title">Staðfesting krafist</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> krefst heimildar þinnar til að fá aðgang að Google-reikningnum þínum.</string>
+    <string name="auth_package_override_request_title">Leyfa <b><xliff:g example="F-Droid">%1$s</xliff:g></b> forréttindaaðgang að <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> vill fá aðgang að reikningnum þínum eins og það væri <b><xliff:g example="F-Droid">%2$s</xliff:g> eftir <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Þetta gæti veitt því forréttindaaðgang að reikningnum þínum.</string>
     <string name="auth_action_notification_channel_name">Google reikningsviðvaranir</string>
     <string name="auth_action_notification_channel_description">Lætur vita þegar einn af Google-reikningum þínum þarfnast frekari uppsetningar áður en hægt er að nota hann, eða þegar reikningur er ósamrýmanlegur microG.</string>
     <string name="auth_action_notification_title">Aðgerð á reikningi nauðsynleg</string>
@@ -186,10 +188,10 @@ Vinsamlegast stilltu lykilorð, PIN eða mynsturlás á skjánum."</string>
     <string name="pref_github_summary">Gagnagrunnur kóði</string>
     <string name="pref_update_title">Leita að uppfærslum</string>
     <string name="pref_update_summary">Leitaðu á GitHub að nýrri útgáfu.</string>
-    <string name="update_include_prerelease">Innihalda forútgáfur / þróunarútgáfur</string>
+    <string name="update_include_prerelease">Taka með þróunarútgáfur</string>
     <string name="update_available_title">Uppfærsla til staðar</string>
     <string name="update_available_prerelease_title">Uppfærsla til staðar (forútgáfa)</string>
-    <string name="update_available_message">Ný útgáfa v%1s er til staðar. Þú hefur útgáfu v%2$s uppsetta. Sækja og setja upp uppfærsluna?  </string>
+    <string name="update_available_message">Ný v%1$s er fáanleg. Þú hefur útgáfu v%2$s uppsetta. Sækja og setja upp uppfærsluna?</string>
     <string name="update_now">Uppfæra</string>
     <string name="update_whats_new">Hvað er nýtt</string>
     <string name="update_ignore">Hunsa</string>
@@ -206,6 +208,11 @@ Vinsamlegast stilltu lykilorð, PIN eða mynsturlás á skjánum."</string>
     <string name="update_notification_title">Uppfærsla til staðar</string>
     <string name="update_notification_text">Ný útgáfa v%s er til staðar, pikkaðu til að uppfæra</string>
     <string name="update_notification_channel">Uppfærslur</string>
+    <string name="update_notification_permission_title">Tilkynningar</string>
+    <string name="update_notification_permission_message">Til að láta þig vita þegar ný uppfærsla er tiltæk, þarf MicroG-RE leyfi til að senda tilkynningar. Leyfðu tilkynningar svo uppfærsluviðvaranir geti náð til þín.</string>
+    <string name="update_notification_permission_allow">Leyfa</string>
+    <string name="update_notification_permission_not_now">Ekki núna</string>
+    <string name="update_notification_permission_open_settings">Opna stillingar</string>
     <string name="gcm_unregister_app">Afskrá</string>
     <string name="gcm_no_message_yet">Engar skilaboð móttökur ennþá</string>
     <string name="gcm_last_message_at">Síðasta skilaboð: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
@@ -473,4 +480,13 @@ Sum forrit geta ekki skráð sig á nýtt eftir þennan aðgerð. Þú gætir þ
     <string name="morphe_sign_in_with_google_microg_label">Skráðu þig inn með Google í gegnum MicroG RE</string>
     <string name="self_check_patched_app_installed">Keyra með %1$s</string>
     <string name="self_check_action_download_morphe">Niðurhala Morphe</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Rangt arkitektúr-afbrigði sett upp</string>
+    <string name="abi_mismatch_message">"Þessi MicroG-RE útgáfa inniheldur aðeins 64-bita (arm64) bókasöfn, en þetta tæki er með 32-bita notandasvæði.
+
+Eiginleikar sem þurfa Conscrypt (innskráning á reikning, streymi, BotGuard, Spoofun myndbandsstrauma, SponsorBlock, Return YouTube Dislike, o.s.frv.) munu ekki virka rétt og geta valdið spilunarvandamálum eða \"Unable to find a default SSL provider\".
+
+Settu upp ARMv7 eða Universal APK í staðinn."</string>
+    <string name="abi_mismatch_download_armv7">Sækja ARMv7 APK</string>
+    <string name="abi_mismatch_downloading_title">Sæki rétta afbrigðið…</string>
 </resources>

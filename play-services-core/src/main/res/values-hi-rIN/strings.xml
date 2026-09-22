@@ -231,10 +231,10 @@ Here is the response.```json
     <string name="pref_github_summary">%1$s में साइन इन करें</string>
     <string name="pref_update_title">अपडेट की जांच करें</string>
     <string name="pref_update_summary">नए संकरण के लिए GitHub पर जांच करें।</string>
-    <string name="update_include_prerelease">प्री-रिलीज़ / डेव बिल्ड शामिल करें</string>
+    <string name="update_include_prerelease">डेव बिल्ड्स शामिल करें</string>
     <string name="update_available_title">अपडेट उपलब्ध है</string>
     <string name="update_available_prerelease_title">अपडेट उपलब्ध है (प्री-रिलीज़)</string>
-    <string name="update_available_message">नया v%1s उपलब्ध है। आपके पास v%2$s संस्करण इंस्टॉल है। अपडेट डाउनलोड करके इंस्टॉल करें?</string>
+    <string name="update_available_message">नया v%1$s उपलब्ध है। आपके पास संस्करण v%2$s स्थापित है। अपडेट डाउनलोड और इंस्टॉल करें?</string>
     <string name="update_now">अपडेट</string>
     <string name="update_whats_new">नया क्या है</string>
     <string name="update_ignore">अनदेखा करें</string>
@@ -520,4 +520,13 @@ Here is the response.```json
     <string name="morphe_sign_in_with_google_microg_label">MicroG RE के माध्यम से Google से साइन इन करें</string>
     <string name="self_check_patched_app_installed">%1$s स्थापित किया गया है</string>
     <string name="self_check_action_download_morphe">मोरफे डाउनलोड करें</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">गलत आर्किटेक्चर वैरिएंट स्थापित है</string>
+    <string name="abi_mismatch_message">"यह MicroG-RE बिल्ड केवल 64-बिट (arm64) लाइब्रेरीज़ शामिल करता है, लेकिन यह डिवाइस 32-बिट यूज़रस्पेस चला रहा है।
+
+Conscrypt की आवश्यकता वाली सुविधाएँ (खाता लॉगिन, स्ट्रीमिंग, BotGuard, वीडियो स्ट्रीम्स स्पूफ करना, SponsorBlock, Return YouTube Dislike, आदि) ठीक से काम नहीं करेंगी और प्लेबैक समस्याएँ या \"Unable to find a default SSL provider\" का कारण बन सकती हैं।
+
+इसके बजाय ARMv7 या Universal APK इंस्टॉल करें।"</string>
+    <string name="abi_mismatch_download_armv7">ARMv7 APK डाउनलोड करें</string>
+    <string name="abi_mismatch_downloading_title">सही वैरिएंट डाउनलोड हो रहा है…</string>
 </resources>

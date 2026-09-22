@@ -35,9 +35,9 @@
     <string name="location_settings_dialog_message_details_end_paragraph">Aby uzyskać szczegółowe informacje, przejdź do ustawień lokalizacji.</string>
     <string name="location_settings_dialog_btn_cancel">Nie, dziękuję</string>
     <string name="location_settings_dialog_btn_sure">OK</string>
-    <string name="pref_location_custom_url_summary">Umożliwia ustawienie niestandardowego adresu URL usługi. Nieprawidłowe wartości mogą spowodować brak reakcji lub całkowitą niedostępność usług lokalizacyjnych.</string>
-    <string name="pref_location_custom_url_details">Ścieżka /v1/geolocate jest dołączana automatycznie. Jeśli dostawca lokalizacji wymaga klucza, można go dołączyć jako parametr zapytania do głównego adresu URL.</string>
-    <string name="pref_location_custom_url_input_hint">Własny adres URL usługi</string>
+    <string name="pref_location_custom_url_summary">Umożliwia ustawienie niestandardowego adresu usługi. Nieprawidłowe wartości mogą spowodować brak reakcji lub całkowitą niedostępność usług lokalizacyjnych.</string>
+    <string name="pref_location_custom_url_details">Ścieżka /v1/geolocate jest dołączana automatycznie. Jeśli dostawca lokalizacji wymaga klucza, można go dołączyć jako parametr zapytania do głównego adresu.</string>
+    <string name="pref_location_custom_url_input_hint">Własny adres usługi</string>
     <string name="pref_location_custom_source_title">Własny</string>
     <string name="pref_location_source_title">Wybierz usługę lokalizacyjną online</string>
     <string name="pref_location_source_terms">Warunki / Prywatność</string>

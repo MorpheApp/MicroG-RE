@@ -190,10 +190,10 @@
     <string name="pref_github_summary">Репозиторій коду</string>
     <string name="pref_update_title">Проверка за актуализации</string>
     <string name="pref_update_summary">Проверете в GitHub за по-нова версия.</string>
-    <string name="update_include_prerelease">Включване на предварителни / разработчишки компилации</string>
+    <string name="update_include_prerelease">Включване на dev компилации</string>
     <string name="update_available_title">Налична е актуализация</string>
     <string name="update_available_prerelease_title">Налична е актуализация (предварителна версия)</string>
-    <string name="update_available_message">Налична е нова v%1s. Вие имате инсталирана версия v%2$s. Искате ли да изтеглите и инсталирате актуализацията?</string>
+    <string name="update_available_message">Налична е нова версия v%1$s. Имате инсталирана версия v%2$s. Да изтеглите и инсталирате актуализацията?</string>
     <string name="update_now">Актуализирай</string>
     <string name="update_whats_new">Какво ново</string>
     <string name="update_ignore">Игнорирай</string>
@@ -481,4 +481,13 @@
     <string name="morphe_sign_in_with_google_microg_label">Вход с Google чрез MicroG RE</string>
     <string name="self_check_patched_app_installed">Работи с %1$s</string>
     <string name="self_check_action_download_morphe">Завантажити Morphe</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Инсталиран е грешен вариант на архитектурата</string>
+    <string name="abi_mismatch_message">"Тази сборка MicroG-RE съдържа само 64-битови (arm64) библиотеки, но това устройство работи с 32-битово потребителско пространство.
+
+Функции, които изискват Conscrypt (влизане в акаунт, стрийминг, BotGuard, спуфинг на видео потоци, SponsorBlock, Return YouTube Dislike и др.), няма да работят правилно и могат да причинят проблеми с възпроизвеждането или \"Не може да се намери стандартен SSL доставчик\".
+
+Вместо това инсталирайте ARMv7 или Universal APK."</string>
+    <string name="abi_mismatch_download_armv7">Изтегли ARMv7 APK</string>
+    <string name="abi_mismatch_downloading_title">Изтегляне на правилния вариант…</string>
 </resources>

@@ -188,10 +188,10 @@ Imposta una password, un PIN o un blocco schermo con schema."</string>
     <string name="pref_github_summary">Repository del codice sorgente</string>
     <string name="pref_update_title">Controlla aggiornamenti</string>
     <string name="pref_update_summary">Controlla GitHub per una versione più recente.</string>
-    <string name="update_include_prerelease">Includi versioni pre-release / di sviluppo</string>
+    <string name="update_include_prerelease">Includi le versioni di sviluppo</string>
     <string name="update_available_title">Aggiornamento disponibile</string>
     <string name="update_available_prerelease_title">Aggiornamento disponibile (pre-release)</string>
-    <string name="update_available_message">Nuova versione v%1s disponibile. Hai la versione v%2$s installata. Scaricare e installare l\'aggiornamento?</string>
+    <string name="update_available_message">È disponibile la nuova versione v%1$s. Hai installato la versione v%2$s. Vuoi scaricare e installare l\'aggiornamento?</string>
     <string name="update_now">Aggiorna</string>
     <string name="update_whats_new">Novità</string>
     <string name="update_ignore">Ignora</string>
@@ -479,4 +479,13 @@ Alcune app potrebbero non essere in grado di registrarsi nuovamente dopo questa 
     <string name="morphe_sign_in_with_google_microg_label">Accedi con Google tramite MicroG RE</string>
     <string name="self_check_patched_app_installed">In esecuzione con %1$s</string>
     <string name="self_check_action_download_morphe">Scarica Morphe</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Variante di architettura errata installata</string>
+    <string name="abi_mismatch_message">"Questa build MicroG-RE contiene solo librerie a 64 bit (arm64), ma questo dispositivo sta eseguendo uno spazio utente a 32 bit.
+
+Le funzionalità che richiedono Conscrypt (accesso all'account, streaming, BotGuard, spoofare i flussi video, SponsorBlock, Return YouTube Dislike, ecc.) non funzioneranno correttamente e possono causare problemi di riproduzione o \"Impossibile trovare un provider SSL predefinito\".
+
+Installa invece l'APK ARMv7 o universale."</string>
+    <string name="abi_mismatch_download_armv7">Scarica l\'APK ARMv7</string>
+    <string name="abi_mismatch_downloading_title">Download della variante corretta…</string>
 </resources>

@@ -12,4 +12,5 @@
     <string name="update_notification_title">اپڈیٹ دستیاب ہے</string>
     <string name="credentials_assisted_continue">जारी रखें</string>
     <!-- Passkey management -->
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
 </resources>

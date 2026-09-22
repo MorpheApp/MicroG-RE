@@ -9,13 +9,13 @@
     <string name="prefcat_location_wifi_title">Wi-Fi 位置情報</string>
     <string name="prefcat_location_cell_title">モバイル ネットワーク位置情報</string>
     <string name="prefcat_geocoder_title">住所解決</string>
-    <string name="pref_location_wifi_online_enabled_title">オンラインサービスに要求</string>
+    <string name="pref_location_wifi_online_enabled_title">オンライン サービスからの要求</string>
     <string name="pref_location_wifi_online_enabled_summary">オンライン位置情報サービスから Wi-Fi ベースの位置情報を取得します。</string>
-    <string name="pref_location_wifi_moving_enabled_title">ホットスポットに要求</string>
+    <string name="pref_location_wifi_moving_enabled_title">ホットスポットからの要求</string>
     <string name="pref_location_wifi_moving_enabled_summary">接続時に、対応するホットスポットから直接 Wi-Fi 位置情報を取得します。</string>
     <string name="pref_location_wifi_learning_enabled_title">位置情報を記憶</string>
     <string name="pref_location_wifi_learning_enabled_summary">GPS を使用する場合、Wi-Fi の位置情報をローカルに保存します。</string>
-    <string name="pref_location_cell_online_enabled_title">オンラインサービスに要求</string>
+    <string name="pref_location_cell_online_enabled_title">オンライン サービスからの要求</string>
     <string name="pref_location_cell_online_enabled_summary">オンライン位置情報サービスから携帯電話基地局の位置情報を取得します。</string>
     <string name="pref_location_cell_learning_enabled_title">位置情報を記憶</string>
     <string name="pref_location_cell_learning_enabled_summary">GPS を使用する場合、モバイル ネットワークの位置情報をローカルに保存します。</string>

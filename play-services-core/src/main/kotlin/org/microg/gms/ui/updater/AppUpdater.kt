@@ -18,6 +18,7 @@ package org.microg.gms.ui.updater
 
 import android.Manifest
 import android.app.Activity
+import android.app.Application
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
@@ -25,19 +26,22 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
-import android.net.Uri
 import android.os.Build
+import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.os.Process
+import android.provider.Settings
 import android.text.method.LinkMovementMethod
 import android.util.Log
 import android.widget.ProgressBar
 import android.widget.Toast
-import androidx.core.text.HtmlCompat
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
+import androidx.core.net.toUri
+import androidx.core.text.HtmlCompat
 import com.google.android.gms.BuildConfig
 import com.google.android.gms.R
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -45,11 +49,12 @@ import com.google.gson.Gson
 import com.google.gson.JsonArray
 import com.google.gson.JsonObject
 import org.microg.gms.ui.MainSettingsActivity
+import org.microg.gms.ui.updater.AppUpdater.UPDATE_COOLDOWN_MS
 import java.io.File
 import java.io.FileOutputStream
 import java.net.HttpURLConnection
 import java.net.URL
-import androidx.core.net.toUri
+import java.util.zip.ZipFile
 
 /**
  * In-app updater for MicroG-RE.
@@ -69,6 +74,12 @@ object AppUpdater {
     private const val PREFS_IGNORED_VERSION = "ignored_version"
     private const val PREFS_LAST_CHECK = "last_check"
     private const val PREFS_NOTIF_ASKED = "notif_permission_asked"
+
+    private var pendingAction: ((Activity) -> Unit)? = null
+    private var isLifecycleRegistered = false
+    private var isAbiWarningShowing = false
+    private var isUpdateDialogShowing = false
+    private var isDownloadInProgress = false
 
     /** Settings switch key (default SharedPreferences): include pre-release / dev builds. */
     const val PREFS_INCLUDE_PRERELEASE = "pref_include_prerelease"
@@ -102,6 +113,7 @@ object AppUpdater {
     /** Called when the settings activity launches. Checks for updates and prompts if needed. */
     @JvmStatic
     fun checkOnLaunch(activity: Activity) {
+        if (maybeWarnWrongAbiVariant(activity)) return
         val intent = activity.intent
         val force = intent?.getBooleanExtra(EXTRA_CHECK_UPDATE, false) == true
         intent?.removeExtra(EXTRA_CHECK_UPDATE)
@@ -128,8 +140,10 @@ object AppUpdater {
             toast(activity, R.string.update_download_failed)
             return
         }
+        if (!ensureInstallPermission(activity) { runUpdateFlow(it, update) }) return
         ensureUpdateNotificationPermission(activity)
 
+        isDownloadInProgress = true
         var isCancelled = false
         var activeConnection: HttpURLConnection? = null
 
@@ -144,6 +158,7 @@ object AppUpdater {
             .setView(progress)
             .setNegativeButton(android.R.string.cancel) { _, _ ->
                 isCancelled = true
+                isDownloadInProgress = false
                 Thread {
                     try { activeConnection?.disconnect() } catch (_: Exception) {}
                 }.start()
@@ -157,6 +172,7 @@ object AppUpdater {
             }
             runOnUiThread(activity) {
                 dialog.dismiss()
+                isDownloadInProgress = false
                 if (isCancelled) return@runOnUiThread
                 if (file == null) {
                     Log.e(TAG, "Update download failed: $url")
@@ -172,8 +188,10 @@ object AppUpdater {
     /** Downloads the 'noicon' build variant and prompts the user to update the app. */
     @JvmStatic
     fun downloadAndInstallNoIconVariant(activity: Activity) {
+        if (!ensureInstallPermission(activity) { downloadAndInstallNoIconVariant(it) }) return
         ensureUpdateNotificationPermission(activity)
 
+        isDownloadInProgress = true
         var isCancelled = false
         var activeConnection: HttpURLConnection? = null
 
@@ -189,12 +207,14 @@ object AppUpdater {
             .setCancelable(false)
             .setNegativeButton(android.R.string.cancel) { _, _ ->
                 isCancelled = true
+                isDownloadInProgress = false
                 Thread {
                     try { activeConnection?.disconnect() } catch (_: Exception) {}
                 }.start()
             }
             .setOnCancelListener {
                 isCancelled = true
+                isDownloadInProgress = false
                 Thread {
                     try { activeConnection?.disconnect() } catch (_: Exception) {}
                 }.start()
@@ -211,7 +231,10 @@ object AppUpdater {
                 includePrerelease = includePrerelease(activity),
                 strictVariantMatch = true
             )
-            if (isCancelled) return@Thread
+            if (isCancelled) {
+                isDownloadInProgress = false
+                return@Thread
+            }
 
             if (update?.assetUrl?.isNotEmpty() == true && update.assetName.lowercase().contains("noicon")) {
                 candidateUrls.add(update.assetUrl)
@@ -246,6 +269,7 @@ object AppUpdater {
 
             runOnUiThread(activity) {
                 dialog.dismiss()
+                isDownloadInProgress = false
                 if (isCancelled) return@runOnUiThread
                 if (downloadedFile == null) {
                     Log.e(TAG, "No-icon variant download failed for all candidate URLs")
@@ -334,7 +358,42 @@ object AppUpdater {
         }.start()
     }
 
+    /**
+     * Keeps the action buttons inside the dialog.
+     *
+     * The dialog is a floating window with a capped height, and whatever does not fit is clipped
+     * at the bottom - exactly where the buttons sit. Everything else in the layout has a fixed
+     * height, so the release notes are the one part that has to give: give them whatever room is
+     * left over once the rest is laid out and let them scroll inside it. Without this a long
+     * changelog silently hides the last action.
+     */
+    private fun capReleaseNotes(
+        activity: Activity,
+        root: android.view.View,
+        scroll: android.widget.ScrollView,
+        notes: android.widget.TextView,
+    ) {
+        val available = root.height
+        if (available <= 0 || root.width <= 0) return
+        val density = activity.resources.displayMetrics.density
+        val wanted = notes.height
+
+        // Measure the dialog again without the notes to learn how much room the rest of it needs.
+        scroll.layoutParams = scroll.layoutParams.apply { height = 0 }
+        root.measure(
+            android.view.View.MeasureSpec.makeMeasureSpec(root.width, android.view.View.MeasureSpec.EXACTLY),
+            android.view.View.MeasureSpec.makeMeasureSpec(0, android.view.View.MeasureSpec.UNSPECIFIED)
+        )
+        val rest = root.measuredHeight
+        val allowed = (available - rest)
+            .coerceIn((48 * density).toInt(), (120 * density).toInt())
+        scroll.layoutParams = scroll.layoutParams.apply { height = minOf(wanted, allowed) }
+        scroll.requestLayout()
+    }
+
     private fun showUpdateDialog(activity: Activity, update: UpdateInfo) {
+        if (isUpdateDialogShowing || isDownloadInProgress || isAbiWarningShowing) return
+        isUpdateDialogShowing = true
         val view = activity.layoutInflater.inflate(R.layout.dialog_update, null)
         var current = update
         val titleView = view.findViewById<android.widget.TextView>(R.id.update_title)
@@ -360,13 +419,7 @@ object AppUpdater {
                 // Cap the notes area after layout so long changelogs scroll instead of pushing
                 // the action buttons off the bottom of the dialog.
                 notesScroll.layoutParams.height = android.view.ViewGroup.LayoutParams.WRAP_CONTENT
-                notesScroll.post {
-                    val capPx = (280 * activity.resources.displayMetrics.density).toInt()
-                    if (notesView.height > capPx) {
-                        notesScroll.layoutParams.height = capPx
-                        notesScroll.requestLayout()
-                    }
-                }
+                notesScroll.post { capReleaseNotes(activity, view, notesScroll, notesView) }
             } else {
                 notesView.visibility = android.view.View.GONE
                 notesHeader.visibility = android.view.View.GONE
@@ -377,20 +430,24 @@ object AppUpdater {
 
         val dialog = MaterialAlertDialogBuilder(activity)
             .setView(view)
+            .setOnDismissListener { isUpdateDialogShowing = false }
             .create()
-        view.findViewById<android.widget.Button>(R.id.update_cancel)
-            .setOnClickListener { dialog.dismiss() }
-        view.findViewById<android.widget.Button>(R.id.update_ignore)
+        // The actions are a full width vertical stack in the layout instead of the platform
+        // button bar, so a translation whose labels are longer than the English ones cannot
+        // clip them or leave the left half of the bar empty.
+        view.findViewById<com.google.android.material.button.MaterialButton>(R.id.update_action_update)
+            .setOnClickListener {
+                dialog.dismiss()
+                runUpdateFlow(activity, current)
+            }
+        view.findViewById<com.google.android.material.button.MaterialButton>(R.id.update_action_ignore)
             .setOnClickListener {
                 prefs(activity).edit().putString(PREFS_IGNORED_VERSION, current.version).apply()
                 dismissUpdateNotification(activity)
                 dialog.dismiss()
             }
-        view.findViewById<android.widget.Button>(R.id.update_now)
-            .setOnClickListener {
-                dialog.dismiss()
-                runUpdateFlow(activity, current)
-            }
+        view.findViewById<com.google.android.material.button.MaterialButton>(R.id.update_action_cancel)
+            .setOnClickListener { dialog.dismiss() }
 
         // A dev build is always on the dev channel (forced by the version-name match) and
         // cannot be toggled off without a clean install, so only show the switch on stable
@@ -401,7 +458,7 @@ object AppUpdater {
         }
         val switch = view.findViewById<com.google.android.material.materialswitch.MaterialSwitch>(R.id.update_prerelease_switch)
         switch.isChecked = includePrerelease(activity)
-        switch.setOnCheckedChangeListener { _, checked ->
+        bindPrereleaseRow(view, R.id.update_prerelease_row, switch) { checked ->
             setPrereleasePref(activity, checked)
             Thread {
                 val candidate = fetchLatestUpdate(
@@ -459,14 +516,32 @@ object AppUpdater {
         return html
     }
 
+    /**
+     * Turns the pre-release switch into a settings style row: pressing anywhere on the row
+     * toggles the switch, so the control is not a lone switch with a small touch target.
+     */
+    private fun bindPrereleaseRow(
+        view: android.view.View,
+        rowId: Int,
+        switch: com.google.android.material.materialswitch.MaterialSwitch,
+        onChanged: (Boolean) -> Unit
+    ) {
+        view.findViewById<android.view.View>(rowId).setOnClickListener { switch.toggle() }
+        switch.setOnCheckedChangeListener { _, checked -> onChanged(checked) }
+    }
+
     private fun showUpToDateDialog(activity: Activity, update: UpdateInfo) {
+        if (isUpdateDialogShowing || isDownloadInProgress || isAbiWarningShowing) return
+        isUpdateDialogShowing = true
         val view = activity.layoutInflater.inflate(R.layout.dialog_up_to_date, null)
+        view.findViewById<android.widget.TextView>(R.id.up_to_date_title)
+            .setText(R.string.update_up_to_date_title)
         view.findViewById<android.widget.TextView>(R.id.up_to_date_message).text =
             activity.getString(R.string.update_up_to_date_message, update.version)
         val dialog = MaterialAlertDialogBuilder(activity)
-            .setTitle(R.string.update_up_to_date_title)
             .setView(view)
             .setPositiveButton(android.R.string.ok, null)
+            .setOnDismissListener { isUpdateDialogShowing = false }
             .create()
         // Only a stable build can opt into the dev channel; on a dev build the channel is
         // forced by the version name, so hide the switch to avoid an unchangeable toggle.
@@ -480,9 +555,9 @@ object AppUpdater {
         val switch =
             view.findViewById<com.google.android.material.materialswitch.MaterialSwitch>(R.id.up_to_date_prerelease_switch)
         switch.isChecked = includePrerelease(activity)
-        switch.setOnCheckedChangeListener { _, checked ->
+        bindPrereleaseRow(view, R.id.up_to_date_prerelease_row, switch) { checked ->
             setPrereleasePref(activity, checked)
-            if (!checked) return@setOnCheckedChangeListener
+            if (!checked) return@bindPrereleaseRow
             Thread {
                 val candidate = fetchLatestUpdate(
                     activity.resources.getBoolean(R.bool.hide_launcher_icon_available),
@@ -510,6 +585,50 @@ object AppUpdater {
             .show()
     }
 
+    private fun ensureInstallPermission(activity: Activity, action: (Activity) -> Unit): Boolean {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && !activity.packageManager.canRequestPackageInstalls()) {
+            pendingAction = action
+            ensureLifecycleCallbacks(activity)
+            MaterialAlertDialogBuilder(activity)
+                .setTitle(R.string.update_permission_required_title)
+                .setMessage(R.string.update_permission_required_message)
+                .setPositiveButton(R.string.update_open_settings) { _, _ ->
+                    val intent = Intent(
+                        Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES,
+                        "package:${activity.packageName}".toUri()
+                    )
+                    activity.startActivity(intent)
+                }
+                .setNegativeButton(android.R.string.cancel) { _, _ ->
+                    pendingAction = null
+                }
+                .show()
+            return false
+        }
+        return true
+    }
+
+    private fun ensureLifecycleCallbacks(context: Context) {
+        if (isLifecycleRegistered) return
+        val app = context.applicationContext as? Application ?: return
+        app.registerActivityLifecycleCallbacks(object : Application.ActivityLifecycleCallbacks {
+            override fun onActivityResumed(activity: Activity) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && activity.packageManager.canRequestPackageInstalls()) {
+                    val action = pendingAction ?: return
+                    pendingAction = null
+                    action(activity)
+                }
+            }
+            override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {}
+            override fun onActivityStarted(activity: Activity) {}
+            override fun onActivityPaused(activity: Activity) {}
+            override fun onActivityStopped(activity: Activity) {}
+            override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {}
+            override fun onActivityDestroyed(activity: Activity) {}
+        })
+        isLifecycleRegistered = true
+    }
+
     private fun launchInstaller(context: Context, file: File) {
         if (!checkSignaturesMatch(context, file)) {
             Log.e(TAG, "Signature mismatch between installed app and downloaded APK")
@@ -518,19 +637,11 @@ object AppUpdater {
         }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && !context.packageManager.canRequestPackageInstalls()) {
-            Log.w(TAG, "canRequestPackageInstalls is false, prompting user to grant permission")
-            MaterialAlertDialogBuilder(context)
-                .setTitle(R.string.update_permission_required_title)
-                .setMessage(R.string.update_permission_required_message)
-                .setPositiveButton(R.string.update_open_settings) { _, _ ->
-                    val intent = Intent(
-                        android.provider.Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES,
-                        "package:${context.packageName}".toUri()
-                    ).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                    context.startActivity(intent)
-                }
-                .setNegativeButton(android.R.string.cancel, null)
-                .show()
+            if (context is Activity) {
+                ensureInstallPermission(context) { launchInstaller(it, file) }
+            } else {
+                showErrorDialog(context, context.getString(R.string.update_download_failed))
+            }
             return
         }
 
@@ -855,6 +966,230 @@ object AppUpdater {
 
     private fun toast(context: Context, resId: Int) {
         Toast.makeText(context, context.getString(resId), Toast.LENGTH_SHORT).show()
+    }
+
+
+    // -----------------------------------------------------------------------------------
+    // ABI mismatch: arm64-only APK on a 32-bit process
+    // -----------------------------------------------------------------------------------
+
+    /**
+     * True when this process is 32-bit but the installed APK only shipped arm64
+     * native libs (typical of the -arm64-v8a release on a 32-bit userspace device).
+     */
+    @JvmStatic
+    fun isArm64OnlyOn32BitProcess(context: Context): Boolean {
+        if (!isProcess32Bit()) return false
+        return isInstalledApkArm64Only(context)
+    }
+
+    private fun isProcess32Bit(): Boolean {
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            !Process.is64Bit()
+        } else {
+            Build.SUPPORTED_64_BIT_ABIS.isEmpty()
+        }
+    }
+
+    /**
+     * Inspects the installed APK zip entries directly to check if it only contains
+     * arm64-v8a native libraries without any 32-bit (armeabi/armeabi-v7a) libraries.
+     */
+    private fun isInstalledApkArm64Only(context: Context): Boolean {
+        return try {
+            val apkPath = context.applicationInfo.sourceDir ?: return false
+            var hasArm64 = false
+            var hasArm32 = false
+            ZipFile(File(apkPath)).use { zip ->
+                val entries = zip.entries()
+                while (entries.hasMoreElements()) {
+                    val name = entries.nextElement().name.lowercase()
+                    if (name.startsWith("lib/arm64") || name.contains("arm64-v8a")) {
+                        hasArm64 = true
+                    }
+                    if (name.startsWith("lib/armeabi") || name.contains("armeabi-v7a") || name.contains("armeabi")) {
+                        hasArm32 = true
+                    }
+                }
+            }
+            hasArm64 && !hasArm32
+        } catch (e: Exception) {
+            Log.w(TAG, "Failed to inspect APK zip entries", e)
+            try {
+                val libDir = context.applicationInfo.nativeLibraryDir ?: return false
+                val path = libDir.lowercase()
+                path.contains("arm64") && !path.contains("armeabi")
+            } catch (_: Exception) {
+                false
+            }
+        }
+    }
+
+    /**
+     * Shows a non-cancelable warning on app startup when the wrong ABI variant is installed.
+     * The prompt cannot be skipped or ignored since the app is missing required native libraries.
+     */
+    @JvmStatic
+    fun maybeWarnWrongAbiVariant(activity: Activity): Boolean {
+        if (isAbiWarningShowing || isDownloadInProgress || pendingAction != null) return true
+        if (!isArm64OnlyOn32BitProcess(activity)) return false
+        if (activity.isFinishing) return false
+
+        isAbiWarningShowing = true
+        MaterialAlertDialogBuilder(activity)
+            .setTitle(R.string.abi_mismatch_title)
+            .setMessage(R.string.abi_mismatch_message)
+            .setCancelable(false)
+            .setPositiveButton(R.string.abi_mismatch_download_armv7) { _, _ ->
+                isAbiWarningShowing = false
+                downloadAndInstallArmv7Variant(activity)
+            }
+            .setOnDismissListener {
+                isAbiWarningShowing = false
+            }
+            .show()
+        return true
+    }
+
+    /** Downloads the armeabi-v7a build and hands it to the system installer. */
+    @JvmStatic
+    fun downloadAndInstallArmv7Variant(activity: Activity) {
+        downloadAndInstallNamedVariant(
+            activity,
+            titleRes = R.string.abi_mismatch_downloading_title,
+            preferredNameContains = listOf("armeabi-v7a"),
+            preferNoicon = activity.resources.getBoolean(R.bool.hide_launcher_icon_available),
+            directFileNameBuilder = { version, noicon ->
+                if (noicon) "microg-$version-noicon-armeabi-v7a.apk"
+                else "microg-$version-armeabi-v7a.apk"
+            }
+        )
+    }
+
+    /** Downloads the universal build and hands it to the system installer. */
+    @JvmStatic
+    fun downloadAndInstallUniversalVariant(activity: Activity) {
+        downloadAndInstallNamedVariant(
+            activity,
+            titleRes = R.string.abi_mismatch_downloading_title,
+            preferredNameContains = emptyList(),
+            preferNoicon = activity.resources.getBoolean(R.bool.hide_launcher_icon_available),
+            directFileNameBuilder = { version, noicon ->
+                if (noicon) "microg-$version-noicon.apk" else "microg-$version.apk"
+            },
+            requireUniversalName = true
+        )
+    }
+
+    private fun downloadAndInstallNamedVariant(
+        activity: Activity,
+        titleRes: Int,
+        preferredNameContains: List<String>,
+        preferNoicon: Boolean,
+        directFileNameBuilder: (version: String, noicon: Boolean) -> String,
+        requireUniversalName: Boolean = false
+    ) {
+        if (!ensureInstallPermission(activity) {
+            downloadAndInstallNamedVariant(
+                it, titleRes, preferredNameContains, preferNoicon, directFileNameBuilder, requireUniversalName
+            )
+        }) return
+        ensureUpdateNotificationPermission(activity)
+
+        var isCancelled = false
+        var activeConnection: HttpURLConnection? = null
+
+        val progress = ProgressBar(activity, null, android.R.attr.progressBarStyleHorizontal).apply {
+            isIndeterminate = true
+            val padding = (16 * activity.resources.displayMetrics.density).toInt()
+            setPadding(padding, padding, padding, padding)
+        }
+
+        val dialog = MaterialAlertDialogBuilder(activity)
+            .setTitle(titleRes)
+            .setView(progress)
+            .setCancelable(false)
+            .setNegativeButton(android.R.string.cancel) { _, _ ->
+                isCancelled = true
+                Thread {
+                    try { activeConnection?.disconnect() } catch (_: Exception) {}
+                }.start()
+            }
+            .setOnCancelListener {
+                isCancelled = true
+                Thread {
+                    try { activeConnection?.disconnect() } catch (_: Exception) {}
+                }.start()
+            }
+            .create()
+        dialog.show()
+
+        Thread {
+            val candidateUrls = mutableListOf<String>()
+
+            try {
+                val text = httpGet("$RELEASES_URL?per_page=15")
+                if (text != null) {
+                    val all = Gson().fromJson(text, JsonArray::class.java)
+                    all?.forEach { el ->
+                        val root = el.asJsonObject ?: return@forEach
+                        val assets = root.getAsJsonArray("assets") ?: return@forEach
+                        val match = assets.mapNotNull { it.asJsonObject }.firstOrNull { obj ->
+                            val name = obj.get("name")?.asString?.lowercase() ?: return@firstOrNull false
+                            if (!name.endsWith(".apk")) return@firstOrNull false
+                            val hasNoicon = name.contains("noicon")
+                            if (hasNoicon != preferNoicon) return@firstOrNull false
+                            when {
+                                requireUniversalName ->
+                                    !name.contains("arm64-v8a") && !name.contains("armeabi-v7a")
+                                preferredNameContains.isNotEmpty() ->
+                                    preferredNameContains.any { name.contains(it) }
+                                else -> true
+                            }
+                        }
+                        val url = match?.get("browser_download_url")?.asString
+                        if (!url.isNullOrEmpty() && !candidateUrls.contains(url)) {
+                            candidateUrls.add(url)
+                        }
+                    }
+                }
+            } catch (_: Exception) {}
+
+            val cleanVersion = BuildConfig.VERSION_NAME.trim().removePrefix("v").removePrefix("V")
+                .substringBefore(" ").substringBefore("(")
+            val tag = "v$cleanVersion"
+            val fileName = directFileNameBuilder(cleanVersion, preferNoicon)
+            listOf(
+                "https://github.com/MorpheApp/MicroG-RE/releases/download/$tag/$fileName",
+                "https://github.com/MorpheApp/MicroG-RE/releases/latest/download/$fileName"
+            ).forEach { if (!candidateUrls.contains(it)) candidateUrls.add(it) }
+
+            val targetFile = File(activity.cacheDir, "$DOWNLOAD_DIR/microg-re-abi-update.apk")
+            var downloadedFile: File? = null
+            for (url in candidateUrls) {
+                if (isCancelled) break
+                Log.i(TAG, "Attempting ABI variant download from: $url")
+                val file = downloadUrlCancellable(url, targetFile, { isCancelled }) { conn ->
+                    activeConnection = conn
+                }
+                if (file != null && file.length() > 0L) {
+                    downloadedFile = file
+                    break
+                }
+            }
+
+            runOnUiThread(activity) {
+                dialog.dismiss()
+                if (isCancelled) return@runOnUiThread
+                if (downloadedFile == null) {
+                    Log.e(TAG, "ABI variant download failed for all candidate URLs")
+                    showErrorDialog(activity, activity.getString(R.string.update_download_failed))
+                } else {
+                    Log.i(TAG, "ABI variant downloaded: ${downloadedFile.length()} bytes")
+                    launchInstaller(activity, downloadedFile)
+                }
+            }
+        }.start()
     }
 
     /**
