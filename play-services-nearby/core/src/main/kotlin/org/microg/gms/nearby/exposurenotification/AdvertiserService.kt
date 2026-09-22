@@ -199,12 +199,21 @@ class AdvertiserService : LifecycleService() {
     private fun scheduleRestartAdvertising(nextSend: Long) {
         val intent = Intent(this, AdvertiserService::class.java).apply { action = ACTION_RESTART_ADVERTISING }
         val pendingIntent = PendingIntentCompat.getService(this, ACTION_RESTART_ADVERTISING.hashCode(), intent, FLAG_ONE_SHOT or FLAG_UPDATE_CURRENT, false)!!
-        when {
-            SDK_INT >= 23 ->
-                alarmManager.setExactAndAllowWhileIdle(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + nextSend, pendingIntent)
-            else ->
-                alarmManager.setExact(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + nextSend, pendingIntent)
+        // RE changes start
+        if (SDK_INT >= 23) {
+            try {
+                if (SDK_INT < 31 || alarmManager.canScheduleExactAlarms()) {
+                    alarmManager.setExactAndAllowWhileIdle(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + nextSend, pendingIntent)
+                    return
+                }
+            } catch (e: SecurityException) {
+                Log.w(TAG, "Failed to schedule exact alarm", e)
+            }
+            alarmManager.setAndAllowWhileIdle(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + nextSend, pendingIntent)
+        } else {
+            alarmManager.setExact(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + nextSend, pendingIntent)
         }
+        // RE changes end
     }
 
     @Synchronized
