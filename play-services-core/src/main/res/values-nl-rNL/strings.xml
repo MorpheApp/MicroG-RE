@@ -185,6 +185,7 @@ Stel een wachtwoord, PIN of patroonvergrendelscherm in."</string>
     <string name="update_include_prerelease">Ontwikkelbuilds opnemen</string>
     <string name="update_available_title">Update beschikbaar</string>
     <string name="update_available_prerelease_title">Update beschikbaar (pre-release)</string>
+    <string name="update_available_message">Er is een nieuwe v%1$s beschikbaar. Je hebt versie v%2$s geïnstalleerd. Download en installeer de update?</string>
     <string name="update_now">Bijwerken</string>
     <string name="update_whats_new">Wat is er nieuw</string>
     <string name="update_ignore">Negeren</string>
@@ -481,4 +482,12 @@ Meldingen worden gebruikt om GcmService op de achtergrond te laten draaien wanne
     <string name="self_check_patched_app_installed">Wordt uitgevoerd met %1$s</string>
     <string name="self_check_action_download_morphe">Tap hier om deze permissie toe te kennen. Deze permissie is vereist om pop-up waarschuwingen te tonen op bovenliggende apps</string>
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Verkeerde architectuurvariant geïnstalleerd</string>
+    <string name="abi_mismatch_message">"Deze MicroG-RE-build bevat alleen 64-bit (arm64) bibliotheken, maar dit apparaat draait een 32-bit userspace.
+
+Functies die Conscrypt nodig hebben (account login, streaming, BotGuard, videostreams vervalsen, SponsorBlock, Return YouTube Dislike, etc.) zullen niet goed werken en kunnen afspeelproblemen of \"Unable to find a default SSL provider\" veroorzaken.
+
+Installeer in plaats daarvan de ARMv7 of Universele APK."</string>
+    <string name="abi_mismatch_download_armv7">ARMv7 APK downloaden</string>
+    <string name="abi_mismatch_downloading_title">Bezig met downloaden van de juiste variant…</string>
 </resources>

@@ -192,6 +192,7 @@ Bitte richten Sie eine Bildschirmsperre mit Passwort, PIN oder Muster ein."</str
     <string name="update_include_prerelease">Entwickler-Builds einschließen</string>
     <string name="update_available_title">Update verfügbar</string>
     <string name="update_available_prerelease_title">Update verfügbar (Vorabversion)</string>
+    <string name="update_available_message">Eine neue Version v%1$s ist verfügbar. Sie haben die Version v%2$s installiert. Möchten Sie das Update herunterladen und installieren?</string>
     <string name="update_now">Update</string>
     <string name="update_whats_new">Was ist neu</string>
     <string name="update_ignore">Ignorieren</string>
@@ -480,4 +481,12 @@ Einige Apps können danach möglicherweise nicht erneut registriert werden. Sie 
     <string name="self_check_patched_app_installed">Läuft mit %1$s</string>
     <string name="self_check_action_download_morphe">Morphe herunterladen</string>
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Falsche Architekturvariante installiert</string>
+    <string name="abi_mismatch_message">"Dieser MicroG-RE-Build enthält nur 64-Bit-Bibliotheken (arm64), aber auf diesem Gerät läuft ein 32-Bit-Userspace.
+
+Funktionen, die Conscrypt benötigen (Kontoanmeldung, Streaming, BotGuard, Video-Streams spoofen, SponsorBlock, Return YouTube Dislike usw.), funktionieren nicht richtig und können zu Wiedergabeproblemen oder der Meldung „Unable to find a default SSL provider“ führen.
+
+Installieren Sie stattdessen die ARMv7- oder Universal-APK."</string>
+    <string name="abi_mismatch_download_armv7">ARMv7-APK herunterladen</string>
+    <string name="abi_mismatch_downloading_title">Richtige Variante wird heruntergeladen…</string>
 </resources>

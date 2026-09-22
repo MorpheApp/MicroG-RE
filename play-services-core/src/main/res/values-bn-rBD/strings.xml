@@ -490,4 +490,12 @@
     <string name="self_check_patched_app_installed">%1$S-এ রানিং</string>
     <string name="self_check_action_download_morphe">ডাউনলোড মর্ফে</string>
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">ভুল আর্কিটেকচার ভেরিয়েন্ট ইনস্টল করা হয়েছে</string>
+    <string name="abi_mismatch_message">"এই MicroG-RE বিল্ডটিতে শুধুমাত্র 64-বিট (arm64) লাইব্রেরি রয়েছে, কিন্তু এই ডিভাইসটি একটি 32-বিট ইউজারস্পেসে চলছে।
+
+কনসক্রিপ্ট প্রয়োজন এমন বৈশিষ্ট্যগুলি (অ্যাকাউন্ট লগইন, স্ট্রিমিং, BotGuard, স্পুফ ভিডিও স্ট্রিম, SponsorBlock, Return YouTube Dislike, ইত্যাদি) সঠিকভাবে কাজ করবে না এবং প্লেব্যাক সমস্যা বা \"ডিফল্ট SSL প্রোভাইডার খুঁজে পাওয়া যাচ্ছে না\" ত্রুটি সৃষ্টি করতে পারে।
+
+পরিবর্তে ARMv7 বা Universal APK ইনস্টল করুন।"</string>
+    <string name="abi_mismatch_download_armv7">ARMv7 APK ডাউনলোড করুন</string>
+    <string name="abi_mismatch_downloading_title">সঠিক ভেরিয়েন্ট ডাউনলোড হচ্ছে…</string>
 </resources>

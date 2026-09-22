@@ -26,7 +26,7 @@
         <item quantity="other">Nu sunt acordate permisiuni necesare pentru funcționarea corectă a serviciilor microG.</item>
     </plurals>
     <plurals name="cond_perm_action">
-        <item quantity="one">Cerere permisiune lipsă</item>
+        <item quantity="one">Solicită permisiunea lipsă</item>
         <item quantity="few">Cerere permisiuni lipsă</item>
         <item quantity="other">Cerere permisiuni lipsă</item>
     </plurals>

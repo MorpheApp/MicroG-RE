@@ -480,4 +480,12 @@ Para ativar, conceda permissão de câmera aos serviços microG nas Configuraç�
     <string name="self_check_patched_app_installed">Executando com %1$s</string>
     <string name="self_check_action_download_morphe">Baixar Morphe</string>
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Variante de arquitetura incorreta instalada</string>
+    <string name="abi_mismatch_message">"Esta compilação do MicroG-RE contém apenas bibliotecas de 64 bits (arm64), mas este dispositivo está executando um espaço de usuário de 32 bits.
+
+Os recursos que precisam do Conscrypt (login na conta, streaming, BotGuard, falsificação de fluxos de vídeo, SponsorBlock, Return YouTube Dislike, etc.) não funcionarão corretamente e podem causar problemas de reprodução ou \"Não foi possível encontrar um provedor SSL padrão\".
+
+Em vez disso, instale o APK ARMv7 ou Universal."</string>
+    <string name="abi_mismatch_download_armv7">Baixar APK ARMv7</string>
+    <string name="abi_mismatch_downloading_title">Baixando a variante correta…</string>
 </resources>

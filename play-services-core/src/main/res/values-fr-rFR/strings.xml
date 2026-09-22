@@ -494,7 +494,7 @@ Vérifiez le statut d'enregistrement de l'appareil. Certaines applications pourr
     <string name="self_check_action_download_morphe">Télécharger Morphe</string>
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
     <string name="abi_mismatch_title">Mauvaise variante d\'architecture installée</string>
-    <string name="abi_mismatch_message">"Cette version de MicroG-RE ne contient que des bibliothèques 64 bits (arm64), alors que cet appareil utilise un environnement utilisateur 32 bits.
+    <string name="abi_mismatch_message">"Ce build de MicroG-RE ne contient que des bibliothèques 64 bits (arm64), alors que cet appareil utilise un environnement utilisateur 32 bits.
 
 Les fonctionnalités qui nécessitent Conscrypt (connexion au compte, streaming, BotGuard, Falsifier les flux vidéo, SponsorBlock, Return YouTube Dislike, etc.) ne fonctionneront pas correctement et peuvent entraîner des problèmes de lecture ou afficher le message \"Impossible de trouver un fournisseur SSL par défaut\".
 

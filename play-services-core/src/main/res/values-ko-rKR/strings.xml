@@ -428,7 +428,7 @@
     <string name="family_management_delete_group_cancel">취소</string>
     <string name="family_management_delete_group_confirm">확인</string>
     <string name="family_management_input_pwd">비밀번호를 입력하세요</string>
-    <string name="family_management_invite_sent_date_format">%s에 초대장이 전송되었습니다</string>
+    <string name="family_management_invite_sent_date_format">%s님에 초대장이 전송되었습니다</string>
     <string name="family_management_invite_send">초대가 전송되었습니다</string>
     <string name="family_management_pwd_error">비밀번호가 틀렸습니다. 다시 입력하세요.</string>
     <string name="barcode_scanner_brand">%1$s를 대신하여 microG에서 스캔하였습니다.</string>
@@ -459,7 +459,7 @@
     <string name="pref_passkey_manager_empty_title">저장된 패스키 없음</string>
     <string name="pref_passkey_manager_description">서드파티 앱이 패스키를 등록하면 microG는 로컬 기록을 유지합니다. 앱이 microG에 알리지 않고 패스키를 삭제하면 기록이 남아 있을 수 있습니다. 여기에서 이러한 잔여 항목을 제거할 수 있습니다.</string>
     <string name="pref_passkey_manager_delete_dialog_title">패스키 삭제</string>
-    <string name="pref_passkey_manager_delete_dialog_message">\"%1$s\"에서\"\'%2$s\"에 대한 패스키를 삭제합니다. 이 작업은 되돌릴 수 없습니다. 다시 로그인하려면 새 패스키를 등록해야 합니다.</string>
+    <string name="pref_passkey_manager_delete_dialog_message">\'%1$s\'에서 \'%2$s\'에 대한 패스키를 삭제합니다. 이 작업은 되돌릴 수 없습니다. 다시 로그인하려면 새 패스키를 등록해야 합니다.</string>
     <string name="pref_passkey_manager_delete_dialog_confirm">삭제</string>
     <string name="pref_passkey_manager_unknown_user">알 수 없는 사용자</string>
     <string name="pref_passkey_manager_transport_screen_lock">화면 잠금</string>
@@ -483,7 +483,7 @@
     <string name="abi_mismatch_title">잘못된 아키텍처 변형이 설치됨</string>
     <string name="abi_mismatch_message">"이 MicroG-RE 빌드에는 64비트(arm64) 라이브러리만 있는데, 이 기기는 32비트 사용자 공간에서 작동하고 있습니다.
 
-Conscrypt가 필요한 기능(계정 로그인, 스트리밍, BotGuard, 동영상 스트림 속이기, SponsorBlock, Return YouTube Dislike 등)이 제대로 동작하지 않을 수 있으며 재생 문제가 발생하거나 \"기본 SSL 제공자를 찾지 못할\" 수 있습니다.
+Conscrypt가 필요한 기능(계정 로그인, 스트리밍, BotGuard, 동영상 스트림 속이기, SponsorBlock, Return YouTube Dislike 등)이 제대로 동작하지 않을 수 있으며 재생 문제가 발생하거나 '기본 SSL 제공자를 찾을 수 없습니다'와 같은 오류 메시지가 표시될 수 있습니다.
 
 대신에 ARMv7 또는 Universal APK를 설치하세요."</string>
     <string name="abi_mismatch_download_armv7">ARMv7 APK 다운로드</string>

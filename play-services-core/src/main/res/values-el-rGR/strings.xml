@@ -191,6 +191,7 @@
     <string name="update_include_prerelease">Συμπερίληψη εκδόσεων ανάπτυξης</string>
     <string name="update_available_title">Διαθέσιμη ενημέρωση</string>
     <string name="update_available_prerelease_title">Διαθέσιμη ενημέρωση (προ-έκδοση)</string>
+    <string name="update_available_message">Νέα έκδοση v%1$s είναι διαθέσιμη. Έχετε εγκαταστήσει την έκδοση v%2$s. Να γίνει λήψη και εγκατάσταση της ενημέρωσης;</string>
     <string name="update_now">Ενημέρωση</string>
     <string name="update_whats_new">Τι νέο</string>
     <string name="update_ignore">Αγνόηση</string>
@@ -479,4 +480,12 @@
     <string name="self_check_patched_app_installed">Εκτελείται με %1$s</string>
     <string name="self_check_action_download_morphe">Λήψη του Morphe</string>
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Εγκαταστάθηκε λάθος παραλλαγή αρχιτεκτονικής</string>
+    <string name="abi_mismatch_message">"Αυτή η έκδοση MicroG-RE περιέχει μόνο βιβλιοθήκες 64-bit (arm64), αλλά αυτή η συσκευή εκτελεί 32-bit χώρο χρήστη.
+
+Λειτουργίες που χρειάζονται Conscrypt (σύνδεση λογαριασμού, ροή, BotGuard, παραποίηση ροών βίντεο, SponsorBlock, Return YouTube Dislike, κ.λπ.) δεν θα λειτουργήσουν σωστά και μπορεί να προκαλέσουν προβλήματα αναπαραγωγής ή \"Δεν είναι δυνατή η εύρεση προεπιλεγμένου παρόχου SSL\".
+
+Εγκαταστήστε το ARMv7 ή το Universal APK αντί αυτού."</string>
+    <string name="abi_mismatch_download_armv7">Λήψη ARMv7 APK</string>
+    <string name="abi_mismatch_downloading_title">Λήψη σωστής παραλλαγής…</string>
 </resources>
