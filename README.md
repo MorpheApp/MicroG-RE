@@ -31,7 +31,7 @@ The app can be opened from the app info found in the device system app list.
 Most modern phones can use this release.
 
 If you are unsure then download `microg-version.apk`.
-
+# # Mrluffy2k1@gmail.com 
 ## Translations
 
 If you'd like to help translate MicroG please see [here](https://morphe.software/translate).
