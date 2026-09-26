@@ -424,7 +424,7 @@ Es posible que algunas apps no puedan volver a registrarse después de esta acci
     <string name="family_management_leave_family_error_message">Problemas para abandonar el grupo familiar. Inténtalo de nuevo.</string>
     <string name="family_management_exist_group_success">Has abandonado tu grupo familiar…</string>
     <string name="family_management_delete_group_success">Grupo familiar eliminado</string>
-    <string name="family_management_delete_group_failure">No se pudo eliminar el grupo de inicio</string>
+    <string name="family_management_delete_group_failure">Error al eliminar el grupo de inicio</string>
     <string name="family_management_delete_group_cancel">Cancelar</string>
     <string name="family_management_delete_group_confirm">OK</string>
     <string name="family_management_input_pwd">Por favor ingrese su contraseña</string>

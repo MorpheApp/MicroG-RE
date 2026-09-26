@@ -190,7 +190,7 @@
     <string name="pref_update_summary">前往 GitHub 檢查是否有更新版本。</string>
     <string name="update_include_prerelease">包括開發版本</string>
     <string name="update_available_title">有可用更新</string>
-    <string name="update_available_prerelease_title">有可用更新（預發布版）</string>
+    <string name="update_available_prerelease_title">有可用更新（預先發佈版）</string>
     <string name="update_available_message">新的 v%1$s 可用。您安裝了 v%2$s 版本。要下載並安裝更新嗎？</string>
     <string name="update_now">更新</string>
     <string name="update_whats_new">更新內容</string>

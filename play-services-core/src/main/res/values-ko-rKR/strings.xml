@@ -428,7 +428,7 @@
     <string name="family_management_delete_group_cancel">취소</string>
     <string name="family_management_delete_group_confirm">확인</string>
     <string name="family_management_input_pwd">비밀번호를 입력하세요</string>
-    <string name="family_management_invite_sent_date_format">%s님에 초대장이 전송되었습니다</string>
+    <string name="family_management_invite_sent_date_format">%s에 초대장이 전송되었습니다</string>
     <string name="family_management_invite_send">초대가 전송되었습니다</string>
     <string name="family_management_pwd_error">비밀번호가 틀렸습니다. 다시 입력하세요.</string>
     <string name="barcode_scanner_brand">%1$s를 대신하여 microG에서 스캔하였습니다.</string>

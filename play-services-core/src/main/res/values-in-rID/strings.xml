@@ -263,10 +263,10 @@ Beberapa aplikasi mungkin tidak dapat mendaftar lagi setelah melakukan ini. Anda
     <string name="safetynet_last_run_at">Penggunaan terakhir: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
     <string name="profile_name_native">Asli</string>
     <string name="profile_name_real">Nyata</string>
-    <string name="profile_name_user">Khusus: %s</string>
+    <string name="profile_name_user">Kustom: %s</string>
     <string name="profile_name_auto">Otomatis: %s</string>
     <string name="profile_name_system">Sistem: %s</string>
-    <string name="pref_device_registration_import_custom_profile_title">Impor profil khusus</string>
+    <string name="pref_device_registration_import_custom_profile_title">Impor profil kustom</string>
     <string name="pref_device_registration_serial_title">Serial</string>
     <string name="pref_device_registration_import_custom_profile_summary">Impor profil perangkat dari berkas</string>
     <string name="pref_device_registration_select_profile_title">Pilih profil</string>
