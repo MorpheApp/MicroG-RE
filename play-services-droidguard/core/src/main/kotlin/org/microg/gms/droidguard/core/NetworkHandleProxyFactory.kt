@@ -19,6 +19,7 @@ import org.microg.gms.profile.ProfileManager
 import org.microg.gms.utils.singleInstanceOf
 import java.io.File
 import java.util.*
+import java.util.concurrent.TimeUnit
 import com.android.volley.Request as VolleyRequest
 import com.android.volley.Response as VolleyResponse
 
@@ -133,7 +134,9 @@ class NetworkHandleProxyFactory(private val context: Context) : HandleProxyFacto
                 )
             }
         })
-        val signed: SignedResponse = future.get()
+        // RE changes start
+        val signed: SignedResponse = future.get(REQUEST_TIMEOUT_SECONDS, TimeUnit.SECONDS)
+        // RE changes end
         val response = signed.unpack()
         val vmKey = response.vmChecksum!!.hex()
         if (!isValidCache(vmKey)) {
@@ -173,6 +176,9 @@ class NetworkHandleProxyFactory(private val context: Context) : HandleProxyFacto
     }
 
     companion object {
+        // RE changes start
+        private const val REQUEST_TIMEOUT_SECONDS = 30L
+        // RE changes end
         const val SERVER_URL = "https://www.googleapis.com/androidantiabuse/v1/x/create?alt=PROTO&key=AIzaSyBofcZsgLSS7BOnBjZPEkk4rYwzOIz-lTI"
     }
 }
