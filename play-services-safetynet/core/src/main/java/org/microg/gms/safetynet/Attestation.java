@@ -154,6 +154,10 @@ public class Attestation {
         ProfileManager.ensureInitialized(context);
         String requestUrl = "https://www.googleapis.com/androidcheck/v1/attestations/attest?alt=PROTO&key=" + apiKey;
         HttpURLConnection connection = (HttpURLConnection) new URL(requestUrl).openConnection();
+        // RE changes start
+        connection.setConnectTimeout(15000);
+        connection.setReadTimeout(30000);
+        // RE changes end
         connection.setRequestMethod("POST");
         connection.setDoInput(true);
         connection.setDoOutput(true);

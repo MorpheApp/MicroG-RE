@@ -100,6 +100,10 @@ private suspend fun Context.cryptAuthQuery(url: String, authToken: String, reque
     Dispatchers.IO) {
     val connection = (URL(url).openConnection() as HttpURLConnection).apply {
         setRequestMethod("POST")
+        // RE changes start
+        connectTimeout = 15000
+        readTimeout = 30000
+        // RE changes end
         setDoInput(true)
         setDoOutput(true)
         setRequestProperty("x-goog-api-key", API_KEY)

@@ -180,6 +180,10 @@ public class ImageManager {
         HttpURLConnection connection = null;
         try {
             connection = (HttpURLConnection) new URL(url).openConnection();
+            // RE changes start
+            connection.setConnectTimeout(15000);
+            connection.setReadTimeout(30000);
+            // RE changes end
             connection.connect();
             if (connection.getResponseCode() == HttpURLConnection.HTTP_OK) {
                 InputStream inputStream = connection.getInputStream();

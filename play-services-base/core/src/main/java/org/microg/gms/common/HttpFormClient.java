@@ -36,69 +36,80 @@ public class HttpFormClient {
 
     public static <T> T request(String url, Request request, Class<T> tClass) throws IOException {
         HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
-        connection.setRequestMethod("POST");
-        connection.setDoInput(true);
-        connection.setDoOutput(true);
-        connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-        StringBuilder content = new StringBuilder();
-        request.prepare();
-        for (Field field : request.getClass().getDeclaredFields()) {
-            try {
-                field.setAccessible(true);
-                Object objVal = field.get(request);
-                if (field.isAnnotationPresent(RequestContentDynamic.class)) {
-                    Map<String, String> contentParams = (Map<String, String>) objVal;
-                    for (Map.Entry<String, String> param : contentParams.entrySet()) {
-                        appendParam(content, param.getKey(), param.getValue());
+        // RE changes start
+        connection.setConnectTimeout(15000);
+        connection.setReadTimeout(30000);
+        try {
+        // RE changes end
+            connection.setRequestMethod("POST");
+            connection.setDoInput(true);
+            connection.setDoOutput(true);
+            connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+            StringBuilder content = new StringBuilder();
+            request.prepare();
+            for (Field field : request.getClass().getDeclaredFields()) {
+                try {
+                    field.setAccessible(true);
+                    Object objVal = field.get(request);
+                    if (field.isAnnotationPresent(RequestContentDynamic.class)) {
+                        Map<String, String> contentParams = (Map<String, String>) objVal;
+                        for (Map.Entry<String, String> param : contentParams.entrySet()) {
+                            appendParam(content, param.getKey(), param.getValue());
+                        }
+                        continue;
                     }
-                    continue;
-                }
-                String value = objVal != null ? String.valueOf(objVal) : null;
-                Boolean boolVal = null;
-                if (field.getType().equals(boolean.class)) {
-                    boolVal = field.getBoolean(request);
-                }
-                if (field.isAnnotationPresent(RequestHeader.class)) {
-                    RequestHeader annotation = field.getAnnotation(RequestHeader.class);
-                    value = valueFromBoolVal(value, boolVal, annotation.truePresent(), annotation.falsePresent());
-                    if (value != null || annotation.nullPresent()) {
-                        for (String key : annotation.value()) {
-                            connection.setRequestProperty(key, String.valueOf(value));
+                    String value = objVal != null ? String.valueOf(objVal) : null;
+                    Boolean boolVal = null;
+                    if (field.getType().equals(boolean.class)) {
+                        boolVal = field.getBoolean(request);
+                    }
+                    if (field.isAnnotationPresent(RequestHeader.class)) {
+                        RequestHeader annotation = field.getAnnotation(RequestHeader.class);
+                        value = valueFromBoolVal(value, boolVal, annotation.truePresent(), annotation.falsePresent());
+                        if (value != null || annotation.nullPresent()) {
+                            for (String key : annotation.value()) {
+                                connection.setRequestProperty(key, String.valueOf(value));
+                            }
                         }
                     }
-                }
-                if (field.isAnnotationPresent(RequestContent.class)) {
-                    RequestContent annotation = field.getAnnotation(RequestContent.class);
-                    value = valueFromBoolVal(value, boolVal, annotation.truePresent(), annotation.falsePresent());
-                    if (value != null || annotation.nullPresent()) {
-                        for (String key : annotation.value()) {
-                            appendParam(content, key, value);
+                    if (field.isAnnotationPresent(RequestContent.class)) {
+                        RequestContent annotation = field.getAnnotation(RequestContent.class);
+                        value = valueFromBoolVal(value, boolVal, annotation.truePresent(), annotation.falsePresent());
+                        if (value != null || annotation.nullPresent()) {
+                            for (String key : annotation.value()) {
+                                appendParam(content, key, value);
+                            }
                         }
                     }
+                } catch (Exception ignored) {
                 }
-            } catch (Exception ignored) {
             }
-        }
 
-        Log.d(TAG, "-- Request --\n" + content);
-        String replace = content.toString().trim().replace("\n", "");
-        OutputStream os = connection.getOutputStream();
-        os.write(replace.trim().getBytes());
-        os.close();
+            Log.d(TAG, "-- Request --\n" + content);
+            String replace = content.toString().trim().replace("\n", "");
+            OutputStream os = connection.getOutputStream();
+            os.write(replace.trim().getBytes());
+            os.close();
 
-        if (connection.getResponseCode() != 200) {
-            String error = connection.getResponseMessage();
-            try {
-                error = new String(Utils.readStreamToEnd(connection.getErrorStream()));
-            } catch (IOException e) {
-                // Ignore
+            if (connection.getResponseCode() != 200) {
+                String error = connection.getResponseMessage();
+                try {
+                    error = new String(Utils.readStreamToEnd(connection.getErrorStream()));
+                } catch (IOException e) {
+                    // Ignore
+                }
+                throw new NotOkayException(error);
             }
-            throw new NotOkayException(error);
-        }
 
-        String result = new String(Utils.readStreamToEnd(connection.getInputStream()));
-        Log.d(TAG, "-- Response --\n" + result);
-        return parseResponse(tClass, connection, result);
+            String result = new String(Utils.readStreamToEnd(connection.getInputStream()));
+            Log.d(TAG, "-- Response --\n" + result);
+            return parseResponse(tClass, connection, result);
+        // RE changes start
+        } finally {
+            // Release the socket even when the request fails midway
+            connection.disconnect();
+        }
+        // RE changes end
     }
 
     private static String valueFromBoolVal(String value, Boolean boolVal, boolean truePresent, boolean falsePresent) {

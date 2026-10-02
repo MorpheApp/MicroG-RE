@@ -24,6 +24,7 @@ import org.microg.gms.settings.SettingsContract;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import static android.content.pm.ApplicationInfo.FLAG_SYSTEM;
 import static android.content.pm.ApplicationInfo.FLAG_UPDATED_SYSTEM_APP;
@@ -37,6 +38,9 @@ public class AuthManager {
     public static final String PREF_AUTH_VISIBLE = SettingsContract.Auth.VISIBLE;
     public static final int ONE_HOUR_IN_SECONDS = 60 * 60;
     public Map<Object, Object> dynamicFields = new HashMap<>();
+    // RE changes start
+    private static final ConcurrentHashMap<String, Object> REQUEST_LOCKS = new ConcurrentHashMap<>();
+    // RE changes end
     private final Context context;
     private final String accountName;
     private final String packageName;
@@ -311,8 +315,28 @@ public class AuthManager {
         }
     }
 
+    // RE changes start
+    /**
+     * Coalesce concurrent requests for the same token: callers waiting on the lock
+     * get the freshly stored token instead of each performing a network refresh.
+     */
     @NonNull
     public AuthResponse requestAuth(boolean legacy) throws IOException {
+        String key = accountName + "/" + buildTokenKey();
+        Object lock = REQUEST_LOCKS.get(key);
+        if (lock == null) {
+            Object newLock = new Object();
+            lock = REQUEST_LOCKS.putIfAbsent(key, newLock);
+            if (lock == null) lock = newLock;
+        }
+        synchronized (lock) {
+            return requestAuthLocked(legacy);
+        }
+    }
+
+    @NonNull
+    private AuthResponse requestAuthLocked(boolean legacy) throws IOException {
+        // RE changes end
         if (service.equals(AuthConstants.SCOPE_GET_ACCOUNT_ID)) {
             AuthResponse response = new AuthResponse();
             response.accountId = response.auth = getAccountManager().getUserData(getAccount(), "GoogleUserId");

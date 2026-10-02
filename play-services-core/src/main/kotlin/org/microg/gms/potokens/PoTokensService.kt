@@ -22,6 +22,7 @@ import com.google.android.gms.potokens.internal.ITokenCallbacks
 import org.microg.gms.BaseService
 import org.microg.gms.common.GmsService
 import org.microg.gms.profile.ProfileManager
+import org.microg.gms.utils.singleInstanceOf
 
 private val FEATURES = arrayOf(Feature("PO_TOKENS", 1))
 
@@ -32,7 +33,9 @@ class PoTokensService : BaseService(TAG, GmsService.PO_TOKENS) {
         ProfileManager.ensureInitialized(this)
         callback.onPostInitCompleteWithConnectionInfo(
             CommonStatusCodes.SUCCESS,
-            PoTokensServiceImpl(request.packageName, PoTokenHelper(this), lifecycle),
+            // RE changes start
+            PoTokensServiceImpl(request.packageName, singleInstanceOf { PoTokenHelper(applicationContext) }, lifecycle),
+            // RE changes end
             ConnectionInfo().apply { features = FEATURES }
         )
     }
@@ -58,7 +61,13 @@ class PoTokensServiceImpl(
                 val bytes = helper.callPoToken(packageName, bArr)
                 Log.d(TAG, "responseStatusToken result: ${bytes.size}")
                 call.responseToken(Status.SUCCESS, PoToken(bytes))
+            // RE changes start
+            }.onFailure { e ->
+                // Always answer, so the caller never waits forever for a token
+                Log.w(TAG, "responseStatusToken failed", e)
+                runCatching { call.responseToken(Status(CommonStatusCodes.INTERNAL_ERROR), null) }
             }
+            // RE changes end
             Log.d(TAG, "responseStatusToken end")
         }
     }

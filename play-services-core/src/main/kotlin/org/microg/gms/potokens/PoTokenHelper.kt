@@ -28,6 +28,8 @@ import com.google.android.gms.potokens.PoTokenResult
 import com.google.android.gms.potokens.PoTokenResultWrap
 import com.google.android.gms.tasks.Tasks
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
 import okio.ByteString.Companion.toByteString
 import org.microg.gms.common.Constants
@@ -48,6 +50,10 @@ class PoTokenHelper(val context: Context) {
     private var accessTokenLimitIntervalCount = 0
     private val volleyQueue = singleInstanceOf { Volley.newRequestQueue(context.applicationContext) }
     private val poTokenStore = singleInstanceOf { PoTokenStore(context.applicationContext) }
+    // RE changes start
+    // Serialize token refreshes so concurrent requests do not each run DroidGuard and hit the network.
+    private val refreshMutex = Mutex()
+    // RE changes end
 
     private fun buildKeySet(): KeySet {
         val keyId = abs(Random().nextInt())
@@ -157,10 +163,18 @@ class PoTokenHelper(val context: Context) {
                 }
             }
         })
-        return future.get()
+        // RE changes start
+        return future.get(REQUEST_TIMEOUT_SECONDS, TimeUnit.SECONDS)
+        // RE changes end
     }
 
-    suspend fun callPoToken(packageName: String, inputData: ByteArray): ByteArray {
+    // RE changes start
+    suspend fun callPoToken(packageName: String, inputData: ByteArray): ByteArray = refreshMutex.withLock {
+        callPoTokenLocked(packageName, inputData)
+    }
+
+    private suspend fun callPoTokenLocked(packageName: String, inputData: ByteArray): ByteArray {
+        // RE changes end
         var tokenInfo = poTokenStore.loadUsedIntegrityTokenInfo()
         val lastUpdateTime = poTokenStore.getLastUpdateTime()
         val flag = poTokenStore.getIntervalFlag()
@@ -252,4 +266,9 @@ class PoTokenHelper(val context: Context) {
         return PoTokenResultWrap(poTokenResult).encode()
     }
 
+    // RE changes start
+    companion object {
+        private const val REQUEST_TIMEOUT_SECONDS = 30L
+    }
+    // RE changes end
 }

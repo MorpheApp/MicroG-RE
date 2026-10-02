@@ -25,6 +25,11 @@ class DroidGuardHandleImpl(private val context: Context, private val packageName
     private var flow: String? = null
     private var handleProxy: HandleProxy? = null
     private var handleInitError: Throwable? = null
+    // RE changes start
+    private val initLock = Any()
+    private var initDone = false
+    private var closeRequested = false
+    // RE changes end
 
     override fun init(flow: String?) {
         Log.d(TAG, "init($flow)")
@@ -60,7 +65,23 @@ class DroidGuardHandleImpl(private val context: Context, private val packageName
             Log.w(TAG, "Error during handle init", e)
             this.handleInitError = e
         }
-        this.condition.open()
+        // RE changes start
+        synchronized(initLock) {
+            initDone = true
+            if (closeRequested) {
+                // close() gave up waiting for init, release the handle now
+                Log.d(TAG, "Closing handle after deferred close()")
+                try {
+                    this.handleProxy?.close()
+                } catch (e: Exception) {
+                    Log.w(TAG, "Error during handle close", e)
+                }
+                this.handleProxy = null
+                this.handleInitError = IllegalStateException("Handle closed during init")
+            }
+            this.condition.open()
+        }
+        // RE changes end
         if (handleInitError == null) {
             try {
                 val `object` = handleProxy!!.handle.javaClass.getDeclaredMethod("rb").invoke(handleProxy.handle) as? Parcelable?
@@ -84,7 +105,11 @@ class DroidGuardHandleImpl(private val context: Context, private val packageName
 
     override fun snapshot(map: MutableMap<Any?, Any?>): ByteArray {
         Log.d(TAG, "snapshot($map)")
-        condition.block()
+        // RE changes start
+        if (!condition.block(INIT_TIMEOUT_MS)) {
+            return FallbackCreator.create(flow, context, map, IllegalStateException("Handle init timed out"))
+        }
+        // RE changes end
         handleInitError?.let { return FallbackCreator.create(flow, context, map, it) }
         val handleProxy = this.handleProxy ?: return FallbackCreator.create(flow, context, map, IllegalStateException())
         return try {
@@ -100,7 +125,17 @@ class DroidGuardHandleImpl(private val context: Context, private val packageName
 
     override fun close() {
         Log.d(TAG, "close()")
-        condition.block()
+        // RE changes start
+        if (!condition.block(INIT_TIMEOUT_MS)) {
+            synchronized(initLock) {
+                if (!initDone) {
+                    Log.w(TAG, "Handle init still running, deferring close()")
+                    closeRequested = true
+                    return
+                }
+            }
+        }
+        // RE changes end
         try {
             handleProxy?.close()
         } catch (e: Exception) {
@@ -113,6 +148,9 @@ class DroidGuardHandleImpl(private val context: Context, private val packageName
     companion object {
         private const val TAG = "GmsGuardHandleImpl"
         private val LOW_LATENCY_ENABLED = false
+        // RE changes start
+        private const val INIT_TIMEOUT_MS = 60_000L
+        // RE changes end
         private val NOT_LOW_LATENCY_FLOWS = setOf("ad_attest", "attest", "checkin", "federatedMachineLearningReduced", "msa-f", "ad-event-attest-token")
     }
 }
