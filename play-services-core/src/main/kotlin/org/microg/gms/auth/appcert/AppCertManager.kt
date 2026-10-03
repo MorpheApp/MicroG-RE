@@ -151,7 +151,9 @@ class AppCertManager(private val context: Context) {
     suspend fun getSpatulaHeader(packageName: String): String? {
         val deviceKey = deviceKey ?: if (fetchDeviceKey()) deviceKey else null
         // The auth service uses the original package, which may not be installed.
+        // RE changes start
         val packageCertificateHash = PackageUtils.firstSignatureDigest(context, packageName)?.decodeHex()?.base64()
+        // RE changes end
         val proto = if (deviceKey != null) {
             val macSecret = deviceKey.macSecret?.toByteArray()
             if (macSecret == null) {
