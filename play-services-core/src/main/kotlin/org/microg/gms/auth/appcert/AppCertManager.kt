@@ -20,9 +20,11 @@ import com.google.android.gms.tasks.await
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
+import okio.ByteString.Companion.decodeHex
 import okio.ByteString.Companion.of
 import org.microg.gms.checkin.LastCheckinInfo
 import org.microg.gms.common.Constants
+import org.microg.gms.common.PackageUtils
 import org.microg.gms.gcm.GcmConstants
 import org.microg.gms.gcm.GcmDatabase
 import org.microg.gms.gcm.RegisterRequest
@@ -31,10 +33,7 @@ import org.microg.gms.profile.Build
 import org.microg.gms.profile.ProfileManager
 import org.microg.gms.settings.SettingsContract.CheckIn
 import org.microg.gms.settings.SettingsContract.getSettings
-import org.microg.gms.utils.digest
-import org.microg.gms.utils.getCertificates
 import org.microg.gms.utils.singleInstanceOf
-import org.microg.gms.utils.toBase64
 import javax.crypto.Mac
 import javax.crypto.spec.SecretKeySpec
 import kotlin.random.Random
@@ -151,7 +150,8 @@ class AppCertManager(private val context: Context) {
 
     suspend fun getSpatulaHeader(packageName: String): String? {
         val deviceKey = deviceKey ?: if (fetchDeviceKey()) deviceKey else null
-        val packageCertificateHash = context.packageManager.getCertificates(packageName).firstOrNull()?.digest("SHA1")?.toBase64(Base64.NO_WRAP)
+        // The auth service uses the original package, which may not be installed.
+        val packageCertificateHash = PackageUtils.firstSignatureDigest(context, packageName)?.decodeHex()?.base64()
         val proto = if (deviceKey != null) {
             val macSecret = deviceKey.macSecret?.toByteArray()
             if (macSecret == null) {
@@ -175,7 +175,6 @@ class AppCertManager(private val context: Context) {
                     packageInfo = SpatulaHeaderProto.PackageInfo(packageName, packageCertificateHash),
                     deviceId = androidId
             )
-            return null // TODO
         }
         Log.d(TAG, "Spatula Header: $proto")
         return Base64.encodeToString(proto.encode(), Base64.NO_WRAP)
