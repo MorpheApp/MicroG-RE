@@ -25,4 +25,5 @@
     <string name="credentials_assisted_continue">Teruskan</string>
     <string name="credentials_assisted_choose_account_subtitle">untuk teruskan ke %1$s</string>
     <!-- Passkey management -->
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
 </resources>

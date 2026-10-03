@@ -32,6 +32,7 @@ open class HandleProxyFactory(private val context: Context) {
             auIs.close()
             getOptDir(vmKey).mkdirs()
             temp.renameTo(getTheApkFile(vmKey))
+            makeReadOnly(getTheApkFile(vmKey))
             updateCacheTimestamp(vmKey)
             if (!isValidCache(vmKey)) {
                 getCacheDir(vmKey).deleteRecursively()
@@ -46,6 +47,21 @@ open class HandleProxyFactory(private val context: Context) {
     ): HandleProxy {
         val clazz = loadClass(vmKey)
         return HandleProxy(clazz, context, vmKey, extras)
+    }
+
+    /**
+     * Drops the write permission from a VM file.
+     *
+     * Android refuses to load a dex file that the app is still allowed to write to, and the VM
+     * arrives as a normal writable download: leaving it writable means DexClassLoader always fails
+     * with `SecurityException: Writable dex file ... is not allowed` and no DroidGuard flow can ever
+     * run. Cached VMs from earlier versions are still writable, so this is applied on every load
+     * and not only right after the download.
+     */
+    protected fun makeReadOnly(file: File) {
+        if (file.isFile && file.canWrite() && !file.setReadOnly()) {
+            throw IOException("Failed to make ${file.name} read-only for the DroidGuard VM")
+        }
     }
 
     fun getTheApkFile(vmKey: String) = File(getCacheDir(vmKey), "the.apk")
@@ -89,6 +105,7 @@ open class HandleProxyFactory(private val context: Context) {
                 getCacheDir(vmKey).deleteRecursively()
                 throw ClassNotFoundException("APK signature verification failed")
             }
+            makeReadOnly(getTheApkFile(vmKey))
             val loader = DexClassLoader(getTheApkFile(vmKey).absolutePath, getOptDir(vmKey).absolutePath, null, context.classLoader)
             val clazz = loader.loadClass(CLASS_NAME)
             CLASS_MAP[vmKey] = clazz

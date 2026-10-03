@@ -28,7 +28,7 @@ import androidx.fragment.app.Fragment;
 import org.microg.tools.ui.R;
 
 import static android.os.Build.VERSION_CODES.M;
-import static org.microg.tools.selfcheck.SelfCheckGroup.Result.Negative;
+import static org.microg.tools.selfcheck.SelfCheckGroup.Result.Advisory;
 import static org.microg.tools.selfcheck.SelfCheckGroup.Result.Positive;
 
 @TargetApi(M)
@@ -53,13 +53,15 @@ public class PermissionCheckGroup implements SelfCheckGroup {
         }
     }
 
+    // This permission list is informative: the applications this self-check targets work without
+    // these permissions, so a missing one gets its own row but must not fail the overall check.
     private void doPermissionCheck(Context context, ResultCollector collector, final String permission) {
         PackageManager pm = context.getPackageManager();
         try {
             PermissionInfo info = pm.getPermissionInfo(permission, 0);
             CharSequence permLabel = info.loadLabel(pm);
             collector.addResult(context.getString(R.string.self_check_name_permission, permLabel),
-                    context.checkSelfPermission(permission) == PackageManager.PERMISSION_GRANTED ? Positive : Negative,
+                    context.checkSelfPermission(permission) == PackageManager.PERMISSION_GRANTED ? Positive : Advisory,
                     context.getString(R.string.self_check_resolution_permission),
                     fragment -> fragment.requestPermissions(new String[]{permission}, 0));
         } catch (PackageManager.NameNotFoundException e) {

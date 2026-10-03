@@ -38,7 +38,10 @@ class WorkProfileFragment : PreferenceFragmentCompat() {
                 if (newValue is Boolean) {
                     if (newValue && SDK_INT >= 30) {
                         val crossProfileApps = requireContext().getSystemService(CrossProfileApps::class.java)
-                        if (!crossProfileApps.canInteractAcrossProfiles() && crossProfileApps.canRequestInteractAcrossProfiles()) {
+                        // The settings page this opens needs a managed work profile and crashes
+                        // without one, so it is only opened when the device has one.
+                        if (!crossProfileApps.canInteractAcrossProfiles() && crossProfileApps.canRequestInteractAcrossProfiles()
+                            && WorkProfiles.hasManagedWorkProfile(requireContext())) {
                             startActivity(crossProfileApps.createRequestInteractAcrossProfilesIntent())
                         }
                     }

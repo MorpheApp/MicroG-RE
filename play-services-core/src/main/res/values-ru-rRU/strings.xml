@@ -188,10 +188,10 @@
     <string name="pref_github_summary">Репозиторий кода</string>
     <string name="pref_update_title">Проверить наличие обновлений</string>
     <string name="pref_update_summary">Проверьте GitHub на наличие более новой версии.</string>
-    <string name="update_include_prerelease">Включать предварительные / dev-сборки</string>
+    <string name="update_include_prerelease">Включать сборки для разработчиков</string>
     <string name="update_available_title">Доступное обновление</string>
     <string name="update_available_prerelease_title">Доступно обновление (предварительная версия)</string>
-    <string name="update_available_message">Доступна новая версия v%1$s. Установлена версия v\%2$s. Загрузить и установить обновление?</string>
+    <string name="update_available_message">Доступна новая версия v%1$s. У вас установлена версия v%2$s. Скачать и установить обновление?</string>
     <string name="update_now">Обновление</string>
     <string name="update_whats_new">Что нового</string>
     <string name="update_ignore">Игнорировать</string>
@@ -478,4 +478,13 @@
     <string name="morphe_sign_in_with_google_microg_label">Вход через Google с помощью MicroG RE</string>
     <string name="self_check_patched_app_installed">Работает с %1$s</string>
     <string name="self_check_action_download_morphe">Загрузить Morphe</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Установлен неверный вариант архитектуры</string>
+    <string name="abi_mismatch_message">"Эта сборка MicroG-RE содержит только 64-битные (arm64) библиотеки, но на этом устройстве используется 32-битное пользовательское пространство.
+
+Функции, которым требуется Conscrypt (вход в аккаунт, потоковое воспроизведение, BotGuard, спуфинг видеопотоков, SponsorBlock, Return YouTube Dislike и т. д.), не будут работать должным образом и могут вызывать проблемы с воспроизведением или ошибку \"Не удалось найти SSL-провайдера по умолчанию\".
+
+Вместо этого установите ARMv7 или универсальный APK."</string>
+    <string name="abi_mismatch_download_armv7">Скачать ARMv7 APK</string>
+    <string name="abi_mismatch_downloading_title">Скачиваем правильный вариант…</string>
 </resources>

@@ -48,4 +48,5 @@ Jūsų duomenys nebus prarasti"</string>
     <string name="games_delete_snapshot_dialog_cancel">Atšaukti</string>
     <string name="family_management_delete_group_cancel">Atšaukti</string>
     <!-- Passkey management -->
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
 </resources>

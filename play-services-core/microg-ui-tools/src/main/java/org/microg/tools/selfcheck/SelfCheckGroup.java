@@ -37,6 +37,11 @@ public interface SelfCheckGroup {
     }
 
     enum Result {
-        Positive, Negative, Neutral, Unknown
+        Positive, Negative, Neutral, Unknown,
+        /**
+         * Rendered with the same icon as {@link #Negative}, but excluded from the overall result:
+         * used for optional checks that a working setup does not need.
+         */
+        Advisory
     }
 }

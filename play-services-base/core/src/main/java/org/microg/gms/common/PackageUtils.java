@@ -328,8 +328,24 @@ public class PackageUtils {
         return getAndCheckCallingPackage(context, suggestedPackageName, suggestedCallerUid, 0);
     }
 
+    // RE changes start
     @Nullable
     public static String getAndCheckCallingPackage(@NonNull Context context, @Nullable String suggestedPackageName, int suggestedCallerUid, int suggestedCallerPid) {
+        String packageName = getAndCheckCallingPackageWithoutSpoofing(context, suggestedPackageName, suggestedCallerUid, suggestedCallerPid);
+        return PackageSpoofUtils.spoofPackageName(context.getPackageManager(), packageName);
+    }
+
+    /**
+     * Resolve the real Binder caller for local permissions, attribution and metadata lookups.
+     * Apply any requested spoofing only when constructing an upstream service request.
+     */
+    @Nullable
+    public static String getAndCheckCallingPackageWithoutSpoofing(@NonNull Context context, @Nullable String suggestedPackageName) {
+        return getAndCheckCallingPackageWithoutSpoofing(context, suggestedPackageName, 0, 0);
+    }
+
+    @Nullable
+    public static String getAndCheckCallingPackageWithoutSpoofing(@NonNull Context context, @Nullable String suggestedPackageName, int suggestedCallerUid, int suggestedCallerPid) {
         int callingUid = Binder.getCallingUid(), callingPid = Binder.getCallingPid();
         if (suggestedCallerUid > 0 && suggestedCallerUid != callingUid) {
             throw new SecurityException("suggested UID [" + suggestedCallerUid + "] and real calling UID [" + callingUid + "] mismatch!");
@@ -337,16 +353,28 @@ public class PackageUtils {
         if (suggestedCallerPid > 0 && suggestedCallerPid != callingPid) {
             throw new SecurityException("suggested PID [" + suggestedCallerPid + "] and real calling PID [" + callingPid + "] mismatch!");
         }
-        return getAndCheckPackage(context, suggestedPackageName, callingUid, callingPid);
+        return getAndCheckPackageWithoutSpoofing(context, suggestedPackageName, callingUid, callingPid);
     }
+    // RE changes end
 
     @Nullable
     public static String getAndCheckPackage(Context context, String suggestedPackageName, int callingUid) {
         return getAndCheckPackage(context, suggestedPackageName, callingUid, 0);
     }
 
+    // RE changes start
     @Nullable
     public static String getAndCheckPackage(@NonNull Context context, @Nullable String suggestedPackageName, int callingUid, int callingPid) {
+        String packageName = getAndCheckPackageWithoutSpoofing(context, suggestedPackageName, callingUid, callingPid);
+        return PackageSpoofUtils.spoofPackageName(context.getPackageManager(), packageName);
+    }
+
+    /**
+     * Validate the real package for an already established caller UID/PID, without spoofing.
+     * For direct Binder calls, use getAndCheckCallingPackageWithoutSpoofing instead.
+     */
+    @Nullable
+    public static String getAndCheckPackageWithoutSpoofing(@NonNull Context context, @Nullable String suggestedPackageName, int callingUid, int callingPid) {
         String packageName = packageFromProcessId(context, callingPid);
         if (packageName == null) {
             String[] packagesForUid = context.getPackageManager().getPackagesForUid(callingUid);
@@ -364,10 +392,10 @@ public class PackageUtils {
             throw new SecurityException("UID [" + callingUid + "] is not related to packageName [" + suggestedPackageName + "] (seems to be " + packageName + ")");
         }
 
-        // spoof or use real one
-        return PackageSpoofUtils.spoofPackageName(context.getPackageManager(), packageName);
+        return packageName;
     }
 
+    // RE changes end
     @Nullable
     @Deprecated
     public static String packageFromProcessId(@NonNull Context context, int pid) {

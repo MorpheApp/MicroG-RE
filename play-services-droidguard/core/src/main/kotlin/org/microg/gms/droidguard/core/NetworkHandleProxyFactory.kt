@@ -142,6 +142,7 @@ class NetworkHandleProxyFactory(private val context: Context) : HandleProxyFacto
             temp.writeBytes(response.content!!.toByteArray())
             getOptDir(vmKey).mkdirs()
             temp.renameTo(getTheApkFile(vmKey))
+            makeReadOnly(getTheApkFile(vmKey))
             updateCacheTimestamp(vmKey)
             if (!isValidCache(vmKey)) {
                 getCacheDir(vmKey).deleteRecursively()

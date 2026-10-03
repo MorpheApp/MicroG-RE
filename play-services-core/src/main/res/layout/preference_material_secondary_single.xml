@@ -8,7 +8,11 @@
     android:background="@drawable/preference_background_secondary_single"
     android:clickable="true"
     android:focusable="true"
-    android:padding="16dp">
+    android:minHeight="72dp"
+    android:paddingStart="16dp"
+    android:paddingTop="12dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="12dp">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@android:id/icon"

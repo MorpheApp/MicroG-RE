@@ -74,7 +74,11 @@ import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLException;
+import javax.net.ssl.SSLParameters;
+import javax.net.ssl.SSLSocket;
 
 import okio.ByteString;
 
@@ -270,7 +274,17 @@ public class McsService extends Service implements Handler.Callback {
         logd(context, "Scheduling reconnect in " + delay / 1000 + " seconds...");
         PendingIntent pi = PendingIntentCompat.getBroadcast(context, 1, new Intent(ACTION_RECONNECT, null, context, TriggerReceiver.class), 0, false);
         if (SDK_INT >= 23) {
-            alarmManager.setExactAndAllowWhileIdle(ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + delay, pi);
+            // RE changes start
+            try {
+                if (SDK_INT < 31 || alarmManager.canScheduleExactAlarms()) {
+                    alarmManager.setExactAndAllowWhileIdle(ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + delay, pi);
+                    return;
+                }
+            } catch (SecurityException e) {
+                Log.w(TAG, "Failed to schedule exact alarm for reconnect", e);
+            }
+            alarmManager.setAndAllowWhileIdle(ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + delay, pi);
+            // RE changes end
         } else {
             alarmManager.set(ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + delay, pi);
         }
@@ -286,7 +300,15 @@ public class McsService extends Service implements Handler.Callback {
         logd(context, "Scheduling heartbeat in " + heartbeatMs / 1000 + " seconds...");
         if (SDK_INT >= 23) {
             // This is supposed to work even when running in idle and without battery optimization disabled
-            alarmManager.setExactAndAllowWhileIdle(ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + heartbeatMs, heartbeatIntent);
+            try {
+                if (SDK_INT < 31 || alarmManager.canScheduleExactAlarms()) {
+                    alarmManager.setExactAndAllowWhileIdle(ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + heartbeatMs, heartbeatIntent);
+                    return;
+                }
+            } catch (SecurityException e) {
+                Log.w(TAG, "Failed to schedule exact alarm for heartbeat", e);
+            }
+            alarmManager.setAndAllowWhileIdle(ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + heartbeatMs, heartbeatIntent);
         } else if (SDK_INT >= 19) {
             // With KitKat, the alarms become inexact by default, but with the newly available setWindow we can get inexact alarms with guarantees.
             // Schedule the alarm to fire within the interval [heartbeatMs/3*4, heartbeatMs]
@@ -437,6 +459,20 @@ public class McsService extends Service implements Handler.Callback {
         }
     }
 
+    private void startHandshake(SSLSocket sslSocket) throws Exception {
+        if (SDK_INT >= 24) {
+            SSLParameters params = sslSocket.getSSLParameters();
+            params.setEndpointIdentificationAlgorithm("HTTPS");
+            sslSocket.setSSLParameters(params);
+        }
+        sslSocket.startHandshake();
+        if (SDK_INT < 24) {
+            if (!HttpsURLConnection.getDefaultHostnameVerifier().verify(SERVICE_HOST, sslSocket.getSession())) {
+                throw new SSLException("Hostname verification failed for " + SERVICE_HOST);
+            }
+        }
+    }
+
     private void connect(int port) throws Exception {
         this.wasTornDown = false;
 
@@ -444,6 +480,7 @@ public class McsService extends Service implements Handler.Callback {
         Socket socket = new Socket(SERVICE_HOST, port);
         logd(this, "Connected to " + SERVICE_HOST + ":" + port);
         sslSocket = SSLContext.getDefault().getSocketFactory().createSocket(socket, SERVICE_HOST, port, true);
+        startHandshake((SSLSocket) sslSocket);
         logd(this, "Activated SSL with " + SERVICE_HOST + ":" + port);
         inputStream = new McsInputStream(sslSocket.getInputStream(), rootHandler);
         outputStream = new McsOutputStream(sslSocket.getOutputStream(), rootHandler);

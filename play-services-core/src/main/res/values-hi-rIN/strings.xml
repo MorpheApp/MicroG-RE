@@ -7,112 +7,69 @@
     <string name="dialog_title_remove_account">अकाउंट हटाएं</string>
     <string name="dialog_message_remove_account">"क्या आप वाकई इस अकाउंट को हटाना चाहते हैं?
 
-कुछ सेवाओं और फ़ंक्शनलिटी असमर्थन हो जाएंगे
+कुछ सेवाएँ और फ़ीचर्स काम नहीं करेंगे
 
-आपके डेटा खोई नहीं जाएंगे"</string>
-    <string name="dialog_confirm_button">हटाएं</string>
+आपका डेटा नहीं मिटेगा"</string>
+    <string name="dialog_confirm_button">हटाएँ</string>
     <string name="dialog_cancel_button">रद्द करें</string>
     <string name="snackbar_remove_account">अकाउंट %s हटाया गया</string>
-    <string name="snackbar_undo_button">पूछे करें</string>
+    <string name="snackbar_undo_button">पहले जैसा करें</string>
     <string name="gms_settings_name">MicroG सेटिंग्स</string>
     <string name="gms_settings_summary">MicroG सेवाओं का सेटअप करें।</string>
-    <string name="just_a_sec">बस एक सेकंड...
-Would you like to continue? TODO: Actually it\'s \'Just a sec…\' so we need to give the correct translation. Let\'s do again.
-
-I\'ll provide the correct translation for all.
-
-We are translating to Hindi. I will output the JSON with translated texts.
-
-Let\'s rewrite properly.
-
-I\'ll output the JSON array with Hindi translations.
-
-Note: The above response got cut off. I\'ll now produce the final JSON.
-
-I need to ensure all strings are translated. I will generate a valid JSON object.
-
-Let\'s construct carefully.
-
-I\'ll copy the structure and replace text with Hindi.
-
-I\'ll use a code block to present the JSON.
-
-Given the length, I\'ll do it.
-
-Best to output the entire JSON.
-
-I\'ll provide it now.
-
-Actual translation for \'Just a sec…\' is \'बस एक सेकंड…\' but the ellipsis is Unicode. I\'ll use \'बस एक सेकंड...\'.
-
-For others I\'ll use as above.
-
-Let\'s output.
-
-I\'ll now produce the final JSON string.
-
-I\'ll ensure to escape double quotes and backslashes.
-
-I\'ll use actual newlines for \n.
-
-I\'ll now write the JSON.
-
-Here is the response.```json
-{
-  </string>
+    <string name="just_a_sec">बस एक सेकंड…</string>
     <string name="ask_permission_tos">जारी रखते हुए, आप इस ऐप और Google को अपनी जानकारी उनकी संबंधित सेवा की शर्तों और गोपनीयता नीतियों के अनुसार उपयोग करने की अनुमति देते हैं।</string>
-    <string name="ask_scope_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> निम्नलिखित करना चाहता है:</string>
-    <string name="ask_service_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> निम्नलिखित उपयोग करना चाहता है:</string>
-    <string name="account_manager_title">Google खाता प्रबंधक</string>
+    <string name="ask_scope_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> यह अनुमति चाहता है:</string>
+    <string name="ask_service_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> इनका इस्तेमाल करना चाहता है:</string>
+    <string name="account_manager_title">Google अकाउंट मैनेजर</string>
     <string name="sorry">क्षमा करें…</string>
-    <string name="auth_before_connect">MicroG.\n\nअपने Google खाते से कनेक्ट करने के लिए <b>साइन इन</b> बटन या यदि आपके पास इस निर्माता का डिवाइस है तो <b>Huawei</b> बटन का उपयोग करें। बटन दबाने पर आप अपने खाते में लॉग इन करने के लिए पृष्ठ पर रीडायरेक्ट हो जाएंगे।</string>
+    <string name="auth_before_connect">अपने Google अकाउंट को microG से कनेक्ट करें।\n\nGoogle अकाउंट जोड़ने के लिए <b>साइन इन</b> बटन दबाएँ, या अगर आपका फ़ोन Huawei का है तो <b>Huawei</b> बटन चुनें। इनमें से किसी एक बटन को दबाने पर आपको लॉगिन पेज पर भेज दिया जाएगा।</string>
     <string name="auth_sign_in">साइन इन करें</string>
-    <string name="auth_connecting">"आपका डिवाइस आपको साइन इन करने के लिए Google के सर्वर से कनेक्शन स्थापित कर रहा है।
+    <string name="auth_connecting">"साइन इन करने के लिए आपका डिवाइस Google सर्वर से कनेक्ट हो रहा है।
 
 इसमें कुछ सेकंड लग सकते हैं।"</string>
     <string name="no_network_error_desc">"आपके पास नेटवर्क कनेक्शन नहीं है।
 
-यह अस्थायी समस्या हो सकती है या आपका Android डिवाइस डेटा सेवाओं के लिए प्रावधानित नहीं हो सकता है। मोबाइल नेटवर्क से कनेक्ट होने पर पुनः प्रयास करें, या Wi-Fi नेटवर्क से जुड़ें।"</string>
-    <string name="auth_general_error_desc">"Google सर्वर के साथ संचार में समस्या थी।
+यह कुछ देर की समस्या हो सकती है या हो सकता है आपके Android डिवाइस पर डेटा सर्विस चालू न हो। मोबाइल नेटवर्क से कनेक्ट होने पर फिर कोशिश करें, या किसी Wi-Fi नेटवर्क से जुड़ें।"</string>
+    <string name="auth_general_error_desc">"Google सर्वर से कनेक्ट करने में समस्या आई।
 
-बाद में पुनः प्रयास करें।"</string>
-    <string name="auth_finalize">"आपका डिवाइस आपके खाते में जानकारी सहेजने के लिए Google से संपर्क कर रहा है।
+बाद में फिर कोशिश करें।"</string>
+    <string name="auth_finalize">"अकाउंट में जानकारी सेव करने के लिए आपका डिवाइस Google से कनेक्ट हो रहा है।
 
 इसमें कुछ मिनट लग सकते हैं।"</string>
     <string name="allow">अनुमति दें</string>
-    <string name="deny">अनुमति न दें</string>
-    <string name="auth_notification_title">सत्यापन आवश्यक</string>
-    <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> को आपके Google खाते तक पहुंचने के लिए आपके प्राधिकरण की आवश्यकता है।</string>
-    <string name="auth_package_override_request_title">क्या <b><xliff:g example="F-Droid">%1$s</xliff:g></b> को <xliff:g example="account@example.com">%2$s</xliff:g> तक विशेषाधिकार पहुंच की अनुमति दें?</string>
-    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> आपके खाते को ऐसे एक्सेस करना चाहता है जैसे कि यह <b><xliff:g example="F-Droid Inc.">%3$s</xliff:g> द्वारा <xliff:g example="F-Droid">%2$s</xliff:g></b> हो। इससे उसे आपके खाते तक विशेषाधिकार पहुंच मिल सकती है।</string>
-    <string name="auth_action_notification_channel_name">Google खाता अलर्ट</string>
-    <string name="auth_action_notification_channel_description">जब आपके Google खातों में से किसी एक को उपयोग से पहले अतिरिक्त सेटअप की आवश्यकता होती है या जब कोई खाता microG के साथ असंगत होता है, तो सूचित करता है।</string>
-    <string name="auth_action_notification_title">खाता कार्रवाई आवश्यक</string>
-    <string name="auth_action_notification_content">आपके Google खाते को अतिरिक्त सेटअप की आवश्यकता है।</string>
-    <string name="auth_action_reauth_notification_title">खाता कार्रवाई आवश्यक</string>
-    <string name="auth_action_activity_header">अपना Google खाता सेट करना समाप्त करें</string>
-    <string name="auth_action_activity_explanation">इस डिवाइस पर अपने Google खाते %s का उपयोग करने में सक्षम होने के लिए निम्न चरणों को पूरा करें।</string>
-    <string name="auth_action_step_enable_checkin">डिवाइस पंजीकरण सक्षम करें</string>
-    <string name="auth_action_step_enable_checkin_description">"आपके डिवाइस को कम से कम एक बार Google में पंजीकृत होना आवश्यक है।
+    <string name="deny">इनकार करें</string>
+    <string name="auth_notification_title">प्रमाणीकरण आवश्यक है</string>
+    <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> को आपके Google अकाउंट को एक्सेस करने के लिए आपकी अनुमति चाहिए।</string>
+    <string name="auth_package_override_request_title">क्या <b><xliff:g example="F-Droid">%1$s</xliff:g></b> को <xliff:g example="account@example.com">%2$s</xliff:g> का विशेषाधिकार एक्सेस देना चाहते हैं?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> आपके अकाउंट को ऐसे एक्सेस करना चाहता है जैसे यह <xliff:g example="F-Droid Inc.">%3$s</xliff:g> का <b><xliff:g example="F-Droid">%2$s</xliff:g></b> ऐप हो। इससे इसे आपके अकाउंट का विशेषाधिकार एक्सेस मिल सकता है।</string>
+    <string name="auth_action_notification_channel_name">Google अकाउंट अलर्ट</string>
+    <string name="auth_action_notification_channel_description">अगर किसी Google अकाउंट को इस्तेमाल करने से पहले सेटअप की ज़रूरत हो या अकाउंट microG के साथ काम न कर रहा हो, तो यह नोटिफिकेशन भेजेगा।</string>
+    <string name="auth_action_notification_title">अकाउंट पर कार्रवाई ज़रूरी है</string>
+    <string name="auth_action_notification_content">आपके Google खाते को अतिरिक्त सेटअप की ज़रूरत है।</string>
+    <string name="auth_action_reauth_notification_title">अकाउंट पर कार्रवाई ज़रूरी है</string>
+    <string name="auth_action_activity_header">अपने Google अकाउंट का सेटअप पूरा करें</string>
+    <string name="auth_action_activity_explanation">इस डिवाइस पर अपने Google अकाउंट %s का इस्तेमाल करने के लिए ये स्टेप्स पूरे करें।</string>
+    <string name="auth_action_step_enable_checkin">डिवाइस रजिस्ट्रेशन चालू करें</string>
+    <string name="auth_action_step_enable_checkin_description">"आपके डिवाइस को कम से कम एक बार Google पर रजिस्टर होना ज़रूरी है।
 
-खाता सेटअप पूरा होने के बाद आप Google डिवाइस पंजीकरण अक्षम कर सकते हैं।"</string>
-    <string name="auth_action_step_enable_gcm">क्लाउड मैसेजिंग सक्षम करें</string>
-    <string name="auth_action_step_enable_gcm_description">खाता सेटअप पूरा होने के बाद आप क्लाउड मैसेजिंग अक्षम कर सकते हैं।</string>
+अकाउंट सेटअप पूरा होने के बाद आप Google डिवाइस रजिस्ट्रेशन को बंद कर सकते हैं।"</string>
+    <string name="auth_action_step_enable_gcm">क्लाउड मैसेजिंग चालू करें</string>
+    <string name="auth_action_step_enable_gcm_description">अकाउंट सेटअप पूरा होने के बाद आप क्लाउड मैसेजिंग बंद कर सकते हैं।</string>
     <string name="auth_action_step_allow_microg_gcm">microG के लिए क्लाउड मैसेजिंग की अनुमति दें</string>
-    <string name="auth_action_step_allow_microg_gcm_description">आपकी प्राथमिकताओं के अनुसार, microG को क्लाउड मैसेजिंग के लिए स्वयं पंजीकृत करने से पहले आपसे अनुमति चाहिए।</string>
-    <string name="auth_action_step_enable_lockscreen">सुरक्षित स्क्रीन लॉक कॉन्फ़िगर करें</string>
-    <string name="auth_action_step_enable_lockscreen_description">"आपका Google खाता आपके कार्यस्थल या शैक्षणिक संस्थान द्वारा प्रबंधित है। आपके व्यवस्थापक ने निर्णय लिया है कि डिवाइस खाता डेटा एक्सेस करने से पहले उन्हें सुरक्षित स्क्रीन लॉक की आवश्यकता है।
+    <string name="auth_action_step_allow_microg_gcm_description">आपकी चुनी गई सेटिंग्स के मुताबिक, क्लाउड मैसेजिंग के लिए रजिस्टर करने से पहले microG को आपकी अनुमति चाहिए।</string>
+    <string name="auth_action_step_enable_lockscreen">सुरक्षित स्क्रीन लॉक सेट करें</string>
+    <string name="auth_action_step_enable_lockscreen_description">"आपका Google अकाउंट आपके ऑफ़िस या स्कूल/कॉलेज द्वारा मैनेज किया जाता है। आपके एडमिनिस्ट्रेटर की शर्त है कि अकाउंट डेटा एक्सेस करने से पहले डिवाइस पर सुरक्षित स्क्रीन लॉक लगा होना चाहिए।
 
-कृपया पासवर्ड, पिन, या पैटर्न लॉक स्क्रीन सेट करें।"</string>
-    <string name="auth_action_step_perform_content_description">चरण निष्पादित करने के लिए क्लिक करें</string>
-    <string name="auth_action_step_completed_content_description">चरण पूर्ण हुआ</string>
-    <string name="auth_action_activity_finish">समाप्त</string>
+कृपया पासवर्ड, पिन या पैटर्न लॉक सेट करें।"</string>
+    <string name="auth_action_step_perform_content_description">यह स्टेप पूरा करने के लिए क्लिक करें</string>
+    <string name="auth_action_step_completed_content_description">स्टेप पूरा हुआ</string>
+    <string name="auth_action_activity_finish">पूरा करें</string>
     <string name="signin_picker_title">एक अकाउंट चुनें</string>
-    <string name="signin_picker_subtitle"><xliff:g example="F-Droid">%1$s</xliff:g> पर जारी रखने के लिए</string>
+    <string name="signin_picker_subtitle"><xliff:g example="F-Droid">%1$s</xliff:g> पर आगे बढ़ने के लिए</string>
     <string name="signin_picker_add_account_label">एक और अकाउंट जोड़ें</string>
     <string name="signin_confirm_title"><xliff:g example="F-Droid">%1$s</xliff:g> में साइन इन करने की अनुमति दें</string>
     <string name="signin_confirm_button_text">अनुमति दें और शेयर करें</string>
-    <string name="signin_subtext_sharing">जारी रखने के लिए, microG आपके Google खाते का नाम, ईमेल पता और प्रोफ़ाइल चित्र <xliff:g example="F-Droid">%1$s</xliff:g> के साथ साझा करेगा।</string>
+    <string name="signin_subtext_sharing">आगे बढ़ने के लिए, microG आपके Google अकाउंट का नाम, ईमेल पता और प्रोफ़ाइल फ़ोटो <xliff:g example="F-Droid">%1$s</xliff:g> के साथ शेयर करेगा।</string>
     <string name="perm_status_broadcast_label">इंटरनल स्टेटस ब्रोडकास्ट लिसन करें</string>
     <string name="perm_gsf_read_gservices_label">गूगल सेवर्स कॉन्फिगरेशन पढ़ें</string>
     <string name="perm_c2dm_receive_label">सी2डीएम संदेश प्राप्त करें</string>
@@ -231,10 +188,10 @@ Here is the response.```json
     <string name="pref_github_summary">%1$s में साइन इन करें</string>
     <string name="pref_update_title">अपडेट की जांच करें</string>
     <string name="pref_update_summary">नए संकरण के लिए GitHub पर जांच करें।</string>
-    <string name="update_include_prerelease">प्री-रिलीज़ / डेव बिल्ड शामिल करें</string>
+    <string name="update_include_prerelease">डेव बिल्ड्स शामिल करें</string>
     <string name="update_available_title">अपडेट उपलब्ध है</string>
     <string name="update_available_prerelease_title">अपडेट उपलब्ध है (प्री-रिलीज़)</string>
-    <string name="update_available_message">नया v%1s उपलब्ध है। आपके पास v%2$s संस्करण इंस्टॉल है। अपडेट डाउनलोड करके इंस्टॉल करें?</string>
+    <string name="update_available_message">नया v%1$s उपलब्ध है। आपके पास संस्करण v%2$s स्थापित है। अपडेट डाउनलोड और इंस्टॉल करें?</string>
     <string name="update_now">अपडेट</string>
     <string name="update_whats_new">नया क्या है</string>
     <string name="update_ignore">अनदेखा करें</string>
@@ -520,4 +477,13 @@ Here is the response.```json
     <string name="morphe_sign_in_with_google_microg_label">MicroG RE के माध्यम से Google से साइन इन करें</string>
     <string name="self_check_patched_app_installed">%1$s स्थापित किया गया है</string>
     <string name="self_check_action_download_morphe">मोरफे डाउनलोड करें</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">गलत आर्किटेक्चर वैरिएंट स्थापित है</string>
+    <string name="abi_mismatch_message">"यह MicroG-RE बिल्ड केवल 64-बिट (arm64) लाइब्रेरीज़ शामिल करता है, लेकिन यह डिवाइस 32-बिट यूज़रस्पेस चला रहा है।
+
+Conscrypt की आवश्यकता वाली सुविधाएँ (खाता लॉगिन, स्ट्रीमिंग, BotGuard, वीडियो स्ट्रीम्स स्पूफ करना, SponsorBlock, Return YouTube Dislike, आदि) ठीक से काम नहीं करेंगी और प्लेबैक समस्याएँ या \"Unable to find a default SSL provider\" का कारण बन सकती हैं।
+
+इसके बजाय ARMv7 या Universal APK इंस्टॉल करें।"</string>
+    <string name="abi_mismatch_download_armv7">ARMv7 APK डाउनलोड करें</string>
+    <string name="abi_mismatch_downloading_title">सही वैरिएंट डाउनलोड हो रहा है…</string>
 </resources>

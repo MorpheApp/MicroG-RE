@@ -110,13 +110,17 @@ public class ProviderInstallerImpl {
         Log.d(TAG, "Initializing provider for " + packageName);
 
         try {
-            provider = Conscrypt.newProviderBuilder().setName(PROVIDER_NAME).defaultTlsProtocol("TLSv1.3").build();
+            // TLSv1.2, not TLSv1.3: the default protocol decides which class backs the
+            // SSLContext.Default service this provider advertises, and apps that require the
+            // provider (YouTube's SSL guard) fail with "Unable to find a default SSL provider"
+            // on devices whose conscrypt has no TLS 1.3 support.
+            provider = Conscrypt.newProviderBuilder().setName(PROVIDER_NAME).defaultTlsProtocol("TLSv1.2").build();
         } catch (UnsatisfiedLinkError e) {
             Log.w(TAG, "Could not link conscrypt via default loader, trying manual loading");
 
             try {
                 loadConscryptDirect(context, packageName);
-                provider = Conscrypt.newProviderBuilder().setName(PROVIDER_NAME).defaultTlsProtocol("TLSv1.3").build();
+                provider = Conscrypt.newProviderBuilder().setName(PROVIDER_NAME).defaultTlsProtocol("TLSv1.2").build();
             } catch (Exception e2) {
                 Log.w(TAG, e2);
             }

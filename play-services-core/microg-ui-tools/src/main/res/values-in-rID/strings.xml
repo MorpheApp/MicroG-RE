@@ -15,12 +15,12 @@
   ~ limitations under the License.
   -->
 <resources>
-    <string name="lib_name">microG UI Tools</string>
-    <string name="lib_license">Apache License 2.0, microG Team</string>
+    <string name="lib_name">Alat UI microG</string>
+    <string name="lib_license">Lisensi Apache 2.0, Tim microG</string>
     <string name="about_version_str">Versi %1$s</string>
     <string name="about_default_license">Hak cipta dilindungi undang-undang.</string>
     <string name="prefcat_setup">Penyiapan</string>
-    <string name="self_check_title">Pemeriksaan Sendiri</string>
+    <string name="self_check_title">Pemeriksaan mandiri</string>
     <string name="self_check_desc">Periksa apakah sistem telah dikonfigurasi dengan benar untuk menggunakan microG.</string>
     <string name="self_check_cat_permissions">Izin diberikan</string>
     <string name="self_check_name_permission">Izin untuk %1$s:</string>

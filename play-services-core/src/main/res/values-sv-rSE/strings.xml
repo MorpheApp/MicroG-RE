@@ -188,10 +188,10 @@ Please set up a password, PIN, or pattern lock screen."</string>
     <string name="pref_github_summary">Lagringsplats för källkoden</string>
     <string name="pref_update_title">Sök efter uppdateringar</string>
     <string name="pref_update_summary">Kolla GitHub efter en nyare version.</string>
-    <string name="update_include_prerelease">Inkludera förhandsversioner / utvecklingsversioner</string>
+    <string name="update_include_prerelease">Inkludera utvecklingsversioner</string>
     <string name="update_available_title">Uppdatering är tillgänglig</string>
     <string name="update_available_prerelease_title">Uppdatering tillgänglig (förhandsversion)</string>
-    <string name="update_available_message">Ny v%1s är tillgänglig. Du har version v%2$s installerad. Vill du ladda ner och installera uppdateringen?</string>
+    <string name="update_available_message">Ny version v%1$s är tillgänglig. Du har version v%2$s installerad. Vill du ladda ner och installera uppdateringen?</string>
     <string name="update_now">Uppdatera</string>
     <string name="update_whats_new">Vad är nytt</string>
     <string name="update_ignore">Ignorera</string>
@@ -479,4 +479,13 @@ Vissa appar kanske inte kan registrera sig igen efter denna åtgärd. Du kan beh
     <string name="morphe_sign_in_with_google_microg_label">Logga in med Google via MicroG RE</string>
     <string name="self_check_patched_app_installed">Körs med %1$s</string>
     <string name="self_check_action_download_morphe">Ladda ned Morphe</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Fel arkitekturvariant är installerad</string>
+    <string name="abi_mismatch_message">"Den här MicroG-RE-versionen innehåller endast 64-bitars (arm64)-bibliotek, men den här enheten kör ett 32-bitars användarutrymme.
+
+Funktioner som kräver Conscrypt (kontoinloggning, streaming, BotGuard, Spoofa videoströmmar, SponsorBlock, Return YouTube Dislike, osv.) fungerar inte korrekt och kan orsaka uppspelningsproblem eller \"Unable to find a default SSL provider\".
+
+Installera ARMv7-APK:n eller Universal-APK:n istället."</string>
+    <string name="abi_mismatch_download_armv7">Ladda ner ARMv7-APK</string>
+    <string name="abi_mismatch_downloading_title">Laddar ner rätt variant…</string>
 </resources>

@@ -9,4 +9,5 @@
     <string name="prefcat_accounts_settings_title">မ်ားလာေၞး</string>
     <string name="update_open_settings">မ်ားလာေၞး</string>
     <!-- Passkey management -->
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
 </resources>

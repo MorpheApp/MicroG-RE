@@ -50,10 +50,10 @@
     <string name="location_data_import_title">從檔案匯入位置資料</string>
     <string name="location_data_import_result_toast">已匯入 %1$d 筆記錄。</string>
     <string name="prefcat_location_timeline_title">Google 地圖時間軸</string>
-    <string name="pref_location_timeline_title">啟用位置紀錄</string>
-    <string name="pref_location_timeline_summary">"定期記錄您的位置資訊，並提供給 Google 地圖時間軸使用。"</string>
-    <string name="pref_location_timeline_upload_title">同步至 Google 帳戶</string>
-    <string name="pref_location_timeline_upload_summary">"將位置紀錄同步至 Google 伺服器，以便在其他裝置上顯示。"</string>
+    <string name="pref_location_timeline_title">啟用定位記錄</string>
+    <string name="pref_location_timeline_summary">定期記錄您的位置資訊，並提供給 Google 地圖時間軸使用。</string>
+    <string name="pref_location_timeline_upload_title">同步至 Google 帳號</string>
+    <string name="pref_location_timeline_upload_summary">將定位記錄同步至 Google 伺服器，以便在其他裝置上顯示。</string>
     <!-- RE strings -->
     <string name="prefcat_location_maps_title">Google 地圖</string>
     <string name="pref_map_engine_title">地圖轉譯器</string>

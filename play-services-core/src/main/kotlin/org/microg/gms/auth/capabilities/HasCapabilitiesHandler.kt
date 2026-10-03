@@ -50,9 +50,19 @@ class HasCapabilitiesHandler(private val context: Context) {
 
         // 3) Force a sync if the cache is empty.
         if (!state.isValidCache) {
-            if (!syncOnce(account)) return HasCapabilitiesResult.NOT_IN_CACHE
+            // A sync can only succeed with a Google-issued app identity, so this lookup never
+            // completes for a renamed build. Reporting "not in cache" then makes client apps treat
+            // a usable account as unusable, which is worse than the answer they got before this
+            // check existed: when the state is unknown, allow and say so in the log.
+            if (!syncOnce(account)) {
+                Log.w(TAG, "handle: no account state for $account, allowing $unresolved")
+                return HasCapabilitiesResult.ALLOWED
+            }
             state = CapabilityStore.read(am, account)
-            if (!state.isValidCache) return HasCapabilitiesResult.NOT_IN_CACHE
+            if (!state.isValidCache) {
+                Log.w(TAG, "handle: account state still unknown for $account, allowing $unresolved")
+                return HasCapabilitiesResult.ALLOWED
+            }
         }
 
         // 4) Evaluate, and if the answer is NETWORK_RETRY refresh one more time.

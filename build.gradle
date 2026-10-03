@@ -33,8 +33,8 @@ buildscript {
     ext.slf4jVersion = '1.7.36'
     ext.volleyVersion = '1.2.1'
     ext.okHttpVersion = '4.12.0'
-    ext.ktorVersion = '2.3.12'
-    ext.wireVersion = '6.2.0'
+    ext.ktorVersion = '2.3.13'
+    ext.wireVersion = '6.4.6'
     ext.tinkVersion = '1.13.0'
     ext.guavaVersion = '33.5.0-android'
 
@@ -105,8 +105,8 @@ if (!ignoreGit) {
 }
 
 // RE specific version name and code
-def ourGmsVersionCode = 255070107
-def ourGmsVersionName = "7.1.1"
+def ourGmsVersionCode = 255070217
+def ourGmsVersionName = "7.2.1-dev.7"
 def ourVendingVersionCode = ourGmsVersionCode
 def ourVendingVersionName = ourGmsVersionName
 

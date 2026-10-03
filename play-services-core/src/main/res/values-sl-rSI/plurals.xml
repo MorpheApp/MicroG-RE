@@ -22,10 +22,10 @@
         <item quantity="other"><xliff:g example="123">%1$d</xliff:g> registriranih aplikacij</item>
     </plurals>
     <plurals name="cond_perm_summary">
-        <item quantity="one">Dovoljenje, ki je potrebno za pravilno delovanje storitev microG, ni dodeljeno.</item>
-        <item quantity="two">Dovoljenji, ki sta potrebni za pravilno delovanje storitev microG, nista dodeljeni.</item>
-        <item quantity="few">Dovoljenja, ki so potrebna za pravilno delovanje storitev microG, niso dodeljena.</item>
-        <item quantity="other">Dovoljenja, ki so potrebna za pravilno delovanje storitev microG, niso dodeljena.</item>
+        <item quantity="one">Dovoljenje, ki je potrebno za pravilno delovanje storitve microG, ni dodeljeno.</item>
+        <item quantity="two">Dovoljenji, ki sta potrebni za pravilno delovanje storitve microG, nista dodeljeni.</item>
+        <item quantity="few">Dovoljenja, ki so potrebna za pravilno delovanje storitve microG, niso dodeljena.</item>
+        <item quantity="other">Dovoljenja, ki so potrebna za pravilno delovanje storitve microG, niso dodeljena.</item>
     </plurals>
     <plurals name="cond_perm_action">
         <item quantity="one">Zahtevajte manjkajoče dovoljenje</item>

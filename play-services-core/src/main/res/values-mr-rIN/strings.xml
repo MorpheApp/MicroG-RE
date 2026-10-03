@@ -8,4 +8,5 @@
     <!-- Settings strings -->
     <string name="update_failed_title">सुधारणा अयशस्वी झाली</string>
     <!-- Passkey management -->
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
 </resources>

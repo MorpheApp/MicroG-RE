@@ -171,6 +171,11 @@ class SettingsFragment : ResourceSettingsFragment() {
         super.onResume()
         updateBatteryOptimizationPreference()
         updateLauncherIconSwitchState()
+        view?.post {
+            if (isAdded && activity != null && !requireActivity().isFinishing) {
+                AppUpdater.maybeWarnWrongAbiVariant(requireActivity())
+            }
+        }
         val context = requireContext()
         if (GcmPrefs.get(requireContext()).isEnabled) {
             val database = GcmDatabase(context)

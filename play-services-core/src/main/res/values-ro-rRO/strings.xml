@@ -4,23 +4,23 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="dialog_title_remove_account">Eliminați contul</string>
-    <string name="dialog_message_remove_account">"Ești sigur că vrei să ștergi acest cont?
+    <string name="dialog_title_remove_account">Elimină contul</string>
+    <string name="dialog_message_remove_account">"Sigur vrei să elimini acest cont?
 
 Unele servicii și funcții vor fi indisponibile
 
 Datele tale nu vor fi pierdute"</string>
-    <string name="dialog_confirm_button">Eliminați</string>
-    <string name="dialog_cancel_button">Anulați</string>
-    <string name="snackbar_remove_account">Contul %s a fost eliminat</string>
-    <string name="snackbar_undo_button">Anulați</string>
-    <string name="gms_settings_name">MicroG Setări</string>
-    <string name="gms_settings_summary">Configurați serviciile MicroG.</string>
+    <string name="dialog_confirm_button">Elimină</string>
+    <string name="dialog_cancel_button">Anulează</string>
+    <string name="snackbar_remove_account">Contul %s eliminat</string>
+    <string name="snackbar_undo_button">Anulează</string>
+    <string name="gms_settings_name">Setări MicroG</string>
+    <string name="gms_settings_summary">Configurează serviciile MicroG.</string>
     <string name="just_a_sec">Doar o secundă…</string>
-    <string name="ask_permission_tos">Continuând, permiteți acestei aplicații și Google să vă folosească informațiile în conformitate cu termenii de serviciu și politicile de confidențialitate respective.</string>
+    <string name="ask_permission_tos">Continuând, permiți acestei aplicații și lui Google să îți folosească informațiile în conformitate cu termenii și condițiile și politicile de confidențialitate respective.</string>
     <string name="ask_scope_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> ar dori să:</string>
     <string name="ask_service_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> ar dori să utilizeze:</string>
-    <string name="account_manager_title">Manager de cont Google</string>
+    <string name="account_manager_title">Manager de conturi Google</string>
     <string name="sorry">Ne pare rău…</string>
     <string name="auth_before_connect">Conectați contul Google cu microG.\n\nSă ne conectăm la un cont Google, utilizați butonul <b>Autentificare</b> sau butonul <b>Huawei</b> dacă aveți un dispozitiv de la acest producător. Apăsând unul dintre butoane, veți fi redirecționat către pagina de autentificare în contul dvs.</string>
     <string name="auth_sign_in">Autentificare</string>
@@ -36,8 +36,8 @@ Aceasta poate fi o problemă temporară sau dispozitivul dvs. Android poate să 
     <string name="auth_finalize">"Dispozitivul dvs. contactează Google pentru a salva informații în contul dvs.
 
 Acest lucru poate dura câteva minute."</string>
-    <string name="allow">Permiteți</string>
-    <string name="deny">Refuzați</string>
+    <string name="allow">Permite</string>
+    <string name="deny">Refuză</string>
     <string name="auth_notification_title">Autentificare necesară</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> necesită autorizarea dvs. pentru a accesa contul dvs. Google.</string>
     <string name="auth_package_override_request_title">Permite-i aplicației <b><xliff:g example="F-Droid">%1$s</xliff:g></b> acces privilegiat la <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
@@ -92,7 +92,7 @@ Vă rugăm să configurați o parolă, un PIN sau un model de blocare."</string>
     <string name="service_name_mcs">Cloud Messaging</string>
     <string name="service_name_device_attestation">Atestare dispozitiv</string>
     <string name="service_name_vending">Servicii Play Store</string>
-    <string name="service_name_work_profile">Profil de lucru</string>
+    <string name="service_name_work_profile">Profil de serviciu</string>
     <string name="games_title">Google Play Games</string>
     <string name="games_info_title"><xliff:g example="F-Droid">%1$s</xliff:g> ar dori să utilizeze Play Games</string>
     <string name="games_info_content">Pentru a utiliza Play Games, este necesar să instalați aplicația Google Play Games. Aplicația poate continua fără Play Games, dar este posibil să se comporte neașteptat.</string>
@@ -188,10 +188,10 @@ Vă rugăm să configurați o parolă, un PIN sau un model de blocare."</string>
     <string name="pref_github_summary">Repozitorul codului sursă</string>
     <string name="pref_update_title">Verifică actualizările</string>
     <string name="pref_update_summary">Verifică pe GitHub dacă există o versiune mai nouă.</string>
-    <string name="update_include_prerelease">Include versiuni pre-lansare / de dezvoltare</string>
+    <string name="update_include_prerelease">Include versiuni de dezvoltare</string>
     <string name="update_available_title">Actualizare disponibilă</string>
     <string name="update_available_prerelease_title">Actualizare disponibilă (pre-lansare)</string>
-    <string name="update_available_message">Noua versiune v%1s este disponibilă. Ai instalată versiunea v%2$s. Vrei să descarci și să instalezi actualizarea?</string>
+    <string name="update_available_message">O nouă versiune v%1$s este disponibilă. Aveți instalată versiunea v%2$s. Descărcați și instalați actualizarea?</string>
     <string name="update_now">Actualizează</string>
     <string name="update_whats_new">Noutăți</string>
     <string name="update_ignore">Ignoră</string>
@@ -318,11 +318,11 @@ Unele aplicații pot nu mai putea fi înregistrate din nou după această acțiu
     <string name="pref_vending_asset_delivery_summary">Descărcați active suplimentare când sunt solicitate de aplicațiile care utilizează Play Asset Delivery</string>
     <string name="pref_vending_asset_device_sync_summary">Aplicațiile care utilizează Play Asset Delivery vor descărca active suplimentare pe baza informațiilor dispozitivului utilizat în prezent.</string>
     <string name="pref_vending_asset_device_sync_switch">Activați sincronizarea informațiilor dispozitivului</string>
-    <string name="pref_workprofile_create_account">Permiteți configurarea contului de lucru</string>
-    <string name="pref_workprofile_intro">Când configurați un profil de lucru pentru locul dvs. de muncă sau instituția de învățământ,
-        configurarea poate încerca să se conecteze la Google pentru a permite descărcarea aplicațiilor în acel profil.</string>
-    <string name="pref_workprofile_disclaimer">Este responsabilitatea dvs. să vă asigurați că utilizarea microG este în conformitate cu politicile corporative.
-        microG este furnizat pe bază de efort maxim și nu poate garanta că se comportă exact cum se așteaptă.</string>
+    <string name="pref_workprofile_create_account">Permite configurarea contului de serviciu</string>
+    <string name="pref_workprofile_intro">Atunci când configurezi un profil de serviciu pentru locul de muncă sau pentru instituția de învățământ,
+        procesul de configurare ar putea încerca să se conecteze la Google pentru a permite descărcarea de aplicații în acel profil.</string>
+    <string name="pref_workprofile_disclaimer">Este responsabilitatea ta să te asiguri că folosirea microG este conformă cu politicile companiei. 
+        microG este furnizat cu maxima diligență posibilă și nu poate garanta o funcționare exact conform așteptărilor.</string>
     <string name="pref_auto_create_player">Permiteți înregistrarea contului Play Games</string>
     <string name="pref_auto_create_player_intro">Când jucați jocuri, trebuie să utilizați un cont Play Games pentru a vă autentifica și a înregistra funcții legate de joc, cum ar fi realizări, clasamente, arhive etc. După dezactivare, conturile Google care nu sunt legate de un cont Play Games nu vor fi înregistrate automat, iar jocul nu se va putea autentifica și juca.</string>
     <string name="pref_allow_upload_game_played">Permiteți încărcarea jocului jucat</string>
@@ -479,4 +479,13 @@ Unele aplicații pot nu mai putea fi înregistrate din nou după această acțiu
     <string name="morphe_sign_in_with_google_microg_label">Conectează-te cu Google prin MicroG RE</string>
     <string name="self_check_patched_app_installed">Funcționează cu %1$s</string>
     <string name="self_check_action_download_morphe">Descărcați Morphe</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">A fost instalată o variantă de arhitectură greșită</string>
+    <string name="abi_mismatch_message">"Acest build MicroG-RE conține doar biblioteci pe 64 de biți (arm64), dar acest dispozitiv rulează un spațiu de utilizator pe 32 de biți.
+
+Funcțiile care necesită Conscrypt (autentificare în cont, streaming, BotGuard, falsificarea fluxurilor video, SponsorBlock, Return YouTube Dislike etc.) nu vor funcționa corect și pot cauza probleme de redare sau „Unable to find a default SSL provider”.
+
+Instalați în schimb APK-ul ARMv7 sau Universal."</string>
+    <string name="abi_mismatch_download_armv7">Descărcați APK-ul ARMv7</string>
+    <string name="abi_mismatch_downloading_title">Se descarcă varianta corectă…</string>
 </resources>

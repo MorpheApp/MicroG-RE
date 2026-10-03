@@ -54,7 +54,9 @@ private const val TAG = "AuthSignInService"
 
 class AuthSignInService : BaseService(TAG, GmsService.AUTH_GOOGLE_SIGN_IN) {
     override fun handleServiceRequest(callback: IGmsCallbacks, request: GetServiceRequest, service: GmsService) {
-        val packageName = PackageUtils.getAndCheckCallingPackage(this, request.packageName)
+        // RE changes start
+        val packageName = PackageUtils.getAndCheckCallingPackageWithoutSpoofing(this, request.packageName)
+        // RE changes end
             ?: throw IllegalArgumentException("Missing package name")
         val binder = AuthSignInServiceImpl(this, lifecycle, packageName, request.account, request.scopes.asList(), request.extras).asBinder()
         callback.onPostInitCompleteWithConnectionInfo(CommonStatusCodes.SUCCESS, binder, ConnectionInfo().apply {

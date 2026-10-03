@@ -188,10 +188,10 @@ Lütfen bir parola, PIN veya desen ekran kilidi ayarlayın."</string>
     <string name="pref_github_summary">Kaynak kod deposu</string>
     <string name="pref_update_title">Güncellemeleri kontrol et</string>
     <string name="pref_update_summary">Daha yeni bir sürüm için GitHüb\'ı kontrol eder.</string>
-    <string name="update_include_prerelease">Ön sürüm / geliştirici yapılarını dahil et</string>
+    <string name="update_include_prerelease">Geliştirme yapılarını dahil et</string>
     <string name="update_available_title">Güncelleme mevcut</string>
     <string name="update_available_prerelease_title">Güncelleme mevcut (ön sürüm)</string>
-    <string name="update_available_message">Yeni v%1s sürümü mevcut. v%2$s sürümü yüklü. Güncellemeyi indirip yüklemek ister misiniz?</string>
+    <string name="update_available_message">Yeni v%1$s sürümü mevcut. Yüklü olan sürüm: v%2$s. Güncelleme indirilip yüklensin mi?</string>
     <string name="update_now">Güncelle</string>
     <string name="update_whats_new">Yenilikler</string>
     <string name="update_ignore">Yoksay</string>
@@ -477,4 +477,13 @@ Bazı uygulamalar bu işlemden sonra tekrar kayıt olamayabilir. Bu uygulamalar�
     <string name="morphe_sign_in_with_google_microg_label">MicroG RE üzerinden Google ile oturum açın</string>
     <string name="self_check_patched_app_installed">%1$s ile çalışıyor</string>
     <string name="self_check_action_download_morphe">Morphe\'yi indirin</string>
+    <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Yanlış mimari varyantı yüklendi</string>
+    <string name="abi_mismatch_message">"Bu MicroG-RE sürümü yalnızca 64-bit (arm64) kütüphaneleri içeriyor, ancak bu cihaz 32-bit bir kullanıcı alanı çalıştırıyor.
+
+Conscrypt gerektiren özellikler (hesap girişi, video akışı, BotGuard, video akışlarını yanıltma [Spoof video streams], SponsorBlock, Return YouTube Dislike vb.) düzgün çalışmayacak ve oynatma sorunlarına ya da \"Unable to find a default SSL provider\" hatasına yol açabilir.
+
+Bunun yerine ARMv7 veya Universal APK sürümünü yükleyin."</string>
+    <string name="abi_mismatch_download_armv7">ARMv7 APK İndir</string>
+    <string name="abi_mismatch_downloading_title">Doğru varyant indiriliyor…</string>
 </resources>

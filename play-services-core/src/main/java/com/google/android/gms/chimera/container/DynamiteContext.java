@@ -8,6 +8,8 @@ package com.google.android.gms.chimera.container;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.pm.ApplicationInfo;
+import android.content.res.AssetManager;
+import android.content.res.Resources;
 
 import androidx.annotation.RequiresApi;
 
@@ -46,6 +48,20 @@ public class DynamiteContext extends ContextWrapper {
     @Override
     public ApplicationInfo getApplicationInfo() {
         return gmsContext.getApplicationInfo();
+    }
+
+    // Module code runs with the GmsCore class loader and package identity, so it has to read
+    // GmsCore's resources and assets too. Without these the wrapping base context (the app that
+    // asked for the module) answers instead, and module code resolves GmsCore resource ids
+    // against the wrong table.
+    @Override
+    public Resources getResources() {
+        return gmsContext.getResources();
+    }
+
+    @Override
+    public AssetManager getAssets() {
+        return gmsContext.getAssets();
     }
 
     @Override

@@ -163,7 +163,17 @@ class ScannerService : LifecycleService() {
         val pendingIntent = PendingIntentCompat.getService(this, ScannerService::class.java.hashCode(), intent, FLAG_ONE_SHOT or FLAG_UPDATE_CURRENT, false)!!
         if (Build.VERSION.SDK_INT >= 23) {
             // Note: there is no setWindowAndAllowWhileIdle()
-            alarmManager.setExactAndAllowWhileIdle(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + nextScan, pendingIntent)
+            // RE changes start
+            try {
+                if (Build.VERSION.SDK_INT < 31 || alarmManager.canScheduleExactAlarms()) {
+                    alarmManager.setExactAndAllowWhileIdle(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + nextScan, pendingIntent)
+                    return
+                }
+            } catch (e: SecurityException) {
+                Log.w(TAG, "Failed to schedule exact alarm", e)
+            }
+            alarmManager.setAndAllowWhileIdle(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + nextScan, pendingIntent)
+            // RE changes end
         } else {
             alarmManager.setWindow(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + nextScan - SCANNING_TIME_MS / 2, SCANNING_TIME_MS, pendingIntent)
         }

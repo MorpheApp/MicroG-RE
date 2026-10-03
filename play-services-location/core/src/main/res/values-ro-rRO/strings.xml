@@ -24,13 +24,13 @@
     <string name="fragment_location_apps_title">Aplicații cu acces la locație</string>
     <string name="location_app_last_access_at">Ultimul acces: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
     <string name="pref_location_app_force_coarse_title">Forțează locația aproximativă</string>
-    <string name="pref_location_app_force_coarse_summary">Returnează întotdeauna locații aproximative către această aplicație, ignorând nivelul său de permisiune.</string>
+    <string name="pref_location_app_force_coarse_summary">Returnează întotdeauna locațiile aproximative acestei aplicații, ignorând nivelul său de permisiune.</string>
     <string name="prefcat_app_last_location">Ultima locație raportată</string>
     <string name="location_settings_dialog_message_title_for_better_experience">Pentru o experiență mai bună, activează locația dispozitivului, care utilizează serviciul de localizare microG.</string>
     <string name="location_settings_dialog_message_title_to_continue">Pentru a continua, activează locația dispozitivului, care utilizează serviciul de localizare microG.</string>
     <string name="location_settings_dialog_message_details_start_paragraph">Dispozitivul tău va trebui să:</string>
     <string name="location_settings_dialog_message_location_services_gps_and_nlp">Utilizeze GPS, Wi‑Fi, rețele celulare și senzori</string>
-    <string name="location_settings_dialog_message_grant_permissions">Acordă permisiuni de locație pentru microG Service</string>
+    <string name="location_settings_dialog_message_grant_permissions">Acordă permisiuni de locație pentru serviciul microG</string>
     <string name="location_settings_dialog_message_gls_consent">Utilizează serviciul de localizare microG; ca parte a acestui serviciu, microG poate colecta periodic date de locație și poate utiliza aceste date într‑un mod anonim pentru a îmbunătăți precizia locației și serviciile bazate pe locație.</string>
     <string name="location_settings_dialog_message_details_end_paragraph">Pentru detalii, accesează setările de locație.</string>
     <string name="location_settings_dialog_btn_cancel">Nu, mulțumesc</string>

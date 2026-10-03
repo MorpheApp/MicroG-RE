@@ -142,6 +142,7 @@
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
         tools:ignore="QueryAllPackagesPermission" />
     <uses-permission android:name="android.permission.USE_EXACT_ALARM" tools:ignore="ExactAlarm" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" tools:ignore="ExactAlarm" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
@@ -517,12 +518,9 @@
 
         <service
             android:name="org.microg.gms.auth.loginservice.GoogleLoginService"
-            android:exported="true">
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.accounts.AccountAuthenticator" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="${basePackageName}.android.gsf.action.GET_GLS" />
             </intent-filter>
 
             <meta-data
@@ -531,6 +529,22 @@
             <meta-data
                 android:name="android.accounts.AccountAuthenticator.customTokens"
                 android:value="1" />
+        </service>
+
+        <service
+            android:name="org.microg.gms.auth.WorkAccountAuthenticatorService"
+            android:enabled="false"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/auth_work_authenticator"/>
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator.customTokens"
+                android:value="1"/>
         </service>
 
         <activity
@@ -566,16 +580,27 @@
         <activity
             android:name="org.microg.gms.auth.AskPermissionActivity"
             android:excludeFromRecents="true"
-            android:exported="true"
+            android:exported="false"
             android:process=":ui"
             android:theme="@style/Theme.AppCompat.DayNight.Dialog" />
 
         <activity
             android:name="org.microg.gms.auth.AskPackageOverrideActivity"
             android:excludeFromRecents="true"
-            android:exported="true"
+            android:exported="false"
             android:process=":ui"
             android:theme="@style/Theme.App.Translucent" />
+
+        <activity android:name="org.microg.gms.ui.UnpackingRedirectActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:process=":ui"
+            android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="com.google.android.gms.ui.UNPACKING_REDIRECT" />
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
 
         <service
             android:name=".auth.GetToken"
@@ -1501,6 +1526,14 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="${basePackageName}.android.gms.clearcut.bootcount.service.START" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="org.microg.gms.home.HomeInteractionService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.home.interaction.START" />
             </intent-filter>
         </service>
 

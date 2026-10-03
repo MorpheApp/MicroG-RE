@@ -219,7 +219,10 @@ fun getBasicSupportedFeatures(context: Context): List<BasicDeviceFeature> {
     val features = mutableListOf<BasicDeviceFeature>()
 
     val intent = Intent("com.google.android.gms.ocr.ACTION_CARD_CAPTURE").apply {
-        setPackage("com.google.android.gms")
+        // Probe for our own card capture activity: the installed package is not always
+        // com.google.android.gms (this build ships as app.revanced.android.gms), so a literal
+        // name finds real Google Play services or nothing at all.
+        setPackage(Constants.GMS_PACKAGE_NAME)
     }
     if (packageManager.resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY) != null) {
         features.add(BasicDeviceFeature.CAMERA_DOCUMENT_CAPTURE)
