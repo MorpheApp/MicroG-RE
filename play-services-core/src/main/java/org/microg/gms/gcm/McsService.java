@@ -66,6 +66,7 @@ import org.microg.gms.gcm.mcs.Setting;
 import java.io.Closeable;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.SocketException;
 import java.util.ArrayList;
@@ -104,6 +105,7 @@ public class McsService extends Service implements Handler.Callback {
     public static final int[] SERVICE_PORTS = {5228, 443};
 
     private static final int WAKELOCK_TIMEOUT = 5000;
+    private static final int CONNECT_TIMEOUT_MS = 20000;
     // On bad mobile network a ping can take >60s, so we wait for an ACK for 90s
     private static final int HEARTBEAT_ACK_AFTER_PING_TIMEOUT_MS = 90000;
 
@@ -477,10 +479,13 @@ public class McsService extends Service implements Handler.Callback {
         this.wasTornDown = false;
 
         logd(this, "Starting MCS connection to port " + port + "...");
-        Socket socket = new Socket(SERVICE_HOST, port);
+        Socket socket = new Socket();
+        socket.connect(new InetSocketAddress(SERVICE_HOST, port), CONNECT_TIMEOUT_MS);
         logd(this, "Connected to " + SERVICE_HOST + ":" + port);
         sslSocket = SSLContext.getDefault().getSocketFactory().createSocket(socket, SERVICE_HOST, port, true);
+        sslSocket.setSoTimeout(CONNECT_TIMEOUT_MS);
         startHandshake((SSLSocket) sslSocket);
+        sslSocket.setSoTimeout(0);
         logd(this, "Activated SSL with " + SERVICE_HOST + ":" + port);
         inputStream = new McsInputStream(sslSocket.getInputStream(), rootHandler);
         outputStream = new McsOutputStream(sslSocket.getOutputStream(), rootHandler);

@@ -147,7 +147,10 @@ class MovingWifiHelper(private val context: Context) {
     })
 
     private fun openConnection(network: Network?, url: URL, proxy: Proxy = Proxy.NO_PROXY): URLConnection =
-        (if (SDK_INT >= 23) network?.openConnection(url, proxy) else null) ?: url.openConnection()
+        ((if (SDK_INT >= 23) network?.openConnection(url, proxy) else null) ?: url.openConnection()).apply {
+            connectTimeout = 15000
+            readTimeout = 30000
+        }
 
     @SuppressLint("CustomX509TrustManager")
     private fun disableCertificateRevocationAndExpirationCheck(originalTrustManager: TrustManager): TrustManager {
