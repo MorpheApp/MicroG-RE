@@ -64,12 +64,12 @@
     <string name="auth_action_step_perform_content_description">단계를 수행하려면 탭하세요</string>
     <string name="auth_action_step_completed_content_description">단계 완료</string>
     <string name="auth_action_activity_finish">완료</string>
-    <string name="signin_picker_title">계정을 선택하세요</string>
-    <string name="signin_picker_subtitle"><xliff:g example="F-Droid">%1$s</xliff:g>로 계속하려면</string>
+    <string name="signin_picker_title">계정 선택</string>
+    <string name="signin_picker_subtitle"><xliff:g example="F-Droid">%1$s</xliff:g> 앱을 계속 이용하려면 계정을 선택하세요.</string>
     <string name="signin_picker_add_account_label">다른 계정 추가</string>
     <string name="signin_confirm_title"><xliff:g example="F-Droid">%1$s</xliff:g>에 로그인 허용</string>
     <string name="signin_confirm_button_text">허용 및 공유</string>
-    <string name="signin_subtext_sharing">계속하려면, microG가 Google 계정의 이름, 이메일 주소 및 프로필 사진을 \'<xliff:g example="F-Droid">%1$s</xliff:g>\'와 공유합니다.</string>
+    <string name="signin_subtext_sharing">계속하기 위해 microG에서 Google 계정의 이름, 이메일 주소, 프로필 사진을 \'<xliff:g example="F-Droid">%1$s</xliff:g>\'와 공유합니다</string>
     <string name="perm_status_broadcast_label">내부 상태 브로드캐스트 수신</string>
     <string name="perm_gsf_read_gservices_label">Google 서비스 설정 읽기</string>
     <string name="perm_c2dm_receive_label">C2DM 메시지 수신</string>
