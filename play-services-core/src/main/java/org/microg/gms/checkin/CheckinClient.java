@@ -51,6 +51,8 @@ public class CheckinClient {
 
     public static CheckinResponse request(CheckinRequest request) throws IOException {
         HttpURLConnection connection = (HttpURLConnection) new URL(SERVICE_URL).openConnection();
+        connection.setConnectTimeout(15000);
+        connection.setReadTimeout(30000);
         connection.setRequestMethod("POST");
         connection.setDoInput(true);
         connection.setDoOutput(true);

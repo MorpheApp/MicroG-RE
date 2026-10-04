@@ -258,7 +258,7 @@ class SettingsProvider : ContentProvider() {
             Auth.VISIBLE -> getSettingsBoolean(key, false)
             Auth.INCLUDE_ANDROID_ID -> getSettingsBoolean(key, true)
             Auth.STRIP_DEVICE_NAME -> getSettingsBoolean(key, false)
-            Auth.TWO_STEP_VERIFICATION -> getSettingsBoolean(key, false)
+            Auth.TWO_STEP_VERIFICATION -> getSettingsBoolean(key, true)
             Auth.FIND_DEVICES -> getSettingsBoolean(key, false)
             else -> throw IllegalArgumentException("Unknown key: $key")
         }
