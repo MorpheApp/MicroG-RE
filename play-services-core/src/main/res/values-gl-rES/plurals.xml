@@ -15,6 +15,11 @@
   ~ limitations under the License.
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="gcm_registered_apps_counter">
+        <item quantity="one"><xliff:g example="1">%1$d</xliff:g> aplicación rexistrada</item>
+        <item quantity="other"><xliff:g example="123">%1$d</xliff:g>
+aplicacións rexistradas</item>
+    </plurals>
     <plurals name="cond_perm_summary">
         <item quantity="one">Non foi concedido un permiso necesario para o correcto funcionamento dos servizos de microG.</item>
         <item quantity="other">Non foron concedidos os permisos necesarios para o correcto funcionamento dos servizos de microG.</item>

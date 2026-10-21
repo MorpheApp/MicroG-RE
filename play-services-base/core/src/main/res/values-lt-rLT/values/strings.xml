@@ -5,12 +5,16 @@
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="foreground_service_notification_title">Aktyvus fone</string>
-    <string name="foreground_action_battery_optimization">Baterijos optimizacija</string>
+    <string name="foreground_service_notification_text"><xliff:g example="Exposure Notification">%1$s</xliff:g> veikia fone.</string>
+    <string name="foreground_service_notification_big_text">Pašalinkite <xliff:g example="microG Services">%1$s</xliff:g> iš baterijos optimizavimo arba pakeiskite pranešimų nustatymus, kad paslėptumėte šį pranešimą.</string>
+    <string name="foreground_action_battery_optimization">Akumuliatoriaus optimizavimas</string>
     <string name="foreground_action_notification_settings">Nustatymai</string>
     <string name="menu_advanced">Išplėstiniai</string>
     <string name="menu_settings">Nustatymai</string>
+    <string name="menu_game_managed">Žaidimų paskyrų valdymas</string>
     <string name="list_no_item_none">Nieko</string>
     <string name="list_item_see_all">Matyti visus</string>
+    <string name="open_app">Atidaryti</string>
     <string name="service_status_disabled">Išjungtas</string>
     <string name="service_status_enabled">Įjungtas</string>
     <string name="service_status_automatic">Automatinis</string>

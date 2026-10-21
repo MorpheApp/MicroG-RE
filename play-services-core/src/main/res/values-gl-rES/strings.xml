@@ -15,14 +15,21 @@ Os seus datos non se perderán"</string>
     <string name="snackbar_remove_account">Conta %s eliminada</string>
     <string name="snackbar_undo_button">Anular</string>
     <string name="gms_settings_name">Axustes de microG</string>
+    <string name="gms_settings_summary">Configura os servizos de MicroG.</string>
     <string name="just_a_sec">Un segundo...</string>
     <string name="ask_permission_tos">Ao continuar, permite que esta aplicación e Google utilicen a súa información de acordo cos seus respectivos termos de servizo e políticas de privacidade.</string>
+    <string name="ask_scope_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> gustaríalle:</string>
+    <string name="ask_service_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> gustaríalle usar:</string>
+    <string name="account_manager_title">Xestor de contas de Google</string>
     <string name="sorry">Sentímolo...</string>
     <string name="auth_before_connect">Conecta a conta Google con microG.\n\nImos conectar unha conta Google, empregue o botón <b>Iniciar sesión</b> ou o botón <b>Huawei</b> se ten un dispositivo deste fabricante. Ao premer un destes botóns será redirixido á páxina de inicio de sesión da súa conta.</string>
     <string name="auth_sign_in">Iniciar sesión</string>
     <string name="auth_connecting">"O seu dispositivo está establecendo unha conexión cos servidores de Google para iniciar sesión.
 
 Isto pode tardar uns segundos."</string>
+    <string name="no_network_error_desc">"Non tes conexión de rede.
+
+Pode tratarse dun problema temporal ou é posible que o teu dispositivo Android non estea configurado para servizos de datos. Téntao de novo cando teñas conexión a unha rede móbil ou conéctate a unha rede wifi."</string>
     <string name="auth_general_error_desc">"Houbo un problema ao comunicarse cos servidores de Google.
 
 Tente de novo máis tarde."</string>
@@ -33,15 +40,66 @@ Isto pode tardar uns segundos.
     <string name="allow">Permitir</string>
     <string name="deny">Denegar</string>
     <string name="auth_notification_title">Autenticación necesaria</string>
+    <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> require a túa autorización para acceder á túa conta de Google.</string>
+    <string name="auth_package_override_request_title">Conceder a <b><xliff:g example="F-Droid">%1$s</xliff:g></b> acceso privilexiado a <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> quere acceder á túa conta coma se fose <b><xliff:g example="F-Droid">%2$s</xliff:g> de <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Isto podería concederlle acceso privilexiado á túa conta.</string>
+    <string name="auth_action_notification_channel_name">Alertas da conta de Google</string>
+    <string name="auth_action_notification_channel_description">Notifica cando unha das túas contas de Google require configuración adicional antes de poder usarse, ou cando unha conta é incompatible con microG.</string>
+    <string name="auth_action_notification_title">Requírese unha acción na conta</string>
+    <string name="auth_action_notification_content">A túa conta de Google precisa configuración adicional.</string>
+    <string name="auth_action_reauth_notification_title">Requírese unha acción na conta</string>
+    <string name="auth_action_activity_header">Finaliza a configuración da túa conta de Google</string>
+    <string name="auth_action_activity_explanation">Completa os seguintes pasos para poder usar a túa conta de Google %s neste dispositivo.</string>
+    <string name="auth_action_step_enable_checkin">Activar o rexistro de dispositivos</string>
+    <string name="auth_action_step_enable_checkin_description">"O teu dispositivo debe rexistrarse en Google polo menos unha vez.
+
+Podes desactivar o rexistro do dispositivo en Google unha vez completada a configuración da conta."</string>
+    <string name="auth_action_step_enable_gcm">Activar Cloud Messaging</string>
+    <string name="auth_action_step_enable_gcm_description">Podes desactivar Cloud Messaging unha vez completada a configuración da conta.</string>
+    <string name="auth_action_step_allow_microg_gcm">Permitir a Cloud Messaging para microG</string>
+    <string name="auth_action_step_allow_microg_gcm_description">Segundo as túas preferencias, microG precisa o teu permiso antes de poder rexistrarse en Cloud Messaging.</string>
+    <string name="auth_action_step_enable_lockscreen">Configurar un bloqueo de pantalla seguro</string>
+    <string name="auth_action_step_enable_lockscreen_description">"A túa conta de Google está xestionada polo teu centro de traballo ou institución educativa. O teu administrador determinou que os dispositivos deben ter un bloqueo de pantalla seguro para poder acceder aos datos da conta.
+
+Configura un contrasinal, un PIN ou un patrón de bloqueo de pantalla."</string>
+    <string name="auth_action_step_perform_content_description">Preme para realizar o paso</string>
+    <string name="auth_action_step_completed_content_description">Paso completado</string>
+    <string name="auth_action_activity_finish">Rematar</string>
     <string name="signin_picker_title">Escolla unha conta</string>
+    <string name="signin_picker_subtitle">para continuar a <xliff:g example="F-Droid">%1$s</xliff:g></string>
     <string name="signin_picker_add_account_label">Engadir outra conta</string>
+    <string name="signin_confirm_title">Permitir iniciar sesión en <xliff:g example="F-Droid">%1$s</xliff:g></string>
     <string name="signin_confirm_button_text">Permitir e compartir</string>
+    <string name="signin_subtext_sharing">Para continuar, microG compartirá o nome, o enderezo de correo electrónico e a foto de perfil da túa conta de Google con <xliff:g example="F-Droid">%1$s</xliff:g>.</string>
     <string name="perm_status_broadcast_label">escoitar ás emisións de estado internas</string>
     <string name="perm_gsf_read_gservices_label">ler a configuración do servizo de Google</string>
     <string name="perm_c2dm_receive_label">escoitar mensaxes C2DM</string>
     <string name="perm_c2dm_send_label">enviar mensaxes C2DM a outras aplicacións</string>
     <string name="perm_gtalk_svc_label">intercambiar mensaxes e recibir notificacións de sincronización dos servidores de Google</string>
     <string name="perm_extended_access_label">Acceso estendido aos servizos de Google</string>
+    <string name="perm_provision_label">proporcionar servizos de microG</string>
+    <string name="perm_provision_description">Permite á aplicación configurar os servizos de microG sen interacción do usuario</string>
+    <string name="perm_car_speed_label">Velocidade do coche</string>
+    <string name="perm_car_speed_description">"Accede á velocidade do teu coche"</string>
+    <string name="perm_car_info_label">Información do vehículo</string>
+    <string name="perm_car_info_description">"Accede á información do teu coche"</string>
+    <string name="perm_car_fuel_label">Nivel de combustible do coche</string>
+    <string name="perm_car_fuel_description">"Accede á información sobre o nivel de combustible do teu coche"</string>
+    <string name="perm_car_mileage_label">Quilometraxe do coche</string>
+    <string name="perm_car_mileage_description">"Quilometraxe do coche"</string>
+    <string name="perm_car_vendor_extension_label">Canle de venda de automóbiles</string>
+    <string name="perm_car_vendor_extension_description">"Accede á canle do provedor do teu vehículo para intercambiar información específica sobre o mesmo."</string>
+    <string name="service_name_checkin">Rexistro do dispositivo</string>
+    <string name="service_name_mcs">Cloud Messaging</string>
+    <string name="service_name_device_attestation">Atestación do dispositivo</string>
+    <string name="service_name_vending">Servizos da Play Store</string>
+    <string name="service_name_work_profile">Perfil de traballo</string>
+    <string name="games_title">Google Play Games</string>
+    <string name="games_info_title"><xliff:g example="F-Droid">%1$s</xliff:g> quere usar Play Games</string>
+    <string name="games_info_content">Para usar Play Games, é necesario instalar a aplicación Google Play Games. A aplicación podería seguir funcionando sen Play Games, pero é posible que se comporte de xeito inesperado.</string>
+    <string name="pick_place_title">Escolle un lugar</string>
+    <string name="place_picker_select_title">Seleccione esta localización</string>
+    <string name="place_picker_nearby_places">Lugares próximos</string>
     <string name="network_type_mobile">Rede móbil</string>
     <string name="network_type_wifi">Wi-Fi</string>
     <string name="network_type_roaming">Itinerancia</string>
@@ -52,17 +110,37 @@ Isto pode tardar uns segundos.
     <string name="self_check_cat_system">Sistema</string>
     <string name="self_check_name_system_spoofs">O sistema falsifica a sinatura: </string>
     <string name="self_check_resolution_system_spoofs">Por favor, consulte na documentación que pasos poden ser necesarios.</string>
+    <string name="self_check_pkg_gms">Servizos de microG</string>
+    <string name="self_check_pkg_vending">microG Companion / Play Store</string>
+    <string name="self_check_pkg_gsf">Framework de servizos de microG</string>
+    <string name="self_check_name_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> Instalado: </string>
+    <string name="self_check_resolution_app_installed">Instala a aplicación <xliff:g example="F-Droid">%1$s</xliff:g> ou unha compatible. Verifique a documentación sobre a que as aplicacións son compatibles.</string>
+    <string name="self_check_name_correct_sig"><xliff:g example="F-Droid">%1$s</xliff:g> ten unha sinatura correcta:</string>
+    <string name="self_check_resolution_correct_sig">Ou o <xliff:g example="F-Droid">%1$s</xliff:g> instalado non é compatible ou a falsificación de sinatura non está activa para iso. Verifique a documentación sobre a que as aplicacións e as ROM son compatibles.</string>
+    <string name="self_check_name_battery_optimizations">As optimizacións de batería son ignoradas:</string>
+    <string name="self_check_resolution_battery_optimizations">Toca aquí para desactivar as optimizacións da batería. Non facelo pode provocar aplicacións mal comportadas.</string>
     <!-- Settings strings -->
     <string name="prefcat_about">Acerca de</string>
     <string name="prefcat_details">Detalles</string>
     <string name="cond_gcm_bat_title">Optimización da batería activada</string>
+    <string name="cond_gcm_bat_summary">Activaches Cloud Messaging pero ten optimizacións de baterías activas para os servizos de microG. Para que as notificacións push chegen, tes que ignorar as optimizacións da batería.</string>
     <string name="cond_gcm_bat_action">Ignorar optimizacións</string>
     <string name="cond_perm_title">Permiso faltante</string>
+    <string name="prefs_account">Preferencias da conta</string>
+    <string name="prefs_account_privacy">Información persoal e privacidade</string>
+    <string name="prefs_account_security">Iniciar sesión e seguridade</string>
     <string name="pref_auth_trust_google_title">Confía en Google para os permisos da aplicación</string>
+    <string name="pref_auth_trust_google_summary">Cando está desactivado, solicítaselle confirmación ao usuario antes de que a solicitude de autorización dunha aplicación sexa enviada a Google. Algunhas aplicacións non poden usar a conta de Google se isto está desactivado.</string>
     <string name="pref_auth_visible_title">Permitir ás aplicacións atopar contas</string>
     <string name="pref_auth_visible_summary">De activarse, tódalas aplicacións deste dispositivo poderán ver o enderezo de correo electrónico das súas contas de Google sen autorización previa.</string>
     <string name="pref_auth_include_android_id_title">Autenticar co rexistro do dispositivo</string>
+    <string name="pref_auth_include_android_id_summary">Cando está desactivado, as solicitudes de autenticación non estarán vinculadas ao rexistro do dispositivo, o que pode permitir que dispositivos non autorizados inicien sesión, pero pode ter consecuencias imprevistas.</string>
     <string name="pref_auth_strip_device_name_title">Eliminar nome do dispositivo para autenticación</string>
+    <string name="pref_auth_strip_device_name_summary">Cando está activado, as solicitudes de autenticación non incluirán o nome do dispositivo, o que pode permitir que dispositivos non autorizados inicien sesión, pero tamén pode ter consecuencias imprevistas.</string>
+    <string name="pref_auth_two_step_verification_title">Recibir solicitudes de verificación en dous pasos</string>
+    <string name="pref_auth_two_step_verification_summary">Cando está activado, o dispositivo pode recibir solicitudes de verificación en dous pasos de Google (requírese Cloud Messaging).</string>
+    <string name="pref_auth_allow_find_devices_title">Permitir responder a Google Device Finder</string>
+    <string name="pref_auth_allow_find_devices_summary">Cando está activado, o dispositivo pode responder ás notificacións de Atopar o meu dispositivo de Google (requírese Cloud Messaging).</string>
     <string name="pref_device_registration_android_id">ID de Android</string>
     <string name="checkin_not_registered">Non rexistrado</string>
     <string name="checkin_enable_switch">Rexistrar dispositivo</string>

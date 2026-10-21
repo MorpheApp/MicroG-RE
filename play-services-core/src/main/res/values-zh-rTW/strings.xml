@@ -7,7 +7,7 @@
     <string name="dialog_title_remove_account">移除帳戶</string>
     <string name="dialog_message_remove_account">"確定要移除這個帳戶嗎？
 
-部分服務和功能將無法使用。
+部份服務和功能將無法使用。
 
 你的資料不會遺失。"</string>
     <string name="dialog_confirm_button">移除</string>
@@ -219,7 +219,7 @@
     <string name="gcm_registered">已註冊</string>
     <string name="gcm_registered_since">註冊於：<xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
     <string name="gcm_unregister_confirm_title">取消註冊 <xliff:g example="F-Droid">%1$s</xliff:g>？</string>
-    <string name="gcm_unregister_confirm_message">部分應用程式不會自動重新註冊，且／或未提供手動註冊選項。取消註冊後，這些應用程式可能無法正常運作。\n要繼續嗎？</string>
+    <string name="gcm_unregister_confirm_message">部份應用程式不會自動重新註冊，且／或未提供手動註冊選項。取消註冊後，這些應用程式可能無法正常運作。\n要繼續嗎？</string>
     <string name="gcm_unregister_after_deny_message">你拒絕了一個已註冊應用程式的推播通知註冊請求。\n要立即取消註冊，以免該應用程式日後收到推播訊息嗎？</string>
     <string name="gcm_messages_counter">訊息：<xliff:g example="123">%1$d</xliff:g>（<xliff:g example="12345">%2$d</xliff:g> 位元組）</string>
     <string name="gcm_network_state_disconnected">已中斷連線</string>
@@ -242,7 +242,7 @@
 
 你將需要新的 securityToken 與 AndroidID 才能重新註冊應用程式。請檢查裝置註冊狀態
 
-執行這項操作後，部分應用程式可能無法重新註冊。你可能需要先清除這些應用程式的資料，才能再次要求註冊"</string>
+執行這項操作後，部份應用程式可能無法重新註冊。你可能需要先清除這些應用程式的資料，才能再次要求註冊"</string>
     <string name="gcm_remove_registers_toast_message">已移除所有應用程式的推播通知權限</string>
     <string name="prefcat_push_networks_title">用於推播通知的網路</string>
     <string name="safetynet_intro">Google SafetyNet 是裝置認證系統，確保裝置已正確保護並與 Android CTS 相容。某些應用程式基於安全原因或作為防篡改保護的先決條件而使用 SafetyNet。
@@ -321,12 +321,12 @@ microG GmsCore 包含 SafetyNet 的免費實作，但官方伺服器要求 Safet
     <string name="pref_vending_asset_device_sync_summary">使用 Play 資源傳遞的應用程式會根據目前裝置的資訊下載額外資源。</string>
     <string name="pref_vending_asset_device_sync_switch">啟用裝置資訊同步</string>
     <string name="pref_workprofile_create_account">允許工作帳戶設定</string>
-    <string name="pref_workprofile_intro">當您為工作場所或教育機構設定工作設定檔時，設定程序可能會嘗試連線至 Google，以啟用將應用程式下載至該設定檔的功能。</string>
+    <string name="pref_workprofile_intro">當您為工作場所或教育機構設定工作設定檔時，設定程式可能會嘗試連線至 Google，以啟用將應用程式下載至該設定檔的功能。</string>
     <string name="pref_workprofile_disclaimer">確保您使用 microG 的方式符合公司政策是您的責任。
 microG 以「盡力而為」的基礎提供，無法保證行為完全符合預期。</string>
     <string name="pref_auto_create_player">允許 Play 遊戲帳戶註冊</string>
     <string name="pref_auto_create_player_intro">玩遊戲時，您需要使用 Play 遊戲帳戶登入並記錄遊戲相關功能，例如成就、排行榜、存檔等。停用後，未繫結 Play 遊戲帳戶的 Google 帳戶將不會自動註冊，遊戲將無法登入和遊玩。</string>
-    <string name="pref_allow_upload_game_played">允許上傳遊戲遊玩狀態</string>
+    <string name="pref_allow_upload_game_played">允許上載遊戲遊玩狀態</string>
     <string name="pref_allow_upload_game_played_summary">停用時，遊戲登入後不會回報遊戲遊玩狀態，某些遊戲可能無法登入。</string>
     <string name="pref_change_default_game_player">變更遊戲帳戶</string>
     <string name="pref_change_default_game_player_summary">變更遊戲的預設帳戶，並依遊戲變更帳戶。</string>
@@ -480,7 +480,7 @@ microG 以「盡力而為」的基礎提供，無法保證行為完全符合預�
     <string name="self_check_name_notifications">已啟用通知</string>
     <string name="self_check_resolution_notifications">點選此處開啟通知設定。通知用於在啟用電池最佳化時或其他情況下保持 GcmService 在後台執行。</string>
     <string name="self_check_name_oem_restriction">背景程式限制</string>
-    <string name="self_check_resolution_oem_restriction">您的系統可能會限制背景程序。點擊此處開啟「Don\'t Kill My App!」網站並了解如何停用這些限制</string>
+    <string name="self_check_resolution_oem_restriction">您的系統可能會限制背景程式。點擊此處開啟「Don\'t Kill My App!」網站並了解如何停用這些限制</string>
     <string name="morphe_sign_in_with_google_microg_label">透過 MicroG RE 使用 Google 登入</string>
     <string name="self_check_patched_app_installed">使用 %1$s 執行</string>
     <string name="self_check_action_download_morphe">下載 Morphe</string>

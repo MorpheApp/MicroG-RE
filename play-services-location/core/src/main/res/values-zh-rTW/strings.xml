@@ -31,7 +31,7 @@
     <string name="location_settings_dialog_message_details_start_paragraph">您的裝置需要：</string>
     <string name="location_settings_dialog_message_location_services_gps_and_nlp">使用 GPS、Wi-Fi、行動網路和感應器</string>
     <string name="location_settings_dialog_message_grant_permissions">授予 microG Service 位置權限</string>
-    <string name="location_settings_dialog_message_gls_consent">使用 microG 位置服務；作為此服務的一部分，microG 可能定期收集位置資料，並以匿名方式使用這些資料來改善位置準確度和位置相關服務。</string>
+    <string name="location_settings_dialog_message_gls_consent">使用 microG 位置服務；作為此服務的一部份，microG 可能定期收集位置資料，並以匿名方式使用這些資料來改善位置準確度和位置相關服務。</string>
     <string name="location_settings_dialog_message_details_end_paragraph">如需詳細資訊，請前往位置設定。</string>
     <string name="location_settings_dialog_btn_cancel">不用了</string>
     <string name="location_settings_dialog_btn_sure">確定</string>

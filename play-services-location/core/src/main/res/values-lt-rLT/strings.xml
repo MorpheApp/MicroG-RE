@@ -4,9 +4,65 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="service_name_location">Vieta</string>
+    <string name="prefcat_location_apps_title">Naujausia prieiga</string>
+    <string name="prefcat_location_wifi_title">Wi-Fi vieta</string>
+    <string name="prefcat_location_cell_title">Mobiliojo tinklo vieta</string>
+    <string name="prefcat_geocoder_title">Adresų nustatymas</string>
+    <string name="pref_location_wifi_online_enabled_title">Teirautis internetinės paslaugos</string>
+    <string name="pref_location_wifi_online_enabled_summary">Gauti Wi-Fi vietą iš internetinės vietos nustatymo paslaugos.</string>
+    <string name="pref_location_wifi_moving_enabled_title">Teirautis viešosios interneto prieigos taško</string>
+    <string name="pref_location_wifi_moving_enabled_summary">Gauti Wi-Fi vietą tiesiogiai iš palaikomų viešosios interneto prieigos taškų, kai esate prisijungę.</string>
+    <string name="pref_location_wifi_learning_enabled_title">Įsiminti iš GPS</string>
+    <string name="pref_location_wifi_learning_enabled_summary">Saugoti Wi-Fi vietas vietiniame įrenginyje, kai naudojamas GPS.</string>
+    <string name="pref_location_cell_online_enabled_title">Teirautis internetinės paslaugos</string>
+    <string name="pref_location_cell_online_enabled_summary">Gauti mobiliojo tinklo bazinių stočių vietas iš internetinės vietos nustatymo paslaugos.</string>
+    <string name="pref_location_cell_learning_enabled_title">Įsiminti iš GPS</string>
+    <string name="pref_location_cell_learning_enabled_summary">Saugoti mobiliojo tinklo vietas vietiniame įrenginyje, kai naudojamas GPS.</string>
+    <string name="pref_geocoder_nominatim_enabled_title">Naudoti Nominatim</string>
+    <string name="pref_geocoder_nominatim_enabled_summary">Nustatyti adresus naudojant OpenStreetMap Nominatim.</string>
+    <string name="fragment_location_apps_title">Programos, turinčios prieigą prie vietos nustatymo</string>
+    <string name="location_app_last_access_at">Paskutinė prieiga: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="pref_location_app_force_coarse_title">Priverstinai teikti apytikslę vietą</string>
+    <string name="pref_location_app_force_coarse_summary">Visada šiai programai teikti apytikslias vietas, nepaisant jos leidimų lygio.</string>
+    <string name="prefcat_app_last_location">Paskutinė pranešta vieta</string>
+    <string name="location_settings_dialog_message_title_for_better_experience">Kad patirtis būtų geresnė, įjunkite įrenginio vietos nustatymą, kuris naudoja microG vietos nustatymo paslaugą</string>
+    <string name="location_settings_dialog_message_title_to_continue">Norėdami tęsti, įjunkite įrenginio vietos nustatymą, kuris naudoja microG vietos nustatymo paslaugą</string>
+    <string name="location_settings_dialog_message_details_start_paragraph">Jūsų įrenginiui reikės:</string>
+    <string name="location_settings_dialog_message_location_services_gps_and_nlp">Naudoti GPS, Wi-Fi, mobiliojo ryšio tinklus ir jutiklius</string>
+    <string name="location_settings_dialog_message_grant_permissions">Suteikti vietos nustatymo leidimus microG paslaugai</string>
+    <string name="location_settings_dialog_message_gls_consent">Naudoti microG vietos nustatymo paslaugą; kaip šios paslaugos dalį, microG gali periodiškai rinkti vietos duomenis ir anonimiškai juos naudoti siekdamas pagerinti vietos nustatymo tikslumą ir su vieta susijusias paslaugas.</string>
+    <string name="location_settings_dialog_message_details_end_paragraph">Išsamesnės informacijos rasite vietos nustatymo nuostatose.</string>
+    <string name="location_settings_dialog_btn_cancel">Ne, ačiū</string>
+    <string name="location_settings_dialog_btn_sure">Gerai</string>
+    <string name="pref_location_custom_url_summary">Tai leidžia nustatyti pasirinktinį paslaugos URL. Neteisingos reikšmės gali sukelti vietos nustatymo paslaugų neveikimą arba visišką nepasiekiamumą.</string>
+    <string name="pref_location_custom_url_details">Kelias /v1/geolocate pridedamas automatiškai. Jei vietos nustatymo teikėjui reikia rakto, jį galima pridėti kaip užklausos parametrą prie pagrindinio URL.</string>
+    <string name="pref_location_custom_url_input_hint">Pasirinktinis paslaugos URL</string>
     <string name="pref_location_custom_source_title">Savo</string>
+    <string name="pref_location_source_title">Pasirinkite internetinę vietos nustatymo paslaugą</string>
+    <string name="pref_location_source_terms">Sąlygos / Privatumas</string>
+    <string name="pref_location_source_suggested">Siūloma</string>
+    <string name="pref_location_import_export_title">Importuoti arba eksportuoti vietos duomenis</string>
+    <string name="notification_config_required_title">Reikalinga konfigūracija</string>
+    <string name="notification_config_required_text_online_sources">Norėdami toliau naudotis internetinėmis vietos nustatymo paslaugomis, turite pasirinkti vietos duomenų paslaugą.</string>
+    <string name="location_data_export_wifi_title">Eksportuoti vietinę Wi-Fi vietos duomenų bazę</string>
+    <string name="location_data_export_cell_title">Eksportuoti vietinę bazinių stočių vietos duomenų bazę</string>
+    <string name="location_data_import_title">Importuoti vietos duomenis iš failo</string>
+    <string name="location_data_import_result_toast">Importuota %1$d įrašų.</string>
+    <string name="prefcat_location_timeline_title">Google Maps laiko juosta</string>
+    <string name="pref_location_timeline_title">Įjungti vietos istoriją</string>
+    <string name="pref_location_timeline_summary">"Periodiškai įrašyti jūsų vietos informaciją ir padaryti ją prieinamą Google Maps laiko juostai."</string>
+    <string name="pref_location_timeline_upload_title">Sinchronizuoti su Google paskyra</string>
+    <string name="pref_location_timeline_upload_summary">"Sinchronizuoti vietos istoriją į Google serverius, kad ji būtų rodoma kituose įrenginiuose."</string>
     <!-- RE strings -->
+    <string name="prefcat_location_maps_title">Google Maps</string>
+    <string name="pref_map_engine_title">Žemėlapio atvaizdavimo variklis</string>
     <!-- "Mapbox (MapLibre)" must be left untranslated .-->
+    <string name="pref_map_engine_summary">Pasirinkite variklį, naudojamą žemėlapiams atvaizduoti programose. Rekomenduojamas Mapbox (MapLibre).</string>
     <!-- "Stadia Maps" must be left untranslated .-->
+    <string name="pref_stadia_key_title">Stadia Maps API raktas</string>
+    <string name="pref_stadia_key_summary">Neprivaloma. Prideda Stadia Maps atvaizdavimo parinktį; Stadia reikalauja API rakto.</string>
     <!-- "HMS (Huawei Map Kit)" must be left untranslated .-->
+    <string name="pref_hms_key_title">HMS (Huawei Map Kit) API raktas</string>
+    <string name="pref_hms_key_summary">Neprivaloma. Prideda HMS atvaizdavimo parinktį; įrenginyje reikia HMS Core.</string>
 </resources>

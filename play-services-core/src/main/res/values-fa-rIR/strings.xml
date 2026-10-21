@@ -188,6 +188,7 @@
     <string name="pref_github_summary">مخزن کد منبع</string>
     <string name="pref_update_title">بررسی به‌روزرسانی‌ها</string>
     <string name="pref_update_summary">بررسی نسخهٔ جدیدتر در GitHub.</string>
+    <string name="update_include_prerelease">شامل بیلدهای توسعه‌دهنده</string>
     <string name="update_available_title">به‌روزرسانی در دسترس است</string>
     <string name="update_available_prerelease_title">به‌روزرسانی در دسترس است (پیش‌انتشار)</string>
     <string name="update_available_message">نسخهٔ v%1$s جدید در دسترس است. نسخهٔ v%2$s روی دستگاه شما نصب است. به‌روزرسانی دانلود و نصب شود؟</string>
@@ -479,6 +480,12 @@
     <string name="self_check_patched_app_installed">در حال اجرا با %1$s</string>
     <string name="self_check_action_download_morphe">دانلود Morphe</string>
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">نوع معماری نصب‌شده اشتباه است</string>
+    <string name="abi_mismatch_message">"این نسخه از MicroG-RE فقط شامل کتابخانه‌های 64 بیتی (arm64) است، اما این دستگاه در حال اجرای یک فضای کاربری 32 بیتی است.
+
+ویژگی‌هایی که به Conscrypt نیاز دارند (ورود به حساب، پخش آنلاین، BotGuard، جعل جریان‌های ویدیویی، SponsorBlock، Return YouTube Dislike و غیره) به‌درستی کار نخواهند کرد و می‌توانند باعث بروز مشکلات پخش یا خطای «یافتن ارائه‌دهندهٔ SSL پیش‌فرض ممکن نیست» شوند.
+
+به‌جای آن، APK نسخهٔ ARMv7 یا Universal را نصب کنید."</string>
     <string name="abi_mismatch_download_armv7">دانلود ARMv7 APK</string>
     <string name="abi_mismatch_downloading_title">درحال دانلود نسخه صحیح…</string>
 </resources>

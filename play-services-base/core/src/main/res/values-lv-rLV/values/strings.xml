@@ -5,15 +5,20 @@
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="foreground_service_notification_title">Darbojas fonā</string>
+    <string name="foreground_service_notification_text"><xliff:g example="Exposure Notification">%1$s</xliff:g> ir aktīvs fonā.</string>
+    <string name="foreground_service_notification_big_text">Izslēgt <xliff:g example="microG Services">%1$s</xliff:g> no akumulatora optimizācijas vai mainiet paziņojuma iestatījumus, lai paslēptu šo paziņojumu.</string>
     <string name="foreground_action_battery_optimization">Akumulatora optimizācija</string>
     <string name="foreground_action_notification_settings">Iestatījumi</string>
+    <string name="menu_advanced">Papildu iestatījumi</string>
     <string name="menu_settings">Iestatījumi</string>
-    <string name="list_no_item_none">Nav neviena pakalpojuma</string>
+    <string name="menu_game_managed">Pārvaldīti Spēļu Konti </string>
+    <string name="list_no_item_none">Nav</string>
     <string name="list_item_see_all">Skatīt visus</string>
+    <string name="open_app">Atvērt</string>
     <string name="service_status_disabled">Atspējots</string>
     <string name="service_status_enabled">Iespējots</string>
     <string name="service_status_automatic">Automātiski</string>
-    <string name="service_status_manual">Pašrocīgi</string>
+    <string name="service_status_manual">Manuāli</string>
     <string name="service_status_enabled_short">Ieslēgts</string>
     <string name="service_status_disabled_short">Izslēgts</string>
 </resources>

@@ -4,6 +4,16 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="service_name_location">Atrašanās vieta</string>
+    <string name="prefcat_location_apps_title">Nesena piekļuve</string>
+    <string name="prefcat_location_wifi_title">Wi-Fi atrašanās vieta</string>
+    <string name="prefcat_location_cell_title">Mobilā tīkla atrašanās vieta</string>
+    <string name="prefcat_geocoder_title">Adrešu atrisinātājs</string>
+    <string name="pref_location_wifi_online_enabled_title">Pieprasījums no tiešsaistes pakalpojuma</string>
+    <string name="pref_location_wifi_online_enabled_summary">Iegūt atrašanās vietu, kas balstīta uz Wi-Fi, no tiešsaistes atrašanās vietas noteikšanas pakalpojuma.</string>
+    <string name="pref_location_wifi_moving_enabled_title">Pieprasījums no tīklāja</string>
+    <string name="pref_location_wifi_moving_enabled_summary">Iegūstiet Wi-Fi atrašanās vietu tieši no tīklāja piekļuves punktiem, kad ir izveidots savienojums.</string>
+    <string name="pref_location_cell_online_enabled_title">Pieprasījums no tiešsaistes pakalpojuma</string>
     <!-- RE strings -->
     <!-- "Mapbox (MapLibre)" must be left untranslated .-->
     <!-- "Stadia Maps" must be left untranslated .-->

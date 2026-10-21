@@ -15,5 +15,21 @@
   ~ limitations under the License.
   -->
 <resources>
+    <string name="lib_name">microG UI rīki</string>
+    <string name="lib_license">Apache License 2.0, microG komanda</string>
+    <string name="about_version_str">Versija %1$s</string>
+    <string name="about_default_license">Visas tiesības aizsargātas.</string>
+    <string name="prefcat_setup">Iestatīšana</string>
+    <string name="self_check_title">Pašpārbaude</string>
+    <string name="self_check_desc">Pārbaudīt, vai sistēma ir pareizi uzstādīta, lai izmantotu microG.</string>
+    <string name="self_check_cat_permissions">Atļaujas piešķirtas</string>
+    <string name="self_check_name_permission">Atļauja %1$s:</string>
+    <string name="self_check_name_permission_interact_across_profiles">Atļauja mijiedarboties ar darba profilu:</string>
+    <string name="self_check_resolution_permission">Pieskaries šeit, lai sniegtu atļauju. Ja atļauja netiks sniegta, lietotnes var darboties nekorekti.</string>
+    <string name="about_root_title">microG UI demo</string>
+    <string name="about_root_summary">Kopsavilkums</string>
+    <string name="about_root_version">Versija v0.1.0</string>
+    <string name="about_root_libraries">Iekļautās bibliotēkas</string>
     <!--Settings About-->
+    <string name="about_morphe_description">Morphe ir atvērtā pirmkoda projekts, kas paredzēts Android lietotņu modificēšanai, izmantojot labojumus</string>
 </resources>

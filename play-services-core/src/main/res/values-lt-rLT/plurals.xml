@@ -15,6 +15,12 @@
   ~ limitations under the License.
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="gcm_registered_apps_counter">
+        <item quantity="one"><xliff:g example="1">%1$d</xliff:g> registruota programėlė</item>
+        <item quantity="few"><xliff:g example="123">%1$d</xliff:g> registruotos programėlės</item>
+        <item quantity="many"><xliff:g example="123">%1$d</xliff:g> registruotų programėlių</item>
+        <item quantity="other"><xliff:g example="123">%1$d</xliff:g> registruotų programėlių</item>
+    </plurals>
     <plurals name="cond_perm_summary">
         <item quantity="one">Leidimas reikalingas teisingam microG paslaugų veikimui nesuteiktas</item>
         <item quantity="few">Leidimai reikalingi teisingam microG paslaugų veikimui nesuteikti</item>

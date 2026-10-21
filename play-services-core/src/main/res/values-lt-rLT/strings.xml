@@ -15,38 +15,399 @@ Jūsų duomenys nebus prarasti"</string>
     <string name="snackbar_remove_account">Paskyra %s pašalinta</string>
     <string name="snackbar_undo_button">Anuliuoti</string>
     <string name="gms_settings_name">MicroG Nustatymai</string>
+    <string name="gms_settings_summary">Nustatyti MicroG paslaugas.</string>
     <string name="just_a_sec">Sekundėlę…</string>
+    <string name="ask_permission_tos">Tęsdami jūs leidžiate šiai programai ir Google naudoti jūsų informaciją pagal jų atitinkamas paslaugų teikimo sąlygas ir privatumo politikas.</string>
+    <string name="ask_scope_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> norėtų:</string>
+    <string name="ask_service_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> norėtų naudoti:</string>
+    <string name="account_manager_title">Google paskyrų tvarkytuvė</string>
     <string name="sorry">Atsiprašome…</string>
+    <string name="auth_before_connect">Prijunkite „Google“ paskyrą prie microG.\n\nNorėdami prisijungti prie „Google“ paskyros, naudokite <b>Prisijungti</b> mygtuką arba <b>Huawei</b> mygtuką, jei turite šio gamintojo įrenginį. Paspaudę vieną iš mygtukų būsite nukreipti į puslapį, kuriame galėsite prisijungti prie savo paskyros.</string>
     <string name="auth_sign_in">Prisijungti</string>
+    <string name="auth_connecting">"Jūsų įrenginys užmezga ryšį su Google serveriais, kad galėtumėte prisijungti.
+
+Tai gali užtrukti kelias sekundes."</string>
+    <string name="no_network_error_desc">"Neturite tinklo ryšio.
+
+Tai gali būti laikina problema arba jūsų Android įrenginys gali būti neparuoštas duomenų paslaugoms. Bandykite dar kartą prisijungę prie mobiliojo tinklo arba prisijunkite prie Wi-Fi tinklo."</string>
+    <string name="auth_general_error_desc">"Iškilo problema susisiekus su Google serveriais.
+
+Bandykite dar kartą vėliau."</string>
+    <string name="auth_finalize">"Jūsų įrenginys susisiekia su Google, kad išsaugotų informaciją į jūsų paskyrą.
+
+Tai gali užtrukti porą minučių."</string>
+    <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> reikalauja jūsų leidimo pasiekti jūsų Google paskyrą.</string>
+    <string name="auth_package_override_request_title">Leisti <b><xliff:g example="F-Droid">%1$s</xliff:g></b> privilegijuotą prieigą prie <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> nori pasiekti jūsų paskyrą taip, lyg būtų <b><xliff:g example="F-Droid">%2$s</xliff:g>, kurią sukūrė <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Tai gali suteikti jai privilegijuotą prieigą prie jūsų paskyros.</string>
+    <string name="auth_action_notification_channel_name">Google paskyros įspėjimai</string>
+    <string name="auth_action_notification_channel_description">Pranešama, kai vienai iš jūsų Google paskyrų reikia papildomos sąrankos, kad ją būtų galima naudoti, arba kai paskyra nesuderinama su microG.</string>
+    <string name="auth_action_notification_title">Reikalingas paskyros veiksmas</string>
+    <string name="auth_action_notification_content">Jūsų Google paskyrai reikia papildomos sąrankos.</string>
+    <string name="auth_action_reauth_notification_title">Reikalingas paskyros veiksmas</string>
+    <string name="auth_action_activity_header">Užbaikite Google paskyros sąranką</string>
+    <string name="auth_action_activity_explanation">Atlikite toliau nurodytus veiksmus, kad galėtumėte naudoti savo Google paskyrą %s šiame įrenginyje.</string>
+    <string name="auth_action_step_enable_checkin">Įjungti įrenginio registraciją</string>
+    <string name="auth_action_step_enable_checkin_description">"Jūsų įrenginys turi bent kartą užsiregistruoti „Google“.
+
+Atlikę paskyros sąranką, galėsite išjungti „Google“ įrenginio registraciją."</string>
+    <string name="auth_action_step_enable_gcm">Įjungti Cloud Messaging</string>
+    <string name="auth_action_step_enable_gcm_description">Baigę paskyros sąranką galėsite išjungti Cloud Messaging.</string>
+    <string name="auth_action_step_allow_microg_gcm">Leisti microG naudoti Cloud Messaging</string>
+    <string name="auth_action_step_allow_microg_gcm_description">Atsižvelgiant į jūsų nuostatas, microG turi gauti jūsų leidimą, kad galėtų užsiregistruoti Cloud Messaging paslaugai.</string>
+    <string name="auth_action_step_enable_lockscreen">Nustatyti saugų ekrano užraktą</string>
+    <string name="auth_action_step_enable_lockscreen_description">"Jūsų Google paskyra valdoma jūsų darbo vietos arba mokymo įstaigos. Jūsų administratorius nusprendė, kad įrenginiuose turi būti nustatytas saugus ekrano užraktas, kad jie galėtų pasiekti paskyros duomenis.
+
+Nustatykite ekrano užraktą naudodami slaptažodį, PIN kodą arba šabloną."</string>
+    <string name="auth_action_step_perform_content_description">Bakstelėkite, kad atliktumėte veiksmą</string>
+    <string name="auth_action_step_completed_content_description">Veiksmas atliktas</string>
+    <string name="auth_action_activity_finish">Baigti</string>
     <string name="signin_picker_title">Pasirinkite paskyrą</string>
+    <string name="signin_picker_subtitle">kad galėtumėte toliau naudoti <xliff:g example="F-Droid">%1$s</xliff:g></string>
     <string name="signin_picker_add_account_label">Pridėti papildomą paskyrą</string>
+    <string name="signin_confirm_title">Leisti jums prisijungti prie <xliff:g example="F-Droid">%1$s</xliff:g></string>
     <string name="signin_confirm_button_text">Leisti ir dalintis</string>
+    <string name="signin_subtext_sharing">Kad galėtumėte tęsti, microG pasidalins jūsų Google paskyros vardu, jos el. pašto adresu ir profilio nuotrauka su <xliff:g example="F-Droid">%1$s</xliff:g>.</string>
+    <string name="perm_provision_label">konfigūruoti microG paslaugas</string>
+    <string name="perm_provision_description">Leidžia programai be vartotojo sąveikos konfigūruoti microG paslaugas</string>
+    <string name="perm_car_speed_label">Automobilio greitis</string>
+    <string name="perm_car_speed_description">"Gauti jūsų automobilio greitį"</string>
+    <string name="perm_car_info_label">Automobilio informacija</string>
+    <string name="perm_car_info_description">"Gauti jūsų automobilio informaciją"</string>
+    <string name="perm_car_fuel_label">Automobilio degalų lygis</string>
+    <string name="perm_car_fuel_description">"Gauti informaciją apie automobilio degalų lygį"</string>
+    <string name="perm_car_mileage_label">Automobilio rida</string>
+    <string name="perm_car_mileage_description">"Gauti informaciją apie automobilio ridą"</string>
+    <string name="perm_car_vendor_extension_label">Automobilio gamintojo kanalas</string>
+    <string name="perm_car_vendor_extension_description">"Gauti prieigą prie automobilio gamintojo kanalo, kad būtų galima keistis automobiliui būdinga informacija"</string>
+    <string name="service_name_checkin">Įrenginio registracija</string>
+    <string name="service_name_mcs">Debesų pranešimai</string>
+    <string name="service_name_device_attestation">Įrenginio atestavimas</string>
+    <string name="service_name_vending">Play Store paslaugos</string>
+    <string name="service_name_work_profile">Darbo profilis</string>
+    <string name="games_title">Google Play žaidimai</string>
+    <string name="games_info_title"><xliff:g example="F-Droid">%1$s</xliff:g> norėtų naudoti Play Games</string>
+    <string name="games_info_content">Norint naudoti Play Games, reikia įdiegti „Google Play Games“ programėlę. Programa gali veikti ir be Play Games, tačiau gali elgtis netikėtai.</string>
+    <string name="pick_place_title">Pasirinkite vietą</string>
+    <string name="place_picker_select_title">Pasirinkti šią vietą</string>
+    <string name="place_picker_nearby_places">Netoliese esančios vietos</string>
     <string name="network_type_mobile">Mobilusis ryšys</string>
     <string name="network_type_wifi">Wi-Fi</string>
     <string name="network_type_other">Kiti tinklai</string>
     <!-- Self check -->
+    <string name="self_check_name_system_spoofs">Sistema klastoja parašą: </string>
+    <string name="self_check_resolution_system_spoofs">Dokumentacijoje patikrinkite, kokių veiksmų gali prireikti.</string>
+    <string name="self_check_pkg_gms">microG paslaugos</string>
+    <string name="self_check_pkg_vending">microG palydovas / Play Store</string>
+    <string name="self_check_pkg_gsf">microG paslaugų sistema</string>
+    <string name="self_check_name_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> įdiegta: </string>
+    <string name="self_check_resolution_app_installed">Įdiekite programą <xliff:g example="F-Droid">%1$s</xliff:g> arba suderinamą. Dokumentacijoje patikrinkite, kurios programos yra suderinamos.</string>
+    <string name="self_check_name_correct_sig"><xliff:g example="F-Droid">%1$s</xliff:g> turi teisingą parašą: </string>
+    <string name="self_check_resolution_correct_sig">Arba įdiegtas <xliff:g example="F-Droid">%1$s</xliff:g> yra nesuderinamas, arba jame neįjungtas parašų klastojimas. Dokumentacijoje patikrinkite, kurios programos ir ROM yra suderinami.</string>
+    <string name="self_check_name_battery_optimizations">Baterijos optimizavimas nepaisomas:</string>
+    <string name="self_check_resolution_battery_optimizations">Palieskite čia, kad išjungtumėte baterijos optimizavimą. To nepadarius, programos gali elgtis netinkamai.</string>
     <!-- Settings strings -->
     <string name="prefcat_about">Apie</string>
+    <string name="cond_gcm_bat_summary">Įjungėte Cloud Messaging, bet microG paslaugoms taikomas baterijos optimizavimas. Kad gautumėte stumiamuosius pranešimus, turėtumėte nepaisyti baterijos optimizavimo.</string>
+    <string name="prefs_account">Paskyros nuostatos</string>
+    <string name="prefs_account_privacy">Asmeninė informacija &amp; privatumas</string>
+    <string name="prefs_account_security">Prisijungimas &amp; saugumas</string>
+    <string name="pref_auth_trust_google_summary">Kai išjungta, prieš siunčiant programos autorizacijos užklausą į Google, vartotojo klausiama. Kai kurios programos negalės naudoti Google paskyros, jei ši parinktis išjungta.</string>
+    <string name="pref_auth_visible_summary">Kai įjungta, visos šio įrenginio programos galės matyti jūsų Google paskyrų el. pašto adresus be išankstinio leidimo.</string>
+    <string name="pref_auth_include_android_id_summary">Kai išjungta, autentifikavimo užklausos nebus susietos su įrenginio registracija. Tai gali leisti neautorizuotiems įrenginiams prisijungti, tačiau gali sukelti nenumatytų pasekmių.</string>
+    <string name="pref_auth_strip_device_name_summary">Kai įjungta, autentifikavimo užklausose nebus įrenginio pavadinimo. Tai gali leisti neautorizuotiems įrenginiams prisijungti, tačiau gali sukelti nenumatytų pasekmių.</string>
+    <string name="pref_auth_two_step_verification_title">Gauti dviejų veiksmų patvirtinimo raginimus</string>
+    <string name="pref_auth_two_step_verification_summary">Kai įjungta, įrenginys gali gauti dviejų veiksmų patvirtinimo raginimus iš Google (reikia Cloud Messaging).</string>
+    <string name="pref_auth_allow_find_devices_title">Leisti reaguoti į Google įrenginio paiešką</string>
+    <string name="pref_auth_allow_find_devices_summary">Kai įjungta, įrenginys gali reaguoti į „Find My Device“ pranešimus iš Google (reikia Cloud Messaging).</string>
+    <string name="pref_checkin_enable_summary">Registruoja jūsų įrenginį Google paslaugose ir sukuria unikalų įrenginio identifikatorių. microG pašalina iš registracijos duomenų identifikuojančias dalis, išskyrus jūsų Google paskyros pavadinimą.</string>
+    <string name="checkin_last_registration">Paskutinė registracija: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="pref_accounts_title">Paskyros</string>
+    <string name="pref_game_accounts_title">Google žaidimų paskyros</string>
     <string name="prefcat_accounts_settings_title">Nustatymai</string>
+    <string name="prefcat_accounts_backup_title">Paskyrų atsarginė kopija</string>
+    <string name="pref_accounts_backup_title">Kurti paskyrų atsargines kopijas</string>
+    <string name="pref_accounts_backup_summary">Eksportuoti „Google“ paskyras į failą</string>
+    <string name="pref_accounts_restore_title">Atkurti paskyras</string>
+    <string name="pref_accounts_restore_summary">Importuoti „Google“ paskyras iš failo</string>
+    <string name="pref_accounts_backup_warning_title">Ar kurti paskyrų atsarginę kopiją?</string>
+    <string name="pref_accounts_backup_warning_message">Tai įrašys jūsų paskyras ir prisijungimo žetonus (SID/LSID) į failą. Kiekvienas, gavęs šį failą, galės pasiekti jūsų paskyras, todėl saugokite jį ir niekada juo nesidalykite.</string>
+    <string name="button_backup_accounts">Kurti atsarginę kopiją</string>
+    <string name="snackbar_accounts_backed_up">Paskyrų atsarginės kopijos sukurtos</string>
+    <string name="snackbar_accounts_restored">Atkurta %1$d paskyra(-os)</string>
+    <string name="snackbar_accounts_export_failed">Nepavyko sukurti atsarginės kopijos</string>
+    <string name="snackbar_accounts_import_failed">Nepavyko atkurti paskyrų</string>
+    <string name="auth_add_account">Pridėti paskyrą</string>
+    <string name="pref_add_account_summary">Pridėti Google paskyrą</string>
+    <string name="pref_gcm_enable_mcs_summary">Cloud Messaging yra stumiamųjų pranešimų teikėjas, kurį naudoja daug trečiųjų šalių programų. Norėdami naudotis šia paslauga, turite įjungti įrenginio registraciją.</string>
+    <string name="pref_hide_launcher_icon">Slėpti piktogramą programų sąraše</string>
+    <string name="hide_launcher_icon_dialog_message">Jei įjungta, MicroG bus paslėptas programų sąraše. MicroG galima atidaryti iš programos informacijos, esančios įrenginio sistemos programų sąraše.</string>
+    <string name="hide_launcher_icon_updating_title">Palaukite, kol programa atnaujinama</string>
+    <string name="pref_language_title">Kalba</string>
+    <string name="pref_language_system_default">Sistemos numatytoji</string>
     <string name="pref_update_title">Patikrinti ar yra atnaujinimų</string>
+    <string name="pref_update_summary">Naujesnės versijos ieškokite „GitHub“.</string>
+    <string name="update_include_prerelease">Įtraukti kūrimo versijas</string>
+    <string name="update_available_title">Galimas naujinimas</string>
+    <string name="update_available_prerelease_title">Galimas naujinimas (išankstinė versija)</string>
+    <string name="update_available_message">Nauja versija v%1$s yra prieinama. Jūsų įdiegta versija yra v%2$s. Atsisiųsti ir įdiegti naujinimą?</string>
+    <string name="update_now">Naujinti</string>
+    <string name="update_whats_new">Kas naujo</string>
+    <string name="update_ignore">Ignoruoti</string>
+    <string name="update_downloading_title">Atsisiunčiamas naujinimas…</string>
+    <string name="update_download_failed">Nepavyko atsisiųsti. Patikrinkite ryšį ir bandykite dar kartą.</string>
+    <string name="update_signature_mismatch">Programa negali būti atnaujinta, nes parašai skiriasi.</string>
     <string name="update_failed_title">Nepavyko atnaujinti</string>
+    <string name="update_permission_required_title">Būtinas leidimas</string>
+    <string name="update_permission_required_message">Norėdami įdiegti naujinimus, leiskite MicroG diegti nežinomas programas sistemos nustatymuose.</string>
     <string name="update_open_settings">Nustatymai</string>
+    <string name="update_check_failed">Nepavyko patikrinti naujinimų. Patikrinkite ryšį ir bandykite dar kartą.</string>
+    <string name="update_up_to_date_title">Turite naujausią versiją</string>
+    <string name="update_up_to_date_message">MicroG-RE v%s yra naujausia versija.</string>
+    <string name="update_notification_title">Galimas naujinimas</string>
+    <string name="update_notification_text">Galima nauja v%s versija – bakstelėkite, kad atnaujintumėte</string>
     <string name="update_notification_channel">Atnaujinimai</string>
+    <string name="update_notification_permission_title">Pranešimai</string>
+    <string name="update_notification_permission_message">Kad galėtų pranešti, kai bus galimas naujas naujinimas, MicroG-RE reikia leidimo siųsti pranešimus. Leiskite pranešimus, kad naujinimų įspėjimai jus pasiektų.</string>
+    <string name="update_notification_permission_allow">Leisti</string>
     <string name="update_notification_permission_not_now">Ne dabar</string>
+    <string name="update_notification_permission_open_settings">Atidaryti nustatymus</string>
     <string name="gcm_unregister_app">Atregistruoti</string>
     <string name="gcm_no_message_yet">Nėra gautų pranešimų</string>
+    <string name="gcm_last_message_at">Paskutinė žinutė: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
     <string name="gcm_registered">Užregistruota</string>
+    <string name="gcm_registered_since">Registruota nuo: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_unregister_confirm_title">Išregistruoti <xliff:g example="F-Droid">%1$s</xliff:g>?</string>
+    <string name="gcm_unregister_confirm_message">Kai kurios programos automatiškai nepersiregistruoja ir/arba nesuteikia galimybės to padaryti rankiniu būdu. Po išregistravimo šios programos gali neveikti tinkamai.\nTęsti?</string>
+    <string name="gcm_unregister_after_deny_message">Jūs atsisakėte programai registruotis stumiamiesiems pranešimams, nors ji jau užregistruota.\nAr norite ją dabar išregistruoti, kad ateityje ji nebegautų stumiamųjų pranešimų?</string>
+    <string name="gcm_messages_counter">Pranešimai: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> baitai)</string>
     <string name="gcm_network_state_disconnected">Atjungta</string>
+    <string name="gcm_network_state_connected">Prisijungta <xliff:g example="2 hours ago">%1$s</xliff:g></string>
+    <string name="gcm_enable_switch">Gauti stumiamuosius pranešimus</string>
+    <string name="gcm_allow_app_popup">Leisti <xliff:g example="F-Droid">%1$s</xliff:g> registruotis stumiamiesiems pranešimams?</string>
+    <string name="pref_push_app_allow_register_summary">Leisti programai registruotis stumiamiesiems pranešimams.</string>
+    <string name="pref_push_app_wake_for_delivery_summary">Paleisti programą fone, kad gautų gaunamus stumiamuosius pranešimus.</string>
+    <string name="safetynet_intro">„Google SafetyNet“ yra įrenginio sertifikavimo sistema, užtikrinanti, kad įrenginys yra tinkamai apsaugotas ir suderinamas su Android CTS. Kai kurios programos naudoja SafetyNet saugumo sumetimais arba kaip būtiną sąlygą apsaugai nuo klastojimo.\n\nmicroG GmsCore yra laisvas SafetyNet įgyvendinimas, tačiau oficialus serveris reikalauja, kad SafetyNet užklausos būtų pasirašomos naudojant nuosavybinę DroidGuard sistemą.</string>
+    <string name="safetynet_enable_switch">Leisti įrenginio atestavimą</string>
+    <string name="pref_safetynet_test_title">Išbandyti SafetyNet atestavimą</string>
+    <string name="pref_recaptcha_test_title">Išbandyti ReCAPTCHA</string>
+    <string name="pref_recaptcha_enterprise_test_title">Išbandyti ReCAPTCHA Enterprise</string>
+    <string name="pref_test_summary_passed">Visi testai išlaikyti</string>
+    <string name="pref_test_summary_failed">Nepavyko: %s</string>
+    <string name="pref_test_summary_warn">Įspėjimas: %s</string>
+    <string name="pref_test_summary_running">Vykdoma…</string>
+    <string name="pref_droidguard_unsupported_summary">DroidGuard vykdymas šiame įrenginyje nepalaikomas. SafetyNet paslaugos gali elgtis netinkamai.</string>
+    <string name="prefcat_safetynet_apps_title">Programos, naudojančios SafetyNet</string>
+    <string name="prefcat_device_attestation_apps_title">Programos, naudojančios įrenginio atestavimą</string>
+    <string name="pref_device_attestation_app_allow_requests_title">Leisti užklausas</string>
+    <string name="pref_device_attestation_app_allow_requests_summary">Leisti programai prašyti įrenginio atestavimo</string>
+    <string name="menu_clear_recent_requests">Išvalyti naujausias užklausas</string>
+    <string name="safetynet_last_run_at">Paskutinis naudojimas: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="pref_safetynet_recent_uses">Naujausi naudojimai</string>
+    <string name="pref_safetynet_recent_attestation_summary">Atestavimas: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_summary">reCAPTCHA: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_enterprise_summary">reCAPTCHA Enterprise: %s</string>
+    <string name="pref_safetynet_recent_copy_json">Kopijuoti JSON JWS duomenis</string>
+    <string name="pref_safetynet_recent_advice">Patarimas</string>
+    <string name="pref_safetynet_recent_eval_type">Vertinimo tipas</string>
+    <string name="pref_safetynet_recent_response_status">Atsakymo būsena</string>
+    <string name="pref_safetynet_recent_cat_response">Atsakymo duomenys</string>
+    <string name="pref_safetynet_recent_cat_request">Užklausos duomenys</string>
+    <string name="pref_safetynet_recent_nonce">Nonce (šešioliktainis)</string>
+    <string name="pref_safetynet_recent_request_time">Užklausos laikas</string>
+    <string name="pref_safetynet_recent_request_type">Užklausos tipas</string>
+    <string name="pref_safetynet_recent_cat_basic">Pagrindiniai duomenys</string>
+    <string name="pref_safetynet_recent_token">Tokenas</string>
+    <string name="pref_safetynet_recent_copied">Nukopijuota į iškarpinę!</string>
+    <string name="pref_safetynet_test_integrity_cts_passed">Vientisumas ir CTS išlaikyti</string>
+    <string name="pref_safetynet_test_cts_failed">CTS neišlaikytas</string>
+    <string name="pref_safetynet_test_integrity_failed">Vientisumas neišlaikytas</string>
+    <string name="pref_safetynet_test_not_completed">Dar nebaigta</string>
+    <string name="pref_safetynet_test_no_result">Nėra rezultato</string>
+    <string name="pref_safetynet_test_invalid_json">Neteisingas JSON</string>
     <string name="push_notifications_summary_off">IŠJUNGTA</string>
     <string name="push_notifications_summary_automatic">ON / Automatiška: %s</string>
     <string name="push_notifications_summary_manual">ON / Rankiniu būdu: %s</string>
     <string name="push_notifications_summary_values_seconds">%s sekundės</string>
     <string name="push_notifications_summary_values_minutes">%s minutės</string>
+    <string name="pref_vending_licensing_category">Google Play licencijavimas</string>
+    <string name="pref_vending_licensing_enable_switch">Atsakyti į licencijų tikrinimo užklausas</string>
+    <string name="pref_vending_license_enable_summary">Kai kurios programos reikalauja patvirtinimo, kad jas įsigijote „Google Play“. Kai programa to paprašo, microG gali atsisiųsti pirkimo įrodymą iš Google. Jei parinktis išjungta arba nepridėta jokia Google paskyra, licencijos patikrinimo užklausos ignoruojamos.</string>
+    <string name="pref_vending_licensing_purchase_free_apps_switch">Automatiškai pridėti nemokamas programas į biblioteką</string>
+    <string name="pref_vending_licensing_purchase_free_apps_summary">Nemokamos programos gali tikrinti, ar jos buvo atsisiųstos iš „Google Play“. Automatiškai pridėkite nemokamas programas į savo paskyros biblioteką, kad visos jums šiuo metu prieinamos nemokamos programos visada praeitų patikrinimą.</string>
+    <string name="pref_vending_feature_delivery">„Google Play“ funkcijų pristatymas</string>
+    <string name="pref_vending_split_install_switch">Komponentų diegimas pagal poreikį</string>
+    <string name="pref_vending_licensing_split_install_summary">Leisti programoms atsisiųsti ir įdiegti papildomus komponentus</string>
+    <string name="feedback_disabled">Atsiliepimas šiuo metu negalimas</string>
+    <string name="backup_disabled">Atsarginės kopijos kūrimas šiuo metu negalimas</string>
+    <string name="pref_vending_billing_category">„Google Play“ atsiskaitymas</string>
+    <string name="pref_vending_billing_enable_switch">Tvarkyti atsiskaitymo užklausas</string>
+    <string name="pref_vending_billing_enable_summary">Įjungus kai kurios programos gali atlikti pirkimus arba pradėti prenumeratas per „Google Play“ atsiskaitymo paslaugą.</string>
+    <string name="pref_vending_billing_note_experimental">Ši funkcija yra eksperimentinė ir gali lemti pinigų praradimą. Jūs buvote įspėti.</string>
+    <string name="pref_vending_billing_note_licensing">Kai kurioms programoms gali reikėti, kad taip pat įjungtumėte licencijų tikrinimą, kad patvirtintumėte savo pirkimus.</string>
+    <string name="pref_vending_asset_delivery_category">„Google Play“ išteklių pristatymas</string>
+    <string name="pref_vending_asset_delivery_switch">Įjungti išteklių pristatymą pagal poreikį</string>
+    <string name="pref_vending_asset_delivery_summary">Atsisiųsti papildomus išteklius, kai to paprašo programos, kurios naudoja „Play Asset Delivery“</string>
+    <string name="pref_vending_asset_device_sync_summary">Programos, naudojančios „Play Asset Delivery“, atsisiųs papildomų išteklių pagal šiuo metu naudojamo įrenginio informaciją.</string>
+    <string name="pref_vending_asset_device_sync_switch">Įjungti įrenginio informacijos sinchronizavimą</string>
+    <string name="pref_workprofile_create_account">Leisti darbo paskyros sąranką</string>
+    <string name="pref_workprofile_intro">Kuriant darbo profilį savo darbo vietai arba švietimo įstaigai,
+        nustatant gali būti bandoma prisijungti prie „Google“, kad būtų galima atsisiųsti programas į tą profilį.</string>
+    <string name="pref_workprofile_disclaimer">Jūs esate atsakingi už tai, kad jūsų microG naudojimas atitiktų įmonės politiką.
+        microG teikiamas pagal geriausias pastangas ir negali garantuoti, kad elgsis tiksliai taip, kaip tikimasi.</string>
+    <string name="pref_auto_create_player">Leisti „Play Games“ paskyros registraciją</string>
+    <string name="pref_auto_create_player_intro">Žaisdami žaidimus turite naudoti „Play Games“ paskyrą, kad prisijungtumėte ir registruotumėte su žaidimu susijusias funkcijas, pvz., pasiekimus, rekordų lenteles, archyvus ir kt. Išjungus, „Google“ paskyros, nesusietos su „Play Games“ paskyra, nebus automatiškai registruojamos, o žaidimas negalės prisijungti ir žaisti.</string>
+    <string name="pref_allow_upload_game_played">Leisti įkelti sužaisto žaidimo būseną</string>
+    <string name="pref_allow_upload_game_played_summary">Kai išjungta, žaidimas nepraneš sužaisto žaidimo būsenos po prisijungimo prie žaidimo, o kai kurie žaidimai gali negalėti prisijungti.</string>
+    <string name="pref_change_default_game_player">Keisti žaidimų paskyrą</string>
+    <string name="pref_change_default_game_player_summary">Pakeiskite numatytąją žaidimų paskyrą &amp; keiskite paskyrą pagal žaidimą.</string>
+    <string name="pref_delete_game_account_data">Ištrinti „Play Games“ duomenis</string>
+    <string name="pref_delete_game_account_data_summary">Ištrinti „Play Games“ paskyrą &amp; visus duomenis &amp; ištrinti atskirų žaidimų duomenis.</string>
     <string name="credentials_assisted_cancel">Atšaukti</string>
     <string name="credentials_assisted_continue">Tęsti</string>
+    <string name="credentials_assisted_confirmation_header">Prisijungiama</string>
+    <string name="credentials_assisted_continue_as_user_button_label">Tęsti kaip %1$s</string>
+    <string name="credentials_assisted_sign_back_title">Vėl prisijunkite prie %1$s naudodami „Google“</string>
+    <string name="credentials_assisted_signin_consent_header">Prisijungiama kaip %1$s</string>
+    <string name="credentials_assisted_signin_consent">Tęsdami sutinkate, kad „Google“ pasidalytų jūsų vardu, el. pašto adresu ir profilio nuotrauka su %1$s. Susipažinkite su %1$s privatumo politika ir paslaugų teikimo sąlygomis.</string>
+    <string name="credentials_assisted_signin_description">Prisijungimo per „Google“ funkciją galite valdyti savo „Google“ paskyrose.</string>
+    <string name="credentials_assisted_choose_account_label">Pasirinkti paskyrą</string>
     <string name="credentials_assisted_choose_account_subtitle">kad tęsti į %1$s</string>
+    <string name="credentials_assisted_choose_account_error_tips">Paskyros problema</string>
+    <string name="credentials_assisted_signin_button_text_long">Prisijungti naudojant „Google“</string>
+    <string name="credentials_assisted_signin_add_account">Pridėti paskyrą</string>
+    <string name="credentials_service_sign_in_with_google_label">Prisijungti naudojant „Google“</string>
+    <string name="credentials_service_remote_custom_subtitle">Saugos raktas, išmanusis telefonas arba planšetinis kompiuteris</string>
+    <string name="limited_services_dialog_information">Naudojate ribotas microG paslaugas. Skirtingai nuo įprastų microG paslaugų, ši versija veikia tik su programomis, kurios naudoja microG bibliotekas, o ne su tomis, kurios yra „Google Play“. Tai reiškia, kad dauguma programų nepaisys šių paslaugų.</string>
+    <string name="limited_services_dialog_information_ack">Suprantu</string>
+    <string name="games_achievement_list_title">Pasiekimai</string>
+    <string name="games_achievements_empty_text">Šiam žaidimui nėra pasiekimų</string>
+    <string name="games_api_access_denied">Nė viena šio įrenginio paskyra negali pasiekti žaidimų API</string>
+    <string name="games_achievement_locked_content_description">užrakinta</string>
+    <string name="games_achievement_unlocked_content_description">atrakinta</string>
+    <string name="games_achievement_extra_text">%1$s patirties taškų</string>
+    <string name="games_leaderboard_empty_text">Šiam žaidimui nėra rekordų lentelių</string>
+    <string name="games_leaderboard_list_title">Rekordų lentelės</string>
+    <string name="games_leaderboards_score_label">Rezultatas: %1$s</string>
+    <string name="games_snapshot_empty_text">Kol kas nėra išsaugotų žaidimo įrašų</string>
+    <string name="games_snapshot_choose_btn_text">pasirinkti</string>
+    <string name="games_snapshot_delete_btn_text">ištrinti</string>
+    <string name="games_delete_snapshot_dialog_title">Ištrinti išsaugotą žaidimą</string>
+    <string name="games_delete_snapshot_dialog_message">Ar tikrai norite ištrinti šį išsaugotą žaidimą?</string>
     <string name="games_delete_snapshot_dialog_cancel">Atšaukti</string>
+    <string name="games_delete_snapshot_dialog_ok">Gerai</string>
+    <string name="games_delete_snapshot_error">Ištrinti nepavyko, bandykite vėliau dar kartą</string>
+    <string name="games_state_description_signed_out">Atsijungta</string>
+    <string name="games_state_description_delete">Ištrinti</string>
+    <string name="games_change_button_text">Keisti</string>
+    <string name="games_change_default_account_section_title">Keisti numatytąją žaidimų paskyrą</string>
+    <string name="games_change_default_account_description">Numatytoji paskyra: %1$s</string>
+    <string name="games_change_default_account_explanation">Ši paskyra naudojama automatiškai prisijungti prie žaidimų, išsaugoti jūsų žaidimų pažangą ir nustatymus. Pakeitus numatytąją paskyrą arba atsijungus gali būti atstatyta jūsų žaidimų, kuriuose žaidėte, pažanga ir nustatymai.</string>
+    <string name="games_change_per_game_title">Keisti paskyrą pagal žaidimą</string>
+    <string name="games_change_per_game_description">Pakeitus pasirinkto žaidimo paskyrą arba iš jos atsijungus gali būti atstatyta jūsų to žaidimo pažanga ir nustatymai.</string>
+    <string name="games_change_default_account_for_all_games_dialog_title">Pasirinkite parinktį naujai numatytajai paskyrai</string>
+    <string name="games_change_default_account_for_all_games_dialog_description">Dabartinė numatytoji paskyra: %1$s</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_title">Keisti numatytąją paskyrą tik naujiems žaidimams </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_description">Neprarasite prieigos prie žaidimų, kuriuose žaidėte, pažangos ir nustatymų. Tačiau jūsų pažanga bus padalinta tarp paskyrų.</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_title"> Keisti numatytąją paskyrą visiems žaidimams </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_description">Galite prarasti prieigą prie žaidimų, kuriuose žaidėte, pažangos ir nustatymų. Norėdami pritaikyti pakeitimus, iš naujo paleisime žaidimą.</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_title"> Atsijungti nuo visų žaidimų </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_description">Galite prarasti prieigą prie žaidimų, kuriuose žaidėte, pažangos ir nustatymų. Norėdami pritaikyti pakeitimus, iš naujo paleisime žaidimą.</string>
+    <string name="games_change_per_game_dialog_title">Pasirinkite parinktį šiam žaidimui</string>
+    <string name="games_change_per_game_dialog_description">Pakeitus paskyrą arba atsijungus gali būti atstatyta jūsų šio žaidimo pažanga ir nustatymai</string>
+    <string name="games_change_per_game_dialog_option_use_player">Naudoti %1$s</string>
+    <string name="games_change_per_game_dialog_option_use_player_snackbar_success_message">Į šį žaidimą būsite prisijungę naudodami %1$s</string>
+    <string name="games_change_per_game_dialog_option_sign_out">Atsijungti</string>
+    <string name="games_change_per_game_dialog_option_sign_out_snackbar_success_message">Dabar esate atsijungę nuo šio žaidimo</string>
+    <string name="games_change_sign_out_of_all_games_snackbar_success_message">Dabar esate atsijungę nuo visų žaidimų</string>
+    <string name="games_change_default_account_for_all_games_snackbar_success_message">Prie visų žaidimų būsite prisijungę naudodami %1$s</string>
+    <string name="games_change_default_account_for_new_games_snackbar_success_message">Prie naujų žaidimų būsite prisijungę naudodami %1$s</string>
+    <string name="games_account_display_content">Dabartinė paskyra: %1$s</string>
+    <string name="games_delete_profile_header">Ištrinti „Play Games“ paskyrą &amp; visus duomenis</string>
+    <string name="games_delete_profile_explanation">Visam laikui ištrinti „Google Play Games“ paskyrą, XP ir visus profilio duomenis. Šis veiksmas taip pat gali ištrinti jūsų rezultatus, pažangą (išsaugotus žaidimus) ir žaidimų, kuriuose žaidėte, nustatymus.</string>
+    <string name="games_delete_profile_button">Ištrinti visam laikui</string>
+    <string name="games_delete_game_data_header">Ištrinti atskirų žaidimų duomenis</string>
+    <string name="games_delete_game_data_explanation">Galite visam laikui ištrinti atskirus žaidimų, kuriuos žaidėte naudodami „Google Play Games“, duomenis. Šis veiksmas ištrina pasirinkto žaidimo rezultatus, pažangą (išsaugotus žaidimus) ir nustatymus.</string>
+    <string name="games_delete_profile_dialog_title">Ar tikrai norite ištrinti šią paskyrą?</string>
+    <string name="games_delete_profile_explanation_with_gamer_name">Visam laikui ištrinti „Google Play Games“ paskyrą, susietą su žaidėjo vardu &lt;b&gt;%1$s&lt;/b&gt; (&lt;b&gt;%2$s&lt;/b&gt;), XP ir visus profilio duomenis. Šis veiksmas taip pat gali ištrinti jūsų rezultatus, pažangą (išsaugotus žaidimus) ir žaidimų, kuriuose žaidėte, nustatymus.</string>
+    <string name="games_delete_profile_dialog_message">Šio veiksmo negalima atšaukti.</string>
+    <string name="games_delete_profile_fail">Nepavyko ištrinti jūsų profilio. Bandykite vėliau dar kartą.</string>
+    <string name="games_delete_game_data_confirm_dialog_title">Ištrinti %1$s duomenis</string>
+    <string name="games_delete_game_data_confirm_dialog_message">Visam laikui ištrynus %1$s duomenis, bus pašalinti jūsų rezultatai, pažanga (išsaugoti žaidimai) ir žaidimo nustatymai „Google Play Games“.</string>
+    <string name="games_popup_signin_welcome">Sveiki, %1$s</string>
+    <string name="family_management_title">Šeima</string>
+    <string name="family_management_retry">Bandyti dar kartą</string>
+    <string name="family_management_load_error">Nepavyko įkelti turinio</string>
+    <string name="family_management_toolbar_back">Atgal</string>
+    <string name="family_management_toolbar_more">Daugiau</string>
+    <string name="family_management_exit_family_group">Išeiti iš šeimos grupės</string>
+    <string name="family_management_delete_family_group">Ištrinti šeimos grupę</string>
+    <string name="family_management_leave_family_password_title">Patvirtinkite slaptažodį, kad išeitumėte iš šeimos grupės</string>
+    <string name="family_management_delete_family_password_title">Patvirtinkite slaptažodį, kad ištrintumėte šeimos grupę</string>
+    <string name="family_management_remove_member_password_title">Patvirtinkite slaptažodį, kad pašalintumėte „%s“</string>
+    <string name="family_management_invite_family_member">Kviesti šeimos narius</string>
+    <string name="family_management_invite_slots_left">Liko kvietimų: %1$d</string>
+    <string name="family_management_cancel_invite">Atšaukti kvietimą</string>
+    <string name="family_management_cancel_invite_success">Kvietimas sėkmingai atšauktas</string>
+    <string name="family_management_cancel_invite_error">Nepavyko atšaukti kvietimo. Bandykite dar kartą.</string>
+    <string name="family_management_remove_member">Pašalinti narį</string>
+    <string name="family_management_member_removed_success">%s pašalintas iš jūsų šeimos grupės</string>
+    <string name="family_management_member_remove_failed">Nepavyko pašalinti %s. Bandykite dar kartą.</string>
+    <string name="family_management_leave_family_error_message">Nepavyko išeiti iš šeimos grupės. Bandykite dar kartą.</string>
+    <string name="family_management_exist_group_success">Jūs išėjote iš savo šeimos grupės…</string>
+    <string name="family_management_delete_group_success">Šeimos grupė ištrinta</string>
+    <string name="family_management_delete_group_failure">Nepavyko ištrinti šeimos grupės</string>
     <string name="family_management_delete_group_cancel">Atšaukti</string>
+    <string name="family_management_delete_group_confirm">Gerai</string>
+    <string name="family_management_input_pwd">Įveskite savo slaptažodį</string>
+    <string name="family_management_invite_sent_date_format">Kvietimas išsiųstas %s</string>
+    <string name="family_management_invite_send">Kvietimas išsiųstas</string>
+    <string name="family_management_pwd_error">Neteisingas slaptažodis, įveskite dar kartą</string>
+    <string name="barcode_scanner_brand">Nuskaityta microG, atstovaujant %1$s</string>
+    <string name="camera_permission_dialog_button">Gerai</string>
+    <string name="camera_permission_dialog_message">microG paslaugoms reikia prieigos prie jūsų įrenginio kameros, kad nuskaitytų kodą, skirtą %1$s.\n\nNorėdami įgalinti, suteikite microG paslaugoms kameros leidimą nustatymuose.</string>
+    <string name="camera_permission_dialog_title">Būtinas kameros leidimas</string>
+    <string name="pref_app_install_settings_title">Programų diegimo nustatymai</string>
+    <string name="pref_app_install_switch_title">Leisti programų diegimą</string>
+    <string name="pref_app_install_other_apps_note">Įgaliojimas leidžia diegti programas iš kitų šaltinių.</string>
+    <string name="pref_app_install_permission_instruction">Kad įdiegtos programos veiktų tinkamai, suteikite microG Companion leidimą diegti programas, atsisiųstas iš kitų šaltinių.</string>
+    <string name="prefcat_app_install_list_title">Programos, naudojančios programų diegimo priemonę</string>
+    <string name="service_name_google_location_sharing">„Google“ vietos bendrinimas</string>
+    <string name="location_sharing_description">Valdykite savo realaus laiko vietos bendrinimą „Google“ programose ir paslaugose iš šio įrenginio</string>
+    <string name="location_sharing_learn_more">Sužinokite daugiau apie &quot;Vietos bendrinimą&quot;</string>
+    <string name="location_sharing_switch_text">Naudoti vietos bendrinimą</string>
+    <string name="location_sharing_turn_off_notify_hint">Jei išjungsite šio įrenginio vietos bendrinimą, asmenys, su kuriais bendrinate vietą, nebus apie tai informuoti.</string>
+    <string name="location_sharing_off_previous_hint">Kol vėl jį įjungsite, bus pasiekiama tik paskutinė jūsų bendrinta vieta.</string>
+    <string name="location_sharing_disabled">Šiai paskyrai nėra aktyvių vietos bendrinimų</string>
+    <string name="location_sharing_turn_on_hint">Kai pradėsite bendrinti savo vietą iš „Google“ programėlės ar paslaugos, vietos bendrinimą galėsite valdyti čia.\n\nNorėdami pradėti bendrinti vietą, eikite į „Google Maps“ arba „Family Link“.</string>
+    <string name="location_sharing_turn_off_title">Išjungti vietos bendrinimą</string>
+    <string name="location_sharing_turn_off_hint">Vis tiek galite bendrinti savo vietą iš kitų įrenginių, kuriuose prisijungta prie tos pačios „Google“ paskyros, arba iš ne „Google“ programų. Būtinai patikrinkite vietos bendrinimo nustatymus ten, kur jie gali būti taikomi.\n\nAsmenys, su kuriais bendrinate vietą, ir toliau matys paskutinę jūsų bendrintą vietą.</string>
+    <string name="location_sharing_turn_off_cancel">Palikti įjungta</string>
+    <string name="location_sharing_turn_off_confirm">Išjungti</string>
+    <string name="location_sharing_confirm_dialog_title">Įjungti vietos bendrinimą</string>
+    <string name="location_sharing_confirm_dialog_text">Asmenys, su kuriais bendrinate savo vietą, visada gali matyti:\n·Jūsų vardą ir nuotrauką\n·Naujausią jūsų įrenginio vietą, net kai nenaudojate „Google“ paslaugų\n·Jūsų įrenginio baterijos įkrovą ir ar ji kraunama\n·Jūsų atvykimo ir išvykimo laiką, jei jie pridės vietos bendrinimo pranešimą</string>
     <!-- Passkey management -->
+    <string name="pref_passkey_manager_title">Tvarkyti prisijungimo raktus</string>
+    <string name="pref_passkey_manager_empty_title">Nėra išsaugotų prisijungimo raktų</string>
+    <string name="pref_passkey_manager_description">Kai trečiųjų šalių programos registruoja prisijungimo raktus, microG saugo vietinį įrašą. Jei programa ištrina prisijungimo raktą nepranešusi microG, įrašas gali likti įstrigęs. Čia galite pašalinti tokius likusius įrašus.</string>
+    <string name="pref_passkey_manager_delete_dialog_title">Ištrinti prisijungimo raktą</string>
+    <string name="pref_passkey_manager_delete_dialog_message">Ištrinti prisijungimo raktą, skirtą „%2$s“, įrenginyje „%1$s“. Šio veiksmo negalima atšaukti; norėdami vėl prisijungti, turėsite užregistruoti naują prisijungimo raktą.</string>
+    <string name="pref_passkey_manager_delete_dialog_confirm">Ištrinti</string>
+    <string name="pref_passkey_manager_unknown_user">Nežinomas vartotojas</string>
+    <string name="pref_passkey_manager_transport_screen_lock">Ekrano užraktas</string>
+    <string name="pref_passkey_manager_transport_usb">USB</string>
+    <string name="pref_passkey_manager_transport_nfc">NFC</string>
+    <string name="pref_passkey_manager_transport_bluetooth">Bluetooth</string>
+    <string name="pref_passkey_manager_transport_hybrid">Hibridinis</string>
+    <string name="pref_passkey_manager_credential_id_format_internal">ID: %1$s</string>
+    <string name="self_check_resolution_oem_restriction">Jūsų sistema gali apriboti foninius procesus. Bakstelėkite čia, kad atidarytumėte svetainę „Don\'t Kill My App!“ ir sužinotumėte, kaip išjungti šiuos apribojimus</string>
+    <string name="morphe_sign_in_with_google_microg_label">Prisijunkite su „Google“ per „MicroG RE“</string>
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Įdiegtas netinkamas architektūros variantas</string>
+    <string name="abi_mismatch_message">"Ši MicroG-RE versija turi tik 64 bitų (arm64) bibliotekas, tačiau šiame įrenginyje naudojama 32 bitų vartotojo erdvė.
+
+Funkcijos, kurioms reikia Conscrypt (prisijungimas prie paskyros, srautinis atkūrimas, BotGuard, vaizdo srautų klastojimas, SponsorBlock, Return YouTube Dislike ir kt.), neveiks tinkamai ir gali sukelti atkūrimo problemų arba klaidą \"Nepavyksta rasti numatytojo SSL teikėjo\".
+
+Vietoj to įdiekite ARMv7 arba Universal APK."</string>
+    <string name="abi_mismatch_download_armv7">Atsisiųsti ARMv7 APK</string>
+    <string name="abi_mismatch_downloading_title">Atsisiunčiamas tinkamas variantas…</string>
 </resources>
