@@ -120,7 +120,9 @@ class ChimeGmsRegistrationHelper(val context: Context) {
             channel = Channel.GCM_DEVICE_PUSH
             appRegistrationContainer = AppRegistrationContainer.build {
                 appRegistration = AppRegistration.build {
-                    packageName = Constants.GMS_PACKAGE_NAME
+                    // Registration is only accepted for Play services' own package, not
+                    // for a renamed build: anything else fails with gRPC INVALID_ARGUMENT.
+                    packageName = Constants.GOOGLE_GMS_PACKAGE_NAME
                     androidId = LastCheckinInfo.read(context).androidId
                     regId = gmsRegId
                 }

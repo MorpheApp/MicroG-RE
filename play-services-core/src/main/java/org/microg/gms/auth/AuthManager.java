@@ -16,6 +16,7 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import org.microg.gms.accountaction.ErrorResolverKt;
 import org.microg.gms.accountaction.Resolution;
+import org.microg.gms.common.Constants;
 import org.microg.gms.common.NotOkayException;
 import org.microg.gms.common.PackageSpoofUtils;
 import org.microg.gms.common.PackageUtils;
@@ -29,6 +30,7 @@ import static android.content.pm.ApplicationInfo.FLAG_SYSTEM;
 import static android.content.pm.ApplicationInfo.FLAG_UPDATED_SYSTEM_APP;
 import static android.os.Build.VERSION.SDK_INT;
 import static org.microg.gms.auth.AuthPrefs.isTrustGooglePermitted;
+import static org.microg.gms.gcm.ExtensionsKt.GMS_NOTS_OAUTH_SERVICE;
 
 public class AuthManager {
 
@@ -361,6 +363,13 @@ public class AuthManager {
             request.callerIsGms().calledFromAccountManager();
         } else {
             request.callerIsApp();
+        }
+        // Google only issues the notifications token (the one Google Prompt number
+        // matching rides on) to its own package. A request microG makes for itself has
+        // to identify as Play services: claiming this build's own name is rejected as
+        // UNREGISTERED_ON_API_CONSOLE and no prompt ever reaches the device.
+        if (Constants.GMS_PACKAGE_NAME.equals(packageName) && GMS_NOTS_OAUTH_SERVICE.equals(service)) {
+            request.app(Constants.GOOGLE_GMS_PACKAGE_NAME, Constants.GMS_PACKAGE_SIGNATURE_SHA1);
         }
         AuthResponse response = request.getResponse();
         if (!isPermitted() && !isTrustGooglePermitted(context)) {
