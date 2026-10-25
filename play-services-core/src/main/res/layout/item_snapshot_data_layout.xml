@@ -36,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:textSize="12sp"
-                android:textColor="@android:color/darker_gray"
+                android:textColor="?android:attr/textColorSecondary"
                 app:layout_constraintTop_toBottomOf="@id/snapshot_image"
                 app:layout_constraintStart_toStartOf="@id/snapshot_image"/>
 
@@ -46,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:textSize="14sp"
-                android:textColor="@android:color/black"
+                android:textColor="?android:attr/textColorPrimary"
                 app:layout_constraintTop_toBottomOf="@id/snapshot_time"
                 app:layout_constraintStart_toStartOf="@id/snapshot_image"/>
 
