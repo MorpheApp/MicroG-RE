@@ -17,10 +17,13 @@
 package org.microg.gms.ui.updater
 
 import android.app.Application
+import android.os.Build
+import com.google.android.material.color.DynamicColors
 
 /**
- * Schedules the daily background update check on app start, so the alarm exists even if
- * the user never opens the settings screen or reboots.
+ * Applies the wallpaper colour scheme on Android 12+, and schedules the daily background
+ * update check on app start so the alarm exists even if the user never opens the settings
+ * screen or reboots.
  *
  * [UpdateCheckScheduler.schedule] is idempotent: it registers the same PendingIntent, so
  * re-calling it (from any process or any later launch) refreshes the existing alarm
@@ -30,6 +33,11 @@ class UpdaterApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        // The values-v31 theme pins the md_theme palette, and this overlay is applied on
+        // top of it, so the wallpaper colours win wherever the system provides them.
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            DynamicColors.applyToActivitiesIfAvailable(this)
+        }
         UpdateCheckScheduler.schedule(this)
         AppUpdater.persistDevChannelIfNeeded(this)
     }
