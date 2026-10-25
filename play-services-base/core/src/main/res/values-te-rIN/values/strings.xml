@@ -3,4 +3,22 @@
   ~ SPDX-FileCopyrightText: 2020, microG Project Team
   ~ SPDX-License-Identifier: Apache-2.0
   -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="foreground_service_notification_title">బ్యాక్ గ్రౌండ్ లో నడుస్తోంది</string>
+    <string name="foreground_service_notification_text"><xliff:g example="Exposure Notification">%1$s</xliff:g> బ్యాక్గ్రౌండ్ లో నడుస్తోంది</string>
+    <string name="foreground_service_notification_big_text"><xliff:g example="microG Services">%1$s</xliff:g>నీ బ్యాటరీ ఆప్టమైజేషన్ నుంచి తొలగించండి లేదా నువ్వు తిప్పేసి సెట్టింగ్స్ లో ఈ నోటిఫికేషన్ ని ఆపండి</string>
+    <string name="foreground_action_battery_optimization">బ్యాటరీ ఆప్టిమైసేషన్</string>
+    <string name="foreground_action_notification_settings">సెట్టింగ్‌లు</string>
+    <string name="menu_advanced">ఆధునికమైన</string>
+    <string name="menu_settings">సెట్టింగ్‌లు</string>
+    <string name="menu_game_managed">ఏం ఖాతాలు మేనేజ్ చేయబడ్డాయి</string>
+    <string name="list_no_item_none">ఏం లేవు</string>
+    <string name="list_item_see_all">అన్ని చూపి</string>
+    <string name="open_app">తేరు </string>
+    <string name="service_status_disabled">నిలిపివే</string>
+    <string name="service_status_enabled">ప్రారంభించు</string>
+    <string name="service_status_automatic">స్వయం చాలకం</string>
+    <string name="service_status_manual">మాన్యువల్</string>
+    <string name="service_status_enabled_short">చేయి </string>
+    <string name="service_status_disabled_short">ఆపు </string>
+</resources>

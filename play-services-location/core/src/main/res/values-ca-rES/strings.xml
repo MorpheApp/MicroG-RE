@@ -4,6 +4,7 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="location_settings_dialog_btn_sure">OK</string>
     <!-- RE strings -->
     <!-- "Mapbox (MapLibre)" must be left untranslated .-->
     <!-- "Stadia Maps" must be left untranslated .-->

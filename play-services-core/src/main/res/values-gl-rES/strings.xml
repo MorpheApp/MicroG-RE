@@ -213,9 +213,17 @@ Algunhas aplicacións poderán non ser capaces de rexistrarse de novo tras esta 
     <string name="credentials_assisted_cancel">Cancelar</string>
     <string name="credentials_assisted_continue">Continuar</string>
     <string name="credentials_assisted_choose_account_subtitle">para continuar a %1$s</string>
+    <string name="games_snapshot_delete_btn_text">eliminar</string>
     <string name="games_delete_snapshot_dialog_cancel">Cancelar</string>
+    <string name="games_delete_snapshot_dialog_ok">OK</string>
+    <string name="games_state_description_delete">Eliminar</string>
+    <string name="family_management_retry">Tentar de novo</string>
+    <string name="family_management_toolbar_back">Atrás</string>
     <string name="family_management_delete_group_cancel">Cancelar</string>
+    <string name="family_management_delete_group_confirm">OK</string>
+    <string name="camera_permission_dialog_button">OK</string>
     <!-- Passkey management -->
+    <string name="pref_passkey_manager_delete_dialog_confirm">Eliminar</string>
     <string name="self_check_cat_patched_apps">Aplicacións parcheadas</string>
     <string name="self_check_source_morphe">Parches de Morphe</string>
     <string name="self_check_source_alternative">parches alternativos</string>
