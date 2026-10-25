@@ -23,7 +23,7 @@
         <TextView
             android:id="@+id/tv_game_name"
             android:textSize="12dp"
-            android:textColor="@android:color/black"
+            android:textColor="?android:attr/textColorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 

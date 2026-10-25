@@ -29,7 +29,9 @@ class InGameUiActivity : AppCompatActivity() {
     @SuppressLint("CommitTransaction")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setTheme(R.style.ThemeTranslucentCommon)
+        // The theme comes from the manifest. Calling setTheme() here was too late for the
+        // window and left the views on a different theme than the background, which is why
+        // dark mode gave light text on a white surface.
         Log.d(TAG, "InGameUiActivity onCreate: clientPackageName:$clientPackageName")
         if (clientPackageName == null || accountKey == null) {
             Log.d(TAG, "InGameUiActivity finishResult: params invalid")

@@ -821,7 +821,7 @@
             android:name="org.microg.gms.games.ui.GamePlayDataActivity"
             android:process=":ui"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:theme="@style/Theme.App"/>
 
         <activity
             android:name="org.microg.gms.games.ui.InGameUiActivity"
@@ -830,7 +830,7 @@
             android:excludeFromRecents="false"
             android:exported="true"
             android:launchMode="singleTask"
-            android:theme="@style/Theme.AppCompat.Dialog.Alert">
+            android:theme="@style/Theme.App">
             <intent-filter>
                 <action android:name="${basePackageName}.android.gms.games.SHOW_SELECT_SNAPSHOT"/>
                 <action android:name="${basePackageName}.android.gms.games.VIEW_ACHIEVEMENTS" />
