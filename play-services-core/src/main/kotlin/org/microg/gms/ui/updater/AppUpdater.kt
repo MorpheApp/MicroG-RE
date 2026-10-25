@@ -786,11 +786,16 @@ object AppUpdater {
             if (includePrerelease || strictVariantMatch) {
                 val text = httpGet("$RELEASES_URL?per_page=20") ?: return null
                 val all = Gson().fromJson(text, JsonArray::class.java) ?: return null
-                all.asSequence().mapNotNull { el ->
-                    el.asJsonObject?.let { parseReleaseObject(it, noiconVariant, strictVariantMatch) }
-                }.maxWithOrNull { a, b ->
-                    compareVersions(a.version, b.version)
-                }
+                all.asSequence()
+                    // The list is only fetched to find a matching variant, but it still has to
+                    // respect the channel: a newer pre-release outranks the latest stable, so
+                    // without this a stable build is quietly offered a pre-release.
+                    .filter { includePrerelease || it.asJsonObject?.get("prerelease")?.asBoolean != true }
+                    .mapNotNull { el ->
+                        el.asJsonObject?.let { parseReleaseObject(it, noiconVariant, strictVariantMatch) }
+                    }.maxWithOrNull { a, b ->
+                        compareVersions(a.version, b.version)
+                    }
             } else {
                 val text = httpGet(UPDATE_URL) ?: return null
                 parseReleaseObject(
