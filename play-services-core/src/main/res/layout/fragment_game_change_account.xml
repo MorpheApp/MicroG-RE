@@ -15,7 +15,7 @@
         <TextView
             android:text="@string/games_change_default_account_section_title"
             android:textSize="16dp"
-            android:textColor="@android:color/black"
+            android:textColor="?android:attr/textColorPrimary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -56,7 +56,7 @@
         <TextView
             android:text="@string/games_change_per_game_title"
             android:textSize="16dp"
-            android:textColor="@android:color/black"
+            android:textColor="?android:attr/textColorPrimary"
             android:layout_marginTop="32dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

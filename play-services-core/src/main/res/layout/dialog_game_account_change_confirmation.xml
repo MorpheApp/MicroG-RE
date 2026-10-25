@@ -31,7 +31,7 @@
                 android:id="@+id/tv_game_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/black"
+                android:textColor="?android:attr/textColorPrimary"
                 android:textSize="14dp" />
 
             <TextView
@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:text="@string/games_change_default_account_for_all_games_dialog_title"
-        android:textColor="@android:color/black"
+        android:textColor="?android:attr/textColorPrimary"
         android:textSize="15dp" />
 
     <TextView
@@ -65,7 +65,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#cccccc" />
+        android:background="?android:attr/listDivider" />
 
     <LinearLayout
         android:id="@+id/llt_radio_choose_container"
