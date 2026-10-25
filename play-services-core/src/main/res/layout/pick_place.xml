@@ -91,12 +91,12 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="#7f7f7f7f"/>
+        android:background="?android:attr/listDivider"/>
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#fff1f1f1"
+        android:background="?android:attr/colorBackground"
         android:focusable="false"
         android:orientation="vertical"
         android:paddingLeft="8.0dip"
@@ -111,7 +111,7 @@
             android:text="@string/place_picker_nearby_places"
             android:textAllCaps="true"
             android:textAppearance="?android:textAppearanceSmall"
-            android:textColor="#ff7f7f7f"
+            android:textColor="?android:attr/textColorSecondary"
             android:textStyle="bold"/>
 
         <RelativeLayout
@@ -126,7 +126,7 @@
                 android:padding="16.0dip"
                 android:text="Can't load nearby places."
                 android:textAppearance="?android:textAppearanceLarge"
-                android:textColor="#ff7f7f7f"/>
+                android:textColor="?android:attr/textColorSecondary"/>
         </RelativeLayout>
     </LinearLayout>
 

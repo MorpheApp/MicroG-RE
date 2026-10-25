@@ -64,7 +64,9 @@ class AssistedSignInActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setTheme(R.style.ThemeTranslucentCommon)
+        // The theme comes from the manifest. Calling setTheme() here was too late for the
+        // window and left the views on a different theme than the background, which broke
+        // dark mode.
         Log.d(TAG, "onCreate: clientPackageName:$clientPackageName")
         if (clientPackageName == null || (clientPackageName != callingActivity?.packageName && callingActivity?.packageName != this.packageName)) return errorResult(
             Status(

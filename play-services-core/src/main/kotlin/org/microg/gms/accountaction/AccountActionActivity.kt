@@ -7,6 +7,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.annotation.RequiresApi
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.padding
@@ -18,6 +19,8 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.darkColorScheme
+import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.ui.Alignment
@@ -48,8 +51,12 @@ class AccountActionActivity : ComponentActivity() {
         val accountName = intent.getStringExtra(INTENT_KEY_ACCOUNT_NAME) ?: "<?>"
 
         setContent {
-            Content(accountName, taskMap.toMap()) {
-                finish()
+            // Without a MaterialTheme the composition falls back to the light colour scheme,
+            // so this screen ignored dark mode.
+            MaterialTheme(colorScheme = if (isSystemInDarkTheme()) darkColorScheme() else lightColorScheme()) {
+                Content(accountName, taskMap.toMap()) {
+                    finish()
+                }
             }
         }
     }

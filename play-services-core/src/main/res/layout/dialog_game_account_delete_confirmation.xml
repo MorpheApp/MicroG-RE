@@ -16,7 +16,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:background="@android:color/darker_gray"
+        android:background="?android:attr/listDivider"
         android:layout_height="1dp"/>
 
     <TextView

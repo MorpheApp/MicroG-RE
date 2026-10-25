@@ -18,7 +18,7 @@
         android:layout_marginStart="16dp"
         android:textSize="22sp"
         android:typeface="sans"
-        android:textColor="@android:color/black"
+        android:textColor="?android:attr/textColorPrimary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
