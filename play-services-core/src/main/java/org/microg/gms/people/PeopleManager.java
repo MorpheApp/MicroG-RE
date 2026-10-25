@@ -96,6 +96,10 @@ public class PeopleManager {
         if (!network) return null;
         try {
             URLConnection conn = new URL(url).openConnection();
+            // RE changes start
+            conn.setConnectTimeout(15000);
+            conn.setReadTimeout(30000);
+            // RE changes end
             conn.setDoInput(true);
             byte[] bytes = Utils.readStreamToEnd(conn.getInputStream());
             FileOutputStream outputStream = new FileOutputStream(file);
@@ -129,6 +133,10 @@ public class PeopleManager {
     public static String loadUserInfo(Context context, Account account) {
         try {
             URLConnection conn = new URL(USERINFO_URL).openConnection();
+            // RE changes start
+            conn.setConnectTimeout(15000);
+            conn.setReadTimeout(30000);
+            // RE changes end
             conn.addRequestProperty("Authorization", "Bearer " + getUserInfoAuthKey(context, account));
             conn.setDoInput(true);
             byte[] bytes = Utils.readStreamToEnd(conn.getInputStream());
