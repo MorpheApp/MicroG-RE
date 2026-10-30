@@ -20,8 +20,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.CrossProfileApps;
 import android.content.pm.PackageManager;
-import android.content.pm.PermissionInfo;
-import android.net.Uri;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -99,7 +97,6 @@ public class SelfCheckFragment extends AbstractSelfCheckFragment {
                 @Override
                 public void doChecks(Context context, ResultCollector collector) {
                     super.doChecks(context, collector);
-                    PackageManager pm = context.getPackageManager();
                     // Notifications: mirror MicroG-RE — open notification settings instead of requesting
                     // POST_NOTIFICATIONS, which the system silently auto-dismisses when the app-op is blocked
                     if (SDK_INT >= 33) {
@@ -115,26 +112,6 @@ public class SelfCheckFragment extends AbstractSelfCheckFragment {
                                 }
                         );
                     }
-
-                    // RE changes start
-                    // Add SYSTEM_ALERT_WINDOW appops permission. Advisory: the targeted apps work
-                    // without it, so the row is listed but cannot fail the check.
-                    if (false) try {
-                        PermissionInfo info = pm.getPermissionInfo("android.permission.SYSTEM_ALERT_WINDOW", 0);
-                        CharSequence permLabel = info.loadLabel(pm);
-                        collector.addResult(
-                                context.getString(org.microg.tools.ui.R.string.self_check_name_permission, permLabel),
-                                Settings.canDrawOverlays(context) ? Result.Positive : Result.Advisory,
-                                context.getString(org.microg.tools.ui.R.string.self_check_resolution_permission),
-                                fragment -> {
-                                    Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:" + context.getPackageName()));
-                                    startActivityForResult(intent, 42);
-                                }
-                        );
-                    } catch (Exception e) {
-                        Log.w("SelfCheckPerms", e);
-                    }
-                    // RE changes end
 
                     // Add INTERACT_ACROSS_PROFILES appop permission (INTERACT_ACROSS_USERS is superior),
                     // advisory for the same reason as the permission above.
