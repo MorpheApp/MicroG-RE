@@ -4,8 +4,65 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="service_name_location">ቦታ</string>
+    <string name="prefcat_location_apps_title">የቅርብ ጊዜ መዳረሻ</string>
+    <string name="prefcat_location_wifi_title">የዋይ-ፋይ መገኛ</string>
+    <string name="prefcat_location_cell_title">የሞባይል ኔትወርክ መገኛ</string>
+    <string name="prefcat_geocoder_title">የአድራሻ መፍቻ</string>
+    <string name="pref_location_wifi_online_enabled_title">ከኦንላይን አገልግሎት ይጠይቅ</string>
+    <string name="pref_location_wifi_online_enabled_summary">በዋይ ፋይ ላይ የተመሰረተ መገኛን ከኦንላይን መገኛ አገልግሎት ያግኙ።</string>
+    <string name="pref_location_wifi_moving_enabled_title">ከሆትስፖት ይጠይቅ</string>
+    <string name="pref_location_wifi_moving_enabled_summary">ሲገናኙ የዋይ ፋይ መገኛን በቀጥታ ከተደገፉ ሆትስፖቶች ያግኙ።</string>
+    <string name="pref_location_wifi_learning_enabled_title">ከ GPS ያስታውስ</string>
+    <string name="pref_location_wifi_learning_enabled_summary">GPS ጥቅም ላይ በሚውልበት ጊዜ የዋይ ፋይ መገኛዎችን በ localization ያከማቹ።</string>
+    <string name="pref_location_cell_online_enabled_title">ከኦንላይን አገልግሎት ይጠይቅ</string>
+    <string name="pref_location_cell_online_enabled_summary">የሞባይል ኔትወርክ የሴል ታወር ቦታዎችን ከኦንላይን የቦታ አገልግሎት ያግኝ።</string>
+    <string name="pref_location_cell_learning_enabled_title">ከGPS አስታውስ</string>
+    <string name="pref_location_cell_learning_enabled_summary">GPS ጥቅም ላይ ሲውል የሞባይል ኔትወርክ ቦታዎችን በlocally ያስቀምጥ።</string>
+    <string name="pref_geocoder_nominatim_enabled_title">Nominatim ይጠቀሙ</string>
+    <string name="pref_geocoder_nominatim_enabled_summary">OpenStreetMap Nominatimን በመጠቀም አድራሻዎችን ይፍቱ።</string>
+    <string name="fragment_location_apps_title">የቦታ መዳረሻ ያላቸው መተግበሪያዎች</string>
+    <string name="location_app_last_access_at">የመጨረሻ መዳረሻ፦ <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="pref_location_app_force_coarse_title">ደብዛዛ ቦታን ያስገድድ</string>
+    <string name="pref_location_app_force_coarse_summary">የፈቃድ ደረጃውን በመተንፈስ፣ ለዚህ መተግበሪያ ሁል ጊዜ ደብዛዛ ቦታዎችን ይመልሱ።</string>
+    <string name="prefcat_app_last_location">የመጨረሻው ሪፖርት የተደረገ ቦታ</string>
+    <string name="location_settings_dialog_message_title_for_better_experience">ለተሻለ ተሞክሮ፣ የmicroG የቦታ አገልግሎትን የሚጠቀም የመሣሪያ ቦታን ያብሩ</string>
+    <string name="location_settings_dialog_message_title_to_continue">ለመቀጠል፣ የmicroG የቦታ አገልግሎትን የሚጠቀም የመሣሪያ ቦታን ያብሩ</string>
+    <string name="location_settings_dialog_message_details_start_paragraph">መሣሪያዎ የሚከተሉትን ማድረግ ይኖርበታል፦</string>
+    <string name="location_settings_dialog_message_location_services_gps_and_nlp">GPS፣ Wi‑Fi፣ የሴል ኔትወርኮችን እና ሴንሰሮችን ይጠቀሙ</string>
+    <string name="location_settings_dialog_message_grant_permissions">ለmicroG አገልግሎት የቦታ ፈቃዶችን ይስጡ</string>
+    <string name="location_settings_dialog_message_gls_consent">የmicroG የቦታ አገልግሎትን ይጠቀሙ፤ የዚህ አገልግሎት አካል በመሆን፣ microG የቦታ መረጃዎችን በየጊዜው ሊሰበስብ እና የቦታ ትክክለኛነትን እና በቦታ ላይ የተመሰረቱ አገልግሎቶችን ለማሻሻል ይህንን መረጃ በስም አልባ መንገድ ሊጠቀም ይችላል።</string>
+    <string name="location_settings_dialog_message_details_end_paragraph">ለዝርዝር መረጃ ወደ ቦታ ማስተካከያዎች ይሂዱ።</string>
+    <string name="location_settings_dialog_btn_cancel">አይሆንም፣ አመሰግናለሁ</string>
+    <string name="location_settings_dialog_btn_sure">እሺ</string>
+    <string name="pref_location_custom_url_summary">ይህ የራስዎን የ दिसते አገልግሎት URL ለመወሰን ያስችላል። ትክክል ያልሆኑ እሴቶች የቦታ አገልግሎቶች ምላሽ እንዳይሰጡ ወይም ሙሉ በሙሉ እንዳይገኙ ሊያደርጉ ይችላሉ።</string>
+    <string name="pref_location_custom_url_details">የ /v1/geolocate መንገድ በራሱ ይጨመራል። የቦታ አቅራቢው ቁልፍ የሚፈልግ ከሆነ፣ እንደ መጠይቅ ማካካያ ወደ ዋናው URL መጨመር ይቻላል።</string>
+    <string name="pref_location_custom_url_input_hint">የተበየለ የአገልግሎት URL</string>
+    <string name="pref_location_custom_source_title">የተበየለ</string>
+    <string name="pref_location_source_title">የመስመር ላይ የቦታ አገልግሎትን ይምረጡ</string>
+    <string name="pref_location_source_terms">ውሎች / ግላዊነት</string>
+    <string name="pref_location_source_suggested">የሚመከር</string>
+    <string name="pref_location_import_export_title">የቦታ መረጃን አስመጥተው ወይም ላክተው</string>
+    <string name="notification_config_required_title">ቅንብር ያስፈልጋል</string>
+    <string name="notification_config_required_text_online_sources">የበይነመረብ የቦታ አገልግሎቶችን መጠቀም ለመቀጠል፣ የቦታ መረጃ አገልግሎትን መምረጥ ያስፈልግዎታል።</string>
+    <string name="location_data_export_wifi_title">የአካባቢ ዋይ-ፋይ የቦታ ዳታቤዝን ላክ</string>
+    <string name="location_data_export_cell_title">የአካባቢ የሴል ታወር የቦታ ዳታቤዝን ላክ</string>
+    <string name="location_data_import_title">የቦታ መረጃን ከፋይል አስገባ</string>
+    <string name="location_data_import_result_toast">%1$d መዝገቦች ገብተዋል።</string>
+    <string name="prefcat_location_timeline_title">የGoogle Maps የጊዜ መስመር</string>
+    <string name="pref_location_timeline_title">የቦታ ታሪኩን አግብር</string>
+    <string name="pref_location_timeline_summary">"የቦታ መረጃዎን በየጊዜው ይመዝግቡ እና ለጉግል ካርታ የጊዜ መስመር እንዲያገለግል ያድርጉ።"</string>
+    <string name="pref_location_timeline_upload_title">ከጉግል አካውንት ጋር አቀናጅ</string>
+    <string name="pref_location_timeline_upload_summary">"የቦታ ታሪኩን በሌሎች መሳሪያዎች ላይ እንዲታይ በጉግል ሰርቨሮች ላይ አቀናጅ።"</string>
     <!-- RE strings -->
+    <string name="prefcat_location_maps_title">Google Maps</string>
+    <string name="pref_map_engine_title">የካርታ ረндеረር</string>
     <!-- "Mapbox (MapLibre)" must be left untranslated .-->
+    <string name="pref_map_engine_summary">በመተግበሪያዎች ውስጥ ካርታዎችን ለመሳል የሚያገለግለውን ኢንጂን ይምረጡ። Mapbox (MapLibre) ይመከራል።</string>
     <!-- "Stadia Maps" must be left untranslated .-->
+    <string name="pref_stadia_key_title">የStadia Maps API ቁልፍ</string>
+    <string name="pref_stadia_key_summary">አማራጭ። የStadia Maps ረндеረር አማራጭን ይጨምራል፤ Stadia የAPI ቁልፍ ይጠይቃል።</string>
     <!-- "HMS (Huawei Map Kit)" must be left untranslated .-->
+    <string name="pref_hms_key_title">የHMS (Huawei Map Kit) API ቁልፍ</string>
+    <string name="pref_hms_key_summary">አማራጭ። የHMS ረндеረር አማራጭን ይጨምራል፤ በስልኩ ላይ HMS Core ያስፈልጋል።</string>
 </resources>

@@ -3,4 +3,22 @@
   ~ SPDX-FileCopyrightText: 2020, microG Project Team
   ~ SPDX-License-Identifier: Apache-2.0
   -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="foreground_service_notification_title">Aktiivne taustal</string>
+    <string name="foreground_service_notification_text"><xliff:g example="Exposure Notification">%1$s</xliff:g> töötab taustal.</string>
+    <string name="foreground_service_notification_big_text">Väljaosta <xliff:g example="microG Services">%1$s</xliff:g> akkuoptimeerimisest või muuda teavituste seadeid, et see teavitus peidaksid.</string>
+    <string name="foreground_action_battery_optimization">Aku optimeerimine</string>
+    <string name="foreground_action_notification_settings">Seaded</string>
+    <string name="menu_advanced">Täpsemad seaded</string>
+    <string name="menu_settings">Seaded</string>
+    <string name="menu_game_managed">Mängukontode haldamine</string>
+    <string name="list_no_item_none">None</string>
+    <string name="list_item_see_all">Vaata kõiki</string>
+    <string name="open_app">Ava</string>
+    <string name="service_status_disabled">Välja lülitatud</string>
+    <string name="service_status_enabled">Sisse lülitatud</string>
+    <string name="service_status_automatic">Automaatne</string>
+    <string name="service_status_manual">Käsipuhastus</string>
+    <string name="service_status_enabled_short">Pa sees</string>
+    <string name="service_status_disabled_short">Pa väljas</string>
+</resources>

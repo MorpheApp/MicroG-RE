@@ -14,4 +14,17 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="gcm_registered_apps_counter">
+        <item quantity="one"><xliff:g example="1">%1$d</xliff:g> aplicació registrada</item>
+        <item quantity="other"><xliff:g example="123">%1$d</xliff:g> aplicacions registrades</item>
+    </plurals>
+    <plurals name="cond_perm_summary">
+        <item quantity="one">No s\'ha concedit un permís necessari per al bon funcionament dels serveis de microG.</item>
+        <item quantity="other">No s\'han concedit els permisos necessaris per al bon funcionament dels serveis de microG.</item>
+    </plurals>
+    <plurals name="cond_perm_action">
+        <item quantity="one">Sol·licita el permís faltant</item>
+        <item quantity="other">Sol·licita els permisos faltants</item>
+    </plurals>
+</resources>

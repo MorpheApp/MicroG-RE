@@ -15,5 +15,21 @@
   ~ limitations under the License.
   -->
 <resources>
+    <string name="lib_name">microG UI Tresnak</string>
+    <string name="lib_license">Apache License 2.0, microG Taldea</string>
+    <string name="about_version_str">Bertsioa %1$s</string>
+    <string name="about_default_license">Eskubide guztiak erreserbatuak.</string>
+    <string name="prefcat_setup">Konfigurazioa</string>
+    <string name="self_check_title">Autoevaluatzea</string>
+    <string name="self_check_desc">Egiaztatu sistemak microG erabiltzeko konfigurazio zuzena duen.</string>
+    <string name="self_check_cat_permissions">Baimenak eman dira</string>
+    <string name="self_check_name_permission">Baimena %1$s-ri/ari:</string>
+    <string name="self_check_name_permission_interact_across_profiles">Lan-profilarekin interagatzeko baimena:</string>
+    <string name="self_check_resolution_permission">Sakatu hemen baimena emateko. Baimena eman ez bada, aplikazioek ez egon daitezke.</string>
+    <string name="about_root_title">microG-ren UI Demoa</string>
+    <string name="about_root_summary">Laburpena</string>
+    <string name="about_root_version">Bertsioa v0.1.0</string>
+    <string name="about_root_libraries">Inklutatutako liburutegiak</string>
     <!--Settings About-->
+    <string name="about_morphe_description">Morphe proiektu open-source bat da, Android aplikazioak patch-en bidez modifyatzeko diseinatua</string>
 </resources>

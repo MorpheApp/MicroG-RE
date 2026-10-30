@@ -3,4 +3,22 @@
   ~ SPDX-FileCopyrightText: 2020, microG Project Team
   ~ SPDX-License-Identifier: Apache-2.0
   -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="foreground_service_notification_title">აქტიურია ფონურ რეჟიმში</string>
+    <string name="foreground_service_notification_text"><xliff:g example="Exposure Notification">%1$s</xliff:g> მუშაობს ფონურ რეჟიმში.</string>
+    <string name="foreground_service_notification_big_text">გამორიცხეთ <xliff:g example="microG Services">%1$s</xliff:g> ელემენტის ოპტიმიზაციისგან ან შეცვალეთ შეტყობინებების პარამეტრები ამ შეტყობინების დასამალად.</string>
+    <string name="foreground_action_battery_optimization">ბატარეის ოპტიმიზაცია</string>
+    <string name="foreground_action_notification_settings">პარამეტრები</string>
+    <string name="menu_advanced">გაფართოებული</string>
+    <string name="menu_settings">პარამეტრები</string>
+    <string name="menu_game_managed">მართული თამაშის ანგარიშები</string>
+    <string name="list_no_item_none">არცერთი</string>
+    <string name="list_item_see_all">ყველას ნახვა</string>
+    <string name="open_app">გახსნა</string>
+    <string name="service_status_disabled">გამორთვებული</string>
+    <string name="service_status_enabled">ჩართული</string>
+    <string name="service_status_automatic">ავტომატური</string>
+    <string name="service_status_manual">მანუალური</string>
+    <string name="service_status_enabled_short">ჩართულია</string>
+    <string name="service_status_disabled_short">გამორთულია</string>
+</resources>

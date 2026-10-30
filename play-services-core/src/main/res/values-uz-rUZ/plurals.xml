@@ -19,4 +19,12 @@
         <item quantity="one"><xliff:g example="1">%1$d</xliff:g> ilova ro\'yxatga olingan</item>
         <item quantity="other"><xliff:g example="123">%1$d</xliff:g> ta ilova ro\'yxatga olingan</item>
     </plurals>
+    <plurals name="cond_perm_summary">
+        <item quantity="one">microG xizmatlarining to\'g\'ri ishlashi uchun zarur bo\'lgan ruxsatnoma berilmagan.</item>
+        <item quantity="other">microG xizmatlarining to\'g\'ri ishlashi uchun zarur bo\'lgan ruxsatnomalar berilmagan.</item>
+    </plurals>
+    <plurals name="cond_perm_action">
+        <item quantity="one">Yetishmayotgan ruxsatnomani so\'rash</item>
+        <item quantity="other">Yetishmayotgan ruxsatnomalarni so\'rash</item>
+    </plurals>
 </resources>

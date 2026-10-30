@@ -4,9 +4,374 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="gms_settings_name">MicroG सेटिंग्ज</string>
+    <string name="gms_settings_summary">MicroG सेवा सेटअप करा.</string>
+    <string name="auth_before_connect">microG सह Google खाते कनेक्ट करा.\n\nचला Google खात्याशी कनेक्ट होऊया, <b>Sign in</b> बटण वापरा किंवा तुमच्याकडे या उत्पादकाचे डिव्हाइस असल्यास <b>Huawei</b> बटण वापरा. बटणांपैकी एक दाबून तुम्हाला तुमच्या खात्यात लॉग इन करण्याच्या पृष्ठावर निर्देशित केले जाईल.</string>
+    <string name="no_network_error_desc">"तुमच्याकडे नेटवर्क कनेक्शन नाही.
+
+ही एक तात्पुरती समस्या असू शकते किंवा तुमच्या Android डिव्हाइससाठी डेटा सेवांची तरतूद केलेली नसेल. मोबाईल नेटवर्कशी कनेक्ट झाल्यावर पुन्हा प्रयत्न करा, किंवा वाय-फाय नेटवर्कशी कनेक्ट करा."</string>
+    <string name="auth_general_error_desc">"Google सर्व्हरशी संवाद साधताना समस्या आली.
+
+नंतर पुन्हा प्रयत्न करा."</string>
+    <string name="auth_finalize">"तुमचे डिव्हाइस तुमच्या खात्यात माहिती जतन करण्यासाठी Google शी संपर्क साधत आहे.
+
+यासाठी काही मिनिटे लागू शकतात."</string>
+    <string name="auth_notification_content">तुमच्या Google खात्यात प्रवेश करण्यासाठी <xliff:g example="F-Droid">%1$s</xliff:g> ला तुमच्या अधिकृततेची आवश्यकता आहे.</string>
+    <string name="auth_package_override_request_title"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> ला <xliff:g example="account@example.com">%2$s</xliff:g> साठी विशेषाधिकार प्राप्त प्रवेशाची परवानगी द्यायची का?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> ला तुमच्या खात्यात <b><xliff:g example="F-Droid">%2$s</xliff:g> by <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b> असल्याप्रमाणे प्रवेश करण्याची इच्छा आहे. यामुळे त्याला तुमच्या खात्याचा विशेषाधिकार असलेला प्रवेश मिळू शकतो.</string>
+    <string name="auth_action_notification_channel_name">Google खाते अलर्ट</string>
+    <string name="auth_action_notification_channel_description">तुमच्या Google खात्यांपैकी एकाला वापरण्यापूर्वी अतिरिक्त सेटअपची आवश्यकता असल्यास किंवा एखादे खाते microG शी विसंगत असल्यास सूचित करते.</string>
+    <string name="auth_action_notification_title">खात्यासाठी कृती आवश्यक</string>
+    <string name="auth_action_notification_content">तुमच्या Google खात्यासाठी अतिरिक्त सेटअपची आवश्यकता आहे.</string>
+    <string name="auth_action_reauth_notification_title">खात्यासाठी कृती आवश्यक</string>
+    <string name="auth_action_activity_header">तुमच्या Google खात्याचा सेटअप पूर्ण करा</string>
+    <string name="auth_action_activity_explanation">या डिव्हाइसवर तुमचे Google खाते %s वापरण्यासाठी खालील पायऱ्या पूर्ण करा.</string>
+    <string name="auth_action_step_enable_checkin">डिव्हाइस नोंदणी सक्षम करा</string>
+    <string name="auth_action_step_enable_checkin_description">"तुमच्या डिव्हाइसला किमान एकदा Google कडे नोंदणी करणे आवश्यक आहे.
+
+खाते सेटअप पूर्ण झाल्यानंतर तुम्ही Google डिव्हाइस नोंदणी अक्षम करू शकता."</string>
+    <string name="auth_action_step_enable_gcm">क्लाउड मेसेजिंग सक्षम करा</string>
+    <string name="auth_action_step_enable_gcm_description">खाते सेटअप पूर्ण झाल्यावर तुम्ही क्लाउड मेसेजिंग अक्षम करू शकता.</string>
+    <string name="auth_action_step_allow_microg_gcm">microG साठी क्लाउड मेसेजिंगला परवानगी द्या</string>
+    <string name="auth_action_step_allow_microg_gcm_description">तुमच्या पसंतीनुसार, microG ला क्लाउड मेसेजिंगसाठी स्वतःची नोंदणी करण्यापूर्वी तुमच्या परवानगीची आवश्यकता आहे.</string>
+    <string name="auth_action_step_enable_lockscreen">सुरक्षित स्क्रीन लॉक कॉन्फिगर करा</string>
+    <string name="auth_action_step_enable_lockscreen_description">"तुमचे गुगल खाते तुमच्या कामाच्या ठिकाणाद्वारे किंवा शैक्षणिक संस्थेद्वारे व्यवस्थापित केले जाते. तुमच्या प्रशासकाने निर्णय घेतला आहे की खाते डेटा ॲक्सेस करण्यापूर्वी डिव्हाइसेसना सुरक्षित स्क्रीन लॉकची आवश्यकता आहे.
+
+कृपया पासवर्ड, PIN किंवा पॅटर्न लॉक स्क्रीन सेट करा."</string>
+    <string name="auth_action_step_perform_content_description">पायरी पूर्ण करण्यासाठी क्लिक करा</string>
+    <string name="auth_action_step_completed_content_description">पायरी पूर्ण झाली</string>
+    <string name="auth_action_activity_finish">पूर्ण करा</string>
+    <string name="signin_picker_subtitle"><xliff:g example="F-Droid">%1$s</xliff:g> वर जाण्यासाठी</string>
+    <string name="signin_confirm_title">तुम्हाला <xliff:g example="F-Droid">%1$s</xliff:g> मध्ये साइन इन करण्याची परवानगी द्या</string>
+    <string name="signin_subtext_sharing">पुढे जाण्यासाठी, microG तुमच्या Google खात्याचे नाव, ईमेल पत्ता आणि प्रोफाइल फोटो <xliff:g example="F-Droid">%1$s</xliff:g> सोबत शेअर करेल.</string>
+    <string name="perm_provision_label">microG सेवा प्रोव्हिजन करा</string>
+    <string name="perm_provision_description">वापरकर्त्याच्या हस्तक्षेपाशिवाय microG सेवा कॉन्फिगर करण्याची परवानगी ॲपला देते</string>
+    <string name="perm_car_speed_label">कारचा वेग</string>
+    <string name="perm_car_speed_description">"तुमच्या कारच्या वेगाची माहिती मिळवा"</string>
+    <string name="perm_car_info_label">कारची माहिती</string>
+    <string name="perm_car_info_description">"तुमच्या कारची माहिती मिळवा"</string>
+    <string name="perm_car_fuel_label">कार इंधन पातळी</string>
+    <string name="perm_car_fuel_description">"तुमच्या कारच्या इंधन पातळीची माहिती मिळवा"</string>
+    <string name="perm_car_mileage_label">कार मायलेज</string>
+    <string name="perm_car_mileage_description">"तुमच्या कारच्या मायलेजची माहिती मिळवा"</string>
+    <string name="perm_car_vendor_extension_label">कार विक्रेता चॅनेल</string>
+    <string name="perm_car_vendor_extension_description">"कारशी संबंधित माहितीची देवाणघेवाण करण्यासाठी तुमच्या कारच्या विक्रेता चॅनेलमध्ये प्रवेश करा"</string>
+    <string name="service_name_checkin">डिवाइस नोंदणी</string>
+    <string name="service_name_mcs">क्लाउड मेसेजिंग</string>
+    <string name="service_name_device_attestation">डिवाइस सत्यापन</string>
+    <string name="service_name_vending">Play Store सेवा</string>
+    <string name="service_name_work_profile">वर्क प्रोफाइल</string>
+    <string name="games_title">Google Play गेम्स</string>
+    <string name="games_info_title"><xliff:g example="F-Droid">%1$s</xliff:g> ला Play Games वापरण्याची इच्छा आहे</string>
+    <string name="games_info_content">Play Games वापरण्यासाठी Google Play Games ॲप इंस्टॉल करणे आवश्यक आहे. हे ॲप्लिकेशन Play Games शिवाय चालू शकते, परंतु ते अनपेक्षितपणे वागण्याची शक्यता आहे.</string>
+    <string name="pick_place_title">एक ठिकाण निवडा</string>
+    <string name="place_picker_select_title">हे स्थान निवडा</string>
+    <string name="place_picker_nearby_places">जवळची ठिकाणे</string>
     <!-- Self check -->
+    <string name="self_check_name_system_spoofs">सिस्टम स्वाक्षरीची नक्कल करते: </string>
+    <string name="self_check_resolution_system_spoofs">कोणत्या पायऱ्या आवश्यक असू शकतात याबद्दल कृपया डॉक्युमेंटेशन तपासा.</string>
+    <string name="self_check_pkg_gms">microG सेवा</string>
+    <string name="self_check_pkg_vending">microG Companion / Play Store</string>
+    <string name="self_check_pkg_gsf">microG सर्व्हिसेस फ्रेमवर्क</string>
+    <string name="self_check_name_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> स्थापित आहे: </string>
+    <string name="self_check_resolution_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> किंवा सुसंगत приложение स्थापित करा. कोणती अनुप्रयोगे सुसंगत आहेत याबद्दल कृपया दस्तऐवज तपासा.</string>
+    <string name="self_check_name_correct_sig"><xliff:g example="F-Droid">%1$s</xliff:g> कडे योग्य स्वाक्षरी आहे: </string>
+    <string name="self_check_resolution_correct_sig">एकतर स्थापित <xliff:g example="F-Droid">%1$s</xliff:g> सुसंगत नाही किंवा त्यासाठी स्वाक्षरी स्पूफिंग सक्रिय नाही. कोणती अनुप्रयोगे आणि ROMs सुसंगत आहेत याबद्दल कृपया दस्तऐवज तपासा.</string>
+    <string name="self_check_name_battery_optimizations">बॅटरी ऑप्टिमाइझेशनकडे दुर्लक्ष केले:</string>
+    <string name="self_check_resolution_battery_optimizations">बॅटरी ऑप्टिमाइझेशन अक्षम करण्यासाठी येथे स्पर्श करा. असे न केल्यास अनुप्रयोगे चुकीच्या पद्धतीने कार्य करू शकतात.</string>
     <!-- Settings strings -->
+    <string name="cond_gcm_bat_summary">तुम्ही Cloud Messaging सक्षम केले आहे परंतु microG Services साठी बॅटरी ऑप्टिमायझेशन सक्रिय आहे. पुश नोटिफिकेशन्स मिळवण्यासाठी तुम्ही बॅटरी ऑप्टिमायझेशन दुर्लक्षित केले पाहिजे.</string>
+    <string name="prefs_account">खाते पसंती</string>
+    <string name="prefs_account_privacy">वैयक्तिक माहिती &amp; गोपनीयता</string>
+    <string name="prefs_account_security">साइन-इन &amp; सुरक्षा</string>
+    <string name="pref_auth_trust_google_summary">जेव्हा हे अक्षम केले जाते, तेव्हा ॲपची ऑथोरायझेशन विनंती Google कडे पाठवण्यापूर्वी वापरकर्त्याला विचारले जाते. हे अक्षम केल्यास काही ॲप्लिकेशन्सना Google खाते वापरण्यात अडचण येऊ शकते.</string>
+    <string name="pref_auth_visible_summary">सक्षम केल्यावर, या डिव्हाइसवरील सर्व ॲप्लिकेशन्सना पूर्वपरवानगीशिवाय तुमच्या Google खात्यांचा ईमेल पत्ता पाहता येईल.</string>
+    <string name="pref_auth_include_android_id_summary">जेव्हा हे अक्षम केले जाते, तेव्हा ऑथेंटिकेशन विनंत्या डिव्हाइस नोंदणीशी लिंक केल्या जाणार नाहीत, ज्यामुळे अनधिकृत डिव्हाइसेसना साइन इन करण्याची परवानगी मिळू शकते, परंतु याचे अनपेक्षित परिणाम होऊ शकतात.</string>
+    <string name="pref_auth_strip_device_name_summary">जेव्हा हे सक्षम केले जाते, तेव्हा ऑथेंटिकेशन विनंत्यांमध्ये डिव्हाइसचे नाव समाविष्ट केले जाणार नाही, ज्यामुळे अनधिकृत डिव्हाइसेसना साइन इन करण्याची परवानगी मिळू शकते, परंतु याचे अनपेक्षित परिणाम होऊ शकतात.</string>
+    <string name="pref_auth_two_step_verification_title">दोन-टप्प्यांची पडताळणी प्रॉम्प्ट्स प्राप्त करा</string>
+    <string name="pref_auth_two_step_verification_summary">जेव्हा हे सक्षम केले जाते, तेव्हा डिव्हाइस Google कडून दोन-टप्प्यांची पडताळणी प्रॉम्प्ट्स प्राप्त करू शकते (Cloud Messaging आवश्यक आहे).</string>
+    <string name="pref_auth_allow_find_devices_title">Google Device Finder ला प्रतिसाद देण्याची परवानगी द्या</string>
+    <string name="pref_auth_allow_find_devices_summary">सक्षम केल्यावर, डिव्हाइस Google कडून येणाऱ्या Find My Device सूचनांना प्रतिसाद देऊ शकते (Cloud Messaging आवश्यक आहे).</string>
+    <string name="pref_checkin_enable_summary">तुमचे डिव्हाइस Google सेवांमध्ये नोंदवते आणि एक अद्वितीय डिव्हाइस ओळखकर्ता तयार करते. microG नोंदणी डेटामधून तुमच्या Google खाते नावाशिवाय इतर ओळख पटवणारे बिट्स काढून टाकते.</string>
+    <string name="checkin_last_registration">शेवटची नोंदणी: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="pref_accounts_title">खाती</string>
+    <string name="pref_game_accounts_title">Google गेम खाती</string>
+    <string name="prefcat_accounts_settings_title">सेटिंग्ज</string>
+    <string name="prefcat_accounts_backup_title">अकाउंट बॅकअप</string>
+    <string name="pref_accounts_backup_title">अकाउंट्सचा बॅकअप घ्या</string>
+    <string name="pref_accounts_backup_summary">गुगल अकाउंट्स फाईलमध्ये एक्सपोर्ट करा</string>
+    <string name="pref_accounts_restore_title">अकाउंट्स रिस्टोर करा</string>
+    <string name="pref_accounts_restore_summary">फाईलमधून गुगल अकाउंट्स इम्पोर्ट करा</string>
+    <string name="pref_accounts_backup_warning_title">अकाउंट्सचा बॅकअप घ्यायचा आहे?</string>
+    <string name="pref_accounts_backup_warning_message">हे तुमचे अकाउंट्स आणि लॉगिन टोकन्स (SID/LSID) एका फाईलमध्ये लिहिते. ज्या कोणालाही ही फाईल मिळेल तो तुमच्या अकाउंट्समध्ये प्रवेश करू शकतो, त्यामुळे ती सुरक्षित ठेवा आणि कधीही शेअर करू नका.</string>
+    <string name="button_backup_accounts">बॅकअप घ्या</string>
+    <string name="snackbar_accounts_backed_up">खाती बॅकअप केली आहेत</string>
+    <string name="snackbar_accounts_restored">%1$d खाते(स) पुनर्संचयित केले</string>
+    <string name="snackbar_accounts_export_failed">बॅकअप अयशस्वी</string>
+    <string name="snackbar_accounts_import_failed">रिस्टोअर अयशस्वी</string>
+    <string name="auth_add_account">खाते जोडा</string>
+    <string name="pref_add_account_summary">Google खाते जोडा</string>
+    <string name="pref_gcm_enable_mcs_summary">Cloud Messaging हा एक पुश नोटिफिकेशन प्रोव्हायडर आहे जो अनेक थर्ड-पार्टी ॲप्लिकेशन्सद्वारे वापरला जातो. याचा वापर करण्यासाठी तुम्ही डिव्हाइस नोंदणी सक्षम करणे आवश्यक आहे.</string>
+    <string name="pref_hide_launcher_icon">लाँचरमध्ये आयकॉन लपवा</string>
+    <string name="hide_launcher_icon_dialog_message">सक्षम केल्यास, MicroG तुमच्या ॲप लॉन्चरमध्ये लपवले जाईल. तुमच्या डिव्हाइसच्या सिस्टम ॲप सूचीमधील ॲप माहितीमधून MicroG उघडता येईल.</string>
+    <string name="hide_launcher_icon_updating_title">ॲप अपडेट होत असताना कृपया प्रतीक्षा करा</string>
+    <string name="pref_language_title">भाषा</string>
+    <string name="pref_language_system_default">सिस्टिम डीफॉल्ट</string>
+    <string name="pref_update_title">अपडेट्स तपासा</string>
+    <string name="pref_update_summary">नवीन आवृत्तीसाठी GitHub तपासा.</string>
+    <string name="update_include_prerelease">डेव्ह बिल्ड्स समाविष्ट करा</string>
+    <string name="update_available_title">अपडेट उपलब्ध आहे</string>
+    <string name="update_available_prerelease_title">अपडेट उपलब्ध आहे (प्री-रिलीज)</string>
+    <string name="update_available_message">नवीन v%1$s उपलब्ध आहे. तुमच्याकडे v%2$s आवृत्ती स्थापित आहे. अपडेट डाउनलोड आणि स्थापित करायचे आहे का?</string>
+    <string name="update_now">अपडेट करा</string>
+    <string name="update_whats_new">नवीन काय आहे</string>
+    <string name="update_ignore">दुर्लक्षित करा</string>
+    <string name="update_downloading_title">अपडेट डाउनलोड होत आहे…</string>
+    <string name="update_download_failed">डाउनलोड अयशस्वी झाले. तुमचे कनेक्शन तपासा आणि पुन्हा प्रयत्न करा.</string>
+    <string name="update_signature_mismatch">ॲप अपडेट करता येत नाही, स्वाक्षऱ्या वेगळ्या आहेत.</string>
     <string name="update_failed_title">सुधारणा अयशस्वी झाली</string>
+    <string name="update_permission_required_title">परवानगी आवश्यक आहे</string>
+    <string name="update_permission_required_message">अपडेट स्थापित करण्यासाठी, कृपया सिस्टम सेटिंग्जमध्ये MicroG ला अज्ञात ॲप्स स्थापित करण्याची परवानगी द्या.</string>
+    <string name="update_open_settings">सेटिंग्ज</string>
+    <string name="update_check_failed">अपडेट्स तपासता आले नाहीत. तुमचे कनेक्शन तपासा आणि पुन्हा प्रयत्न करा.</string>
+    <string name="update_up_to_date_title">तुम्ही अपडेटेड आहात</string>
+    <string name="update_up_to_date_message">MicroG-RE v%s ही नवीनतम आवृत्ती आहे.</string>
+    <string name="update_notification_title">अपडेट उपलब्ध आहे</string>
+    <string name="update_notification_text">नवीन v%s उपलब्ध आहे, अपडेट करण्यासाठी टॅप करा</string>
+    <string name="update_notification_channel">अपडेट्स</string>
+    <string name="update_notification_permission_title">सूचना</string>
+    <string name="update_notification_permission_message">जेव्हा नवीन अपडेट उपलब्ध असेल तेव्हा तुम्हाला कळवण्यासाठी, MicroG-RE ला सूचना पाठवण्याची परवानगी आवश्यक आहे. कृपया सूचनांना परवानगी द्या जेणेकरून अपडेट अलर्ट तुमच्यापर्यंत पोहोचू शकतील.</string>
+    <string name="update_notification_permission_allow">परवानगी द्या</string>
+    <string name="update_notification_permission_not_now">आता नको</string>
+    <string name="update_notification_permission_open_settings">सेटिंग्ज उघडा</string>
+    <string name="gcm_last_message_at">शेवटचा संदेश: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_registered_since">नोंदणी झाल्याची तारीख: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_unregister_confirm_title"><xliff:g example="F-Droid">%1$s</xliff:g> अनरजिस्टर्ड करायचे का?</string>
+    <string name="gcm_unregister_confirm_message">काही ॲप्स स्वयंचलितपणे पुन्हा नोंदणी करत नाहीत आणि/किंवा ते मॅन्युअली करण्याची पर्याय देत नाहीत. नोंदणी रद्द केल्यानंतर ही ॲप्स कदाचित योग्यरित्या काम करणार नाहीत.\nचालू ठेवायचे आहे का?</string>
+    <string name="gcm_unregister_after_deny_message">तुम्ही आधीच नोंदणी केलेल्या ॲपला पुश नोटिफिकेशन्ससाठी नोंदणी करण्यास नकार दिला आहे.\nभविष्यात त्याला पुश संदेश मिळू नयेत यासाठी तुम्हाला आता त्याची नोंदणी रद्द करायची आहे का?</string>
+    <string name="gcm_messages_counter">संदेश: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> bytes)</string>
+    <string name="gcm_network_state_connected"><xliff:g example="2 hours ago">%1$s</xliff:g> पासून कनेक्टेड आहे</string>
+    <string name="gcm_enable_switch">पुश नोटिफिकेशन्स प्राप्त करा</string>
+    <string name="gcm_allow_app_popup"><xliff:g example="F-Droid">%1$s</xliff:g> ला पुश नोटिफिकेशन्ससाठी नोंदणी करण्याची परवानगी द्यायची का?</string>
+    <string name="pref_push_app_allow_register_summary">ॲपला पुश नोटिफिकेशन्ससाठी नोंदणी करण्याची परवानगी द्या.</string>
+    <string name="pref_push_app_wake_for_delivery_summary">येणारे पुश संदेश प्राप्त करण्यासाठी बॅकग्राउंडमध्ये असताना ॲप सुरू करा.</string>
+    <string name="safetynet_intro">Google SafetyNet ही एक डिव्हाइस सर्टिफिकेशन सिस्टम आहे, जी डिव्हाइस योग्यरित्या सुरक्षित आणि Android CTS शी सुसंगत असल्याचे सुनिश्चित करते. काही ॲप्लिकेशन्स सुरक्षिततेच्या कारणांसाठी किंवा टेंपर-प्रोटेक्शनसाठी पूर्वअट म्हणून SafetyNet वापरतात.\n\nmicroG GmsCore मध्ये SafetyNet ची मोफत अंमलबजावणी आहे, परंतु अधिकृत सर्व्हरला SafetyNet विनंत्या प्रोप्रायटरी DroidGuard सिस्टम वापरून स्वाक्षरित असणे आवश्यक आहे.</string>
+    <string name="safetynet_enable_switch">डिवाइस अटेस्टेशनला परवानगी द्या</string>
+    <string name="pref_safetynet_test_title">SafetyNet अटेस्टेशनची चाचणी घ्या</string>
+    <string name="pref_recaptcha_test_title">ReCAPTCHA ची चाचणी घ्या</string>
+    <string name="pref_recaptcha_enterprise_test_title">ReCAPTCHA Enterprise ची चाचणी घ्या</string>
+    <string name="pref_test_summary_passed">सर्व चाचण्या यशस्वी झाल्या</string>
+    <string name="pref_test_summary_failed">अयशस्वी: %s</string>
+    <string name="pref_test_summary_warn">चेतावणी: %s</string>
+    <string name="pref_test_summary_running">चालू आहे…</string>
+    <string name="pref_droidguard_unsupported_summary">या डिव्हाइसवर DroidGuard एक्झिक्यूशन समर्थित नाही. SafetyNet सेवा चुकीच्या पद्धतीने काम करू शकतात.</string>
+    <string name="prefcat_safetynet_apps_title">SafetyNet वापरणारी ॲप्स</string>
+    <string name="prefcat_device_attestation_apps_title">डिवाइस अटेस्टेशन वापरणारी ॲप्स</string>
+    <string name="pref_device_attestation_app_allow_requests_title">विनंत्यांना परवानगी द्या</string>
+    <string name="pref_device_attestation_app_allow_requests_summary">अॅपला डिव्हाइस अटेस्टेशनची विनंती करण्याची परवानगी द्या</string>
+    <string name="menu_clear_recent_requests">नुकत्याच केलेल्या विनंत्या पुसा</string>
+    <string name="safetynet_last_run_at">शेवटचा वापर: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="pref_safetynet_recent_uses">नुकतेच केलेले वापर</string>
+    <string name="pref_safetynet_recent_attestation_summary">अटेस्टेशन: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_summary">ReCaptcha: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_enterprise_summary">ReCaptcha एंटरप्राइझ: %s</string>
+    <string name="pref_safetynet_recent_copy_json">JSON JWS डेटा कॉपी करा</string>
+    <string name="pref_safetynet_recent_advice">सल्ला</string>
+    <string name="pref_safetynet_recent_eval_type">मूल्यांकन प्रकार</string>
+    <string name="pref_safetynet_recent_response_status">प्रतिसाद स्थिती</string>
+    <string name="pref_safetynet_recent_cat_response">प्रतिसाद डेटा</string>
+    <string name="pref_safetynet_recent_cat_request">विनंती डेटा</string>
+    <string name="pref_safetynet_recent_nonce">नॉन्स (Hex)</string>
+    <string name="pref_safetynet_recent_request_time">विनंतीची वेळ</string>
+    <string name="pref_safetynet_recent_request_type">विनंती प्रकार</string>
+    <string name="pref_safetynet_recent_cat_basic">मूलभूत डेटा</string>
+    <string name="pref_safetynet_recent_token">टोकन</string>
+    <string name="pref_safetynet_recent_copied">क्लिपबोर्डवर कॉपी केले!</string>
+    <string name="pref_safetynet_test_integrity_cts_passed">Integrity आणि CTS यशस्वी झाले</string>
+    <string name="pref_safetynet_test_cts_failed">CTS अयशस्वी झाले</string>
+    <string name="pref_safetynet_test_integrity_failed">Integrity अयशस्वी झाले</string>
+    <string name="pref_safetynet_test_not_completed">अद्याप पूर्ण झाले नाही</string>
+    <string name="pref_safetynet_test_no_result">निकाल नाही</string>
+    <string name="pref_safetynet_test_invalid_json">अवैध JSON</string>
+    <string name="pref_vending_licensing_category">Google Play लायसन्सिंग</string>
+    <string name="pref_vending_licensing_enable_switch">लायसन्स पडताळणी विनंत्यांना उत्तरे द्या</string>
+    <string name="pref_vending_license_enable_summary">काही ॲप्सना तुम्ही ते Google Play वरून खरेदी केले आहेत याची पडताळणी आवश्यक असते. जेव्हा एखादे ॲप विनंती करते, तेव्हा microG Google कडून खरेदीचा पुरावा डाउनलोड करू शकते. जर हे अक्षम असेल, किंवा कोणतेही Google खाते जोडलेले नसेल, तर लायसन्स पडताळणीच्या विनंत्यांकडे दुर्लक्ष केले जाते.</string>
+    <string name="pref_vending_licensing_purchase_free_apps_switch">विनामूल्य ॲप्स लायब्ररीमध्ये आपोआप जोडा</string>
+    <string name="pref_vending_licensing_purchase_free_apps_summary">विनामूल्य ॲप्स ते Google Play वरून डाउनलोड केले होते का हे तपासू शकतात. तुम्हाला सध्या उपलब्ध असलेल्या सर्व विनामूल्य ॲप्ससाठी ही तपासणी नेहमी यशस्वी व्हावी यासाठी विनामूल्य ॲप्स तुमच्या खाते लायब्ररीमध्ये आपोआप जोडा.</string>
+    <string name="pref_vending_feature_delivery">Google Play फीचर डिलिव्हरी</string>
+    <string name="pref_vending_split_install_switch">ऑन-डिमांड घटक स्थापना</string>
+    <string name="pref_vending_licensing_split_install_summary">ॲप्सना अतिरिक्त घटक डाउनलोड आणि इंस्टॉल करण्याची परवानगी द्या</string>
+    <string name="feedback_disabled">प्रतिसाद सध्या शक्य नाही</string>
+    <string name="backup_disabled">बॅकअप सध्या शक्य नाही</string>
+    <string name="pref_vending_billing_category">Google Play बिलिंग</string>
+    <string name="pref_vending_billing_enable_switch">बिलिंग विनंत्या हाताळा</string>
+    <string name="pref_vending_billing_enable_summary">एकदा सक्षम केल्यावर, काही अॅप्स Google च्या Play Billing सेवेद्वारे खरेदी पूर्ण करू शकतात किंवा सबस्क्रिप्शन्स सुरू करू शकतात.</string>
+    <string name="pref_vending_billing_note_experimental">हे वैशिष्ट्य प्रायोगिक आहे आणि यामुळे पैशांचे नुकसान होऊ शकते. तुम्हाला चेतावणी देण्यात आली आहे.</string>
+    <string name="pref_vending_billing_note_licensing">काही अॅप्सना तुमची खरेदी सत्यापित करण्यासाठी तुम्हाला लायसन्स पडताळणी देखील सक्षम करण्याची आवश्यकता असू शकते.</string>
+    <string name="pref_vending_asset_delivery_category">Google Play Asset Delivery</string>
+    <string name="pref_vending_asset_delivery_switch">ऑन-डिमांड अ‍ॅसेट डिलिव्हरी सक्षम करा</string>
+    <string name="pref_vending_asset_delivery_summary">Play Asset Delivery वापरणाऱ्या अॅप्सनी विनंती केल्यावर अतिरिक्त अ‍ॅसेट्स डाउनलोड करा</string>
+    <string name="pref_vending_asset_device_sync_summary">Play Asset Delivery वापरणारी अ‍ॅप्लिकेशन्स सध्या वापरात असलेल्या डिव्हाइसच्या माहितीच्या आधारे अतिरिक्त अ‍ॅसेट्स डाउनलोड करतील.</string>
+    <string name="pref_vending_asset_device_sync_switch">डिव्हाइस माहिती सिंक सक्षम करा</string>
+    <string name="pref_workprofile_create_account">वर्क अकाउंट सेटअपला परवानगी द्या</string>
+    <string name="pref_workprofile_intro">तुमच्या कामाच्या ठिकाणासाठी किंवा शैक्षणिक संस्थेसाठी वर्क प्रोफाइल सेट करताना,
+        त्या प्रोफाइलमध्ये ॲप्स डाउनलोड करणे सक्षम करण्यासाठी सेटअप Google शी कनेक्ट करण्याचा प्रयत्न करू शकतो.</string>
+    <string name="pref_workprofile_disclaimer">तुमचा microG चा वापर कॉर्पोरेट धोरणांशी सुसंगत असल्याची खात्री करणे ही तुमची जबाबदारी आहे.
+        microG हे सर्वोत्तम प्रयत्नांच्या आधारावर प्रदान केले जाते आणि ते अपेक्षित असल्याप्रमाणेच वागेल याची खात्री देऊ शकत नाही.</string>
+    <string name="pref_auto_create_player">Play Games खाते नोंदणीला परवानगी द्या</string>
+    <string name="pref_auto_create_player_intro">गेम्स खेळताना, लॉगिन करण्यासाठी आणि गेम-संबंधित फंक्शन्स जसे की अचिव्हमेंट्स, लीडरबोर्ड्स, आर्काइव्ह्स इत्यादी रेकॉर्ड करण्यासाठी तुम्हाला Play Games खाते वापरावे लागेल. अक्षम केल्यानंतर, Play Games खात्याशी बांधलेले नसलेले Google खाते आपोआप नोंदणीकृत केले जाणार नाही आणि गेम लॉगिन करून खेळता येणार नाही.</string>
+    <string name="pref_allow_upload_game_played">खेळलेल्या गेमच्या अपलोडला परवानगी द्या</string>
+    <string name="pref_allow_upload_game_played_summary">अक्षम केल्यास, गेममध्ये लॉगिन केल्यानंतर गेम खेळल्याची स्थिती कळवली जाणार नाही आणि काही गेम्समध्ये लॉगिन करता येणार नाही.</string>
+    <string name="pref_change_default_game_player">गेम्ससाठी खाते बदला</string>
+    <string name="pref_change_default_game_player_summary">गेम्ससाठी डीफॉल्ट खाते बदला &amp; गेमनुसार खाते बदला.</string>
+    <string name="pref_delete_game_account_data">Play Games डेटा हटवा</string>
+    <string name="pref_delete_game_account_data_summary">Play Games खाते &amp; सर्व डेटा हटवा &amp; वैयक्तिक गेम डेटा हटवा.</string>
+    <string name="credentials_assisted_cancel">रद्द करा</string>
+    <string name="credentials_assisted_continue">पुढे जा</string>
+    <string name="credentials_assisted_confirmation_header">तुम्हाला साइन-इन करत आहोत</string>
+    <string name="credentials_assisted_continue_as_user_button_label">%1$s म्हणून पुढे जा</string>
+    <string name="credentials_assisted_sign_back_title">Google वापरून %1$s मध्ये पुन्हा साइन-इन करा</string>
+    <string name="credentials_assisted_signin_consent_header">%1$s म्हणून साइन-इन करत आहोत</string>
+    <string name="credentials_assisted_signin_consent">पुढे गेल्यावर, Google तुमचे नाव, ईमेल पत्ता आणि प्रोफाइल फोटो %1$s सोबत शेअर करेल. %1$s चे गोपनीयता धोरण आणि सेवा अटी पहा.</string>
+    <string name="credentials_assisted_signin_description">तुम्ही तुमच्या Google खात्यांमध्ये \'Google ने साइन-इन करा\' व्यवस्थापित करू शकता.</string>
+    <string name="credentials_assisted_choose_account_label">खाते निवडा</string>
+    <string name="credentials_assisted_choose_account_subtitle">%1$s कडे जाण्यासाठी</string>
+    <string name="credentials_assisted_choose_account_error_tips">खात्यात अनियमितता</string>
+    <string name="credentials_assisted_signin_button_text_long">Google ने साइन इन करा</string>
+    <string name="credentials_assisted_signin_add_account">खाते जोडा</string>
+    <string name="credentials_service_sign_in_with_google_label">Google ने साइन इन करा</string>
+    <string name="credentials_service_remote_custom_subtitle">सुरक्षा की, स्मार्टफोन किंवा टॅब्लेट</string>
+    <string name="limited_services_dialog_information">तुम्ही microG Limited Services वापरत आहात. नेहमीच्या microG Services च्या उलट, ही आवृत्ती फक्त microG लायब्ररीज वापरणाऱ्या ॲप्ससह कार्य करते, Google Play वरील ॲप्ससह नाही. याचा अर्थ असा आहे की बहुतेक ॲप्लिकेशन्स या सेवांकडे दुर्लक्ष करतील.</string>
+    <string name="limited_services_dialog_information_ack">मला समजले</string>
+    <string name="games_achievement_list_title">यशप्राप्ती</string>
+    <string name="games_achievements_empty_text">या गेमसाठी कोणतीही यशप्राप्ती नाही</string>
+    <string name="games_api_access_denied">या डिव्हाइसवरील कोणतेही खाते Games APIs वापरू शकत नाही</string>
+    <string name="games_achievement_locked_content_description">लॉक केले आहे</string>
+    <string name="games_achievement_unlocked_content_description">अनलॉक केले आहे</string>
+    <string name="games_achievement_extra_text">%1$s XP</string>
+    <string name="games_leaderboard_empty_text">या गेमसाठी कोणतेही लीडरबोर्ड नाहीत</string>
+    <string name="games_leaderboard_list_title">रँकिंग्स</string>
+    <string name="games_leaderboards_score_label">स्कोअर: %1$s</string>
+    <string name="games_snapshot_empty_text">अद्याप कोणतेही गेम सेव्ह्स सेव्ह केलेले नाहीत</string>
+    <string name="games_snapshot_choose_btn_text">निवडा</string>
+    <string name="games_snapshot_delete_btn_text">डिलीट करा</string>
+    <string name="games_delete_snapshot_dialog_title">सेव्ह केलेला गेम डिलीट करा</string>
+    <string name="games_delete_snapshot_dialog_message">तुम्हाला खात्री आहे की तुम्हाला हा सेव्ह केलेला गेम डिलीट करायचा आहे?</string>
+    <string name="games_delete_snapshot_dialog_cancel">रद्द करा</string>
+    <string name="games_delete_snapshot_dialog_ok">ठीक आहे</string>
+    <string name="games_delete_snapshot_error">हटवणे अयशस्वी झाले, कृपया नंतर पुन्हा प्रयत्न करा</string>
+    <string name="games_state_description_signed_out">साइन आउट केले</string>
+    <string name="games_state_description_delete">हटवा</string>
+    <string name="games_change_button_text">बदला</string>
+    <string name="games_change_default_account_section_title">गेम्ससाठी डीफॉल्ट खाते बदला</string>
+    <string name="games_change_default_account_description">डीफॉल्ट खाते: %1$s</string>
+    <string name="games_change_default_account_explanation">या खात्याचा वापर तुम्हाला गेम्समध्ये आपोआप साइन इन करण्यासाठी, तुमची गेम प्रोग्रेस सेव्ह करण्यासाठी आणि तुमची सेटिंग्ज सेव्ह करण्यासाठी केला जातो. डीफॉल्ट खाते बदलल्यास किंवा साइन आउट केल्यास तुम्ही खेळलेल्या गेम्ससाठी तुमची प्रोग्रेस आणि सेटिंग्ज रिसेट होऊ शकतात.</string>
+    <string name="games_change_per_game_title">गेमनुसार खाते बदला</string>
+    <string name="games_change_per_game_description">निवडलेल्या गेमसाठी खाते बदलल्यास किंवा त्यातून साइन आउट केल्यास त्या गेमसाठी तुमची प्रोग्रेस आणि सेटिंग्ज रिसेट होऊ शकतात.</string>
+    <string name="games_change_default_account_for_all_games_dialog_title">नवीन डीफॉल्ट खात्यासाठी पर्याय निवडा</string>
+    <string name="games_change_default_account_for_all_games_dialog_description">सध्याचे डिफॉल्ट खाते: %1$s</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_title">केवळ नवीन खेळांसाठी डिफॉल्ट खाते बदला </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_description">तुम्ही खेळलेल्या खेळांची प्रगती आणि सेटिंग्जचा प्रवेश तुम्ही गमावणार नाही. परंतु तुमची प्रगती खात्यांमध्ये विभागली जाईल.</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_title"> सर्व खेळांसाठी डिफॉल्ट खाते बदला </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_description">तुम्ही खेळलेल्या खेळांची प्रगती आणि सेटिंग्जचा प्रवेश तुम्ही कदाचित गमावू शकता. तुमचे बदल लागू करण्यासाठी आम्ही गेम रीस्टार्ट करू.</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_title"> सर्व खेळांतून साइन आउट करा </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_description">तुम्ही खेळलेल्या खेळांची प्रगती आणि सेटिंग्जचा प्रवेश तुम्ही कदाचित गमावू शकता. तुमचे बदल लागू करण्यासाठी आम्ही गेम रीस्टार्ट करू.</string>
+    <string name="games_change_per_game_dialog_title">या गेमसाठी एक पर्याय निवडा</string>
+    <string name="games_change_per_game_dialog_description">खाते बदलल्यामुळे किंवा साइन आउट केल्यामुळे गेममधील तुमची प्रगती आणि सेटिंग्ज रिसेट होऊ शकतात</string>
+    <string name="games_change_per_game_dialog_option_use_player">%1$s वापरा</string>
+    <string name="games_change_per_game_dialog_option_use_player_snackbar_success_message">तुम्ही %1$s वापरून या गेममध्ये साइन इन व्हाल</string>
+    <string name="games_change_per_game_dialog_option_sign_out">साइन आउट करा</string>
+    <string name="games_change_per_game_dialog_option_sign_out_snackbar_success_message">तुम्ही आता या गेममधून साइन आउट झाले आहात</string>
+    <string name="games_change_sign_out_of_all_games_snackbar_success_message">तुम्ही आता सर्व गेम्समधून साइन आउट झाले आहात</string>
+    <string name="games_change_default_account_for_all_games_snackbar_success_message">तुम्ही %1$s वापरून सर्व गेम्समध्ये साइन इन व्हाल</string>
+    <string name="games_change_default_account_for_new_games_snackbar_success_message">तुम्ही %1$s वापरून नवीन गेम्समध्ये साइन इन व्हाल</string>
+    <string name="games_account_display_content">सध्याचे खाते: %1$s</string>
+    <string name="games_delete_profile_header">Play Games खाते &amp; सर्व डेटा हटवा</string>
+    <string name="games_delete_profile_explanation">तुमचे Google Play Games खाते, XP आणि सर्व प्रोफाइल डेटा कायमचा हटवा. या क्रियेमुळे तुम्ही खेळलेल्या गेम्समधील तुमचे स्कोअर, प्रगती (सेव्ह केलेले गेम्स) आणि सेटिंग्ज देखील हटवले जाऊ शकतात.</string>
+    <string name="games_delete_profile_button">कायमचा हटवा</string>
+    <string name="games_delete_game_data_header">वैयक्तिक गेम डेटा हटवा</string>
+    <string name="games_delete_game_data_explanation">तुम्ही Google Play Games वापरून खेळलेल्या खेळांसाठी वैयक्तिक डेटा कायमचा हटवू शकता. या कृतीमुळे तुम्ही निवडलेल्या खेळासाठी तुमचे स्कोर्स, प्रगती (सेव्ह केलेले गेम्स) आणि सेटिंग्ज हटवल्या जातील.</string>
+    <string name="games_delete_profile_dialog_title">तुम्हाला खात्री आहे की तुम्हाला हे खाते हटवायचे आहे?</string>
+    <string name="games_delete_profile_explanation_with_gamer_name">गेमरचे नाव &lt;b&gt;%1$s&lt;/b&gt; (&lt;b&gt;%2$s&lt;/b&gt;), XP आणि सर्व प्रोफाइल डेटासह तुमचे Google Play Games खाते कायमचे हटवा. या कृतीमुळे तुम्ही खेळलेल्या खेळांमधील तुमचे स्कोर्स, प्रगती (सेव्ह केलेले गेम्स) आणि सेटिंग्ज देखील हटवले जाऊ शकतात.</string>
+    <string name="games_delete_profile_dialog_message">ही कृती पुन्हा पूर्ववत केली जाऊ शकत नाही.</string>
+    <string name="games_delete_profile_fail">तुमचे प्रोफाइल हटवता आले नाही. कृपया नंतर पुन्हा प्रयत्न करा.</string>
+    <string name="games_delete_game_data_confirm_dialog_title">%1$s साठी डेटा हटवा</string>
+    <string name="games_delete_game_data_confirm_dialog_message">%1$s साठी तुमचा डेटा कायमचा हटवल्यास Google Play Games मधील तुमचे स्कोर्स, प्रगती (सेव्ह केलेले गेम्स) आणि गेम सेटिंग्ज काढून टाकल्या जातील.</string>
+    <string name="games_popup_signin_welcome">नमस्कार, %1$s</string>
+    <string name="family_management_title">कुटुंब</string>
+    <string name="family_management_retry">पुनर्प्रयत्न करा</string>
+    <string name="family_management_load_error">कंटेंट लोड करण्यात अयशस्वी</string>
+    <string name="family_management_toolbar_back">मागे</string>
+    <string name="family_management_toolbar_more">अधिक</string>
+    <string name="family_management_exit_family_group">कुटुंब गटातून बाहेर पडा</string>
+    <string name="family_management_delete_family_group">कुटुंब गट हटवा</string>
+    <string name="family_management_leave_family_password_title">कुटुंब गटातून बाहेर पडण्यासाठी पासवर्डची पुष्टी करा</string>
+    <string name="family_management_delete_family_password_title">कुटुंब गट हटवण्यासाठी पासवर्डची पुष्टी करा</string>
+    <string name="family_management_remove_member_password_title">\"%s\" ला काढण्यासाठी पासवर्डची पुष्टी करा</string>
+    <string name="family_management_invite_family_member">कुटुंब सदस्यांना आमंत्रित करा</string>
+    <string name="family_management_invite_slots_left">%1$d निमंत्रणे शिल्लक आहेत</string>
+    <string name="family_management_cancel_invite">आमंत्रण रद्द करा</string>
+    <string name="family_management_cancel_invite_success">आमंत्रण यशस्वीरित्या रद्द केले</string>
+    <string name="family_management_cancel_invite_error">आमंत्रण रद्द करण्यात अडचण येत आहे. पुन्हा प्रयत्न करा.</string>
+    <string name="family_management_remove_member">सदस्य काढून टाका</string>
+    <string name="family_management_member_removed_success">%s ला तुमच्या फॅमिली ग्रुपमधून काढले आहे</string>
+    <string name="family_management_member_remove_failed">%s ला काढून टाकताना अडचण आली. पुन्हा प्रयत्न करा.</string>
+    <string name="family_management_leave_family_error_message">कौटुंबिक गट सोडताना अडचण आली. पुन्हा प्रयत्न करा.</string>
+    <string name="family_management_exist_group_success">तुम्ही तुमचा कौटुंबिक गट सोडला आहे…</string>
+    <string name="family_management_delete_group_success">कौटुंबिक गट हटवला</string>
+    <string name="family_management_delete_group_failure">होम गट हटवण्यात अपयश</string>
+    <string name="family_management_delete_group_cancel">रद्द करा</string>
+    <string name="family_management_delete_group_confirm">ठीक आहे</string>
+    <string name="family_management_input_pwd">कृपया तुमचा पासवर्ड प्रविष्ट करा</string>
+    <string name="family_management_invite_sent_date_format">आमंत्रण %s रोजी पाठवले</string>
+    <string name="family_management_invite_send">आमंत्रण पाठवले</string>
+    <string name="family_management_pwd_error">चुकीचा पासवर्ड, कृपया पुन्हा प्रविष्ट करा</string>
+    <string name="barcode_scanner_brand">%1$s च्या वतीने microG द्वारे स्कॅन केले</string>
+    <string name="camera_permission_dialog_button">ठीक आहे</string>
+    <string name="camera_permission_dialog_message">%1$s साठी कोड स्कॅन करण्यासाठी microG सेवांना तुमच्या डिव्हाइसच्या कॅमेराचा प्रवेश आवश्यक आहे.\n\nसक्षम करण्यासाठी, कृपया सेटिंग्जमध्ये microG सेवांना कॅमेरा परवानगी द्या.</string>
+    <string name="camera_permission_dialog_title">कॅमेरा परवानगी आवश्यक आहे</string>
+    <string name="pref_app_install_settings_title">ॲप इंस्टॉलर सेटिंग्ज</string>
+    <string name="pref_app_install_switch_title">ॲप इंस्टॉलेशनला परवानगी द्या</string>
+    <string name="pref_app_install_other_apps_note">प्राधिकरण इतर स्त्रोतांकडून प्रदान केलेल्या ॲप्सच्या इंस्टॉलेशनला परवानगी देते.</string>
+    <string name="pref_app_install_permission_instruction">तुमचे इंस्टॉल केलेले ॲप्स योग्यरित्या कार्य करतात याची खात्री करण्यासाठी, कृपया इतर स्त्रोतांकडून डाउनलोड केलेले ॲप्स इंस्टॉल करण्यासाठी microG Companion ला अधिकृत करा.</string>
+    <string name="prefcat_app_install_list_title">App Installer वापरणारी Apps</string>
+    <string name="service_name_google_location_sharing">Google लोकेशन शेअरिंग</string>
+    <string name="location_sharing_description">या डिव्हाइसवरून Google Apps आणि सेवांमधील तुमचे रिअल-टाइम लोकेशन शेअरिंग व्यवस्थापित करा</string>
+    <string name="location_sharing_learn_more">&quot;लोकेशन शेअरिंग&quot; बद्दल अधिक जाणून घ्या</string>
+    <string name="location_sharing_switch_text">लोकेशन शेअरिंग वापरा</string>
+    <string name="location_sharing_turn_off_notify_hint">तुम्ही या डिव्हाइससाठी लोकेशन शेअरिंग बंद केल्यास, तुम्ही ज्यांच्यासोबत शेअर करत आहात त्यांना सूचित केले जाणार नाही.</string>
+    <string name="location_sharing_off_previous_hint">जोपर्यंत तुम्ही ते पुन्हा सुरू करत नाही तोपर्यंत तुमचे शेवटचे शेअर केलेले लोकेशन उपलब्ध असेल.</string>
+    <string name="location_sharing_disabled">या अकाउंटसाठी कोणतेही सक्रिय लोकेशन शेअरिंग नाही</string>
+    <string name="location_sharing_turn_on_hint">एकदा तुम्ही Google App किंवा सेवेद्वारे तुमचे लोकेशन शेअर करण्यास सुरुवात केली की, तुम्ही येथून लोकेशन शेअरिंग व्यवस्थापित करू शकता.\n\nतुमचे लोकेशन शेअर करण्यास सुरुवात करण्यासाठी, Google Maps किंवा Family Link वर जा.</string>
+    <string name="location_sharing_turn_off_title">लोकेशन शेअरिंग बंद करा</string>
+    <string name="location_sharing_turn_off_hint">तुम्ही अजूनही एकाच Google खात्यात साइन-इन असलेल्या इतर उपकरणांमधून किंवा गैर-Google ॲप्समधून तुमचे लोकेशन शेअर करत असाल. जिथे लागू होईल तिथे तुमच्या लोकेशन शेअरिंग सेटिंग्ज नक्की तपासा.\n\nतुम्ही ज्यांच्याशी शेअर केले आहे ते लोक तुमचे शेवटचे शेअर केलेले लोकेशन पाहू शकतील.</string>
+    <string name="location_sharing_turn_off_cancel">चालू ठेवा</string>
+    <string name="location_sharing_turn_off_confirm">बंद करा</string>
+    <string name="location_sharing_confirm_dialog_title">लोकेशन शेअरिंग सक्षम करा</string>
+    <string name="location_sharing_confirm_dialog_text">तुम्ही ज्यांच्यासोबत लोकेशन शेअर करता ते लोक नेहमीच पाहू शकतात:\n·तुमचे नाव आणि फोटो\n·तुमच्या उपकरणाचे अलीकडील लोकेशन, तुम्ही Google सेवा वापरत नसताना देखील\n·तुमच्या उपकरणाची बॅटरी पॉवर आणि ते चार्ज होत आहे का\n·तुमची पोहोचण्याची आणि प्रस्थान करण्याची वेळ, जर त्यांनी लोकेशन शेअरिंग नोटिफिकेशन जोडले असेल तर</string>
     <!-- Passkey management -->
+    <string name="pref_passkey_manager_title">पासकी व्यवस्थापित करा</string>
+    <string name="pref_passkey_manager_empty_title">कोणत्याही पासकी सेव्ह केलेल्या नाहीत</string>
+    <string name="pref_passkey_manager_description">जेव्हा थर्ड-पार्टी ॲप्स पासकी नोंदणी करतात, तेव्हा microG स्थानिक रेकॉर्ड ठेवते. जर एखाद्या ॲपने microG ला सूचित न करता पासकी हटवली, तर ते रेकॉर्ड तसेच राहू शकते. तुम्ही अशा उरलेल्या नोंदी येथे काढून टाकू शकता.</string>
+    <string name="pref_passkey_manager_delete_dialog_title">पासकी हटवा</string>
+    <string name="pref_passkey_manager_delete_dialog_message">\"%1$s\" वरील \"%2$s\" साठीची पासकी हटवा. ही क्रिया पूर्ववत करता येणार नाही; पुन्हा साइन इन करण्यासाठी तुम्हाला नवीन पासकी नोंदवावी लागेल.</string>
+    <string name="pref_passkey_manager_delete_dialog_confirm">हटवा</string>
+    <string name="pref_passkey_manager_unknown_user">अज्ञात वापरकर्ता</string>
+    <string name="pref_passkey_manager_transport_screen_lock">स्क्रीन लॉक</string>
+    <string name="pref_passkey_manager_transport_usb">USB</string>
+    <string name="pref_passkey_manager_transport_nfc">NFC</string>
+    <string name="pref_passkey_manager_transport_bluetooth">ब्लूटूथ</string>
+    <string name="pref_passkey_manager_transport_hybrid">हायब्रीड</string>
+    <string name="pref_passkey_manager_credential_id_format_internal">ID: %1$s</string>
+    <string name="self_check_resolution_oem_restriction">तुमची सिस्टिम बॅकग्राउंड प्रक्रिया प्रतिबंधित करू शकते. \'Don\'t Kill My App!\' साइट उघडण्यासाठी आणि हे निर्बंध कसे काढायचे हे जाणून घेण्यासाठी येथे टॅप करा</string>
+    <string name="morphe_sign_in_with_google_microg_label">MicroG RE द्वारे Google सह साइन इन करा</string>
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">चुकीचे आर्किटेक्चर व्हेरिएंट इंस्टॉल केले आहे</string>
+    <string name="abi_mismatch_message">"या MicroG-RE बिल्डमध्ये फक्त 64-बिट (arm64) लायब्ररीज आहेत, परंतु हे डिव्हाइस 32-बिट युझरस्पेसवर चालत आहे.
+
+ज्या वैशिष्ट्यांसाठी Conscrypt आवश्यक आहे (अकाउंट लॉगिन, स्ट्रीमिंग, BotGuard, व्हिडिओ स्ट्रीम्स spoof करणे, SponsorBlock, Return YouTube Dislike, इत्यादी) ते व्यवस्थित काम करणार नाहीत आणि त्यामुळे प्लेबॅक समस्या किंवा \"Unable to find a default SSL provider\" असे येऊ शकते.
+
+त्याऐवजी ARMv7 किंवा Universal APK इंस्टॉल करा."</string>
+    <string name="abi_mismatch_download_armv7">ARMv7 APK डाउनलोड करा</string>
+    <string name="abi_mismatch_downloading_title">योग्य व्हेरिएंट डाउनलोड होत आहे…</string>
 </resources>

@@ -4,8 +4,267 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="gms_settings_name">Mipangilio ya MicroG</string>
+    <string name="just_a_sec">Subiri kidogo…</string>
+    <string name="ask_permission_tos">Kwa kuendelea, unaruhusu programu hii na Google kutumia taarifa zako kwa mujibu wa masharti yao ya huduma na sera za faragha.</string>
+    <string name="ask_scope_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> angependa:</string>
+    <string name="ask_service_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> angependa kutumia:</string>
+    <string name="account_manager_title">Meneja wa Akaunti ya Google</string>
+    <string name="sorry">Samahani…</string>
+    <string name="auth_before_connect">Unganisha akaunti ya Google na microG.\n\nHebu tuunganishe na akaunti ya Google, tumia kitufe cha <b>Ingia</b> au tumia kitufe cha <b>Huawei</b> ikiwa una kifaa cha mtengenezaji huyu. Kwa kubonyeza kimoja ya vitufe utapelekwa kwenye ukurasa wa kuingia kwenye akaunti yako.</string>
+    <string name="auth_connecting">"Kifaa chako kinaanzisha muunganisho na seva za Google ili kukuingiza.
+
+Hii inaweza kuchukua sekunde chache."</string>
+    <string name="no_network_error_desc">"Huna muunganisho wa mtandao.
+
+Hii inaweza kuwa tatizo la muda au kifaa chako cha Android kinaweza kuwa hakijasanidiwa kwa huduma za data. Jaribu tena unapounganishwa kwenye mtandao wa simu, au unganisha kwenye mtandao wa Wi-Fi."</string>
+    <string name="auth_general_error_desc">"Kulikuwa na tatizo la mawasiliano na seva za Google.
+
+Jaribu tena baadaye."</string>
+    <string name="auth_finalize">"Kifaa chako kinawasiliana na Google ili kuhifadhi taarifa kwenye akaunti yako.
+
+Hii inaweza kuchukua dakika chache."</string>
+    <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> inahitaji idhini yako ili kufikia akaunti yako ya Google.</string>
+    <string name="auth_package_override_request_title">Ruhusu <b><xliff:g example="F-Droid">%1$s</xliff:g></b> upate ufikiaji wa kivyema wa <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> inataka kufikia akaunti yako kama kama ingekuwa <b><xliff:g example="F-Droid">%2$s</xliff:g> ya <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Hii inaweza kuipatia ufikiaji wa kivyema wa akaunti yako.</string>
+    <string name="auth_action_notification_channel_name">Tahadhari za akaunti ya Google</string>
+    <string name="auth_action_notification_channel_description">Inajulisha wakati moja ya akaunti zako za Google inahitaji usanidi wa ziada kabla ya kutumika au wakati akaunti isipoendana na microG.</string>
+    <string name="auth_action_notification_title">Hatua ya akaunti inahitajika</string>
+    <string name="auth_action_notification_content">Akaunti yako ya Google inahitaji usanidi wa ziada.</string>
+    <string name="auth_action_reauth_notification_title">Hatua ya akaunti inahitajika</string>
+    <string name="auth_action_activity_header">Kamilisha usanidi wa akaunti yako ya Google</string>
+    <string name="auth_action_activity_explanation">Kamilisha hatua zifuatazo ili uweze kutumia akaunti yako ya Google %s kwenye kifaa hiki.</string>
+    <string name="auth_action_step_enable_checkin">Washa usajili wa kifaa</string>
+    <string name="auth_action_step_enable_checkin_description">"Kifaa chako kinahitaji kujisajili kwa Google angalau mara moja.
+
+Unaweza kuzima usajili wa kifaa cha Google baada ya usanidi wa akaunti kukamilika."</string>
+    <string name="auth_action_step_enable_gcm">Washa Cloud Messaging</string>
+    <string name="auth_action_step_enable_gcm_description">Unaweza kuzima Cloud Messaging baada ya usanidi wa akaunti kukamilika.</string>
+    <string name="auth_action_step_allow_microg_gcm">Ruhusu Cloud Messaging kwa microG</string>
+    <string name="auth_action_step_allow_microg_gcm_description">Kulingana na mapendeleo yako, microG inahitaji ruhusa kutoka kwako kabla ya kuweza kujisajili kwa Cloud Messaging.</string>
+    <string name="auth_action_step_enable_lockscreen">Sanidi kufunga skrini kwa usalama</string>
+    <string name="auth_action_step_enable_lockscreen_description">"Akaunti yako ya Google inadhibitiwa na sehemu yako ya kazi au taasisi ya elimu. Administrator wako ameamua kuwa vifaa vinahitaji kufunga skrini kwa usalama kabla ya kuweza kupata data ya akaunti.
+
+Tafadhali sanidi nywila, PIN, au kufunga skrini kwa mchoro."</string>
+    <string name="auth_action_step_perform_content_description">Bofya ili kutekeleza hatua</string>
+    <string name="auth_action_step_completed_content_description">Hatua imekamilika</string>
+    <string name="auth_action_activity_finish">Maliza</string>
+    <string name="signin_picker_subtitle">ili kuendelea kwenda <xliff:g example="F-Droid">%1$s</xliff:g></string>
+    <string name="signin_confirm_title">Ruhusu kukuingiza kwenye <xliff:g example="F-Droid">%1$s</xliff:g></string>
+    <string name="signin_subtext_sharing">Ili kuendelea, microG itashiriki jina, anwani ya barua pepe na picha ya wasifu ya Akaunti yako ya Google na <xliff:g example="F-Droid">%1$s</xliff:g>.</string>
+    <string name="perm_provision_label">andaa huduma za microG</string>
+    <string name="perm_provision_description">Inaruhusu programu kusanidi huduma za microG bila mwingiliano wa mtumiaji</string>
+    <string name="perm_car_speed_label">Kasi ya gari</string>
+    <string name="perm_car_speed_description">"Fikia kasi ya gari lako"</string>
+    <string name="perm_car_info_label">Taarifa za gari</string>
+    <string name="perm_car_info_description">"Fikia taarifa za gari lako"</string>
+    <string name="perm_car_fuel_label">Kiwango cha mafuta ya gari</string>
+    <string name="perm_car_fuel_description">"Fikia taarifa za kiwango cha mafuta ya gari lako"</string>
+    <string name="perm_car_mileage_label">Umbali wa gari</string>
+    <string name="perm_car_mileage_description">"Fikia taarifa za umbali wa gari lako"</string>
+    <string name="perm_car_vendor_extension_label">Njia ya muuzaji wa gari</string>
+    <string name="perm_car_vendor_extension_description">"Fikia njia ya muuzaji wa gari lako ili kubadilishana taarifa maalum za gari"</string>
+    <string name="service_name_checkin">Usajili wa Kifaa</string>
+    <string name="service_name_mcs">Ujumbe wa Wingu</string>
+    <string name="service_name_device_attestation">Uthibitisho wa Kifaa</string>
+    <string name="service_name_vending">Huduma za Play Store</string>
+    <string name="service_name_work_profile">Wasifu wa kazi</string>
+    <string name="games_title">Google Play Games</string>
+    <string name="games_info_title"><xliff:g example="F-Droid">%1$s</xliff:g> angependa kutumia Play Games</string>
+    <string name="games_info_content">Ili kutumia Play Games, inahitajika kusakinisha programu ya Google Play Games. Programu inaweza kuendelea bila Play Games, lakini inawezekana itafanye kazi isivyo kawaida.</string>
+    <string name="pick_place_title">Chagua mahali</string>
+    <string name="place_picker_select_title">Chagua eneo hili</string>
+    <string name="place_picker_nearby_places">Maeneo ya karibu</string>
     <!-- Self check -->
+    <string name="self_check_name_system_spoofs">System spoofs signature: </string>
+    <string name="self_check_resolution_system_spoofs">Tafadhali angalia nyaraka kuhusu hatua zinazoweza kuhitajika.</string>
+    <string name="self_check_pkg_gms">Huduma za microG</string>
+    <string name="self_check_pkg_vending">microG Companion / Play Store</string>
+    <string name="self_check_pkg_gsf">Mfumo wa Huduma wa microG</string>
+    <string name="self_check_name_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> imesakinishwa: </string>
+    <string name="self_check_resolution_app_installed">Sakinisha programu ya <xliff:g example="F-Droid">%1$s</xliff:g> au inayooana. Tafadhali angalia nyaraka ili kujua programu zipi zinaooana.</string>
+    <string name="self_check_name_correct_sig"><xliff:g example="F-Droid">%1$s</xliff:g> ina saini sahihi: </string>
+    <string name="self_check_resolution_correct_sig">Aidha <xliff:g example="F-Droid">%1$s</xliff:g> iliyosakinishwa haioani au ughushi wa saini haujawashwa kwake. Tafadhali angalia nyaraka ili kujua programu na ROM zipi zinaooana.</string>
+    <string name="self_check_name_battery_optimizations">Uboreshaji wa betri umeupuuzwa:</string>
+    <string name="self_check_resolution_battery_optimizations">Gusa hapa ili kuzima uboreshaji wa betri. Kutofanya hivyo kunaweza kusababisha programu kufanya kazi isivyo kawaida.</string>
     <!-- Settings strings -->
+    <string name="cond_gcm_bat_summary">Uliwezesha Cloud Messaging lakini una maboresho ya betri ambayo yanatumika kwa Huduma za microG. Ili arifa za push zifike, unapaswa kupuuza maboresho ya betri.</string>
+    <string name="prefs_account">Mapendeleo ya akaunti</string>
+    <string name="prefs_account_privacy">Taarifa binafsi &amp; faragha</string>
+    <string name="prefs_account_security">Kuingia &amp; usalama</string>
+    <string name="pref_auth_trust_google_summary">Inapozimwa, mtumiaji huulizwa kabla ya ombi la idhini ya programu kutumwa kwa Google. Baadhi ya programu zitashindwa kutumia akaunti ya Google ikiwa hii imezimwa.</string>
+    <string name="pref_auth_visible_summary">Inapowashwa, programu zote kwenye kifaa hiki zitaweza kuona anwani ya barua pepe ya Akaunti zako za Google bila idhini ya awali.</string>
+    <string name="pref_auth_include_android_id_summary">Inapozimwa, maombi ya uthibitishaji hayatakuwa yameunganishwa na usajili wa kifaa, jambo ambalo linaweza kuruhusu vifaa visivyoidhinishwa kuingia, lakini linaweza kuwa na matokeo yasiyotabirika.</string>
+    <string name="pref_auth_strip_device_name_summary">Inapowezeshwa, maombi ya uthibitishaji hayatajumuisha jina la kifaa, jambo ambalo linaweza kuruhusu vifaa visivyoidhinishwa kuingia, lakini linaweza kuwa na matokeo yasiyotabirika.</string>
+    <string name="pref_auth_two_step_verification_title">Pokea prompts za uthibitishaji wa hatua mbili</string>
+    <string name="pref_auth_two_step_verification_summary">Inapowezeshwa, kifaa kinaweza kupokea prompts za uthibitishaji wa hatua mbili kutoka Google (Cloud Messaging inahitajika).</string>
+    <string name="pref_auth_allow_find_devices_title">Ruhusu kujibu Google Device Finder</string>
+    <string name="pref_auth_allow_find_devices_summary">Inapowezeshwa, kifaa kinaweza kujibu arifa za Find My Device kutoka Google (Cloud Messaging inahitajika).</string>
+    <string name="pref_checkin_enable_summary">Inasajili kifaa chako kwenye huduma za Google na kutengeneza kitambulisho cha kipekee cha kifaa. microG huondoa sehemu za utambulisho isipokuwa jina la akaunti yako ya Google kutoka kwenye data ya usajili.</string>
+    <string name="checkin_last_registration">Usajili wa mwisho: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="pref_accounts_title">Akaunti</string>
+    <string name="pref_game_accounts_title">Akaunti za Michezo za Google</string>
+    <string name="prefcat_accounts_settings_title">Mipangilio</string>
+    <string name="snackbar_accounts_restored">Imerejesha akaunti %1$d</string>
+    <string name="auth_add_account">Ongeza Akaunti</string>
+    <string name="pref_add_account_summary">Ongeza akaunti ya Google</string>
+    <string name="pref_gcm_enable_mcs_summary">Cloud Messaging ni mtoa huduma wa arifa za push anayetumiwa na programu nyingi za upande wa tatu. Ili kuitumia lazima uwezeshe usajili wa kifaa.</string>
+    <string name="pref_hide_launcher_icon">Ficha aikoni kwenye kidownloza</string>
+    <string name="hide_launcher_icon_dialog_message">Ikiwashwa, MicroG itafichwa kwenye kianzisha programu chako. MicroG inaweza kufunguliwa kutoka kwenye habari za programu zinazopatikana kwenye orodha ya programu za mfumo wa kifaa chako.</string>
+    <string name="hide_launcher_icon_updating_title">Tafadhali subiri wakati programu inasasishwa</string>
+    <string name="update_ignore">Puuza</string>
+    <string name="update_downloading_title">Inapakua sasisho…</string>
+    <string name="update_download_failed">Pakua imeshindwa. Angalia muunganisho wako na ujaribu tena.</string>
+    <string name="update_signature_mismatch">Programu haiwezi kusasishwa, saini ni tofauti.</string>
+    <string name="update_failed_title">Sasisho limefeli</string>
+    <string name="update_permission_required_title">Ruhusa inahitajika</string>
+    <string name="update_permission_required_message">Ili kusakinisha sasisho, tafadhali ruhusu MicroG kusakinisha programu zisizojulikana katika mipangilio ya mfumo.</string>
+    <string name="update_open_settings">Mipangilio</string>
+    <string name="update_check_failed">Hakuweza kuangalia sasisho. Angalia muunganisho wako na ujaribu tena.</string>
+    <string name="update_up_to_date_title">Umesasisha</string>
+    <string name="update_up_to_date_message">MicroG-RE v%s ndiyo toleo la hivi karibuni.</string>
+    <string name="update_notification_title">Sasisho linapatikana</string>
+    <string name="update_notification_text">Toleo jipya la v%s linapatikana, gusa ili sasisha</string>
+    <string name="update_notification_channel">Sasisho</string>
+    <string name="gcm_last_message_at">Ujumbe wa mwisho: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_registered_since">Imesajiliwa tangu: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_unregister_confirm_title">Ondolea usajili <xliff:g example="F-Droid">%1$s</xliff:g>?</string>
+    <string name="gcm_unregister_confirm_message">Baadhi ya programu hazijisajili upya kiotomatiki na/au hazitoi chaguo la kufanya hivyo kwa mkono. Programu hizi zinaweza zisifanye kazi ipasavyo baada ya kusajiliwa.\nEndelea?</string>
+    <string name="gcm_unregister_after_deny_message">Umekataa programu kujisajili kwa arifa za push ambazo tayari zimesajiliwa.\nJe, unataka kuisajili sasa ili isipokee ujumbe wa push katika siku zijazo?</string>
+    <string name="gcm_messages_counter">Ujumbe: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> bytes)</string>
+    <string name="gcm_network_state_connected">Imeunganishwa tangu <xliff:g example="2 hours ago">%1$s</xliff:g></string>
+    <string name="gcm_enable_switch">Pokea arifa za push</string>
+    <string name="gcm_allow_app_popup">Ruhusu <xliff:g example="F-Droid">%1$s</xliff:g> kusajili arifa za push?</string>
+    <string name="pref_push_app_allow_register_summary">Ruhusu programu kujisajili kwa arifa za push.</string>
+    <string name="pref_push_app_wake_for_delivery_summary">Washa programu ikiwa iko nyuma ili kupokea ujumbe wa push unaoingia.</string>
+    <string name="safetynet_intro">Google SafetyNet ni mfumo wa uthibitishaji wa kifaa, unaohakikisha kuwa kifaa kimeimarishwa vyema na kinapatana na Android CTS. Baadhi ya programu hutumia SafetyNet kwa sababu za kiusalama au kama sharti la ulinzi dhidi ya uingiliaji.\n\nmicroG GmsCore ina utekelezaji wa bure wa SafetyNet, lakini seva rasmi inahitaji maombi ya SafetyNet yasainiwe kwa kutumia mfumo wa proprietary wa DroidGuard.</string>
+    <string name="safetynet_enable_switch">Ruhusu uthibitishaji wa kifaa</string>
+    <string name="pref_safetynet_test_title">Jaribu uthibitishaji wa SafetyNet</string>
+    <string name="pref_recaptcha_test_title">Jaribu ReCAPTCHA</string>
+    <string name="pref_recaptcha_enterprise_test_title">Jaribu ReCAPTCHA Enterprise</string>
+    <string name="pref_test_summary_passed">Imepita majaribio yote</string>
+    <string name="pref_test_summary_failed">Imeshindwa: %s</string>
+    <string name="pref_test_summary_warn">Onyo: %s</string>
+    <string name="pref_test_summary_running">Inatekeleza…</string>
+    <string name="pref_droidguard_unsupported_summary">Utekelezaji wa DroidGuard hauungwi mkono kwenye kifaa hiki. Huduma za SafetyNet zinaweza kutofanya kazi ipasavyo.</string>
+    <string name="prefcat_safetynet_apps_title">Programu zinazotumia SafetyNet</string>
+    <string name="prefcat_device_attestation_apps_title">Programu zinazotumia Uthibitishaji wa Kifaa</string>
+    <string name="pref_device_attestation_app_allow_requests_title">Ruhusu maombi</string>
+    <string name="pref_device_attestation_app_allow_requests_summary">Ruhusu programu kuomba uthibitisho wa kifaa</string>
+    <string name="menu_clear_recent_requests">Futa maombi ya hivi karibuni</string>
+    <string name="safetynet_last_run_at">Matumizi ya mwisho: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="pref_safetynet_recent_uses">Matumizi ya hivi karibuni</string>
+    <string name="pref_safetynet_recent_attestation_summary">Uthibitisho: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_summary">ReCaptcha: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_enterprise_summary">ReCaptcha Enterprise: %s</string>
+    <string name="pref_safetynet_recent_copy_json">Nakili data ya JSON JWS</string>
+    <string name="pref_safetynet_recent_advice">Ushauri</string>
+    <string name="pref_safetynet_recent_eval_type">Aina ya tathmini</string>
+    <string name="pref_safetynet_recent_response_status">Hali ya jibu</string>
+    <string name="pref_safetynet_recent_cat_response">Data ya jibu</string>
+    <string name="pref_safetynet_recent_cat_request">Data ya ombi</string>
+    <string name="pref_safetynet_recent_nonce">Nonce (Hex)</string>
+    <string name="pref_safetynet_recent_request_time">Wakati wa ombi</string>
+    <string name="pref_safetynet_recent_request_type">Aina ya ombi</string>
+    <string name="pref_safetynet_recent_cat_basic">Data ya msingi</string>
+    <string name="pref_safetynet_recent_token">Tokeni</string>
+    <string name="pref_safetynet_recent_copied">Imenakiliwa kwenye ubao wa kunakili!</string>
+    <string name="pref_safetynet_test_integrity_cts_passed">Integrity na CTS zimefaulu</string>
+    <string name="pref_safetynet_test_cts_failed">CTS imefeli</string>
+    <string name="pref_safetynet_test_integrity_failed">Integrity imefeli</string>
+    <string name="pref_safetynet_test_not_completed">Haijakamilika bado</string>
+    <string name="pref_safetynet_test_no_result">Hakuna matokeo</string>
+    <string name="pref_safetynet_test_invalid_json">JSON isiyo sahihi</string>
+    <string name="pref_vending_licensing_category">Leseni ya Google Play</string>
+    <string name="pref_vending_licensing_enable_switch">Jibu maombi ya uhakiki wa leseni</string>
+    <string name="pref_vending_license_enable_summary">Baadhi ya programu zinahitaji uthibitisho kwamba ulinunua programu hizo kwenye Google Play. Inapohitajika na programu, microG inaweza kupakua uthibitisho wa ununuzi kutoka Google. Ikiwa imezimwa, au ikiwa hakuna akaunti ya Google iliyoongezwa, maombi ya uthibitisho wa leseni yanapuuzwa.</string>
+    <string name="pref_vending_licensing_purchase_free_apps_switch">Ongeza programu za bure kwenye maktaba kiotomatiki</string>
+    <string name="pref_vending_licensing_purchase_free_apps_summary">Programu za bure zinaweza kuangalia ikiwa zilipakuliwa kutoka Google Play. Ongeza programu za bure kwenye maktaba ya akaunti yako kiotomatiki ili kila wakati upite ukaguzi kwa programu zote za bure zinazopatikana kwako hivi sasa.</string>
+    <string name="pref_vending_feature_delivery">Uwasilishaji wa Vipengele vya Google Play</string>
+    <string name="pref_vending_split_install_switch">Ufungaji wa vipengele kulingana na mahitaji</string>
+    <string name="pref_vending_licensing_split_install_summary">Ruhusu programu kupakua na kufunga vipengele vya ziada</string>
+    <string name="feedback_disabled">Maoni hayawezekani kwa sasa</string>
+    <string name="backup_disabled">Hifadhi nakala hayawezekani kwa sasa</string>
+    <string name="pref_vending_billing_category">Malipo ya Google Play</string>
+    <string name="pref_vending_billing_enable_switch">Shughulikia maombi ya malipo</string>
+    <string name="pref_vending_billing_enable_summary">Ikishawezeshwa, baadhi ya programu zinaweza kukamilisha manunuzi au kuanzisha usajili kupitia huduma ya Google Play Billing.</string>
+    <string name="pref_vending_billing_note_experimental">Kipengele hiki ni cha majaribio na kinaweza kusababisha kupotea kwa pesa. Umeonywa.</string>
+    <string name="pref_vending_billing_note_licensing">Baadhi ya programu zinaweza kukutaka pia uwezeshe uhakiki wa leseni ili kuhakiki manunuzi yako.</string>
+    <string name="pref_vending_asset_delivery_category">Usambazaji wa Rasilimali wa Google Play</string>
+    <string name="pref_vending_asset_delivery_switch">Wezesha usambazaji wa rasilimali unapoombwa</string>
+    <string name="pref_vending_asset_delivery_summary">Pakua rasilimali za ziada zinapohitajika na programu zinazotumia Play Asset Delivery</string>
+    <string name="pref_vending_asset_device_sync_summary">Programu zinazotumia Play Asset Delivery zitapakua rasilimali za ziada kulingana na taarifa za kifaa kinachotumika sasa.</string>
+    <string name="pref_vending_asset_device_sync_switch">Wezesha usawazishaji wa taarifa za kifaa</string>
+    <string name="pref_workprofile_create_account">Ruhusu usanidi wa akaunti ya kazi</string>
+    <string name="pref_workprofile_intro">Unaposanidi wasifu wa kazi kwa ajili ya mahali pako pa kazi au taasisi ya elimu,
+sanidi mayajaribu kuunganishwa na Google ili kuwezesha kupakua programu kwenye wasifu huo.</string>
+    <string name="pref_workprofile_disclaimer">Ni jukumu lako kuhakikisha kwamba matumizi yako ya microG yanaendana na sera za kampuni.
+        microG hutolewa kwa juhudi bora na haiwezi kuhakikisha kuwa itafanya kazi kama inavyotarajiwa.</string>
+    <string name="pref_auto_create_player">Ruhusu usajili wa akaunti ya Play Games</string>
+    <string name="pref_auto_create_player_intro">Unapocheza michezo, unahitaji kutumia akaunti ya Play Games ili kuingia na kurekodi kazi zinazohusiana na michezo, kama vile mafanikio, mbao za uongozi, faili za hifadhi, n.k. Baada ya kuzima, akaunti za Google ambazo hazijaunganishwa na akaunti ya Play Games hazitasajiliwa kiotomatiki, na mchezo hautoweza kuingia na kuchezwa.</string>
+    <string name="pref_allow_upload_game_played">Ruhusu kupakia mchezo uliochezwa</string>
+    <string name="pref_allow_upload_game_played_summary">Inapozimwa, mchezo utaripoti hali ya mchezo uliochezwa baada ya kuingia kwenye mchezo, na baadhi ya michezo inaweza isifanye kazi.</string>
+    <string name="pref_change_default_game_player">Badilisha akaunti kwa ajili ya michezo</string>
+    <string name="pref_change_default_game_player_summary">Badilisha akaunti ya chaguo-msingi kwa ajili ya michezo &amp; Badilisha akaunti kulingana na mchezo.</string>
+    <string name="pref_delete_game_account_data">Futa data ya Play Games</string>
+    <string name="pref_delete_game_account_data_summary">Futa akaunti ya Play Games &amp; data zote &amp; Futa data ya mchezo mmoja mmoja.</string>
+    <string name="credentials_assisted_cancel">Ghairi</string>
+    <string name="credentials_assisted_continue">Endelea</string>
+    <string name="credentials_assisted_confirmation_header">Tunakuingiza</string>
+    <string name="credentials_assisted_continue_as_user_button_label">Endelea kama %1$s</string>
+    <string name="credentials_assisted_sign_back_title">Ingia tena kwenye %1$s kwa kutumia Google</string>
+    <string name="credentials_assisted_signin_consent_header">Unaingia kama %1$s</string>
+    <string name="credentials_assisted_signin_consent">Kwa kuendelea, Google itashiriki jina lako, anwani ya barua pepe na picha ya wasifu wako na %1$s. Angalia Sera ya Faragha na Masharti ya Huduma ya %1$s.</string>
+    <string name="credentials_assisted_signin_description">Unaweza kudhibiti Ingia na Google katika Akaunti zako za Google.</string>
+    <string name="credentials_assisted_choose_account_label">Chagua akaunti</string>
+    <string name="credentials_assisted_choose_account_subtitle">ili kuendelea kwenda %1$s</string>
+    <string name="credentials_assisted_choose_account_error_tips">Tatizo la akaunti</string>
+    <string name="credentials_assisted_signin_button_text_long">Ingia kwa Google</string>
+    <string name="credentials_assisted_signin_add_account">Ongeza Akaunti</string>
+    <string name="credentials_service_sign_in_with_google_label">Ingia kwa Google</string>
+    <string name="credentials_service_remote_custom_subtitle">Ufunguo wa usalama, simu janja au tableti</string>
+    <string name="limited_services_dialog_information">Unatumia Huduma za Kikomo za microG. Tofauti na Huduma za kawaida za microG, toleo hili hufanya kazi tu na programu zinazotumia maktaba za microG, si zile za Google Play. Hii inamaanisha kuwa programu nyingi zitapuuza huduma hizi.</string>
+    <string name="limited_services_dialog_information_ack">Naelewa</string>
+    <string name="games_achievement_list_title">Mafanikio</string>
+    <string name="games_achievements_empty_text">Hakuna mafanikio kwa mchezo huu</string>
+    <string name="games_api_access_denied">Hakuna akaunti kwenye kifaa hiki inayoweza kufikia Games API</string>
+    <string name="games_achievement_locked_content_description">imefungwa</string>
+    <string name="games_achievement_unlocked_content_description">imefunguliwa</string>
+    <string name="games_achievement_extra_text">%1$s XP</string>
+    <string name="games_leaderboard_empty_text">Hakuna ubao wa viongozi kwa mchezo huu</string>
+    <string name="games_leaderboard_list_title">Nafasi</string>
+    <string name="games_leaderboards_score_label">Alama: %1$s</string>
+    <string name="games_snapshot_empty_text">Hakuna michezo iliyohifadhiwa bado</string>
+    <string name="games_snapshot_choose_btn_text">chagua</string>
+    <string name="games_snapshot_delete_btn_text">futua</string>
+    <string name="games_delete_snapshot_dialog_title">Futa mchezo uliohifadhiwa</string>
+    <string name="games_delete_snapshot_dialog_message">Je, una uhakika unataka kufuta mchezo huu uliohifadhiwa?</string>
+    <string name="games_delete_snapshot_dialog_cancel">Ghairi</string>
+    <string name="games_delete_snapshot_dialog_ok">Sawa</string>
+    <string name="games_delete_snapshot_error">Kufuta kumefeli, tafadhali jaribu tena baadaye</string>
+    <string name="games_state_description_signed_out">Umeondoka</string>
+    <string name="games_state_description_delete">Futa</string>
+    <string name="games_change_button_text">Badili</string>
+    <string name="games_change_default_account_section_title">Badili akaunti ya chaguo-msingi kwa ajili ya michezo</string>
+    <string name="games_change_default_account_description">Akaunti ya chaguo-msingi: %1$s</string>
+    <string name="games_change_default_account_explanation">Akaunti hii hutumiwa kukuingiza kiotomatiki kwenye michezo, kuhifadhi maendeleo yako ya mchezo, na kuhifadhi mipangilio yako. Kubadili akaunti ya chaguo-msingi au kujisajili nje kunaweza kurudisha upya maendeleo na mipangilio yako kwa michezo uliyocheza.</string>
+    <string name="games_change_per_game_title">Badili akaunti kulingana na mchezo</string>
+    <string name="games_change_per_game_description">Kubadili akaunti kwa mchezo uliyochagua au kujisajili kutoka kwake kunaweza kurudisha upya maendeleo na mipangilio yako kwa mchezo huo.</string>
+    <string name="games_change_default_account_for_all_games_dialog_title">Chagua chaguo kwa ajili ya akaunti mpya ya chaguo-msingi</string>
+    <string name="games_change_default_account_for_all_games_dialog_description">Akaunti ya sasa ya chaguo-msingi: %1$s</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_title">Badilisha akaunti ya chaguo-msingi kwa michezo mipya pekee </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_description">Hutapoteza ufikiaji wa maendeleo na mipangilio ya michezo uliyocheza. Lakini maendeleo yako yatagawanywa kati ya akaunti.</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_title"> Badilisha akaunti ya chaguo-msingi kwa michezo yote </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_description">Unaweza kupoteza ufikiaji wa maendeleo na mipangilio ya michezo uliyocheza. Tutaanza upya mchezo ili kutumia mabadiliko yako.</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_title"> Toka kwenye michezo yote </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_description">Unaweza kupoteza ufikiaji wa maendeleo na mipangilio ya michezo uliyocheza. Tutaanza upya mchezo ili kutumia mabadiliko yako.</string>
+    <string name="games_change_per_game_dialog_title">Chagua chaguo kwa mchezo huu</string>
+    <string name="games_change_per_game_dialog_description">Kubadilisha akaunti au kujisaini kutoka kunaweza kurejesha maendeleo na mipangilio yako ya mchezo</string>
+    <string name="games_change_per_game_dialog_option_use_player">Tumia %1$s</string>
+    <string name="games_change_per_game_dialog_option_use_player_snackbar_success_message">Utakuwa umejisaini kwenye mchezo huu kwa kutumia %1$s</string>
+    <string name="family_management_toolbar_back">Rudi</string>
+    <string name="family_management_invite_slots_left">%1$d mialiko imebaki</string>
+    <string name="family_management_delete_group_cancel">Ghairi</string>
     <!-- Passkey management -->
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
 </resources>

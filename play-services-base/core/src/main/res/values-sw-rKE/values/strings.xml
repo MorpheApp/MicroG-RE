@@ -3,4 +3,22 @@
   ~ SPDX-FileCopyrightText: 2020, microG Project Team
   ~ SPDX-License-Identifier: Apache-2.0
   -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="foreground_service_notification_title">Inafanya kazi kwa nyuma</string>
+    <string name="foreground_service_notification_text"><xliff:g example="Exposure Notification">%1$s</xliff:g> inaendelea kufanya kazi nyuma ya mfumo.</string>
+    <string name="foreground_service_notification_big_text">Ondoa <xliff:g example="microG Services">%1$s</xliff:g> kwenye uboreshaji wa betri au badilisha mipangilio ya arifa ili kuficha arifa hii.</string>
+    <string name="foreground_action_battery_optimization">Uboreshaji wa betri</string>
+    <string name="foreground_action_notification_settings">Mipangilio</string>
+    <string name="menu_advanced">Ya juu</string>
+    <string name="menu_settings">Mipangilio</string>
+    <string name="menu_game_managed">Akaunti za Michezo Zinazosimamiwa</string>
+    <string name="list_no_item_none">Hakuna</string>
+    <string name="list_item_see_all">Ona zote</string>
+    <string name="open_app">Fungua</string>
+    <string name="service_status_disabled">Imezimwa</string>
+    <string name="service_status_enabled">Imewashwa</string>
+    <string name="service_status_automatic">Kiotomatiki</string>
+    <string name="service_status_manual">Kikabari</string>
+    <string name="service_status_enabled_short">Washa</string>
+    <string name="service_status_disabled_short">Zima</string>
+</resources>

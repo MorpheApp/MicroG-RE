@@ -4,8 +4,487 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="dialog_title_remove_account">Susa i-akhawunti</string>
+    <string name="dialog_message_remove_account">"Uyaqiniseka ukuthi ufuna ukususa le akawunti?
+
+Ezinye izinsizakalo nemisebenzi ngeke zitholakale
+
+Idatha yakho ngeke ilahleke"</string>
+    <string name="dialog_confirm_button">Susa</string>
+    <string name="dialog_cancel_button">Khansela</string>
+    <string name="snackbar_remove_account">I-akhawunti %s isuswe</string>
+    <string name="snackbar_undo_button">Buyisa</string>
+    <string name="gms_settings_name">Izilungiselelo ze-MicroG</string>
+    <string name="gms_settings_summary">Lungisa izinsizakalo ze-MicroG.</string>
+    <string name="just_a_sec">Yilayishane nje…</string>
+    <string name="ask_permission_tos">Ngaphoqela, uvumela le nsizakalo kanye ne-Google ukusebenzisa ulwazi lwakho ngokuhambisana nemigomo yabo yenseva kanye nezinqumo zezimfihlo.</string>
+    <string name="ask_scope_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> ifisa ukukwenza lokhu:</string>
+    <string name="ask_service_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> ifisa ukusebenzisa:</string>
+    <string name="account_manager_title">UMenja we-Account ye-Google</string>
+    <string name="sorry">Uxolo…</string>
+    <string name="auth_before_connect">Xhumana i-Google account ne-microG.\n\nAsixhumane ne-Google account, sebenzisa inkinobho ethi <b>Sign in</b> noma usebenzise inkinobho ethi <b>Huawei</b> uma unomshini walona lolu hlobo. Ngokuphonsa eyodwa yalezi zinobho uzodluliselwa ekhasini loku-logina ku-account yakho.</string>
+    <string name="auth_sign_in">Ngena</string>
+    <string name="auth_connecting">"Idivayisi yakho yenza uxhumano nama-server e-Google ukuze ukungene.
+
+Lokhu kungathatha imizuzwana embalwa."</string>
+    <string name="no_network_error_desc">"Awunayo uxhumano lwenethiwekhi.
+
+Lokhu kungaba wuhlupho olwesikhashana noma idivayisi yakho ye-Android ingase ingabi yilungiselelwe izinsizakalo zedatha. Zama futhi lapho uxhumene nenethiwekhi yeselula, noma uxhumane nenethiwekhi ye-Wi-Fi."</string>
+    <string name="auth_general_error_desc">"Kube nokulutha ekuxhumeneni nama-server we-Google.
+
+Zama futhi kamuva."</string>
+    <string name="auth_finalize">"Idivayisi yakho ixhumana ne-Google ukuze ugcine imininingwane ku-akhawunti yakho.
+
+Lokhu kungathatha imizuzu embalwa."</string>
+    <string name="allow">Vuma</string>
+    <string name="deny">Vala</string>
+    <string name="auth_notification_title">Kudingeka ukuqinisekisa</string>
+    <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> idinga imvume yakho ukuze ifike ku-akhawunti yakho ye-Google.</string>
+    <string name="auth_package_override_request_title">Vumela <b><xliff:g example="F-Droid">%1$s</xliff:g></b> ukuba ibe nokufikeleleka okukhethekile ku-<xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> ifuna ukufika ekamo yakho sengathi i-<b><xliff:g example="F-Droid">%2$s</xliff:g> eyi-<xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Lokhu kungayipha ukufikeleleka okukhethekile ekhamweni lakho.</string>
+    <string name="auth_action_notification_channel_name">Izixwayiso ze-akhawunti ye-Google</string>
+    <string name="auth_action_notification_channel_description">Yazisa lapho eyodwa ye-akhawunti yakho ye-Google idinga ukusetha okwengeziwe ngaphambi kokuba isetshenziswe noma lapho i-akhawunti ingahambisani ne-microG.</string>
+    <string name="auth_action_notification_title">Kudingeka isenzo se-akhawunti</string>
+    <string name="auth_action_notification_content">I-akhawunti yakho ye-Google idinga ukusetha okwengeziwe.</string>
+    <string name="auth_action_reauth_notification_title">Kudingeka isenzo se-akhawunti</string>
+    <string name="auth_action_activity_header">Qedela ukusetha i-akhawunti yakho ye-Google</string>
+    <string name="auth_action_activity_explanation">Phetha izinyathelo ezilandelayo ukuze ukwazi ukusebenzisa i-akhawunti yakho ye-Google %s kuleli device.</string>
+    <string name="auth_action_step_enable_checkin">Vula ukubhaliswa kwe-device</string>
+    <string name="auth_action_step_enable_checkin_description">"Idivayisi yakho idinga ukubhalisa ku-Google okukodwa okubanzi.
+
+Ungakwazi ukukhisela ukubhalisa kwedivayisi ye-Google emva kokuba ukusetha kwe-akhawunti kuqedile."</string>
+    <string name="auth_action_step_enable_gcm">Vula i-Cloud Messaging</string>
+    <string name="auth_action_step_enable_gcm_description">Ungakwazi ukuvala i-Cloud Messaging ngemuva kokuba ukusetha kwe-akhawunti sekuphelile.</string>
+    <string name="auth_action_step_allow_microg_gcm">Vumela i-Cloud Messaging ku-microG</string>
+    <string name="auth_action_step_allow_microg_gcm_description">Ngokwezinketho zakho, i-microG idinga imvume kuwe ngaphambi kokuba ikwazi ukuzibhalisela i-Cloud Messaging.</string>
+    <string name="auth_action_step_enable_lockscreen">Hlela ukuvalwa kwe-screen okuphephile</string>
+    <string name="auth_action_step_enable_lockscreen_description">"I-akhawunti yakho ye-Google ilawulwa yindawo yakho yokusebenza noma isikhungo semfundo. Umphathi wakho unqume ukuthi amadivayisi adinga ukuvalwa kwesikrini okuphephile ngaphambi kokuba akwazi ukufinyelela kudatha ye-akhawunti.
+
+Sicela usethele ipasiwedi, i-PIN, noma ukuvalwa kwesikrini kwephethamu."</string>
+    <string name="auth_action_step_perform_content_description">Chofoza ukuze wenze isinyathelo</string>
+    <string name="auth_action_step_completed_content_description">Isinyathelo siphelile</string>
+    <string name="auth_action_activity_finish">Qeda</string>
+    <string name="signin_picker_title">Khetha i-akhawunti</string>
+    <string name="signin_picker_subtitle">ukuze uqhubekele ku <xliff:g example="F-Droid">%1$s</xliff:g></string>
+    <string name="signin_picker_add_account_label">Yengeza enye i-akhawunti</string>
+    <string name="signin_confirm_title">Vumela ukuthi ungene ku <xliff:g example="F-Droid">%1$s</xliff:g></string>
+    <string name="signin_confirm_button_text">Vumela futhi wabelane</string>
+    <string name="signin_subtext_sharing">Ukuze uqhubeke, i-microG izoh බෙla igama, ikheli লে-imeyili kanye nesithombe sephrofayili se-akhawunti yakho ye-Google ne <xliff:g example="F-Droid">%1$s</xliff:g>.</string>
+    <string name="perm_status_broadcast_label">lalela ukukhangisa kwesimo sangaphakathi</string>
+    <string name="perm_gsf_read_gservices_label">funda ukulungiswa kwezinsizakalo ze-Google</string>
+    <string name="perm_c2dm_receive_label">lalela imiyalezo ye-C2DM</string>
+    <string name="perm_c2dm_send_label">thumela imiyalezo ye-C2DM kwezinye izinhlelo</string>
+    <string name="perm_gtalk_svc_label">shintshisana imilayezo futhi uthole izaziso zokuvumelanisa kusuka kuma-server we-Google</string>
+    <string name="perm_extended_access_label">Ukufunda okwandisiwe kwezinsizakalo ze-Google</string>
+    <string name="perm_provision_label">hlinzeka ngezinsizakalo ze-microG</string>
+    <string name="perm_provision_description">Ivumela uhlelo lokusebenza ukulungisa izinsizakalo ze-microG ngaphandle kokuxhumana nomsebenzisi</string>
+    <string name="perm_car_speed_label">Isivinyane semoto</string>
+    <string name="perm_car_speed_description">"Finyelela isivinyane semoto yakho"</string>
+    <string name="perm_car_info_label">Ulwazi lwemoto</string>
+    <string name="perm_car_info_description">"Finyelela ulwazi lwemoto yakho"</string>
+    <string name="perm_car_fuel_label">Izinga lephethiloli lemoto</string>
+    <string name="perm_car_fuel_description">"Finyelela ulwazi lwezinga lephethiloli lemoto yakho"</string>
+    <string name="perm_car_mileage_label">Ikilomitha zemoto</string>
+    <string name="perm_car_mileage_description">"Finyelela ulwazi lwekilomitha zemoto yakho"</string>
+    <string name="perm_car_vendor_extension_label">Ishayishe lomdayisi wemoto</string>
+    <string name="perm_car_vendor_extension_description">"Finyelela ishayishe lomdayisi wemoto yakho ukuze ushintshisane ngolwazi oluqondiswe emotweni"</string>
+    <string name="service_name_checkin">Ukubhalisa kwe-Device</string>
+    <string name="service_name_mcs">Ukuthumela Kwamafu</string>
+    <string name="service_name_device_attestation">Ukuqinisekisa kwe-Device</string>
+    <string name="service_name_vending">Izinsizakalo ze-Play Store</string>
+    <string name="service_name_work_profile">I-Work profile</string>
+    <string name="games_title">Imidlalo ye-Google Play</string>
+    <string name="games_info_title"><xliff:g example="F-Droid">%1$s</xliff:g> ifuna ukusebenzisa i-Play Games</string>
+    <string name="games_info_content">Ukuze usebenzise i-Play Games kudingeka ukufaka i-app ye-Google Play Games. I-application ingaqhubeka ngaphandle kwe-Play Games, kodwa kungenzeka ukuthi izisebenze ngendlela engalindelekile.</string>
+    <string name="pick_place_title">Khetha indawo</string>
+    <string name="place_picker_select_title">Khetha le ndawo</string>
+    <string name="place_picker_nearby_places">Izindawo eziseduze</string>
+    <string name="network_type_mobile">Inethiwekhi yeselula</string>
+    <string name="network_type_wifi">Wi-Fi</string>
+    <string name="network_type_roaming">Roaming</string>
+    <string name="network_type_other">Ezinye izinkundla</string>
     <!-- Self check -->
+    <string name="self_check_cat_fake_sig">Ukusekelwa kokukhohlisa isigxiviso</string>
+    <string name="self_check_cat_gms_packages">Amaphakheji afakwe</string>
+    <string name="self_check_cat_system">Uhlelo</string>
+    <string name="self_check_name_system_spoofs">Isignathura ye-System spoofs: </string>
+    <string name="self_check_resolution_system_spoofs">Sicela uhlole imibhalo ukubona ukuthi yiziphi izinyathelo ezingase zidingeke.</string>
+    <string name="self_check_pkg_gms">Izinsizakalo ze-microG</string>
+    <string name="self_check_pkg_vending">i-microG Companion / Play Store</string>
+    <string name="self_check_pkg_gsf">i-microG Services Framework</string>
+    <string name="self_check_name_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> ifakwe: </string>
+    <string name="self_check_resolution_app_installed">Faka uhlelo lwe- <xliff:g example="F-Droid">%1$s</xliff:g> noma olunye oluhambisana nalo. Sicela uhlole imibhalo ukubona ukuthi yiziphi izinhlelo ezihambisana nalo.</string>
+    <string name="self_check_name_correct_sig"><xliff:g example="F-Droid">%1$s</xliff:g> inesigajane esilungile: </string>
+    <string name="self_check_resolution_correct_sig">Kungaba ukuthi i-<xliff:g example="F-Droid">%1$s</xliff:g> efakwe ayihambisani noma i-signature spoofing ayisebenzi kuyo. Sicela uhlole imibhalo ukubona ukuthi yiziphi izinhlelo kanye nama-ROMs ahambisana nayo.</string>
+    <string name="self_check_name_battery_optimizations">Ukuhambisana kombethe bwebhethri okunganakwa:</string>
+    <string name="self_check_resolution_battery_optimizations">Thinta lapha ukuze ukhise ukuhambisana kombethe bwebhethri. Ukungenzi lokhu kungabangela ukuthi izinhlelo zingasebenzi ngendlela efanele.</string>
     <!-- Settings strings -->
+    <string name="prefcat_about">Mayelana</string>
+    <string name="prefcat_details">Imininingwane</string>
+    <string name="cond_gcm_bat_title">Ukuthuthukiswa kwebhethri kuvuliwe</string>
+    <string name="cond_gcm_bat_summary">Uvule i-Cloud Messaging kodwa unokuhambisana kombethe bwebhethri okusebenzayo kuma-microG Services. Ukuze izaziso zokuphusha zifike, kufanele unganaki ukuhambisana kombethe bwebhethri.</string>
+    <string name="cond_gcm_bat_action">Nakela ukuthuthukiswa</string>
+    <string name="cond_perm_title">Imvume ayikho</string>
+    <string name="prefs_account">Izinketho ze-akhawunti</string>
+    <string name="prefs_account_privacy">Ulwazi lomuntu &amp; ubumfihlo</string>
+    <string name="prefs_account_security">Ukungena &amp; ukuphepha</string>
+    <string name="pref_auth_trust_google_title">Thembela ku-Google ngokwemvume yohlelo</string>
+    <string name="pref_auth_trust_google_summary">Uma kukhishwe, umsebenzisi uyabuza ngaphambi kokuba isicelo sokugcwalisa isidingo senhlelo sithunyelwe ku-Google. Ezinye izinhlelo ngeke zikwazi ukusebenzisa i-akhawunti ye-Google uma lokhu kukhishwe.</string>
+    <string name="pref_auth_visible_title">Vumela izinhlelo ukuthi zithole izakhawunti</string>
+    <string name="pref_auth_visible_summary">Uma kuvunyelwe, zonke izinhlelo kuleli device zizokwazi ukubona ikheli le-email le-Google Accounts yakho ngaphandle kokugunyazwa kwangaphambili.</string>
+    <string name="pref_auth_include_android_id_title">Qinisekisa ngokubhalisa idivayisi</string>
+    <string name="pref_auth_include_android_id_summary">Uma kukhishwe, izicelo zokugunyazwa ngeke zixhumeke nokubhaliswa kwe-device, okungase kuvumele ama-device angafunwanga ukuthi anginize, kodwa kungaba nemiphumela engalindelekile.</string>
+    <string name="pref_auth_strip_device_name_title">Susa igama ledivayisi ukuze uqinisekise</string>
+    <string name="pref_auth_strip_device_name_summary">Uma kuvunyelwe, izicelo zokugunyazwa ngeke zihlanganise igama le-device, okungase kuvumele ama-device angafunwanga ukuthi anginize, kodwa kungaba nemiphumela engalindelekile.</string>
+    <string name="pref_auth_two_step_verification_title">Thola iziboniso zokuqinisekisa zezinyathelo ezimbili</string>
+    <string name="pref_auth_two_step_verification_summary">Uma kuvunyelwe, i-device ingathola iziboniso zokuqinisekisa zezinyathelo ezimbili ku-Google (Cloud Messaging idingeka).</string>
+    <string name="pref_auth_allow_find_devices_title">Vumela ukuphendula i-Google Device Finder</string>
+    <string name="pref_auth_allow_find_devices_summary">Uma kuvunyelwe, i-device ingaphendula izaziso ze-Find My Device ku-Google (Cloud Messaging idingeka).</string>
+    <string name="pref_checkin_enable_summary">Ibhalisa i-device yakho ezinsizweni ze-Google futhi idala u-identifier we-device okungavamile. I-microG isusa ama-bits okuhlonza ngaphandle kwegama le-Google account yakho kudatha yokubhalisa.</string>
+    <string name="pref_device_registration_android_id">I-Android ID</string>
+    <string name="checkin_not_registered">Ayibhaliswanga</string>
+    <string name="checkin_last_registration">Ukubhalisa kokugcina: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="checkin_enable_switch">Bhalisa idivayisi</string>
+    <string name="pref_info_status">Isimo</string>
+    <string name="pref_accounts_title">Ama-akhawunti</string>
+    <string name="pref_game_accounts_title">Ama-akhawunti e-Google Game</string>
+    <string name="pref_accounts_summary">Faka uphathe ama-akhawunti we-Google</string>
+    <string name="prefcat_accounts_settings_title">Izilungiselelo</string>
+    <string name="prefcat_accounts_login_accounts_title">Ungene</string>
+    <string name="prefcat_accounts_options_title">Izinketho</string>
+    <string name="pref_accounts_manage_accounts_title">Phatha ama-akhawunti</string>
+    <string name="pref_accounts_manage_accounts_summary">Vula imphathi yama-akhawunti edivayisi</string>
+    <string name="prefcat_accounts_backup_title">Ukubuyisela i-Account</string>
+    <string name="pref_accounts_backup_title">Bhaka ama-akhawunti</string>
+    <string name="pref_accounts_backup_summary">Thumela ama-akhawunti e-Google kuphayila</string>
+    <string name="pref_accounts_restore_title">Buyisela ama-akhawunti</string>
+    <string name="pref_accounts_restore_summary">Faka ama-akhawunti e-Google kuphayila</string>
+    <string name="pref_accounts_backup_warning_title">Bhaka ama-akhawunti?</string>
+    <string name="pref_accounts_backup_warning_message">Lokhu kubhala ama-akhawunti akho nama-token okungenisa (SID/LSID) kuphayila. Noma ubani othola lolu phayila angangena kuma-akhawunti akho, ngakho ugcine luphephile futhi ungawalwabelani muntu.</string>
+    <string name="button_backup_accounts">Bhaka</string>
+    <string name="snackbar_accounts_backed_up">Ama-akhawunti abhakwe</string>
+    <string name="snackbar_accounts_restored">one:Buyiselwe i-akhawunti eyodwa
+other:Buyiselwe ama-akhawunti %1$d</string>
+    <string name="snackbar_accounts_export_failed">Ukubhaka kwephutha</string>
+    <string name="snackbar_accounts_import_failed">Ukubuyisela kwephutha</string>
+    <string name="prefcat_youtube_activity">Imisebenzi yeYouTube</string>
+    <string name="pref_manage_all_history">Phatha yonke imlandu</string>
+    <string name="pref_data_in_youtube">Idatha lakho ku-YouTube</string>
+    <string name="pref_accounts_login_accounts_summary">Ama-akhawunti agcinwe futhi agciniwe kule divayisi kuphela. Thinta i-akhawunti ukuze uyisuse kule divayisi unomphela</string>
+    <string name="pref_privacy_title">Ubumfihlo</string>
+    <string name="pref_privacy_summary">Izilungiselelo zobumfihlo zokuqinisekisa nohlelo</string>
+    <string name="auth_add_account">Yenge i-akhawunti</string>
+    <string name="prefcat_applications">Izicungelelo</string>
+    <string name="prefcat_authentication">Ukuqinisekisa ubunjalo</string>
+    <string name="pref_add_account_summary">Yenge i-akhawunti ye-Google</string>
+    <string name="pref_gcm_enable_mcs_summary">I-Cloud Messaging ngumhlinzeki wezaziso zokuphusha osetshenziswa izinhlelo eziningi zangaphandle. Ukuze ukusebenzise, kumele uvule ukubhalisa kwedivayisi.</string>
+    <string name="pref_gcm_confirm_new_apps_title">Qinisekisa izinhlelo ezintsha</string>
+    <string name="pref_gcm_confirm_new_apps_summary">Buza ngaphambi kokubhalisa uhlelo olusha ukuze luthole izaziso ze-push</string>
+    <string name="pref_about_title">Mayelana ne-MicroG RE</string>
+    <string name="pref_hide_launcher_icon">Fihla i-icon ku-launcher</string>
+    <string name="hide_launcher_icon_dialog_message">Uma ikhishwe, i-MicroG izofihla ku-app launcher yakho. I-MicroG ingavulwa ku-app info etholakala ohlwini lwe-system app lwedivayisi yakho.</string>
+    <string name="hide_launcher_icon_updating_title">Sicela ulinde ngenkathi uhlelo luvuselelwa</string>
+    <string name="pref_language_title">Ulimi</string>
+    <string name="pref_language_system_default">Okuzungezile kohlelo</string>
+    <string name="pref_github_summary">Isimo sokugcina samakhodi omthombo</string>
+    <string name="pref_update_title">Hlola imisebenzi emisha</string>
+    <string name="pref_update_summary">Hlola ku-GitHub ukuze uthole inguqulo entsha.</string>
+    <string name="update_include_prerelease">Faka ama-builds okuthuthukiswa</string>
+    <string name="update_available_title">Kukhona ukuvuselelwa okutholakalayo</string>
+    <string name="update_available_prerelease_title">Kukhona ukuvuselelwa okutholakalayo (pre-release)</string>
+    <string name="update_available_message">I-v%1$s entsha itholakala. Unenguqulo ev%2$s efakile. Landisa ufake ukuvuselelwa?</string>
+    <string name="update_now">Vuselela</string>
+    <string name="update_whats_new">Yini entsha</string>
+    <string name="update_ignore">Ngeka</string>
+    <string name="update_downloading_title">Kulandwa ukuvuselelwa…</string>
+    <string name="update_download_failed">Ukulanda kwephuthelwe. Hlola uxhumano lwakho bese uzama futhi.</string>
+    <string name="update_signature_mismatch">Uhlelo alukwazi ukuvuselelwa, izigxiviso azifani.</string>
+    <string name="update_failed_title">Ukuvuselelwa kuhlulekile</string>
+    <string name="update_permission_required_title">Kudingeka imvume</string>
+    <string name="update_permission_required_message">Ukuze ufake ukuvuselelwa, sicela uvumele i-MicroG ukufaka izinhlelo ezingaziwa kuzilungiselelo ze-system.</string>
+    <string name="update_open_settings">Izilungiselelo</string>
+    <string name="update_check_failed">Kungekenzeki ukuhlola ukuvuselelwa. Hlola uxhumano lwakho bese uzama futhi.</string>
+    <string name="update_up_to_date_title">Ususebenzisa inguqulo yakamuva</string>
+    <string name="update_up_to_date_message">I-MicroG-RE v%s yinguqulo yakamuva.</string>
+    <string name="update_notification_title">Kukhona ukuvuselelwa okutholakalayo</string>
+    <string name="update_notification_text">I-v%s entsha itholakalayo, chofoza ukuze uvuselele</string>
+    <string name="update_notification_channel">Izivuselelo</string>
+    <string name="update_notification_permission_title">Izaziso</string>
+    <string name="update_notification_permission_message">Ukuze sikwazise lapho kukhona ukuvuselelwa okusha, i-MicroG-RE idinga imvume yokuthumela izaziso. Ngicela uvume izaziso ukuze izexwayiso zokuvuselelwa zikufikele.</string>
+    <string name="update_notification_permission_allow">Vumela</string>
+    <string name="update_notification_permission_not_now">Hhayi manje</string>
+    <string name="update_notification_permission_open_settings">Vula izilungiselelo</string>
+    <string name="gcm_unregister_app">Khansela ukubhalisa</string>
+    <string name="gcm_no_message_yet">Ayikakhona imilayezo efike okwamanje</string>
+    <string name="gcm_last_message_at">Umyalezo wokugcina: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_registered">Ibhaliswe</string>
+    <string name="gcm_registered_since">Kubhaliswe kusukela: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_unregister_confirm_title">Susa ukubhalisa kwe-<xliff:g example="F-Droid">%1$s</xliff:g>?</string>
+    <string name="gcm_unregister_confirm_message">Ezinto ezithile azizibhalisi kabusha ngokuzenzakalela futhi/noma azinikezi inketho yokukwenza lokho ngesandla. Lezi zinhlelo zingase zingasebenzi ngendlela efanele ngemuva kokukhishwa kwazo ekubhalisweni.\nUqhubeke?</string>
+    <string name="gcm_unregister_after_deny_message">Uwvale uhlelo ukuba lubhalise izaziso zokuphusha okusevele lubhaliswe.\nUyafuna ukulukhipha ekubhalisweni manje ukuze lungatholi imilayezo yokuphusha esikhathini esizayo?</string>
+    <string name="gcm_messages_counter">Imilayezo: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> bytes)</string>
+    <string name="gcm_network_state_disconnected">Idisconnectiwe</string>
+    <string name="gcm_network_state_connected">Kuxhunyiwe kusukela ku-<xliff:g example="2 hours ago">%1$s</xliff:g></string>
+    <string name="gcm_enable_switch">Thola izaziso zokuphusha</string>
+    <string name="gcm_allow_app_popup">Vumela u-<xliff:g example="F-Droid">%1$s</xliff:g> ukuthi ubhalise izaziso zokuphusha?</string>
+    <string name="pref_push_app_allow_register_title">Vumela ukubhalisa</string>
+    <string name="pref_push_app_allow_register_summary">Vumela uhlelo ukuba lubhalise izaziso zokuphusha.</string>
+    <string name="pref_push_app_wake_for_delivery_title">Qala uhlelo lapho kufika umlayezo we-push</string>
+    <string name="pref_push_app_wake_for_delivery_summary">Qala uhlelo ngenkathi lusemuva ukuze uthole imilayezo yokuphusha engena.</string>
+    <string name="prefcat_push_apps_title">Izinhlelo ezisebenzisa izaziso ze-push</string>
+    <string name="prefcat_push_apps_registered_title">Izinhlelo ezibhaliswe</string>
+    <string name="prefcat_push_apps_unregistered_title">Izinhlelo ezingabhaliswanga</string>
+    <string name="prefcat_gcm_registers">Izibhaliso</string>
+    <string name="prefcat_advanced">Okuthuthukile</string>
+    <string name="pref_gcm_remove_registers">Susa zonke izinhlelo ezibhalisiwe</string>
+    <string name="pref_gcm_remove_registers_summary">Sebenzisa le nketho kuphela uma uhlangabezana nezinkinga ekubhaliseni uhlelo noma ekutholeni izaziso</string>
+    <string name="gcm_remove_registers_dialog_title">Susa zonke izibhaliso?</string>
+    <string name="gcm_remove_registers_dialog_message">"Lokhu kuzosusa zonke izinhlelo ezibhaliswe ukuba zingasamukeli izaziso zokuphusha ngasikhathi sinye
+
+Uzodinga i-securityToken entsha ne-AndroidID ukuze ubhalise izinhlelo. Hlola isimo sokubhaliswa kwedivayisi
+
+Ezinye izinhlelo zingase zingakwazi ukubhalisa futhi ngemuva kwalesi senzo. Kungase kudingeke ususe idatha yalezi zinhlelo ngaphambi kokuba zicele ukubhalisa futhi"</string>
+    <string name="gcm_remove_registers_toast_message">Zonke izinhlelo zisuswe ezazisweni zokuphusha</string>
+    <string name="prefcat_push_networks_title">Izinkundla zokuxhumana ezizokusetshenziswa kwezaziso ze-push</string>
+    <string name="safetynet_intro">I-Google SafetyNet iwuhlelo lokuqinisekisa idivayisi, lokuqinisekisa ukuthi idivayisi ivikeleke ngokufanele futhi ihambisana ne-Android CTS. Izicungecunge zezinhlelo ezithile zisebenzisa i-SafetyNet ngezizathu zokuphepha noma njengendlela yokuvikela ukungeneleli.\n\nI-microG GmsCore inokufezeka okumahhala kwe-SafetyNet, kodwa iseva esemthethweni idinga ukuba izicelo ze-SafetyNet zisayiniwe kusetshenziswa uhlelo lwe-DroidGuard olubambe i patents.</string>
+    <string name="safetynet_enable_switch">Vumela ukuqinisekisa kwedivayisi</string>
+    <string name="pref_safetynet_test_title">Hlola ukuqinisekisa kwe-SafetyNet</string>
+    <string name="pref_recaptcha_test_title">Hlola i-ReCAPTCHA</string>
+    <string name="pref_recaptcha_enterprise_test_title">Hlola i-ReCAPTCHA Enterprise</string>
+    <string name="pref_test_summary_passed">Phumelele zonke izivivinyo</string>
+    <string name="pref_test_summary_failed">Hlulekile: %s</string>
+    <string name="pref_test_summary_warn">Isixwayiso: %s</string>
+    <string name="pref_test_summary_running">Kusebenza…</string>
+    <string name="pref_droidguard_unsupported_summary">Ukusebenza kwe-DroidGuard akusekelwe kuleli device. I-services ze-SafetyNet zingasebenzi ngendlela efanele.</string>
+    <string name="prefcat_safetynet_apps_title">Izinhlelo zokusebenza ezisebenzisa i-SafetyNet</string>
+    <string name="prefcat_device_attestation_apps_title">Izinhlelo zokusebenza ezisebenzisa i-Device Attestation</string>
+    <string name="pref_device_attestation_app_allow_requests_title">Vumela izicelo</string>
+    <string name="pref_device_attestation_app_allow_requests_summary">Vumela uhlelo lokusebenza ukuba lucele i-device attestation</string>
+    <string name="menu_clear_recent_requests">Sula izicelo zakamuva</string>
+    <string name="safetynet_last_run_at">Ukusebenzisa kokugcina: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="profile_name_native">Yasekhaya</string>
+    <string name="profile_name_real">Yengoko</string>
+    <string name="profile_name_user">Okukhethiwe: %s</string>
+    <string name="profile_name_auto">Okuzenzakalelayo: %s</string>
+    <string name="profile_name_system">Owesizathu: %s</string>
+    <string name="pref_device_registration_import_custom_profile_title">Ngenisa iphrofayili eyenziwe</string>
+    <string name="pref_device_registration_serial_title">Inombolo ye-Serial</string>
+    <string name="pref_device_registration_import_custom_profile_summary">Ngenisa iphrofayili yomshini efayilini</string>
+    <string name="pref_device_registration_select_profile_title">Khetha iphrofayili</string>
+    <string name="pref_device_registration_device_profile_category">Iphrofayili yomshini</string>
+    <string name="pref_safetynet_recent_uses">Ukusebenzisa kwakamuva</string>
+    <string name="pref_safetynet_recent_attestation_summary">Ukuqinisekisa: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_summary">ReCaptcha: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_enterprise_summary">ReCaptcha Enterprise: %s</string>
+    <string name="pref_safetynet_recent_copy_json">Kopisha idatha ye-JSON JWS</string>
+    <string name="pref_safetynet_recent_advice">Iseluleko</string>
+    <string name="pref_safetynet_recent_eval_type">Uhlobo lokuhlola</string>
+    <string name="pref_safetynet_recent_response_status">Isimo sempendulo</string>
+    <string name="pref_safetynet_recent_cat_response">Idatha yempendulo</string>
+    <string name="pref_safetynet_recent_cat_request">Idatha yesicelo</string>
+    <string name="pref_safetynet_recent_nonce">Nonce (Hex)</string>
+    <string name="pref_safetynet_recent_request_time">Isikhathi sesicelo</string>
+    <string name="pref_safetynet_recent_request_type">Uhlobo lwesicelo</string>
+    <string name="pref_safetynet_recent_cat_basic">Idatha eyisisekelo</string>
+    <string name="pref_safetynet_recent_token">I-Token</string>
+    <string name="pref_safetynet_recent_copied">Kukopiwe ku-clipboard!</string>
+    <string name="pref_safetynet_test_integrity_cts_passed">Integrity ne-CTS zaphumelela</string>
+    <string name="pref_safetynet_test_cts_failed">I-CTS yahluleka</string>
+    <string name="pref_safetynet_test_integrity_failed">Integrity yahluleka</string>
+    <string name="pref_safetynet_test_not_completed">Ayikaqedwa okwamanje</string>
+    <string name="pref_safetynet_test_no_result">Ayikho imiphumela</string>
+    <string name="pref_safetynet_test_invalid_json">I-JSON ayilungile</string>
+    <string name="push_notifications_summary_off">VALIWE</string>
+    <string name="push_notifications_summary_automatic">VULWE / Ngokuzenzakalela: %s</string>
+    <string name="push_notifications_summary_manual">VULWE / Ngokwengeza: %s</string>
+    <string name="push_notifications_summary_values_seconds">%s izimisekela</string>
+    <string name="pref_vending_licensing_category">I-Google Play Licensing</string>
+    <string name="pref_vending_licensing_enable_switch">Phendula izicelo zokuqinisekisa i-license</string>
+    <string name="pref_vending_license_enable_summary">Ezamanye izinhlelo zidinga ukuqinisekisa ukuthi uzithengile ku-Google Play. Lapho kucelwa yinhlelo, i-microG ingalanda ubufakazi bokuthenga ku-Google. Uma ikhishwe, nomaUma kungeziwe i-akhawunti ye-Google, izicelo zokuqinisekisa layisense ziyingqayizana.</string>
+    <string name="pref_vending_licensing_purchase_free_apps_switch">Faka izinhlelo zamahhala elayibrari ngokuzenzakalelayo</string>
+    <string name="pref_vending_licensing_purchase_free_apps_summary">Izinhlelo zamahhala zingahlola ukuthi zingalandwe yini ku-Google Play. Faka izinhlelo zamahhala elayibrari ye-akhawunti yakho ngokuzenzakalelayo ukuze uhlale udlula ukuhlola kuzo zonke izinhlelo zamahhala ezitholakala kuwe njengamanje.</string>
+    <string name="pref_vending_feature_delivery">Ukuhambisa Izici ze-Google Play</string>
+    <string name="pref_vending_split_install_switch">Ukufakwa kwezingxenye lapho kudingeka</string>
+    <string name="pref_vending_licensing_split_install_summary">Vumela izinhlelo ukuba zilande futhi zifake izingxenye ezengeziwe</string>
+    <string name="feedback_disabled">Impendulo ayikwaziki njengamanje</string>
+    <string name="backup_disabled">I-backup ayikwaziki njengamanje</string>
+    <string name="pref_vending_billing_category">Uku-bill kwe-Google Play</string>
+    <string name="pref_vending_billing_enable_switch">Phatha izicelo zokukhokha</string>
+    <string name="pref_vending_billing_enable_summary">Uma kuvunyelwe, ezinye izinhlelo zingaqedela ukuthenga noma ziqale ukubhalisa ngesevisi ye-Google Play Billing.</string>
+    <string name="pref_vending_billing_note_experimental">Le nsika isesemeni lokuzama futhi ingaholela ekulahlekelweni kwemali. Usulungiswe.</string>
+    <string name="pref_vending_billing_note_licensing">Ezinye izinhlelo zingadinga ukuthi uvumele ukuqinisekisa ilayisense ukuze uqinisekise okuthengile.</string>
+    <string name="pref_vending_asset_delivery_category">Ukuhambisa Izimpahla ze-Google Play</string>
+    <string name="pref_vending_asset_delivery_switch">Vumela ukuhambiswa kwezimpahla lapho kudingeka</string>
+    <string name="pref_vending_asset_delivery_summary">Landa izimpahla ezengeziwe lapho kucelwa izinhlelo ezisebenzisa i-Play Asset Delivery</string>
+    <string name="pref_vending_asset_device_sync_summary">Izinhlelo ezisebenzisa i-Play Asset Delivery zizolanda izimpahla ezengeziwe ngokusekelwe olwazini lwedivayisi esetshenziswa njengamanje.</string>
+    <string name="pref_vending_asset_device_sync_switch">Vumela ukuvumelanisa ulwazi lwedivayisi</string>
+    <string name="pref_workprofile_create_account">Vumela ukusungulwa kwe-akhawunti yokusebenza</string>
+    <string name="pref_workprofile_intro">Lapho usetha iphrofayili yomsebenzi yendawo yakho yokusebenza noma isikhungo semfundo,
+        ukusetha kungazama ukuxhumana ne-Google ukuze kuvumele ukulandwa kwezinhlelo kuleyo phrofayili.</string>
+    <string name="pref_workprofile_disclaimer">Kuyisibopho sakho ukuqinisekisa ukuthi ukusetshenziswa kwakho kwe-microG kuhambisana nezinqubo zenkampani.
+        i-microG inikezelwa ngokusebenzisa imizamo engcono kakhulu futhi ayikwazi ukuqinisekisa ukuthi iziphatha ngendlela elindelekile.</string>
+    <string name="pref_auto_create_player">Vumela ukubhaliswa kwe-akhawunti ye-Play Games</string>
+    <string name="pref_auto_create_player_intro">Lapho udlala imidlalo, kumele usebenzise i-akhawunti ye-Play Games ukuze ungene futhi uqophe imisebenzi ehlobene nomdlalo, njengezimpumelelo, ama-leaderboard, ama-archive, njll. Ngemva kokukhipha, ama-akhawunti e-Google angaboshiwe ne-akhawunti ye-Play Games ngeke abhaliswe ngokuzenzakalelayo, futhi umdlalo ngeke akwazi ukungena nokudlalwa.</string>
+    <string name="pref_allow_upload_game_played">Vumela ukukhishwa kwemidlalo edlalwe</string>
+    <string name="pref_allow_upload_game_played_summary">Lapho kukhishwe, umdlalo ngeke ubike isimo somdlalo odlalwe ngemva kokungena emdlalweni, futhi eminye imidlalo ingase ingakwazi ukungena.</string>
+    <string name="pref_change_default_game_player">Shintsha i-akhawunti yemidlalo</string>
+    <string name="pref_change_default_game_player_summary">Shintsha i-akhawunti ejejika yemidlalo &amp; Shintsha i-akhawunti ngokomdlalo.</string>
+    <string name="pref_delete_game_account_data">Susa idatha ye-Play Games</string>
+    <string name="pref_delete_game_account_data_summary">Susa i-akhawunti ye-Play Games &amp; yonke idatha &amp; Susa idatha yomdlalo ngamunye.</string>
+    <string name="credentials_assisted_cancel">Khansela</string>
+    <string name="credentials_assisted_continue">Qhubeka</string>
+    <string name="credentials_assisted_confirmation_header">Siyakungena</string>
+    <string name="credentials_assisted_continue_as_user_button_label">Qhubeka njenge %1$s</string>
+    <string name="credentials_assisted_sign_back_title">Ngena futhi ku %1$s nge-Google</string>
+    <string name="credentials_assisted_signin_consent_header">Ukungena njenge %1$s</string>
+    <string name="credentials_assisted_signin_consent">Ngokuqhubeka, i-Google izoh බෙla igama lakho, ikheli le-imeyili, nesithombe sakho sephrofayili ku %1$s. Bheka i-Privacy Policy ne-Terms of Service ze %1$s.</string>
+    <string name="credentials_assisted_signin_description">Ungakwazi ukuphatha ukuNgena ngo-Google kuma-Account akho we-Google.</string>
+    <string name="credentials_assisted_choose_account_label">Khetha i-account</string>
+    <string name="credentials_assisted_choose_account_subtitle">ukuze uqhubekele ku-%1$s</string>
+    <string name="credentials_assisted_choose_account_error_tips">Ukungapheleli kwe-Account</string>
+    <string name="credentials_assisted_signin_button_text_long">Ngena ngo-Google</string>
+    <string name="credentials_assisted_signin_add_account">Yengeza i-Account</string>
+    <string name="credentials_service_sign_in_with_google_label">Ngena ngo-Google</string>
+    <string name="credentials_service_remote_custom_subtitle">I-key yokuphepha, ismartifoni noma ithebulethi</string>
+    <string name="limited_services_dialog_information">Usebenzisa i-microG Limited Services. Ngokungafani ne-microG Services ejwayelekile, le ndlela isebenza kuphela nohlelo ezisebenzisa ama-library we-microG, hhayi lala okwi-Google Play. Lokhu kusho ukuthi izinhlelo eziningi ziyazishiya lezi zidingidizi.</string>
+    <string name="limited_services_dialog_information_ack">Ngiyazwisisa</string>
+    <string name="games_achievement_list_title">Izimpumelelo</string>
+    <string name="games_achievements_empty_text">Azikho izimpumelelo zaleli gama</string>
+    <string name="games_api_access_denied">Akukho akhawunti kule divayisi engena ku-Games APIs</string>
+    <string name="games_achievement_locked_content_description">kuvalwe</string>
+    <string name="games_achievement_unlocked_content_description">kuvulwe</string>
+    <string name="games_achievement_extra_text">%1$s XP</string>
+    <string name="games_leaderboard_empty_text">Azikho izibhedhe zamaphuzu zaleli gama</string>
+    <string name="games_leaderboard_list_title">Izikhundla</string>
+    <string name="games_leaderboards_score_label">Amaphuzu: %1$s</string>
+    <string name="games_snapshot_empty_text">Akukho mageyimu agcinwe okwamanje</string>
+    <string name="games_snapshot_choose_btn_text">khetha</string>
+    <string name="games_snapshot_delete_btn_text">susa</string>
+    <string name="games_delete_snapshot_dialog_title">Susa umdlalo osindiswe</string>
+    <string name="games_delete_snapshot_dialog_message">Uyaqiniseka ukuthi ufuna ukususa lo mdlalo osindiswe?</string>
+    <string name="games_delete_snapshot_dialog_cancel">Khansela</string>
+    <string name="games_delete_snapshot_dialog_ok">OK</string>
+    <string name="games_delete_snapshot_error">Ukukhipha kwezinto kuhleleke, sicela uzame futhi kamuva</string>
+    <string name="games_state_description_signed_out">Uphumile</string>
+    <string name="games_state_description_delete">Susa</string>
+    <string name="games_change_button_text">Shintsha</string>
+    <string name="games_change_default_account_section_title">Shintsha i-akhawunti eyisisekelo yemidlalo</string>
+    <string name="games_change_default_account_description">I-akhawunti eyisisekelo: %1$s</string>
+    <string name="games_change_default_account_explanation">Le akhawunti isetshenziselwa ukukungena ngokuzenzakalelayo emidlalweni, ukusindisa inqubekelaphambili yomdlalo wakho, nokusindisa izilungiselelo zakho. Ukushintsha i-akhawunti eyisisekelo noma ukuphuma kungase kubuyisele inqubekelaphambili nezilungiselelo zakho zemidlalo oyidlale.</string>
+    <string name="games_change_per_game_title">Shintsha i-akhawunti ngokomdlalo</string>
+    <string name="games_change_per_game_description">Ukushintsha i-akhawunti yomdlalo okhethiwe noma ukuphuma kuyo kungase kusebenzise kabusha inqubekelaphambili nezilungiselelo zakho zomdlalo.</string>
+    <string name="games_change_default_account_for_all_games_dialog_title">Khetha inketho ye-akhawunti entsha efanele</string>
+    <string name="games_change_default_account_for_all_games_dialog_description">I-akhawunti efanele yamanje: %1$s</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_title">Shintsha i-akhawunti efanele emidlalweni emisha kuphela </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_description">Ngeke ulahle ukufinyelela enqubekelaphambili nasezilungiselelweni zemidlalo osevele uyidlalile. Kodwa inqubekelaphambili yakho izohlukaniswa phakathi kwezi-akhawunti.</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_title"> Shintsha i-akhawunti efanele kukho konke imidlalo </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_description">Ungase ulahle ukufinyelela enqubekelaphambili nasezilungiselelweni zemidlalo osevele uyidlalile. Sizoqala kabusha umdlalo ukuze sifake izinguquko zakho.</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_title"> Phuma kuwo wonke imidlalo </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_description">Ungase ulahlekelwe ukufinyelela emvuthwandeni nasemisebenzelweni yemidlalo oyidlale. Sizoqala kabusha umdlalo ukuze sifake izinguquko zakho.</string>
+    <string name="games_change_per_game_dialog_title">Khetha inketho yalo mdlalo</string>
+    <string name="games_change_per_game_dialog_description">Ukushintsha i-akhawunti noma ukuphuma kungase kukuhlele kabusha imvuthandwana nemisebenzelo yakho yalo mdlalo</string>
+    <string name="games_change_per_game_dialog_option_use_player">Sebenzisa u-%1$s</string>
+    <string name="games_change_per_game_dialog_option_use_player_snackbar_success_message">Uzobe ungene kulo mdlalo usebenzisa u-%1$s</string>
+    <string name="games_change_per_game_dialog_option_sign_out">Phuma</string>
+    <string name="games_change_per_game_dialog_option_sign_out_snackbar_success_message">Manje usuphumile kulo mdlalo</string>
+    <string name="games_change_sign_out_of_all_games_snackbar_success_message">Manje usuphumile kuwo wonke imidlalo</string>
+    <string name="games_change_default_account_for_all_games_snackbar_success_message">Uzongena kuzo zonke izimdlalo usebenzisa u-%1$s</string>
+    <string name="games_change_default_account_for_new_games_snackbar_success_message">Uzongena kuzimdlalo ezintsha usebenzisa u-%1$s</string>
+    <string name="games_account_display_content">I-akhawunti yamanje: %1$s</string>
+    <string name="games_delete_profile_header">Susa i-akhawunti ye-Play Games &amp; yonke idatha</string>
+    <string name="games_delete_profile_explanation">Susa unomphela i-akhawunti yakho ye-Google Play Games, i-XP, kanye nayo yonke idatha yephrofayili. Lesi senzo singase sisuse naphansi amaphuzu akho, inqubekelaphambili (izimdlalo ezigcinwe), kanye nezilungiselelo ezimdlalweni owudlalile.</string>
+    <string name="games_delete_profile_button">Susa unomphela</string>
+    <string name="games_delete_game_data_header">Susa idatha yomdlalo ngamunye</string>
+    <string name="games_delete_game_data_explanation">Ungasusa unomphela idatha ngamunye yemidlalo owudlalile usebenzisa i-Google Play Games. Lesi senzo sisusa amaphuzu akho, inqubekelaphambili (izimdlalo ezigcinwe), kanye nezilungiselelo zomdlalo okhethile.</string>
+    <string name="games_delete_profile_dialog_title">Uqinisekile ukuthi ufuna ukususa le akhawunti?</string>
+    <string name="games_delete_profile_explanation_with_gamer_name">Susa phukudze i-akhawunti yakho ye-Google Play Games yegama lomdlali &lt;b&gt;%1$s&lt;/b&gt; (&lt;b&gt;%2$s&lt;/b&gt;), i-XP, kanye nakho konke idatha yephrofayili. Lesi senzo singase sisuse naphansi amaphuzu akho, inqubekela phambili (imidlalo egcinwe), kanye nezilungiselelo emidlalweni oyidlale.</string>
+    <string name="games_delete_profile_dialog_message">Lesi senzo asikwazi ukubuyiselwa.</string>
+    <string name="games_delete_profile_fail">Akukwazanga ukususa iphrofayili yakho. Zama futhi kamuva.</string>
+    <string name="games_delete_game_data_confirm_dialog_title">Susa idatha ka %1$s</string>
+    <string name="games_delete_game_data_confirm_dialog_message">Ukususa phukudze idatha yakho ka %1$s kuzosusa amaphuzu akho, inqubekela phambili (imidlalo egcinwe), kanye nezilungiselelo zomdlalo ku-Google Play Games.</string>
+    <string name="games_popup_signin_welcome">Sawubona, %1$s</string>
+    <string name="family_management_title">Umndeni</string>
+    <string name="family_management_retry">Zama futhi</string>
+    <string name="family_management_load_error">Ukulodwa kwekhontenthi kwehluleka</string>
+    <string name="family_management_toolbar_back">Buyela emuva</string>
+    <string name="family_management_toolbar_more">Okwengeziwe</string>
+    <string name="family_management_exit_family_group">Shiya iqembu lomndeni</string>
+    <string name="family_management_delete_family_group">Susa iqembu lomndeni</string>
+    <string name="family_management_leave_family_password_title">Qinisekisa ipasiwedi ukuze ushiye iqembu lomndeni</string>
+    <string name="family_management_delete_family_password_title">Qinisekisa ipasiwedi ukuze ususe iqembu lomndeni</string>
+    <string name="family_management_remove_member_password_title">Qinisekisa ipasiwedi ukuze ususe u\"%s\"</string>
+    <string name="family_management_invite_family_member">Mema amalungu omndeni</string>
+    <string name="family_management_cancel_invite">Khansela isimemo</string>
+    <string name="family_management_cancel_invite_success">Isimemo sikhanselwe ngempumelelo</string>
+    <string name="family_management_cancel_invite_error">Kukhona inkinga ekukhanseleni isimemo. Zama futhi.</string>
+    <string name="family_management_remove_member">Susa Ilungu</string>
+    <string name="family_management_member_removed_success">%s ususwe eqingsini lakho lomndeni</string>
+    <string name="family_management_member_remove_failed">Kukhona inkinga ekususeni u%s. Zama futhi.</string>
+    <string name="family_management_leave_family_error_message">Kukhona inkinga ekushiyeni iqingsi lomndeni. Zama futhi.</string>
+    <string name="family_management_exist_group_success">Ushiyile eqingsini lakho lomndeni…</string>
+    <string name="family_management_delete_group_success">Iqingsi lomndeni lisuswe</string>
+    <string name="family_management_delete_group_failure">Kuhlulekile ukususa iqingsi lasekhaya</string>
+    <string name="family_management_delete_group_cancel">Khansela</string>
+    <string name="family_management_delete_group_confirm">Kulungile</string>
+    <string name="family_management_input_pwd">Sicela ufake iphasiwedi yakho</string>
+    <string name="family_management_invite_sent_date_format">Isimemo sathunyelwa ngomhlazane %s</string>
+    <string name="family_management_invite_send">Isimemo sathunyelwe</string>
+    <string name="family_management_pwd_error">Iphasiwedi ayilungile, sicela uyifake futhi</string>
+    <string name="barcode_scanner_brand">Kuskenwe ngu-microG egameni lika %1$s</string>
+    <string name="camera_permission_dialog_button">Kulungile</string>
+    <string name="camera_permission_dialog_message">Izinsizakalo ze-microG zidinga ukufinyelela kukhamera yedivayisi yakho ukuze iskene ikhodi ka %1$s.\n\nUkuze ukwenze lokhu, sicela unikeze imvume yekhamera ezinsizakalo ze-microG ku-Settings.</string>
+    <string name="camera_permission_dialog_title">Kudingeka imvume yekhamera</string>
+    <string name="pref_app_install_settings_title">Izilungiselelo zokufaka i-App</string>
+    <string name="pref_app_install_switch_title">Vumela ukufakwa kwe-App</string>
+    <string name="pref_app_install_other_apps_note">Ukugunyazwa kuvumela ukufakwa kwezi-app ezivela kwezinye izimina.</string>
+    <string name="pref_app_install_permission_instruction">Ukuze uqinisekise ukuthi izi-app zakho ezifakiwe zisebenza ngendlela efanele, sicela ugunyaze i-microG Companion ukuba ifake izi-app ezilandawe kwezinye izimina.</string>
+    <string name="prefcat_app_install_list_title">Izinhlelo ezisebenzisa i-App Installer</string>
+    <string name="service_name_google_location_sharing">Ukuphakelana kwezindawo kwase-Google</string>
+    <string name="location_sharing_description">Phatha ukuphakelana kwezindawo kwakho kwesikhathi sangempela kuzo zonke izinhlelo nezinsizakalo ze-Google kuleli device</string>
+    <string name="location_sharing_learn_more">Funda kabanzi ngo &quot;Ukuphakelana kwezindawo&quot;</string>
+    <string name="location_sharing_switch_text">Sebenzisa Ukuphakelana kwezindawo</string>
+    <string name="location_sharing_turn_off_notify_hint">Uma ucisha Ukuphakelana kwezindawo kuleli device, abantu ophakela bona ngeke baziswe.</string>
+    <string name="location_sharing_off_previous_hint">Indawo yakho yokugcina ophakelana ngayo kuphela yiyo ezobe itholakala kuze kube yilapho uyivula futhi.</string>
+    <string name="location_sharing_disabled">Ayikho imizamo yokuhlanganyela indawo esebenzayo kule akhawunti</string>
+    <string name="location_sharing_turn_on_hint">Uma usuqale ukuphakela indawo yakho kusuka ohlelweni noma ensizakalo ye-Google, ungakuphatha Ukuphakelana kwezindawo lapha.\n\nUkuze uqale ukuphakela indawo yakho, iya ku-Google Maps noma ku-Family Link.</string>
+    <string name="location_sharing_turn_off_title">Cisha Ukuphakelana kwezindawo</string>
+    <string name="location_sharing_turn_off_hint">Usengasebe usahlanganyela indawo yakho kusuka kwezinye izikhomputhi eziningi ezingena ku-Account yaka-Google efanayo noma kusuka ezinhlelweni ezingeyo zika-Google. Qiniseka ukuthi uhlola izilungiselelo zakho zokuhlanganyela indawo noma kuphi lapho kufanele kwenziwe khona.\n\nAbantu ohlanganyela nabo bazoqhubeka babona indawo yakho yokugcina ohlanganyele ngayo.</string>
+    <string name="location_sharing_turn_off_cancel">Qhubeka</string>
+    <string name="location_sharing_turn_off_confirm">Cima</string>
+    <string name="location_sharing_confirm_dialog_title">Vula Ukuhlanganyela Indawo</string>
+    <string name="location_sharing_confirm_dialog_text">Abantu ohlanganyela nabo indawo yakho bangahlale babona:\n·Igama lakho nesithombe sakho\n·Indawo yakamuva yesikhomputhi sakho, ngisho noma ungasebenzi ngenkonzo yaka-Google\n·Amandla ebhethri likesikhomputhi sakho, nokuthi liya-shaja yini\n·Isikhathi sakho sokufika nokuhamba,Uma bafaka isaziso Sokuhlanganyela Indawo</string>
     <!-- Passkey management -->
+    <string name="pref_passkey_manager_title">Phatha ama-passkey</string>
+    <string name="pref_passkey_manager_empty_title">Azikho ama-passkey agcinwe</string>
+    <string name="pref_passkey_manager_description">Lapho izinhlelo zangaphandle zibhalisa ama-passkey, i-microG igcina irekhodi yasendaweni. Uma uhlelo lususa i-passkey ngaphandle kokwazisa i-microG, irekhodi ingase isale. Ungasusa lezi zingxenye ezisele lapha.</string>
+    <string name="pref_passkey_manager_delete_dialog_title">Susa i-passkey</string>
+    <string name="pref_passkey_manager_delete_dialog_message">Susa i-passkey ka \"%2$s\" ku \"%1$s\". Lokhu akukwazi ukubuyiswa; uzodinga ukubhalisa i-passkey entsha ukuze ungene futhi.</string>
+    <string name="pref_passkey_manager_delete_dialog_confirm">Susa</string>
+    <string name="pref_passkey_manager_unknown_user">Umsebenzisi ongaziwa</string>
+    <string name="pref_passkey_manager_transport_screen_lock">Ukuvalwa kwesikrini</string>
+    <string name="pref_passkey_manager_transport_usb">USB</string>
+    <string name="pref_passkey_manager_transport_nfc">NFC</string>
+    <string name="pref_passkey_manager_transport_bluetooth">Bluetooth</string>
+    <string name="pref_passkey_manager_transport_hybrid">Hybrid</string>
+    <string name="pref_passkey_manager_credential_id_format_internal">ID: %1$s</string>
+    <string name="self_check_cat_patched_apps">Izinhlelo ezilungisiwe</string>
+    <string name="self_check_source_morphe">Ama-patches e-Morphe</string>
+    <string name="self_check_source_alternative">ama-patches aholwayo</string>
+    <string name="self_check_resolution_patched_app_installed">Izinhlelo ezisebenzisa i-%1$s azitholakali. Sicela ulungise futhi ufake uhlelo olulungisiwe</string>
+    <string name="self_check_name_notifications">Izaziso zivumelekile</string>
+    <string name="self_check_resolution_notifications">Thinta lapha ukuze uvule izilungiselelo zezaziso. Izaziso zisetshenziswa ukuze iGcmService iqhubeke isebenza ngemuva lapho ukulungiswa kwebhethri kuvunyelwe noma ngaphansi kwezinye izimo</string>
+    <string name="self_check_name_oem_restriction">Izinketho zokuvimbela inqubo yangemuva</string>
+    <string name="self_check_resolution_oem_restriction">Uhlelo lwakho lungase luvinyele izinhlelo ezisebenza ngemuva. Chofoza lapha ukuze uvule isayithi ye-Don\'t Kill My App! futhi ufunde ukuthi ungazikhansela kanjani lezi zvimbelo</string>
+    <string name="morphe_sign_in_with_google_microg_label">Ngena nge-Google usebenzisa i-MicroG RE</string>
+    <string name="self_check_patched_app_installed">Sisebenza nge-%1$s</string>
+    <string name="self_check_action_download_morphe">Landa iMorphe</string>
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Ifakwe uhlobo lwe-architecture olungashiyi</string>
+    <string name="abi_mismatch_message">"Leli build le-MicroG-RE linemayelana ne-64-bit (arm64) libraries kuphela, kodwa leli device lihamba nge-32-bit userspace.
+
+Izici ezidinga i-Conscrypt (ukungena ku-account, i-streaming, i-BotGuard, i-Spoof video streams, i-SponsorBlock, i-Return YouTube Dislike, njll.) ngeke zisebenze kahle futhi zingabangela izinkinga zokudlala noma \"Unable to find a default SSL provider\".
+
+Faka i-ARMv7 noma i-Universal APK esikhundleni sayo."</string>
+    <string name="abi_mismatch_download_armv7">Landa i-ARMv7 APK</string>
+    <string name="abi_mismatch_downloading_title">Kulandwa uhlobo olulungile…</string>
 </resources>

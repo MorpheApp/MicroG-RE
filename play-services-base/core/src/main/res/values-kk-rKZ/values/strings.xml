@@ -3,4 +3,22 @@
   ~ SPDX-FileCopyrightText: 2020, microG Project Team
   ~ SPDX-License-Identifier: Apache-2.0
   -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="foreground_service_notification_title">Фондық режимде белсенді</string>
+    <string name="foreground_service_notification_text"><xliff:g example="Exposure Notification">%1$s</xliff:g> фондық режимде жұмыс істеп тұр.</string>
+    <string name="foreground_service_notification_big_text">Бұл хабарламаны жасыру үшін <xliff:g example="microG Services">%1$s</xliff:g> қолданбасын батареяны оңтайландырудан алып тастаңыз немесе хабарландыру параметрлерін өзгертіңіз.</string>
+    <string name="foreground_action_battery_optimization">Батареяны оңтайландыру</string>
+    <string name="foreground_action_notification_settings">Баптаулар</string>
+    <string name="menu_advanced">Кеңейтілген</string>
+    <string name="menu_settings">Баптаулар</string>
+    <string name="menu_game_managed">Басқарылатын ойын аккаунттары</string>
+    <string name="list_no_item_none">Жоқ</string>
+    <string name="list_item_see_all">Барлығын көру</string>
+    <string name="open_app">Ашу</string>
+    <string name="service_status_disabled">Өшірілген</string>
+    <string name="service_status_enabled">Қосылған</string>
+    <string name="service_status_automatic">Автоматты</string>
+    <string name="service_status_manual">Қолмен</string>
+    <string name="service_status_enabled_short">Қосу</string>
+    <string name="service_status_disabled_short">Өшіру</string>
+</resources>

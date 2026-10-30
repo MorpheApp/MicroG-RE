@@ -4,45 +4,8 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="dialog_title_remove_account">ఖాతా తొలగించు</string>
-    <string name="dialog_message_remove_account">"మీ నిజంగానే ఖాతాని తొలగించాలనుకుంటున్నారా
-కొన్ని సేవలు అందుబాటులో ఉండవు 
-మీ డేటా కూలిపోతారు"</string>
-    <string name="dialog_confirm_button">తొలగించు</string>
-    <string name="dialog_cancel_button">రద్దుచేయి</string>
-    <string name="snackbar_remove_account">ఖాతా%s తీసేయబడింది</string>
-    <string name="snackbar_undo_button">చర్య రద్దు</string>
-    <string name="gms_settings_name">MicroG సెట్టింగులు</string>
-    <string name="gms_settings_summary">MicroG సేవలను సెటప్ చేయండి</string>
-    <string name="just_a_sec">ఓ నిమిషం …</string>
-    <string name="account_manager_title">గూగుల్ ఖాతా మేనేజర్</string>
-    <string name="sorry">క్షమాపణలు…</string>
-    <string name="auth_connecting">"మీ పరికరం google సర్వర్లతో అనుసంధించడానికి ప్రయత్నిస్తుంది 
-కొన్ని క్షణాలు పట్టొచ్చు"</string>
-    <string name="no_network_error_desc">"మీకు ఇంటర్నెట్ లేదు 
-
-ఇది తాత్కాలిక సమస్య లేదా మీ ఆండ్రాయిడ్ పరికరం కావాల్సిన దేత సేవలను అందించకపోవచ్చు 
-మళ్లీ తర్వాత ప్రయత్నించండి మొబైల్ డేటా లేదా వైఫై కి కనెక్ట్ అయ్యి"</string>
-    <string name="auth_general_error_desc">"గూగుల్ సర్వర్లతో సమాచార మార్పిడిలో సమస్య ఉంది 
-
-కొంతసేపు తర్వాత ప్రయత్నించండి"</string>
-    <string name="auth_finalize">"మీ పరికరం గూగుల్ కు కనెక్ట్ అవుతుంది మీ సమాచారం మీ ఖాతాకు భద్రపరచడానికి 
-
-దీనికి కొన్ని నిమిషాలు పట్టొచ్చు"</string>
-    <string name="allow">అనుమతించు</string>
-    <string name="deny">తిరస్కరించు</string>
-    <string name="auth_notification_title">అధికార నిర్ధారణ అవసరం</string>
-    <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> కు మీ అధికార నిర్ధారణ కావాలి, మీ google ఖాతాలోకి ప్రవేశించడానికి</string>
-    <string name="auth_action_notification_channel_name">Google ఖాతా అలట్లు</string>
     <!-- Self check -->
     <!-- Settings strings -->
-    <string name="prefcat_accounts_settings_title">సెట్టింగ్‌లు</string>
-    <string name="update_failed_title">అప్డేట్ విఫలమైంది</string>
-    <string name="update_open_settings">సెట్టింగ్‌లు</string>
-    <string name="update_notification_permission_allow">అనుమతించు</string>
-    <string name="credentials_assisted_cancel">రద్దుచేయి</string>
-    <string name="games_delete_snapshot_dialog_cancel">రద్దుచేయి</string>
-    <string name="family_management_delete_group_cancel">రద్దుచేయి</string>
     <!-- Passkey management -->
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
 </resources>

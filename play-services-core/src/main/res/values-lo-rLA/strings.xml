@@ -4,8 +4,283 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="gms_settings_name">ການຕັ້ງຄ່າ MicroG</string>
+    <string name="just_a_sec">ລໍຖ້າບຶດໜຶ່ງ...</string>
+    <string name="ask_permission_tos">ໂດຍການດໍາເນີນການຕໍ່, ທ່ານອະນຸຍາດໃຫ້ແອັບນີ້ ແລະ Google ໃຊ້ຂໍ້ມູນຂອງທ່ານໃຫ້ສອດຄ່ອງກັບຂໍ້ກໍານົດການໃຫ້ບໍລິການ ແລະ ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວຂອງພວກເຂົາ.</string>
+    <string name="ask_scope_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> ຕ້ອງການທີ່ຈະ:</string>
+    <string name="ask_service_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> ຕ້ອງການໃຊ້:</string>
+    <string name="account_manager_title">ຕົວຈັດການບັນຊີ Google</string>
+    <string name="sorry">ຂໍອະໄພ...</string>
+    <string name="auth_before_connect">ເຊື່ອມຕໍ່ບັນຊີ Google ກັບ microG.\n\nມາກວດສອບການເຊື່ອມຕໍ່ກັບບັນຊີ Google, ໃຊ້ປຸ່ມ <b>ເຂົ້າສູ່ລະບົບ</b> ຫຼື ໃຊ້ປຸ່ມ <b>Huawei</b> ຖ້າທ່ານມີອຸປະກອນຂອງຜູ້ຜະລິດລາຍນີ້. ເມື່ອທ່ານກົດປຸ່ມໃດໜຶ່ງ, ທ່ານຈະຖືກນຳທາງໄປຍັງໜ້າເຂົ້າສູ່ລະບົບບັນຊີຂອງທ່ານ.</string>
+    <string name="auth_connecting">"ອຸປະກອນຂອງທ່ານກໍາລັງສ້າງການເຊື່ອມຕໍ່ກັບເຊີບເວີຂອງ Google ເພື່ອລົງຊື່ເຂົ້າໃຊ້.
+
+ຂະບວນການນີ້ອາດໃຊ້ເວລາສອງສາມວິນາທີ."</string>
+    <string name="no_network_error_desc">"ທ່ານບໍ່ມີການເຊື່ອມຕໍ່ເຄືອຂ່າຍ.
+
+ນີ້ອາດຈະເປັນບັນຫາຊົ່ວຄາວ ຫຼື ອຸປະກອນ Android ຂອງທ່ານອາດຈະບໍ່ໄດ້ຮັບການຕັ້ງຄ່າສຳລັບບໍລິການຂໍ້ມູນ. ໃຫ້ລອງອີກຄັ້ງເມື່ອເຊື່ອມຕໍ່ກັບເຄືອຂ່າຍມືຖື, ຫຼື ເຊື່ອມຕໍ່ກັບເຄືອຂ່າຍ Wi-Fi."</string>
+    <string name="auth_general_error_desc">"ເກີດບັນຫາໃນການຕິດຕໍ່ກັບເຊີເວີຂອງ Google.
+
+ກະລຸນາລອງໃໝ່ໃນພາຍຫຼັງ."</string>
+    <string name="auth_finalize">"ອຸປະກອນຂອງທ່ານກຳລັງຕິດຕໍ່ຫາ Google ເພື່ອບັນທຶກຂໍ້ມູນລົງໃນບັນຊີຂອງທ່ານ.
+
+ຂະບວນການນີ້ອາດໃຊ້ເວລາສອງສາມນາທີ."</string>
+    <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> ຕ້ອງການການອະນຸຍາດຈາກທ່ານ ເພື່ອເຂົ້າເຖິງບັນຊີ Google ຂອງທ່ານ.</string>
+    <string name="auth_package_override_request_title">ອະນຸຍາດໃຫ້ <b><xliff:g example="F-Droid">%1$s</xliff:g></b> ເຂົ້າເຖິງສິດພິເສດຂອງ <xliff:g example="account@example.com">%2$s</xliff:g> ຫຼື ບໍ່?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> ຕ້ອງການເຂົ້າເຖິງບັນຊີຂອງທ່ານ ຄືກັບວ່າເປັນ <b><xliff:g example="F-Droid">%2$s</xliff:g> ໂດຍ <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. ສິ່ງນີ້ອາດຈະມອບສິດການເຂົ້າເຖິງພິເສດໃນບັນຊີຂອງທ່ານ.</string>
+    <string name="auth_action_notification_channel_name">ການແຈ້ງເຕືອນບັນຊີ Google</string>
+    <string name="auth_action_notification_channel_description">ແຈ້ງເຕືອນເມື່ອໜຶ່ງໃນບັນຊີ Google ຂອງທ່ານຕ້ອງການການຕັ້ງຄ່າເພີ່ມເຕີມກ່ອນທີ່ຈະສາມາດນຳໃຊ້ໄດ້ ຫຼື ເມື່ອບັນຊີບໍ່ເຂົ້າກັນກັບ microG.</string>
+    <string name="auth_action_notification_title">ຕ້ອງດຳເນີນການກັບບັນຊີ</string>
+    <string name="auth_action_notification_content">ບັນຊີ Google ຂອງທ່ານຕ້ອງການການຕັ້ງຄ່າເພີ່ມເຕີມ.</string>
+    <string name="auth_action_reauth_notification_title">ຕ້ອງດຳເນີນການກັບບັນຊີ</string>
+    <string name="auth_action_activity_header">ຕັ້ງຄ່າບັນຊີ Google ຂອງທ່ານໃຫ້ສຳເລັດ</string>
+    <string name="auth_action_activity_explanation">ດຳເນີນການຕາມຂັ້ນຕອນລຸ່ມນີ້ ເພື່ອໃຫ້ສາມາດນຳໃຊ້ບັນຊີ Google %s ຂອງທ່ານໃນອຸປະກອນນີ້ໄດ້.</string>
+    <string name="auth_action_step_enable_checkin">ເປີດໃຊ້ການລົງທະບຽນອຸປະກອນ</string>
+    <string name="auth_action_step_enable_checkin_description">"ອຸປະກອນຂອງທ່ານຈຳເປັນຕ້ອງລົງທະບຽນກັບ Google ຢ່າງໜ້ອຍໜຶ່ງຄັ້ງ.
+
+ທ່ານສາມາດປິດການລົງທະບຽນອຸປະກອນ Google ຫຼັງຈາກການຕັ້ງຄ່າບັນຊີສຳເລັດ."</string>
+    <string name="auth_action_step_enable_gcm">ເປີດໃຊ້ Cloud Messaging</string>
+    <string name="auth_action_step_enable_gcm_description">ທ່ານສາມາດປິດໃຊ້ Cloud Messaging ຫຼັງຈາກການຕັ້ງຄ່າບັນຊີສຳເລັດ.</string>
+    <string name="auth_action_step_allow_microg_gcm">ອະນຸຍາດໃຫ້ Cloud Messaging ສຳລັບ microG</string>
+    <string name="auth_action_step_allow_microg_gcm_description">ອີງຕາມການຕັ້ງຄ່າຂອງທ່ານ, microG ຕ້ອງການການອະນຸຍາດຈາກທ່ານກ່ອນທີ່ມັນຈະສາມາດລົງທະບຽນ Cloud Messaging ໄດ້.</string>
+    <string name="auth_action_step_enable_lockscreen">ກຳນົດຄ່າການລັອກໜ້າຈໍທີ່ປອດໄພ</string>
+    <string name="auth_action_step_enable_lockscreen_description">"ບັນຊີ Google ຂອງທ່ານຖືກຈັດການໂດຍບ່ອນເຮັດວຽກ ຫຼື ສະຖາບັນການສຶກສາຂອງທ່ານ. ຜູ້ດູແລລະບົບຂອງທ່ານໄດ້ຕັດສິນໃຈວ່າອຸປະກອນຕ້ອງມີການລັອກໜ້າຈໍທີ່ປອດໄພກ່ອນທີ່ຈະສາມາດເຂົ້າເຖິງຂໍ້ມູນບັນຊີໄດ້.
+
+ກະລຸນາຕັ້ງຄ່າລະຫັດຜ່ານ, PIN, ຫຼື ການລັອກແບບວາດລວດລາຍ."</string>
+    <string name="auth_action_step_perform_content_description">ຄລິກເພື່ອດຳເນີນຂັ້ນຕອນ</string>
+    <string name="auth_action_step_completed_content_description">ສຳເລັດຂັ້ນຕອນແລ້ວ</string>
+    <string name="auth_action_activity_finish">ສຳເລັດ</string>
+    <string name="signin_picker_subtitle">ເພື່ອດຳເນີນການຕໍ່ໄປທີ່ <xliff:g example="F-Droid">%1$s</xliff:g></string>
+    <string name="signin_confirm_title">ອະນຸຍາດໃຫ້ລົງຊື່ເຂົ້າໃຊ້ໃນ <xliff:g example="F-Droid">%1$s</xliff:g></string>
+    <string name="signin_subtext_sharing">ເພື່ອດຳເນີນການຕໍ່, microG ຈະແບ່ງປັນຊື່, ທີ່ຢູ່ອີເມລ ແລະ ຮູບໂປຣໄຟລ໌ຂອງບັນຊີ Google ຂອງທ່ານໃຫ້ກັບ <xliff:g example="F-Droid">%1$s</xliff:g>.</string>
+    <string name="perm_provision_label">ຈັດຕັ້ງຄ່າບໍລິການ microG</string>
+    <string name="perm_provision_description">ອະນຸຍາດໃຫ້ແອັບກໍານົດຄ່າບໍລິການ microG ໂດຍບໍ່ຕ້ອງມີການໂຕ້ຕອບຈາກຜູ້ໃຊ້</string>
+    <string name="perm_car_speed_label">ຄວາມໄວຂອງລົດ</string>
+    <string name="perm_car_speed_description">"ເຂົ້າເຖິງຄວາມໄວຂອງລົດຂອງທ່ານ"</string>
+    <string name="perm_car_info_label">ຂໍ້ມູນລົດ</string>
+    <string name="perm_car_info_description">"ເຂົ້າເຖິງຂໍ້ມູນລົດຂອງທ່ານ"</string>
+    <string name="perm_car_fuel_label">ລະດັບນ້ຳມັນຂອງລົດ</string>
+    <string name="perm_car_fuel_description">"ເຂົ້າເຖິງຂໍ້ມູນລະດັບນ້ຳມັນຂອງລົດຂອງທ່ານ"</string>
+    <string name="perm_car_mileage_label">ໄລຍະທາງຂອງລົດ</string>
+    <string name="perm_car_mileage_description">"ເຂົ້າເຖິງຂໍ້ມູນໄລຍະທາງຂອງລົດຂອງທ່ານ"</string>
+    <string name="perm_car_vendor_extension_label">ຊ່ອງທາງຜູ້ສະໜອງລົດ</string>
+    <string name="perm_car_vendor_extension_description">"ເຂົ້າເຖິງຊ່ອງທາງຜູ້ສະໜອງລົດຂອງທ່ານ ເພື່ອແລກປ່ຽນຂໍ້ມູນສະເພາະຂອງລົດ"</string>
+    <string name="service_name_checkin">ການລົງທະບຽນອຸປະກອນ</string>
+    <string name="service_name_mcs">ການສົ່ງຂໍ້ຄວາມຜ່ານຄລາວ</string>
+    <string name="service_name_device_attestation">ການຢືນຢັນອຸປະກອນ</string>
+    <string name="service_name_vending">ການບໍລິການຂອງ Play Store</string>
+    <string name="service_name_work_profile">ໂປຣໄຟລ໌ການເຮັດວຽກ</string>
+    <string name="games_title">Google Play Games</string>
+    <string name="games_info_title"><xliff:g example="F-Droid">%1$s</xliff:g> ຕ້ອງການໃຊ້ Play Games</string>
+    <string name="games_info_content">ເພື່ອໃຊ້ Play Games ແມ່ນຈຳເປັນຕ້ອງຕິດຕັ້ງແອັບ Google Play Games. ແອັບພລິເຄຊັນອາດຈະດຳເນີນການຕໍ່ໄດ້ໂດຍບໍ່ມີ Play Games, ແຕ່ມັນເປັນໄປໄດ້ວ່າຈະເຮັດວຽກຜິດປົກກະຕິ.</string>
+    <string name="pick_place_title">ເລືອກສະຖານທີ່</string>
+    <string name="place_picker_select_title">ເລືອກຕຳແໜ່ງນີ້</string>
+    <string name="place_picker_nearby_places">ສະຖານທີ່ໃກ້ຄຽງ</string>
     <!-- Self check -->
+    <string name="self_check_name_system_spoofs">ລະບົບປອມແປງລາຍເຊັນ: </string>
+    <string name="self_check_resolution_system_spoofs">ກະລຸນາກວດສອບເອກະສານກ່ຽວກັບຂັ້ນຕອນທີ່ອາດຈະຈຳເປັນ.</string>
+    <string name="self_check_pkg_gms">ການບໍລິການຂອງ microG</string>
+    <string name="self_check_pkg_vending">microG Companion / Play Store</string>
+    <string name="self_check_pkg_gsf">ໂຄງຮ່າງບໍລິການ microG</string>
+    <string name="self_check_name_app_installed">ຕິດຕັ້ງ <xliff:g example="F-Droid">%1$s</xliff:g> ແລ້ວ: </string>
+    <string name="self_check_resolution_app_installed">ຕິດຕັ້ງແອັບພລິເຄຊັນ <xliff:g example="F-Droid">%1$s</xliff:g> ຫຼື ແອັບທີ່ເຂົ້າກັນໄດ້. ກະລຸນາກວດສອບເອກະສານກ່ຽວກັບແອັບພລິເຄຊັນທີ່ເຂົ້າກັນໄດ້.</string>
+    <string name="self_check_name_correct_sig"><xliff:g example="F-Droid">%1$s</xliff:g> ມີລາຍເຊັນທີ່ຖືກຕ້ອງ: </string>
+    <string name="self_check_resolution_correct_sig"><xliff:g example="F-Droid">%1$s</xliff:g> ທີ່ຕິດຕັ້ງບໍ່ເຂົ້າກັນ ຫຼື ການປອມແປງລາຍເຊັນບໍ່ໄດ້ຖືກເປີດໃຊ້ງານ. ກະລຸນາກວດສອບເອກະສານກ່ຽວກັບແອັບພລິເຄຊັນ ແລະ ROM ທີ່ເຂົ້າກັນໄດ້.</string>
+    <string name="self_check_name_battery_optimizations">ການປັບແຕ່ງແບັດເຕີຣີຖືກລະເວັ້ນ:</string>
+    <string name="self_check_resolution_battery_optimizations">ແຕະທີ່ນີ້ເພື່ອປິດການປັບແຕ່ງແບັດເຕີຣີ. ຖ້າບໍ່ເຮັດແບບນີ້ ອາດຈະເຮັດໃຫ້ແອັບພລິເຄຊັນເຮັດວຽກຜິດພາດ.</string>
     <!-- Settings strings -->
+    <string name="cond_gcm_bat_summary">ທ່ານໄດ້ເປີດໃຊ້ງານ Cloud Messaging ແຕ່ໄດ້ເປີດການປັບປຸງແບັດເຕີຣີສຳລັບ microG Services. ເພື່ອໃຫ້ການແຈ້ງເຕືອນ push ສົ່ງມາເຖິງ ທ່ານຄວນເລືອກບໍ່ໃຫ້ປັບປຸງແບັດເຕີຣີ.</string>
+    <string name="prefs_account">ການຕັ້ງຄ່າບັນຊີ</string>
+    <string name="prefs_account_privacy">ຂໍ້ມູນສ່ວນຕົວ &amp; ຄວາມເປັນສ່ວນຕົວ</string>
+    <string name="prefs_account_security">ການລົງຊື່ເຂົ້າໃຊ້ &amp; ຄວາມປອດໄພ</string>
+    <string name="pref_auth_trust_google_summary">ເມື່ອປິດໃຊ້ງານ, ຜູ້ໃຊ້ຈະຖືກຖາມກ່ອນທີ່ຄຳຮ້ອງຂໍການອະນຸຍາດຂອງແອັບຈະຖືກສົ່ງໄປຍັງ Google. ບາງແອັບພລິເຄຊັນຈະບໍ່ສາມາດໃຊ້ບັນຊີ Google ໄດ້ ຫາກປິດໃຊ້ງານສ່ວນນີ້.</string>
+    <string name="pref_auth_visible_summary">ເມື່ອເປີດໃຊ້ງານ, ທຸກແອັບພລິເຄຊັນໃນອຸປະກອນນີ້ຈະສາມາດເຫັນທີ່ຢູ່ອີເມວຂອງບັນຊີ Google ຂອງທ່ານໄດ້ໂດຍບໍ່ຕ້ອງໄດ້ຮັບການອະນຸຍາດກ່ອນ.</string>
+    <string name="pref_auth_include_android_id_summary">ເມື່ອປິດໃຊ້ງານ, ຄຳຮ້ອງຂໍການຢືນຢັນຕົວຕົນຈະບໍ່ຖືກເຊື່ອມໂຍງກັບການລົງທະບຽນອຸປະກອນ, ເຊິ່ງອາດເຮັດໃຫ້ອຸປະກອນທີ່ບໍ່ໄດ້ຮັບອະນຸຍາດສາມາດລົງຊື່ເຂົ້າໃຊ້ໄດ້, ແຕ່ອາດມີຜົນກະທົບທີ່ບໍ່ຄາດຄິດ.</string>
+    <string name="pref_auth_strip_device_name_summary">ເມື່ອເປີດໃຊ້ງານ, ຄຳຮ້ອງຂໍການຢືນຢັນຕົວຕົນຈະບໍ່ລວມເອົາຊື່ຂອງອຸປະກອນ, ເຊິ່ງອາດເຮັດໃຫ້ອຸປະກອນທີ່ບໍ່ໄດ້ຮັບອະນຸຍາດສາມາດລົງຊື່ເຂົ້າໃຊ້ໄດ້, ແຕ່ອາດມີຜົນກະທົບທີ່ບໍ່ຄາດຄິດ.</string>
+    <string name="pref_auth_two_step_verification_title">ຮັບການແຈ້ງເຕືອນການຢືນຢັນຕົວຕົນສອງຂັ້ນຕອນ</string>
+    <string name="pref_auth_two_step_verification_summary">ເມື່ອເປີດໃຊ້ງານ, ອຸປະກອນສາມາດຮັບການແຈ້ງເຕືອນການຢືນຢັນຕົວຕົນສອງຂັ້ນຕອນຈາກ Google (ຈຳເປັນຕ້ອງມີ Cloud Messaging).</string>
+    <string name="pref_auth_allow_find_devices_title">ອະນຸຍາດໃຫ້ຕອບສະໜອງຕໍ່ Google Device Finder</string>
+    <string name="pref_auth_allow_find_devices_summary">ເມື່ອເປີດໃຊ້ງານ, ອຸປະກອນສາມາດຕອບສະໜອງຕໍ່ການແຈ້ງເຕືອນ Find My Device ຈາກ Google (ຕ້ອງໃຊ້ Cloud Messaging).</string>
+    <string name="pref_checkin_enable_summary">ລົງທະບຽນອຸປະກອນຂອງທ່ານກັບບໍລິການຂອງ Google ແລະ ສ້າງລະຫັດລະບຸຕົວຕົນຂອງອຸປະກອນທີ່ບໍ່ຊ້ຳກັນ. microG ຈະຕັດບິດທີ່ລະບຸຕົວຕົນອື່ນໆ ອອກຈາກຂໍ້ມູນການລົງທະບຽນ ຍົກເວັ້ນຊື່ບັນຊີ Google ຂອງທ່ານ.</string>
+    <string name="checkin_last_registration">ການລົງທະບຽນຄັ້ງຫຼ້າສຸດ: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="pref_accounts_title">ບັນຊີ</string>
+    <string name="pref_game_accounts_title">ບັນຊີເກມ Google</string>
+    <string name="prefcat_accounts_settings_title">ການຕັ້ງຄ່າ</string>
+    <string name="snackbar_accounts_restored">ກູ້ຄືນ %1$d ບັນຊີ</string>
+    <string name="auth_add_account">ເພີ່ມບັນຊີ</string>
+    <string name="pref_add_account_summary">ເພີ່ມບັນຊີ Google</string>
+    <string name="pref_gcm_enable_mcs_summary">Cloud Messaging ແມ່ນຜູ້ໃຫ້ບໍລິການການແຈ້ງເຕືອນແບບ push ທີ່ຖືກນຳໃຊ້ໂດຍແອັບພລິເຄຊັນພາຍນອກຫຼາຍຢ່າງ. ເພື່ອໃຊ້ງານມັນ ທ່ານຕ້ອງເປີດໃຊ້ການລົງທະບຽນອຸປະກອນ.</string>
+    <string name="pref_hide_launcher_icon">ເຊື່ອງໄອຄອນໃນ launcher</string>
+    <string name="hide_launcher_icon_dialog_message">ຖ້າເປີດໃຊ້ງານ, MicroG ຈະຖືກເຊື່ອງໄວ້ໃນຕົວເລືອກແອັບ. MicroG ສາມາດເປີດໄດ້ຈາກຂໍ້ມູນແອັບທີ່ຢູ່ໃນລາຍການແອັບລະບົບຂອງອຸປະກອນຂອງທ່ານ.</string>
+    <string name="hide_launcher_icon_updating_title">ກະລຸນາລໍຖ້າໃນຂະນະທີ່ແອັບກຳລັງອັບເດດ</string>
+    <string name="update_include_prerelease">ລວມເວີຊັນສຳລັບນັກພັດທະນາ</string>
+    <string name="update_available_message">ມີ v%1$s ໃໝ່ໃຫ້ບໍລິການ. ທ່ານໄດ້ຕິດຕັ້ງເວີຊັນ v%2$s ຢູ່. ຕ້ອງການດາວໂຫຼດ ແລະ ຕິດຕັ້ງການອັບເດດຫຼືບໍ່?</string>
+    <string name="update_ignore">ບໍ່ສົນໃຈ</string>
+    <string name="update_downloading_title">ກຳລັງດາວໂຫຼດການອັບເດດ…</string>
+    <string name="update_download_failed">ການດາວໂຫຼດລົ້ມເຫຼວ. ກະລຸນາກວດສອບການເຊື່ອມຕໍ່ຂອງທ່ານ ແລະ ລອງໃໝ່ອີກຄັ້ງ.</string>
+    <string name="update_signature_mismatch">ບໍ່ສາມາດອັບເດດແອັບໄດ້, ເນື່ອງຈາກລາຍເຊັນບໍ່ຄືກັນ.</string>
+    <string name="update_failed_title">ການອັບເດດລົ້ມເຫຼວ</string>
+    <string name="update_permission_required_title">ຕ້ອງມີການອະນຸຍາດ</string>
+    <string name="update_permission_required_message">ເພື່ອຕິດຕັ້ງການອັບເດດ, ກະລຸນາອະນຸຍາດໃຫ້ MicroG ຕິດຕັ້ງແອັບທີ່ບໍ່ຮູ້ຈັກໃນການຕັ້ງຄ່າລະບົບ.</string>
+    <string name="update_open_settings">ການຕັ້ງຄ່າ</string>
+    <string name="update_check_failed">ບໍ່ສາມາດກວດສອບການອັບເດດໄດ້. ກະລຸນາກວດສອບການເຊື່ອມຕໍ່ຂອງທ່ານ ແລະ ລອງໃໝ່ອີກຄັ້ງ.</string>
+    <string name="update_up_to_date_title">ທ່ານໄດ້ຮັບເວີຊັນຫຼ້າສຸດແລ້ວ</string>
+    <string name="update_up_to_date_message">MicroG-RE v%s ແມ່ນເວີຊັນຫຼ້າສຸດ.</string>
+    <string name="update_notification_title">ມີການອັບເດດໃໝ່</string>
+    <string name="update_notification_text">ມີ v%s ໃໝ່ ແຕະເພື່ອອັບເດດ</string>
+    <string name="update_notification_channel">ການອັບເດດ</string>
+    <string name="update_notification_permission_title">ການແຈ້ງເຕືອນ</string>
+    <string name="update_notification_permission_message">ເພື່ອແຈ້ງໃຫ້ທ່ານຊາບເມື່ອມີການອັບເດດໃໝ່, MicroG-RE ຕ້ອງການການອະນຸຍາດໃນການສົ່ງການແຈ້ງເຕືອນ. ກະລຸນາອະນຸຍາດການແຈ້ງເຕືອນເພື່ອໃຫ້ການແຈ້ງເຕືອນການອັບເດດສົ່ງເຖິງທ່ານ.</string>
+    <string name="update_notification_permission_allow">ອະນຸຍາດ</string>
+    <string name="update_notification_permission_not_now">ຍັງບໍ່ທັນແມ່ນຕອນນີ້</string>
+    <string name="update_notification_permission_open_settings">ເປີດການຕັ້ງຄ່າ</string>
+    <string name="gcm_last_message_at">ຂໍ້ຄວາມຫຼ້າສຸດ: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_registered_since">ລົງທະບຽນຕັ້ງແຕ່: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_unregister_confirm_title">ຍົກເລີກການລົງທະບຽນ <xliff:g example="F-Droid">%1$s</xliff:g>?</string>
+    <string name="gcm_unregister_confirm_message">ບາງແອັບບໍ່ໄດ້ລົງທະບຽນຄືນໂດຍອັດຕະໂນມັດ ແລະ/ຫຼື ບໍ່ມີຕົວເລືອກໃຫ້ເຮັດແບບນັ້ນດ້ວຍຕົນເອງ. ແອັບເຫຼົ່ານີ້ອາດຈະເຮັດວຽກບໍ່ຖືກຕ້ອງຫຼັງຈາກຍົກເລີກການລົງທະບຽນ.\nຕ້ອງການດຳເນີນການຕໍ່ບໍ?</string>
+    <string name="gcm_unregister_after_deny_message">ທ່ານໄດ້ປະຕິເສດບໍ່ໃຫ້ແອັບລົງທະບຽນເພື່ອຮັບການແຈ້ງເຕືອນ push ທີ່ໄດ້ລົງທະບຽນໄວ້ແລ້ວ.\nທ່ານຕ້ອງການຍົກເລີກການລົງທະບຽນຕອນນີ້ ເພື່ອບໍ່ໃຫ້ມັນໄດ້ຮັບຂໍ້ຄວາມ push ໃນອະນາຄົດບໍ?</string>
+    <string name="gcm_messages_counter">ຂໍ້ຄວາມ: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> ບೈຕ໌)</string>
+    <string name="gcm_network_state_connected">ເຊື່ອມຕໍ່ຕັ້ງແຕ່ <xliff:g example="2 hours ago">%1$s</xliff:g></string>
+    <string name="gcm_enable_switch">ຮັບການແຈ້ງເຕືອນແບບພຸຊ</string>
+    <string name="gcm_allow_app_popup">ອະນຸຍາດໃຫ້ <xliff:g example="F-Droid">%1$s</xliff:g> ລົງທະບຽນເພື່ອຮັບການແຈ້ງເຕືອນແບບພຸຊບໍ?</string>
+    <string name="pref_push_app_allow_register_summary">ອະນຸຍາດໃຫ້ແອັບລົງທະບຽນເພື່ອຮັບການແຈ້ງເຕືອນ push.</string>
+    <string name="pref_push_app_wake_for_delivery_summary">ເລີ່ມໃຊ້ງານແອັບໃນຂະນະທີ່ຢູ່ເບื้องຫຼັງ ເພື່ອຮັບຂໍ້ຄວາມ push ທີ່ເຂົ້າມາ.</string>
+    <string name="safetynet_intro">Google SafetyNet ແມ່ນລະບົບການຢັ້ງຢືນອຸປະກອນ, ເພື່ອຮັບປະກັນວ່າອຸປະກອນນັ້ນມີຄວາມປອດໄພຢ່າງຖືກຕ້ອງ ແລະ ສາມາດໃຊ້ງານຮ່ວມກັບ Android CTS ໄດ້. ບາງແອັບພລິເຄຊັນໃຊ້ SafetyNet ເພື່ອເຫດຜົນທາງດ້ານຄວາມປອດໄພ ຫຼື ເປັນເງື່ອນໄຂເບື້ອງຕົ້ນສຳລັບການປ້ອງກັນການດັດແກ້.\n\nmicroG GmsCore ມີການນຳໃຊ້ SafetyNet ແບບຟຣີ, ແຕ່ເຊີບເວີທາງການຮຽກຮ້ອງໃຫ້ການຮ້ອງຂໍ SafetyNet ຕ້ອງໄດ້ຮັບການເຊັນໂດຍໃຊ້ລະບົບ DroidGuard ທີ່ມີລິຂະສິດ.</string>
+    <string name="safetynet_enable_switch">ອະນຸຍາດການຢັ້ງຢືນອຸປະກອນ</string>
+    <string name="pref_safetynet_test_title">ທົດສອບການຢັ້ງຢືນ SafetyNet</string>
+    <string name="pref_recaptcha_test_title">ທົດສອບ ReCAPTCHA</string>
+    <string name="pref_recaptcha_enterprise_test_title">ທົດສອບ ReCAPTCHA Enterprise</string>
+    <string name="pref_test_summary_passed">ຜ່ານການທົດສອບທັງໝົດ</string>
+    <string name="pref_test_summary_failed">ລົ້ມເຫຼວ: %s</string>
+    <string name="pref_test_summary_warn">ຄຳເຕືອນ: %s</string>
+    <string name="pref_test_summary_running">ກຳລັງດຳເນີນການ…</string>
+    <string name="pref_droidguard_unsupported_summary">ການເຮັດວຽກຂອງ DroidGuard ບໍ່ໄດ້ຮັບການຮອງຮັບໃນອຸປະກອນນີ້. ບໍລິການ SafetyNet ອາດຈະເຮັດວຽກຜິດພາດ.</string>
+    <string name="prefcat_safetynet_apps_title">ແອັບທີ່ໃຊ້ SafetyNet</string>
+    <string name="prefcat_device_attestation_apps_title">ແອັບທີ່ໃຊ້ການຢັ້ງຢືນອຸປະກອນ</string>
+    <string name="pref_device_attestation_app_allow_requests_title">ອະນຸຍາດການຮ້ອງຂໍ</string>
+    <string name="pref_device_attestation_app_allow_requests_summary">ອະນຸຍາດໃຫ້ແອັບຮ້ອງຂໍການຢືນຢັນອຸປະກອນ</string>
+    <string name="menu_clear_recent_requests">ລຶບການຮ້ອງຂໍຫຼ້າສຸດ</string>
+    <string name="safetynet_last_run_at">ໃຊ້ງານຫຼ້າສຸດ: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="pref_safetynet_recent_uses">ການໃຊ້ງານຫຼ້າສຸດ</string>
+    <string name="pref_safetynet_recent_attestation_summary">ການຢືນຢັນ: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_summary">ReCaptcha: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_enterprise_summary">ReCaptcha Enterprise: %s</string>
+    <string name="pref_safetynet_recent_copy_json">ຄັດລອກຂໍ້ມູນ JSON JWS</string>
+    <string name="pref_safetynet_recent_advice">ຄຳແນະນຳ</string>
+    <string name="pref_safetynet_recent_eval_type">ປະເພດການປະເມີນ</string>
+    <string name="pref_safetynet_recent_response_status">ສະຖານະການຕອບສະໜອງ</string>
+    <string name="pref_safetynet_recent_cat_response">ຂໍ້ມູນການຕອບສະໜອງ</string>
+    <string name="pref_safetynet_recent_cat_request">ຂໍ້ມູນການຮ້ອງຂໍ</string>
+    <string name="pref_safetynet_recent_nonce">Nonce (Hex)</string>
+    <string name="pref_safetynet_recent_request_time">ເວລາຂອງການຮ້ອງຂໍ</string>
+    <string name="pref_safetynet_recent_request_type">ປະເພດການຮ້ອງຂໍ</string>
+    <string name="pref_safetynet_recent_cat_basic">ຂໍ້ມູນພື້ນຖານ</string>
+    <string name="pref_safetynet_recent_token">ໂທເຄັນ</string>
+    <string name="pref_safetynet_recent_copied">ຄັດລອກໄປยังຄລິບບອດແລ້ວ!</string>
+    <string name="pref_safetynet_test_integrity_cts_passed">Integrity ແລະ CTS ຜ່ານການທົດສອບ</string>
+    <string name="pref_safetynet_test_cts_failed">CTS ບໍ່ຜ່ານ</string>
+    <string name="pref_safetynet_test_integrity_failed">Integrity ບໍ່ຜ່ານ</string>
+    <string name="pref_safetynet_test_not_completed">ຍັງບໍ່ທັນສຳເລັດ</string>
+    <string name="pref_safetynet_test_no_result">ບໍ່ມີຜົນລັບ</string>
+    <string name="pref_safetynet_test_invalid_json">JSON ບໍ່ຖືກຕ້ອງ</string>
+    <string name="pref_vending_licensing_category">ການໃຫ້ອະນຸຍາດຂອງ Google Play</string>
+    <string name="pref_vending_licensing_enable_switch">ຕອບສະໜອງຄຳຂໍການຢືນຢັນໃບອະນຸຍາດ</string>
+    <string name="pref_vending_license_enable_summary">ບາງແອັບຕ້ອງການການຢືນຢັນວ່າທ່ານໄດ້ຊື້ແອັບເຫຼົ່ານັ້ນໃນ Google Play. ເມື່ອແອັບຮ້ອງຂໍ, microG ສາມາດດາວໂຫຼດຫຼັກຖານການຊື້ຈາກ Google ໄດ້. ຖ້າປິດການໃຊ້ງານ, ຫຼື ຖ້າບໍ່ມີການເພີ່ມບັນຊີ Google, ຄຳຮ້ອງຂໍການຢືນຢັນໃບອະນຸຍາດຈະຖືກລະເລີຍ.</string>
+    <string name="pref_vending_licensing_purchase_free_apps_switch">ເພີ່ມແອັບຟຣີເຂົ້າໃນຄັງແອັບໂດຍອັດຕະໂນມັດ</string>
+    <string name="pref_vending_licensing_purchase_free_apps_summary">ແອັບຟຣີອາດຈະກວດສອບວ່າພວກມັນຖືກດາວໂຫຼດມາຈາກ Google Play ຫຼື ບໍ່. ເພີ່ມແອັບຟຣີເຂົ້າໃນຄັງບັນຊີຂອງທ່ານໂດຍອັດຕະໂນມັດ ເພື່ອໃຫ້ຜ່ານການກວດສອບສຳລັບທຸກແອັບຟຣີທີ່ທ່ານສາມາດໃຊ້ງານໄດ້ໃນປັດຈຸບັນ.</string>
+    <string name="pref_vending_feature_delivery">ການສົ່ງມອບຄຸນສົມບັດຂອງ Google Play</string>
+    <string name="pref_vending_split_install_switch">ການຕິດຕັ້ງສ່ວນປະກອບຕາມການຮ້ອງຂໍ</string>
+    <string name="pref_vending_licensing_split_install_summary">ອະນຸຍາດໃຫ້ແອັບດາວໂຫຼດ ແລະ ຕິດຕັ້ງສ່ວນປະກອບເພີ່ມເຕີມ</string>
+    <string name="feedback_disabled">ປັດຈຸບັນບໍ່ສາມາດສົ່ງຄຳຄິດເຫັນໄດ້</string>
+    <string name="backup_disabled">ປັດຈຸບັນບໍ່ສາມາດສຳຮອງຂໍ້ມູນໄດ້</string>
+    <string name="pref_vending_billing_category">ການຊຳລະເງິນຂອງ Google Play</string>
+    <string name="pref_vending_billing_enable_switch">ຈັດການຄຳຮ້ອງການຊຳລະເງິນ</string>
+    <string name="pref_vending_billing_enable_summary">ເມື່ອເປີດໃຊ້ງານແລ້ວ, ບາງແອັບສາມາດດຳເນີນການຊື້ ຫຼື ເລີ່ມການສະໝັກໃຊ້ຜ່ານບໍລິການ Google Play Billing ໄດ້.</string>
+    <string name="pref_vending_billing_note_experimental">ຄຸນສົມບັດນີ້ແມ່ນການທົດລອງ ແລະ ອາດເຮັດໃຫ້ເສຍເງິນໄດ້. ທ່ານໄດ້ຮັບການແຈ້ງເຕືອນແລ້ວ.</string>
+    <string name="pref_vending_billing_note_licensing">ບາງແອັບອາດຈະຮຽກຮ້ອງໃຫ້ທ່ານເປີດໃຊ້ການກວດສອບໃບອະນຸຍາດ ເພື່ອກວດສອບການຊື້ຂອງທ່ານນຳດ້ວຍ.</string>
+    <string name="pref_vending_asset_delivery_category">Google Play Asset Delivery</string>
+    <string name="pref_vending_asset_delivery_switch">ເປີດໃຊ້ການສົ່ງມອບຊັບສິນຕາມຄວາມຕ້ອງການ</string>
+    <string name="pref_vending_asset_delivery_summary">ດາວໂຫຼດຊັບສິນເພີ່ມເຕີມເມື່ອມີການຮ້ອງຂໍຈາກແອັບທີ່ໃຊ້ Play Asset Delivery</string>
+    <string name="pref_vending_asset_device_sync_summary">ແອັບພລິເຄຊັນທີ່ໃຊ້ Play Asset Delivery ຈະດາວໂຫຼດຊັບສິນເພີ່ມເຕີມໂດຍອີງຕາມຂໍ້ມູນຂອງອຸປະກອນທີ່ກຳລັງໃຊ້ງານໃນປັດຈຸບັນ.</string>
+    <string name="pref_vending_asset_device_sync_switch">ເປີດໃຊ້ການຊິງຄ໌ຂໍ້ມູນອຸປະກອນ</string>
+    <string name="pref_workprofile_create_account">ອະນຸຍາດໃຫ້ຕັ້ງຄ່າບັນຊີວຽກ</string>
+    <string name="pref_workprofile_intro">ເມື່ອຕັ້ງຄ່າໂປຣໄຟລ໌ວຽກສຳລັບບ່ອນເຮັດວຽກ ຫຼື ສະຖາບັນການສຶກສາຂອງທ່ານ,
+        ການຕັ້ງຄ່າອາດຈະພະຍາຍາມເຊື່ອມຕໍ່ກັບ Google ເພື່ອເປີດໃຊ້ການດາວໂຫຼດແອັບລົງໃນໂປຣໄຟລ໌ນັ້ນ.</string>
+    <string name="pref_workprofile_disclaimer">ມັນແມ່ນຄວາມຮັບຜິດຊອບຂອງທ່ານທີ່ຈະຮັບປະກັນວ່າການນຳໃຊ້ microG ຂອງທ່ານແມ່ນສອດຄ່ອງກັບນະໂຍບາຍຂອງອົງກອນ.
+        microG ຖືກສະໜອງໃຫ້ບົນພື້ນຖານຄວາມພະຍາຍາມສູງສຸດ ແລະ ບໍ່ສາມາດຮັບປະກັນວ່າຈະເຮັດວຽກໄດ້ຕາມທີ່ຄາດໄວ້ທຸກປະການ.</string>
+    <string name="pref_auto_create_player">ອະນຸຍາດໃຫ້ລົງທະບຽນບັນຊີ Play Games</string>
+    <string name="pref_auto_create_player_intro">ເມື່ອຫຼິ້ນເກມ, ທ່ານຈຳເປັນຕ້ອງໃຊ້ບັນຊີ Play Games ເພື່ອເຂົ້າສູ່ລະບົບ ແລະ ບັນທຶກຟັງຊັນທີ່ກ່ຽວຂ້ອງກັບເກມ, ເຊັ່ນ: ຜົນສຳເລັດ,ຕາຕະລາງຈັດອັນດັບ, ຄັງເກັບຂໍ້ມູນ ແລະ ອື່ນໆ. ຫຼັງຈາກປິດການໃຊ້ງານ, ບັນຊີ Google ທີ່ບໍ່ໄດ້ຜູກມັດກັບບັນຊີ Play Games ຈະບໍ່ຖືກລົງທະບຽນໂດຍອັດຕະໂນມັດ, ແລະ ເກມຈະບໍ່ສາມາດເຂົ້າສູ່ລະບົບ ແລະ ຫຼິ້ນໄດ້.</string>
+    <string name="pref_allow_upload_game_played">ອະນຸຍາດໃຫ້ອັບໂຫຼດເກມທີ່ຫຼິ້ນ</string>
+    <string name="pref_allow_upload_game_played_summary">ເມື່ອປິດການໃຊ້ງານ, ເກມຈະບໍ່ລາຍງານສະຖານະການຫຼິ້ນເກມຫຼັງຈາກເຂົ້າສູ່ລະບົບເກມ, ແລະ ບາງເກມອາດຈະບໍ່ສາມາດເຂົ້າສູ່ລະບົບໄດ້.</string>
+    <string name="pref_change_default_game_player">ປ່ຽນບັນຊີສຳລັບເກມ</string>
+    <string name="pref_change_default_game_player_summary">ປ່ຽນບັນຊີເລີ່ມຕົ້ນສຳລັບເກມ &amp; ປ່ຽນບັນຊີຕາມເກມ.</string>
+    <string name="pref_delete_game_account_data">ລຶບຂໍ້ມູນ Play Games</string>
+    <string name="pref_delete_game_account_data_summary">ລຶບບັນຊີ Play Games &amp; ຂໍ້ມູນທັງໝົດ &amp; ລຶບຂໍ້ມູນເກມແຍກຕ່າງຫາກ.</string>
+    <string name="credentials_assisted_cancel">ຍົກເລີກ</string>
+    <string name="credentials_assisted_continue">ດຳເນີນການຕໍ່</string>
+    <string name="credentials_assisted_confirmation_header">ກຳລັງລົງຊື່ເຂົ້າໃຊ້ໃຫ້ທ່ານ</string>
+    <string name="credentials_assisted_continue_as_user_button_label">ດຳເນີນການຕໍ່ໃນນາມ %1$s</string>
+    <string name="credentials_assisted_sign_back_title">ລົງຊື່ເຂົ້າໃຊ້ %1$s ຄືນໃໝ່ດ້ວຍ Google</string>
+    <string name="credentials_assisted_signin_consent_header">ກຳລັງລົງຊື່ເຂົ້າໃຊ້ໃນນາມ %1$s</string>
+    <string name="credentials_assisted_signin_consent">ເມື່ອດຳເນີນການຕໍ່, Google ຈະແບ່ງປັນຊື່, ທີ່ຢູ່ອີເມວ ແລະ ຮູບໂປຣໄຟລ໌ຂອງທ່ານໃຫ້ກັບ %1$s. ເບິ່ງ ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວ ແລະ ຂໍ້ກຳນົດການໃຫ້ບໍລິການ ຂອງ %1$s.</string>
+    <string name="credentials_assisted_signin_description">ທ່ານສາມາດຈັດການການລົງຊື່ເຂົ້າໃຊ້ດ້ວຍ Google ໄດ້ໃນບັນຊີ Google ຂອງທ່ານ.</string>
+    <string name="credentials_assisted_choose_account_label">ເລືອກບັນຊີ</string>
+    <string name="credentials_assisted_choose_account_subtitle">ເພື່ອສືບຕໍ່ໄປຍັງ %1$s</string>
+    <string name="credentials_assisted_choose_account_error_tips">ບັນຊີຜິດປົກກະຕິ</string>
+    <string name="credentials_assisted_signin_button_text_long">ລົງນາມເຂົ້າໃຊ້ດ້ວຍ Google</string>
+    <string name="credentials_assisted_signin_add_account">ເພີ່ມບັນຊີ</string>
+    <string name="credentials_service_sign_in_with_google_label">ລົງນາມເຂົ້າໃຊ້ດ້ວຍ Google</string>
+    <string name="credentials_service_remote_custom_subtitle">ກຸນແຈຄວາມປອດໄພ, ສະມາດໂຟນ ຫຼື ແທັບເລັດ</string>
+    <string name="limited_services_dialog_information">ທ່ານກຳລັງໃຊ້ microG Limited Services. ບໍ່ຄືກັບ microG Services ປົກກະຕິ, ແບບນີ້ຈະເຮັດວຽກໄດ້ສະເພາະກັບແອັບທີ່ໃຊ້ຫໍສະໝຸດ microG ເທົ່ານັ້ນ, ບໍ່ແມ່ນແອັບໃນ Google Play. ນີ້ໝາຍຄວາມວ່າ ແອັບພລິເຄຊັນສ່ວນໃຫຍ່ຈະບໍ່ສົນໃຈການບໍລິການເຫຼົ່ານີ້.</string>
+    <string name="limited_services_dialog_information_ack">ຂ້ອຍເຂົ້າໃຈແລ້ວ</string>
+    <string name="games_achievement_list_title">ຜົນສຳເລັດ</string>
+    <string name="games_achievements_empty_text">ບໍ່ມີຜົນສຳເລັດສຳລັບເກມນີ້</string>
+    <string name="games_api_access_denied">ບໍ່ມີບັນຊີໃນອຸປະກອນນີ້ທີ່ສາມາດເຂົ້າເຖິງ Games APIs ໄດ້</string>
+    <string name="games_achievement_locked_content_description">ລັອກໄວ້</string>
+    <string name="games_achievement_unlocked_content_description">ປົດລັອກແລ້ວ</string>
+    <string name="games_achievement_extra_text">%1$s XP</string>
+    <string name="games_leaderboard_empty_text">ບໍ່ມີຕາຕະລາງຈັດອັນດັບສຳລັບເກມນີ້</string>
+    <string name="games_leaderboard_list_title">ການຈັດອັນດັບ</string>
+    <string name="games_leaderboards_score_label">ຄະແນນ: %1$s</string>
+    <string name="games_snapshot_empty_text">ຍັງບໍ່ມີການບັນທຶກເກມ</string>
+    <string name="games_snapshot_choose_btn_text">ເລືອກ</string>
+    <string name="games_snapshot_delete_btn_text">ລຶບ</string>
+    <string name="games_delete_snapshot_dialog_title">ລຶບເກມທີ່ບັນທຶກໄວ້</string>
+    <string name="games_delete_snapshot_dialog_message">ທ່ານແນ່ໃຈຫຼືບໍ່ວ່າຕ້ອງການລຶບເກມທີ່ບັນທຶກໄວ້ນີ້?</string>
+    <string name="games_delete_snapshot_dialog_cancel">ຍົກເລີກ</string>
+    <string name="games_delete_snapshot_dialog_ok">ຕົກລົງ</string>
+    <string name="games_delete_snapshot_error">ການລຶບລົ້ມເຫຼວ, ກະລຸນາລອງໃໝ່ໃນພາຍຫຼັງ</string>
+    <string name="games_state_description_signed_out">ອອກຈາກລະບົບແລ້ວ</string>
+    <string name="games_state_description_delete">ລຶບ</string>
+    <string name="games_change_button_text">ປ່ຽນ</string>
+    <string name="games_change_default_account_section_title">ປ່ຽນບັນຊີເລີ່ມຕົ້ນສຳລັບເກມ</string>
+    <string name="games_change_default_account_description">ບັນຊີເລີ່ມຕົ້ນ: %1$s</string>
+    <string name="games_change_default_account_explanation">ບັນຊີນີ້ຖືກໃຊ້ເພື່ອລົງຊື່ເຂົ້າໃຊ້ເກມໂດຍອັດຕະໂນມັດ, ບັນທຶກຄວາມຄືບໜ້າຂອງເກມ ແລະ ບັນທຶກການຕັ້ງຄ່າຂອງທ່ານ. ການປ່ຽນບັນຊີເລີ່ມຕົ້ນ ຫຼື ການອອກຈາກລະບົບອາດຈະເຮັດໃຫ້ຄວາມຄືບໜ້າ ແລະ ການຕັ້ງຄ່າສຳລັບເກມທີ່ທ່ານໄດ້ຫຼິ້ນຖືກຣີເຊັດໃໝ່.</string>
+    <string name="games_change_per_game_title">ປ່ຽນບັນຊີຕາມເກມ</string>
+    <string name="games_change_per_game_description">ການປ່ຽນບັນຊີສຳລັບເກມທີ່ເລືອກ ຫຼື ການອອກຈາກລະບົບອາດຈະເຮັດໃຫ້ຄວາມຄືບໜ້າ ແລະ ການຕັ້ງຄ່າສຳລັບເກມນັ້ນຖືກຣີເຊັດໃໝ່.</string>
+    <string name="games_change_default_account_for_all_games_dialog_title">ເລືອກຕົວເລືອກສຳລັບບັນຊີເລີ່ມຕົ້ນໃໝ່</string>
+    <string name="games_change_default_account_for_all_games_dialog_description">ບັນຊີເລີ່ມຕົ້ນປັດຈຸບັນ: %1$s</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_title">ປ່ຽນບັນຊີເລີ່ມຕົ້ນສະເພາະເກມໃໝ່ເທົ່ານັ້ນ </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_description">ທ່ານຈະບໍ່ສູນເສຍການເຂົ້າເຖິງຄວາມຄືບໜ້າ ແລະ ການຕັ້ງຄ່າສຳລັບເກມທີ່ທ່ານເຄີຍຫຼິ້ນ. ແຕ່ຄວາມຄືບໜ້າຂອງທ່ານຈະຖືກແບ່ງລະຫວ່າງບັນຊີ.</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_title"> ປ່ຽນບັນຊີເລີ່ມຕົ້ນສຳລັບທຸກເກມ </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_description">ທ່ານອາດຈະສູນເສຍການເຂົ້າເຖິງຄວາມຄືບໜ້າ ແລະ ການຕັ້ງຄ່າສຳລັບເກມທີ່ທ່ານເຄີຍຫຼິ້ນ. ພວກເຮົາຈະເລີ່ມເກມໃໝ່ເພື່ອນຳໃຊ້ການປ່ຽນແປງຂອງທ່ານ.</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_title"> ອອກຈາກລະບົບຂອງທຸກເກມ </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_description">ທ່ານອາດຈະສູນເສຍການເຂົ້າເຖິງຄວາມຄືບໜ້າ ແລະ ການຕັ້ງຄ່າສຳລັບເກມທີ່ທ່ານເຄີຍຫຼິ້ນ. ພວກເຮົາຈະເລີ່ມເກມໃໝ່ເພື່ອນຳໃຊ້ການປ່ຽນແປງຂອງທ່ານ.</string>
+    <string name="games_change_per_game_dialog_title">ເລືອກຕົວເລືອກສຳລັບເກມນີ້</string>
+    <string name="games_change_per_game_dialog_description">ການປ່ຽນບັນຊີ ຫຼື ການອອກຈາກລະບົບ ອາດຈະເຮັດໃຫ້ຄວາມຄືບໜ້າ ແລະ ການຕັ້ງຄ່າສຳລັບເກມຂອງທ່ານຖືກຣີເຊັດ</string>
+    <string name="games_change_per_game_dialog_option_use_player">ໃຊ້ %1$s</string>
+    <string name="games_change_per_game_dialog_option_use_player_snackbar_success_message">ທ່ານຈະຖືກເຂົ້າສູ່ລະບົບໃນເກມນີ້ດ້ວຍ %1$s</string>
+    <string name="family_management_toolbar_back">ກັບຄືນ</string>
+    <string name="family_management_invite_slots_left">ເຫຼືອການເຊີນ %1$d ຄັ້ງ</string>
+    <string name="family_management_delete_group_cancel">ຍົກເລີກ</string>
     <!-- Passkey management -->
+    <string name="morphe_sign_in_with_google_microg_label">ລົງຊື່ເຂົ້າໃຊ້ດ້ວຍ Google ຜ່ານ MicroG RE</string>
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">ຕິດຕັ້ງເວີຊັນສະຖາປັດຕະຍະກຳທີ່ບໍ່ຖືກຕ້ອງ</string>
+    <string name="abi_mismatch_message">"ການສ້າງ MicroG-RE ນີ້ມີພຽງແຕ່ໄລບຣາຣີ 64-bit (arm64), ແຕ່ອຸປະກອນນີ້ກຳລັງໃຊ້ userspace 32-bit.
+
+ຟີເຈີທີ່ຕ້ອງໃຊ້ Conscrypt (ການເຂົ້າສູ່ລະບົບບັນຊີ, ການສະຕຣີມ, BotGuard, ການ spoof ວິດີໂອສະຕຣີມ, SponsorBlock, Return YouTube Dislike, ແລະ ອື່ນໆ) ຈະບໍ່ເຮັດວຽກຢ່າງຖືກຕ້ອງ ແລະ ອາດເຮັດໃຫ້ເກີດບັນຫາໃນການຫຼິ້ນ ຫຼື \"ບໍ່ສາມາດຊອກຫາ SSL provider ມາດຕະຖານໄດ້\".
+
+ກະລຸນາຕິດຕັ້ງ ARMv7 ຫຼື Universal APK ແທນ."</string>
+    <string name="abi_mismatch_download_armv7">ດາວໂຫຼດ ARMv7 APK</string>
+    <string name="abi_mismatch_downloading_title">ກຳລັງດາວໂຫຼດເວີຊັນທີ່ຖືກຕ້ອງ…</string>
 </resources>

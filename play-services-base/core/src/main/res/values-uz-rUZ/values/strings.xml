@@ -4,8 +4,21 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="foreground_service_notification_title">Fonda faol</string>
+    <string name="foreground_service_notification_text"><xliff:g example="Exposure Notification">%1$s</xliff:g> fonda ishlamoqda.</string>
     <string name="foreground_service_notification_big_text">Batareya optimizatsiyasidan <xliff:g example="microG Services">%1$s</xliff:g> istisno qiling yoki bu bildirishnomani yashirish uchun bildirishnoma sozlamalarini o\'zgartiring.},</string>
+    <string name="foreground_action_battery_optimization">Batareyani optimallashtirish</string>
+    <string name="foreground_action_notification_settings">Sozlamalar</string>
     <string name="menu_advanced">Kengaytirilgan</string>
+    <string name="menu_settings">Sozlamalar</string>
     <string name="menu_game_managed">Boshqariladigan o\'yin hisoblari</string>
+    <string name="list_no_item_none">YoÑq</string>
+    <string name="list_item_see_all">Hammasini koÑrish</string>
     <string name="open_app">Ochish</string>
+    <string name="service_status_disabled">O\"chirilgan</string>
+    <string name="service_status_enabled">Yoqilgan</string>
+    <string name="service_status_automatic">Avtomatik</string>
+    <string name="service_status_manual">QoÑlda</string>
+    <string name="service_status_enabled_short">Yoq</string>
+    <string name="service_status_disabled_short">O\"ch</string>
 </resources>

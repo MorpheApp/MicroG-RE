@@ -3,4 +3,22 @@
   ~ SPDX-FileCopyrightText: 2020, microG Project Team
   ~ SPDX-License-Identifier: Apache-2.0
   -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="foreground_service_notification_title">በስተጀርባ ንቁ ነው</string>
+    <string name="foreground_service_notification_text"><xliff:g example="Exposure Notification">%1$s</xliff:g> በስተጀርባ እየሰራ ነው።</string>
+    <string name="foreground_service_notification_big_text">ይህንን ማሳወቂያ ለመደበቅ <xliff:g example="microG Services">%1$s</xliff:g>ን ከባትሪ ማመቻቻዎች ውጭ ያድርጉ ወይም የማሳወቂያ ቅንብሮችን ይቀይሩ።</string>
+    <string name="foreground_action_battery_optimization">የባትሪ ማመቻቸት</string>
+    <string name="foreground_action_notification_settings">ቅንብሮች</string>
+    <string name="menu_advanced">የላቀ</string>
+    <string name="menu_settings">ቅንብሮች</string>
+    <string name="menu_game_managed">የጨዋታ አካውንቶች ተያይዘዋል</string>
+    <string name="list_no_item_none">ምንም</string>
+    <string name="list_item_see_all">ሁሉንም ይመልከቱ</string>
+    <string name="open_app">ክፈት</string>
+    <string name="service_status_disabled">አልነቃም</string>
+    <string name="service_status_enabled">ነቅቷል</string>
+    <string name="service_status_automatic">ራስ-ሰር</string>
+    <string name="service_status_manual">በእጅ</string>
+    <string name="service_status_enabled_short">በርቷል</string>
+    <string name="service_status_disabled_short">ጠፍቷል</string>
+</resources>

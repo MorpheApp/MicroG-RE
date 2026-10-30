@@ -14,4 +14,14 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="gcm_registered_apps_counter">
+        <item quantity="other">ແອັບທີ່ລົງທະບຽນແລ້ວ <xliff:g example="123">%1$d</xliff:g> ແອັບ</item>
+    </plurals>
+    <plurals name="cond_perm_summary">
+        <item quantity="other">ສິດການນຳໃຊ້ທີ່ຈຳເປັນສຳລັບການເຮັດວຽກທີ່ຖືກຕ້ອງຂອງ microG Services ບໍ່ໄດ້ຮັບການອະນຸຍາດ.</item>
+    </plurals>
+    <plurals name="cond_perm_action">
+        <item quantity="other">ຮ້ອງຂໍສິດການນຳໃຊ້ທີ່ຂາດຫາຍ</item>
+    </plurals>
+</resources>

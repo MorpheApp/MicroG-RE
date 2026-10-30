@@ -4,8 +4,493 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="dialog_title_remove_account">Հեռացնել հաշիվը</string>
+    <string name="dialog_message_remove_account">"Վստահ եք, որ ցանկանում եք հեռացնել այս հաշիվը?
+
+Որոշ ծառայություններ և գործառույթներ անհասանելի կլինեն
+
+Ձեր տվյալները չեն կորչի"</string>
+    <string name="dialog_confirm_button">Հեռացնել</string>
+    <string name="dialog_cancel_button">Չեղարկել</string>
+    <string name="snackbar_remove_account">Հաշիվ %s-ը հեռացված է</string>
+    <string name="snackbar_undo_button">Չեղարկել գործողությունը</string>
+    <string name="gms_settings_name">MicroG-ի կարգավորումներ</string>
+    <string name="gms_settings_summary">Կարգավորել MicroG ծառայությունները:</string>
+    <string name="just_a_sec">Մի վայրկյան...</string>
+    <string name="ask_permission_tos">Շարունակելով՝ Դուք թույլ եք տալիս այս հավելվածին և Google-ին օգտագործել Ձեր տվյալները՝ համապատասխանաբար իրենց ծառայությունների մատուցման պայմանների և գաղտնիության քաղաքականությունների համաձայն:</string>
+    <string name="ask_scope_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g>-ը ցանկանում է:</string>
+    <string name="ask_service_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g>-ը ցանկանում է օգտագործել:</string>
+    <string name="account_manager_title">Google հաշվի կառավարիչ</string>
+    <string name="sorry">Ցավոք...</string>
+    <string name="auth_before_connect">Միացրեք Google-ի հաշիվը microG-ին։
+
+Եկեք միացնենք Google-ի հաշվին, օգտագործեք <b>Մուտք</b> կոճակը կամ <b>Huawei</b> կոճակը, եթե ունեք այս արտադրատեսակի սարք։ Սեղմելով կոճակներից մեկը՝ դուք կուղղորդվեք ձեր հաշիվ մուտք գործելու էջին։</string>
+    <string name="auth_sign_in">Մուտք</string>
+    <string name="auth_connecting">"Ձեր սարքը կապ է հաստատում Google-ի սերվերների հետ Ձեզ մուտք գործեցնելու համար:
+
+Սա կարող է տևել մի քանի վայրկյան:"</string>
+    <string name="no_network_error_desc">"Դուք չունեք ցանցային կապ:
+
+Սա կարող է լինել ժամանակավոր խնդիր, կամ ձեր Android սարքը հնարավոր է չի կազմակերպված տվյալների ծառայությունների համար: Փորձեք նորից, երբ միացնեք բջջային ցանցին կամ միացեք Wi-Fi ցանցի:"</string>
+    <string name="auth_general_error_desc">"Google-ի սերվերների հետ կապի ժամանակ խնդիր է առաջացել:
+
+Փորձեք ավելի ուշ:"</string>
+    <string name="auth_finalize">"Ձեր սարքը կապվում է Google-ի հետ՝ տեղեկությունները ձեր հաշվին պահպանելու համար:
+
+Սա կարող է տևել մի քանի րոպե:"</string>
+    <string name="allow">Թույլ տալ</string>
+    <string name="deny">Մերժել</string>
+    <string name="auth_notification_title">Պահանջվում է վավերացում</string>
+    <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g>-ին անհրաժեշտ է ձեր թույլտվությունը ձեր Google հաշվին մուտք գործելու համար:</string>
+    <string name="auth_package_override_request_title">Թույլ տրվե՞ն <b><xliff:g example="F-Droid">%1$s</xliff:g></b>-ին արտոնյալ հասանելիություն ունենալ <xliff:g example="account@example.com">%2$s</xliff:g>-ին:</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b>-ը ցանկանում է մուտք գործել ձեր հաշիվ, ինչպես եթե այն լիներ <b><xliff:g example="F-Droid">%2$s</xliff:g>՝ <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>-ի կողմից: Սա կարող է իրեն տրամադրել արտոնյալ հասանելիություն ձեր հաշվին:</string>
+    <string name="auth_action_notification_channel_name">Google հաշվի ծանուցումներ</string>
+    <string name="auth_action_notification_channel_description">Ծանուցում է, երբ ձեր Google հաշիվներից մեկը պահանջում է լրացուցիչ կարգավորում նախքան օգտագործումը, կամ երբ հաշիվը անհամատեղելի է microG-ի հետ:</string>
+    <string name="auth_action_notification_title">Պահանջվում է հաշվի գործողություն</string>
+    <string name="auth_action_notification_content">Ձեր Google հաշիվը պահանջում է լրացուցիչ կարգավորում:</string>
+    <string name="auth_action_reauth_notification_title">Պահանջվում է հաշվի գործողություն</string>
+    <string name="auth_action_activity_header">Ավարտեք ձեր Google հաշվի կարգավորումը</string>
+    <string name="auth_action_activity_explanation">Կատարեք հետևյալ քայլերը, որպեսզի կարողանաք օգտագործել ձեր %s Google հաշիվը այս սարքի վրա:</string>
+    <string name="auth_action_step_enable_checkin">Միացրեք սարքի գրանցումը</string>
+    <string name="auth_action_step_enable_checkin_description">"Ձեր սարքը պետք է գոնե մեկ անգամ գրանցվի Google-ում:
+
+Դուք կարող եք անջատել Google սարքի գրանցումը հաշվի կարգավորումն ավարտելուց հետո:"</string>
+    <string name="auth_action_step_enable_gcm">Միացրեք Cloud Messaging-ը</string>
+    <string name="auth_action_step_enable_gcm_description">Դուք կարող եք անջատել Cloud Messaging-ը հաշվի կարգավորումն ավարտելուց հետո:</string>
+    <string name="auth_action_step_allow_microg_gcm">Թույլ տվեք Cloud Messaging-ը microG-ի համար</string>
+    <string name="auth_action_step_allow_microg_gcm_description">Ձեր նախընտրությունների համաձայն՝ microG-ին անհրաժեշտ է ձեր թույլտվությունը, նախքան այն կկարողանա գրանցվել Cloud Messaging-ի համար:</string>
+    <string name="auth_action_step_enable_lockscreen">Կարգավորեք էկրանի անվտանգ կողպեքը</string>
+    <string name="auth_action_step_enable_lockscreen_description">"Ձեր Google հաշիվը կառավարվում է ձեր աշխատավայրի կամ կրթական հաստատության կողմից: Ձեր ադմինիստրատորը որոշել է, որ սարքերը պետք է ունենան էկրանի անվտանգ կողպեք, նախքան հաշվի տվյալներին հասանելիություն ստանալը:
+
+Խնդրում ենք սահմանել գաղտնաբառ, PIN կամ նկարային կողպեք էկրանի համար:"</string>
+    <string name="auth_action_step_perform_content_description">Սեղմեք քայլը կատարելու համար</string>
+    <string name="auth_action_step_completed_content_description">Քայլն ավարտված է</string>
+    <string name="auth_action_activity_finish">Ավարտել</string>
+    <string name="signin_picker_title">Ընտրեք հաշիվ</string>
+    <string name="signin_picker_subtitle">շարունակել <xliff:g example="F-Droid">%1$s</xliff:g> կայքում</string>
+    <string name="signin_picker_add_account_label">Ավելացնել մեկ այլ հաշիվ</string>
+    <string name="signin_confirm_title">Թույլ տվեք մուտք գործել <xliff:g example="F-Droid">%1$s</xliff:g></string>
+    <string name="signin_confirm_button_text">Թույլ տրել և կիսվել</string>
+    <string name="signin_subtext_sharing">Շարունակելու համար microG-ն կփոխանցի ձեր Google հաշվի անունը, էլ. հասցեն և պրոֆիլի նկարը <xliff:g example="F-Droid">%1$s</xliff:g>-ին:</string>
+    <string name="perm_status_broadcast_label">լսել ներքին կարգավիճակի հեռարձակումները</string>
+    <string name="perm_gsf_read_gservices_label">կարդալ Google ծառայության կոնֆիգուրացիան</string>
+    <string name="perm_c2dm_receive_label">լսել C2DM հաղորդագրությունները</string>
+    <string name="perm_c2dm_send_label">ուղարկել C2DM հաղորդագրություններ այլ հավելվածների</string>
+    <string name="perm_gtalk_svc_label">փոխանակել հաղորդագրություններ և ստանալ սինխրոնացման ծանուցումներ Google-ի սերվերներից</string>
+    <string name="perm_extended_access_label">Ընդլայնված հասանելիություն Google-ի ծառայություններին</string>
+    <string name="perm_provision_label">տրամադրել microG ծառայությունները</string>
+    <string name="perm_provision_description">Թույլ է տալիս հավելվածին կազմակերպել microG ծառայությունները առանց օգտատիրոջ միջամտության</string>
+    <string name="perm_car_speed_label">Մեքենայի արագություն</string>
+    <string name="perm_car_speed_description">"Մուտք գործեք ձեր մեքենայի արագության տվյալներին"</string>
+    <string name="perm_car_info_label">Մեքենայի տեղեկություններ</string>
+    <string name="perm_car_info_description">"Մուտք գործեք ձեր մեքենայի տեղեկություններին"</string>
+    <string name="perm_car_fuel_label">Մեքենայի վառելիքի մակարդակ</string>
+    <string name="perm_car_fuel_description">"Մուտք գործեք ձեր մեքենայի վառելիքի մակարդակի տեղեկություններին"</string>
+    <string name="perm_car_mileage_label">Մեքենայի վազք</string>
+    <string name="perm_car_mileage_description">"Մուտք գործեք ձեր մեքենայի վազքի տեղեկություններին"</string>
+    <string name="perm_car_vendor_extension_label">Մեքենայի արտադրողի ալիք</string>
+    <string name="perm_car_vendor_extension_description">"Մուտք գործեք ձեր մեքենայի արտադրողի ալիք՝ մեքենային հատկանիշների տեղեկատվություն փոխանակելու համար"</string>
+    <string name="service_name_checkin">Սարքի գրանցում</string>
+    <string name="service_name_mcs">Ամպային հաղորդագրություններ</string>
+    <string name="service_name_device_attestation">Սարքի վավերացում</string>
+    <string name="service_name_vending">Play Store-ի ծառայություններ</string>
+    <string name="service_name_work_profile">Աշխատանքային պրոֆիլ</string>
+    <string name="games_title">Google Play Games</string>
+    <string name="games_info_title"><xliff:g example="F-Droid">%1$s</xliff:g>-ը ցանկանում է օգտագործել Play Games-ը</string>
+    <string name="games_info_content">Play Games-ն օգտագործելու համար անհրաժեշտ է տեղադրել Google Play Games հավելվածը: Հավելվածը կարող է շարունակել աշխատել առանց Play Games-ի, սակայն հնարավոր է, որ այն իրեն անսպասելիորեն դրսևորի:</string>
+    <string name="pick_place_title">Ընտրեք վայրը</string>
+    <string name="place_picker_select_title">Ընտրել այս տեղադրությունը</string>
+    <string name="place_picker_nearby_places">Մոտակա վայրերը</string>
+    <string name="network_type_mobile">Բջջային ցանց</string>
+    <string name="network_type_wifi">Wi-Fi</string>
+    <string name="network_type_roaming">Ռոումինգ</string>
+    <string name="network_type_other">Այլ ցանցեր</string>
     <!-- Self check -->
+    <string name="self_check_cat_fake_sig">Ստորագրության կեղծման աջակցություն</string>
+    <string name="self_check_cat_gms_packages">Տեղադրված փաթեթներ</string>
+    <string name="self_check_cat_system">Համակարգ</string>
+    <string name="self_check_name_system_spoofs">Համակարգի ստորագրության կեղծում՝ </string>
+    <string name="self_check_resolution_system_spoofs">Խնդրում ենք ստուգել փաստաթղթերը, թե ինչ քայլեր կարող են լինել անհրաժեշտ:</string>
+    <string name="self_check_pkg_gms">microG ծառայություններ</string>
+    <string name="self_check_pkg_vending">microG Companion / Play Store</string>
+    <string name="self_check_pkg_gsf">microG Services Framework</string>
+    <string name="self_check_name_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> տեղադրված է: </string>
+    <string name="self_check_resolution_app_installed">Տեղադրեք <xliff:g example="F-Droid">%1$s</xliff:g> հավելվածը կամ համատեղելի այլ հավելված: Խնդրում ենք ստուգել փաստաթղթերը, թե որ հավելվածներն են համատեղելի:</string>
+    <string name="self_check_name_correct_sig"><xliff:g example="F-Droid">%1$s</xliff:g>-ն ունի ճիշտ ստորագրություն: </string>
+    <string name="self_check_resolution_correct_sig">Կամ տեղադրված <xliff:g example="F-Droid">%1$s</xliff:g>-ը համատեղելի չէ, կամ ստորագրության կեղծումը ակտիվ չէ դրա համար: Խնդրում ենք ստուգել փաստաթղթերը, թե որ հավելվածներն են և ROM-երը համատեղելի:</string>
+    <string name="self_check_name_battery_optimizations">Մարտկոցի օպտիմիզացիաները անտեսվել են:</string>
+    <string name="self_check_resolution_battery_optimizations">Հպեք այստեղ՝ մարտկոցի օպտիմիզացիանն անջատելու համար: Դրա չանելը կարող է հանգեցնել հավելվածների սխալ աշխատանքի:</string>
     <!-- Settings strings -->
+    <string name="prefcat_about">Մասին</string>
+    <string name="prefcat_details">Մանրամասներ</string>
+    <string name="cond_gcm_bat_title">Մարտկոցի օպտիմիզացիաները միացված են</string>
+    <string name="cond_gcm_bat_summary">Դուք միացրել եք Cloud Messaging-ը, սակայն microG Services-ի համար մարտկոցի օպտիմիզացիաները ակտիվ են: Որպեսզի push ծանուցումները հասնեն, դուք պետք է անտեսեք մարտկոցի օպտիմիզացիաները:</string>
+    <string name="cond_gcm_bat_action">Անտեսել օպտիմիզացիաները</string>
+    <string name="cond_perm_title">Թույլտվությունը բացակայում է</string>
+    <string name="prefs_account">Հաշվի նախընտրությունները</string>
+    <string name="prefs_account_privacy">Անձնական տվյալներ &amp; գաղտնիություն</string>
+    <string name="prefs_account_security">Մուտք &amp; անվտանգություն</string>
+    <string name="pref_auth_trust_google_title">Վստահեք Google-ին հավելվածների թույլտվությունների համար</string>
+    <string name="pref_auth_trust_google_summary">Անջատված լինելու դեպքում օգտատիրոջից հարցվում է նախքան հավելվածի լիազորման հարցումն ուղարկելը Google-ին: Որոշ հավելվածներ չեն կարողանա օգտագործել Google հաշիվը, եթե սա անջատված լինի:</string>
+    <string name="pref_auth_visible_title">Թույլ տվեք հավելվածներին գտնել հաշիվները</string>
+    <string name="pref_auth_visible_summary">Երբ միացված է, այս սարքի բոլոր հավելնությունները կկարողանան տեսնել ձեր Google հաշիվների էլ. հասցեները՝ առանց նախնական թույլտվության:</string>
+    <string name="pref_auth_include_android_id_title">Հավաստիացում սարքի գրանցմամբ</string>
+    <string name="pref_auth_include_android_id_summary">Երբ անջատված է, հավաստիացման հարցումները չեն կապվի սարքի գրանցման հետ, ինչը կարող է թույլ տալ չարտոնված սարքերին մուտք գործել, սակայն կարող է ունենալ անկանխատեսելի հետևանքներ:</string>
+    <string name="pref_auth_strip_device_name_title">Հեռացնել սարքի անվանումը հավաստիացման համար</string>
+    <string name="pref_auth_strip_device_name_summary">Երբ միացված է, հավաստիացման հարցումները չեն ներառի սարքի անվանումը, ինչը կարող է թույլ տալ չարտոնված սարքերին մուտք գործել, սակայն կարող է ունենալ անկանխատեսելի հետևանքներ:</string>
+    <string name="pref_auth_two_step_verification_title">Ստանալ երկփուլային հավաստիացման հարցումներ</string>
+    <string name="pref_auth_two_step_verification_summary">Երբ միացված է, սարքը կարող է ստանալ երկփուլային հավաստիացման հարցումներ Google-ից (պահանջվում է Cloud Messaging):</string>
+    <string name="pref_auth_allow_find_devices_title">Թույլ տալ արձագանքել Google Device Finder-ին</string>
+    <string name="pref_auth_allow_find_devices_summary">Երբ միացված է, սարքը կարող է արձագանքել Google-ի Find My Device ծանուցումներին (պահանջվում է Cloud Messaging):</string>
+    <string name="pref_checkin_enable_summary">Գրանցում է ձեր սարքը Google-ի ծառայություններում և ստեղծում սարքի եզակի նույնացուցիչ: microG-ն գրանցման տվյալներից հեռացնում է նույնացնող բիթերը, բացի ձեր Google հաշվի անվանումից:</string>
+    <string name="pref_device_registration_android_id">Android ID</string>
+    <string name="checkin_not_registered">Չգրանցված է</string>
+    <string name="checkin_last_registration">Վերջին գրանցումը՝ <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="checkin_enable_switch">Գրանցել սարքը</string>
+    <string name="pref_info_status">Կարգավիճակ</string>
+    <string name="pref_accounts_title">Հաշիվներ</string>
+    <string name="pref_game_accounts_title">Google Game հաշիվներ</string>
+    <string name="pref_accounts_summary">Ավելացրեք և կառավարեք Google հաշիվները</string>
+    <string name="prefcat_accounts_settings_title">Կարգավորումներ</string>
+    <string name="prefcat_accounts_login_accounts_title">Մուտք է գործված</string>
+    <string name="prefcat_accounts_options_title">Կարգավորումներ</string>
+    <string name="pref_accounts_manage_accounts_title">Կառավարել հաշիվները</string>
+    <string name="pref_accounts_manage_accounts_summary">Բացել սարքի հաշիվների կառավարիչը</string>
+    <string name="prefcat_accounts_backup_title">Հաշվի պահուստային պատճեն</string>
+    <string name="pref_accounts_backup_title">Պահպանել հաշիվների պատճենը</string>
+    <string name="pref_accounts_backup_summary">Արտահանել Google հաշիվները ֆայլի մեջ</string>
+    <string name="pref_accounts_restore_title">Վերականգնել հաշիվները</string>
+    <string name="pref_accounts_restore_summary">Ներբեռնել Google հաշիվները ֆայլից</string>
+    <string name="pref_accounts_backup_warning_title">Պահպանե՞լ հաշիվների պատճենը։</string>
+    <string name="pref_accounts_backup_warning_message">Սա ձեր հաշիվները և մուտքի տոկենները (SID/LSID) գրում է ֆայլի մեջ: Ցանկացած ոք, ով կտիրապետի այս ֆայլին, կարող է մուտք գործել ձեր հաշիվներ, ուստի պահեք այն ապահով և երբեք մի՛ կիսվեք դրանով:</string>
+    <string name="button_backup_accounts">Պահպանել պատճենը</string>
+    <string name="snackbar_accounts_backed_up">Հաշիվների պատճենը պահպանված է</string>
+    <string name="snackbar_accounts_export_failed">Պահպանումը ձախողվեց</string>
+    <string name="snackbar_accounts_import_failed">Վերականգնումը ձախողվեց</string>
+    <string name="prefcat_youtube_activity">YouTube-ի ակտիվությունը</string>
+    <string name="pref_manage_all_history">Կառավարել ամբողջ պատմությունը</string>
+    <string name="pref_data_in_youtube">Ձեր տվյալները YouTube-ում</string>
+    <string name="pref_accounts_login_accounts_summary">Հաշիվները պահպանվում և պահվում են միայն այս սարքում: Հպեք հաշվին՝ այն ընդմիշտ հեռացնելու համար այս սարքից</string>
+    <string name="pref_privacy_title">Գաղտնիություն</string>
+    <string name="pref_privacy_summary">Գաղտնիության կարգավորումներ հավաստիացման և հավելվածների համար</string>
+    <string name="auth_add_account">Ավելացնել հաշիվ</string>
+    <string name="prefcat_applications">Հավելվածներ</string>
+    <string name="prefcat_authentication">Ավտորիզացիա</string>
+    <string name="pref_add_account_summary">Ավելացնել Google հաշիվ</string>
+    <string name="pref_gcm_enable_mcs_summary">Cloud Messaging-ը push ծանուցումների մատակարար է, որն օգտագործվում է բազմ sayıda երրորդ կողմի հավելվածների կողմից: Այն օգտագործելու համար դուք պետք է միացնեք սարքի գրանցումը:</string>
+    <string name="pref_gcm_confirm_new_apps_title">Հաստատել նոր հավելվածները</string>
+    <string name="pref_gcm_confirm_new_apps_summary">Հարցնել նախքան push ծանուցումներ ստանալու համար նոր հավելված գրանցելը</string>
+    <string name="pref_about_title">MicroG RE-ի մասին</string>
+    <string name="pref_hide_launcher_icon">Թաքցնել սիկոնը գործարկիչում</string>
+    <string name="hide_launcher_icon_dialog_message">Եթե ակտիվացվի, MicroG-ն կթաքցվի ձեր հավելվածների ցանկում: MicroG-ն կարելի է բացել սարքի համակարգային հավելվածների ցանկում գտնվող հավելվածի տեղեկությունների բաժնից:</string>
+    <string name="hide_launcher_icon_updating_title">Խնդրում ենք սպասել, մինչ հավելվածը թարմացվի</string>
+    <string name="pref_language_title">Լեզու</string>
+    <string name="pref_language_system_default">Համակարգի լռելյայն</string>
+    <string name="pref_github_summary">Աղբյուրային կոդի պահոց</string>
+    <string name="pref_update_title">Ստուգել թարմացումները</string>
+    <string name="pref_update_summary">Ստուգեք GitHub-ը ավելի նոր տարբերակի համար:</string>
+    <string name="update_include_prerelease">Ներառել մշակembangan տարբերակները</string>
+    <string name="update_available_title">Թարմացում հասանելի է</string>
+    <string name="update_available_prerelease_title">Թարմացում հասանելի է (նախնական տարբերակ)</string>
+    <string name="update_available_message">Հասանելի է նոր v%1$s տարբերակը: Ձեր մոտ տեղադրված է v%2$s տարբերակը: Ներբեռնե՞լ և տեղադրել թարմացումը:</string>
+    <string name="update_now">Թարմացնել</string>
+    <string name="update_whats_new">Ի՞նչն է նոր</string>
+    <string name="update_ignore">Անտեսել</string>
+    <string name="update_downloading_title">Թարմացումը ներբեռնվում է…</string>
+    <string name="update_download_failed">Ներբեռնումը ձախողվեց: Ստուգեք կապը և փորձեք նորից:</string>
+    <string name="update_signature_mismatch">Հավելվածը հնարավոր չէ թարմացնել, ստորագրությունները տարբեր են:</string>
+    <string name="update_failed_title">Թարմացումը ձախողվեց</string>
+    <string name="update_permission_required_title">Պահանջվում է թույլտվություն</string>
+    <string name="update_permission_required_message">Թարմացումները տեղադրելու համար, խնդրում ենք համակարգային կարգավորումներում MicroG-ին թույլ տալ տեղադրել անհայտ հավելվածներ:</string>
+    <string name="update_open_settings">Կարգավորումներ</string>
+    <string name="update_check_failed">Չհաջողվեց ստուգել թարմացումները: Ստուգեք կապը և փորձեք նորից:</string>
+    <string name="update_up_to_date_title">Ձեր տարբերակը թարմացված է</string>
+    <string name="update_up_to_date_message">MicroG-RE v%s-ը վերջին տարբերակն է:</string>
+    <string name="update_notification_title">Թարմացում հասանելի է</string>
+    <string name="update_notification_text">Հասանելի է նոր v%s տարբերակը, հպեք թարմացնելու համար</string>
+    <string name="update_notification_channel">Թարմացումներ</string>
+    <string name="update_notification_permission_title">Ծանուցումներ</string>
+    <string name="update_notification_permission_message">Որպեսզի տեղյակ լինեք նոր թարմացման հասանելիության մասին, MicroG-RE-ին անհրաժեշտ է ծանուցումներ ուղարկելու թույլտվություն: Խնդրում ենք թույլ տալ ծանուցումները, որպեսզի թարմացումների մասին ծանուցումները հասնեն ձեզ:</string>
+    <string name="update_notification_permission_allow">Թույլ տալ</string>
+    <string name="update_notification_permission_not_now">Հիմա ոչ</string>
+    <string name="update_notification_permission_open_settings">Բացել կարգավորումները</string>
+    <string name="gcm_unregister_app">Չգրանցել</string>
+    <string name="gcm_no_message_yet">Առայժմ հաղորդագրություններ չկան</string>
+    <string name="gcm_last_message_at">Վերջին հաղորդագրությունը՝ <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_registered">Գրանցված է</string>
+    <string name="gcm_registered_since">Գրանցված է՝ <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_unregister_confirm_title">Չգրանցե՞լ <xliff:g example="F-Droid">%1$s</xliff:g>-ը։</string>
+    <string name="gcm_unregister_confirm_message">Որոշ հավելվածներ ավտոմատ կերպով չեն վերագրանցվում և/կամ հնարավորություն չեն տալիս դա անել ձեռքով: Այդ հավելվածները կարող են ճիշտ չաշխատել չգրանցվելուց հետո։\nՇարունակե՞լ:</string>
+    <string name="gcm_unregister_after_deny_message">Դուք մերժել եք արդեն գրանցված հավելվածի push ծանուցումների համար գրանցվելու հարցումը:\nՑանկանո՞ւմ եք հիմա չգրանցել այն, որպեսզի հետագայում չստանա push հաղորդագրություններ:</string>
+    <string name="gcm_messages_counter">Հաղորդագրություններ՝ <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> բայթ)</string>
+    <string name="gcm_network_state_disconnected">Անջատված է</string>
+    <string name="gcm_network_state_connected">Միացված է <xliff:g example="2 hours ago">%1$s</xliff:g>-ից</string>
+    <string name="gcm_enable_switch">Ստանալ push ծանուցումներ</string>
+    <string name="gcm_allow_app_popup">Թույլ տվե՞լ <xliff:g example="F-Droid">%1$s</xliff:g>-ին գրանցվել push ծանուցումների համար:</string>
+    <string name="pref_push_app_allow_register_title">Թույլատրել գրանցումը</string>
+    <string name="pref_push_app_allow_register_summary">Թույլ տվեք հավելվածին գրանցվել push ծանուցումների համար:</string>
+    <string name="pref_push_app_wake_for_delivery_title">Միացնել հավելվածը push հաղորդագրության ժամանակ</string>
+    <string name="pref_push_app_wake_for_delivery_summary">Գործարկել հավելվածը հետին պլանում՝ մուտքային push հաղորդագրությունները ստանալու համար:</string>
+    <string name="prefcat_push_apps_title">Հավելվածներ, որոնք օգտագործում են push ծանուցումներ</string>
+    <string name="prefcat_push_apps_registered_title">Գրանցված հավելվածներ</string>
+    <string name="prefcat_push_apps_unregistered_title">Չգրանցված հավելվածներ</string>
+    <string name="prefcat_gcm_registers">Գրանցումներ</string>
+    <string name="prefcat_advanced">Ընդլայնված</string>
+    <string name="pref_gcm_remove_registers">Հեռացնել բոլոր գրանցված հավելվածները</string>
+    <string name="pref_gcm_remove_registers_summary">Օգտագործեք այս տարբերակը միայն եթե խնդիրներ ունեք հավելվածի գրանցման կամ ծանուցումներ ստանալու հետ կապված</string>
+    <string name="gcm_remove_registers_dialog_title">Հեռացնել բոլոր գրանցումները:</string>
+    <string name="gcm_remove_registers_dialog_message">"Սա կհեռացնի բոլոր գրանցված հավելվածները push ծանուցումների ստացման ցուցակից միանգամից
+
+Հավելվածները գրանցելու համար Ձեզនឹង պահանջվել է նոր securityToken և AndroidID: Ստուգեք սարքի գրանցման կարգավիճակը
+
+Որոշ հավելվածներ գուցե չկարողանան կրկին գրանցվել այս գործողությունից հետո: Հնարավոր է՝ անհրաժեշտ լինի մաքրել այդ հավելվածների տվյալները, նախքան դրանք կրկին գրանցման հարցում կուղարկեն"</string>
+    <string name="gcm_remove_registers_toast_message">Բոլոր հավելվածները հեռացվեցին push ծանուցումներից</string>
+    <string name="prefcat_push_networks_title">Push ծանուցումների համար օգտագործվող ցանցերը</string>
+    <string name="safetynet_intro">Google SafetyNet-ը սարքերի սերտիֆիկացման համակարգ է, որն ապահովում է, որ սարքը պատշաճ կերպով պաշտպանված է և համատեղելի Android CTS-ի հետ: Որոշ հավելվածներ օգտագործում են SafetyNet-ը անվտանգության նկատառումներով կամ որպես նախապայման միջամտություններից պաշտպանության համար։\n\nmicroG GmsCore-ը պարունակում է SafetyNet-ի անվճար իրականացում, սակայն պաշտոնական սերվերը պահանջում է, որ SafetyNet հարցումները ստորագրվեն սեփականատիրական DroidGuard համակարգի միջոցով:</string>
+    <string name="safetynet_enable_switch">Թույլատրել սարքի վավերացումը</string>
+    <string name="pref_safetynet_test_title">Ստուգել SafetyNet-ի վավերացումը</string>
+    <string name="pref_recaptcha_test_title">Ստուգել ReCAPTCHA-ն</string>
+    <string name="pref_recaptcha_enterprise_test_title">Ստուգել ReCAPTCHA Enterprise-ը</string>
+    <string name="pref_test_summary_passed">Բոլոր թեստերը անցան</string>
+    <string name="pref_test_summary_failed">Ձախողվեց. %s</string>
+    <string name="pref_test_summary_warn">Զգուշացում. %s</string>
+    <string name="pref_test_summary_running">Կատարվում է…</string>
+    <string name="pref_droidguard_unsupported_summary">DroidGuard-ի գործարկումն այս սարքի վրա աջակցվող չէ: SafetyNet ծառայությունները կարող են սխալ աշխատել:</string>
+    <string name="prefcat_safetynet_apps_title">SafetyNet օգտագործող հավելվածները</string>
+    <string name="prefcat_device_attestation_apps_title">Սարքի վավերացում օգտագործող հավելվածները</string>
+    <string name="pref_device_attestation_app_allow_requests_title">Թույլատրել հարցումները</string>
+    <string name="pref_device_attestation_app_allow_requests_summary">Թույլատրել հավելվածին հարցում ուղարկել սարքի վավերացման համար</string>
+    <string name="menu_clear_recent_requests">Մաքրել վերջին հարցումները</string>
+    <string name="safetynet_last_run_at">Վերջին օգտագործումը՝ <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="profile_name_native">Բնիկ</string>
+    <string name="profile_name_real">Իրական</string>
+    <string name="profile_name_user">Պատ춤ային: %s</string>
+    <string name="profile_name_auto">Ավտոմատ: %s</string>
+    <string name="profile_name_system">Համակարգային: %s</string>
+    <string name="pref_device_registration_import_custom_profile_title">Ներմուծել հատուկ պրոֆիլ</string>
+    <string name="pref_device_registration_serial_title">Սերիական համար</string>
+    <string name="pref_device_registration_import_custom_profile_summary">Ներմուծել սարքի պրոֆիլը ֆայլից</string>
+    <string name="pref_device_registration_select_profile_title">Ընտրել պրոֆիլը</string>
+    <string name="pref_device_registration_device_profile_category">Սարքի պրոֆիլ</string>
+    <string name="pref_safetynet_recent_uses">Վերջին օգտագործումները</string>
+    <string name="pref_safetynet_recent_attestation_summary">Վավերացում՝ %s</string>
+    <string name="pref_safetynet_recent_recaptcha_summary">ReCaptcha՝ %s</string>
+    <string name="pref_safetynet_recent_recaptcha_enterprise_summary">ReCaptcha Enterprise. %s</string>
+    <string name="pref_safetynet_recent_copy_json">Պատճենել JSON JWS տվյալները</string>
+    <string name="pref_safetynet_recent_advice">Խորհուրդ</string>
+    <string name="pref_safetynet_recent_eval_type">Գնահատման տիպը</string>
+    <string name="pref_safetynet_recent_response_status">Պատասխանի կարգավիճակը</string>
+    <string name="pref_safetynet_recent_cat_response">Պատասխանի տվյալները</string>
+    <string name="pref_safetynet_recent_cat_request">Հարցման տվյալները</string>
+    <string name="pref_safetynet_recent_nonce">Nonce (Hex)</string>
+    <string name="pref_safetynet_recent_request_time">Հարցման ժամանակը</string>
+    <string name="pref_safetynet_recent_request_type">Հարցման տիպը</string>
+    <string name="pref_safetynet_recent_cat_basic">Հիմնական տվյալներ</string>
+    <string name="pref_safetynet_recent_token">Թոքեն</string>
+    <string name="pref_safetynet_recent_copied">Պատճենված է հիշողությամբ:</string>
+    <string name="pref_safetynet_test_integrity_cts_passed">Integrity-ն և CTS-ը անցել են</string>
+    <string name="pref_safetynet_test_cts_failed">CTS-ը ձախացել է</string>
+    <string name="pref_safetynet_test_integrity_failed">Integrity-ն ձախողվել է</string>
+    <string name="pref_safetynet_test_not_completed">Դեռ չի ավարտվել</string>
+    <string name="pref_safetynet_test_no_result">Արդյունք չկա</string>
+    <string name="pref_safetynet_test_invalid_json">Անվալիդ JSON</string>
+    <string name="push_notifications_summary_off">Անջատված</string>
+    <string name="push_notifications_summary_automatic">Միացված / Ավտոմատ. %s</string>
+    <string name="push_notifications_summary_manual">Միացված / Ձեռքով. %s</string>
+    <string name="push_notifications_summary_values_seconds">%s վայրկյան</string>
+    <string name="push_notifications_summary_values_minutes">%s րոպե</string>
+    <string name="pref_vending_licensing_category">Google Play-ի լիցենզավորում</string>
+    <string name="pref_vending_licensing_enable_switch">Պատասխանել լիցենզիայի ստուգման հարցումներին</string>
+    <string name="pref_vending_license_enable_summary">Որոշ հավելվածներ պահանջում են հաստատում, որ դուք դրանք գնել եք Google Play-ից: Երբ հավելվածը հարցնում է, microG-ն կարող է ներբեռնել գնման ապացույցը Google-ից: Եթե անջատված է կամ Google հաշիվ չի ավելացվել, լիցենզիայի հաստատման հարցումները անտեսվում են:</string>
+    <string name="pref_vending_licensing_purchase_free_apps_switch">Ավտոմատ կերպով ավելացնել անվճար հավելվածները գրադարան</string>
+    <string name="pref_vending_licensing_purchase_free_apps_summary">Անվճար հավելվածները կարող են ստուգել՝ արդյոք դրանք ներբեռնվել են Google Play-ից: Ավտոմատ կերպով ավելացրեք անվճար հավելվածները ձեր հաշվի գրադարան, որպեսզի միշտ անցնեք ստուգումը ձեզ համար ներկայումս հասանելի բոլոր անվճար հավելվածների համար:</string>
+    <string name="pref_vending_feature_delivery">Google Play Feature Delivery</string>
+    <string name="pref_vending_split_install_switch">Բաղադրիչների տեղադրում ըստ պահանջի</string>
+    <string name="pref_vending_licensing_split_install_summary">Թույլ տալ հավելվածներին ներբեռնել և տեղադրել լրացուցիչ բաղադրիչներ</string>
+    <string name="feedback_disabled">Հետադարձ կապը ներկայումս հնարավոր չէ</string>
+    <string name="backup_disabled">Պահուստային պատճենումը ներկայումս հնարավոր չէ</string>
+    <string name="pref_vending_billing_category">Google Play Billing</string>
+    <string name="pref_vending_billing_enable_switch">Կառավարել վճարման հարցումները</string>
+    <string name="pref_vending_billing_enable_summary">Միացնելուց հետո որոշ հավելվածները կկարողանան կատարել գնումներ կամ ստեղծել բաժանորդագրություններ Google-ի Play Billing ծառայության միջոցով:</string>
+    <string name="pref_vending_billing_note_experimental">Այս ֆունկցիան փորձարարական է և կարող է հանգեցնել գումարի կորստի: Դուք զգուշացված եք:</string>
+    <string name="pref_vending_billing_note_licensing">Որոշ հավելվածներ կարող են պահանջել նաև միացնել լիցենզիայի ստուգումը՝ ձեր գնումները հաստատելու համար:</string>
+    <string name="pref_vending_asset_delivery_category">Google Play Asset Delivery</string>
+    <string name="pref_vending_asset_delivery_switch">Միացնել ռեսուրսների պահանջարկով տրամադրումը</string>
+    <string name="pref_vending_asset_delivery_summary">Ներբեռնել լրացուցիչ ռեսուրսներ, երբ դրա մասին հարցում են ուղարկում Play Asset Delivery-ն օգտագործող հավելվածները</string>
+    <string name="pref_vending_asset_device_sync_summary">Play Asset Delivery օգտագործող հավելվածները կներբեռնեն լրացուցիչ ռեսուրսներ՝ հիմնվելով տվյալ պահին օգտագործվող սարքի տվյալների վրա:</string>
+    <string name="pref_vending_asset_device_sync_switch">Միացնել սարքի տվյալների սինխրոնացումը</string>
+    <string name="pref_workprofile_create_account">Թույլատրել աշխատանքային հաշվի կարգավորումը</string>
+    <string name="pref_workprofile_intro">Ձեր աշխատավայրի կամ կրթական հաստատության համար աշխատանքային պրոֆիլի կարգավորման ժամանակ,
+        կարգավորումները կարող են փորձել միանալ Google-ին՝ այդ պրոֆիլում հավելվածների ներբեռնումը հնարավոր դարձնելու համար:</string>
+    <string name="pref_workprofile_disclaimer">Ձեր պատասխանատվությունն է ապահովել, որ microG-ի ձեր օգտագործումը համապատասխանի կորպորատիվ քաղաքականություններին:
+        microG-ն տրամադրվում է առավելագույն ջանքերի սկզբունքով և չի կարող երաշխավորել, որ այն կգործի ճիշտ այնպես, ինչպես ակնկալվում է:</string>
+    <string name="pref_auto_create_player">Թույլ տվեք Play Games հաշվի գրանցումը</string>
+    <string name="pref_auto_create_player_intro">Խաղալիս անհրաժեշտ է օգտագործել Play Games հաշիվ՝ մուտք գործելու և խաղին վերաբերող գործառույթները գրանցելու համար, ինչպիսիք են ձեռքբերումները, առաջատարների ցուցակները, արխիվները և այլն: Անջատելուց հետո այն Google հաշիվները, որոնք կապված չեն Play Games հաշվի հետ, ավտոմատ կերպով չեն գրանցվի, և խաղը չի կարողանա մուտք գործել ու խաղալ:</string>
+    <string name="pref_allow_upload_game_played">Թույլ տվեք խաղացած խաղերի վերբեռնումը</string>
+    <string name="pref_allow_upload_game_played_summary">Անջատված լինելու դեպքում խաղը չի հայտնի խաղացած խաղի կարգավիճակի մասին խաղ մուտք գործելուց հետո, և որոշ խաղեր կարող են չկարողանալ մուտք գործել:</string>
+    <string name="pref_change_default_game_player">Փոխել խաղերի հաշիվը</string>
+    <string name="pref_change_default_game_player_summary">Փոխեք խաղերի լռելյայն հաշիվը &amp; փոխեք հաշիվը ըստ խաղի:</string>
+    <string name="pref_delete_game_account_data">Ջնջել Play Games-ի տվյալները</string>
+    <string name="pref_delete_game_account_data_summary">Ջնջել Play Games-ի հաշիվը և բոլոր տվյալները &amp; ջնջել առանձին խաղի տվյալները:</string>
+    <string name="credentials_assisted_cancel">Չեղարկել</string>
+    <string name="credentials_assisted_continue">Շարունակել</string>
+    <string name="credentials_assisted_confirmation_header">Մուտք եք գործում</string>
+    <string name="credentials_assisted_continue_as_user_button_label">Շարունակել որպես %1$s</string>
+    <string name="credentials_assisted_sign_back_title">Նորից մուտք գործեք %1$s համակարգ և Google-ը</string>
+    <string name="credentials_assisted_signin_consent_header">Մուտք եք գործում որպես %1$s</string>
+    <string name="credentials_assisted_signin_consent">Շարունակելով՝ Google-ը կտրամադրի ձեր անունը, էլ. հասցեն և պրոֆիլի նկարը %1$s-ին: Ծանոթացեք %1$s-ի Գաղտնիության քաղաքականությանը և Ծառայության պայմաններին:</string>
+    <string name="credentials_assisted_signin_description">Դուք կարող եք կառավարել \"Մուտք գործել Google-ի միջոցով\" ֆունկցիան ձեր Google հաշիվներում:</string>
+    <string name="credentials_assisted_choose_account_label">Ընտրեք հաշիվը</string>
+    <string name="credentials_assisted_choose_account_subtitle">շարունակելու համար դեպի %1$s</string>
+    <string name="credentials_assisted_choose_account_error_tips">Հաշվի անոմալիա</string>
+    <string name="credentials_assisted_signin_button_text_long">Մուտք գործեք Google-ի միջոցով</string>
+    <string name="credentials_assisted_signin_add_account">Ավելացնել հաշիվ</string>
+    <string name="credentials_service_sign_in_with_google_label">Մուտք գործեք Google-ի միջոցով</string>
+    <string name="credentials_service_remote_custom_subtitle">Անվտանգության բանալի, սմարթֆոն կամ պլանշետ</string>
+    <string name="limited_services_dialog_information">Դուք օգտվում եք microG-ի սահմանափակ ծառայություններից: Ի տարբերություն սովորական microG ծառայությունների, այս տարբերակը աշխատում է միայն microG գրադարաններն օգտագործող հավելվածների հետ, այլ ոչ թե Google Play-ի հավելվածների: Սա նշանակում է, որ հավելվածների մեծ մասը կանտեսի այս ծառայությունները:</string>
+    <string name="limited_services_dialog_information_ack">Հասկացա</string>
+    <string name="games_achievement_list_title">Ձեռքբերումներ</string>
+    <string name="games_achievements_empty_text">Այս խաղի համար ձեռքբերումներ չկան</string>
+    <string name="games_api_access_denied">Այս սարքի ոչ մի հաշիվ չի կարող մուտք գործել Games API-ներ</string>
+    <string name="games_achievement_locked_content_description">փակ է</string>
+    <string name="games_achievement_unlocked_content_description">բացված է</string>
+    <string name="games_achievement_extra_text">%1$s XP</string>
+    <string name="games_leaderboard_empty_text">Այս խաղի համար առաջատարների աղյուսակներ չկան</string>
+    <string name="games_leaderboard_list_title">Վարկանիշներ</string>
+    <string name="games_leaderboards_score_label">Միավորներ՝ %1$s</string>
+    <string name="games_snapshot_empty_text">Խաղի պահպանումներ դեռևս չկան</string>
+    <string name="games_snapshot_choose_btn_text">ընտրել</string>
+    <string name="games_snapshot_delete_btn_text">ջնջել</string>
+    <string name="games_delete_snapshot_dialog_title">Ջնջել պահպանված խաղը</string>
+    <string name="games_delete_snapshot_dialog_message">Վստա՞հ եք, որ ցանկանում եք ջնջել այս պահպանված խաղը:</string>
+    <string name="games_delete_snapshot_dialog_cancel">Չեղարկել</string>
+    <string name="games_delete_snapshot_dialog_ok">Լավ</string>
+    <string name="games_delete_snapshot_error">Ջնջումը ձախողվեց, խնդրում ենք փորձել ավելի ուշ</string>
+    <string name="games_state_description_signed_out">Ելք է կատարվել</string>
+    <string name="games_state_description_delete">Ջնջել</string>
+    <string name="games_change_button_text">Փոխել</string>
+    <string name="games_change_default_account_section_title">Փոխեք խաղերի համար սահմանված լռելյայն հաշիվը</string>
+    <string name="games_change_default_account_description">Լռելյայն հաշիվ՝ %1$s</string>
+    <string name="games_change_default_account_explanation">Այս հաշիվն օգտագործվում է խաղերի մեջ ավտոմատ մուտք գործելու, խաղի առաջընթացը և կարգավորումները պահպանելու համար: Լռելյայն հաշվի փոփոխությունը կամ դուրս գալը կարող է վերակնեռել ձեր առաջընթացը և կարգավորումները այն խաղերի համար, որոնք դուք խաղացել եք:</string>
+    <string name="games_change_per_game_title">Փոխել հաշիվը ըստ խաղի</string>
+    <string name="games_change_per_game_description">Ընտրված խաղի համար հաշվի փոփոխությունը կամ դրանից դուրս գալը կարող է վերակնտուրել խաղի ձեր առաջընթացը և կարգավորումները:</string>
+    <string name="games_change_default_account_for_all_games_dialog_title">Ընտրեք տարբերակ նոր լռելյայն հաշվի համար</string>
+    <string name="games_change_default_account_for_all_games_dialog_description">Ընթացիկ լռելյայն հաշիվը՝ %1$s</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_title">Փոխել լռելյայն հաշիվը միայն նոր խաղերի համար </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_description">Դուք չեք կորցնի հասանելիությունը ձեր խաղած խաղերի առաջընթացին և կարգավորումներին: Սակայն ձեր առաջընթացը կբաժանվի հաշիվների միջև:</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_title"> Փոխել լռելյայն հաշիվը բոլոր խաղերի համար </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_description">Դուք կարող եք կորցնել հասանելիությունը ձեր խաղած խաղերի առաջընթացին և կարգավորումներին: Մենք կվերագործարկենք խաղը՝ փոփոխությունները կիրառելու համար:</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_title"> Ելքել բոլոր խաղերից </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_description">Դուք կարող եք կորցնել հասանելիությունը ձեր խաղացած խաղերի առաջընթացին և կարգավորումներին: Մենք կվերագործարկենք խաղը՝ փոփոխությունները կիրառելու համար:</string>
+    <string name="games_change_per_game_dialog_title">Ընտրեք տարբերակ այս խաղի համար</string>
+    <string name="games_change_per_game_dialog_description">Հաշվի փոփոխությունը կամ դուրս գալը կարող է վերակնեռել խաղի առաջընթացը և կարգավորումները</string>
+    <string name="games_change_per_game_dialog_option_use_player">Օգտագործել %1$s-ը</string>
+    <string name="games_change_per_game_dialog_option_use_player_snackbar_success_message">Դուք կմուտք գործեք այս խաղ և %1$s հաշվով</string>
+    <string name="games_change_per_game_dialog_option_sign_out">Ելք</string>
+    <string name="games_change_per_game_dialog_option_sign_out_snackbar_success_message">Դուք այլևս չեք մուտք գործած այս խաղում</string>
+    <string name="games_change_sign_out_of_all_games_snackbar_success_message">Դուք այլևս չեք մուտք գործած բոլոր խաղերում</string>
+    <string name="games_change_default_account_for_all_games_snackbar_success_message">Դուք կմուտք գործեք բոլոր խաղեր %1$s հաշվով</string>
+    <string name="games_change_default_account_for_new_games_snackbar_success_message">Դուք կմուտք գործեք նոր խաղեր %1$s հաշվով</string>
+    <string name="games_account_display_content">Ընթացիկ հաշիվը՝ %1$s</string>
+    <string name="games_delete_profile_header">Ջնջել Play Games հաշիվը &amp; ամբողջ տվյալները</string>
+    <string name="games_delete_profile_explanation">Միշտ համարով ջնջեք ձեր Google Play Games հաշիվը, XP-ն և պրոֆիլի բոլոր տվյալները: Այս գործողությունը կարող է նաև ջնջել ձեր միավորները, առաջընթացը (պահպանված խաղերը) և կարգավորումները ձեր խաղած խաղերում:</string>
+    <string name="games_delete_profile_button">Ջնջել միշտ համարով</string>
+    <string name="games_delete_game_data_header">Ջնջել առանձին խաղի տվյալները</string>
+    <string name="games_delete_game_data_explanation">Դուք կարող եք միշտ համարով ջնջել Google Play Games-ի միջոցով խաղած ձեր խաղերի առանձին տվյալները: Այս գործողությունը ջնջում է ձեր միավորները, առաջընթացը (պահպանված խաղերը) և կարգավորումները ընտրված խաղի համար:</string>
+    <string name="games_delete_profile_dialog_title">Վստա՞հ եք, որ ցանկանում եք ջնջել այս հաշիվը:</string>
+    <string name="games_delete_profile_explanation_with_gamer_name">Միշտ հեռացրեք Google Play Games հաշիվը &lt;b&gt;%1$s&lt;/b&gt; (&lt;b&gt;%2$s&lt;/b&gt;) խաղացողի անվան, XP-ի և պրոֆիլի բոլոր տվյալների համար: Այս գործողությունը կարող է նաև հեռացնել ձեր միավորները, առաջընթացը (պահպանված խաղերը) և կարգավորումները ձեր խաղած խաղերում:</string>
+    <string name="games_delete_profile_dialog_message">Այս գործողությունը հնարավոր չէ չեղարկել:</string>
+    <string name="games_delete_profile_fail">Չհաջողվեց հեռացնել ձեր պրոֆիլը: Փորձեք ավելի ուշ:</string>
+    <string name="games_delete_game_data_confirm_dialog_title">Հեռացնել տվյալները %1$s-ի համար</string>
+    <string name="games_delete_game_data_confirm_dialog_message">%1$s-ի տվյալների մշտական հեռացումը կջնջի ձեր միավորները, առաջընթացը (պահպանված խաղերը) և խաղի կարգավորումները Google Play Games-ում:</string>
+    <string name="games_popup_signin_welcome">Ողջույն, %1$s</string>
+    <string name="family_management_title">Ընտանիք</string>
+    <string name="family_management_retry">Կրկնել</string>
+    <string name="family_management_load_error">Բովանդակության բեռնումը ձախողվեց</string>
+    <string name="family_management_toolbar_back">Հետ</string>
+    <string name="family_management_toolbar_more">Ավելին</string>
+    <string name="family_management_exit_family_group">Լքել ընտանಿಕական խումբը</string>
+    <string name="family_management_delete_family_group">Ջնջել ընտանիկական խումբը</string>
+    <string name="family_management_leave_family_password_title">Հաստատեք գաղտնաբառը՝ ընտանիկական խումբը լքելու համար</string>
+    <string name="family_management_delete_family_password_title">Հաստատեք գաղտնաբառը՝ ընտանիկական խումբը ջնջելու համար</string>
+    <string name="family_management_remove_member_password_title">Հաստատեք գաղտնաբառը՝ \"%s\"-ին հեռացնելու համար</string>
+    <string name="family_management_invite_family_member">Հրավիրել ընտանիքի անդամներին</string>
+    <string name="family_management_invite_slots_left">%1$d հրավեր է մնացել</string>
+    <string name="family_management_cancel_invite">Չեղարկել հրավերը</string>
+    <string name="family_management_cancel_invite_success">Հրավերը հաջողությամբ չեղարկվեց</string>
+    <string name="family_management_cancel_invite_error">Խնդիր է առաջացել հրավերը չեղարկելիս: Փորձեք նորից:</string>
+    <string name="family_management_remove_member">Հեռացնել անդամին</string>
+    <string name="family_management_member_removed_success">%s-ն հեռացվեց ձեր ընտանեկան խմբից</string>
+    <string name="family_management_member_remove_failed">%s-ն հեռացնելիս խնդիր է առաջացել: Փորձեք նորից:</string>
+    <string name="family_management_leave_family_error_message">Ընտանեկան խմբից դուրս գալիս խնդիր է առաջացել: Փորձեք նորից:</string>
+    <string name="family_management_exist_group_success">Դուք դուրս եք եկել ձեր ընտանեկան խմբից…</string>
+    <string name="family_management_delete_group_success">Ընտանեկան խումբը ջնջված է</string>
+    <string name="family_management_delete_group_failure">Տան խումբը ջնջելը ձախողվեց</string>
+    <string name="family_management_delete_group_cancel">Չեղարկել</string>
+    <string name="family_management_delete_group_confirm">Լավ</string>
+    <string name="family_management_input_pwd">Խնդրում ենք մուտքագրել ձեր գաղտնաբառը</string>
+    <string name="family_management_invite_sent_date_format">Հրավերը ուղարկվել է %s-ին</string>
+    <string name="family_management_invite_send">Հրավերը ուղարկված է</string>
+    <string name="family_management_pwd_error">Սխալ գաղտնաբառ, խնդրում ենք մուտքագրել նորից</string>
+    <string name="barcode_scanner_brand">Սկանավորված է microG-ի կողմից %1$s-ի անունից</string>
+    <string name="camera_permission_dialog_button">Լավ</string>
+    <string name="camera_permission_dialog_message">microG ծառայություններին անհրաժեշտ է հասանելիություն ձեր սարքի տեսախցիկին՝ %1$s-ի համար կոդը սկանավորելու նպատակով։\n\nՄիացնելու համար, խնդրում ենք տրամադրել տեսախցիկի թույլտվությունը microG ծառայություններին Կարգավորումներում։</string>
+    <string name="camera_permission_dialog_title">Տեսախցիկի թույլտվությունը պարտադիր է</string>
+    <string name="pref_app_install_settings_title">Հավելվածների տեղադրման կարգավորումներ</string>
+    <string name="pref_app_install_switch_title">Թույլ տալ հավելվածների տեղադրումը</string>
+    <string name="pref_app_install_other_apps_note">Լիազորումը թույլ է տալիս տեղադրել այլ աղբյուրներից տրամադրված հավելվածներ։</string>
+    <string name="pref_app_install_permission_instruction">Համոզվելու համար, որ ձեր տեղադրված հավելվածները ճիշտ են աշխատում, խնդրում ենք լիազորել microG Companion-ին տեղադրել այլ աղբյուրներից ներբեռնված հավելվածները։</string>
+    <string name="prefcat_app_install_list_title">Հավելվածներ, որոնք օգտագործում են Հավելվածի տեղադրիչը</string>
+    <string name="service_name_google_location_sharing">Google-ի տեղադրության փոխանակում</string>
+    <string name="location_sharing_description">Կառավարեք ձեր տեղադրության իրական ժամանակում փոխանակումը Google-ի հավելվածների և ծառայությունների միջև այս սարքից</string>
+    <string name="location_sharing_learn_more">Իմացեք ավելին &quot;Տեղադրության փոխանակման&quot; մասին</string>
+    <string name="location_sharing_switch_text">Օգտագործել տեղադրության փոխանակումը</string>
+    <string name="location_sharing_turn_off_notify_hint">Եթե այս սարքի համար անջատեք Տեղադրության փոխանակումը, այն մարդիկ, ում հետ փոխանակում եք, չեն ծանուցվի:</string>
+    <string name="location_sharing_off_previous_hint">Միայն ձեր վերջին փոխանակված տեղադրությունը կլինի հասանելի, մինչև դուք այն նորից միացնեք:</string>
+    <string name="location_sharing_disabled">Այս հաշվի համար ակտիվ տեղադրության փոխանակումներ չկան</string>
+    <string name="location_sharing_turn_on_hint">Երբ սկսեք փոխանակել ձեր տեղադրությունը Google-ի հավելվածից կամ ծառայությունից, կարող եք կառավարել Տեղադրության փոխանակումը այստեղ។\n\nՏեղադրության փոխանակումը սկսելու համար անցեք Google Maps կամ Family Link:</string>
+    <string name="location_sharing_turn_off_title">Անջատել տեղադրության փոխանակումը</string>
+    <string name="location_sharing_turn_off_hint">Դուք դեռ կարող եք կիսվել ձեր տեղադրությամբ նույն Google հաշվով մուտք գործած այլ սարքերից կամ ոչ Google հավելվածներից: Համոզվեք ստուգել տեղադրության կիսման կարգավորումները բոլոր համապատասխան տեղերում:\n\nԱյն մարդիկ, ում հետ կիսվում եք, կշարունակեն տեսնել ձեր վերջին կիսված տեղադրությունը:</string>
+    <string name="location_sharing_turn_off_cancel">Թողնել</string>
+    <string name="location_sharing_turn_off_confirm">Անջատել</string>
+    <string name="location_sharing_confirm_dialog_title">Միացնել տեղադրության կիսումը</string>
+    <string name="location_sharing_confirm_dialog_text">Այն մարդիկ, ում հետ կիսվում եք ձեր տեղադրությամբ, միշտ կարող են տեսնել
+·Ձեր անունը և լուսանկարը
+·Ձեր սարքի վերջին տեղադրությունը, նույնիսկ երբ դուք չեք օգտվում Google-ի ծառայությունից
+·Ձեր սարքի մարտկոցի մակարդակը և արդյոք այն լիցքավորվում է
+·Ձեր ժամանման և մեկնման ժամանակը, եթե նրանք ավելացնեն Տեղադրության կիսման ծանուցում</string>
     <!-- Passkey management -->
+    <string name="pref_passkey_manager_title">Կառավարել անցնաբանալիքները</string>
+    <string name="pref_passkey_manager_empty_title">Պահպանված անցնաբանալիքներ չկան</string>
+    <string name="pref_passkey_manager_description">Երբ երրորդ կողմի հավելվածները գրանցում են անցնաբանալիքներ, microG-ն պահպանում է տեղական գրառում: Եթե հավելվածը ջնջում է անցնաբանալիքը՝ առանց տեղեկացնելու microG-ին, գրառումը կարող է մնալ որպես մնացորդ: Դուք կարող եք հեռացնել նման մնացորդային գրառումները այստեղ:</string>
+    <string name="pref_passkey_manager_delete_dialog_title">Ջնջել անցնաբանային բանալին</string>
+    <string name="pref_passkey_manager_delete_dialog_message">Ջնջել անցնաբանային բանալինը «%2$s»-ի համար «%1$s»-ում: Սա հնարավոր չէ չեղարկել. նորից մուտք գործելու համար Ձեզនឹង պետք լինի գրանցել նոր անցնաբանային բանալի:</string>
+    <string name="pref_passkey_manager_delete_dialog_confirm">Ջնջել</string>
+    <string name="pref_passkey_manager_unknown_user">Անհայտ օգտատեր</string>
+    <string name="pref_passkey_manager_transport_screen_lock">Էկրանի կողպում</string>
+    <string name="pref_passkey_manager_transport_usb">USB</string>
+    <string name="pref_passkey_manager_transport_nfc">NFC</string>
+    <string name="pref_passkey_manager_transport_bluetooth">Bluetooth</string>
+    <string name="pref_passkey_manager_transport_hybrid">Հիբրիդ</string>
+    <string name="pref_passkey_manager_credential_id_format_internal">ID՝ %1$s</string>
+    <string name="self_check_cat_patched_apps">Փոփոխված հավելվածներ</string>
+    <string name="self_check_source_morphe">Morphe փոփոխություններ</string>
+    <string name="self_check_source_alternative">այլընտրանքային փոփոխություններ</string>
+    <string name="self_check_resolution_patched_app_installed">%1$s օգտագործող հավելվածները չեն գտնվել: Խնդրում ենք փոփոխել և տեղադրել մոդիֆիկացված հավելվածը</string>
+    <string name="self_check_name_notifications">Ծանուցումները թույլատրված են</string>
+    <string name="self_check_resolution_notifications">Հպեք այստեղ՝ ծանուցումների կարգավորումները բացելու համար: Ծանուցումները օգտագործվում են GcmService-ը ֆոնային ռեժիմում պահպանելու համար, երբ միացված է մարտկոցի օպտիմալացումը կամ այլ պայմաններում</string>
+    <string name="self_check_name_oem_restriction">Ֆոնային գործընթացների սահմանափակումներ</string>
+    <string name="self_check_resolution_oem_restriction">Ձեր համակարգը կարող է սահմանափակել ֆոնային գործընթացները: Հպեք այստեղ՝ Don\'t Kill My App! կայքը բացելու և իմանալու, թե ինչպես անջատել այդ սահմանափակումները</string>
+    <string name="morphe_sign_in_with_google_microg_label">Մուտք գործեք Google հաշվով MicroG RE-ի միջոցով</string>
+    <string name="self_check_patched_app_installed">Աշխատում է %1$s-ով</string>
+    <string name="self_check_action_download_morphe">Ներբեռնել Morphe</string>
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Տեղադրված է սխալ ճարտարապետական տարբերակ</string>
+    <string name="abi_mismatch_message">"Այս MicroG-RE կառուցումը պարունակում է միայն 64-բիթանոց (arm64) գրադարաններ, սակայն այս սարքը աշխատում է 32-բիթանոց userspace-ի վրա:
+
+Ֆունկցիաները, որոնք պահանջում են Conscrypt (հաշվի մուտք, սթրիմինգ, BotGuard, տեսանյութերի հոսքերի spoof-ում, SponsorBlock, Return YouTube Dislike և այլն), չեն աշխատի պատշաճ կերպով և կարող են առաջացնել կատարման խնդիրներ կամ \"Unable to find a default SSL provider\" սխալը:
+
+Տեղադրեք ARMv7 կամ Universal APK-ն:"</string>
+    <string name="abi_mismatch_download_armv7">Ներբեռնել ARMv7 APK-ն</string>
+    <string name="abi_mismatch_downloading_title">Ճիշտ տարբերակի ներբեռնում…</string>
 </resources>

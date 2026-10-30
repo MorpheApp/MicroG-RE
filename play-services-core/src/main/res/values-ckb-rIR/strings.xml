@@ -17,6 +17,9 @@
     <string name="gms_settings_name">ڕێکخستنەکانی microG</string>
     <string name="just_a_sec">تەنها چرکەیەک…</string>
     <string name="ask_permission_tos">بە بەردەوامبوون، ڕێگە بەم ئەپە و گووگڵ دەدەیت کە زانیارییەکانتان بەپێی مەرجەکانی خزمەتگوزاری و سیاسەتەکانی پاراستنی نهێنی بەکاربهێنن.</string>
+    <string name="ask_scope_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> حەزی لێیە:</string>
+    <string name="ask_service_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> حەزی لێیە بەکارهێنانی:</string>
+    <string name="account_manager_title">بەڕێوەبەری هەژماری گووگڵ</string>
     <string name="sorry">ببوورە…</string>
     <string name="auth_sign_in">چوونەژورەوە</string>
     <string name="auth_connecting">"ئامێرەکەت پەیوەندییەک بە سێرڤەرەکانی گووگڵەوە دادەمەزرێنێت بۆ ئەوەی بچیتە ژوورەوە.
@@ -34,15 +37,61 @@
     <string name="allow">ڕێگەپێدان</string>
     <string name="deny">ڕەتکردن</string>
     <string name="auth_notification_title">ڕەسەنایەتی پێویستە</string>
+    <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> پێویستی بە مۆڵەتی تۆ هەیە بۆ چوونە ناو هەژماری گووگڵەکەت.</string>
+    <string name="auth_action_notification_channel_name">ئاگادارکەرەوەکانی هەژماری گووگڵ</string>
+    <string name="auth_action_notification_channel_description">ئاگادار دەکاتەوە کاتێک یەکێک لە هەژمارەکانی گووگڵەکەت پێویستی بە ڕێکخستنی زیاتر هەیە پێش ئەوەی بتوانرێت بەکاربهێنرێت، یان کاتێک هەژمارێک ناگونجێت لەگەڵ microG.</string>
+    <string name="auth_action_notification_title">کردارێکی هەژمار پێویستە</string>
+    <string name="auth_action_notification_content">هەژماری گووگڵەکەت پێویستی بە ڕێکخستنی زیاتر هەیە.</string>
+    <string name="auth_action_reauth_notification_title">کردارێکی هەژمار پێویستە</string>
+    <string name="auth_action_activity_header">ڕێکخستنی هەژماری گووگڵەکەت تەواو بکە</string>
+    <string name="auth_action_activity_explanation">ئەم هەنگاوانەی خوارەوە تەواو بکە بۆ ئەوەی بتوانیت هەژماری گووگڵ %s لەم ئامێرەدا بەکاربهێنیت.</string>
+    <string name="auth_action_step_enable_checkin">تۆمارکردنی ئامێرەکان چالاک بکە</string>
+    <string name="auth_action_step_enable_gcm">پەیام ناردنی هەور چالاک بکە</string>
+    <string name="auth_action_step_enable_gcm_description">دەتوانیت پەیام ناردنی هەور لادەیت دوای ئەوەی ڕێکخستنی هەژمار تەواو دەبێت.</string>
+    <string name="auth_action_step_allow_microg_gcm">ڕێگە بدە بە پەیام ناردنی هەور بۆ microG</string>
+    <string name="auth_action_step_allow_microg_gcm_description">بەپێی ئارەزووەکانی تۆ، microG پێویستی بە ڕێپێدانی تۆیە پێش ئەوەی بتوانێت خۆی بۆ پەیام ناردنی هەور تۆمار بکات.</string>
+    <string name="auth_action_step_enable_lockscreen">ڕێکخستنی قفلی شاشەی پارێزراو</string>
+    <string name="auth_action_step_enable_lockscreen_description">"ئاکاونتی گوگڵەکەت لەلایەن شوێنی کارەکەت یان دامەزراوەی پەروەردەییتەوە بەڕێوە دەبرێت. بەڕێوەبەری تۆ بڕیاری داوە کە ئامێرەکان پێویستیان بە قفلی شاشەی پارێزراو بێت پێش ئەوەی بتوانن دەستگایان بکات بە داتاکانی ئاکاونتەکە.
+
+تکایە وشەی نهێنی، PIN، یان قفلی شێوە بۆ شاشەکە دابڕێژە."</string>
+    <string name="auth_action_step_perform_content_description">کلیک بکە بۆ جێبەجێکردنی هەنگاوەکە</string>
+    <string name="auth_action_step_completed_content_description">هەنگاوەکە تەواو بوو</string>
+    <string name="auth_action_activity_finish">کۆتایی</string>
     <string name="signin_picker_title">هەژمار هەڵبژێرە</string>
+    <string name="signin_picker_subtitle">بۆ بەردەوام بوون بۆ <xliff:g example="F-Droid">%1$s</xliff:g></string>
     <string name="signin_picker_add_account_label">هەژمارێکی تر زیاد بکە</string>
+    <string name="signin_confirm_title">ڕێگە بدە بچیتە ژوورەوە بۆ <xliff:g example="F-Droid">%1$s</xliff:g></string>
     <string name="signin_confirm_button_text">ڕێگاپێدانو هاوبەشکردن</string>
+    <string name="signin_subtext_sharing">بۆ بەردەوامی، microG ناو، ناونیشانی ئیمەیڵ و وێنەی پڕۆفایلی هەژماری گووگڵەکەت لەگەڵ <xliff:g example="F-Droid">%1$s</xliff:g> هاوبەش دەکات.</string>
     <string name="perm_status_broadcast_label">گوێ لە پەخشەکانی دۆخی ناوخۆیی بگرن</string>
     <string name="perm_gsf_read_gservices_label">ڕێکخستنی خزمەتگوزاری گووگڵ بخوێنەرەوە</string>
     <string name="perm_c2dm_receive_label">گوێ لە پەیامەکانی C2DM بگرە</string>
     <string name="perm_c2dm_send_label">ناردنی نامەی C2DM بۆ ئەپەکانی تر</string>
     <string name="perm_gtalk_svc_label">ئاڵوگۆڕی نامە و وەرگرتنی ئاگادارییەکانی هاوکاتکردن لە سێرڤەرەکانی گووگڵەوە</string>
     <string name="perm_extended_access_label">درێژکردنەوەی دەستڕاگەیشتن بە خزمەتگوزارییەکانی گووگڵ</string>
+    <string name="perm_provision_label">دابینکردنی خزمەتگوزارییەکانی microG</string>
+    <string name="perm_provision_description">ڕێگە بە ئەپەکە دەدات خزمەتگوزارییەکانی microG ڕێکبخات بەبێ دەستوەردانی بەکارهێنەر</string>
+    <string name="perm_car_speed_label">خێرایی ئۆتۆمبێل</string>
+    <string name="perm_car_speed_description">"دەستڕەسیان بە خێرایی ئۆتۆمبێلەکەت"</string>
+    <string name="perm_car_info_label">زانیارییەکانی ئۆتۆمبێل</string>
+    <string name="perm_car_info_description">"دەستگەیشتن بە زانیارییەکانی ئۆتۆمبێلەکەت"</string>
+    <string name="perm_car_fuel_label">ئاستی سووتەمەنی ئۆتۆمبێل</string>
+    <string name="perm_car_fuel_description">"دەستگەیشتن بە زانیارییەکانی ئاستی سووتەمەنی ئۆتۆمبێلەکەت"</string>
+    <string name="perm_car_mileage_label">شووتراوی ئۆتۆمبێل</string>
+    <string name="perm_car_mileage_description">"دەستگەیشتن بە زانیارییەکانی شووتراوی ئۆتۆمبێلەکەت"</string>
+    <string name="perm_car_vendor_extension_label">کەناڵی دابینکەری ئۆتۆمبێل</string>
+    <string name="perm_car_vendor_extension_description">"دەستگەیشتن بە کەناڵی دابینکەری ئۆتۆمبێلەکەت بۆ ئاڵوگۆڕکردنی زانیاریی تایبەت بە ئۆتۆمبێلەکە"</string>
+    <string name="service_name_checkin">تۆمارکردنی ئامێر</string>
+    <string name="service_name_mcs">پەیام ناردنی هەور</string>
+    <string name="service_name_device_attestation">سەلماندنی ئامێر</string>
+    <string name="service_name_vending">خزمەتگوزارییەکانی پلەی ستۆر</string>
+    <string name="service_name_work_profile">پڕۆفایلی کار</string>
+    <string name="games_title">یارییەکانی گووگڵ پلەی</string>
+    <string name="games_info_title"><xliff:g example="F-Droid">%1$s</xliff:g> دەیەوێت یارییەکانی پلەی بەکاربهێنێت</string>
+    <string name="games_info_content">بۆ بەکارهێنانی یارییەکانی پلەی، پێویستە ئەپڵیکەیشنی یارییەکانی گووگڵ پلەی دابەزێنرێت. ئەپڵیکەیشنەکە دەتوانێت بەبێ یارییەکانی پلەی بەردەوام بێت، بەڵام ئەگەری هەیە بە شێوەیەکی نەچاوەڕوانکراو کار بکات.</string>
+    <string name="pick_place_title">شوێنێک هەڵبژێرە</string>
+    <string name="place_picker_select_title">ئەم شوێنە هەڵبژێرە</string>
+    <string name="place_picker_nearby_places">شوێنەکانی نزیک</string>
     <string name="network_type_mobile">تۆڕی مۆبایل</string>
     <string name="network_type_wifi">وای فای</string>
     <string name="network_type_roaming">ڕوومینگ</string>
@@ -53,24 +102,45 @@
     <string name="self_check_cat_system">سیستەم</string>
     <string name="self_check_name_system_spoofs">سیستەم واژۆکە ساختە دەکات: </string>
     <string name="self_check_resolution_system_spoofs">تکایە بەڵگەنامەکان بپشکنە کە ڕەنگە لەسەر کام هەنگاو پێویست بێت.</string>
+    <string name="self_check_pkg_gms">خزمەتگوزارییەکانی microG</string>
+    <string name="self_check_pkg_vending">هاوەڵەی microG / Play Store</string>
+    <string name="self_check_pkg_gsf">چوارچێوەی خزمەتگوزارییەکانی microG</string>
+    <string name="self_check_name_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> دابەزێنراو: </string>
+    <string name="self_check_resolution_app_installed">بەرنامەی <xliff:g example="F-Droid">%1$s</xliff:g> یان یەکێکی گونجاو دابنێ. تکایە بەڵگەنامەکان بپشکنە بۆ ئەوەی بزانیت کام بەرنامە گونجاوە.</string>
+    <string name="self_check_name_correct_sig"><xliff:g example="F-Droid">%1$s</xliff:g> واژۆیەکی ڕاستی هەیە: </string>
+    <string name="self_check_resolution_correct_sig">یان <xliff:g example="F-Droid">%1$s</xliff:g>ی دامەزراو گونجاو نییە یان واژۆکردنی ساختە بۆی چالاک نییە. تکایە بەڵگەنامەکان بپشکنە بۆ ئەوەی بزانیت کام بەرنامە و ROM گونجاوە.</string>
+    <string name="self_check_name_battery_optimizations">باشکردنی پاتری پشتگوێ خراوە:</string>
+    <string name="self_check_resolution_battery_optimizations">لێرە دەست لێبدە بۆ ڕاگرتنی باشترکردنی پاتری. ئەنجام نەدانی ئەمە دەبێتە هۆی هەڵسوکەوتی خراپ لە بەرنامەکاندا.</string>
     <!-- Settings strings -->
     <string name="prefcat_about">دەرباره</string>
     <string name="prefcat_details">وردەکاری</string>
     <string name="cond_gcm_bat_title">باشکردنی پاتری چالاک کراوە</string>
+    <string name="cond_gcm_bat_summary">تۆ پەیامی هەورت چالاک کردووە بەڵام باشترکردنی پاتریت چالاکە بۆ خزمەتگوزارییەکانی microG. بۆ ئەوەی ئاگادارکردنەوەکانی پاڵدان بگات پێویستە باشترکردنی پاتری پشتگوێ بخەیت.</string>
     <string name="cond_gcm_bat_action">باشترکردنەکان پشتگوێ بخە</string>
     <string name="cond_perm_title">مۆڵەت نەماوە</string>
+    <string name="prefs_account">تەرجیهاتی ئەکاونت</string>
+    <string name="prefs_account_privacy">زانیاری کەسی &amp; تایبەتمەندی</string>
+    <string name="prefs_account_security">چوونەژوورەوە &amp; ئاسایش</string>
     <string name="pref_auth_trust_google_title">متمانە بە گووگڵ بکە بۆ مۆڵەتی ئەپەکان</string>
+    <string name="pref_auth_trust_google_summary">کاتێک لەکاردەخرێت، پرسیار لە بەکارهێنەر دەکرێت پێش ئەوەی داواکاری ڕێگەپێدانی ئەپێک بنێردرێت بۆ گووگڵ. هەندێک بەرنامە شکست دەهێنن لە بەکارهێنانی ئەکاونتی گووگڵ ئەگەر ئەمە لەکاردابێت.</string>
     <string name="pref_auth_visible_title">ڕێگە بە ئەپەکان بدە هەژمارەکان بدۆزنەوە</string>
     <string name="pref_auth_visible_summary">کاتێک چالاک دەکرێت، هەموو بەرنامەکانی ئەم ئامێرە دەتوانن ناونیشانی ئیمەیڵی هەژمارەکانی گووگڵتان ببینن بەبێ مۆڵەتی پێشوەختە.</string>
     <string name="pref_auth_include_android_id_title">بە تۆمارکردنی ئامێرەکە ڕەسەنایەتی بکەرەوە</string>
+    <string name="pref_auth_include_android_id_summary">کاتێک لەکاردەخرێت، داواکارییەکانی ڕەسەنایەتی بە تۆمارکردنی ئامێرەکە نابەسترێن، کە ڕەنگە ڕێگە بە ئامێرە ڕێگەپێنەدراوەکان بدات بچنە ژوورەوە، بەڵام لەوانەیە دەرئەنجامە پێشبینینەکراوەکانی هەبێت.</string>
     <string name="pref_auth_strip_device_name_title">ناوی ئامێرەکە شریت بکە بۆ ڕەسەنایەتی</string>
     <string name="pref_auth_strip_device_name_summary">کاتێک چالاک دەکرێت، داواکارییەکانی ڕەسەنایەتی ناوی ئامێرەکە لەخۆناگرێت، کە لەوانەیە ڕێگە بە ئامێرە ڕێگەپێنەدراوەکان بدات بچنە ژوورەوە، بەڵام لەوانەیە دەرئەنجامە پێشبینینەکراوەکانی هەبێت.</string>
+    <string name="pref_auth_two_step_verification_title">وەرگرتنی ئاگادارکەرەوەکانی پشتڕاستکردنەوەی دوو هەنگاوە</string>
+    <string name="pref_auth_two_step_verification_summary">کاتێک چالاک دەبێت، ئامێرەکە دەتوانێت ئاگادارکەرەوەکانی پشتڕاستکردنەوەی دوو هەنگاو لە گووگڵەوە وەربگرێت (پێویستە Cloud Messaging چالاک بێت).</string>
+    <string name="pref_auth_allow_find_devices_title">ڕێگەبدان بە وەڵامدانەوەی Google Device Finder</string>
+    <string name="pref_auth_allow_find_devices_summary">کاتێک چالاک دەکرێت، ئامێرەکە دەتوانێت وەڵامی ئاگادارکەرەوەکانی Find My Device لە گووگڵ بداتەوە (Cloud Messaging پێویستە).</string>
     <string name="pref_checkin_enable_summary">ئامێرەکەت لە خزمەتگوزارییەکانی گووگڵ تۆمار دەکات و ناسێنەرێکی ناوازەی ئامێرەکە دروست دەکات.  microG بیتەکانی ناسینەوەی جگە لە ناوی هەژماری گووگڵەکەت لە داتاکانی تۆمارکردنەوە دەسڕێتەوە.</string>
     <string name="pref_device_registration_android_id">ناسنامەی ئەندرۆید</string>
     <string name="checkin_not_registered">تۆمارنەکراوە</string>
+    <string name="checkin_last_registration">کۆتا تۆمارکردن: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
     <string name="checkin_enable_switch">ئامێری تۆمارکردن</string>
     <string name="pref_info_status">دۆخ</string>
     <string name="pref_accounts_title">هەژمارەکان</string>
+    <string name="pref_game_accounts_title">هەژمارەکانی یاری گووگڵ</string>
     <string name="pref_accounts_summary">هەژمارەکانی گووگڵ زیاد بکەو بەڕێوەی ببە</string>
     <string name="prefcat_accounts_settings_title">ڕێکخستنەکان</string>
     <string name="prefcat_accounts_login_accounts_title">چووەتە ژوورەوە</string>
@@ -83,8 +153,11 @@
     <string name="pref_accounts_login_accounts_summary">هەژمارەکان تەنها لەسەر ئەم ئامێرە پاشەکەوت دەکرێن و هەڵدەگیرێن.  بۆ ئەوەی بۆ هەمیشە لەم ئامێرە لاببەیت، پەنجە بنێ بە هەژمارێکەوە</string>
     <string name="pref_privacy_title">تایبەتمەندیەتی</string>
     <string name="pref_privacy_summary">ڕێکخستنەکانی نهێنی بۆ ڕەسەنایەتی و ئەپەکان</string>
+    <string name="auth_add_account">زیادکردنی هەژمار</string>
     <string name="prefcat_applications">کاربەرنامەکان</string>
     <string name="prefcat_authentication">ڕەسەنایەتی</string>
+    <string name="pref_add_account_summary">زیادکردنی هەژماری گووگڵ</string>
+    <string name="pref_gcm_enable_mcs_summary">نامە ناردنی هەور دابینکەرێکی ئاگادارکردنەوەی پاڵنەرە کە لەلایەن زۆرێک لە ئەپەکانی لایەنی سێیەمەوە بەکاردێت. بۆ بەکارهێنانی دەبێت تۆمارکردنی ئامێرەکان چالاک بکەیت.</string>
     <string name="pref_gcm_confirm_new_apps_title">ئەپی نوێ پشتڕاست بکەرەوە</string>
     <string name="pref_gcm_confirm_new_apps_summary">پێش تۆمارکردنی ئەپێکی نوێ پرسیار بکە بۆ وەرگرتنی ئاگادارییەکانی پاڵنەر</string>
     <string name="pref_about_title">دەربارەی MicroG RE</string>
@@ -98,10 +171,17 @@
     <string name="update_notification_permission_not_now">ئێستا نا</string>
     <string name="gcm_unregister_app">تۆمارنەکراو</string>
     <string name="gcm_no_message_yet">تا ئێستا هیچ نامەیەک وەرنەگیراوە</string>
+    <string name="gcm_last_message_at">کۆتا پەیام: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
     <string name="gcm_registered">تۆمارکراو</string>
+    <string name="gcm_registered_since">تۆمارکراوە لەوەتەی: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_unregister_confirm_title">هەڵوەشانی تۆماری <xliff:g example="F-Droid">%1$s</xliff:g>؟</string>
     <string name="gcm_unregister_confirm_message">هەندێک ئەپەکان بە شێوەیەکی ئۆتۆماتیکی دووبارە ناویان تۆمار ناکەنەوە و/یان بژاردەیەک بۆ ئەوەی بە دەستی ئەو کارە بکەن.  لەوانەیە ئەم ئەپانە دوای هەڵوەشاندنەوەی تۆمارکردن بە دروستی کار نەکەن.\n بەردەوام بوون؟</string>
     <string name="gcm_unregister_after_deny_message">تۆ ڕەتتکردەوە ئەپێک تۆمار بکات بۆ ئاگادارکردنەوەکانی پاڵدان کە پێشتر تۆمارکراوە.\n ئایا دەتەوێت ئێستا تۆمارەکەی هەڵبوەشێنیتەوە بۆ ئەوەی لە داهاتوودا نامەی پاڵنانیت پێ نەگات؟</string>
+    <string name="gcm_messages_counter">پەیامەکان: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> بایت)</string>
     <string name="gcm_network_state_disconnected">پەیوەندی پچڕاوە</string>
+    <string name="gcm_network_state_connected">پەیوەست بووە لەوەتەی <xliff:g example="2 hours ago">%1$s</xliff:g></string>
+    <string name="gcm_enable_switch">وەرگرتنی ئاگادارکردنەوەی پاڵنەر</string>
+    <string name="gcm_allow_app_popup">ڕێگە بدە <xliff:g example="F-Droid">%1$s</xliff:g> بۆ ناو تۆمارکردن بۆ ئاگادارکردنەوەکانی پاڵنەر؟</string>
     <string name="pref_push_app_allow_register_title">ڕێگە بە ناو تۆمارکردن بدە</string>
     <string name="pref_push_app_allow_register_summary">ڕێگە بە ئەپەکە بدە ناوی خۆی تۆمار بکات بۆ ئاگادارکردنەوەکانی پاڵدان.</string>
     <string name="pref_push_app_wake_for_delivery_title">ئەپەکە لەسەر پەیامی پاڵدان دەستپێبکە</string>
@@ -121,6 +201,22 @@
  لەوانەیە هەندێک ئەپ دوای ئەم کردارە نەتوانن دووبارە خۆیان تۆمار بکەنەوە.  لەوانەیە پێویستت بە پاککردنەوەی داتاکانی ئەم ئەپانە بێت پێش ئەوەی بتوانن دووبارە داوای تۆمارکردن بکەنەوە"</string>
     <string name="gcm_remove_registers_toast_message">هەموو ئەپەکان لە ئاگادارکردنەوەی پاڵنەر لابراون</string>
     <string name="prefcat_push_networks_title">تۆڕەکان بۆ بەکارهێنان بۆ ئاگادارکردنەوەکانی پاڵدان</string>
+    <string name="safetynet_intro">Google SafetyNet سیستمێکی بڕوانامەی ئامێرە، کە دڵنیایی دەدات کە ئامێرەکە بە شێوەیەکی گونجاو پارێزراوە و گونجاوە لەگەڵ Android CTS. هەندێک ئەپڵیکەیشن SafetyNet بەکاردەهێنن بۆ ڕەسەنانی ئاسایش یان وەک پێویستێک بۆ پاراستن لە دەستکاریکردن.\n\nmicroG GmsCore جێبەجێکردنێکی بێبەرامبەری SafetyNetی تێدایە، بەڵام سێرڤەری فەرمی داوا دەکات کە داخواستەکانی SafetyNet بە بەکارهێنانی سیستەمی خاوەندارێتی DroidGuard واژۆ بکرێن.</string>
+    <string name="safetynet_enable_switch">ڕێگە بدە بە بڕوانامەی ئامێر</string>
+    <string name="pref_safetynet_test_title">تاستکردنی بڕوانامەی SafetyNet</string>
+    <string name="pref_recaptcha_test_title">تاستکردنی ReCAPTCHA</string>
+    <string name="pref_recaptcha_enterprise_test_title">تاستکردنی ReCAPTCHA Enterprise</string>
+    <string name="pref_test_summary_passed">هەموو تاستەکان تێپەڕاند</string>
+    <string name="pref_test_summary_failed">شکستهوەردراوە: %s</string>
+    <string name="pref_test_summary_warn">ئاگاداری: %s</string>
+    <string name="pref_test_summary_running">خەریکە کاردەکات…</string>
+    <string name="pref_droidguard_unsupported_summary">جێبەجێکردنی DroidGuard لەسەر ئەم ئامێرە پشتگیری ناکرێت. ڕەنگە خزمەتگوزارییەکانی SafetyNet بە هەڵە کار بکەن.</string>
+    <string name="prefcat_safetynet_apps_title">ئەپەکانی کە SafetyNet بەکاردەهێنن</string>
+    <string name="prefcat_device_attestation_apps_title">ئەپەکانی کە Device Attestation بەکاردەهێنن</string>
+    <string name="pref_device_attestation_app_allow_requests_title">ڕێگەدان بە داواکارییەکان</string>
+    <string name="pref_device_attestation_app_allow_requests_summary">ڕێگە بدە ئەپەکە داوای device attestation بکات</string>
+    <string name="menu_clear_recent_requests">سڕینەوەی داواکارییە نوێیەکان</string>
+    <string name="safetynet_last_run_at">دوایین بەکارهێنان: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
     <string name="profile_name_native">ڕەسەن</string>
     <string name="profile_name_real">ڕاستی</string>
     <string name="profile_name_user">باو: %s</string>
@@ -131,15 +227,121 @@
     <string name="pref_device_registration_import_custom_profile_summary">هاوردەکردنی لاپەڕەی ئامێر لە فایلەوە</string>
     <string name="pref_device_registration_select_profile_title">لاپەڕە هەڵبژێرە</string>
     <string name="pref_device_registration_device_profile_category">لاپەڕەی ئامێر</string>
+    <string name="pref_safetynet_recent_uses">دوایین بەکارهێنانەکان</string>
+    <string name="pref_safetynet_recent_attestation_summary">سەلماندنی ڕاستی: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_summary">ReCaptcha: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_enterprise_summary">ReCaptcha Enterprise: %s</string>
+    <string name="pref_safetynet_recent_copy_json">کۆپی کردنی داتای JSON JWS</string>
+    <string name="pref_safetynet_recent_advice">ئامۆژگاری</string>
+    <string name="pref_safetynet_recent_eval_type">جۆری هەڵسەنگاندن</string>
+    <string name="pref_safetynet_recent_response_status">بارودۆخی وەڵام</string>
+    <string name="pref_safetynet_recent_cat_response">داتای وەڵام</string>
+    <string name="pref_safetynet_recent_cat_request">داتای داواکاری</string>
+    <string name="pref_safetynet_recent_nonce">Nonce (Hex)</string>
+    <string name="pref_safetynet_recent_request_time">کاتی داواکاری</string>
+    <string name="pref_safetynet_recent_request_type">جۆری داواکاری</string>
+    <string name="pref_safetynet_recent_cat_basic">داتای بنەڕەتی</string>
+    <string name="pref_safetynet_recent_token">تۆکن</string>
+    <string name="pref_safetynet_recent_copied">کۆپی کرا بۆ ڕوونووسگە!</string>
+    <string name="pref_safetynet_test_integrity_cts_passed">Integrity و CTS تێپەڕان</string>
+    <string name="pref_safetynet_test_cts_failed">CTS شکستی هێنا</string>
+    <string name="pref_safetynet_test_integrity_failed">Integrity شکستی هێنا</string>
+    <string name="pref_safetynet_test_not_completed">هێشتا تەواو نەکراوە</string>
+    <string name="pref_safetynet_test_no_result">هیچ ئەنجامێک نییە</string>
+    <string name="pref_safetynet_test_invalid_json">JSON نادروستە</string>
     <string name="push_notifications_summary_off">کوژاوە</string>
     <string name="push_notifications_summary_automatic">داگیرساو / خۆکارانە: %s</string>
     <string name="push_notifications_summary_manual">داگیرساو / بەدەستی: %s</string>
     <string name="push_notifications_summary_values_seconds">%s چرکە</string>
     <string name="push_notifications_summary_values_minutes">%s خولەک</string>
+    <string name="pref_vending_licensing_category">مۆڵەتی Google Play</string>
+    <string name="pref_vending_licensing_enable_switch">وەڵامدانەوەی داواکارییەکانی پشتڕاستکردنەوەی مۆڵەت</string>
+    <string name="pref_vending_license_enable_summary">هەندێک ئەپ پێویستیان بەوەیە پشتڕاست بکرێتەوە کە لە Google Play کڕاوەتن. کاتێک ئەپێک داوای دەکات، microG دەتوانێت بەڵگەی کڕین لە Google دابەزێنێت. ئەگەر لادرا بێت، یان هیچ هەژماری Google زیاد نەکرا بێت، داواکارییەکانی پشتڕاستکردنەوەی مۆڵەت پشتگوێ دەخرێن.</string>
+    <string name="pref_vending_licensing_purchase_free_apps_switch">بە شێوەیەکی ئۆتۆماتیکی زیادکردنی ئەپە بێبەرامبەرەکان بۆ کتێبخانە</string>
+    <string name="pref_vending_licensing_purchase_free_apps_summary">ڕەنگە ئەپە بێبەرامبەرەکان پشکنین بکەن بۆ ئەوەی بزانن ئایا لە Google Play دابەزێنراون یاخود نا. بە شێوەیەکی ئۆتۆماتیکی ئەپە بێبەرامبەرەکان زیاد بکە بۆ کتێبخانەی هەژمارەکەت بۆ ئەوەی هەمیشە پشکنینەکە بۆ هەموو ئەو ئەپە بێبەرامبەرانەی کە ئێستا بەردەستن بە سەرکەوتوویی تێپەڕێت.</string>
+    <string name="pref_vending_feature_delivery">گەیاندنی تایبەتمەندییەکانی Google Play</string>
+    <string name="pref_vending_split_install_switch">دامەزراندنی پێکهاتەکان بەپێی داواکاری</string>
+    <string name="pref_vending_licensing_split_install_summary">ڕێگەدان بە ئەپەکان بۆ دابەزاندن و دامەزراندنی پێکهاتەی زیادە</string>
+    <string name="feedback_disabled">لە ئێستادا ناردنی فیدباک possibly نییە</string>
+    <string name="backup_disabled">لە ئێستادا پشتپشتی ئەنجام نادات</string>
+    <string name="pref_vending_billing_category">ژمێریاری Google Play</string>
+    <string name="pref_vending_billing_enable_switch">بەڕێوەبردنی داواکارییەکانی ژمارەدانان</string>
+    <string name="pref_vending_billing_enable_summary">کاتێک چالاک دەکرێت، هەندێک ئەپ دەتوانن کڕینەکان تەواو بکەن یان بەشدارکردنەکان دەستپێبکەن لە ڕێگەی خزمەتگوزاری ژمارەدانانی Google Play-ەوە.</string>
+    <string name="pref_vending_billing_note_experimental">ئەم تایبەتمەندییە تاقیکارییە و ڕەنگە ببێتە هۆی لەدەستدانی پارە. ئاگاداری کراویت.</string>
+    <string name="pref_vending_billing_note_licensing">هەندێک ئەپ ڕەنگە داوات لێبکەن کە چالاککردنی پشتڕاستکردنەوەی مۆڵەتەکەش بکەیت بۆ پشتڕاستکردنەوەی کڕینەکانت.</string>
+    <string name="pref_vending_asset_delivery_category">گەیاندنی سەرمایەی Google Play</string>
+    <string name="pref_vending_asset_delivery_switch">چالاککردنی گەیاندنی سەرمایە لەسەر داوا</string>
+    <string name="pref_vending_asset_delivery_summary">داگرتنی سەرمایەی زیادە کاتێک لەلایەن ئەو ئەپانەوە داوا دەکرێت کە Play Asset Delivery بەکاردەهێنن</string>
+    <string name="pref_vending_asset_device_sync_summary">ئەپڵیکەیشنەکانی کە Play Asset Delivery بەکاردەهێنن، سەرمایەی زیادە دەگرن بەپێی زانیارییەکانی ئەو ئامێرەی ئێستا بەکاردێت.</string>
+    <string name="pref_vending_asset_device_sync_switch">چالاککردنی هاوسنخرانی زانیارییەکانی ئامێر</string>
+    <string name="pref_workprofile_create_account">ڕێگە بدە بە ڕێکخستنی هەژماری کار</string>
+    <string name="pref_workprofile_intro">کاتێک پرۆفایلێکی کار بۆ شوێنی کارەکەت یان دامەزراوەی پەروەردەییت ڕێکدەخیت،
+        ڕێکخستنەکە ڕەنگە هەوڵی پەیوەستبوون بە گووگڵ بکات بۆ ئەوەی دابەزاندنی ئەپڵیکەیشنەکان بۆ ئەو پرۆفایلە چالاک بکات.</string>
+    <string name="pref_workprofile_disclaimer">بە بەرپرسیارێتی تۆیە دڵنیاببیتەوە کە بەکارهێنانی microG لەگەڵ سیاستەکانی کۆمپانیاکە دەگونجێت.
+        microG لەسەر بنەمای باشترین هەوڵ دابین کراوە و ناتوانێت گەرەنتی بکات کە ڕێک بەو شێوەیەی چاوەڕوان دەکرێت ڕەفتار بکات.</string>
+    <string name="pref_auto_create_player">ڕێگە بدە بە تۆمارکردنی هەژماری Play Games</string>
+    <string name="pref_auto_create_player_intro">کاتێک یاری دەکەیت، پێویستە هەژمارێکی Play Games بەکاربهێنیت بۆ چوونەژوورەوە و تۆمارکردنی ئەرکەکانی پەیوەست بە یارییەکە، وەک دەستکەوتەکان، لیستی سەرکەوتووان، ئەرشیفەکان و هتد. دوای لایبەرکردن، ئەو هەژمارانەی گووگڵ کە بە هەژمارێکی Play Games بەستراونەوە بە شێوەی ئۆتۆماتیکی تۆمار ناکرێن، و یارییەکە ناتوانێت بچێتە ژوورەوە و یاری بکات.</string>
+    <string name="pref_allow_upload_game_played">ڕێگە بدە بە بەرزکردنەوەی یارییە یاری کراوەکان</string>
+    <string name="pref_allow_upload_game_played_summary">کاتێک لایبەر بکرێت، یارییەکە ڕاپۆرتی دۆخی یارییە یاری کراوەکان ناکات دوای چوونەژوورەوە لە یارییەکە، و هەندێک یاری ڕەنگە نەتوانن بچنە ژوورەوە.</string>
+    <string name="pref_change_default_game_player">گۆڕینی هەژمار بۆ یارییەکان</string>
+    <string name="pref_change_default_game_player_summary">گۆڕینی هەژماری پێشنیارکراو بۆ یارییەکان &amp; گۆڕینی هەژمارەکە بەپێی هەر یارییەک.</string>
+    <string name="pref_delete_game_account_data">سڕینەوەی داتاکانی Play Games</string>
+    <string name="pref_delete_game_account_data_summary">سڕینەوەی هەژماری Play Games &amp; هەموو داتاکان &amp; سڕینەوەی داتاکانی یارییەکان بە جیا.</string>
     <string name="credentials_assisted_cancel">پاشگەز</string>
     <string name="credentials_assisted_continue">بەردەوامبوون</string>
+    <string name="credentials_assisted_confirmation_header">چوونەژوور دەکرێت</string>
+    <string name="credentials_assisted_continue_as_user_button_label">بەردەوامبە وەک %1$s</string>
+    <string name="credentials_assisted_sign_back_title">دووبارە بچۆوە ناو %1$s بە گووگڵ</string>
+    <string name="credentials_assisted_signin_consent_header">چوونەژوور وەک %1$s</string>
+    <string name="credentials_assisted_signin_consent">بە بەردەوامبوون، گووگڵ ناوی تۆ، ناونیشانی ئیمەیڵ، و وێنەی پڕۆفایلت لەگەڵ %1$s دابەش دەکات. سەیری ڕێساتەکانی تایبەتمەندی و مەرجەکانی خزمەتگوزاری %1$s بکە.</string>
+    <string name="credentials_assisted_signin_description">دەتوانیت بەکارهێنانی \"چوونەژوور بە گووگڵ\" لە هەژمارەکانی گووگڵی خۆتدا بەڕێوە ببەیت.</string>
+    <string name="credentials_assisted_choose_account_label">هەژمار هەڵبژێرە</string>
     <string name="credentials_assisted_choose_account_subtitle">بۆ بەردەوام بوون بۆ %1$s</string>
+    <string name="credentials_assisted_choose_account_error_tips">نانۆرمالی هەژمار</string>
+    <string name="credentials_assisted_signin_button_text_long">بە گووگڵ بچۆ ژوورەوە</string>
+    <string name="credentials_assisted_signin_add_account">زیادکردنی هەژمار</string>
+    <string name="credentials_service_sign_in_with_google_label">بە گووگڵ بچۆ ژوورەوە</string>
+    <string name="credentials_service_remote_custom_subtitle">کلیلى ئاسایش، سمارتفۆن یان تابلێت</string>
+    <string name="limited_services_dialog_information">تۆ بەکارهێنانی خزمەتگوزارییە سنووردارەکانی microG دەکەیت. بە پێچەوانەی خزمەتگوزارییە ئاساییەکانی microG، ئەم جۆرە تەنها لەگەڵ ئەو ئەپڵیکەیشنانەدا کاردەکات کە کتێبخانەکانی microG بەکاردەهێنن، نەک ئەوانەی لە Google Play دان. ئەمە واتای ئەوەیە کە زۆربەی ئەپڵیکەیشنەکان ئەم خزمەتگوزارییانە پشتگوێ دەخەن.</string>
+    <string name="limited_services_dialog_information_ack">تێگەیشتم</string>
+    <string name="games_achievement_list_title">دەستکەوتەکان</string>
+    <string name="games_achievements_empty_text">هیچ دەستکەوتێک بۆ ئەم یارییە نییە</string>
+    <string name="games_api_access_denied">هیچ ئەکاونتێک لەسەر ئەم ئامێرە ناتوانێت دەستی بە APIs ی یارییەکان بگات</string>
+    <string name="games_achievement_locked_content_description">قوفڵکراوە</string>
+    <string name="games_achievement_unlocked_content_description">کراوەتەوە</string>
+    <string name="games_achievement_extra_text">%1$s XP</string>
+    <string name="games_leaderboard_empty_text">هیچ لیستی ڕیزبەندییەک بۆ ئەم یارییە نییە</string>
+    <string name="games_leaderboard_list_title">ڕیزبەندییەکان</string>
+    <string name="games_leaderboards_score_label">نمرە: %1$s</string>
+    <string name="games_snapshot_empty_text">تا ئێستا هیچ تۆمارێکی یاری پاشەکەوت نەکراوە</string>
+    <string name="games_snapshot_choose_btn_text">دیاریکردن</string>
+    <string name="games_snapshot_delete_btn_text">سڕینەوە</string>
+    <string name="games_delete_snapshot_dialog_title">سڕینەوەی یارییەکەی پاشکەوتکراو</string>
+    <string name="games_delete_snapshot_dialog_message">دڵنیایت دەتەوێت ئەم یارییەی پاشکەوتکراوە بسڕیتەوە؟</string>
     <string name="games_delete_snapshot_dialog_cancel">پاشگەز</string>
+    <string name="games_delete_snapshot_dialog_ok">باشە</string>
+    <string name="games_delete_snapshot_error">سڕینەوەکە سەرکەوتوو نەبوو، تکایە دواتر هەوڵ بدەرەوە</string>
+    <string name="games_state_description_signed_out">چوونەدەر</string>
+    <string name="games_state_description_delete">سڕینەوە</string>
+    <string name="games_change_button_text">گۆڕین</string>
+    <string name="games_change_default_account_section_title">گۆڕینی هەژماری پێشنیارکراو بۆ یارییەکان</string>
+    <string name="games_change_default_account_description">هەژماری پێشنیارکراو: %1$s</string>
+    <string name="games_change_default_account_explanation">ئەم هەژمارەیە بۆ ئەوە بەکاردێت کە بە شێوەیەکی ئۆتۆماتیکی بچیتە ناو یارییەکان، پێشکەوتەکانی یارییەکانت پاشکەوت بکات و ڕێکخستینەکانت پاشکەوت بکات. گۆڕینی هەژماری سەرەکی یان دەرچوون لە هەژمارەکە ڕەنگە پێشکەوت و ڕێکخستینەکانی ئەو یارییانە بسڕێتەوە کە یاریت پێ کردووە.</string>
+    <string name="games_change_per_game_title">گۆڕینی هەژمار بەپێی یاری</string>
+    <string name="games_change_per_game_description">گۆڕینی هەژمار بۆ یارییەکی دیاریکراو یان دەرچوون لێی ڕەنگە پێشکەوت و ڕێکخستینەکانی ئەو یارییە بسڕێتەوە.</string>
+    <string name="games_change_default_account_for_all_games_dialog_title">بژاردەیەک بۆ هەژمارە سەرەکییە نوێیەکە هەڵبژێرە</string>
+    <string name="games_change_default_account_for_all_games_dialog_description">هەژماری سەرەکی ئێستا: %1$s</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_title">گۆڕینی هەژماری سەرەکی تەنها بۆ یارییە نوێیەکان </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_description">دەسڕێتەوە دەستگەیشتنت بە پێشکەوت و ڕێکخستینەکانی ئەو یارییانەی کە یاریت پێ کردووە. بەڵام پێشکەوتەکانت دابەش دەبن لە نێوان هەژمارەکاندا.</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_title"> گۆڕینی هەژماری سەرەکی بۆ هەموو یارییەکان </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_description">ڕەنگە دەستگەیشتنت بە پێشکەوتن و ڕێکخستنەکانی ئەو یاریانەی کەت لێیان یاریکردووە لەدەست بدەیت. ئێمە یارییەکە دووبارە دەستپێدەکەینەوە بۆ جێبەجێکردنی گۆڕانکارییەکانت.</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_title"> چوونەدەر لە هەموو یارییەکان </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_description">ڕەنگە دەستگەیشتنت بە پێشکەوتن و ڕێکخستنەکانی ئەو یاریانەی کەت لێیان یاریکردووە لەدەست بدەیت. ئێمە یارییەکە دووبارە دەستپێدەکەینەوە بۆ جێبەجێکردنی گۆڕانکارییەکانت.</string>
+    <string name="games_change_per_game_dialog_title">بژاردەیەک بۆ ئەم یارییە هەڵبژێرە</string>
+    <string name="games_change_per_game_dialog_description">گۆڕینی ئەکاونتەکە یان چوونەدەر ڕەنگە پێشکەوتن و ڕێکخستنەکانی یارییەکە ڕیسێت بکاتەوە</string>
+    <string name="games_change_per_game_dialog_option_use_player">بەکارهێنانی %1$s</string>
+    <string name="games_change_per_game_dialog_option_use_player_snackbar_success_message">تۆ بە %1$s لەم یارییەدا داخڵ دەبیت</string>
+    <string name="family_management_invite_slots_left">%1$d بانگهێشت ماوە</string>
     <string name="family_management_delete_group_cancel">پاشگەز</string>
     <!-- Passkey management -->
     <string name="self_check_cat_patched_apps">ئەپە پینەکراوەکان</string>

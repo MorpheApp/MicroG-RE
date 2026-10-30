@@ -4,8 +4,64 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="service_name_location">Kokapena</string>
+    <string name="prefcat_location_apps_title">Azken sarpenak</string>
+    <string name="prefcat_location_wifi_title">Wi-Fi kokapena</string>
+    <string name="prefcat_location_cell_title">Sare mugikorraren kokapena</string>
+    <string name="prefcat_geocoder_title">Helbide resolutzailea</string>
+    <string name="pref_location_wifi_online_enabled_title">Online zerbitzuari eskaifatu</string>
+    <string name="pref_location_wifi_online_enabled_summary">Lortu Wi-Fi-n oinarritutako kokapena online kokapen zerbitzu batetik.</string>
+    <string name="pref_location_wifi_moving_enabled_title">Hotspot-i eskaifatu</string>
+    <string name="pref_location_wifi_moving_enabled_summary">Lortu Wi-Fi kokapena zuzen Hotspot sailu onartuek konektatzean.</string>
+    <string name="pref_location_wifi_learning_enabled_title">Gogoratu GPS-tik</string>
+    <string name="pref_location_wifi_learning_enabled_summary">Gorde Wi-Fi kokapenak lokalmente GPSa erabili zuenean.</string>
+    <string name="pref_location_cell_online_enabled_title">Online zerbitzuari eskaifatu</string>
+    <string name="pref_location_cell_online_enabled_summary">Lortu sare mugikorreko zelulen toreen kokapenak kokapen zerbitzu online baten bidez.</string>
+    <string name="pref_location_cell_learning_enabled_title">Gogoratu GPS-tik</string>
+    <string name="pref_location_cell_learning_enabled_summary">Gorde sare mugikorreko kokapenak lokalmente GPSa erabiltzen denean.</string>
+    <string name="pref_geocoder_nominatim_enabled_title">Erabili Nominatim</string>
+    <string name="pref_geocoder_nominatim_enabled_summary">Ebiliz OpenStreetMap Nominatim helbideak argitu.</string>
+    <string name="fragment_location_apps_title">Kokapen-sarbidea duten aplikazioak</string>
+    <string name="location_app_last_access_at">Azken sarbidea: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="pref_location_app_force_coarse_title">Kokapen zehatz gabea behartu</string>
+    <string name="pref_location_app_force_coarse_summary">Itzuli beti kokapen zehatz gabeak aplikazio honi, haren baimen maila ignoratuz.</string>
+    <string name="prefcat_app_last_location">Azken kokapen jakinarazitakoa</string>
+    <string name="location_settings_dialog_message_title_for_better_experience">Esperientzia hobetzeko, aktibatu gailuaren kokapena, microG-ren kokapen zerbitzua erabiltzen duena</string>
+    <string name="location_settings_dialog_message_title_to_continue">Jarraitzeko, aktibatu gailuaren kokapena, microG-ren kokapen zerbitzua erabiltzen duena</string>
+    <string name="location_settings_dialog_message_details_start_paragraph">Zure gailuak hondez egin beharko du:</string>
+    <string name="location_settings_dialog_message_location_services_gps_and_nlp">GPS, Wi‑Fi, sare zelularetak eta sensorak erabili</string>
+    <string name="location_settings_dialog_message_grant_permissions">Kokapen baimenak eman microG Zerbitzuari</string>
+    <string name="location_settings_dialog_message_gls_consent">Erabili microG kokapen zerbitzua; zerbitzu honen parte gisa, microG-k kokapen datuak periodikoki bildu ditzake eta datu hauek modu anonimoan erabili ditzake kokapenaren zehaztasuna eta kokapenean oinarritutako zerbitzuak hobetzeko.</string>
+    <string name="location_settings_dialog_message_details_end_paragraph">Xehetasunetarako, joan kokapen konfiguraziora.</string>
+    <string name="location_settings_dialog_btn_cancel">Ez, eskerrik asko</string>
+    <string name="location_settings_dialog_btn_sure">Ados</string>
+    <string name="pref_location_custom_url_summary">Honek zerbitzu URL pertsonalizatu bat konfiguratzea ahalbidetzen du. Balio ezagunak kokapen zerbitzuak erantzun gabe egotea edo erabilgarri ez izatea eragingo dute.</string>
+    <string name="pref_location_custom_url_details">/v1/geolocate bidea automatikoki gehitzen da. Kokapen hornitzaileak giltza bat behar badu, root URL-ari parametro gisa gehitu daiteke.</string>
+    <string name="pref_location_custom_url_input_hint">Zerbitzu URL pertsonalizatua</string>
+    <string name="pref_location_custom_source_title">Pertsonatua</string>
+    <string name="pref_location_source_title">Aukeratu kokapen zerbitzu online bat</string>
+    <string name="pref_location_source_terms">Baldintzak / Pribatutasuna</string>
+    <string name="pref_location_source_suggested">Sugeritua</string>
+    <string name="pref_location_import_export_title">Inportatu edo esportatu kokapen datuak</string>
+    <string name="notification_config_required_title">Konfigurazioa beharrezkoa da</string>
+    <string name="notification_config_required_text_online_sources">Kokapen zerbitzu onlineak erabiltzen jarraitzeko, kokapen-datu zerbitzu bat hautatu behar duzu.</string>
+    <string name="location_data_export_wifi_title">Esportatu Wi-Fi kokapen datu-base lokalak</string>
+    <string name="location_data_export_cell_title">Esportatu zelulen antena kokapen datu-base lokalak</string>
+    <string name="location_data_import_title">Importatu kokapen datuak fitxatxutik</string>
+    <string name="prefcat_location_timeline_title">Google Maps-en Timeline-a</string>
+    <string name="pref_location_timeline_title">Gaitu kokapen historikoa</string>
+    <string name="pref_location_timeline_summary">"Grabatu aldian-aldian zure kokapen informazioa eta jarri 그것 Google Maps Timeline-en eskuragarri."</string>
+    <string name="pref_location_timeline_upload_title">Sinkronizatu Google kontuarekin</string>
+    <string name="pref_location_timeline_upload_summary">"Sinkronizatu kokapen historikoa Google zerbitzuekin, beste gailuetan ere ikus daitezen."</string>
     <!-- RE strings -->
+    <string name="prefcat_location_maps_title">Google Maps</string>
+    <string name="pref_map_engine_title">Mapa-errendatzailea</string>
     <!-- "Mapbox (MapLibre)" must be left untranslated .-->
+    <string name="pref_map_engine_summary">Aukeratu aplikazioetan mapak errendatzeko erabiltzen den motorra. Mapbox (MapLibre) gomendatzen da.</string>
     <!-- "Stadia Maps" must be left untranslated .-->
+    <string name="pref_stadia_key_title">Stadia Maps API gakoa</string>
+    <string name="pref_stadia_key_summary">Aukerakizkoa. Stadia Maps errendatzaile aukera bat gehitzen du; Stadiak API gako bat eskatzen du.</string>
     <!-- "HMS (Huawei Map Kit)" must be left untranslated .-->
+    <string name="pref_hms_key_title">HMS (Huawei Map Kit) API gakoa</string>
+    <string name="pref_hms_key_summary">Aukerakizkoa. HMS errendatzaile aukera bat gehitzen du; gailuan HMS Core eskatzen du.</string>
 </resources>

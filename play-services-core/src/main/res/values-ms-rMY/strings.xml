@@ -6,24 +6,390 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="dialog_confirm_button">Keluarkan</string>
     <string name="gms_settings_name">Pengaturan microG</string>
+    <string name="gms_settings_summary">Sediakan perkhidmatan MicroG.</string>
     <string name="just_a_sec">Tunggu sebentar… </string>
+    <string name="ask_permission_tos">Dengan meneruskan, anda membenarkan aplikasi ini dan Google menggunakan maklumat anda mengikut terma perkhidmatan dan dasar privasi masing-masing.</string>
+    <string name="ask_scope_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> ingin:</string>
+    <string name="ask_service_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> ingin menggunakan:</string>
+    <string name="account_manager_title">Pengurus Akaun Google</string>
     <string name="sorry">Maaf… </string>
+    <string name="auth_before_connect">Sambungkan akaun Google dengan microG.\n\nMari sambungkan ke akaun Google, gunakan butang <b>Log masuk</b> atau gunakan butang <b>Huawei</b> jika anda mempunyai peranti daripada pengilang ini. Dengan menekan salah satu butang, anda akan dialihkan ke halaman untuk log masuk ke akaun anda.</string>
     <string name="auth_sign_in">Log Masuk</string>
+    <string name="auth_connecting">"Peranti anda sedang mewujudkan sambungan ke pelayan Google untuk mendaftar masuk.
+
+Ini mungkin mengambil masa beberapa saat."</string>
+    <string name="no_network_error_desc">"Anda tidak mempunyai sambungan rangkaian.
+
+Ini mungkin masalah sementara atau peranti Android anda mungkin tidak disediakan untuk perkhidmatan data. Cuba lagi apabila disambungkan ke rangkaian mudah alih, atau sambungkan ke rangkaian Wi-Fi."</string>
+    <string name="auth_general_error_desc">"Terdapat masalah semasa berkomunikasi dengan pelayan Google.
+
+Cuba lagi kemudian."</string>
+    <string name="auth_finalize">"Peranti anda sedang menghubungi Google untuk menyimpan maklumat ke akaun anda.
+
+Ini mungkin mengambil masa beberapa minit."</string>
+    <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> memerlukan kebenaran anda untuk mengakses akaun Google anda.</string>
+    <string name="auth_package_override_request_title">Benarkan akses istimewa <b><xliff:g example="F-Droid">%1$s</xliff:g></b> kepada <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> ingin mengakses akaun anda seolah-olah ia adalah <b><xliff:g example="F-Droid">%2$s</xliff:g> oleh <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Ini mungkin memberikannya akses istimewa kepada akaun anda.</string>
+    <string name="auth_action_notification_channel_name">Amaran akaun Google</string>
+    <string name="auth_action_notification_channel_description">Memberitahu apabila salah satu akaun Google anda memerlukan persediaan tambahan sebelum ia boleh digunakan atau apabila akaun tidak serasi dengan microG.</string>
+    <string name="auth_action_notification_title">Tindakan akaun diperlukan</string>
+    <string name="auth_action_notification_content">Akaun Google anda memerlukan persediaan tambahan.</string>
+    <string name="auth_action_reauth_notification_title">Tindakan akaun diperlukan</string>
+    <string name="auth_action_activity_header">Selesaikan persediaan akaun Google anda</string>
+    <string name="auth_action_activity_explanation">Lengkapkan langkah-langkah berikut untuk membolehkan anda menggunakan akaun Google %s pada peranti ini.</string>
+    <string name="auth_action_step_enable_checkin">Dayakan pendaftaran peranti</string>
+    <string name="auth_action_step_enable_checkin_description">"Peranti anda perlu mendaftar ke Google sekurang-kurangnya sekali.
+
+Anda boleh menyahdayakan pendaftaran peranti Google selepas persediaan akaun selesai."</string>
+    <string name="auth_action_step_enable_gcm">Dayakan Pemesejan Awan</string>
+    <string name="auth_action_step_enable_gcm_description">Anda boleh menyahdayakan Pemesejan Awan selepas persediaan akaun selesai.</string>
+    <string name="auth_action_step_allow_microg_gcm">Benarkan Pemesejan Awan untuk microG</string>
+    <string name="auth_action_step_allow_microg_gcm_description">Mengikut pilihan anda, microG memerlukan kebenaran daripada anda sebelum ia boleh mendaftar dirinya untuk Pemesejan Awan.</string>
+    <string name="auth_action_step_enable_lockscreen">Konfigurasikan kunci skrin selamat</string>
+    <string name="auth_action_step_enable_lockscreen_description">"Akaun Google anda diuruskan oleh tempat kerja atau institusi pendidikan anda. Pentadbir anda telah memutuskan bahawa peranti memerlukan kunci skrin selamat sebelum mereka boleh mengakses data akaun.
+
+Sila tetapkan kata laluan, PIN, atau kunci corak skrin."</string>
+    <string name="auth_action_step_perform_content_description">Klik untuk laksanakan langkah</string>
+    <string name="auth_action_step_completed_content_description">Langkah selesai</string>
+    <string name="auth_action_activity_finish">Selesai</string>
     <string name="signin_picker_title">Pilih akaun</string>
+    <string name="signin_picker_subtitle">untuk teruskan ke <xliff:g example="F-Droid">%1$s</xliff:g></string>
     <string name="signin_picker_add_account_label">Tambah akaun lain</string>
+    <string name="signin_confirm_title">Benarkan anda log masuk ke <xliff:g example="F-Droid">%1$s</xliff:g></string>
     <string name="signin_confirm_button_text">Benarkan dan kongsi</string>
+    <string name="signin_subtext_sharing">Untuk teruskan, microG akan kongsikan nama, alamat emel dan gambar profil akaun Google anda dengan <xliff:g example="F-Droid">%1$s</xliff:g>.</string>
+    <string name="perm_provision_label">sediakan perkhidmatan microG</string>
+    <string name="perm_provision_description">Membenarkan aplikasi untuk mengkonfigurasi perkhidmatan microG tanpa interaksi pengguna</string>
+    <string name="perm_car_speed_label">Kelajuan kereta</string>
+    <string name="perm_car_speed_description">"Akses kelajuan kereta anda"</string>
+    <string name="perm_car_info_label">Maklumat kereta</string>
+    <string name="perm_car_info_description">"Akses maklumat kereta anda"</string>
+    <string name="perm_car_fuel_label">Tahap bahan api kereta</string>
+    <string name="perm_car_fuel_description">"Akses maklumat tahap bahan api kereta anda"</string>
+    <string name="perm_car_mileage_label">Perbatuan kereta</string>
+    <string name="perm_car_mileage_description">"Akses maklumat perbatuan kereta anda"</string>
+    <string name="perm_car_vendor_extension_label">Saluran vendor kereta</string>
+    <string name="perm_car_vendor_extension_description">"Akses saluran vendor kereta anda untuk bertukar maklumat khusus kereta"</string>
+    <string name="service_name_checkin">Pendaftaran Peranti</string>
+    <string name="service_name_mcs">Pemesejan Awan</string>
+    <string name="service_name_device_attestation">Attestasi Peranti</string>
+    <string name="service_name_vending">Perkhidmatan Play Store</string>
+    <string name="service_name_work_profile">Profil kerja</string>
+    <string name="games_title">Google Play Games</string>
+    <string name="games_info_title"><xliff:g example="F-Droid">%1$s</xliff:g> ingin menggunakan Play Games</string>
+    <string name="games_info_content">Untuk menggunakan Play Games, pemasangan apl Google Play Games diperlukan. Aplikasi mungkin boleh diteruskan tanpa Play Games, tetapi ada kemungkinan ia akan berkelakuan tidak dijangka.</string>
+    <string name="pick_place_title">Pilih tempat</string>
+    <string name="place_picker_select_title">Pilih lokasi ini</string>
+    <string name="place_picker_nearby_places">Tempat berhampiran</string>
     <!-- Self check -->
     <string name="self_check_cat_system">Sistem</string>
+    <string name="self_check_name_system_spoofs">Sistem memalsukan tandatangan: </string>
+    <string name="self_check_resolution_system_spoofs">Sila semak dokumentasi tentang langkah-langkah yang mungkin diperlukan.</string>
+    <string name="self_check_pkg_gms">Perkhidmatan microG</string>
+    <string name="self_check_pkg_vending">Companion microG / Play Store</string>
+    <string name="self_check_pkg_gsf">Rangka Kerja Perkhidmatan microG</string>
+    <string name="self_check_name_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> dipasang: </string>
+    <string name="self_check_resolution_app_installed">Pasang aplikasi <xliff:g example="F-Droid">%1$s</xliff:g> atau aplikasi yang serasi. Sila semak dokumentasi untuk mengetahui aplikasi yang serasi.</string>
+    <string name="self_check_name_correct_sig"><xliff:g example="F-Droid">%1$s</xliff:g> mempunyai tandatangan yang betul: </string>
+    <string name="self_check_resolution_correct_sig">Sama ada <xliff:g example="F-Droid">%1$s</xliff:g> yang dipasang tidak serasi atau penyamaran tandatangan tidak aktif untuknya. Sila semak dokumentasi tentang aplikasi dan ROM yang serasi.</string>
+    <string name="self_check_name_battery_optimizations">Pengoptimuman bateri diabaikan:</string>
+    <string name="self_check_resolution_battery_optimizations">Sentuh di sini untuk menyahaktifkan pengoptimuman bateri. Kegagalan melakukan ini mungkin menyebabkan aplikasi tidak berfungsi dengan betul.</string>
     <!-- Settings strings -->
     <string name="prefcat_about">Mengenai</string>
+    <string name="cond_gcm_bat_summary">Anda telah mengaktifkan Pemesejan Awan tetapi mempunyai pengoptimuman bateri aktif untuk Perkhidmatan microG. Untuk notifikasi tolak sampai, anda harus mengabaikan pengoptimuman bateri.</string>
+    <string name="prefs_account">Keutamaan akaun</string>
+    <string name="prefs_account_privacy">Info peribadi &amp; privasi</string>
+    <string name="prefs_account_security">Log masuk &amp; keselamatan</string>
+    <string name="pref_auth_trust_google_summary">Apabila dinyahaktifkan, pengguna akan ditanya sebelum permintaan kebenaran aplikasi dihantar ke Google. Sesetengah aplikasi akan gagal menggunakan akaun Google jika ini dinyahaktifkan.</string>
+    <string name="pref_auth_visible_summary">Apabila didayakan, semua aplikasi pada peranti ini akan dapat melihat alamat e-mel Akaun Google anda tanpa kebenaran terlebih dahulu.</string>
+    <string name="pref_auth_include_android_id_summary">Apabila dinyahaktifkan, permintaan pengesahan tidak akan dipautkan kepada pendaftaran peranti, yang mungkin membenarkan peranti yang tidak dibenarkan untuk log masuk, tetapi mungkin mempunyai kesan yang tidak dijangka.</string>
+    <string name="pref_auth_strip_device_name_summary">Apabila diaktifkan, permintaan pengesahan tidak akan menyertakan nama peranti, yang mungkin membenarkan peranti yang tidak dibenarkan untuk log masuk, tetapi mungkin mempunyai kesan yang tidak dijangka.</string>
+    <string name="pref_auth_two_step_verification_title">Terima permintaan pengesahan dua langkah</string>
+    <string name="pref_auth_two_step_verification_summary">Apabila diaktifkan, peranti boleh menerima permintaan pengesahan dua langkah daripada Google (Cloud Messaging diperlukan).</string>
+    <string name="pref_auth_allow_find_devices_title">Benarkan tindak balas kepada Google Device Finder</string>
+    <string name="pref_auth_allow_find_devices_summary">Apabila diaktifkan, peranti boleh bertindak balas kepada pemberitahuan Find My Device daripada Google (Cloud Messaging diperlukan).</string>
+    <string name="pref_checkin_enable_summary">Mendaftarkan peranti anda ke perkhidmatan Google dan mencipta pengenal pasti peranti yang unik. microG membuang bit pengecam selain daripada nama akaun Google anda daripada data pendaftaran.</string>
+    <string name="checkin_last_registration">Pendaftaran terakhir: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="pref_accounts_title">Akaun</string>
+    <string name="pref_game_accounts_title">Akaun Google Game</string>
     <string name="prefcat_accounts_settings_title">Tetapan</string>
+    <string name="prefcat_accounts_backup_title">Sandaran akaun</string>
+    <string name="pref_accounts_backup_title">Sandarkan akaun</string>
+    <string name="pref_accounts_backup_summary">Eksport akaun Google ke fail</string>
+    <string name="pref_accounts_restore_title">Pulihkan akaun</string>
+    <string name="pref_accounts_restore_summary">Import akaun Google daripada fail</string>
+    <string name="pref_accounts_backup_warning_title">Sandarkan akaun?</string>
+    <string name="pref_accounts_backup_warning_message">Ini menulis akaun dan token log masuk (SID/LSID) anda ke dalam fail. Sesiapa yang memperoleh fail ini boleh mengakses akaun anda, jadi simpan ia dengan selamat dan jangan sesekali berkongsinya.</string>
+    <string name="button_backup_accounts">Sandarkan</string>
+    <string name="snackbar_accounts_backed_up">Akaun telah disandarkan</string>
+    <string name="snackbar_accounts_restored">%1$d akaun dipulihkan</string>
+    <string name="snackbar_accounts_export_failed">Sandaran gagal</string>
+    <string name="snackbar_accounts_import_failed">Pemulihan gagal</string>
+    <string name="auth_add_account">Tambah Akaun</string>
+    <string name="pref_add_account_summary">Tambah akaun Google</string>
+    <string name="pref_gcm_enable_mcs_summary">Cloud Messaging ialah penyedia pemberitahuan tolak yang digunakan oleh banyak aplikasi pihak ketiga. Untuk menggunakannya, anda mesti mengaktifkan pendaftaran peranti.</string>
+    <string name="pref_hide_launcher_icon">Sembunyikan ikon dalam pelancar</string>
+    <string name="hide_launcher_icon_dialog_message">Jika didayakan, MicroG akan disembunyikan dalam pelancar aplikasi anda. MicroG boleh dibuka daripada maklumat aplikasi yang terdapat dalam senarai aplikasi sistem peranti anda.</string>
+    <string name="hide_launcher_icon_updating_title">Sila tunggu sementara aplikasi dikemas kini</string>
+    <string name="pref_language_title">Bahasa</string>
+    <string name="pref_language_system_default">Lalai sistem</string>
+    <string name="pref_update_title">Semak kemas kini</string>
+    <string name="pref_update_summary">Semak GitHub untuk versi yang lebih baharu.</string>
+    <string name="update_include_prerelease">Sertakan binaan pembangunan</string>
+    <string name="update_available_title">Kemas kini tersedia</string>
+    <string name="update_available_prerelease_title">Kemas kini tersedia (pra-rilis)</string>
+    <string name="update_available_message">v%1$s baharu tersedia. Anda mempunyai versi v%2$s dipasang. Muat turun dan pasang kemas kini?</string>
+    <string name="update_now">Kemas kini</string>
+    <string name="update_whats_new">Apa yang baharu</string>
+    <string name="update_ignore">Abaikan</string>
+    <string name="update_downloading_title">Memuat turun kemas kini…</string>
+    <string name="update_download_failed">Muat turun gagal. Periksa sambungan anda dan cuba lagi.</string>
+    <string name="update_signature_mismatch">Aplikasi tidak boleh dikemas kini, tandatangan adalah berbeza.</string>
     <string name="update_failed_title">Kemas kini gagal</string>
+    <string name="update_permission_required_title">Kebenaran diperlukan</string>
+    <string name="update_permission_required_message">Untuk memasang kemas kini, sila benarkan MicroG memasang aplikasi tidak dikenali dalam tetapan sistem.</string>
     <string name="update_open_settings">Tetapan</string>
+    <string name="update_check_failed">Tidak dapat menyemak kemas kini. Periksa sambungan anda dan cuba lagi.</string>
+    <string name="update_up_to_date_title">Anda telah dikemas kini</string>
+    <string name="update_up_to_date_message">MicroG-RE v%s adalah versi terkini.</string>
+    <string name="update_notification_title">Kemas kini tersedia</string>
+    <string name="update_notification_text">v%s baharu tersedia, ketik untuk kemas kini</string>
+    <string name="update_notification_channel">Kemas kini</string>
+    <string name="update_notification_permission_title">Pemberitahuan</string>
+    <string name="update_notification_permission_message">Untuk memberitahu anda apabila kemas kini baharu tersedia, MicroG-RE memerlukan kebenaran untuk menghantar pemberitahuan. Sila benarkan pemberitahuan supaya amaran kemas kini dapat sampai kepada anda.</string>
+    <string name="update_notification_permission_allow">Benarkan</string>
     <string name="update_notification_permission_not_now">Bukan sekarang</string>
+    <string name="update_notification_permission_open_settings">Buka tetapan</string>
+    <string name="gcm_last_message_at">Mesej terakhir: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_registered_since">Berdaftar sejak: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_unregister_confirm_title">Batal daftar <xliff:g example="F-Droid">%1$s</xliff:g>?</string>
+    <string name="gcm_unregister_confirm_message">Beberapa aplikasi tidak mendaftar semula secara automatik dan/atau tidak menyediakan pilihan untuk melakukannya secara manual. Aplikasi ini mungkin tidak berfungsi dengan betul selepas membatalkan pendaftaran.\nTeruskan?</string>
+    <string name="gcm_unregister_after_deny_message">Anda telah menolak aplikasi untuk mendaftar pemberitahuan tolak yang sudah didaftarkan.\nAdakah anda mahu membatalkan pendaftarannya sekarang supaya ia tidak menerima mesej tolak pada masa hadapan?</string>
+    <string name="gcm_messages_counter">Mesej: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> bait)</string>
+    <string name="gcm_network_state_connected">Tersambung sejak <xliff:g example="2 hours ago">%1$s</xliff:g></string>
+    <string name="gcm_enable_switch">Terima pemberitahuan tolak</string>
+    <string name="gcm_allow_app_popup">Benarkan <xliff:g example="F-Droid">%1$s</xliff:g> untuk mendaftar pemberitahuan tolak?</string>
+    <string name="pref_push_app_allow_register_summary">Benarkan aplikasi mendaftar untuk pemberitahuan tolak.</string>
+    <string name="pref_push_app_wake_for_delivery_summary">Mulakan aplikasi semasa dalam latar belakang untuk menerima mesej tolak masuk.</string>
     <string name="prefcat_advanced">Lebih mahir</string>
+    <string name="safetynet_intro">Google SafetyNet ialah sistem pensijilan peranti, memastikan peranti tersebut dikunci dengan betul dan serasi dengan Android CTS. Sesetengah aplikasi menggunakan SafetyNet atas sebab keselamatan atau sebagai prasyarat untuk perlindungan usikan.\n\nmicroG GmsCore mengandungi pelaksanaan SafetyNet percuma, tetapi pelayan rasmi memerlukan permintaan SafetyNet ditandatangani menggunakan sistem proprietari DroidGuard.</string>
+    <string name="safetynet_enable_switch">Benarkan pengesahan peranti</string>
+    <string name="pref_safetynet_test_title">Uji pengesahan SafetyNet</string>
+    <string name="pref_recaptcha_test_title">Uji ReCAPTCHA</string>
+    <string name="pref_recaptcha_enterprise_test_title">Uji ReCAPTCHA Enterprise</string>
+    <string name="pref_test_summary_passed">Lulus semua ujian</string>
+    <string name="pref_test_summary_failed">Gagal: %s</string>
+    <string name="pref_test_summary_warn">Amaran: %s</string>
+    <string name="pref_test_summary_running">Sedang berjalan…</string>
+    <string name="pref_droidguard_unsupported_summary">Pelaksanaan DroidGuard tidak disokong pada peranti ini. Perkhidmatan SafetyNet mungkin tidak berfungsi dengan betul.</string>
+    <string name="prefcat_safetynet_apps_title">Aplikasi menggunakan SafetyNet</string>
+    <string name="prefcat_device_attestation_apps_title">Aplikasi menggunakan Pengesahan Peranti</string>
+    <string name="pref_device_attestation_app_allow_requests_title">Benarkan permintaan</string>
+    <string name="pref_device_attestation_app_allow_requests_summary">Benarkan aplikasi meminta pengesahan peranti</string>
+    <string name="menu_clear_recent_requests">Kosongkan permintaan terbaru</string>
+    <string name="safetynet_last_run_at">Penggunaan terakhir: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
     <string name="profile_name_native">Asli</string>
+    <string name="pref_safetynet_recent_uses">Penggunaan terkini</string>
+    <string name="pref_safetynet_recent_attestation_summary">Attestasi: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_summary">ReCaptcha: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_enterprise_summary">ReCaptcha Enterprise: %s</string>
+    <string name="pref_safetynet_recent_copy_json">Salin data JSON JWS</string>
+    <string name="pref_safetynet_recent_advice">Nasihat</string>
+    <string name="pref_safetynet_recent_eval_type">Jenis penilaian</string>
+    <string name="pref_safetynet_recent_response_status">Status respons</string>
+    <string name="pref_safetynet_recent_cat_response">Data respons</string>
+    <string name="pref_safetynet_recent_cat_request">Data permintaan</string>
+    <string name="pref_safetynet_recent_nonce">Nonce (Heks)</string>
+    <string name="pref_safetynet_recent_request_time">Masa permintaan</string>
+    <string name="pref_safetynet_recent_request_type">Jenis permintaan</string>
+    <string name="pref_safetynet_recent_cat_basic">Data asas</string>
+    <string name="pref_safetynet_recent_token">Token</string>
+    <string name="pref_safetynet_recent_copied">Disalin ke papan keratan!</string>
+    <string name="pref_safetynet_test_integrity_cts_passed">Integriti dan CTS lulus</string>
+    <string name="pref_safetynet_test_cts_failed">CTS gagal</string>
+    <string name="pref_safetynet_test_integrity_failed">Integriti gagal</string>
+    <string name="pref_safetynet_test_not_completed">Belum selesai lagi</string>
+    <string name="pref_safetynet_test_no_result">Tiada keputusan</string>
+    <string name="pref_safetynet_test_invalid_json">JSON tidak sah</string>
+    <string name="pref_vending_licensing_category">Pelesenan Google Play</string>
+    <string name="pref_vending_licensing_enable_switch">Jawab permintaan pengesahan lesen</string>
+    <string name="pref_vending_license_enable_summary">Beberapa apl memerlukan pengesahan bahawa anda telah membelinya di Google Play. Apabila diminta oleh apl, microG boleh memuat turun bukti pembelian daripada Google. Jika dinyahaktifkan, atau jika tiada akaun Google ditambah, permintaan untuk pengesahan lesen akan diabaikan.</string>
+    <string name="pref_vending_licensing_purchase_free_apps_switch">Tambah apl percuma ke perpustakaan secara automatik</string>
+    <string name="pref_vending_licensing_purchase_free_apps_summary">Apl percuma mungkin menyemak sama ada ia telah dimuat turun daripada Google Play. Tambah apl percuma ke perpustakaan akaun anda secara automatik untuk sentiasa melepasi semakan bagi semua apl percuma yang tersedia untuk anda sekarang.</string>
+    <string name="pref_vending_feature_delivery">Penghantaran Ciri Google Play</string>
+    <string name="pref_vending_split_install_switch">Pemasangan komponen atas permintaan</string>
+    <string name="pref_vending_licensing_split_install_summary">Benarkan apl memuat turun dan memasang komponen tambahan</string>
+    <string name="feedback_disabled">Maklum balas tidak dapat dilakukan buat masa ini</string>
+    <string name="backup_disabled">Sandaran tidak dapat dilakukan buat masa ini</string>
+    <string name="pref_vending_billing_category">Pengebilan Google Play</string>
+    <string name="pref_vending_billing_enable_switch">Kendalikan permintaan pengebilan</string>
+    <string name="pref_vending_billing_enable_summary">Apabila didayakan, beberapa apl boleh melengkapkan pembelian atau memulakan langganan melalui perkhidmatan Pengebilan Play Google.</string>
+    <string name="pref_vending_billing_note_experimental">Ciri ini adalah eksperimen dan boleh menyebabkan kehilangan wang. Anda telah diberi amaran.</string>
+    <string name="pref_vending_billing_note_licensing">Beberapa apl mungkin memerlukan anda untuk mendayakan pengesahan lesen bagi mengesahkan pembelian anda.</string>
+    <string name="pref_vending_asset_delivery_category">Penghantaran Aset Google Play</string>
+    <string name="pref_vending_asset_delivery_switch">Dayakan penghantaran aset atas permintaan</string>
+    <string name="pref_vending_asset_delivery_summary">Muat turun aset tambahan apabila diminta oleh apl yang menggunakan Penghantaran Aset Play</string>
+    <string name="pref_vending_asset_device_sync_summary">Aplikasi yang menggunakan Penghantaran Aset Play akan memuat turun aset tambahan berdasarkan maklumat peranti yang sedang digunakan.</string>
+    <string name="pref_vending_asset_device_sync_switch">Dayakan penyinkronan maklumat peranti</string>
+    <string name="pref_workprofile_create_account">Benarkan penyediaan akaun kerja</string>
+    <string name="pref_workprofile_intro">Apabila menyediakan profil kerja untuk tempat kerja atau institusi pendidikan anda,
+        penyediaan mungkin cuba menyambung ke Google untuk membolehkan muat turun apl ke profil tersebut.</string>
+    <string name="pref_workprofile_disclaimer">Adalah menjadi tanggungjawab anda untuk memastikan penggunaan microG anda selaras dengan polisi korporat.
+        microG disediakan atas dasar usaha terbaik dan tidak dapat menjamin akan berkelakuan tepat seperti yang diharapkan.</string>
+    <string name="pref_auto_create_player">Benarkan pendaftaran akaun Play Games</string>
+    <string name="pref_auto_create_player_intro">Apabila bermain permainan, anda perlu menggunakan akaun Play Games untuk log masuk dan merekod fungsi berkaitan permainan, seperti pencapaian, papan pendahulu, arkib, dan lain-lain. Selepas dinyahaktifkan, akaun Google yang tidak terikat dengan akaun Play Games tidak akan didaftarkan secara automatik, dan permainan tersebut tidak akan dapat log masuk dan dimainkan.</string>
+    <string name="pref_allow_upload_game_played">Benarkan muat naik permainan yang dimainkan</string>
+    <string name="pref_allow_upload_game_played_summary">Apabila dinyahaktifkan, permainan tidak akan melaporkan status permainan yang dimainkan selepas log masuk ke dalam permainan, dan sesetengah permainan mungkin tidak dapat log masuk.</string>
+    <string name="pref_change_default_game_player">Tukar akaun untuk permainan</string>
+    <string name="pref_change_default_game_player_summary">Tukar akaun lalai untuk permainan &amp; Tukar akaun mengikut permainan.</string>
+    <string name="pref_delete_game_account_data">Padam data Play Games</string>
+    <string name="pref_delete_game_account_data_summary">Padam akaun Play Games &amp; semua data &amp; Padam data permainan individu.</string>
+    <string name="credentials_assisted_cancel">Batal</string>
     <string name="credentials_assisted_continue">Teruskan</string>
+    <string name="credentials_assisted_confirmation_header">Mendaftar masuk untuk anda</string>
+    <string name="credentials_assisted_continue_as_user_button_label">Teruskan sebagai %1$s</string>
+    <string name="credentials_assisted_sign_back_title">Daftar masuk semula ke %1$s dengan Google</string>
+    <string name="credentials_assisted_signin_consent_header">Mendaftar masuk sebagai %1$s</string>
+    <string name="credentials_assisted_signin_consent">Dengan meneruskan, Google akan berkongsi nama, alamat e-mel dan gambar profil anda dengan %1$s. Lihat Dasar Privasi dan Terma Perkhidmatan %1$s.</string>
+    <string name="credentials_assisted_signin_description">Anda boleh mengurus Log masuk dengan Google dalam Akaun Google anda.</string>
+    <string name="credentials_assisted_choose_account_label">Pilih akaun</string>
     <string name="credentials_assisted_choose_account_subtitle">untuk teruskan ke %1$s</string>
+    <string name="credentials_assisted_choose_account_error_tips">Keabnormalan akaun</string>
+    <string name="credentials_assisted_signin_button_text_long">Log masuk dengan Google</string>
+    <string name="credentials_assisted_signin_add_account">Tambah Akaun</string>
+    <string name="credentials_service_sign_in_with_google_label">Log masuk dengan Google</string>
+    <string name="credentials_service_remote_custom_subtitle">Kunci keselamatan, telefon pintar atau tablet</string>
+    <string name="limited_services_dialog_information">Anda sedang menggunakan Perkhidmatan Terhad microG. Tidak seperti Perkhidmatan microG biasa, versi ini hanya berfungsi dengan aplikasi yang menggunakan pustaka microG, bukan aplikasi di Google Play. Ini bermakna kebanyakan aplikasi akan mengabaikan perkhidmatan ini.</string>
+    <string name="limited_services_dialog_information_ack">Saya faham</string>
+    <string name="games_achievement_list_title">Pencapaian</string>
+    <string name="games_achievements_empty_text">Tiada pencapaian untuk permainan ini</string>
+    <string name="games_api_access_denied">Tiada akaun pada peranti ini yang boleh mengakses API Permainan</string>
+    <string name="games_achievement_locked_content_description">terkunci</string>
+    <string name="games_achievement_unlocked_content_description">dibuka</string>
+    <string name="games_achievement_extra_text">%1$s XP</string>
+    <string name="games_leaderboard_empty_text">Tiada papan pendahulu untuk permainan ini</string>
+    <string name="games_leaderboard_list_title">Kedudukan</string>
+    <string name="games_leaderboards_score_label">Markah: %1$s</string>
+    <string name="games_snapshot_empty_text">Tiada simpanan permainan yang telah disimpan lagi</string>
+    <string name="games_snapshot_choose_btn_text">pilih</string>
+    <string name="games_snapshot_delete_btn_text">padam</string>
+    <string name="games_delete_snapshot_dialog_title">Padam permainan yang disimpan</string>
+    <string name="games_delete_snapshot_dialog_message">Adakah anda pasti mahu memadam permainan yang disimpan ini?</string>
+    <string name="games_delete_snapshot_dialog_cancel">Batal</string>
+    <string name="games_delete_snapshot_dialog_ok">OK</string>
+    <string name="games_delete_snapshot_error">Pemadaman gagal, sila cuba lagi kemudian</string>
+    <string name="games_state_description_signed_out">Telah log keluar</string>
+    <string name="games_state_description_delete">Padam</string>
+    <string name="games_change_button_text">Tukar</string>
+    <string name="games_change_default_account_section_title">Tukar akaun lalai untuk permainan</string>
+    <string name="games_change_default_account_description">Akaun lalai: %1$s</string>
+    <string name="games_change_default_account_explanation">Akaun ini digunakan untuk log masuk anda ke permainan secara automatik, menyimpan kemajuan permainan anda, dan menyimpan tetapan anda. Menukar akaun lalai atau log keluar mungkin menetapkan semula kemajuan dan tetapan anda untuk permainan yang telah anda mainkan.</string>
+    <string name="games_change_per_game_title">Tukar akaun mengikut permainan</string>
+    <string name="games_change_per_game_description">Menukar akaun untuk permainan yang dipilih atau mendaftar keluar daripadanya mungkin akan menetapkan semula kemajuan dan tetapan anda untuk permainan tersebut.</string>
+    <string name="games_change_default_account_for_all_games_dialog_title">Pilih pilihan untuk akaun lalai baharu</string>
+    <string name="games_change_default_account_for_all_games_dialog_description">Akaun lalai semasa: %1$s</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_title">Tukar akaun lalai untuk permainan baharu sahaja </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_description">Anda tidak akan kehilangan akses kepada kemajuan dan tetapan bagi permainan yang telah anda mainkan. Tetapi kemajuan anda akan terbahagi antara akaun.</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_title"> Tukar akaun lalai untuk semua permainan </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_description">Anda mungkin kehilangan akses kepada kemajuan dan tetapan bagi permainan yang telah anda mainkan. Kami akan memulakan semula permainan untuk menggunakan perubahan anda.</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_title"> Daftar keluar daripada semua permainan </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_description">Anda mungkin kehilangan akses kepada kemajuan dan tetapan untuk permainan yang telah anda mainkan. Kami akan memulakan semula permainan untuk menggunakan perubahan anda.</string>
+    <string name="games_change_per_game_dialog_title">Pilih pilihan untuk permainan ini</string>
+    <string name="games_change_per_game_dialog_description">Menukar akaun atau mendaftar keluar mungkin menetapkan semula kemajuan dan tetapan anda untuk permainan ini</string>
+    <string name="games_change_per_game_dialog_option_use_player">Gunakan %1$s</string>
+    <string name="games_change_per_game_dialog_option_use_player_snackbar_success_message">Anda akan log masuk ke permainan ini dengan %1$s</string>
+    <string name="games_change_per_game_dialog_option_sign_out">Log keluar</string>
+    <string name="games_change_per_game_dialog_option_sign_out_snackbar_success_message">Anda kini telah log keluar daripada permainan ini</string>
+    <string name="games_change_sign_out_of_all_games_snackbar_success_message">Anda kini telah log keluar daripada semua permainan</string>
+    <string name="games_change_default_account_for_all_games_snackbar_success_message">Anda akan log masuk ke semua permainan dengan %1$s</string>
+    <string name="games_change_default_account_for_new_games_snackbar_success_message">Anda akan log masuk ke permainan baharu dengan %1$s</string>
+    <string name="games_account_display_content">Akaun semasa: %1$s</string>
+    <string name="games_delete_profile_header">Padam akaun Play Games &amp; semua data</string>
+    <string name="games_delete_profile_explanation">Padam akaun Google Play Games, XP dan semua data profil anda secara kekal. Tindakan ini juga mungkin memadam skor, kemajuan (permainan yang disimpan) dan tetapan dalam permainan yang telah anda mainkan.</string>
+    <string name="games_delete_profile_button">Padam secara kekal</string>
+    <string name="games_delete_game_data_header">Padam data permainan individu</string>
+    <string name="games_delete_game_data_explanation">Anda boleh memadam data individu secara kekal untuk permainan yang telah anda mainkan menggunakan Google Play Games. Tindakan ini akan memadam skor, kemajuan (permainan yang disimpan), dan tetapan bagi permainan yang anda pilih.</string>
+    <string name="games_delete_profile_dialog_title">Adakah anda pasti ingin memadam akaun ini?</string>
+    <string name="games_delete_profile_explanation_with_gamer_name">Padam akaun Google Play Games anda secara kekal untuk nama pemain &lt;b&gt;%1$s&lt;/b&gt; (&lt;b&gt;%2$s&lt;/b&gt;), XP, dan semua data profil. Tindakan ini mungkin juga memadam skor, kemajuan (permainan yang disimpan), dan tetapan dalam permainan yang telah anda mainkan.</string>
+    <string name="games_delete_profile_dialog_message">Tindakan ini tidak boleh dibatalkan.</string>
+    <string name="games_delete_profile_fail">Tidak dapat memadam profil anda. Cuba lagi kemudian.</string>
+    <string name="games_delete_game_data_confirm_dialog_title">Padam data untuk %1$s</string>
+    <string name="games_delete_game_data_confirm_dialog_message">Memadam data anda untuk %1$s secara kekal akan mengalih keluar skor, kemajuan (permainan yang disimpan) dan tetapan permainan dalam Google Play Games.</string>
+    <string name="games_popup_signin_welcome">Hai, %1$s</string>
+    <string name="family_management_title">Keluarga</string>
+    <string name="family_management_retry">Cuba lagi</string>
+    <string name="family_management_load_error">Pemuatan kandungan gagal</string>
+    <string name="family_management_toolbar_back">Kembali</string>
+    <string name="family_management_toolbar_more">Lagi</string>
+    <string name="family_management_exit_family_group">Tinggalkan kumpulan keluarga</string>
+    <string name="family_management_delete_family_group">Padam kumpulan keluarga</string>
+    <string name="family_management_leave_family_password_title">Sahkan kata laluan untuk meninggalkan kumpulan keluarga</string>
+    <string name="family_management_delete_family_password_title">Sahkan kata laluan untuk memadam kumpulan keluarga</string>
+    <string name="family_management_remove_member_password_title">Sahkan kata laluan untuk mengalih keluar \"%s\"</string>
+    <string name="family_management_invite_family_member">Jemput ahli keluarga</string>
+    <string name="family_management_invite_slots_left">%1$d jemputan berbaki</string>
+    <string name="family_management_cancel_invite">Batalkan jemputan</string>
+    <string name="family_management_cancel_invite_success">Jemputan dibatalkan dengan berjaya</string>
+    <string name="family_management_cancel_invite_error">Masalah membatalkan jemputan. Cuba lagi.</string>
+    <string name="family_management_remove_member">Alih Keluar Ahli</string>
+    <string name="family_management_member_removed_success">%s telah dialih keluar daripada kumpulan keluarga anda</string>
+    <string name="family_management_member_remove_failed">Masalah mengalih keluar %s. Cuba lagi.</string>
+    <string name="family_management_leave_family_error_message">Masalah meninggalkan kumpulan keluarga. Cuba lagi.</string>
+    <string name="family_management_exist_group_success">Anda telah meninggalkan kumpulan keluarga anda…</string>
+    <string name="family_management_delete_group_success">Kumpulan keluarga dipadamkan</string>
+    <string name="family_management_delete_group_failure">Gagal memadam kumpulan rumah</string>
+    <string name="family_management_delete_group_cancel">Batal</string>
+    <string name="family_management_delete_group_confirm">OK</string>
+    <string name="family_management_input_pwd">Sila masukkan kata laluan anda</string>
+    <string name="family_management_invite_sent_date_format">Jemputan dihantar pada %s</string>
+    <string name="family_management_invite_send">Jemputan dihantar</string>
+    <string name="family_management_pwd_error">Kata laluan salah, sila masukkan semula</string>
+    <string name="barcode_scanner_brand">Diimbas oleh microG bagi pihak %1$s</string>
+    <string name="camera_permission_dialog_button">OK</string>
+    <string name="camera_permission_dialog_message">perkhidmatan microG perlu mengakses kamera peranti anda untuk mengimbas kod bagi %1$s.\n\nUntuk mengaktifkan, sila berikan kebenaran kamera kepada perkhidmatan microG dalam Tetapan.</string>
+    <string name="camera_permission_dialog_title">Kebenaran kamera diperlukan</string>
+    <string name="pref_app_install_settings_title">Tetapan Pemasang Apl</string>
+    <string name="pref_app_install_switch_title">Benarkan Pemasangan Apl</string>
+    <string name="pref_app_install_other_apps_note">Kebenaran membenarkan pemasangan aplikasi yang disediakan daripada sumber lain.</string>
+    <string name="pref_app_install_permission_instruction">Untuk memastikan aplikasi yang dipasang berfungsi dengan betul, sila beri kebenaran kepada microG Companion untuk memasang aplikasi yang dimuat turun daripada sumber lain.</string>
+    <string name="prefcat_app_install_list_title">Aplikasi yang menggunakan Pemasang Aplikasi</string>
+    <string name="service_name_google_location_sharing">Perkongsian Lokasi Google</string>
+    <string name="location_sharing_description">Urus perkongsian Lokasi masa nyata anda merentasi aplikasi dan perkhidmatan Google daripada peranti ini</string>
+    <string name="location_sharing_learn_more">Ketahui lebih lanjut tentang &quot;Perkongsian Lokasi&quot;</string>
+    <string name="location_sharing_switch_text">Gunakan Perkongsian Lokasi</string>
+    <string name="location_sharing_turn_off_notify_hint">Jika anda mematikan Perkongsian Lokasi untuk peranti ini, orang yang anda kongsi dengannya tidak akan dimaklumkan.</string>
+    <string name="location_sharing_off_previous_hint">Hanya lokasi terakhir yang dikongsi akan tersedia sehingga anda menghidupkannya semula.</string>
+    <string name="location_sharing_disabled">Tiada perkongsian lokasi aktif untuk akaun ini</string>
+    <string name="location_sharing_turn_on_hint">Sebaik sahaja anda mula berkongsi lokasi anda daripada apl atau perkhidmatan Google, anda boleh mengurus Perkongsian Lokasi dari sini.\n\nUntuk mula berkongsi lokasi anda, pergi ke Google Maps atau Family Link.</string>
+    <string name="location_sharing_turn_off_title">Matkan Perkongsian Lokasi</string>
+    <string name="location_sharing_turn_off_hint">Anda mungkin masih berkongsi lokasi anda daripada peranti lain yang log masuk ke Akaun Google yang sama atau daripada apl bukan Google. Pastikan anda menyemak tetapan perkongsian lokasi anda di mana-mana sahaja yang berkaitan.\n\nOrang yang anda berkongsi dengannya akan terus melihat lokasi terakhir yang dikongsi.</string>
+    <string name="location_sharing_turn_off_cancel">Kekalkan</string>
+    <string name="location_sharing_turn_off_confirm">Matkan</string>
+    <string name="location_sharing_confirm_dialog_title">Dayakan Perkongsian Lokasi</string>
+    <string name="location_sharing_confirm_dialog_text">Orang yang anda berkongsi lokasi boleh sentiasa melihat:\n·Nama dan foto anda\n·Lokasi terbaru peranti anda, walaupun anda tidak menggunakan perkhidmatan Google\n·Kuasa bateri peranti anda, dan jika ia sedang dicas\n·Masa ketibaan dan keberangkatan anda, jika mereka menambah pemberitahuan Perkongsian Lokasi</string>
     <!-- Passkey management -->
+    <string name="pref_passkey_manager_title">Urus kunci laluan</string>
+    <string name="pref_passkey_manager_empty_title">Tiada kunci laluan disimpan</string>
+    <string name="pref_passkey_manager_description">Apabila aplikasi pihak ketiga mendaftarkan kunci laluan, microG menyimpan rekod tempatan. Jika aplikasi memadamkan kunci laluan tanpa memaklumkan microG, rekod tersebut mungkin kekal terbiar. Anda boleh membuang entri saki-baki tersebut di sini.</string>
+    <string name="pref_passkey_manager_delete_dialog_title">Padam kunci laluan</string>
+    <string name="pref_passkey_manager_delete_dialog_message">Padam kunci laluan untuk \"%2$s\" pada \"%1$s\". Tindakan ini tidak boleh dibatalkan; anda perlu mendaftarkan kunci laluan baharu untuk log masuk semula.</string>
+    <string name="pref_passkey_manager_delete_dialog_confirm">Padam</string>
+    <string name="pref_passkey_manager_unknown_user">Pengguna tidak diketahui</string>
+    <string name="pref_passkey_manager_transport_screen_lock">Kunci skrin</string>
+    <string name="pref_passkey_manager_transport_usb">USB</string>
+    <string name="pref_passkey_manager_transport_nfc">NFC</string>
+    <string name="pref_passkey_manager_transport_bluetooth">Bluetooth</string>
+    <string name="pref_passkey_manager_transport_hybrid">Hibrid</string>
+    <string name="pref_passkey_manager_credential_id_format_internal">ID: %1$s</string>
+    <string name="self_check_resolution_oem_restriction">Sistem anda mungkin menyekat proses latar belakang. Ketik di sini untuk membuka laman web Don\'t Kill My App! dan pelajari cara untuk menyahaktifkan sekatan ini</string>
+    <string name="morphe_sign_in_with_google_microg_label">Log masuk dengan Google melalui MicroG RE</string>
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Varian seni bina yang salah dipasang</string>
+    <string name="abi_mismatch_message">"Binaan MicroG-RE ini hanya mengandungi pustaka 64-bit (arm64), tetapi peranti ini menjalankan ruang pengguna 32-bit.
+
+Ciri yang memerlukan Conscrypt (log masuk akaun, penstriman, BotGuard, spoof penstriman video, SponsorBlock, Return YouTube Dislike, dll.) tidak akan berfungsi dengan betul dan boleh menyebabkan isu main balik atau \"Unable to find a default SSL provider\".
+
+Pasang APK ARMv7 atau Universal sebagai ganti."</string>
+    <string name="abi_mismatch_download_armv7">Muat turun APK ARMv7</string>
+    <string name="abi_mismatch_downloading_title">Memuat turun varian yang betul…</string>
 </resources>

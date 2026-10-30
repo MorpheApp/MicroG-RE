@@ -4,8 +4,484 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="dialog_title_remove_account">Eemalda konto</string>
+    <string name="dialog_message_remove_account">"Kas olete kindel, et soovite selle konto eemaldada?
+
+Mõned teenused ja funktsioonid ei ole saadaval
+
+Teie andmed ei kao"</string>
+    <string name="dialog_confirm_button">Eemalda</string>
+    <string name="dialog_cancel_button"> 취nuelleere</string>
+    <string name="snackbar_remove_account">Konto %s eemaldatud</string>
+    <string name="snackbar_undo_button">Külluta tagasi</string>
+    <string name="gms_settings_name">MicroG seaded</string>
+    <string name="gms_settings_summary">Seadistage MicroG teenused.</string>
+    <string name="just_a_sec">Hetke...</string>
+    <string name="ask_permission_tos">Jätkates lubate sellele rakendusele ja Google\'ile kasutada teie infot vastavalt nende teenustingimustele ja privaatsuspoliitikale.</string>
+    <string name="ask_scope_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> soovib:</string>
+    <string name="ask_service_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> soovib kasutada:</string>
+    <string name="account_manager_title">Google\'i konto juhid</string>
+    <string name="sorry">Vabandust...</string>
+    <string name="auth_before_connect">Ühendage Google\'i konto microG-ga.\n\nÜhendamiseks Google\'i kontoga kasutage nuppu <b>Logi sisse</b> või nuppu <b>Huawei</b>, kui teil on selle tootja seade. Nupu vajutamisel suunatakse teid kontole sisselogimise lehele.</string>
+    <string name="auth_sign_in">Logi sisse</string>
+    <string name="auth_connecting">"Teie seade loob ühendust Google'i serveritega, et teid sisse logida.
+
+See võib võtta mõne sekundi."</string>
+    <string name="no_network_error_desc">"Sul puudub võrgühendus.
+
+See võib olla ajutine probleem või ei ole teie Androidi seadet andmeteenuste jaoks konfigureeritud. Proovige uuesti, kui olete ühendatud mobiilvõrguga, või ühendage Wi-Fi võrguga."</string>
+    <string name="auth_general_error_desc">"Google'i serveritega suhtlemisel tekkis probleem.
+
+Proovige hiljem uuesti."</string>
+    <string name="auth_finalize">"Teie seade võtab Google'iga ühendust, et salvestada teavet teie kontole.
+
+See võib võtta mõne minuti."</string>
+    <string name="allow">Luba</string>
+    <string name="deny">Keela</string>
+    <string name="auth_notification_title">Vajalik autentimine</string>
+    <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> vajab teie autorisatsiooni, et pääseda teie Google\'i kontole.</string>
+    <string name="auth_package_override_request_title">Kas lubate <b><xliff:g example="F-Droid">%1$s</xliff:g></b>-il kasutada privileegitud juurdepääsu kontole <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> soovib pääseda teie kontole nii, nagu oleks see <b><xliff:g example="F-Droid">%2$s</xliff:g> ettevõtte <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b> poolt. See võib anda sellele privileegitud juurdepääsu teie kontole.</string>
+    <string name="auth_action_notification_channel_name">Google\'i konto teavitused</string>
+    <string name="auth_action_notification_channel_description">Teavitab, kui üks teie Google\'i kontod vajab enne kasutamist täiendavat seadistamist või kui konto ei ole microG-ga ühilduv.</string>
+    <string name="auth_action_notification_title">Konto vajab tegevust</string>
+    <string name="auth_action_notification_content">Teie Google\'i konto vajab täiendavat seadistamist.</string>
+    <string name="auth_action_reauth_notification_title">Konto vajab tegevust</string>
+    <string name="auth_action_activity_header">Lõpetage oma Google\'i konto seadistamine</string>
+    <string name="auth_action_activity_explanation">Et saaksite seda seadet kasutada oma Google\'i kontoga %s, tehke järgmised sammud.</string>
+    <string name="auth_action_step_enable_checkin">Luba seadme registreerimine</string>
+    <string name="auth_action_step_enable_checkin_description">"Teie seade peab vähemalt üks kord Google'is registreeruma.
+
+Google'i seadme registreerimise saate pärast konto seadistamise lõpetamist keelata."</string>
+    <string name="auth_action_step_enable_gcm">Luba pilveteavitused</string>
+    <string name="auth_action_step_enable_gcm_description">Pärast konto seadistamise lõpuleviimistage saate pilveteavitused keelata.</string>
+    <string name="auth_action_step_allow_microg_gcm">Luba pilveteavitused rakendusele microG</string>
+    <string name="auth_action_step_allow_microg_gcm_description">Teie eelistuste kohaselt vajab microG teie loa, et registreerida end pilveteavituste jaoks.</string>
+    <string name="auth_action_step_enable_lockscreen">Seadistage turvaline ekraanilukk</string>
+    <string name="auth_action_step_enable_lockscreen_description">"Teie Google'i kontot haldab teie töökoht või õppeasutus. Teie administraator on otsustanud, et kontandandmetele pääsemiseks peab seadmel olema turvaline ekraanilukk.
+
+Palun määrake parol, PIN-kood või mustrilukk."</string>
+    <string name="auth_action_step_perform_content_description">Klõpsake, et täita etapp</string>
+    <string name="auth_action_step_completed_content_description">Etapp on lõpetatud</string>
+    <string name="auth_action_activity_finish">Lõpeta</string>
+    <string name="signin_picker_title">Vali konto</string>
+    <string name="signin_picker_subtitle">et jätkata <xliff:g example="F-Droid">%1$s</xliff:g>-ga</string>
+    <string name="signin_picker_add_account_label">Lisa teine konto</string>
+    <string name="signin_confirm_title">Luba sisselogida <xliff:g example="F-Droid">%1$s</xliff:g>-sse</string>
+    <string name="signin_confirm_button_text">Luba ja jaga</string>
+    <string name="signin_subtext_sharing">Jätkamiseks jagab microG teie Google\'i konto nime, epostiadressi ja profiilipildi <xliff:g example="F-Droid">%1$s</xliff:g>-ga.</string>
+    <string name="perm_status_broadcast_label">kuula sisemise oleku levitusi</string>
+    <string name="perm_gsf_read_gservices_label">loe Google\'i teenuse konfiguratsiooni</string>
+    <string name="perm_c2dm_receive_label">kuula C2DM sõnumid</string>
+    <string name="perm_c2dm_send_label">saada C2DM sõnumeid teistele rakendustele</string>
+    <string name="perm_gtalk_svc_label">vahetada sõnumeid ja saada sünkroonimisõ notificationsid Google\'i serveritelt</string>
+    <string name="perm_extended_access_label">Laiendatud juurdepääs Google\'i teenustele</string>
+    <string name="perm_provision_label">microG teenuste konfigureerimine</string>
+    <string name="perm_provision_description">Võimaldab rakendusel konfigureerida microG teenuseid ilma kasutaja sekkumiseta</string>
+    <string name="perm_car_speed_label">Auto kiirus</string>
+    <string name="perm_car_speed_description">"Juurdepääs auto kiirusele"</string>
+    <string name="perm_car_info_label">Auto info</string>
+    <string name="perm_car_info_description">"Juurdepääs teie auto teatele"</string>
+    <string name="perm_car_fuel_label">Auto kütuse taseme</string>
+    <string name="perm_car_fuel_description">"Ju prostitute auto kütuse taseme teabeni"</string>
+    <string name="perm_car_mileage_label">Auto läbisõit</string>
+    <string name="perm_car_mileage_description">"Ju prostitute auto läbisõidu teabeni"</string>
+    <string name="perm_car_vendor_extension_label">Auto tootja kanal</string>
+    <string name="perm_car_vendor_extension_description">"Ju prostitute auto tootja kanalile, et vahetada autospetsiifilist teavet"</string>
+    <string name="service_name_checkin">Seadme registreerimine</string>
+    <string name="service_name_mcs">Pilv sõnumiteenvikus</string>
+    <string name="service_name_device_attestation">Seadme attesteerimine</string>
+    <string name="service_name_vending">Play Store\'i teenused</string>
+    <string name="service_name_work_profile">Tööprofiil</string>
+    <string name="games_title">Google Play Games</string>
+    <string name="games_info_title"><xliff:g example="F-Droid">%1$s</xliff:g> soovib kasutada Play Games\'i</string>
+    <string name="games_info_content">Play Games\'i kasutamiseks on vaja installida Google Play Gamesi rakendus. Rakendusega saab jätkata ka ilma Play Gamesita, kuid see võib toimida ootamatult.</string>
+    <string name="pick_place_title">Vali koht</string>
+    <string name="place_picker_select_title">Vali see asukoht</string>
+    <string name="place_picker_nearby_places">Lähedased kohad</string>
+    <string name="network_type_mobile">Mobiilvõrk</string>
+    <string name="network_type_wifi">Wi-Fi</string>
+    <string name="network_type_roaming">Roaming</string>
+    <string name="network_type_other">Muud võrgud</string>
     <!-- Self check -->
+    <string name="self_check_cat_fake_sig">Altkiri-spoofingu tugi</string>
+    <string name="self_check_cat_gms_packages">Installitud paketid</string>
+    <string name="self_check_cat_system">Süsteem</string>
+    <string name="self_check_name_system_spoofs">Süsteemi allkirja võltsimine: </string>
+    <string name="self_check_resolution_system_spoofs">Palun tutvuge dokumentatsiooniga, et teada, milliseid samme võib olla vaja teha.</string>
+    <string name="self_check_pkg_gms">microG teenused</string>
+    <string name="self_check_pkg_vending">microG Companion / Play Store</string>
+    <string name="self_check_pkg_gsf">microG Services Framework</string>
+    <string name="self_check_name_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> on installitud: </string>
+    <string name="self_check_resolution_app_installed">Installige rakendus <xliff:g example="F-Droid">%1$s</xliff:g> või mõni compatibles rakendus. Palun tutvuge dokumentatsiooniga, et teada, millised rakendused on kompatibelsed.</string>
+    <string name="self_check_name_correct_sig"><xliff:g example="F-Droid">%1$s</xliff:g> signature on korrektsne: </string>
+    <string name="self_check_resolution_correct_sig">Kas installitud <xliff:g example="F-Droid">%1$s</xliff:g> ei ole ühilduv või ei ole selle jaoks aktiveeritud allkirja võrdlus. Palun tutvuge dokumentatsiooniga, millised rakendused ja ROM-id on ühilduvad.</string>
+    <string name="self_check_name_battery_optimizations">Akku optimeerimised ignoreeritakse:</string>
+    <string name="self_check_resolution_battery_optimizations">Puudutage siid, et akku optimeerimised keelata. Kui seda ei tehtaks, võivad rakendused töötada ebakorrektselt.</string>
     <!-- Settings strings -->
+    <string name="prefcat_about">Teave</string>
+    <string name="prefcat_details">Üksikasjad</string>
+    <string name="cond_gcm_bat_title">Aku optimeerimine on lubatud</string>
+    <string name="cond_gcm_bat_summary">Olete aktiveerinud Cloud Messaging, kuid microG teenustele on aktiveeritud akku optimeerimised. Push-teavituste saamiseks peaksite akku optimeerimised ignoreerima.</string>
+    <string name="cond_gcm_bat_action">Ignoreeri optimeerimist</string>
+    <string name="cond_perm_title">Luba puudub</string>
+    <string name="prefs_account">Konto eelistused</string>
+    <string name="prefs_account_privacy">Isiklikud andmed &amp; privaatsus</string>
+    <string name="prefs_account_security">Sisselogimine &amp; turvalisus</string>
+    <string name="pref_auth_trust_google_title">Usaldage Google\'i rakenduste lubade suhtes</string>
+    <string name="pref_auth_trust_google_summary">Kui see on välja lülitatud, küsitakse kasutajalt nõusolekut enne, kui rakenduse autoriseerimispäisus saadetakse Google\'ile. Mõned rakendused ei suuda Google\'i kontot kasutada, kui see on välja lülitatud.</string>
+    <string name="pref_auth_visible_title">Luba rakendustel kontosid leida</string>
+    <string name="pref_auth_visible_summary">Kui see on lubatud, saavad kõik selle seadme rakendused näha teie Google\'i kontode epostiadresse ilma eelneva loata.</string>
+    <string name="pref_auth_include_android_id_title">Autentimine seadme registreerimisega</string>
+    <string name="pref_auth_include_android_id_summary">Kui see on quaint, ei soient autentimispalbeid seadme registreerimisega, mis võib lubada loatamatut sisselogimist, kuid võib teildua nähtamatutest tagajärgedest.</string>
+    <string name="pref_auth_strip_device_name_title">Eemaldage seadme nimi autentimiseks</string>
+    <string name="pref_auth_strip_device_name_summary">Kui see on lubatud, ei sisalda autentimispalbeid seadme nime, mis võib lubada loatamatut sisselogimist, kuid võib teilduga nähtamatutest tagajärgedest.</string>
+    <string name="pref_auth_two_step_verification_title">Võtke vastu kaheastmelise kinnituse teavitusi</string>
+    <string name="pref_auth_two_step_verification_summary">Kui see on lubatud, saab seade Google\'ilt vastu võtta kaheastmelise kinnituse teavitusi (vajalik on Cloud Messaging).</string>
+    <string name="pref_auth_allow_find_devices_title">Luba vastata Google Device Finderile</string>
+    <string name="pref_auth_allow_find_devices_summary">Kui see on lubatud, saab seade vastata Google\'i „Leia minu seade“ teavitustele (vajalik on Cloud Messaging).</string>
+    <string name="pref_checkin_enable_summary">Registreerib teie seadme Google\'i teenustesse ja loob ainulaadse seadme tunniste. microG eemaldab registreerimisandmetest kõik tuvastavad bitsid, välja arvatud teie Google\'i konto nime.</string>
+    <string name="pref_device_registration_android_id">Androidi ID</string>
+    <string name="checkin_not_registered">Pole registreeritud</string>
+    <string name="checkin_last_registration">Viimane registreeringimine: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="checkin_enable_switch">Registreeri seade</string>
+    <string name="pref_info_status">Staatus</string>
+    <string name="pref_accounts_title">Kontod</string>
+    <string name="pref_game_accounts_title">Google\'i mängukontod</string>
+    <string name="pref_accounts_summary">Google\'i kontode lisamine ja haldamine</string>
+    <string name="prefcat_accounts_settings_title">Seaded</string>
+    <string name="prefcat_accounts_login_accounts_title">Sisselogitud</string>
+    <string name="prefcat_accounts_options_title">Valikud</string>
+    <string name="pref_accounts_manage_accounts_title">Kontode haldamine</string>
+    <string name="pref_accounts_manage_accounts_summary">Ava seadme kontide haldaja</string>
+    <string name="prefcat_accounts_backup_title">Konto varundamine</string>
+    <string name="pref_accounts_backup_title">Kontode varundamine</string>
+    <string name="pref_accounts_backup_summary">Eksporteeri Google\'i kontod faili</string>
+    <string name="pref_accounts_restore_title">Kontode taastamine</string>
+    <string name="pref_accounts_restore_summary">Importeeri Google\'i kontod failist</string>
+    <string name="pref_accounts_backup_warning_title">Varundada kontod?</string>
+    <string name="pref_accounts_backup_warning_message">See kirjutab teie kontod ja sisselogimise tokenid (SID/LSID) faili. Kõigeid, kellel on see fail, saavad teie kontodele ligi, seega hoidke seda turvaliselt ja ärge jagage seda kunagi.</string>
+    <string name="button_backup_accounts">Varunda</string>
+    <string name="snackbar_accounts_backed_up">Kontod on varundatud</string>
+    <string name="snackbar_accounts_restored">Taastatud %1$d konto(d)</string>
+    <string name="snackbar_accounts_export_failed">Varundamine ebaõnnestus</string>
+    <string name="snackbar_accounts_import_failed">Taastamine ebaõnnestus</string>
+    <string name="prefcat_youtube_activity">YouTube\'i tegevus</string>
+    <string name="pref_manage_all_history">Kõigi ajaloo haldamine</string>
+    <string name="pref_data_in_youtube">Sinu andmed YouTube\'is</string>
+    <string name="pref_accounts_login_accounts_summary">Kontod on salvestatud ja holdatud ainult selles seadmes. Konti püsivaks eemaldamiseks sellest seadmest puudutage seda</string>
+    <string name="pref_privacy_title">Privaatsus</string>
+    <string name="pref_privacy_summary">Autentimise ja rakenduste privaatsusseaded</string>
+    <string name="auth_add_account">Lisa konto</string>
+    <string name="prefcat_applications">Rakendused</string>
+    <string name="prefcat_authentication">Autentimine</string>
+    <string name="pref_add_account_summary">Lisa Google\'i konto</string>
+    <string name="pref_gcm_enable_mcs_summary">Cloud Messaging on push-teavituste pakkuja, mida kasutavad paljud kolmandate osapoolte rakendused. Selle kasutamiseks peate võimaldama seadme registreerimise.</string>
+    <string name="pref_gcm_confirm_new_apps_title">Kinnita uued rakendused</string>
+    <string name="pref_gcm_confirm_new_apps_summary">Küsi enne uue rakenduse registreerimist push-teavituste saamiseks</string>
+    <string name="pref_about_title">MicroG RE kohta</string>
+    <string name="pref_hide_launcher_icon">Peida ikoon käivitajast</string>
+    <string name="hide_launcher_icon_dialog_message">Kui see on lubatud, on MicroG teie rakenduste käivitajast peidetud. MicroG saab avada rakenduse teavitusest, mis asub teie seadme süsteemrakenduste loendis.</string>
+    <string name="hide_launcher_icon_updating_title">Palun oodake, kuni rakendust uuendatakse</string>
+    <string name="pref_language_title">Keel</string>
+    <string name="pref_language_system_default">Süsteemi vaikeseade</string>
+    <string name="pref_github_summary">Älakoodi hoidla</string>
+    <string name="pref_update_title">Kontrolli uuendusi</string>
+    <string name="pref_update_summary">Kontrolli GitHubist uuema versiooni olemasolu.</string>
+    <string name="update_include_prerelease">Include dev buildid</string>
+    <string name="update_available_title">Uuendus on saadaval</string>
+    <string name="update_available_prerelease_title">Uuendus on saadaval (eelversioon)</string>
+    <string name="update_available_message">Uus versioon v%1$s on saadaval. Teil on installitud versioon v%2$s. Kas uuendus alla laetakse ja installitakse?</string>
+    <string name="update_now">Uuenda</string>
+    <string name="update_whats_new">Mis on uut</string>
+    <string name="update_ignore">Ignoreeri</string>
+    <string name="update_downloading_title">Uuenduse allalaadimine…</string>
+    <string name="update_download_failed">Allalaadimine ebaõnnestus. Kontrolli ühendust ja proovi uuesti.</string>
+    <string name="update_signature_mismatch">Rakendust ei saa uuendada, kuna allkirjad ei üksi.</string>
+    <string name="update_failed_title">Uuendamine ebaõnnestus</string>
+    <string name="update_permission_required_title">Vajalik luba</string>
+    <string name="update_permission_required_message">Uuenduste installimiseks lubage MicroG-il installida tundmatuid rakendusi süsteemi seadetest.</string>
+    <string name="update_open_settings">Seaded</string>
+    <string name="update_check_failed">Uuenduste kontrollimine ebaõnnestus. Kontrolli ühendust ja proovi uuesti.</string>
+    <string name="update_up_to_date_title">Sinu versioon on värske</string>
+    <string name="update_up_to_date_message">MicroG-RE v%s on uusim versioon.</string>
+    <string name="update_notification_title">Uuendus on saadaval</string>
+    <string name="update_notification_text">Saadaval on uus versioon v%s, puuduta uuendamiseks</string>
+    <string name="update_notification_channel">Uuendused</string>
+    <string name="update_notification_permission_title">Teavitused</string>
+    <string name="update_notification_permission_message">Selleks, et teavitada teid uue uuenduse saadavuses, vajab MicroG-RE luba teavituste saatmiseks. Palun lubage teavitused, et uuenduste teated jõuaksid teieni.</string>
+    <string name="update_notification_permission_allow">Luba</string>
+    <string name="update_notification_permission_not_now">Mitte praegu</string>
+    <string name="update_notification_permission_open_settings">Ava seaded</string>
+    <string name="gcm_unregister_app">Registreeri välja</string>
+    <string name="gcm_no_message_yet">Sõnumeid veel ei ole vastatud</string>
+    <string name="gcm_last_message_at">Viimane teade: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_registered">Registreeritud</string>
+    <string name="gcm_registered_since">Registreeritud alates: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_unregister_confirm_title">Kas eemaldada registreering <xliff:g example="F-Droid">%1$s</xliff:g>?</string>
+    <string name="gcm_unregister_confirm_message">Mõned rakendused ei registreeru automaatselt uuesti ja/või ei paku võimalust seda teha käsitsi. Need rakendused ei prugu pärast deregistreerimist õigesti töötada.\nJätkata?</string>
+    <string name="gcm_unregister_after_deny_message">Keelastasite rakendusel, mis on juba registreeritud, registreeruda push-teavitustele.\nKas soovite seda nüüd deregistreerida, et see ei saaks edaspidi push-sõnumeid?</string>
+    <string name="gcm_messages_counter">Sõnumid: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> baiti)</string>
+    <string name="gcm_network_state_disconnected">Ühendus katkestatud</string>
+    <string name="gcm_network_state_connected">Ühendatud alates <xliff:g example="2 hours ago">%1$s</xliff:g></string>
+    <string name="gcm_enable_switch">Suva push-teavitused</string>
+    <string name="gcm_allow_app_popup">Kas lubada rakendusel <xliff:g example="F-Droid">%1$s</xliff:g> registreeruda push-teavitustele?</string>
+    <string name="pref_push_app_allow_register_title">Luba registreerimine</string>
+    <string name="pref_push_app_allow_register_summary">Luba rakendusel registreeruda push-teavitustele.</string>
+    <string name="pref_push_app_wake_for_delivery_title">Käivita rakendus push-teavituse korral</string>
+    <string name="pref_push_app_wake_for_delivery_summary">Käivita rakendus taustal, et sissetulevad push-sõnumid vastu võtta.</string>
+    <string name="prefcat_push_apps_title">Rakendused, mis kasutavad push-teavitusi</string>
+    <string name="prefcat_push_apps_registered_title">Registreeritud rakendused</string>
+    <string name="prefcat_push_apps_unregistered_title">Registreerimata rakendused</string>
+    <string name="prefcat_gcm_registers">Registrerid</string>
+    <string name="prefcat_advanced">Täpsemad seaded</string>
+    <string name="pref_gcm_remove_registers">Eemalda kõik registreeritud rakendused</string>
+    <string name="pref_gcm_remove_registers_summary">Kasutage seda valikut ainult siis, kui teil on probleeme rakenduse registreerimise või teavituste vastuvõtmisega</string>
+    <string name="gcm_remove_registers_dialog_title">Eemaldada kõik registreeringud?</string>
+    <string name="gcm_remove_registers_dialog_message">"See eemaldab korraga kõigi registreeritud rakenduste push-teavituste vastuvõtu
+
+Rakenduste registreerimiseks vajate uut securityTokenit ja AndroidID-d. Kontrollige seadme registreerimise olekut
+
+Mõned rakendused ei saa pärast seda tegevust uuesti registreeruda. Enne uut registreerimis请求i võib olla vaja kustutada nende rakenduste andmed"</string>
+    <string name="gcm_remove_registers_toast_message">Kõik rakendused eemaldatud tõuketeavitustelt</string>
+    <string name="prefcat_push_networks_title">Push-teavituste jaoks kasutatavad võrgud</string>
+    <string name="safetynet_intro">Google SafetyNet on seadme sertifitseerimissüsteem, mis tagab, et seade on korralikult kaitstud ja yhteilv Androidi CTS-iga. Mõned rakendused kasutavad SafetyNeti turvalisuse tõstamiseks või kui eeltingimust manipuleerimiskaitseks.\n\nmicroG GmsCore sisaldab SafetyNeti tasuta implementatsiooni, kuid ametlik server nõuab, et SafetyNeti päringud oleks allkirjastatud proprietary DroidGuard süsteemiga.</string>
+    <string name="safetynet_enable_switch">Luba seadme attestatsioon</string>
+    <string name="pref_safetynet_test_title">Testi SafetyNeti attestatsiooni</string>
+    <string name="pref_recaptcha_test_title">Testi ReCAPTCHA-t</string>
+    <string name="pref_recaptcha_enterprise_test_title">Testi ReCAPTCHA Enterprise\'i</string>
+    <string name="pref_test_summary_passed">Kõiktestid läbitati</string>
+    <string name="pref_test_summary_failed">Ebaõnnestunud: %s</string>
+    <string name="pref_test_summary_warn">Hoiatus: %s</string>
+    <string name="pref_test_summary_running">Käib…</string>
+    <string name="pref_droidguard_unsupported_summary">DroidGuardi käivitamine ei ole selles seadmes toetatud. SafetyNeti teenused võivad töötada ebakorrektse.</string>
+    <string name="prefcat_safetynet_apps_title">Rakendused, mis kasutavad SafetyNeti</string>
+    <string name="prefcat_device_attestation_apps_title">Rakendused, mis kasutavad seadme attesteerimist</string>
+    <string name="pref_device_attestation_app_allow_requests_title">Luba päringud</string>
+    <string name="pref_device_attestation_app_allow_requests_summary">Luba rakendusel päringut teha seadme attesteerimise kohta</string>
+    <string name="menu_clear_recent_requests">Tõrge viimased päringud</string>
+    <string name="safetynet_last_run_at">Viimane kasutus: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="profile_name_native">Native</string>
+    <string name="profile_name_real">Tegelik</string>
+    <string name="profile_name_user">Kohandatud: %s</string>
+    <string name="profile_name_auto">Automaatne: %s</string>
+    <string name="profile_name_system">Süsteem: %s</string>
+    <string name="pref_device_registration_import_custom_profile_title">Impordi kohandatud profiil</string>
+    <string name="pref_device_registration_serial_title">Seerianumber</string>
+    <string name="pref_device_registration_import_custom_profile_summary">Impordi seadme profiil failist</string>
+    <string name="pref_device_registration_select_profile_title">Vali profiil</string>
+    <string name="pref_device_registration_device_profile_category">Seadme profiil</string>
+    <string name="pref_safetynet_recent_uses">Viimased kasutused</string>
+    <string name="pref_safetynet_recent_attestation_summary">Attesteerimine: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_summary">ReCaptcha: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_enterprise_summary">ReCaptcha Enterprise: %s</string>
+    <string name="pref_safetynet_recent_copy_json">Kopeeri JSON JWS andmed</string>
+    <string name="pref_safetynet_recent_advice">Nõuanne</string>
+    <string name="pref_safetynet_recent_eval_type">Hinnangu tüüp</string>
+    <string name="pref_safetynet_recent_response_status">Vastuse staatus</string>
+    <string name="pref_safetynet_recent_cat_response">Vastuse andmed</string>
+    <string name="pref_safetynet_recent_cat_request">Päringu andmed</string>
+    <string name="pref_safetynet_recent_nonce">Nonce (hex)</string>
+    <string name="pref_safetynet_recent_request_time">Päringu aeg</string>
+    <string name="pref_safetynet_recent_request_type">Päringu tüüp</string>
+    <string name="pref_safetynet_recent_cat_basic">Põhianmed</string>
+    <string name="pref_safetynet_recent_token">Token</string>
+    <string name="pref_safetynet_recent_copied">Kopeeritud lõikelauale!</string>
+    <string name="pref_safetynet_test_integrity_cts_passed">Puhtus ja CTS läbitatud</string>
+    <string name="pref_safetynet_test_cts_failed">CTS ebaõnnestus</string>
+    <string name="pref_safetynet_test_integrity_failed">Puuduv terviklikkus</string>
+    <string name="pref_safetynet_test_not_completed">Veel ei ole lõpetatud</string>
+    <string name="pref_safetynet_test_no_result">Pole tulemusi</string>
+    <string name="pref_safetynet_test_invalid_json">Keelatud JSON</string>
+    <string name="push_notifications_summary_off">VÄLJA</string>
+    <string name="push_notifications_summary_automatic">SISI / Automaatselt: %s</string>
+    <string name="push_notifications_summary_manual">SISI / Manuaalselt: %s</string>
+    <string name="pref_vending_licensing_category">Google Play litsentsimine</string>
+    <string name="pref_vending_licensing_enable_switch">Vasta litsentsiverifitseerimise päringutele</string>
+    <string name="pref_vending_license_enable_summary">Mõned rakendused nõuavad kinnitust, et olete need ostnud Google Playst. Kui rakendus seda palub, saab microG alla laadida ostukinnituse Google\'ilt. Kui see on pole aktiveeritud või pole lisatud Google\'i kontot, ignoreeritakse litsentsiverifitseerimise päringuid.</string>
+    <string name="pref_vending_licensing_purchase_free_apps_switch">Lisa tasuta rakendused automaatselt raamatukku</string>
+    <string name="pref_vending_licensing_purchase_free_apps_summary">Tasuta rakendused võivad kontrollida, kas need on alla laaditud Google Playst. Lisage tasuta rakendused automaatselt oma konto raamatukku, et läbida alati kontroll kõigi praegu teie jaoks saadaval olevate tasuta rakenduste puhul.</string>
+    <string name="pref_vending_feature_delivery">Google Play funktsioonide kohaldamine</string>
+    <string name="pref_vending_split_install_switch">Komponentide paigaldamine nõudmisel</string>
+    <string name="pref_vending_licensing_split_install_summary">Luba rakendustel alla laadida ja installida täiendavaid komponente</string>
+    <string name="feedback_disabled">Tagasiside edastamine ei ole praegu võimalik</string>
+    <string name="backup_disabled">Varundamine ei ole praegu võimalik</string>
+    <string name="pref_vending_billing_category">Google Play arvutamine</string>
+    <string name="pref_vending_billing_enable_switch">Käsitle arvelduse päringuid</string>
+    <string name="pref_vending_billing_enable_summary">Pärast aktiveerimist saavad mõned rakendused teostada ostusid või vormistada tellimusi Google\'i Play Billingi teenuse kaudu.</string>
+    <string name="pref_vending_billing_note_experimental">See funktsioon on eksperimentaalne ja võib привести rahalise kaotuse. Teid on hoiatatud.</string>
+    <string name="pref_vending_billing_note_licensing">Mõned rakendused võivad nõuda ka litsentsiverifitseerimise aktiveerimist, et teie ostusid kinnitada.</string>
+    <string name="pref_vending_asset_delivery_category">Google Play Asset Delivery</string>
+    <string name="pref_vending_asset_delivery_switch">Aktiveeri ressurside nõudmisel tarnimine</string>
+    <string name="pref_vending_asset_delivery_summary">Laadi alla täiendavaid ressursse, kui seda nõuavad Play Asset Delivery\'t kasutavad rakendused</string>
+    <string name="pref_vending_asset_device_sync_summary">Rakendused, mis kasutavad Play Asset Delivery\'t, laadivad alla täiendavaid ressursse vastavalt praeguse seadme teatele.</string>
+    <string name="pref_vending_asset_device_sync_switch">Aktiveeri seadmete teabe sünkroonimine</string>
+    <string name="pref_workprofile_create_account">Luba töökonte konto loomine</string>
+    <string name="pref_workprofile_intro">Tööprofiili loomisel oma töökohale või õppeasutusele võib seadistamise käigus proovida ühendust loobida Google\'iga, et võimaldada rakenduste allalaadimist selle profiili jaoks.</string>
+    <string name="pref_workprofile_disclaimer">On teie kohustus tagada, et microG kasutamine on vastavus ettevõtte poliitikatega.
+        microG on saadud parimate võimaluste alusel ja ei saa garanteerida täpselt oodatavat käitumist.</string>
+    <string name="pref_auto_create_player">Luba Play Gamesi konto registreerimine</string>
+    <string name="pref_auto_create_player_intro">Mängimisel peate sisselogimiseks ja mänguga seotud funktsioonide, nagu saavutused, edetabelid, arhiivid jne, salvestamiseks kasutama Play Gamesi kontot. Pärast keelamist ei registreerita Google\'i kontod, mis ei ole seotud Play Gamesi kontoga, automaatselt ning mäng ei saa sisse logida ega mängida.</string>
+    <string name="pref_allow_upload_game_played">Luba mängitud mängude üleslaadimine</string>
+    <string name="pref_allow_upload_game_played_summary">Kui see on keelatud, ei teata mäng sisselogimise järel teavet mängitud staatuse kohta ja ځige mängud ei saa ehk sisse logida.</string>
+    <string name="pref_change_default_game_player">Muuda mängude kontot</string>
+    <string name="pref_change_default_game_player_summary">Muuda mängude vaikikkontot &amp; muuda kontot vastavalt mängule.</string>
+    <string name="pref_delete_game_account_data">Kustuta Play Games\'i andmed</string>
+    <string name="pref_delete_game_account_data_summary">Kustuta Play Games\'i konto &amp; kõik andmed &amp; kustuta üksikute mängude andmed.</string>
+    <string name="credentials_assisted_cancel">Loppu</string>
+    <string name="credentials_assisted_continue">Jätka</string>
+    <string name="credentials_assisted_confirmation_header">Logitakse sisse</string>
+    <string name="credentials_assisted_continue_as_user_button_label">Jätka kasutajana %1$s</string>
+    <string name="credentials_assisted_sign_back_title">Logi uuesti sisse %1$s-se Google\'iga</string>
+    <string name="credentials_assisted_signin_consent_header">Logitakse sisse kasutajana %1$s</string>
+    <string name="credentials_assisted_signin_consent">Jätkades jagab Google teie nime, e-posti aadressi ja profiilipildi %1$s-ga. Vaadake %1$s privaatsuspolitiikat ja teenuse tingimusi.</string>
+    <string name="credentials_assisted_signin_description">Sa saad hallata Google\'iga sisselogimist oma Google\'i kontodes.</string>
+    <string name="credentials_assisted_choose_account_label">Vali konto</string>
+    <string name="credentials_assisted_choose_account_subtitle">et %1$s jätkamisega jätkata</string>
+    <string name="credentials_assisted_choose_account_error_tips">Konto ebaregulaarsus</string>
+    <string name="credentials_assisted_signin_button_text_long">Logi sisse Google\'iga</string>
+    <string name="credentials_assisted_signin_add_account">Lisa konto</string>
+    <string name="credentials_service_sign_in_with_google_label">Logi sisse Google\'iga</string>
+    <string name="credentials_service_remote_custom_subtitle">Turvavõti, nutitelefon või tahvler</string>
+    <string name="limited_services_dialog_information">Kasutad microG piiratud teenuseid. Erinevalt tavalistest microG teenustest töötab see versioon ainult rakendustega, mis kasutavad microG raamatukke, mitte Google Playst saadud rakendustega. See tähendab, et enamik rakendusi ignoreerib neid teenuseid.</string>
+    <string name="limited_services_dialog_information_ack">Saan aru</string>
+    <string name="games_achievement_list_title">Saavutused</string>
+    <string name="games_achievements_empty_text">Selle mängu jaoks puuduvad saavutused</string>
+    <string name="games_api_access_denied">Ükski selle seadme konto ei saa kasutada mängude API-sid</string>
+    <string name="games_achievement_locked_content_description">lukutud</string>
+    <string name="games_achievement_unlocked_content_description">avatud</string>
+    <string name="games_achievement_extra_text">%1$s KP</string>
+    <string name="games_leaderboard_empty_text">Selle mängu jaoks puuduvad edetabelid</string>
+    <string name="games_leaderboard_list_title">Reitingud</string>
+    <string name="games_leaderboards_score_label">Skoor: %1$s</string>
+    <string name="games_snapshot_empty_text">Mängusave\'i pole veel salvestatud</string>
+    <string name="games_snapshot_choose_btn_text">vali</string>
+    <string name="games_snapshot_delete_btn_text">kustuta</string>
+    <string name="games_delete_snapshot_dialog_title">Kustuta salvestatud mäng</string>
+    <string name="games_delete_snapshot_dialog_message">Kas olete kindel, et soovite selle salvestatud mängu kustutada?</string>
+    <string name="games_delete_snapshot_dialog_cancel">Loppu</string>
+    <string name="games_delete_snapshot_dialog_ok">OK</string>
+    <string name="games_delete_snapshot_error">Kustutamine ebaõnnestus, proovige palun hiljem uuesti</string>
+    <string name="games_state_description_signed_out">Väljalogitud</string>
+    <string name="games_state_description_delete">Kustuta</string>
+    <string name="games_change_button_text">Muuda</string>
+    <string name="games_change_default_account_section_title">Muuda mängude vaikimiskontot</string>
+    <string name="games_change_default_account_description">Vaikimiskonto: %1$s</string>
+    <string name="games_change_default_account_explanation">Seda kontot kasutatakse, et teid automaatselt mängudesse sisse logida, mängu edenemist salvestada ja teie seadeid hoida. Vaikimiskonto muutmine või väljalogimine võib lähtestada teie edenemise ja seaded mängude puhul, mida olete mänginud.</string>
+    <string name="games_change_per_game_title">Muuda kontot vastavalt mängule</string>
+    <string name="games_change_per_game_description">Valitud mängu konto muutmine või sellest välja logimine võib lähtestada mängu edenemise ja seaded.</string>
+    <string name="games_change_default_account_for_all_games_dialog_title">Valige valik uue vaikekonto jaoks</string>
+    <string name="games_change_default_account_for_all_games_dialog_description">Käesolev vaikekonto: %1$s</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_title">Muuda vaikimiskont ainult uute mängude puhul</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_description">Sa ei kaota pääsu juba mängitud mängude edenemisele ja seadistustele. Kuid su edenemine jaotub konttede vahel.</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_title"> Muuda vaikimiskont kõigi mängude puhul </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_description">Võimalik, et kaotad pääsu juba mängitud mängude edenemisele ja seadistustele. Muudatuste rakendamiseks käivitame mängu uuesti.</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_title"> Logi välja kõigist mängudest </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_description">Võimalik, et kaotad pääsu juba mängitud mängude edenemisele ja seadistustele. Muudatuste rakendamiseks käivitame mängu uuesti.</string>
+    <string name="games_change_per_game_dialog_title">Vali selle mängu jaoks valik</string>
+    <string name="games_change_per_game_dialog_description">Konto muutmine või välja logimine võib lähtestada mängu edenemise ja seadistused</string>
+    <string name="games_change_per_game_dialog_option_use_player">Kasuta %1$s</string>
+    <string name="games_change_per_game_dialog_option_use_player_snackbar_success_message">Selle mängu puhul logitakse sisse kasutajaga %1$s</string>
+    <string name="games_change_per_game_dialog_option_sign_out">Logi välja</string>
+    <string name="games_change_per_game_dialog_option_sign_out_snackbar_success_message">Selle mängu puhul oled nüüd välja logitud</string>
+    <string name="games_change_sign_out_of_all_games_snackbar_success_message">Kõigist mängudest oled nüüd välja logitud</string>
+    <string name="games_change_default_account_for_all_games_snackbar_success_message">Kõigisse mängude puhul logitakse sisse kasutajaga %1$s</string>
+    <string name="games_change_default_account_for_new_games_snackbar_success_message">Uutes mängudes logitakse sisse kasutajaga %1$s</string>
+    <string name="games_account_display_content">Käesolev konto: %1$s</string>
+    <string name="games_delete_profile_header">Kustuta Play Gamesi konto &amp; kõik andmed</string>
+    <string name="games_delete_profile_explanation">Kustuta jäädavalt oma Google Play Gamesi konto, XP ja kogu profiiliandmed. See võib kustutada ka sinu tulemused, edenduse (salvestatud mängud) ja seaded mängudes, mida oled mänginud.</string>
+    <string name="games_delete_profile_button">Kustuta jäädavalt</string>
+    <string name="games_delete_game_data_header">Kustuta üksikute mängude andmed</string>
+    <string name="games_delete_game_data_explanation">Sa saad jäädavalt kustutada üksikute mängude andmed, mida oled mänginud Google Play Gamesi abil. See tegevus kustutab valitud mängu tulemused, edenduse (salvestatud mängud) ja seaded.</string>
+    <string name="games_delete_profile_dialog_title">Kas oled kindel, et soovid selle konto kustutada?</string>
+    <string name="games_delete_profile_explanation_with_gamer_name">Kustuta jäädavalt oma Google Play Gamesi konto mängijanimega &lt;b&gt;%1$s&lt;/b&gt; (&lt;b&gt;%2$s&lt;/b&gt;), XP ja kogu profiiliandmed. See toiming võib kustutada ka sinu tulemused, edenduse (salvestatud mängud) ja seaded mängudes, mida oled mänginud.</string>
+    <string name="games_delete_profile_dialog_message">Seda toimingut ei saa tagasi võtta.</string>
+    <string name="games_delete_profile_fail">Profiili ei õnnestunud kustutada. Proovi hiljem uuesti.</string>
+    <string name="games_delete_game_data_confirm_dialog_title">Kustuta andmed rakenduse %1$s kohta</string>
+    <string name="games_delete_game_data_confirm_dialog_message">Andmete jäädav kustutamine rakenduse %1$s kohta eemaldab sinu tulemused, edenduse (salvestatud mängud) ja mänguseaded Google Play Gamesist.</string>
+    <string name="games_popup_signin_welcome">Tere, %1$s</string>
+    <string name="family_management_title">Perekond</string>
+    <string name="family_management_retry">Proovi uuesti</string>
+    <string name="family_management_load_error">Sisu laadimine ebaõnnestus</string>
+    <string name="family_management_toolbar_back">Tagasi</string>
+    <string name="family_management_toolbar_more">Rohkem</string>
+    <string name="family_management_exit_family_group">Lahu peregrupist</string>
+    <string name="family_management_delete_family_group">Kustuta peregrupp</string>
+    <string name="family_management_leave_family_password_title">Kinnita parool, et lahuda peregrupist</string>
+    <string name="family_management_delete_family_password_title">Kinnita parool, et kustutada peregrupp</string>
+    <string name="family_management_remove_member_password_title">Kinnita parool, et eemaldada \"%s\"</string>
+    <string name="family_management_invite_family_member">Kutsu pereliikmeid</string>
+    <string name="family_management_cancel_invite">Tühista kutse</string>
+    <string name="family_management_cancel_invite_success">Kutse tühistati edukalt</string>
+    <string name="family_management_cancel_invite_error">Kutse tühistamisel tekis tõrke. Proovi uuesti.</string>
+    <string name="family_management_remove_member">Eemalda liige</string>
+    <string name="family_management_member_removed_success">%s eemaldati teie peregrupist</string>
+    <string name="family_management_member_remove_failed">%s eemaldamine ebaõnnestus. Proovige uuesti.</string>
+    <string name="family_management_leave_family_error_message">Peregrupist lahkumine ebaõnnestus. Proovige uuesti.</string>
+    <string name="family_management_exist_group_success">Olete lahkunud oma peregrupist…</string>
+    <string name="family_management_delete_group_success">Peregrupp kustutati</string>
+    <string name="family_management_delete_group_failure">Kodugrupi kustutamine ebaõnnestus</string>
+    <string name="family_management_delete_group_cancel">Loppu</string>
+    <string name="family_management_delete_group_confirm">OK</string>
+    <string name="family_management_input_pwd">Palun sisestage oma parool</string>
+    <string name="family_management_invite_sent_date_format">Kutse saadetud %s</string>
+    <string name="family_management_invite_send">Kutse saadetud</string>
+    <string name="family_management_pwd_error">Vale parool, palun sisestage uuesti</string>
+    <string name="barcode_scanner_brand">Skaneeris microG %1$s nimel</string>
+    <string name="camera_permission_dialog_button">OK</string>
+    <string name="camera_permission_dialog_message">microG teenustel on vaja juضاعu teie seadme kaameraga, et skaneerida koodi %1$s jaoks.\n\nLubamiseks andke seadete alt microG teenustele kaamera puudutusluba.</string>
+    <string name="camera_permission_dialog_title">Vajalik kaamera puudutusluba</string>
+    <string name="pref_app_install_settings_title">Rakenduse installimise seaded</string>
+    <string name="pref_app_install_switch_title">Luba rakenduste installimine</string>
+    <string name="pref_app_install_other_apps_note">Autoriseerimine võimaldab installida rakendusi muudest allikatest.</string>
+    <string name="pref_app_install_permission_instruction">Et tagada installitud rakenduste nõuside kohaselt toimimine, autoriseerige microG Companion rakenduste installimiseks, mis on alla laaditud muudest allikatest.</string>
+    <string name="prefcat_app_install_list_title">Rakendused, mis kasutavad rakenduse installijat</string>
+    <string name="service_name_google_location_sharing">Google\'i asukoha jagamine</string>
+    <string name="location_sharing_description">Halda selle seadme abil oma asukoha jagamist reaalajas Google\'i rakendustes ja teenustes</string>
+    <string name="location_sharing_learn_more">Loe lähemalt jaotise &quot;Asukoha jagamine&quot; kohta</string>
+    <string name="location_sharing_switch_text">Kasuta asukoha jagimist</string>
+    <string name="location_sharing_turn_off_notify_hint">Kui lülitate selle seadme asukoha jagamise välja, ei teavitate teid sellest inimesi, kellega jagate.</string>
+    <string name="location_sharing_off_previous_hint">Kuni lülitate selle uuesti sisse, on saadaval ainult teie viimane jagatud asukoht.</string>
+    <string name="location_sharing_disabled">Selle kontoga ei ole aktiivseid asukoha jagamisi</string>
+    <string name="location_sharing_turn_on_hint">Kui hakkate oma asukoha jagama Google\'i rakenduse või teenuse kaudu, saate asukoha jagamist siit hallata.\n\nAsukoha jagamise alustamiseks minge Google Mapsi või Family Linki.</string>
+    <string name="location_sharing_turn_off_title">Lülita asukoha jagamine välja</string>
+    <string name="location_sharing_turn_off_hint">Võite asukohta jagada ikka veel teiste seadmete kaudu, mis on sisselogitud samasse Google\'i kontosse, või rakenduste kaudu, mis ei ole Google\'i rakendused. Kontrollige asukoha jagamise seadeid kõikides kohtades, kus see võib kehtida.\n\nInimesed, kellega jagate, näevad edaspidi teie viimast jagatud asukohta.</string>
+    <string name="location_sharing_turn_off_cancel">Jätka</string>
+    <string name="location_sharing_turn_off_confirm">Lülita välja</string>
+    <string name="location_sharing_confirm_dialog_title">Lülita asukoha jagamine sisse</string>
+    <string name="location_sharing_confirm_dialog_text">Inimesed, kellega jagate oma asukohta, näevad alati:\n·Teie nime ja fotot\n·Teie seadme viimast asukohta, isegi kui te ei kasuta Google\'i teenust\n·Teie seadme akulaadset ja seda, kas see laadib\n·Teie saabumis- ja lahkumisaega, kui nad lisavad asukoha jagamise teavituse</string>
     <!-- Passkey management -->
+    <string name="pref_passkey_manager_title">Halli passvõtmeid</string>
+    <string name="pref_passkey_manager_empty_title">Salvestatud passvõtmeid pole</string>
+    <string name="pref_passkey_manager_description">Kui kolmandate osapoolte rakendused registreerivad passvõtmeid, hoiab microG kohaliku kirja. Kui rakendus kustutab passvõtme teavitamata microG-d, võib kirje jääda alles. Saate selliseid jäänuskirjeid siit eemaldada.</string>
+    <string name="pref_passkey_manager_delete_dialog_title">Kustuta läbikäivavõti</string>
+    <string name="pref_passkey_manager_delete_dialog_message">Kustuta läbikäivavõti kasutajale \"%2$s\" seadmes \"%1$s\". Seda toimingut ei saa tagasi pöördata; uue läbikäivavõtme registreerimiseks on vaja uuesti sisselogida.</string>
+    <string name="pref_passkey_manager_delete_dialog_confirm">Kustuta</string>
+    <string name="pref_passkey_manager_unknown_user">Tundmatu kasutaja</string>
+    <string name="pref_passkey_manager_transport_screen_lock">Ekraanilukk</string>
+    <string name="pref_passkey_manager_transport_usb">USB</string>
+    <string name="pref_passkey_manager_transport_nfc">NFC</string>
+    <string name="pref_passkey_manager_transport_bluetooth">Bluetooth</string>
+    <string name="pref_passkey_manager_transport_hybrid">Hübriid</string>
+    <string name="pref_passkey_manager_credential_id_format_internal">ID: %1$s</string>
+    <string name="self_check_cat_patched_apps">Paigutatud rakendused</string>
+    <string name="self_check_source_morphe">Morphe paigutused</string>
+    <string name="self_check_source_alternative">alternatiivsed paigutused</string>
+    <string name="self_check_resolution_patched_app_installed">Rakendusi, mis kasutavad %1$s-i, ei leitud. Palun paigutage ja installige muudetud rakendus</string>
+    <string name="self_check_name_notifications">Teavitused on lubatud</string>
+    <string name="self_check_resolution_notifications">Puudutage siia, et avada teavituste seaded. Teavitusi kasutatakse GcmService\'i taustamil tööletamiseks, kui akkumahavõrdimine on aktiveeritud või muude tingimuste korral</string>
+    <string name="self_check_name_oem_restriction">Taustaprotsesside piirangud</string>
+    <string name="self_check_resolution_oem_restriction">Teie süsteem võib piirata taustaprotsesse. Puudutage siid, et avada leht Don\'t Kill My App! ja saada teada, kuidas need piirangud keelata</string>
+    <string name="morphe_sign_in_with_google_microg_label">Logi sisse Googleiga läbi MicroG RE</string>
+    <string name="self_check_patched_app_installed">Käib %1$s-iga</string>
+    <string name="self_check_action_download_morphe">Laadi alla Morphe</string>
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Installitud on vale arhitektuuri variant</string>
+    <string name="abi_mismatch_message">"Selle MicroG-RE versiooniga on kaasas ainult 64-bitised (arm64) raamatukoonad, kuid selle seadme kasutajasüsteem on 32-bitine.
+
+Funktsioonid, mis vajavad Conscrypti (konto sisselogimine, voimastamine, BotGuard, videovoimaste spoofimine, SponsorBlock, Return YouTube Dislike jne), ei tööta korralikult ja võivad põhjustada taastamise probleeme või tekitada vea \"Unable to find a default SSL provider\".
+
+Installige selle asemel ARMv7 või universaalne APK."</string>
+    <string name="abi_mismatch_download_armv7">Laadi alla ARMv7 APK</string>
+    <string name="abi_mismatch_downloading_title">Laaditakse õiget variantt…</string>
 </resources>

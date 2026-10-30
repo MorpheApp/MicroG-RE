@@ -14,4 +14,17 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="gcm_registered_apps_counter">
+        <item quantity="one"><xliff:g example="1">%1$d</xliff:g> registreeritud rakendus</item>
+        <item quantity="other"><xliff:g example="123">%1$d</xliff:g> registreeritud rakendust</item>
+    </plurals>
+    <plurals name="cond_perm_summary">
+        <item quantity="one">microG teenuste nõudlikku kohalduvust korralise toimimise jaoks ei ole antud.</item>
+        <item quantity="other">microG teenuste korralise toimimise jaoks nõudlikke kohalduvusi ei ole antud.</item>
+    </plurals>
+    <plurals name="cond_perm_action">
+        <item quantity="one">Palu puuduvat kohalduvust</item>
+        <item quantity="other">Palu puuduvate kohalduvuste saamist</item>
+    </plurals>
+</resources>

@@ -14,4 +14,17 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="gcm_registered_apps_counter">
+        <item quantity="one"><xliff:g example="1">%1$d</xliff:g> erregistratutako aplikazio</item>
+        <item quantity="other"><xliff:g example="123">%1$d</xliff:g> erregistratutako aplikazio</item>
+    </plurals>
+    <plurals name="cond_perm_summary">
+        <item quantity="one">microG Zerbitzuen egizki funtzionatzeko beharrezkoa den baimen bat ez dago onartuta.</item>
+        <item quantity="other">microG Zerbitzuen egizki funtzionatzeko beharrezkoa diren baimenak ez daude onartuta.</item>
+    </plurals>
+    <plurals name="cond_perm_action">
+        <item quantity="one">Eskatu falta den baimena</item>
+        <item quantity="other">Eskatu falta diren baimenak</item>
+    </plurals>
+</resources>

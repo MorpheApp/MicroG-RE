@@ -4,8 +4,487 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="dialog_title_remove_account">መለያን አስወግድ</string>
+    <string name="dialog_message_remove_account">"ይህን አካውንት ለማስወገድ እርግጠኛ ነዎት?
+
+አንዳንድ አገልግሎቶች እና ተግባራት የማይገኙ ይሆናሉ
+
+መረጃዎ አይጠፋም"</string>
+    <string name="dialog_confirm_button">አስወግድ</string>
+    <string name="dialog_cancel_button">ሰርዝ</string>
+    <string name="snackbar_remove_account">መለያ %s ተሰርዟል</string>
+    <string name="snackbar_undo_button">ተመላሽ አድርግ</string>
+    <string name="gms_settings_name">የMicroG ቅንብሮች</string>
+    <string name="gms_settings_summary">የMicroG አገልግሎቶችን ያዘጋጁ።</string>
+    <string name="just_a_sec">ለጥቂት ሰከንዶች ይጠብቁ…</string>
+    <string name="ask_permission_tos">በመቀጠል፣ ይህ መተግበሪያ እና Google መረጃዎን ከየራሳቸው የአገልግሎት ውል እና የግላዊነት ፖሊሲዎች ጋር በሚስማማ መልኩ እንዲጠቀሙ ይፈቅዳሉ።</string>
+    <string name="ask_scope_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> የሚከተለውን ማድረግ ይፈልጋል፦</string>
+    <string name="ask_service_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> የሚከተለውን መጠቀም ይፈልጋል፦</string>
+    <string name="account_manager_title">የጉግል አካውንት ስራ አስኪያጅ</string>
+    <string name="sorry">ይቅርታ…</string>
+    <string name="auth_before_connect">የGoogle አካውንትን ከmicroG ጋር ያገናኙ።\n\nወደ Google አካውንት እንገናኝ፣ <b>Sign in</b> የሚለውን ቁልፍ ይጠቀሙ ወይም የዚህ አምራች መሣሪያ ካለዎት <b>Huawei</b> የሚለውን ቁልፍ ይጠቀሙ። አንዱን ቁልፍ በመጫን ወደ አካውንትዎ መግቢያ ገጽ ይወስዱዎታል።</string>
+    <string name="auth_sign_in">ግባ በሉ</string>
+    <string name="auth_connecting">"መሣሪያዎ እንዲያስገባዎት ከጉግል ሰርቨሮች ጋር ግንኙነት እየፈጠረ ነው።
+
+ይህ ጥቂት ሰከንዶች ሊወስድ ይችላል።"</string>
+    <string name="no_network_error_desc">"የኔትወርክ ግንኙነት የለዎትም።
+
+ይህ ጊዜያዊ ችግር ሊሆን ይችላል ወይም የአንድሮይድ መሳሪያዎ ለዳታ አገልግሎቶች አልተዘጋጀም። ወደ ሞባይል ኔትወርክ ሲገናኙ እንደገና ይሞክሩ፣ ወይም ከWi-Fi ኔትወርክ ጋር ይገናኙ።"</string>
+    <string name="auth_general_error_desc">"ከGoogle ሰርቨሮች ጋር በመገናኘት ላይ ችግር አጋጥሟል።
+
+ቆይተው እንደገና ይሞክሩ።"</string>
+    <string name="auth_finalize">"መረጃን ወደ አካውንትዎ ለማስቀመጥ መሳሪያዎ Googleን እያነጋገረ ነው።
+
+ይህ ጥቂት ደቂቃዎችን ሊወስድ ይችላል።"</string>
+    <string name="allow">ፈቅድ</string>
+    <string name="deny">እምቢ በል</string>
+    <string name="auth_notification_title">ማረጋገጫ ያስፈልጋል</string>
+    <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> የGoogle አካውንትዎን ለማግኘት የእርስዎን ፈቃድ ይፈልጋል።</string>
+    <string name="auth_package_override_request_title"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> ለ <xliff:g example="account@example.com">%2$s</xliff:g> የልዩ ተጠቃሚነት ፈቃድ እንዲያገኝ ይፈቀድ?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> በ <xliff:g example="F-Droid Inc.">%3$s</xliff:g> እንደ <b><xliff:g example="F-Droid">%2$s</xliff:g></b> ሆኖ ወደ አካውንትዎ ለመግባት ይፈልጋል። ይህም ለአካውንትዎ የልዩ ተጠቃሚነት ፈቃድ ሊሰጠው ይችላል።</string>
+    <string name="auth_action_notification_channel_name">የGoogle አካውንት ማስጠንቀቂያዎች</string>
+    <string name="auth_action_notification_channel_description">ከአንዱ የGoogle አካውንቶችዎ ተጨማሪ ቅንጅት በሚያስፈልግበት ጊዜ ወይም አንድ አካውንት ከmicroG ጋር የማይዛመድ በሚሆንበት ጊዜ ያሳውቃል።</string>
+    <string name="auth_action_notification_title">የአካውንት እርምጃ ያስፈልጋል</string>
+    <string name="auth_action_notification_content">የGoogle አካውንትዎ ተጨማሪ ቅንጅት ያስፈልገዋል።</string>
+    <string name="auth_action_reauth_notification_title">የአካውንት እርምጃ ያስፈልጋል</string>
+    <string name="auth_action_activity_header">የGoogle አካውንትዎን አቀማመጥ ያጠናቅቁ</string>
+    <string name="auth_action_activity_explanation">በዚህ መሳሪያ ላይ የGoogle አካውንትዎን %s መጠቀም እንዲችሉ የሚከተሉትን ደረጃዎች ያጠናቅቁ።</string>
+    <string name="auth_action_step_enable_checkin">የመሳሪያ ምዝገባን ያብሩ</string>
+    <string name="auth_action_step_enable_checkin_description">"የእርስዎ መሣሪያ ቢያንስ አንድ ጊዜ በGoogle መመዝገብ አለበት።
+
+የመለያ ዝግጅቱ ከተጠናቀቀ በኋላ የGoogle መሣሪያ ምዝገባን ማጥፋት ይችላሉ።"</string>
+    <string name="auth_action_step_enable_gcm">Cloud Messagingን ያብሩ</string>
+    <string name="auth_action_step_enable_gcm_description">የአካውንት አቀማመጥ ሲጠናቀቅ Cloud Messagingን ማጥፋት ይችላሉ።</string>
+    <string name="auth_action_step_allow_microg_gcm">ለmicroG Cloud Messagingን ይፍቀዱ</string>
+    <string name="auth_action_step_allow_microg_gcm_description">እንደ ምርጫዎ፣ microG ራሱን ለCloud Messaging ከመመዝገቡ በፊት ከእርስዎ ፈቃድ ያስፈልገዋል።</string>
+    <string name="auth_action_step_enable_lockscreen">ደህንነቱ የተጠበቀ የስክሪን ቁልፍ ያዋቅሩ</string>
+    <string name="auth_action_step_enable_lockscreen_description">"የጎግል አካውንትዎ በስራ ቦታዎ ወይም በትምህርት ተቋምዎ ይተዳደራል። አስተዳዳሪዎ የሂሳብ መረጃዎችን ለማግኘት መሣሪያዎች አስተማማኝ የስክሪን khóa ያስፈልጋቸዋል ብለው ወስነዋል።
+
+እባክዎ የይለፍ ቃል፣ PIN ወይም የፓተርን ስክሪን khóa ያዘጋጁ።"</string>
+    <string name="auth_action_step_perform_content_description">ደረጃውን ለመፈጸም ይጫኑ</string>
+    <string name="auth_action_step_completed_content_description">ደረጃው ተጠናቋል</string>
+    <string name="auth_action_activity_finish">አጠናቅቅ</string>
+    <string name="signin_picker_title">መለያ ይምረጡ</string>
+    <string name="signin_picker_subtitle">ወደ <xliff:g example="F-Droid">%1$s</xliff:g> ለመቀጠል</string>
+    <string name="signin_picker_add_account_label">ሌላ መለያ አክል</string>
+    <string name="signin_confirm_title">ወደ <xliff:g example="F-Droid">%1$s</xliff:g> እንዲያስገቡዎት ይፍቀዱ</string>
+    <string name="signin_confirm_button_text">ፍቀድ እና አጋራ</string>
+    <string name="signin_subtext_sharing">ለመቀጠል፣ microG የጎግል አካውንትዎን ስም፣ የኢሜል አድራሻ እና የፕሮፋይል ምስል ለ <xliff:g example="F-Droid">%1$s</xliff:g> ያጋራል።</string>
+    <string name="perm_status_broadcast_label">የውስጥ ሁኔታ ስርጭቶችን ያዳምጡ</string>
+    <string name="perm_gsf_read_gservices_label">የGoogle አገልግሎት ውቅረትን ያንብቡ</string>
+    <string name="perm_c2dm_receive_label">የC2DM መልዕክቶችን ያዳምጡ</string>
+    <string name="perm_c2dm_send_label">የC2DM መልዕክቶችን ለሌሎች መተግበሪያዎች ይላኩ</string>
+    <string name="perm_gtalk_svc_label">ከGoogle ሰርቨሮች መልዕክቶችን ይለዋወጡ እና የሰንክሮናይዜሽን ማሳወቂያዎችን ይቀበሉ</string>
+    <string name="perm_extended_access_label">ለGoogle አገልግሎቶች የተራዘመ ተደራሽነት</string>
+    <string name="perm_provision_label">የ microG አገልግሎቶችን ያዘጋጁ</string>
+    <string name="perm_provision_description">መተግበሪያው ያለ ተጠቃሚ ጣልቃ ገብነት የ microG አገልግሎቶችን እንዲያዋቅር ይፈቅዳል</string>
+    <string name="perm_car_speed_label">የመኪና ፍጥነት</string>
+    <string name="perm_car_speed_description">"የመኪናዎን ፍጥነት ያግኙ"</string>
+    <string name="perm_car_info_label">የመኪና መረጃ</string>
+    <string name="perm_car_info_description">"የመኪናዎን መረጃ ያግኙ"</string>
+    <string name="perm_car_fuel_label">የመኪና የነዳጅ መጠን</string>
+    <string name="perm_car_fuel_description">"የመኪናዎን የነዳጅ መጠን መረጃ ያግኙ"</string>
+    <string name="perm_car_mileage_label">የመኪና ማይሌጅ</string>
+    <string name="perm_car_mileage_description">"የመኪናዎን የማይሌጅ መረጃ ያግኙ"</string>
+    <string name="perm_car_vendor_extension_label">የመኪና አቅራቢ ቻናል</string>
+    <string name="perm_car_vendor_extension_description">"ከመኪናው ጋር የተያያዙ መረጃዎችን ለመለዋወጥ የመኪናዎን አቅራቢ ቻናል ያግኙ"</string>
+    <string name="service_name_checkin">የመሣሪያ ምዝገባ</string>
+    <string name="service_name_mcs">የክላውድ መልዕክት ልውውጥ</string>
+    <string name="service_name_device_attestation">የመሣሪያ ማረጋገጫ</string>
+    <string name="service_name_vending">የPlay Store አገልግሎቶች</string>
+    <string name="service_name_work_profile">የሥራ ፕሮፋይል</string>
+    <string name="games_title">የጉግል ፕሌይ ጨዋታዎች</string>
+    <string name="games_info_title"><xliff:g example="F-Droid">%1$s</xliff:g> Play Gamesን መጠቀም ይፈልጋል</string>
+    <string name="games_info_content">Play Gamesን ለመጠቀም የGoogle Play Games መተግበሪያን መጫን ያስፈልጋል። መተግበሪያው ያለ Play Games መቀጠል ይችላል፣ ነገር ግን ያልተጠበቀ ባህሪ ሊያሳይ ይችላል።</string>
+    <string name="pick_place_title">ቦታ ይምረጡ</string>
+    <string name="place_picker_select_title">ይህን ቦታ ይምረጡ</string>
+    <string name="place_picker_nearby_places">በአቅራቢያ ያሉ ቦታዎች</string>
+    <string name="network_type_mobile">የሞባይል ኔትወርክ</string>
+    <string name="network_type_wifi">ዋይ-ፋይ</string>
+    <string name="network_type_roaming">ሮሚንግ</string>
+    <string name="network_type_other">ሌሎች ኔትወርኮች</string>
     <!-- Self check -->
+    <string name="self_check_cat_fake_sig">የፊርማ ማጭበርበር ድጋፍ</string>
+    <string name="self_check_cat_gms_packages">የተጫኑ ፓኬጆች</string>
+    <string name="self_check_cat_system">ስርዓት</string>
+    <string name="self_check_name_system_spoofs">የስርዓት የፊርማ አስመሰል: </string>
+    <string name="self_check_resolution_system_spoofs">እባክዎ የትኞቹ እርምጃዎች ሊያስፈልጉ እንደሚችሉ በሰነዱ ላይ ያረጋግጡ።</string>
+    <string name="self_check_pkg_gms">የmicroG አገልግሎቶች</string>
+    <string name="self_check_pkg_vending">microG Companion / Play Store</string>
+    <string name="self_check_pkg_gsf">የmicroG አገልግሎቶች ማዕቀፍ</string>
+    <string name="self_check_name_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> ተጭኗል: </string>
+    <string name="self_check_resolution_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> ወይም ተኳሃኝ የሆነ መተግበሪያን ይጫኑ። እባክዎ የትኞቹ መተግበሪያዎች ተኳሃኝ እንደሆኑ በሰነዱ ላይ ያረጋግጡ።</string>
+    <string name="self_check_name_correct_sig"><xliff:g example="F-Droid">%1$s</xliff:g> ትክክለኛ ፊርማ አለው: </string>
+    <string name="self_check_resolution_correct_sig">የተጫነው <xliff:g example="F-Droid">%1$s</xliff:g> ተኳሃኝ አይደለም ወይም signature spoofing አልተفعيلም። እባክዎን የትኞቹ መተግበሪያዎች እና ROMዎች ተኳሃኝ እንደሆኑ የሚገልጸውን ሰነድ ያንብቡ።</string>
+    <string name="self_check_name_battery_optimizations">የባትሪ ማመቻቻዎች ችላ ተብለዋል፡</string>
+    <string name="self_check_resolution_battery_optimizations">የባትሪ ማመቻቻዎችን ለማሰረዝ እዚህ ይንኩ። ይህ ካልተደረገ መተግበሪያዎች በትክክል ላይሰሩ ይችላሉ።</string>
     <!-- Settings strings -->
+    <string name="prefcat_about">ስለ</string>
+    <string name="prefcat_details">ዝርዝሮች</string>
+    <string name="cond_gcm_bat_title">የባትሪ ማመቻቻዎች ንቁ ናቸው</string>
+    <string name="cond_gcm_bat_summary">የክላውድ መልዕክት ልውውጥን አነቃቅተዋል ነገር ግን ለ microG አገልግሎቶች የባትሪ ማመቻቻዎች ንቁ ናቸው። የፑሽ ማሳወቂያዎች እንዲደርሱዎት የባትሪ ማመቻቻዎችን ችላ ማለት አለብዎት።</string>
+    <string name="cond_gcm_bat_action">ማመቻቻዎችን ችላ በሉ</string>
+    <string name="cond_perm_title">ፈቃድ የለም</string>
+    <string name="prefs_account">የአካውንት ምርጫዎች</string>
+    <string name="prefs_account_privacy">የግል መረጃ &amp; ግላዊነት</string>
+    <string name="prefs_account_security">መግቢያ &amp; ደህንነት</string>
+    <string name="pref_auth_trust_google_title">ለመተግበሪያ ፈቃዶች Googleን ይታመኑ</string>
+    <string name="pref_auth_trust_google_summary">ይህ ሲጠፋ፣ የአንድ መተግበሪያ የፈቃድ ጥያቄ ወደ Google ከመላኩ በፊት ተጠቃሚው ይጠየቃል። ይህ ከተሰረዘ አንዳንድ መተግበሪያዎች የGoogle አካውንትን መጠቀም አይችሉም።</string>
+    <string name="pref_auth_visible_title">መተግበሪያዎች አካውንቶችን እንዲፈልጉ ፍቀድ</string>
+    <string name="pref_auth_visible_summary">ሲበራ፣ በዚህ መሳሪያ ላይ ያሉ ሁሉም መተግበሪያዎች ያለቅድመ ፈቃድ የጉግል አካውንቶችዎን የኢሜል አድራሻ ማየት ይችላሉ።</string>
+    <string name="pref_auth_include_android_id_title">በመሣሪያ ምዝገባ ያረጋግጡ</string>
+    <string name="pref_auth_include_android_id_summary">ሲጠፋ፣ የማረጋገጫ ጥያቄዎች ከመሳሪያው ምዝገባ ጋር አይያያዙም፣ ይህም ያልተፈቀዱ መሳሪያዎች እንዲገቡ ሊያደርግ ይችላል፣ ነገር ግን ያልተጠበቁ ውጤቶች ሊኖሩት ይችላል።</string>
+    <string name="pref_auth_strip_device_name_title">ለማረጋገጫ የመሣሪያውን ስም ያስወግዱ</string>
+    <string name="pref_auth_strip_device_name_summary">ሲበራ፣ የማረጋገጫ ጥያቄዎች የመሳሪያውን ስም አያካትቱም፣ ይህም ያልተፈቀዱ መሳሪያዎች እንዲገቡ ሊያደርግ ይችላል፣ ነገር ግን ያልተጠበቁ ውጤቶች ሊኖሩት ይችላል።</string>
+    <string name="pref_auth_two_step_verification_title">ባለ ሁለት ደረጃ ማረጋገጫ ጥያቄዎችን ይቀበሉ</string>
+    <string name="pref_auth_two_step_verification_summary">ሲበራ፣ መሳሪያው ከጉግል ባለ ሁለት ደረጃ ማረጋገጫ ጥያቄዎችን መቀበል ይችላል (Cloud Messaging ያስፈልጋል)።</string>
+    <string name="pref_auth_allow_find_devices_title">ለጉግል መሳሪያ ማሚያ ምላሽ መስጠትን ይፍቀዱ</string>
+    <string name="pref_auth_allow_find_devices_summary">ሲበራ፣ መሳሪያው ከጉግል Find My Device ማሳወቂያዎች ላይ ምላሽ መስጠት ይችላል (Cloud Messaging ያስፈልጋል)።</string>
+    <string name="pref_checkin_enable_summary">መሳሪያዎን ለጉግል አገልግሎቶች ይመዘግባል እና ልዩ የመሳሪያ መለያ ይፈጥራል። microG ከጉግል አካውንት ስምዎ ውጭ ያሉ መለያ बिटዎችን ከምዝገባ መረጃው ውስጥ ያስወግዳል።</string>
+    <string name="pref_device_registration_android_id">የአንድሮይድ መታወቂያ</string>
+    <string name="checkin_not_registered">አልተመዘገበም</string>
+    <string name="checkin_last_registration">የመጨረሻው ምዝገባ፡ <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="checkin_enable_switch">መሣሪያውን መዝግብ</string>
+    <string name="pref_info_status">ሁኔታ</string>
+    <string name="pref_accounts_title">አካውንቶች</string>
+    <string name="pref_game_accounts_title">የጉግል የጨዋታ አካውንቶች</string>
+    <string name="pref_accounts_summary">የGoogle አካውንቶችን ያክሉ እና ያስተዳድሩ</string>
+    <string name="prefcat_accounts_settings_title">ቅንብሮች</string>
+    <string name="prefcat_accounts_login_accounts_title">የገቡት</string>
+    <string name="prefcat_accounts_options_title">አማራጮች</string>
+    <string name="pref_accounts_manage_accounts_title">አካውንቶችን ያስተዳድሩ</string>
+    <string name="pref_accounts_manage_accounts_summary">የመሣሪያ አካውንቶች ማኔጀሩን ይክፈቱ</string>
+    <string name="prefcat_accounts_backup_title">የአካውንት መጠባበቂያ</string>
+    <string name="pref_accounts_backup_title">አካውንቶችን ባክ አፕ ያድርጉ</string>
+    <string name="pref_accounts_backup_summary">የጉግል አካውንቶችን ወደ ፋይል ኤክስፖርት ያድርጉ</string>
+    <string name="pref_accounts_restore_title">አካውንቶችን መልሰው ያስገቡ</string>
+    <string name="pref_accounts_restore_summary">የጉግል አካውንቶችን ከፋይል ኢምፖርት ያድርጉ</string>
+    <string name="pref_accounts_backup_warning_title">አካውንቶችን ባክ አፕ ያድርጉ?</string>
+    <string name="pref_accounts_backup_warning_message">ይህ የእርስዎን አካውንቶች እና የሎግኢን ቶከኖች (SID/LSID) ወደ ፋይል ይጽፋል። ይህን ፋይል የሚያገኝ ማንኛውም ሰው ወደ አካውንቶችዎ መግባት ይችላል፣ ስለዚህ በደህንነት ይጠብቁት እና በፍጹም ለሌላ ሰው አያጋሩት።</string>
+    <string name="button_backup_accounts">ባክ አፕ ያድርጉ</string>
+    <string name="snackbar_accounts_backed_up">አካውንቶች ባክ አፕ ተደርገዋል</string>
+    <string name="snackbar_accounts_export_failed">ባክ አፕ አልተሳካም</string>
+    <string name="snackbar_accounts_import_failed">መልሶ ማስገባት አልተሳካም</string>
+    <string name="prefcat_youtube_activity">የYouTube እንቅስቃሴ</string>
+    <string name="pref_manage_all_history">ሁሉንም ታሪክ ያስተዳድሩ</string>
+    <string name="pref_data_in_youtube">የእርስዎ መረጃ በYouTube ውስጥ</string>
+    <string name="pref_accounts_login_accounts_summary">አካውንቶች በዚህ መሣሪያ ላይ ብቻ ተቀምጠው ተከማችተዋል። ከአካውንት ላይ በቋሚነት ለማስወገድ አካውንቱን ይንኩት</string>
+    <string name="pref_privacy_title">ግላዊነት</string>
+    <string name="pref_privacy_summary">ለማረጋገጫ እና ለመተግበሪያዎች የግላዊነት ቅንብሮች</string>
+    <string name="auth_add_account">አካውንት አክል</string>
+    <string name="prefcat_applications">መተግበሪያዎች</string>
+    <string name="prefcat_authentication">ማረጋገጫ</string>
+    <string name="pref_add_account_summary">የጉግል አካውንት አክል</string>
+    <string name="pref_gcm_enable_mcs_summary">Cloud Messaging በብዙ የሶስተኛ ወገን አፕሊኬሽኖች ጥቅም ላይ የሚውል የpush notification አቅራቢ ነው። እሱን ለመጠቀም የመሣሪያ ምዝገባን ማብራት አለብዎት።</string>
+    <string name="pref_gcm_confirm_new_apps_title">አዳዲስ መተግበሪያዎችን ያረጋግጡ</string>
+    <string name="pref_gcm_confirm_new_apps_summary">ፑሽ ማሳወቂያዎችን ለመቀበል አዲስ መተግበሪያ ከመመዝገቡ በፊት ይጠይቁ</string>
+    <string name="pref_about_title">ስለ MicroG RE</string>
+    <string name="pref_hide_launcher_icon">አዶውን በላውንቸር ውስጥ ደብቅ</string>
+    <string name="hide_launcher_icon_dialog_message">ካበሩት MicroG በመተግበሪያ ማስጀመሪያው ውስጥ አይታይም። MicroGን በየመሣሪያዎ ሲስተም መተግበሪያ ዝርዝር ውስጥ በሚገኘው የመተግበሪያ መረጃ ውስጥ መክፈት ይችላሉ።</string>
+    <string name="hide_launcher_icon_updating_title">መተግበሪያው እስኪሻሻል እባክዎ ይጠብቁ</string>
+    <string name="pref_language_title">ቋንቋ</string>
+    <string name="pref_language_system_default">የስርዓቱ ነባሪ</string>
+    <string name="pref_github_summary">የምንጭ ኮድ ማከማቻ</string>
+    <string name="pref_update_title">ለአዳዲስ ማሻሻያዎች ይፈትሹ</string>
+    <string name="pref_update_summary">አዲስ ስሪት ለመፈለግ GitHubን ያረጋግጡ።</string>
+    <string name="update_include_prerelease">የልማት ስሪቶችን አካትት</string>
+    <string name="update_available_title">የዝመና አማራጭ አለ</string>
+    <string name="update_available_prerelease_title">የዝመና አማራጭ አለ (ቅድመ-ልቀቂያ)</string>
+    <string name="update_available_message">አዲስ v%1$s ይገኛል። የእርስዎ ስሪት v%2$s ነው። ማሻሻያውን አውርደው ይጫኑ?</string>
+    <string name="update_now">አዘምን</string>
+    <string name="update_whats_new">አዲስ ምን ተጨመረ</string>
+    <string name="update_ignore">ተجاهል</string>
+    <string name="update_downloading_title">ዝመናው እየወረደ ነው…</string>
+    <string name="update_download_failed">ማውረድ አልተሳካም። እባክዎ ግንኙነትዎን ያረጋግጡ እና እንደገና ይሞክሩ።</string>
+    <string name="update_signature_mismatch">የፊርማዎች ልዩነት ስላለ መተግበሪያውን ማሻሻል አይቻልም።</string>
+    <string name="update_failed_title">ማሻሻል አልተሳካም</string>
+    <string name="update_permission_required_title">ፈቃድ ያስፈልጋል</string>
+    <string name="update_permission_required_message">ማሻሻያዎችን ለመጫን፣ እባክዎ MicroG የማይታወቁ መተግበሪያዎችን እንዲጫን በሲስተም ቅንብሮች ውስጥ ይፍቀዱለት።</string>
+    <string name="update_open_settings">ቅንብሮች</string>
+    <string name="update_check_failed">ዝመናዎችን መፈለግ አልተቻለም። እባክዎ ግንኙነትዎን ያረጋግጡ እና እንደገና ይሞክሩ።</string>
+    <string name="update_up_to_date_title">ስሪትዎ ወቅታዊ ነው</string>
+    <string name="update_up_to_date_message">MicroG-RE v%s የቅርብ ጊዜው ስሪት ነው።</string>
+    <string name="update_notification_title">የዝመና አማራጭ አለ</string>
+    <string name="update_notification_text">አዲስ v%s tersedia ነው፤ ለማዘመን ይጫኑ</string>
+    <string name="update_notification_channel">ማሻሻያዎች</string>
+    <string name="update_notification_permission_title">ማሳወቂያዎች</string>
+    <string name="update_notification_permission_message">አዲስ ማሻሻያ በሚኖርበት ጊዜ እንዲያውቁዎት፣ MicroG-RE ማሳወቂያዎችን ለመላክ ፈቃድ ያስፈልገዋል። የማሻሻያ ማስጠንቀቂያዎች እንዲደርሱዎት እባክዎ ማሳወቂያዎችን ይፍቀዱ።</string>
+    <string name="update_notification_permission_allow">ፍቀድ</string>
+    <string name="update_notification_permission_not_now">አሁን አይደለም</string>
+    <string name="update_notification_permission_open_settings">ቅንብሮችን ክፈት</string>
+    <string name="gcm_unregister_app">ከምዝገባ አውጣ</string>
+    <string name="gcm_no_message_yet">እስካሁን ምንም መልዕክት አልደረሰም</string>
+    <string name="gcm_last_message_at">የመጨረሻው መልእክት፡ <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_registered">ተመዝግቧል</string>
+    <string name="gcm_registered_since">የተመዘገበበት ቀን፡ <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_unregister_confirm_title"><xliff:g example="F-Droid">%1$s</xliff:g>ን ይሰርዙ?</string>
+    <string name="gcm_unregister_confirm_message">አንዳንድ መተግበሪያዎች በራሳቸው እንደገና አይመዘገቡም እና/ወይም በእጅ ለመመዝገብ የሚያስችል አማራጭ አይሰጡም። እነዚህ መተግበሪያዎች ከተሰረዙ በኋላ በትክክል ላይሰሩ ይችላሉ።\nይቀጥሉ?</string>
+    <string name="gcm_unregister_after_deny_message">ቀድሞ ተመዝግቦ ለነበረ መተግበሪያ የፑሽ ማሳወቂያዎችን ለመመዝገብ ፈቃድ አልሰጡም።
+ወደፊት የፑሽ መልእክቶችን እንዳይቀበል አሁን እንዲሰረዝ ይፈልጋሉ?</string>
+    <string name="gcm_messages_counter">መልእክቶች: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> ባይትስ)</string>
+    <string name="gcm_network_state_disconnected">ተቋርጧል</string>
+    <string name="gcm_network_state_connected">ከ <xliff:g example="2 hours ago">%1$s</xliff:g> ጀምሮ ተገናኝቷል</string>
+    <string name="gcm_enable_switch">የፑሽ ማሳወቂያዎችን ተቀበል</string>
+    <string name="gcm_allow_app_popup"><xliff:g example="F-Droid">%1$s</xliff:g> ለፑሽ ማሳወቂያዎች እንዲመዘገብ ይፍቀዱ?</string>
+    <string name="pref_push_app_allow_register_title">ምዝገባን ይፍቀዱ</string>
+    <string name="pref_push_app_allow_register_summary">መተግበሪያው ለፑሽ ማሳወቂያዎች እንዲመዘገብ ፍቀድ።</string>
+    <string name="pref_push_app_wake_for_delivery_title">በፑሽ መልእክት ላይ መተግበሪያውን ያስጀምሩ</string>
+    <string name="pref_push_app_wake_for_delivery_summary">የሚመጡ የፑሽ መልእክቶችን ለመቀበል መተግበሪያው በስተጀርባ እያለ እንዲጀምር አድርግ።</string>
+    <string name="prefcat_push_apps_title">ፑሽ ማሳወቂያዎችን የሚጠቀሙ መተግበሪያዎች</string>
+    <string name="prefcat_push_apps_registered_title">የተመዘገቡ መተግበሪያዎች</string>
+    <string name="prefcat_push_apps_unregistered_title">ያልተመዘገቡ መተግበሪያዎች</string>
+    <string name="prefcat_gcm_registers">መዝገቦች</string>
+    <string name="prefcat_advanced">የላቁ</string>
+    <string name="pref_gcm_remove_registers">ሁሉንም የተመዘገቡ መተግበሪያዎች ያስወግዱ</string>
+    <string name="pref_gcm_remove_registers_summary">መተግበሪያን በመመዝገብ ወይም ማሳወቂያዎችን በመቀበል ረገድ ችግር ካጋጠመዎት ብቻ ይህንን አማራጭ ይጠቀሙ</string>
+    <string name="gcm_remove_registers_dialog_title">ሁሉንም ምዝገባዎች ያስወግዱ?</string>
+    <string name="gcm_remove_registers_dialog_message">"ይህ ሁሉንም የተመዘገቡ መተግበሪያዎች በአንድ ጊዜ የፑሽ ማሳወቂያዎችን እንዳይቀበሉ ያደርጋል
+
+መተግበሪያዎችን ለመመዝገብ አዲስ securityToken እና AndroidID ያስፈልግዎታል፤ የመሣሪያውን የምዝገባ ሁኔታ ያረጋግጡ
+
+አንዳንድ መተግበሪያዎች ከዚህ እርምጃ በኋላ እንደገና መመዝገብ ላይችሉ ይችላሉ። እንደገና ምዝገባ ከመጠየቃቸው በፊት የእነዚህን መተግበሪያዎች ዳታ ማጽዳት ሊያስፈልግዎ ይችላል"</string>
+    <string name="gcm_remove_registers_toast_message">ሁሉም መተግበሪያዎች ከፑሽ ማሳወቂያ ተሰርዘዋል</string>
+    <string name="prefcat_push_networks_title">ለፑሽ ማሳወቂያዎች ጥቅም ላይ የሚውሉ አውታረ መረቦች</string>
+    <string name="safetynet_intro">Google SafetyNet መሣሪያን የማረጋገጫ ሥርዓት ሲሆን፣ መሣሪያው በአግባቡ የተጠበቀ እና ከAndroid CTS ጋር ተኳሃኝ መሆኑን ያረጋግጣል። አንዳንድ መተግበሪያዎች SafetyNetን ለደህንነት ምክንያቶች ወይም ለጠብታ-መከላከያ ቅድመ ሁኔታነት ይጠቀማሉ።\n\nmicroG GmsCore የSafetyNet ነፃ ትግበራን ይዟል፣ ነገር ግን ይፋዊው ሰርቨር የSafetyNet ጥያቄዎች በባለቤትነት በDroidGuard ሥርዓት እንዲፈርሙ ይጠይቃል።</string>
+    <string name="safetynet_enable_switch">የመሣሪያ ምስክርነትን ይፍቀዱ</string>
+    <string name="pref_safetynet_test_title">የSafetyNet ምስክርነትን ይሞክሩ</string>
+    <string name="pref_recaptcha_test_title">ReCAPTCHAን ይሞክሩ</string>
+    <string name="pref_recaptcha_enterprise_test_title">ReCAPTCHA Enterpriseን ይሞክሩ</string>
+    <string name="pref_test_summary_passed">ሁሉንም ፈተናዎች አልፏል</string>
+    <string name="pref_test_summary_failed">ተከሽፏል: %s</string>
+    <string name="pref_test_summary_warn">ማስጠንቀቂያ: %s</string>
+    <string name="pref_test_summary_running">በማከናወን ላይ…</string>
+    <string name="pref_droidguard_unsupported_summary">በዚህ መሳሪያ ላይ የDroidGuard አፈፃፀም አይደገፍም። የSafetyNet አገልግሎቶች በትክክል ላይሰሩ ይችላሉ።</string>
+    <string name="prefcat_safetynet_apps_title">SafetyNet የሚጠቀሙ መተግበሪያዎች</string>
+    <string name="prefcat_device_attestation_apps_title">የመሳሪያ ማረጋገጫ የሚጠቀሙ መተግበሪያዎች</string>
+    <string name="pref_device_attestation_app_allow_requests_title">ጥያቄዎችን ፍቀድ</string>
+    <string name="pref_device_attestation_app_allow_requests_summary">መተግበሪያው የመሳሪያ ማረጋገጫ እንዲጠይቅ ፍቀድ</string>
+    <string name="menu_clear_recent_requests">የቅርብ ጊዜ ጥያቄዎችን አጥፋ</string>
+    <string name="safetynet_last_run_at">የመጨረሻ አጠቃቀም፡ <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="profile_name_native">የተፈጥሮ</string>
+    <string name="profile_name_real">እውነተኛ</string>
+    <string name="profile_name_user">ብጁ: %s</string>
+    <string name="profile_name_auto">ራስ-ሰር: %s</string>
+    <string name="profile_name_system">ስርዓት: %s</string>
+    <string name="pref_device_registration_import_custom_profile_title">ልዩ ፕሮፋይል ያስገቡ</string>
+    <string name="pref_device_registration_serial_title">ሴሪያል</string>
+    <string name="pref_device_registration_import_custom_profile_summary">የመሣሪያ ፕሮፋይል ከፋይል ያስገቡ</string>
+    <string name="pref_device_registration_select_profile_title">ፕሮፋይል ይምረጡ</string>
+    <string name="pref_device_registration_device_profile_category">የመሣሪያ ፕሮፋይል</string>
+    <string name="pref_safetynet_recent_uses">የቅርብ ጊዜ አጠቃቀሞች</string>
+    <string name="pref_safetynet_recent_attestation_summary">ማረጋገጫ፡ %s</string>
+    <string name="pref_safetynet_recent_recaptcha_summary">ReCaptcha፡ %s</string>
+    <string name="pref_safetynet_recent_recaptcha_enterprise_summary">ReCaptcha Enterprise: %s</string>
+    <string name="pref_safetynet_recent_copy_json">የJSON JWS መረጃውን ቅዳ</string>
+    <string name="pref_safetynet_recent_advice">ምክር</string>
+    <string name="pref_safetynet_recent_eval_type">የግምገማ ዓይነት</string>
+    <string name="pref_safetynet_recent_response_status">የምላሽ ሁኔታ</string>
+    <string name="pref_safetynet_recent_cat_response">የምላሽ መረጃ</string>
+    <string name="pref_safetynet_recent_cat_request">የጥያቄ መረጃ</string>
+    <string name="pref_safetynet_recent_nonce">ኖንስ (ሄክስ)</string>
+    <string name="pref_safetynet_recent_request_time">የጥያቄው ሰዓት</string>
+    <string name="pref_safetynet_recent_request_type">የጥያቄ ዓይነት</string>
+    <string name="pref_safetynet_recent_cat_basic">መሰረታዊ መረጃ</string>
+    <string name="pref_safetynet_recent_token">ቶከን</string>
+    <string name="pref_safetynet_recent_copied">ወደ ክሊፕቦርድ ተቀዳ!</string>
+    <string name="pref_safetynet_test_integrity_cts_passed">Integrity እና CTS አልፏል</string>
+    <string name="pref_safetynet_test_cts_failed">CTS አልተሳካም</string>
+    <string name="pref_safetynet_test_integrity_failed">Integrity አልተሳካም</string>
+    <string name="pref_safetynet_test_not_completed">ገና አልተጠናቀቀም</string>
+    <string name="pref_safetynet_test_no_result">ምንም ውጤት የለም</string>
+    <string name="pref_safetynet_test_invalid_json">የተሳሳተ JSON</string>
+    <string name="push_notifications_summary_off">ዝግ</string>
+    <string name="push_notifications_summary_automatic">ትክክለኛ / አውቶማቲክ: %s</string>
+    <string name="push_notifications_summary_manual">ትክክለኛ / ማኑዋል: %s</string>
+    <string name="push_notifications_summary_values_seconds">%s ሰከንድ</string>
+    <string name="push_notifications_summary_values_minutes">%s ደቂቃ</string>
+    <string name="pref_vending_licensing_category">የGoogle Play ፈቃድ</string>
+    <string name="pref_vending_licensing_enable_switch">የፈቃድ ማረጋገጫ ጥያቄዎችን መልስ</string>
+    <string name="pref_vending_license_enable_summary">አንዳንድ መተግበሪያዎች በ Google Play ላይ መግዛታችሁን ማረጋገጫ ይፈልጋሉ። አንድ መተግበሪያ ሲጠይቅ microG የሽPurchase ማረጋገጫ ከ Google ማውረድ ይችላል። ከተጠፋ ወይም ምንም የ Google አካውንት ካልተጨመረ፣ የላይሰንስ ማረጋገጫ ጥያቄዎች ችላ ይባላሉ።</string>
+    <string name="pref_vending_licensing_purchase_free_apps_switch">ነፃ መተግበሪያዎችን በራስ-ሰር ወደ ላይብረሪ አክል</string>
+    <string name="pref_vending_licensing_purchase_free_apps_summary">ነፃ መተግበሪያዎች ከ Google Play ተጭነው እንደሆነ ሊያረጋግጡ ይችላሉ። አሁን ለርስዎ ለሚገኙ ነፃ መተግበሪያዎች ሁሉ ማረጋገጫውን ሁልጊዜ ለማለፍ ነፃ መተግበሪያዎችን በራስ-ሰር ወደ አካውንት ላይብረሪዎ ያክሉ።</string>
+    <string name="pref_vending_feature_delivery">የ Google Play Feature Delivery</string>
+    <string name="pref_vending_split_install_switch">በፍላጎት ላይ የተመሰረተ የኮምፖነንት ተከላ</string>
+    <string name="pref_vending_licensing_split_install_summary">መተግበሪያዎች ተጨማሪ ኮምፖነንቶችን እንዲያወርዱ እና እንዲተክሉ ይፍቀዱ</string>
+    <string name="feedback_disabled">አስተያየት መስጠት በአሁኑ ጊዜ የማይቻል ነው</string>
+    <string name="backup_disabled">ባክአፕ ማድረግ በአሁኑ ጊዜ የማይቻል ነው</string>
+    <string name="pref_vending_billing_category">የ Google Play Billing</string>
+    <string name="pref_vending_billing_enable_switch">የክፍያ ጥያቄዎችን ያስተናግዱ</string>
+    <string name="pref_vending_billing_enable_summary">አንዴ ከተበራ በኋላ፣ አንዳንድ መተግበሪያዎች በGoogle Play የክፍያ አገልግሎት አማካኝነት ግዢዎችን ማጠናቀቅ ወይም የደንበኝነት ምዝገባዎችን መጀመር ይችላሉ።</string>
+    <string name="pref_vending_billing_note_experimental">ይህ ባህሪ የሙከራ ደረጃ ላይ ያለ ሲሆን የገንዘብ ማጣት ሊያስከትል ይችላል። ማስጠንቀቂያ ተሰጥቶዎታል።</string>
+    <string name="pref_vending_billing_note_licensing">አንዳንድ መተግበሪያዎች ግዢዎችዎን ለማረጋገጥ የፈቃድ ማረጋገጫን እንዲያበሩ ሊጠይቁዎት ይችላሉ።</string>
+    <string name="pref_vending_asset_delivery_category">የGoogle Play ሀብት አቅርቦት</string>
+    <string name="pref_vending_asset_delivery_switch">በፍላጎት ላይ የተመሰረተ የሀብት አቅርቦትን ያብሩ</string>
+    <string name="pref_vending_asset_delivery_summary">Play Asset Delivery የሚጠቀሙ መተግበሪያዎች ሲጠይቁ ተጨማሪ ንብረቶችን ያውርዱ</string>
+    <string name="pref_vending_asset_device_sync_summary">Play Asset Delivery የሚጠቀሙ መተግበሪያዎች በአሁኑ ጊዜ ጥቅም ላይ ባለው የመሣሪያ መረጃ ላይ በመመስረት ተጨማሪ ንብረቶችን ያወርዳሉ።</string>
+    <string name="pref_vending_asset_device_sync_switch">የመሣሪያ መረጃ ማመሳሰያን ያብሩ</string>
+    <string name="pref_workprofile_create_account">የሥራ አካውንት ቅንጅትን ይፍቀዱ</string>
+    <string name="pref_workprofile_intro">ለሥራ ቦታዎ ወይም ለትምህርት ተቋምዎ የሥራ ፕሮፋይል በሚያዘጋጁበት ጊዜ፣
+        ማዋቀሪያው በዚያ ፕሮፋይል ላይ መተግበሪያዎችን ማውረድን ለማስቻል ከGoogle ጋር ለመገናኘት ሊሞክር ይችላል።</string>
+    <string name="pref_workprofile_disclaimer">የmicroG አጠቃቀምዎ ከድርጅቱ ፖሊሲዎች ጋር የተጣጣመ መሆኑን ማረጋገጥ የእርስዎ ኃላፊነት ነው።
+        microG የቀረበው በተቻለ መጠን በሚሰጥ አገልግሎት ላይ የተመሰረተ ነው እና ልክ እንደሚጠበቀው እንደሚሠራ ዋስትና ሊሰጥ አይችልም።</string>
+    <string name="pref_auto_create_player">የPlay Games አካውንት ምዝገባን ይፍቀዱ</string>
+    <string name="pref_auto_create_player_intro">ጨዋታዎችን በሚጫወቱበት ጊዜ፣ ለመግባት እና ከጨዋታ ጋር የተያያዙ ተግባራትን ለምሳሌ ስኬቶችን፣ የመሪ ሰሌዳዎችን፣ አርካይቮችን ወዘተ ለመመዝገብ የPlay Games አካውንት መጠቀም ያስፈልግዎታል። ካላስነሳችሁት፣ ከPlay Games አካውንት ጋር ያልተያያዙ የGoogle አካውንቶች በራስ-ሰርจะไม่ ይመዘገባሉ፣ እና ጨዋታው መግባት እና መጫወት አይችልም።</string>
+    <string name="pref_allow_upload_game_played">የተጫወቱትን ጨዋታ መጫንን ይፍቀዱ</string>
+    <string name="pref_allow_upload_game_played_summary">ሲጠፋ፣ ጨዋታው ወደ ጨዋታው ከገቡ በኋላ የተጫወቱትን ሁኔታ ሪፖርት አያደርግም፣ እና አንዳንድ ጨዋታዎች መግባት ላይችሉ ይችላሉ።</string>
+    <string name="pref_change_default_game_player">ለጨዋታዎች አካውንትን ይቀይሩ</string>
+    <string name="pref_change_default_game_player_summary">ለጨዋታዎች የሚሆን ነባር አካውንትን ይቀይሩ እና በየጨዋታው አካውንትን ይቀይሩ።</string>
+    <string name="pref_delete_game_account_data">የPlay Games መረጃን ይሰርዙ</string>
+    <string name="pref_delete_game_account_data_summary">የPlay Games አካውንትን እና ሁሉንም መረጃዎችን ይሰርዙ እንዲሁም የየብቻ ጨዋታዎችን መረጃ ይሰርዙ።</string>
+    <string name="credentials_assisted_cancel">ሰርዝ</string>
+    <string name="credentials_assisted_continue">ቀጥል</string>
+    <string name="credentials_assisted_confirmation_header">እያገባዎት ነው</string>
+    <string name="credentials_assisted_continue_as_user_button_label">እንደ %1$s ይቀጥሉ</string>
+    <string name="credentials_assisted_sign_back_title">በGoogle ወደ %1$s ተመልሰው ይግቡ</string>
+    <string name="credentials_assisted_signin_consent_header">እንደ %1$s እየገቡ ነው</string>
+    <string name="credentials_assisted_signin_consent">በመቀጠልዎ Google ስምዎን፣ የኢሜል አድራሻዎን እና የፕሮፋይል ምስልዎን ለ %1$s ያጋራል። የ %1$s የความเป็นግላዊነት ፖሊሲን እና የአገልግሎት ውሎችን ይመልከቱ።</string>
+    <string name="credentials_assisted_signin_description">በGoogle አካውንቶችዎ ውስጥ በGoogle የመግባት ሂደትን ማስተዳደር ይችላሉ።</string>
+    <string name="credentials_assisted_choose_account_label">አካውንት ይምረጡ</string>
+    <string name="credentials_assisted_choose_account_subtitle">ወደ %1$s ለመቀጠል</string>
+    <string name="credentials_assisted_choose_account_error_tips">የአካውንት መዛባት</string>
+    <string name="credentials_assisted_signin_button_text_long">በGoogle ይግቡ</string>
+    <string name="credentials_assisted_signin_add_account">አካውንት ያክሉ</string>
+    <string name="credentials_service_sign_in_with_google_label">በGoogle ይግቡ</string>
+    <string name="credentials_service_remote_custom_subtitle">የደህንነት ቁልፍ፣ ስማርትፎን ወይም ታብሌት</string>
+    <string name="limited_services_dialog_information">የmicroG ውስን አገልግሎቶችን እየተጠቀሙ ነው። ከተለመዱት የmicroG አገልግሎቶች በተለየ፣ ይህ ስሪት የሚሰራው የmicroG ላይብረሪዎችን ከሚጠቀሙ መተግበሪያዎች ጋር ብቻ ነው እንጂ በGoogle Play ላይ ካሉ ጋር አይደለም። ይህ ማለት አብዛኛዎቹ መተግበሪያዎች እነዚህን አገልግሎቶች ችላ ይላሉ ማለት ነው።</string>
+    <string name="limited_services_dialog_information_ack">ተረድቻለሁ</string>
+    <string name="games_achievement_list_title">ስኬቶች</string>
+    <string name="games_achievements_empty_text">ለዚህ ጨዋታ ምንም ዓይነት ስኬቶች የሉም</string>
+    <string name="games_api_access_denied">በዚህ መሳሪያ ላይ ያለ ምንም አካውንት የGames APIsን መጠቀም አይችልም</string>
+    <string name="games_achievement_locked_content_description">ተቆልፏል</string>
+    <string name="games_achievement_unlocked_content_description">ተከፍቷል</string>
+    <string name="games_achievement_extra_text">%1$s XP</string>
+    <string name="games_leaderboard_empty_text">ለዚህ ጨዋታ ምንም ዓይነት መሪ ሰንጠረዦች የሉም</string>
+    <string name="games_leaderboard_list_title">ደረጃዎች</string>
+    <string name="games_leaderboards_score_label">ውጤት: %1$s</string>
+    <string name="games_snapshot_empty_text">እስካሁን ምንም ዓይነት የጨዋታ መረጃዎች አልተቀመጡም</string>
+    <string name="games_snapshot_choose_btn_text">ይምረጡ</string>
+    <string name="games_snapshot_delete_btn_text">ይምሰል</string>
+    <string name="games_delete_snapshot_dialog_title">የተቀመጠውን ጨዋታ ይሰርዙ</string>
+    <string name="games_delete_snapshot_dialog_message">ይህንን የተቀመጠ ጨዋታ ለመሰረዝ እንደሚፈልጉ እርግጠኛ ነዎት?</string>
+    <string name="games_delete_snapshot_dialog_cancel">ሰርዝ</string>
+    <string name="games_delete_snapshot_dialog_ok">እሺ</string>
+    <string name="games_delete_snapshot_error">ማጥፋት አልተሳካም፣ እባክዎ ቆይተው እንደገና ይሞክሩ</string>
+    <string name="games_state_description_signed_out">ወጥተዋል</string>
+    <string name="games_state_description_delete">አጥፋ</string>
+    <string name="games_change_button_text">ቀይር</string>
+    <string name="games_change_default_account_section_title">ለጨዋታዎች የሚሆን መደበኛ አካውንት ይቀይሩ</string>
+    <string name="games_change_default_account_description">መደበኛ አካውንት፦ %1$s</string>
+    <string name="games_change_default_account_explanation">ይህ አካውንት በራስ-ሰር ወደ ጨዋታዎች እንዲገቡ፣ የጨዋታ እድገትዎን እንዲያስቀምጡ እና ቅንብሮችዎን እንዲያከማቹ ያገለግላል። መደበኛውን አካውንት መቀየር ወይም መውጣት የተጫወቷቸውን ጨዋታዎች እድገት እና ቅንብሮች እንደገና ሊጀምር ይችላል።</string>
+    <string name="games_change_per_game_title">በጨዋታው መሠረት አካውንቱን ይቀይሩ</string>
+    <string name="games_change_per_game_description">ለተመረጠ ጨዋታ አካውንቱን መቀየር ወይም ከዚያ መውጣት የጨዋታውን ሂደት እና ቅንብሮች ሊያጠፋው ይችላል።</string>
+    <string name="games_change_default_account_for_all_games_dialog_title">ለአዲሱ ነባር አካውንት አማራጭ ይምረጡ</string>
+    <string name="games_change_default_account_for_all_games_dialog_description">የአሁኑ ነባር አካውንት፦ %1$s</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_title">የነባር አካውንቱን ይቀይሩ ለአዳዲስ ጨዋታዎች ብቻ </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_description">ለተጫወቷቸው ጨዋታዎች የሂደት እና የቅንብሮች ተደራሽነትን አያጡም። ነገር ግን ሂደቱ በአካውንቶች መካከል ይከፋፈላል።</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_title"> ለሁሉም ጨዋታዎች የነባር አካውንቱን ይቀይሩ </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_description">ለተጫወቷቸው ጨዋታዎች የሂደት እና የቅንብሮች ተደራሽነትን ሊያጡ ይችላሉ። ለውጦቹን ተግባራዊ ለማድረግ ጨዋታውን እንደገና እንጀምራለን።</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_title"> ከሁሉም ጨዋታዎች ውጣ </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_description">ለተጫወቷቸው ጨዋታዎች የእድገት እና የቅንብሮች መዳረሻ ሊያጡ ይችላሉ። ለውጦቹን ተግባራዊ ለማድረግ ጨዋታውን እንደገና እናስጀምረዋለን።</string>
+    <string name="games_change_per_game_dialog_title">ለዚህ ጨዋታ አማራጭ ይምረጡ</string>
+    <string name="games_change_per_game_dialog_description">አካውንቱን መቀየር ወይም መውጣት የጨዋታውን ሂደት እና ቅንብሮች ሊያጠፋቸው ይችላል</string>
+    <string name="games_change_per_game_dialog_option_use_player">%1$sን ይጠቀሙ</string>
+    <string name="games_change_per_game_dialog_option_use_player_snackbar_success_message">በ%1$s ወደዚህ ጨዋታ ይገባሉ</string>
+    <string name="games_change_per_game_dialog_option_sign_out">ውጣ</string>
+    <string name="games_change_per_game_dialog_option_sign_out_snackbar_success_message">አሁን ከዚህ ጨዋታ ወጥተዋል</string>
+    <string name="games_change_sign_out_of_all_games_snackbar_success_message">አሁን ከሁሉም ጨዋታዎች ወጥተዋል</string>
+    <string name="games_change_default_account_for_all_games_snackbar_success_message">በ%1$s በሁሉም ጨዋታዎች ውስጥ ይገባሉ</string>
+    <string name="games_change_default_account_for_new_games_snackbar_success_message">በ%1$s በአዳዲስ ጨዋታዎች ውስጥ ይገባሉ</string>
+    <string name="games_account_display_content">የአሁኑ አካውንት፦ %1$s</string>
+    <string name="games_delete_profile_header">የPlay Games አካውንትን እና ሁሉንም ዳታ ይሰርዙ</string>
+    <string name="games_delete_profile_explanation">የGoogle Play Games አካውንትዎን፣ XP እና ሁሉንም የፕሮፋይል ዳታ በቋሚነት ይሰርዙ። ይህ ተግባር የተጫወቱባቸው ጨዋታዎች ውስጥ ያሉ ነጥቦችን፣ እድገቶችን (የተቀመጡ ጨዋታዎችን) እና ቅንብሮችንም ሊሰርዝ ይችላል።</string>
+    <string name="games_delete_profile_button">በቋሚነት ይሰርዙ</string>
+    <string name="games_delete_game_data_header">የግል የጨዋታ ዳታን ይሰርዙ</string>
+    <string name="games_delete_game_data_explanation">በGoogle Play Games ተጠቅመው ለጫወቷቸው ጨዋታዎች የግል ዳታን በቋሚነት ይሰረዝ ይችላሉ። ይህ ተግባር ለሚመርጡት ጨዋታ ነጥቦችን፣ እድገቶችን (የተቀመጡ ጨዋታዎችን) እና ቅንብሮችን ይሰርዛል።</string>
+    <string name="games_delete_profile_dialog_title">ይህንን አካውንት መሰረዝ እንደሚፈልጉ እርግጠኛ ነዎት?</string>
+    <string name="games_delete_profile_explanation_with_gamer_name">ለተጫዋች ስም &lt;b&gt;%1$s&lt;/b&gt; (&lt;b&gt;%2$s&lt;/b&gt;)፣ XP እና ሁሉንም የፕሮፋይል መረጃዎችን የGoogle Play Games አካውንትዎን በቋሚነት ያጥፉ። ይህ ተግባር የተጫወቱባቸውን ጨዋታዎች ውጤቶች፣ ሂደት (የተቀመጡ ጨዋታዎች) እና ቅንብሮችንም ሊያጠፋ ይችላል።</string>
+    <string name="games_delete_profile_dialog_message">ይህ ተግባር ሊታረም አይችልም።</string>
+    <string name="games_delete_profile_fail">ፕሮፋይልዎን ማጥፋት አልተቻለም። ቆይተው እንደገና ይሞክሩ።</string>
+    <string name="games_delete_game_data_confirm_dialog_title">የ%1$sን መረጃ ያጥፉ</string>
+    <string name="games_delete_game_data_confirm_dialog_message">የ%1$sን መረጃ በቋሚነት ማጥፋት ውጤቶችዎን፣ ሂደትዎን (የተቀመጡ ጨዋታዎች) እና በGoogle Play Games ውስጥ ያሉ የጨዋታ ቅንብሮችን ያስወግዳል።</string>
+    <string name="games_popup_signin_welcome">ሰላም %1$s</string>
+    <string name="family_management_title">ቤተሰብ</string>
+    <string name="family_management_retry">እንደገና ይሞክሩ</string>
+    <string name="family_management_load_error">ይዘቱን መጫን አልተቻለም</string>
+    <string name="family_management_toolbar_back">ተመለስ</string>
+    <string name="family_management_toolbar_more">ተጨማሪ</string>
+    <string name="family_management_exit_family_group">የቤተሰብ ቡድኑን ለቅቀው ይውጡ</string>
+    <string name="family_management_delete_family_group">የቤተሰብ ቡድንን ይሰርዙ</string>
+    <string name="family_management_leave_family_password_title">የቤተሰብ ቡድኑን ለመልቀቅ የይለፍ ቃልዎን ያረጋግጡ</string>
+    <string name="family_management_delete_family_password_title">የቤተሰብ ቡድኑን ለመሰረዝ የይለፍ ቃልዎን ያረጋግጡ</string>
+    <string name="family_management_remove_member_password_title">\"%s\"ን ለማስወገድ የይለፍ ቃልዎን ያረጋግጡ</string>
+    <string name="family_management_invite_family_member">የቤተሰብ አባላትን ይጋብዙ</string>
+    <string name="family_management_cancel_invite">ግብዣውን ይሰርዙ</string>
+    <string name="family_management_cancel_invite_success">ግብዣው በተሳካ ሁኔታ ተሰርዟል</string>
+    <string name="family_management_cancel_invite_error">ግብዣውን በመሰረዝ ላይ ችግር አጋጥሟል። እባክዎን እንደገና ይሞክሩ።</string>
+    <string name="family_management_remove_member">አባልን ያስወግዱ</string>
+    <string name="family_management_member_removed_success">%s ከቤተሰብ ቡድንዎ ተወግዷል</string>
+    <string name="family_management_member_remove_failed">%sን ለማስወገድ ችግር አጋጥሟል። እባክዎ እንደገና ይሞክሩ።</string>
+    <string name="family_management_leave_family_error_message">ከቤተሰብ ቡድኑ ለመውጣት ችግር አጋጥሟል። እባክዎ እንደገና ይሞክሩ።</string>
+    <string name="family_management_exist_group_success">ከቤተሰብ ቡድንዎ ወጥተዋል…</string>
+    <string name="family_management_delete_group_success">የቤተሰብ ቡድኑ ተሰርዟል</string>
+    <string name="family_management_delete_group_failure">የቤት ቡድኑን ለመሰረዝ አልተቻለም</string>
+    <string name="family_management_delete_group_cancel">ሰርዝ</string>
+    <string name="family_management_delete_group_confirm">እሺ</string>
+    <string name="family_management_input_pwd">እባክዎ የይለፍ ቃልዎን ያስገቡ</string>
+    <string name="family_management_invite_sent_date_format">የግብዣ መልዕክት በ %s ተልኳል</string>
+    <string name="family_management_invite_send">ግብዣ ተልኳል</string>
+    <string name="family_management_pwd_error">የተሳሳተ የይለፍ ቃል ነው፣ እባክዎ እንደገና ያስገቡ</string>
+    <string name="barcode_scanner_brand">በ%1$s ስም በmicroG ስካን ተደርጓል</string>
+    <string name="camera_permission_dialog_button">እሺ</string>
+    <string name="camera_permission_dialog_message">ለ%1$s ኮድን ስካን ለማድረግ የmicroG አገልግሎቶች የመሣሪያዎን ካሜራ ማግኘት አለባቸው።\n\nለማስቻል እባክዎን በቅንብሮች ውስጥ ለmicroG አገልግሎቶች የካሜራ ፈቃድ ይስጡ።</string>
+    <string name="camera_permission_dialog_title">የካሜራ ፈቃድ ያስፈልጋል</string>
+    <string name="pref_app_install_settings_title">የመተግበሪያ መጫኛ ቅንብሮች</string>
+    <string name="pref_app_install_switch_title">መተግበሪያዎችን መጫን ይፍቀዱ</string>
+    <string name="pref_app_install_other_apps_note">ፈቃድ መስጠት ከሌሎች ምንጮች የሚመጡ መተግበሪያዎችን መጫን ያስችላል።</string>
+    <string name="pref_app_install_permission_instruction">የጫኑዋቸው መተግበሪያዎች በትክክል መስራታቸውን ለማረጋገጥ፣ እባክዎን microG Companion ከሌሎች ምንጮች የተጫኑ መተግበሪያዎችን እንዲጭን ይፍቀዱለት።</string>
+    <string name="prefcat_app_install_list_title">የመተግበሪያ መጫኛን የሚጠቀሙ መተግበሪያዎች</string>
+    <string name="service_name_google_location_sharing">የጉግል የቦታ பகிራ</string>
+    <string name="location_sharing_description">ከዚህ መሳሪያ ላይ በጉግል መተግበሪያዎች እና አገልግሎቶች መካከል ያለውን የእውነተኛ ጊዜ የቦታ பகிራ ያስተዳድሩ</string>
+    <string name="location_sharing_learn_more">ስለ \"የቦታ பகிራ\" የበለጠ ይረዱ</string>
+    <string name="location_sharing_switch_text">የቦታ பகிራን ይጠቀሙ</string>
+    <string name="location_sharing_turn_off_notify_hint">ለዚህ መሳሪያ የቦታ பகிራን ካጠፉ፣ የሚያጋሩላቸው ሰዎች አይነገራቸውም።</string>
+    <string name="location_sharing_off_previous_hint">ድጋሚ እስኪያበሩት ድረስ የመጨረሻው የተጋራው ቦታዎ ብቻ ይገኛል።</string>
+    <string name="location_sharing_disabled">ለዚህ አካውንት ምንም ንቁ የቦታ பகிራዎች የሉም</string>
+    <string name="location_sharing_turn_on_hint">ከጉግል መተግበሪያ ወይም አገልግሎት የቦታዎን ማጋራት ሲጀምሩ፣ የቦታ பகிራን ከዚህ ቦታ ማስተዳደር ይችላሉ።\n\nየቦታዎን ማጋራት ለመጀመር ወደ Google Maps ወይም Family Link ይሂዱ።</string>
+    <string name="location_sharing_turn_off_title">የቦታ பகிራን ያጥፉ</string>
+    <string name="location_sharing_turn_off_hint">በተመሳሳይ የGoogle አካውንት ውስጥ በገቡ ሌሎች መሳሪያዎች ወይም ከGoogle ውጪ በሆኑ አፖች አሁንም ቦታዎን እያጋሩ ሊሆን ይችላል። ቦታዎን የሚያጋሩባቸውን ቅንብሮች በሁሉም ቦታዎች ላይ ማረጋገጥዎን ያረጋግጡ።\n\nየሚያጋሩላቸው ሰዎች መጨረሻ ላይ ያጋሩትን ቦታ ማየት ይቀጥላሉ።</string>
+    <string name="location_sharing_turn_off_cancel">ቀጥል</string>
+    <string name="location_sharing_turn_off_confirm">አጥፋ</string>
+    <string name="location_sharing_confirm_dialog_title">የቦታ ማጋራትን አግብር</string>
+    <string name="location_sharing_confirm_dialog_text">ቦታዎን የሚያጋሩላቸው ሰዎች ሁል ጊዜ ማየት የሚችሉት፦\n·ስምዎን እና ፎቶዎን\n·የGoogle አገልግሎትን ባልተጠቀሙበት ጊዜም እንኳ የመሳሪያዎን የቅርብ ጊዜ ቦታ\n·የመሳሪያዎን የባትሪ መጠን እና እየተሞላ መሆኑን\n·የቦታ ማጋሪያ ማሳወቂያን ካከሉ የደረሱበትን እና የወጡበትን ሰዓት</string>
     <!-- Passkey management -->
+    <string name="pref_passkey_manager_title">ፓስኪዎችን አስተዳድር</string>
+    <string name="pref_passkey_manager_empty_title">የተቀመጡ ፓስኪዎች የሉም</string>
+    <string name="pref_passkey_manager_description">የሶስተኛ ወገን አፖች ፓስኪዎችን ሲመዘግቡ microG የአካባቢ መዝገብ ይይዛል። አንድ አፕ microGን ሳያሳውቅ ፓስኪን ካጠፋው፣ መዝገቡ እንደቀረ ሊሆን ይችላል። እንዲህ ያሉ ትርፍ መዝገቦችን እዚህ ማስወገድ ይችላሉ።</string>
+    <string name="pref_passkey_manager_delete_dialog_title">ፓስኪን ሰርዝ</string>
+    <string name="pref_passkey_manager_delete_dialog_message">በ\"%1$s\" ላይ ያለውን የ\"%2$s\" ፓስኪ ይሰርዙ። ይህ ድርጊት ሊታረም አይችልም፤ እንደገና ለመግባት አዲስ ፓስኪ መመዝገብ ይኖርብዎታል።</string>
+    <string name="pref_passkey_manager_delete_dialog_confirm">ሰርዝ</string>
+    <string name="pref_passkey_manager_unknown_user">ያልታወቀ ተጠቃሚ</string>
+    <string name="pref_passkey_manager_transport_screen_lock">የስክሪን ቁልፍ</string>
+    <string name="pref_passkey_manager_transport_usb">ዩኤስቢ</string>
+    <string name="pref_passkey_manager_transport_nfc">ኤንኤፍሲ</string>
+    <string name="pref_passkey_manager_transport_bluetooth">ብሉቱዝ</string>
+    <string name="pref_passkey_manager_transport_hybrid">ድብልቅ</string>
+    <string name="pref_passkey_manager_credential_id_format_internal">መለያ: %1$s</string>
+    <string name="self_check_cat_patched_apps">የተስተካከሉ አፕሊኬሽኖች</string>
+    <string name="self_check_source_morphe">የMorphe ጥገኛ ስርክሰቶች</string>
+    <string name="self_check_source_alternative">አማራጭ ጥገኛ ስርክሰቶች</string>
+    <string name="self_check_resolution_patched_app_installed">%1$s የሚጠቀሙ መተግበሪያዎች አልተገኙም። እባክዎን የተሻሻለውን መተግበሪያ ፓች አድርገው ይጫኑ</string>
+    <string name="self_check_name_notifications">ማሳወቂያዎች ተፈቅደዋል</string>
+    <string name="self_check_resolution_notifications">የማሳወቂያ ቅንብሮችን ለመክፈት እዚህ ይንኩ። የባትሪ ማመቻቻ በሚበራበት ጊዜ ወይም በሌሎች ሁኔታዎች GcmService በጀርባ እንዲሰራ ለማድረግ ማሳወቂያዎች ያገለግላሉ</string>
+    <string name="self_check_name_oem_restriction">የጀርባ ሂደት ገደቦች</string>
+    <string name="self_check_resolution_oem_restriction">የስርዓትዎ አቀማመጥ የጀርባ ሂደቶችን ሊገድብ ይችላል። እነዚህን ገደቦች እንዴት ማጥፋት እንደሚችሉ ለማወቅ Don\'t Kill My App! ሳይትን ለመክፈት እዚህ ይንኩ</string>
+    <string name="morphe_sign_in_with_google_microg_label">በ MicroG RE አማካኝነት በ Google ይግቡ</string>
+    <string name="self_check_patched_app_installed">በ%1$s እየሰራ ነው</string>
+    <string name="self_check_action_download_morphe">Morpheን ያውርዱ</string>
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">የተሳሳተ የአርክቴክቸር ዓይነት ተጭኗል</string>
+    <string name="abi_mismatch_message">"ይህ MicroG-RE ስሪት 64-ቢት (arm64) ላይብረሪዎችን ብቻ ይዟል፣ ነገር ግን ይህ መሳሪያ 32-ቢት ተጠቃሚ ስፔስ (userspace) ላይ እየሰራ ነው።
+
+Conscrypt የሚያስፈልጋቸው ባህሪያት (የመለያ መግቢያ፣ ስትሪሚንግ፣ BotGuard፣ የቪዲዮ ስትሪሞችን spoof ማድረግ፣ SponsorBlock፣ Return YouTube Dislike እና የመሳሰሉት) በትክክል አይሰሩም እንዲሁም የplayback ችግሮችን ወይም \"Unable to find a default SSL provider\" የሚል ስህተትን ሊያስከትሉ ይችላሉ።
+
+በምትኩ ARMv7 ወይም Universal APK ይጫኑ።"</string>
+    <string name="abi_mismatch_download_armv7">የARMv7 APK ያውርዱ</string>
+    <string name="abi_mismatch_downloading_title">ትክክለኛው ዓይነት እየወረደ ነው…</string>
 </resources>

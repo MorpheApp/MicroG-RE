@@ -15,5 +15,21 @@
   ~ limitations under the License.
   -->
 <resources>
+    <string name="lib_name">microG kasutajaliidese tööriistad</string>
+    <string name="lib_license">Apache License 2.0, microG meeskond</string>
+    <string name="about_version_str">Versioon %1$s</string>
+    <string name="about_default_license">Kõik õigused kaitstud.</string>
+    <string name="prefcat_setup">Seadistamine</string>
+    <string name="self_check_title">Enesekontroll</string>
+    <string name="self_check_desc">Kontrollige, kas süsteem on korrektselt seadistatud microG kasutamiseks.</string>
+    <string name="self_check_cat_permissions">Lubadused antud</string>
+    <string name="self_check_name_permission">Luba %1$s-le:</string>
+    <string name="self_check_name_permission_interact_across_profiles">Luba suhelda tööprofiiliga:</string>
+    <string name="self_check_resolution_permission">Puudutage siia, et anda luba. Luba mitteandmine võib põhjustada rakenduste ebakorrektset tööd.</string>
+    <string name="about_root_title">microG kasutajaliidese demo</string>
+    <string name="about_root_summary">Kokkuvõte</string>
+    <string name="about_root_version">Versioon v0.1.0</string>
+    <string name="about_root_libraries">Sisaldatud raamatukoodid</string>
     <!--Settings About-->
+    <string name="about_morphe_description">Morphe on avatud lähtekoodiga projekt, mis on loodud Androidi rakenduste muutmiseks patchide abil</string>
 </resources>

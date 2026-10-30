@@ -4,8 +4,485 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="dialog_title_remove_account">Kendu kontua</string>
+    <string name="dialog_message_remove_account">"Ziur Lanez kontu hau kendu nahi duzu?
+
+Batzu alkali zerbitzu eta funtzioak ez egongo dira eskuragarri
+
+Zure datuak ez dira galduko"</string>
+    <string name="dialog_confirm_button">Kendu</string>
+    <string name="dialog_cancel_button">Bertatu</string>
+    <string name="snackbar_remove_account">%s kontua kenduta</string>
+    <string name="snackbar_undo_button">Atzera</string>
+    <string name="gms_settings_name">MicroG konfigurazioa</string>
+    <string name="gms_settings_summary">Konfigura MicroG zerbitzuak.</string>
+    <string name="just_a_sec">Segundu bat…</string>
+    <string name="ask_permission_tos">Jarraituz, aplikazio honek eta Googlek zure informazioa erabili izateari baimena ematen diozuke, euren zerbitzuen baldintza eta pribatutasun politiken arabera.</string>
+    <string name="ask_scope_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g>-k honi nahi luke:</string>
+    <string name="ask_service_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g>-k honi erabili nahi luke:</string>
+    <string name="account_manager_title">Google Kontuen Kudeatzailea</string>
+    <string name="sorry">Barkatu…</string>
+    <string name="auth_before_connect">Konektatu Google kontua microG-rekin.\n\nKonektatu Google kontu batera; erabili <b>Hasi saioa</b> botoia, edo <b>Huawei</b> botoia erabili fabrikagailu honeko gailu bat baduzu. Botoi batetako baten gainean sakatuz, zure kontuan sartzeko orrialdean bideratuko zara.</string>
+    <string name="auth_sign_in">Sartu</string>
+    <string name="auth_connecting">"Zure gailuak konexioa ezartzen ari da Googleren zerbitzuekin saioa hasi lekuko
+
+Prozesu honek segundu batzuk hartu ditzake."</string>
+    <string name="no_network_error_desc">"Ez duzu sare-konexioik.
+
+Arazo bat temporala izan daiteke, edo zure Android gailua ez dago datu-zerbitzuentzat konfiguratuta. Saiatu berriro sare mugikor batean konektatuta, edo Wi-Fi sare batean konektatu."</string>
+    <string name="auth_general_error_desc">"Arazo bat izan da Google zerbitzuekin komunikatzeko.
+
+Saiatu berriro geroago."</string>
+    <string name="auth_finalize">"Zure gailari Googlerekin harremanetan jartzen ari da zure kontuan informazioa gordetzeko.
+
+Horrek irauten ditu minutu batzuk."</string>
+    <string name="allow">Baimenu</string>
+    <string name="deny">Ukatu</string>
+    <string name="auth_notification_title">Autentifikazioa beharrezkoa da</string>
+    <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g>-k zure baimena behar du zure Google kontuan sartzeko.</string>
+    <string name="auth_package_override_request_title"><b><xliff:g example="F-Droid">%1$s</xliff:g></b>-ri sarbide pribilegioduna emango zaio <xliff:g example="account@example.com">%2$s</xliff:g>-ra?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b>-k zure kontuan sartu nahi du <b><xliff:g example="F-Droid">%2$s</xliff:g> <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>-aren izenean. Honek zure kontuan sarbide pribilegioduna eman diezion aukera izan dezake.</string>
+    <string name="auth_action_notification_channel_name">Google kontuaren alertak</string>
+    <string name="auth_action_notification_channel_description">Zure Google kontuetako batek konfigurazio gehigarria behar duela erabili baino lehen, edo kontu bat microG-rekin sinestraritzeko ez dela egokia, jakinarazten du.</string>
+    <string name="auth_action_notification_title">Kontuaren ekintza beharrezkoa da</string>
+    <string name="auth_action_notification_content">Zure Google kontuak konfigurazio gehigarria behar du.</string>
+    <string name="auth_action_reauth_notification_title">Kontuaren ekintza beharrezkoa da</string>
+    <string name="auth_action_activity_header">Bukatu zure Google kontuaren konfigurazioa</string>
+    <string name="auth_action_activity_explanation">Osatu hurrengo urrats hauek gailu honetan zure %s Google kontua erabili ahal izateko.</string>
+    <string name="auth_action_step_enable_checkin">Gailuaren erregistroa aktibatu</string>
+    <string name="auth_action_step_enable_checkin_description">"Zure gailua Google-en erregistratu behar du gutxienez behin.
+
+Kontuaren konfigurazioa amaitu ondoren, Google-en gailu-erregistroa desaktibaezu dezakezu."</string>
+    <string name="auth_action_step_enable_gcm">Cloud Messaging aktibatu</string>
+    <string name="auth_action_step_enable_gcm_description">Kontuaren konfigurazioa amaitu ondoren Cloud Messaging desaktibu egin dezakezu.</string>
+    <string name="auth_action_step_allow_microg_gcm">Cloud Messaging baimendu microG-rentzat</string>
+    <string name="auth_action_step_allow_microg_gcm_description">Zure lehentasunen arabera, microG-k zure baimena behar du Cloud Messaging-en erregistratu aurretik.</string>
+    <string name="auth_action_step_enable_lockscreen">Pantaila blokeatzeko sistema segurua konfiguratu</string>
+    <string name="auth_action_step_enable_lockscreen_description">"Zure Google kontua zure lantegiak edo hezkuntza erakundeak kudeatzen du. Zure administratzaileak gaileruek pantaila-bloqueo seguru bat izan behar dutela kontuaren datuetan sartu aurretik. 
+
+ configureatu paswoorden, PIN edo patroi bat pantailako blokeoari."</string>
+    <string name="auth_action_step_perform_content_description">Klik egin urratsa burutzeko</string>
+    <string name="auth_action_step_completed_content_description">Urratsa osatuta</string>
+    <string name="auth_action_activity_finish">Amaitu</string>
+    <string name="signin_picker_title">Aukeratu kontu bat</string>
+    <string name="signin_picker_subtitle"><xliff:g example="F-Droid">%1$s</xliff:g>-ra jarraitzeko</string>
+    <string name="signin_picker_add_account_label">Gehitu kontu beste bat</string>
+    <string name="signin_confirm_title">Baimendu <xliff:g example="F-Droid">%1$s</xliff:g>-n saioa hastea</string>
+    <string name="signin_confirm_button_text">Baimetu eta partekatu</string>
+    <string name="signin_subtext_sharing">Jarraitzeko, microG-k zure Google Kontuaren izena, posta elektronikoa eta profil-argazkia partekatuko ditu <xliff:g example="F-Droid">%1$s</xliff:g>-rekin.</string>
+    <string name="perm_status_broadcast_label">barne-estatuen broadcast-ei entzun</string>
+    <string name="perm_gsf_read_gservices_label">Irakurri Google zerbitzuen konfigurazioa</string>
+    <string name="perm_c2dm_receive_label">Entzun C2DM mezuak</string>
+    <string name="perm_c2dm_send_label">Bidali C2DM mezuak beste aplikazioei</string>
+    <string name="perm_gtalk_svc_label">mezu exchangedu eta sinkronizazio jakinarazpenak jaso Google zerbitzaritzat</string>
+    <string name="perm_extended_access_label">Google zerbitzuetarako sarbide luzatua</string>
+    <string name="perm_provision_label">microG zerbitzuak hornitu</string>
+    <string name="perm_provision_description">Aplikazioak microG zerbitzuek konfiguratzea ahalbidetzen du erabiltzailearen elkarrizunik gabe</string>
+    <string name="perm_car_speed_label">Autoko abiadura</string>
+    <string name="perm_car_speed_description">"Sarrerantz zure autoaren abiadura"</string>
+    <string name="perm_car_info_label">Autoaren informazioa</string>
+    <string name="perm_car_info_description">"Sarrerantz zure autoaren informazioa"</string>
+    <string name="perm_car_fuel_label">Autoko erregai maila</string>
+    <string name="perm_car_fuel_description">"Sarrerantz zure autoaren erregai mailako informazioa"</string>
+    <string name="perm_car_mileage_label">Autoaren kilometrajea</string>
+    <string name="perm_car_mileage_description">"Sarrerantz zure autoaren kilometraje informazioa"</string>
+    <string name="perm_car_vendor_extension_label">Auto hornitzailearen kanala</string>
+    <string name="perm_car_vendor_extension_description">"Sarrerantz zure auto hornitzailearen kanalera autoari buruzko informazioa trukatzeko"</string>
+    <string name="service_name_checkin">Gailuaren Erregistratzea</string>
+    <string name="service_name_mcs">Hodeiko Mezuak</string>
+    <string name="service_name_device_attestation">Gailuaren Attestazioa</string>
+    <string name="service_name_vending">Play Store zerbitzuak</string>
+    <string name="service_name_work_profile">Lan-profila</string>
+    <string name="games_title">Google Play Games</string>
+    <string name="games_info_title"><xliff:g example="F-Droid">%1$s</xliff:g>-k Play Games erabili nahi du</string>
+    <string name="games_info_content">Play Games erabiltzeko Google Play Games aplikazioa instalatzea beharrezkoa da. Aplikazioak Play Games gabe jarrai diezake, baina posible da espero ez den moduan jokatzea.</string>
+    <string name="pick_place_title">Aukeratu lekura bat</string>
+    <string name="place_picker_select_title">Aukeratu kokapen hau</string>
+    <string name="place_picker_nearby_places">Leku hurbilak</string>
+    <string name="network_type_mobile">Sare mugikorra</string>
+    <string name="network_type_wifi">Wi-Fi</string>
+    <string name="network_type_roaming">Roaming</string>
+    <string name="network_type_other">Sare beste batzuk</string>
     <!-- Self check -->
+    <string name="self_check_cat_fake_sig">Firma spoofing laguntza</string>
+    <string name="self_check_cat_gms_packages">Instalatutako paketeak</string>
+    <string name="self_check_cat_system">Sistema</string>
+    <string name="self_check_name_system_spoofs">Sistemak sinatura faltsifikatzen du: </string>
+    <string name="self_check_resolution_system_spoofs">Egiteko beharrezko urratsak zein diren ikusteko, begiratu dokumentazioa.</string>
+    <string name="self_check_pkg_gms">microG Zerbitzuak</string>
+    <string name="self_check_pkg_vending">microG Companion / Play Store</string>
+    <string name="self_check_pkg_gsf">microG Zerbitzuen Framework-a</string>
+    <string name="self_check_name_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> instalatuta dago: </string>
+    <string name="self_check_resolution_app_installed">Instalatu <xliff:g example="F-Droid">%1$s</xliff:g> aplikazioa edo bat sinbiloa dena. Begiratu dokumentazioan zein aplikazioak diren sinbiloak.</string>
+    <string name="self_check_name_correct_sig"><xliff:g example="F-Droid">%1$s</xliff:g>-ek sinpatura zuzena du: </string>
+    <string name="self_check_resolution_correct_sig">Instalatuen <xliff:g example="F-Droid">%1$s</xliff:g> ez da sinpatiblea edo sinpereztura faltsu egitea ez dago aktiboa horretarako. Mesedez, egiaztatu dokumentazioa zein aplikazioak eta ROMak diren sinpatibleak.</string>
+    <string name="self_check_name_battery_optimizations">Bateriako optimizazioak ezieratu dira:</string>
+    <string name="self_check_resolution_battery_optimizations">Sakatu hemen bateriako optimizazioak desaktibatzeko. Hau ez egiteak aplikazioak gaizki funtzionatu ditzakeen emaitza izan daiteke.</string>
     <!-- Settings strings -->
+    <string name="prefcat_about">Gutera</string>
+    <string name="prefcat_details">Xehetasunak</string>
+    <string name="cond_gcm_bat_title">Bateria optimizazioak aktibatuta</string>
+    <string name="cond_gcm_bat_summary">Cloud Messaging aktibatu duzu baina microG Zerbitzuentzat bateriako optimizazioak aktibo dituzu. Push jakinarazpenak iristeko, bateriako optimizazioak ezieratu behar dituzu.</string>
+    <string name="cond_gcm_bat_action">Optimizazioak ezagutu</string>
+    <string name="cond_perm_title">Baimenik gabe</string>
+    <string name="prefs_account">Kontuaren preferentziak</string>
+    <string name="prefs_account_privacy">Informazio pertsonala &amp; pribatutasuna</string>
+    <string name="prefs_account_security">Sartzea &amp; segurtasuna</string>
+    <string name="pref_auth_trust_google_title">Konfiatu Google aplikazioen baimenetan</string>
+    <string name="pref_auth_trust_google_summary">Desaktibatuta dagoen bitartean, aplikazio bateko baimen eskaera Google-ra bidali aurretik erabiltzaileari galdatu egingo zaio. Hau desaktibatuta badago, zenbait aplikazioek ezingo dute Google kontua erabili.</string>
+    <string name="pref_auth_visible_title">Aplikazioei kontuak bilatzeko baimena eman</string>
+    <string name="pref_auth_visible_summary">Gaitzituta dagoenean, gailu honetako aplikazio guztiek zure Google kontuen posta elektroniko helbideak ikusiko aukeratu izango dute, aurreko baimenik gabe.</string>
+    <string name="pref_auth_include_android_id_title">Autentifikatu gailuaren erregistroarekin</string>
+    <string name="pref_auth_include_android_id_summary">Desgaitzituta dagoenean, autentifikazio eskaerak ez dira gailuaren erregistratzearekin lotuko, eta horrek gailu baimenik gabekoei sartzea ahalbide diezaioke, baina ondorio aurreikusizirik gabekoak izan ditzake.</string>
+    <string name="pref_auth_strip_device_name_title">Kendu gailuaren izena autentifikaziorako</string>
+    <string name="pref_auth_strip_device_name_summary">Gaitzituta dagoenean, autentifikazio eskaerei ez zaie gailuaren izena gehitu, eta horrek gailu baimenik gabekoei sartzea ahalbide diezaioke, baina ondorio aurreikusizirik gabekoak izan ditzake.</string>
+    <string name="pref_auth_two_step_verification_title">Jaso bi-urratsko berifizazioagoak</string>
+    <string name="pref_auth_two_step_verification_summary">Gaitzituta dagoenean, gailuak Google-en bi-urratsko berifizazioagoak jaso ditzake (Cloud Messaging beharrezkoa da).</string>
+    <string name="pref_auth_allow_find_devices_title">Google Gailuak Bilatzaileari erantzuteko baimena eman</string>
+    <string name="pref_auth_allow_find_devices_summary">Gaitzituta dagoenean, gailuak Google-en Nire Gailua Bilatu jakinarazpenak jaso ditzake (Cloud Messaging beharrezkoa da).</string>
+    <string name="pref_checkin_enable_summary">Zure gailua Google zerbitzuan erregistratzen du eta gailu identifikatzaile unikoki bat sortzen du. microG-k zure Google kontuaren izena ez den informazio identifikatzailea kentzen du erregistratze datuetan.</string>
+    <string name="pref_device_registration_android_id">Android ID</string>
+    <string name="checkin_not_registered">Ez dago erregistratuta</string>
+    <string name="checkin_last_registration">Azken erregistroa: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="checkin_enable_switch">Gailua erregistratu</string>
+    <string name="pref_info_status">Estadoa</string>
+    <string name="pref_accounts_title">Kontuak</string>
+    <string name="pref_game_accounts_title">Google Jokoen Kontuak</string>
+    <string name="pref_accounts_summary">Google kontuak gehitu eta kudeatu</string>
+    <string name="prefcat_accounts_settings_title">⚙️ Konfigurazioa</string>
+    <string name="prefcat_accounts_login_accounts_title">Sesiokoa hasita</string>
+    <string name="prefcat_accounts_options_title">Aukerak</string>
+    <string name="pref_accounts_manage_accounts_title">Kontuak kudeatu</string>
+    <string name="pref_accounts_manage_accounts_summary">Ireki gailugako kontuen kudeatzailea</string>
+    <string name="prefcat_accounts_backup_title">Kontuen kopia seguruak</string>
+    <string name="pref_accounts_backup_title">Kontuen kopia seguruak egin</string>
+    <string name="pref_accounts_backup_summary">Esportatu Google kontuak fitxera batera</string>
+    <string name="pref_accounts_restore_title">Kontuak berreskuratu</string>
+    <string name="pref_accounts_restore_summary">Importatu Google kontuak fitxera batetik</string>
+    <string name="pref_accounts_backup_warning_title">Kontuen kopia seguruak egin?</string>
+    <string name="pref_accounts_backup_warning_message">Honek zure kontuak eta saio-hasi tokenak (SID/LSID) fitxera batean idazten ditu. Fitxarekin lortu duen edozein norbitelak zure kontuetara sartu ahal izan dezake, beraz, gordetu seguru eta inoiz ez partekatu.</string>
+    <string name="button_backup_accounts">Kopia segurua egin</string>
+    <string name="snackbar_accounts_backed_up">Kontuak kopiatuta</string>
+    <string name="snackbar_accounts_export_failed">Backup egitea huts egin du</string>
+    <string name="snackbar_accounts_import_failed">Berreskuratzea huts egin du</string>
+    <string name="prefcat_youtube_activity">YouTube Aktibitatea</string>
+    <string name="pref_manage_all_history">Historia guztia kudeatu</string>
+    <string name="pref_data_in_youtube">Zure datuak YouTube-en</string>
+    <string name="pref_accounts_login_accounts_summary">Kontuak gailu honetan bakarrik gordetzen eta stockpatzen dira. Sakatu kontu batean gailu honetatik betiko ezabatzeko</string>
+    <string name="pref_privacy_title">Pribatutasuna</string>
+    <string name="pref_privacy_summary">Autentifikazio eta aplikazioen pribatutasun konfigurazioak</string>
+    <string name="auth_add_account">Kontoa gehitu</string>
+    <string name="prefcat_applications">Aplikazioak</string>
+    <string name="prefcat_authentication">Autentifikazioa</string>
+    <string name="pref_add_account_summary">Google kontua gehitu</string>
+    <string name="pref_gcm_enable_mcs_summary">Cloud Messaging aplikazio hirugarren parteko askok erabiltzen duten push jakinarazpen proveedor bat da. Hura erabiltzeko, gailu erregistroa aktibatu behar duzu.</string>
+    <string name="pref_gcm_confirm_new_apps_title">Berrestatu aplikazio berriak</string>
+    <string name="pref_gcm_confirm_new_apps_summary">Galdetu push jakinarazpenak jasotzeko aplikazio berri bat erregistratu aurretik</string>
+    <string name="pref_about_title">MicroG RE לגanez</string>
+    <string name="pref_hide_launcher_icon">Ezkutatu ikona abiarazlean</string>
+    <string name="hide_launcher_icon_dialog_message">Aktibatuta badago, MicroG ezkutuko da zure aplikazioen abiatzailean. MicroG zure gailuko sistema-aplikazioen zerrendan dagoen aplikazio-informazioatik ireki daiteke.</string>
+    <string name="hide_launcher_icon_updating_title">Itxaron beharrezkoa aplikazioa eguneratzen ari den bitartean</string>
+    <string name="pref_language_title">Hizkuntza</string>
+    <string name="pref_language_system_default">Sistemaren lehenetsua</string>
+    <string name="pref_github_summary">Iturburu-kodeen biltegia</string>
+    <string name="pref_update_title">Egiaztatu eguneratzeak</string>
+    <string name="pref_update_summary">Eguneratze berriago bat begiratu GitHub-en.</string>
+    <string name="update_include_prerelease">Sartu garapen bertsioak</string>
+    <string name="update_available_title">Eguneratze bat eskuragarri dago</string>
+    <string name="update_available_prerelease_title">Eguneratze bat eskuragarri dago (aurre-kaleratzea)</string>
+    <string name="update_available_message">v%1$s bertsio berria eskuragarri dago. v%2$s bertsioa instalatu duzu. Deskargatu eta instalatu eguneratzea?</string>
+    <string name="update_now">Eguneratu</string>
+    <string name="update_whats_new">Zer dago berria</string>
+    <string name="update_ignore">Ezaitz</string>
+    <string name="update_downloading_title">Eguneratzea deskargatzen...</string>
+    <string name="update_download_failed">Deskarga huts egin du. Egite konexioa eta saiatu berriro.</string>
+    <string name="update_signature_mismatch">Aplikazioa ezin da eguneratu, sinatureak desberdinak dira.</string>
+    <string name="update_failed_title">Eguneratzea huts egin du</string>
+    <string name="update_permission_required_title">Baimena beharrezkoa da</string>
+    <string name="update_permission_required_message">Eguneratzeak instalatzeko, MicroG-ri aplikazio ezezagunak instalatzeko baimena eman diezion sistema-konfigurazioan.</string>
+    <string name="update_open_settings">Konfigurazioa</string>
+    <string name="update_check_failed">Eguneratzeak ezin dira egitazi. Egite konexioa eta saiatu berriro.</string>
+    <string name="update_up_to_date_title">Eguneratuta zaude</string>
+    <string name="update_up_to_date_message">MicroG-RE v%s bertsio berriena da.</string>
+    <string name="update_notification_title">Eguneratze bat eskuragarri dago</string>
+    <string name="update_notification_text">v%s bertsio berria eskuragarri dago, ukitu eguneratzeko</string>
+    <string name="update_notification_channel">Eguneratzeak</string>
+    <string name="update_notification_permission_title">Jakinarazpenak</string>
+    <string name="update_notification_permission_message">Eguneratze berri bat eskuragarri dagoenean jakinarazteko, MicroG-RE-k jakinarazpenak bidaltzeko baimena behar du. Mesedez, baimendu jakinarazpenak eguneratze-abisuak iritsen daitezen.</string>
+    <string name="update_notification_permission_allow">Baimendu</string>
+    <string name="update_notification_permission_not_now">Oraren ez</string>
+    <string name="update_notification_permission_open_settings">Ireki konfigurazioa</string>
+    <string name="gcm_unregister_app">Ez erregistratu</string>
+    <string name="gcm_no_message_yet">Oraindik ez da mezuik jakingo</string>
+    <string name="gcm_last_message_at">Azken mezua: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_registered">Erregistratuta</string>
+    <string name="gcm_registered_since">Erregistratua: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_unregister_confirm_title"><xliff:g example="F-Droid">%1$s</xliff:g> ez-erregistratu?</string>
+    <string name="gcm_unregister_confirm_message">Batzuk apps ez dira automatikoki berregistratzen eta/edo ez dute hori eskuz egiteko aukerarik. Aplikazio hauek agian ez dira zuzen funtzionatuko erregistratzen utzita.\nJarraitu?</string>
+    <string name="gcm_unregister_after_deny_message">Push jakinarazpenetarako erregistratzea ukatzen dio jada erregistratuta dagoen aplikazio bati.\nOra erregistratzen utzi nahi duzu, etorkizunean push mezuak jasor ez ditzan?</string>
+    <string name="gcm_messages_counter">Mezuak: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> byte)</string>
+    <string name="gcm_network_state_disconnected">Deskonektatuta</string>
+    <string name="gcm_network_state_connected">Konektatuta <xliff:g example="2 hours ago">%1$s</xliff:g>tik</string>
+    <string name="gcm_enable_switch">Jasotu push jakinarazpenak</string>
+    <string name="gcm_allow_app_popup"><xliff:g example="F-Droid">%1$s</xliff:g> aplikazioari push jakinarazpenetarako erregistratzen utzi?</string>
+    <string name="pref_push_app_allow_register_title">Baimenu erregistroa</string>
+    <string name="pref_push_app_allow_register_summary">Aplikazioari push jakinarazpenetarako erregistratzen utzi.</string>
+    <string name="pref_push_app_wake_for_delivery_title">Hasi aplikazioa push mezu bat jasotzean</string>
+    <string name="pref_push_app_wake_for_delivery_summary">Hasi aplikazioa atzealdean push mezuak jasotzeko.</string>
+    <string name="prefcat_push_apps_title">Push jakinarazpenak erabiltzen dituzten aplikazioak</string>
+    <string name="prefcat_push_apps_registered_title">Erregistratutako aplikazioak</string>
+    <string name="prefcat_push_apps_unregistered_title">Erregistratu gabeko aplikazioak</string>
+    <string name="prefcat_gcm_registers">Erregistroak</string>
+    <string name="prefcat_advanced">Aurreratuen</string>
+    <string name="pref_gcm_remove_registers">Kendu erregistratutako aplikazio guztiak</string>
+    <string name="pref_gcm_remove_registers_summary">Erabili aukera honek aplikazio bat erregistratzean edo jakinarazupenak jasotzean arazoak badituzu soilik</string>
+    <string name="gcm_remove_registers_dialog_title">Erregistro guztiak kendu?</string>
+    <string name="gcm_remove_registers_dialog_message">"Honek roomy izen kaydedu diren aplikazio guztien push jakinarazpenak jasotzeko gaitasuna kenduko du behin batean
+
+Applikazioak izen kaydedu nahi badizuezu, securityToken eta AndroidID berriak behar izango dituzue. Egunaiztu gailuaren izen kaydedu egiteko egoera
+
+Batzuetan, ekintza honen ondoren aplikazio batzuk ezin dute berriro izen kaydedu. Aplikazio hauek berriro izen kaydedu eskaatu baino lehen, datuak garbitu beharko dituzue"</string>
+    <string name="gcm_remove_registers_toast_message">Aplikazio guztiak kenduta daude push jakinarazpenetatik</string>
+    <string name="prefcat_push_networks_title">Push jakinarazupenetarako erabiliko diren sareak</string>
+    <string name="safetynet_intro">Google SafetyNet gailu-ziurtatze sistema bat da, gailua behar bezala seguru dagoela eta Android CTS-ekin kompatigarria dela ziurtatzen duena. Batzuk aplikazioek SafetyNet erabiltzen dute segurtasun arrazoietagatik edo manipulazio-babesaren baldintza হিসেবে.\n\nmicroG GmsCore-k SafetyNet-en implementazio doako bat dauka, baina zerbitzari ofizialak SafetyNet-en eskaerak DroidGuard sistema proprietarioa erabiliz sinatzea eskatzen du.</string>
+    <string name="safetynet_enable_switch">Gailuaren attestazioa onartu</string>
+    <string name="pref_safetynet_test_title">SafetyNet attestazioa probatu</string>
+    <string name="pref_recaptcha_test_title">ReCAPTCHA probatu</string>
+    <string name="pref_recaptcha_enterprise_test_title">ReCAPTCHA Enterprise probatu</string>
+    <string name="pref_test_summary_passed">Probak guztiak gainditu dira</string>
+    <string name="pref_test_summary_failed">Huts egin du: %s</string>
+    <string name="pref_test_summary_warn">Oharra: %s</string>
+    <string name="pref_test_summary_running">Exekutatzen...</string>
+    <string name="pref_droidguard_unsupported_summary">DroidGuard-en betetzeapen ez dago supportoa gailu honetan. SafetyNet zerbitzuek modu okerrean funtzionatu dute.</string>
+    <string name="prefcat_safetynet_apps_title">SafetyNet erabiltzen duten aplikazioak</string>
+    <string name="prefcat_device_attestation_apps_title">Gailu attestazioa erabiltzen duten aplikazioak</string>
+    <string name="pref_device_attestation_app_allow_requests_title">Eskamentuak onartu</string>
+    <string name="pref_device_attestation_app_allow_requests_summary">Aplikazioari gailu attestazioa eskatzeko baimena eman</string>
+    <string name="menu_clear_recent_requests">Garbitu azken eskaerak</string>
+    <string name="safetynet_last_run_at">Azken erabilera: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="profile_name_native">Aberrizkoa</string>
+    <string name="profile_name_real">Erreal</string>
+    <string name="profile_name_user">Kustomizatua: %s</string>
+    <string name="profile_name_auto">Automatikoa: %s</string>
+    <string name="profile_name_system">Sistema: %s</string>
+    <string name="pref_device_registration_import_custom_profile_title">Inportatu profil pertsonalizatua</string>
+    <string name="pref_device_registration_serial_title">Seriala</string>
+    <string name="pref_device_registration_import_custom_profile_summary">Inportatu gailuaren profila fitxategi batetik</string>
+    <string name="pref_device_registration_select_profile_title">Hautatu profila</string>
+    <string name="pref_device_registration_device_profile_category">Gailuaren profila</string>
+    <string name="pref_safetynet_recent_uses">Azken erabilerak</string>
+    <string name="pref_safetynet_recent_attestation_summary">Attestazioa: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_summary">ReCaptcha: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_enterprise_summary">ReCaptcha Enterprise: %s</string>
+    <string name="pref_safetynet_recent_copy_json">Kopiatu JSON JWS datuak</string>
+    <string name="pref_safetynet_recent_advice">A aholkua</string>
+    <string name="pref_safetynet_recent_eval_type">Ebaluazio mota</string>
+    <string name="pref_safetynet_recent_response_status">Erantzunaren egoera</string>
+    <string name="pref_safetynet_recent_cat_response">Erantzun datuak</string>
+    <string name="pref_safetynet_recent_cat_request">Eskaera datuak</string>
+    <string name="pref_safetynet_recent_nonce">Nonce (Hex)</string>
+    <string name="pref_safetynet_recent_request_time">Eskaeraren ordua</string>
+    <string name="pref_safetynet_recent_request_type">Eskaera mota</string>
+    <string name="pref_safetynet_recent_cat_basic">Oinarrizko datuak</string>
+    <string name="pref_safetynet_recent_token">Tokena</string>
+    <string name="pref_safetynet_recent_copied">Portaloian kopiatuta!</string>
+    <string name="pref_safetynet_test_integrity_cts_passed">Integritateak eta CTS-ak onartuta</string>
+    <string name="pref_safetynet_test_cts_failed">CTS hutsik egin du</string>
+    <string name="pref_safetynet_test_integrity_failed">Integritatea huts egin du</string>
+    <string name="pref_safetynet_test_not_completed">Oraindik ez da amaitu</string>
+    <string name="pref_safetynet_test_no_result">Ez dago emaitzarik</string>
+    <string name="pref_safetynet_test_invalid_json">JSON ezaguna ez da</string>
+    <string name="push_notifications_summary_off">TXE</string>
+    <string name="push_notifications_summary_automatic">ON / Automatikoa: %s</string>
+    <string name="push_notifications_summary_manual">ON / Eskualda: %s</string>
+    <string name="push_notifications_summary_values_seconds">%s segundotik</string>
+    <string name="pref_vending_licensing_category">Google Play-en Lizentzia</string>
+    <string name="pref_vending_licensing_enable_switch">Lizentzia egizteko eskaerei erantzun</string>
+    <string name="pref_vending_license_enable_summary">App batzuek Google Play-en erosi dituzun egiztea eskatzen dute. Aplikazio batek eskatu zuenean, microG-k erospen frogak deskargatu ditzake Google-tik. Desaktibatuta badago, edo Google konturik gehituta ez bada, lizentzia egizteko eskaerak ez dira kontuan hartzen.</string>
+    <string name="pref_vending_licensing_purchase_free_apps_switch">Gehitu automatikoki doako aplikazioak liburutegira</string>
+    <string name="pref_vending_licensing_purchase_free_apps_summary">Doapps doakoek Google Play-enથી deskargatu direnTen egiaztatu ditzakete. Doako aplikazioak zure kontuko librukuan automatikoki gehitu itezailez, gaur egun eskuragarri dituzun doako aplikazio guztien egiaztapena beti gainditzeko.</string>
+    <string name="pref_vending_feature_delivery">Google Play Feature Delivery</string>
+    <string name="pref_vending_split_install_switch">Komponenten instalazioa eskatuz</string>
+    <string name="pref_vending_licensing_split_install_summary">Aplikazioei komponenteko gehigarriak deskargatzen eta instalatzen uzten</string>
+    <string name="feedback_disabled">Iruzkinak bidaltzea ez da gaur egun posible</string>
+    <string name="backup_disabled">Kopia segurua egitea ez da gaur egun posible</string>
+    <string name="pref_vending_billing_category">Google Play-en fakturazioa</string>
+    <string name="pref_vending_billing_enable_switch">Fakturazio-eskariak kudeatu</string>
+    <string name="pref_vending_billing_enable_summary">Aktibatzean, aplikazio batzuek erosketak osatu edo harpidutzak hasi ditzakete Google Play-en fakturazio zerbitzua bidez.</string>
+    <string name="pref_vending_billing_note_experimental">Ezaugarri hau esperimentalak da eta dirua galtzea eragingo du. Ohartarazi zaio.</string>
+    <string name="pref_vending_billing_note_licensing">Algun batzu aplikazioek erosketak egizteko lizentzia-egiztea ere aktibatzea eska dezakek.</string>
+    <string name="pref_vending_asset_delivery_category">Google Play Asset Delivery</string>
+    <string name="pref_vending_asset_delivery_switch">Aktibatu eskatu behin asset-ak bidaltzea</string>
+    <string name="pref_vending_asset_delivery_summary">Deskargatu asset gehigiz Play Asset Delivery erabiltzen duten aplikazioek eskatu zuenean</string>
+    <string name="pref_vending_asset_device_sync_summary">Play Asset Delivery erabiltzen duten aplikazioek gailuaren informazioan oinarrituta deskargatuko dute asset gehigiz.</string>
+    <string name="pref_vending_asset_device_sync_switch">Aktibatu gailuaren informazioaren sinkronizazioa</string>
+    <string name="pref_workprofile_create_account">Baimenu lan-kontuaren konfigurazioa</string>
+    <string name="pref_workprofile_intro">Lan-profile bat konfiguratzean, zure lantokizari edo ikastegiari egokituta,
+        konfigurazioak Google-ekin konektatzeko saiak egin ditzake profile horretan aplikazioak deskargatzeko.</string>
+    <string name="pref_workprofile_disclaimer">Zure ardura da microG-ren erabilera korporazio-politikei bat egiten direla ziurtatzea.
+        microG ahalik eta ondoen eskaintzen da eta ez du bermatu nahi espero den moduan jokatuko dela.</string>
+    <string name="pref_auto_create_player">Baimenu Play Games kontuaren erregistratzea</string>
+    <string name="pref_auto_create_player_intro">Jokoak jokatzean, Play Games kontu bat erabili behar duzu saioa hasi eta jokoarekin lotutako funtzioak grabatzeko, adibidez, lurraldeak, lidertsxateak, fitxategiak, etab. Ezgaituta utzita, Play Games kontu batekin lotu gabeko Google kontuak automatikoki erregistratuko ez dira, eta jokoan saioa hasi eta jokatzea ezingo da.</string>
+    <string name="pref_allow_upload_game_played">Baimenu jokatutako jokoen igotzea</string>
+    <string name="pref_allow_upload_game_played_summary">Ezgaituta dagoenean, jokoak ez du jokatutako jokoen egoera bilduko jokoan saioa hasi ondoren, eta joko batzietan agian ezingo da saioa hasi.</string>
+    <string name="pref_change_default_game_player">Aldatu jokoen kontua</string>
+    <string name="pref_change_default_game_player_summary">Aldatu jokoen kontu lehenetsua &amp; Aldatu kontua joko bakoitzeko.</string>
+    <string name="pref_delete_game_account_data">Ezabatu Play Games-en datuak</string>
+    <string name="pref_delete_game_account_data_summary">Ezabatu Play Games-en kontua &amp; datu guztiak &amp; Ezabatu joko bakoitzaren datuak.</string>
+    <string name="credentials_assisted_cancel"> 취소</string>
+    <string name="credentials_assisted_continue">Jarraitu</string>
+    <string name="credentials_assisted_confirmation_header">Sartzen ari zara</string>
+    <string name="credentials_assisted_continue_as_user_button_label">Jarraitu %1$s gisa</string>
+    <string name="credentials_assisted_sign_back_title">Sartu berriro %1$s-en Google-ekin</string>
+    <string name="credentials_assisted_signin_consent_header">Sartzen ari zara %1$s gisa</string>
+    <string name="credentials_assisted_signin_consent">Jarraituz, Google-k zure izena, posta elektronikoaren helbidea eta profil-argazkia %1$s-ekin partekatuko ditu. Ikusi %1$s-en Pribatutasun Politika eta Zerbitzuen Baldintzak.</string>
+    <string name="credentials_assisted_signin_description">Google-rekin saioa egitea zure Google kontuetan kudeatu dezakezu.</string>
+    <string name="credentials_assisted_choose_account_label">Aukeratu kontua</string>
+    <string name="credentials_assisted_choose_account_subtitle">%1$s-ra joateko</string>
+    <string name="credentials_assisted_choose_account_error_tips">Kontuaren anomalia</string>
+    <string name="credentials_assisted_signin_button_text_long">Saioa egitea Google-rekin</string>
+    <string name="credentials_assisted_signin_add_account">Kontua gehitu</string>
+    <string name="credentials_service_sign_in_with_google_label">Saioa egitea Google-rekin</string>
+    <string name="credentials_service_remote_custom_subtitle">Segurtasun giltza, smartphone edo tablet</string>
+    <string name="limited_services_dialog_information">microG Zerbitzu Mugatuak erabiltzen ari zara. Ohiko microG Zerbitzuak ez diren bezalako, bertsio hau microG liburutegunak erabiltzen dituzten aplikazioekin bakarrik funtzionatzen du, Google Play-ekoekin ez. Horrek esan nahi du aplikazio gehienek zerbitzu hauek ezpatches izango ditela.</string>
+    <string name="limited_services_dialog_information_ack">Ulertu dut</string>
+    <string name="games_achievement_list_title">Lurraldeak</string>
+    <string name="games_achievements_empty_text">Ez daumen lurralderik joko honentzat</string>
+    <string name="games_api_access_denied">Gailu honetako ez dagoen konturik Games API-etara sartzeko baimenik</string>
+    <string name="games_achievement_locked_content_description">txikleta</string>
+    <string name="games_achievement_unlocked_content_description">desblokeatuta</string>
+    <string name="games_achievement_extra_text">%1$s XP</string>
+    <string name="games_leaderboard_empty_text">Ez dau jokomu honen sailkapenak</string>
+    <string name="games_leaderboard_list_title">Sailkapenak</string>
+    <string name="games_leaderboards_score_label">Puntuak: %1$s</string>
+    <string name="games_snapshot_empty_text">Joko-保存enik ez da gordetuta</string>
+    <string name="games_snapshot_choose_btn_text">hautatu</string>
+    <string name="games_snapshot_delete_btn_text">ezabatu</string>
+    <string name="games_delete_snapshot_dialog_title">Ezabatu gorde dako jokoa</string>
+    <string name="games_delete_snapshot_dialog_message">Ziur eta zara gorde dako joko hau ezabatu nahi duzula?</string>
+    <string name="games_delete_snapshot_dialog_cancel">Bertatzeko</string>
+    <string name="games_delete_snapshot_dialog_ok">Ados</string>
+    <string name="games_delete_snapshot_error">Ezabapena huts egin du, mesedez saiatu berriro geroago</string>
+    <string name="games_state_description_signed_out">Saioa itxita</string>
+    <string name="games_state_description_delete">Ezabatu</string>
+    <string name="games_change_button_text">Aldatu</string>
+    <string name="games_change_default_account_section_title">Aldatu jokoen kontu lehenetsua</string>
+    <string name="games_change_default_account_description">Kontu lehenetsua: %1$s</string>
+    <string name="games_change_default_account_explanation">Kontu hau erabiltzen da jokoetan automatikoki saioa hasten dziatezan, jokoen progresua gordetzeko eta zure konfigurazioak gordetzeko. Kontu lehenetsua aldatzeak edo saioa itxilotenak jokoetan zure progresua eta konfigurazioak berreskuratu ditzakeen jokoetan.</string>
+    <string name="games_change_per_game_title">Aldatu kontua joko bakoitzeko</string>
+    <string name="games_change_per_game_description">Hautatutako joko bateko kontua aldatzeak edo bertan saioa itxilotenak jokoaren progresua eta konfigurazioak berreskuratu ditzake.</string>
+    <string name="games_change_default_account_for_all_games_dialog_title">Hautatu aukera bat kontu lehenetsu berCiarentzat</string>
+    <string name="games_change_default_account_for_all_games_dialog_description">Oraingo kontu lehenetsua: %1$s</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_title">Aldatu kontu lehenetsua joko berriak soilik </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_description">Ez duzu jokoetan zure progresua eta konfigurazioak galtzea. Hala ere, zure progresua kontuen artean banatuko da.</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_title"> Aldatu kontu lehenetsua joko guztirako </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_description">Jokoa izan zenun progressuaren eta konfigurazioen sarbidea galdu dezakezu. Aldaketak aplikatzeko jokoa berrifizioko dugu.</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_title"> Atera joko guztietatik </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_description">Jokoa izan zenun progressuaren eta konfigurazioen sarbidea galdu dezakezu. Aldaketak aplikatzeko jokoa berrifizioko dugu.</string>
+    <string name="games_change_per_game_dialog_title">Aukera bat hautatu joko honentzat</string>
+    <string name="games_change_per_game_dialog_description">Kontua aldatzeak edo saioa itxalteak jokoaren progressua eta konfigurazioak berreskuratu ditzake</string>
+    <string name="games_change_per_game_dialog_option_use_player">Erabili %1$s</string>
+    <string name="games_change_per_game_dialog_option_use_player_snackbar_success_message">Joko honetan %1$s-rekin sartuko zara</string>
+    <string name="games_change_per_game_dialog_option_sign_out">Sesioa itxi</string>
+    <string name="games_change_per_game_dialog_option_sign_out_snackbar_success_message">Oraindik saioa itxita duzu joko honetatik</string>
+    <string name="games_change_sign_out_of_all_games_snackbar_success_message">Oraindik saioa itxita duzu joko guztietatik</string>
+    <string name="games_change_default_account_for_all_games_snackbar_success_message">%1$s-rekin saioa hasiko zara joko guztietan</string>
+    <string name="games_change_default_account_for_new_games_snackbar_success_message">%1$s-rekin saioa hasiko zara joko berrietan</string>
+    <string name="games_account_display_content">Kontu egungunea: %1$s</string>
+    <string name="games_delete_profile_header">Play Games kontua &amp; datu guztiak ezabatu</string>
+    <string name="games_delete_profile_explanation">Ezabatu betirako zure Google Play Games kontua, XP eta profilaren datu guztiak. Ekintza honek zure puntuak, aurrera egitekoa (保存 jokoak) eta jolastu izan dituzun jokoen konfigurazioak ere ezabatu ditzake.</string>
+    <string name="games_delete_profile_button">Ezabatu betirako</string>
+    <string name="games_delete_game_data_header">Joko bakarkako datuak ezabatu</string>
+    <string name="games_delete_game_data_explanation">Google Play Games erabiliz jolastu izan dituzun jokoen datu bakarkoak betirako ezabatu ditzakezu. Ekintza honek aukeratu duzun jokoaren puntuak, aurrera egitekoa (保存 jokoak) eta konfigurazioak ezabatuko ditu.</string>
+    <string name="games_delete_profile_dialog_title">Ziur Gabon kontu hau ezabatu nahi duzula?</string>
+    <string name="games_delete_profile_explanation_with_gamer_name">Ezabatu betiko Google Play Games kontua &lt;b&gt;%1$s&lt;/b&gt; (&lt;b&gt;%2$s&lt;/b&gt;) joko-izenari, XP-ari eta profil datu guztiei. Ekintza honek zure puntuak, progresua (保存 eta jokoak) eta jolastu dituzun jokoen konfigurazioak ere ezabatu ditzake.</string>
+    <string name="games_delete_profile_dialog_message">Ekintza hau ezin da atzera utzi.</string>
+    <string name="games_delete_profile_fail">Ezin izan da zure profila ezabatu. Saiatu berriro geroago.</string>
+    <string name="games_delete_game_data_confirm_dialog_title">%1$s-en datuak ezabatu</string>
+    <string name="games_delete_game_data_confirm_dialog_message">%1$s-en datuak betiko ezabatzeak zure puntuak, progresua (保存 eta jokoak) eta joko konfigurazioak kenduko ditu Google Play Games-etik.</string>
+    <string name="games_popup_signin_welcome">Kaixo, %1$s</string>
+    <string name="family_management_title">Familia</string>
+    <string name="family_management_retry">Saiatu berriro</string>
+    <string name="family_management_load_error">Edukia kargatzen ezin izan da</string>
+    <string name="family_management_toolbar_back">Atzera</string>
+    <string name="family_management_toolbar_more">Gehiago</string>
+    <string name="family_management_exit_family_group">Irten familia taldetik</string>
+    <string name="family_management_delete_family_group">Ezabatu familia talde bat</string>
+    <string name="family_management_leave_family_password_title">Berrestu pasahitza familia taldetik atera ategin</string>
+    <string name="family_management_delete_family_password_title">Berrestu pasahitza familia talde bat ezabatzeko</string>
+    <string name="family_management_remove_member_password_title">Berrestu pasahitza \"%s\" kendzeko</string>
+    <string name="family_management_invite_family_member">Familiako kideak gonbidatu</string>
+    <string name="family_management_cancel_invite">Gonbidapena bertatu</string>
+    <string name="family_management_cancel_invite_success">Gonbidapena arrakastaz bertatu da</string>
+    <string name="family_management_cancel_invite_error">Arazoak gonbidapena bertatzean. Saiatu berriro.</string>
+    <string name="family_management_remove_member">Kidea kendu</string>
+    <string name="family_management_member_removed_success">%s zure familia-taldetik kendu da</string>
+    <string name="family_management_member_remove_failed">Arazoak %s kentzean. Saiatu berriro.</string>
+    <string name="family_management_leave_family_error_message">Arazoak izan dira familia taldea utzitean. Saiatu berriz.</string>
+    <string name="family_management_exist_group_success">Zure familia taldea utzi duzu…</string>
+    <string name="family_management_delete_group_success">Familia taldea ezabatu da</string>
+    <string name="family_management_delete_group_failure">Etxe taldea ezabatu ezin da</string>
+    <string name="family_management_delete_group_cancel">Batalde</string>
+    <string name="family_management_delete_group_confirm">Ados</string>
+    <string name="family_management_input_pwd">Sartu zure pasahitza, mesedez</string>
+    <string name="family_management_invite_sent_date_format">Gonbidapena %s egunekoan bidali da</string>
+    <string name="family_management_invite_send">Gonbidapena bidalia da</string>
+    <string name="family_management_pwd_error">Pasworda okerra da, mesedez idatzi berriz</string>
+    <string name="barcode_scanner_brand">microG-k eskaneatu du %1$s-en izuetan</string>
+    <string name="camera_permission_dialog_button">Ados</string>
+    <string name="camera_permission_dialog_message">microG zerbitzuek zure gailuaren kameraren sarbidea behar dute %1$s kodearbatzeko.\n\nAktibatzeko, eman kameraren baimena microG zerbitzuei Araumezkoetan.</string>
+    <string name="camera_permission_dialog_title">Kameraren baimena beharrezkoa da</string>
+    <string name="pref_app_install_settings_title">App Instalatzailearen Araumeak</string>
+    <string name="pref_app_install_switch_title">Baimetu App Instalazioa</string>
+    <string name="pref_app_install_other_apps_note">Baimenak beste iturki batzuetatik etorritako aplikazioak instalatzea ahalbidetzen du.</string>
+    <string name="pref_app_install_permission_instruction">Instalatu dituzun aplikazioak behar bezala funtzionatzen dutela ziurtatzeko, baimendu microG Companion-i beste iturki batzuetatik deskargatutako aplikazioak instalatzea.</string>
+    <string name="prefcat_app_install_list_title">App Installer erabiltzen duten aplikazioak</string>
+    <string name="service_name_google_location_sharing">Google Kokapen Partekatzea</string>
+    <string name="location_sharing_description">Kudeatu zure kokapen real-time partekatzea Google aplikazioetan eta zerbitzuetan gailu honez</string>
+    <string name="location_sharing_learn_more">Jakinarazi gehiago &quot;Kokapen Partekatzeari&quot; buruz</string>
+    <string name="location_sharing_switch_text">Erabili Kokapen Partekatzea</string>
+    <string name="location_sharing_turn_off_notify_hint">Gailu honen Kokapen Partekatzea txukutu egiten baduzu, partekatzen ari zaren pertsonei ez zaie jakinaraziko.</string>
+    <string name="location_sharing_off_previous_hint">Zure azken kokapen partekatua soilik egongo da eskuragarri berriz aktibatzen duten arte.</string>
+    <string name="location_sharing_disabled">Ez da kokapenik partekatzen kontu honen bidez</string>
+    <string name="location_sharing_turn_on_hint">Google aplikazio edo zerbitzu batetik zure kokapena partekatzen hasten zara bezain laster, Kokapen Partekatzea hemen kudeatu dezakezu.\n\nZure kokapena partekatzen hasteko, joan Google Maps-era edo Family Link-era.</string>
+    <string name="location_sharing_turn_off_title">Txukutu Kokapen Partekatzea</string>
+    <string name="location_sharing_turn_off_hint">Posible da zure kokapenik partekitzen ari zaren beste gailu batzuetatik, Google kontu berean saioa has duten, edo Google-aren aplikazio ez diren beste aplikazio batzuetatik. Egiaztatu kokapen partekitzearen konfigurazioa aplikagarria den edozein lekutan.\n\nZure kokapena partekitzen dion jendeari azken kokapen partekitua ikusten jarraituko zaio.</string>
+    <string name="location_sharing_turn_off_cancel">Mantendu</string>
+    <string name="location_sharing_turn_off_confirm">Desaktibu</string>
+    <string name="location_sharing_confirm_dialog_title">Aktibu Kokapen Partekitzea</string>
+    <string name="location_sharing_confirm_dialog_text">Zure kokapena partekitzen dion jendeari beti ikusi ahal izio:\n·Zure izena eta argazkia\n·Zure gailuaren azken kokapena, Google zerbitzu bat erabili ez zuen arren\n·Zure gailuaren bateriaren maila eta kargatzen ari den ala ez\n·Zure iriste eta kanbateze orduak, Kokapen Partekitzearen jakinarazpena gehituta</string>
     <!-- Passkey management -->
+    <string name="pref_passkey_manager_title">Kudeatu pasagabeak</string>
+    <string name="pref_passkey_manager_empty_title">Ez daun pasagabeebarik gorduta</string>
+    <string name="pref_passkey_manager_description">Hirugarren aplikazioek pasagabeak erregistratzen dituztenean, microG-k erregistro lokal bat gordetzen du. Aplikazio batek pasagabe bat ezabatzen badu microG-ri jakinarazi gabe, erregistroa bertan geratu daiteke. Hemen kendu ditzakezu sARRU horiek.</string>
+    <string name="pref_passkey_manager_delete_dialog_title">Ezabatu gainexea</string>
+    <string name="pref_passkey_manager_delete_dialog_message">\"%1$s\"-eko \"%2$s\"-ren gainexea ezabatu. Ezin da ekintza honek atzera itzuli; berriz sartzeko gainexe berri bat erregistratu beharko zara.</string>
+    <string name="pref_passkey_manager_delete_dialog_confirm">Ezabatu</string>
+    <string name="pref_passkey_manager_unknown_user">Erabiltzaile ezezaguna</string>
+    <string name="pref_passkey_manager_transport_screen_lock">Pantailaren blokeoa</string>
+    <string name="pref_passkey_manager_transport_usb">USB</string>
+    <string name="pref_passkey_manager_transport_nfc">NFC</string>
+    <string name="pref_passkey_manager_transport_bluetooth">Bluetooth</string>
+    <string name="pref_passkey_manager_transport_hybrid">Hibridoa</string>
+    <string name="pref_passkey_manager_credential_id_format_internal">ID: %1$s</string>
+    <string name="self_check_cat_patched_apps">Aplikazio patched</string>
+    <string name="self_check_source_morphe">Morphe patch-ak</string>
+    <string name="self_check_source_alternative">patch alternatiboak</string>
+    <string name="self_check_resolution_patched_app_installed">%1$s erabiltzen duten aplikazioak ez dira aurkitu. Mesedez, patchatu eta instalatu aplikazio aldatua</string>
+    <string name="self_check_name_notifications">Jakinarazpenak baimenuta</string>
+    <string name="self_check_resolution_notifications">Sakatu hemen jakinarazpenen konfigurazioa irekitzeko. Jakinarazpenak GcmService atzealdean funtzionatzen jarraitzea bermatzeko erabiltzen dira bateria optimizazioa aktibatuta dagoenean edo baldintza beste batzuetan</string>
+    <string name="self_check_name_oem_restriction">Atzealdeko prozesuen izakasoak</string>
+    <string name="self_check_resolution_oem_restriction">Zure sistemak atzeko planoan egon aplikazioen prozesuak mugitu ditzake. Sakatu hemen Don\'t Kill My App! webgunea irekitzeko eta muga hauek nola desaktatu ikasteko</string>
+    <string name="morphe_sign_in_with_google_microg_label">Sartu Google-en MicroG bidez</string>
+    <string name="self_check_patched_app_installed">%1$s-rekin exekutatzen</string>
+    <string name="self_check_action_download_morphe">Deskarga tu Morphe</string>
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Arkitektura bertsio okerra instalatuta</string>
+    <string name="abi_mismatch_message">"MicroG-RE build honek 64-bit (arm64) libregunak soilik ditu, baina gailu honek 32-bit erabiltzaile-espazio bat executoru ditu.
+
+Conscrypt behar duten ezaugarriak (kontuan sartzea, streaminga, BotGuard, bideo streamen spoofinga, SponsorBlock, Return YouTube Dislike, etab.) ez dira zuzen funtzionatuko eta erreprodukzio arazoak edo \"Unable to find a default SSL provider\" mezua sor ditzakete.
+
+Instalatu ARMv7 edo Universal APK ordez."</string>
+    <string name="abi_mismatch_download_armv7">Deskargatu ARMv7 APK</string>
+    <string name="abi_mismatch_downloading_title">Bertsio egokia deskargatzen…</string>
 </resources>

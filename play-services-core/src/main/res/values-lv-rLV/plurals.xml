@@ -14,4 +14,20 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="gcm_registered_apps_counter">
+        <item quantity="zero"><xliff:g example="123">%1$d</xliff:g> reģistrētas lietotnes</item>
+        <item quantity="one"><xliff:g example="1">%1$d</xliff:g> reģistrēta lietotne</item>
+        <item quantity="other"><xliff:g example="123">%1$d</xliff:g> reģistrētas lietotnes</item>
+    </plurals>
+    <plurals name="cond_perm_summary">
+        <item quantity="zero">Nav piešķirtas atļaujas, kas nepieciešamas pareizai microG pakalpojumu darbībai.</item>
+        <item quantity="one">Nav piešķirta atļauja, kas nepieciešama pareizai microG pakalpojumu darbībai.</item>
+        <item quantity="other">Nav piešķirtas atļaujas, kas nepieciešamas pareizai microG pakalpojumu darbībai.</item>
+    </plurals>
+    <plurals name="cond_perm_action">
+        <item quantity="zero">Pieprasīt trūkstošās atļaujas</item>
+        <item quantity="one">Pieprasīt trūkstošo atļauju</item>
+        <item quantity="other">Pieprasīt trūkstošās atļaujas</item>
+    </plurals>
+</resources>

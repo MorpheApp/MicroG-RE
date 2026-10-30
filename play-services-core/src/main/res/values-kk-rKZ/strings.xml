@@ -4,8 +4,339 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="gms_settings_name">MicroG параметрлері</string>
+    <string name="gms_settings_summary">MicroG қызметтерін баптау.</string>
+    <string name="just_a_sec">Бір сәт...</string>
+    <string name="ask_permission_tos">Жалғастыру арқылы сіз бұл қолданбаға және Google-ға өз ақпаратыңызды олардың тиісті қызмет көрсету шарттарына және құпиялылық саясаттарына сәйкес пайдалануға рұқсат бересіз.</string>
+    <string name="ask_scope_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> келесі әрекетті орындағысы келеді:</string>
+    <string name="ask_service_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> келесіні пайдаланғысы келеді:</string>
+    <string name="account_manager_title">Google аккаунт менеджері</string>
+    <string name="sorry">Кешіріңіз...</string>
+    <string name="auth_before_connect">Google аккаунтын microG-мен байланыстырыңыз.\n\nGoogle аккаунтына қосылу үшін <b>Кіру</b> батырмасын немесе егер құрылғыңыз осы өндірушінікі болса, <b>Huawei</b> батырмасын қолданыңыз. Батырмалардың бірін басу арқылы сіз аккаунтыңызға кіру бетіне бағытталасыз.</string>
+    <string name="auth_connecting">"Сізді жүйеге кіргізу үшін құрылғыңыз Google серверлерімен байланыс орнатуда.
+
+Бұл бірнеше секунд алуы мүмкін."</string>
+    <string name="no_network_error_desc">"Сіздің желілік қосылысыңыз жоқ.
+
+Бұл уақытша мәселе болуы мүмкін немесе сіздің Android құрылғыңыз деректер қызметтеріне бейімделмеген болуы мүмкін. Мобильді желіге қосылғанда қайтадан көріңіз немесе Wi-Fi желісіне қосылыңыз."</string>
+    <string name="auth_general_error_desc">"Google серверлерімен байланыс кезінде мәселе туындады.
+
+Кейінірек қайта försöңіз."</string>
+    <string name="auth_finalize">"Құрылғыңыз ақпаратты есебіңізге сақтау үшін Google-мен байланысып жатыр.
+
+Бұл бірнеше минутты алуы мүмкін."</string>
+    <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> Google аккаунтыңызға қол жеткізу үшін сіздің авторизацияңызды талап етеді.</string>
+    <string name="auth_package_override_request_title"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> қолданбасына <xliff:g example="account@example.com">%2$s</xliff:g> аккаунтына артықшылықты қолжетімділік беруге рұқсат етесіз бе?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> сіздің аккаунтыңызға <xliff:g example="F-Droid Inc.">%3$s</xliff:g> жасаған <b><xliff:g example="F-Droid">%2$s</xliff:g></b> сияқты кіруді қалайды. Бұл оған аккаунтыңызға артықшылықты қолжетімділік беруі мүмкін.</string>
+    <string name="auth_action_notification_channel_name">Google аккаунтының ескертулері</string>
+    <string name="auth_action_notification_channel_description">Google аккаунттарыңыздың бірі қолданылмас бұрын қосымша баптауды талап еткенде немесе аккаунт microG-мен үйлеспегенде хабарлайды.</string>
+    <string name="auth_action_notification_title">Аккаунт бойынша әрекет жасау қажет</string>
+    <string name="auth_action_notification_content">Сіздің Google аккаунтыңыз қосымша баптауды қажет етеді.</string>
+    <string name="auth_action_reauth_notification_title">Аккаунт бойынша әрекет жасау қажет</string>
+    <string name="auth_action_activity_header">Google аккаунтыңызды баптауды аяқтаңыз</string>
+    <string name="auth_action_activity_explanation">Осы құрылғыда %s Google аккаунтыңызды қолдана алу үшін келесі қадамдарды орындаңыз.</string>
+    <string name="auth_action_step_enable_checkin">Құрылғыны тіркеуді қосу</string>
+    <string name="auth_action_step_enable_checkin_description">"Құрылғыңыз кемінде бір рет Google-де тіркелуі керек.
+
+Аккаунтты баптау аяқталғаннан кейін Google құрылғы тіркеуін өшіре аласыз."</string>
+    <string name="auth_action_step_enable_gcm">Cloud Messaging-ді қосу</string>
+    <string name="auth_action_step_enable_gcm_description">Аккаунтты баптау аяқталғаннан кейін Cloud Messaging-ді өшіре аласыз.</string>
+    <string name="auth_action_step_allow_microg_gcm">microG үшін Cloud Messaging-ке рұқсат беру</string>
+    <string name="auth_action_step_allow_microg_gcm_description">Сіздің таңдауларыңызға сәйкес, microG Cloud Messaging-ке тіркелуі үшін сізден рұқсат алуы керек.</string>
+    <string name="auth_action_step_enable_lockscreen">Экранның қауіпсіз бұғаттауын баптау</string>
+    <string name="auth_action_step_enable_lockscreen_description">"Сіздің Google аккаунтыңыз жұмыс орныңыз немесе білім беру мекемесімен басқарылады. Әкімшіңіз құрылғылар аккаунт деректеріне қол жеткізе алуы үшін экранның қауіпсіз бұғаттауы болуы керек деп шешті.
+
+Құпия сөзді, PIN-кодты немесе сызықтық бұғаттауды орнатыңыз."</string>
+    <string name="auth_action_step_perform_content_description">Қадамды орындау үшін басыңыз</string>
+    <string name="auth_action_step_completed_content_description">Қадам аяқталды</string>
+    <string name="auth_action_activity_finish">Аяқтау</string>
+    <string name="signin_picker_subtitle"><xliff:g example="F-Droid">%1$s</xliff:g> қызметіне өту үшін</string>
+    <string name="signin_confirm_title"><xliff:g example="F-Droid">%1$s</xliff:g> қызметіне кіруге рұқсат беру</string>
+    <string name="signin_subtext_sharing">Жалғастыру үшін microG сіздің Google аккаунтыңыздың атын, электронды пошта адресін және профиль суретін <xliff:g example="F-Droid">%1$s</xliff:g> қызметімен бөліседі.</string>
+    <string name="perm_provision_label">microG қызметтерін баптау</string>
+    <string name="perm_provision_description">Қолданбаға пайдаланушының қатысуынсыз microG қызметтерін баптауға мүмкіндік береді</string>
+    <string name="perm_car_speed_label">Көлік жылдамдығы</string>
+    <string name="perm_car_speed_description">"Көлігіңіздің жылдамдығына қол жеткізу"</string>
+    <string name="perm_car_info_label">Көлік туралы ақпарат</string>
+    <string name="perm_car_info_description">"Көлігіңіздің ақпаратына қол жеткізіңіз"</string>
+    <string name="perm_car_fuel_label">Көлік жанармасының деңгейі</string>
+    <string name="perm_car_fuel_description">"Көлігіңіздің жанармай деңгейі туралы ақпаратқа қол жеткізіңіз"</string>
+    <string name="perm_car_mileage_label">Көлік жүрісі</string>
+    <string name="perm_car_mileage_description">"Көлігіңіздің жүрісі туралы ақпаратқа қол жеткізіңіз"</string>
+    <string name="perm_car_vendor_extension_label">Көлік өндірушісінің арнасы</string>
+    <string name="perm_car_vendor_extension_description">"Көлікке тән ақпарат алмасу үшін көлігіңіздің өндіруші арнасына қол жеткізіңіз"</string>
+    <string name="service_name_checkin">Құрылғыны тіркеу</string>
+    <string name="service_name_mcs">Бұлтты хабарламалар</string>
+    <string name="service_name_device_attestation">Құрылғыны аттестаттау</string>
+    <string name="service_name_vending">Play Store қызметтері</string>
+    <string name="service_name_work_profile">Жұмыс профилі</string>
+    <string name="games_title">Google Play Games</string>
+    <string name="games_info_title"><xliff:g example="F-Droid">%1$s</xliff:g> Play Games қолданғысы келеді</string>
+    <string name="games_info_content">Play Games қолдану үшін Google Play Games қолданбасын орнату қажет. Қолданба Play Games-сіз жұмыс істеуі мүмкін, бірақ ол күтпеген жерден қателіктермен жұмыс істеуі ықтимал.</string>
+    <string name="pick_place_title">Орынды таңдаңыз</string>
+    <string name="place_picker_select_title">Осы орнатылған жерді таңдаңыз</string>
+    <string name="place_picker_nearby_places">Жақын маңдағы жерлер</string>
     <!-- Self check -->
+    <string name="self_check_name_system_spoofs">Жүйелік қолтаңбаны жалғандау: </string>
+    <string name="self_check_resolution_system_spoofs">Қандай қадамдар қажет болуы мүмкін екендігі туралы құжаттаманы тексеріңіз.</string>
+    <string name="self_check_pkg_gms">microG қызметтері</string>
+    <string name="self_check_pkg_vending">microG Companion / Play Store</string>
+    <string name="self_check_pkg_gsf">microG Services Framework</string>
+    <string name="self_check_name_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> орнатылған: </string>
+    <string name="self_check_resolution_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> қолданбасын немесе оған үйлесімді басқа қолданбаны орнатыңыз. Қай қолданбалар үйлесімді екенін құжаттамадан тексеріңіз.</string>
+    <string name="self_check_name_correct_sig"><xliff:g example="F-Droid">%1$s</xliff:g> қолтанбасы дұрыс: </string>
+    <string name="self_check_resolution_correct_sig">Орнатылған <xliff:g example="F-Droid">%1$s</xliff:g> үйлесімді емес немесе ол үшін қолтанбаны жалғандау белсенді емес. Қай қолданбалар мен ROM-дар үйлесімді екенін құжаттамадан тексеріңіз.</string>
+    <string name="self_check_name_battery_optimizations">Батареяны оңтайландыру ескерілмеді:</string>
+    <string name="self_check_resolution_battery_optimizations">Батареяны оңтайландыруды өшіру үшін осы жерді басыңыз. Бұл әрекетті орындамау қолданбалардың дұрыс жұмыс істемеуіне әкелуі мүмкін.</string>
     <!-- Settings strings -->
+    <string name="cond_gcm_bat_summary">Сіз Cloud Messaging функциясын қостыңыз, бірақ microG Services үшін батареяны оңтайландыру белсенді. Push-хабарламалардың келуі үшін батареяны оңтайландыруды игнорлау керек.</string>
+    <string name="prefs_account">Аккаунт баптаулары</string>
+    <string name="prefs_account_privacy">Жеке мәліметтер &amp; құпиялылық</string>
+    <string name="prefs_account_security">Кіру &amp; қауіпсіздік</string>
+    <string name="pref_auth_trust_google_summary">Өшірілген кезде, қолданбаның авторизация сұранысы Google-ге жіберілмес бұрын пайдаланушыдан рұқсат сұралады. Бұл өшірілсе, кейбір қолданбалар Google аккаунтын пайдалана алмауы мүмкін.</string>
+    <string name="pref_auth_visible_summary">Іске қосылғанда, бұл құрылғыдағы барлық қолданбалар алдын ала авторизациясыз Google есептеріңіздің электронды пошта адрестерін көре алады.</string>
+    <string name="pref_auth_include_android_id_summary">Өшірілген кезде, аутентификация сұраныстары құрылғы тіркеуімен байланыстырылмайды, бұл рұқсат етілмеген құрылғылардың кіруіне жол ашуы мүмкін, бірақ күтілмеген салдарлары болуы мүмкін.</string>
+    <string name="pref_auth_strip_device_name_summary">Қосылған кезде, аутентификация сұраныстарына құрылғының атауы қосылмайды, бұл рұқсат етілмеген құрылғылардың кіруіне жол ашуы мүмкін, бірақ күтілмеген салдарлары болуы мүмкін.</string>
+    <string name="pref_auth_two_step_verification_title">Екі кезеңді верификация сұрауларын алу</string>
+    <string name="pref_auth_two_step_verification_summary">Қосылған кезде, құрылғы Google-ден екі кезеңді верификация сұрауларын ала алады (Cloud Messaging қажет).</string>
+    <string name="pref_auth_allow_find_devices_title">Google Device Finder-ға жауап беруге рұқсат беру</string>
+    <string name="pref_auth_allow_find_devices_summary">Қосылған кезде, құрылғы Google-дың «Құрылғымды тап» хабарламаларына жауап бере алады (Cloud Messaging талап етіледі).</string>
+    <string name="pref_checkin_enable_summary">Құрылғыңызды Google сервистеріне тіркейді және бірегей құрылғы идентификаторын жасайды. microG тіркеу деректерінен Google аккаунтыңыздың атауынан басқа сәйкестендіру биттерін алып тастайды.</string>
+    <string name="checkin_last_registration">Соңғы тіркеу: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="pref_accounts_title">Есептер</string>
+    <string name="pref_game_accounts_title">Google ойын аккаунттары</string>
+    <string name="prefcat_accounts_settings_title">Баптаулар</string>
+    <string name="prefcat_accounts_backup_title">Аккаунттардың резервтік көшірмесі</string>
+    <string name="pref_accounts_backup_title">Аккаунттардың резервтік көшірмесін жасау</string>
+    <string name="pref_accounts_backup_summary">Google аккаунттарын файлға экспорттау</string>
+    <string name="pref_accounts_restore_title">Аккаунттарды қалпына келтіру</string>
+    <string name="pref_accounts_restore_summary">Google аккаунттарын файлдан импорттау</string>
+    <string name="pref_accounts_backup_warning_title">Аккаунттардың резервтік көшірмесін жасау ма?</string>
+    <string name="pref_accounts_backup_warning_message">Бұл әрекет сіздің аккаунттарыңызды және кіру токендерін (SID/LSID) файлға жазады. Бұл файлды қолға алған кез келген адам сіздің аккаунттарыңызға қол жеткізе алады, сондықтан оны қауіпсіз сақтаңыз және ешкіммен бөліспеңіз.</string>
+    <string name="button_backup_accounts">Резервтік көшірме жасау</string>
+    <string name="snackbar_accounts_backed_up">Аккаунттардың резервтік көшірмесі жасалды</string>
+    <string name="snackbar_accounts_export_failed">Резервтік көшірме жасау сәтсіз аяқталды</string>
+    <string name="snackbar_accounts_import_failed">Қалпына келтіру сәтсіз аяқталды</string>
+    <string name="auth_add_account">Аккаунт қосу</string>
+    <string name="pref_add_account_summary">Google аккаунтын қосу</string>
+    <string name="pref_gcm_enable_mcs_summary">Cloud Messaging — көптеген үшінші тарап қолданбалары қолданатын push-хабарламалар провайдері. Оны пайдалану үшін құрылғы тіркеуін қосуыңыз керек.</string>
+    <string name="pref_hide_launcher_icon">Белгішені іске қосушыдан жасыру</string>
+    <string name="hide_launcher_icon_dialog_message">Егер қосулы болса, MicroG қолданбалар іске қосушысында жасырылады. MicroG-ді құрылғының жүйелік қолданбалар тізіміндегі қолданба туралы ақпарат бөлімінен ашуға болады.</string>
+    <string name="hide_launcher_icon_updating_title">Қолданба жаңартылғанша күтіңіз</string>
+    <string name="pref_language_title">Тіл</string>
+    <string name="pref_language_system_default">Жүйе бойынша әдепкі</string>
+    <string name="pref_update_title">Жаңартуларды тексеру</string>
+    <string name="pref_update_summary">Жаңа нұсқаны GitHub-тан тексеріңіз.</string>
+    <string name="update_include_prerelease">Әзірлеуші нұсқаларын қосу</string>
+    <string name="update_available_title">Жаңарту қолжетімді</string>
+    <string name="update_available_prerelease_title">Жаңарту қолжетімді (алдын ала шығарылым)</string>
+    <string name="update_available_message">Жаңа v%1$s нұсқасы қолжетімді. Сізде v%2$s нұсқасы орнатылған. Жаңартуды жүктеп алып, орнату керек пе?</string>
+    <string name="update_now">Жаңарту</string>
+    <string name="update_whats_new">Жаңалықтар</string>
+    <string name="update_ignore">Елемеу</string>
+    <string name="update_downloading_title">Жаңарту жүктелуде…</string>
+    <string name="update_download_failed">Жүктеу сәтсіз аяқталды. Байланысты тексеріп, қайта көріңіз.</string>
+    <string name="update_signature_mismatch">Қолданбаны жаңарту мүмкін емес, қолтаңбалар әртүрлі.</string>
+    <string name="update_failed_title">Жаңарту сәтсіз аяқталды</string>
+    <string name="update_permission_required_title">Рұқсат қажет</string>
+    <string name="update_permission_required_message">Жаңартуларды орнату үшін, жүйе параметрлерінде MicroG-ге белгісіз қолданбаларды орнатуға рұқсат беріңіз.</string>
+    <string name="update_open_settings">Параметрлер</string>
+    <string name="update_check_failed">Жаңартуларды тексеру мүмкін болмады. Байланысты тексеріп, қайта көріңіз.</string>
+    <string name="update_up_to_date_title">Сізде соңғы нұсқа орнатылған</string>
+    <string name="update_up_to_date_message">MicroG-RE v%s — ең соңғы нұсқа.</string>
+    <string name="update_notification_title">Жаңарту қолжетімді</string>
+    <string name="update_notification_text">Жаңа v%s нұсқасы қолжетімді, жаңарту үшін басыңыз</string>
+    <string name="update_notification_channel">Жаңартулар</string>
+    <string name="update_notification_permission_title">Хабарландырулар</string>
+    <string name="update_notification_permission_message">Жаңа жаңарту қолжетімді болғанда сізге хабарлау үшін MicroG-RE-ге хабарландырулар жіберуге рұқсат қажет. Жаңарту туралы ескертулерді алу үшін хабарландыруларға рұқсат етіңіз.</string>
+    <string name="update_notification_permission_allow">Рұқсат беру</string>
+    <string name="update_notification_permission_not_now">Қазір емес</string>
+    <string name="update_notification_permission_open_settings">Баптауларды ашу</string>
+    <string name="gcm_last_message_at">Соңғы хабарлама: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_registered_since">Тіркелген уақыты: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_unregister_confirm_title"><xliff:g example="F-Droid">%1$s</xliff:g> тіркеуін тоқтату керек пе?</string>
+    <string name="gcm_unregister_confirm_message">Кейбір қолданбалар автоматты түрде қайта тіркелмейді және/немесе қолмен тіркелу мүмкіндігін ұсынбайды. Тіркеуден бас тартқаннан кейін бұл қолданбалар дұрыс жұмыс істемеуі мүмкін.\nЖалғастыру?</string>
+    <string name="gcm_unregister_after_deny_message">Сіз бұрын тіркелген қолданбаға push-хабарламалар үшін тіркелуге тыйым салдыңыз.\nБолашақта push-хабарламаларды алмауы үшін оны қазір тіркеуден бас тартқыңыз келе ме?</string>
+    <string name="gcm_messages_counter">Хабарламалар: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> байт)</string>
+    <string name="gcm_network_state_connected">Қосылған уақыты: <xliff:g example="2 hours ago">%1$s</xliff:g></string>
+    <string name="gcm_enable_switch">Push-хабарламаларды алу</string>
+    <string name="gcm_allow_app_popup"><xliff:g example="F-Droid">%1$s</xliff:g> қолданбасына push-хабарламалар үшін тіркелуге рұқсат беру керек пе?</string>
+    <string name="pref_push_app_allow_register_summary">Қолданбаға push-хабарламалар үшін тіркелуге рұқсат беру.</string>
+    <string name="pref_push_app_wake_for_delivery_summary">Кіріс push-хабарламаларды алу үшін қосымшаны фондық режимде іске қосыңыз.</string>
+    <string name="safetynet_intro">Google SafetyNet — бұл құрылғының дұрыс қорғалғанын және Android CTS-пен үйлесімділігін қамтамасыз ететін сертификаттау жүйесі. Кейбір қолданбалар SafetyNet-ті қауіпсіздік мақсатында немесе қолданушының рұқсатысыз өзгертуден қорғаудың алғышарты ретінде қолданады.\n\nmicroG GmsCore SafetyNet-тің тегін іске асыруын қамтиды, бірақ ресми сервер SafetyNet сұрауларының меншікті DroidGuard жүйесі арқылы қол қойылғанын талап етеді.</string>
+    <string name="safetynet_enable_switch">Құрылғы аттестациясына рұқсат беру</string>
+    <string name="pref_safetynet_test_title">SafetyNet аттестаттауын тексеру</string>
+    <string name="pref_recaptcha_test_title">ReCAPTCHA-ны тексеру</string>
+    <string name="pref_recaptcha_enterprise_test_title">ReCAPTCHA Enterprise-ты тексеру</string>
+    <string name="pref_test_summary_passed">Барлық тесттерден өтті</string>
+    <string name="pref_test_summary_failed">Қате: %s</string>
+    <string name="pref_test_summary_warn">Ескерту: %s</string>
+    <string name="pref_test_summary_running">Орындалуда…</string>
+    <string name="pref_droidguard_unsupported_summary">Бұл құрылғыда DroidGuard орындауы қолдауланбайды. SafetyNet қызметтері дұрыс жұмыс істемеуі мүмкін.</string>
+    <string name="prefcat_safetynet_apps_title">SafetyNet қолданатын қолданбалар</string>
+    <string name="prefcat_device_attestation_apps_title">Құрылғыны аттестациялауды қолданатын қолданбалар</string>
+    <string name="pref_device_attestation_app_allow_requests_title">Сұраныстарға рұқсат беру</string>
+    <string name="pref_device_attestation_app_allow_requests_summary">Қолданбаға құрылғыны аттестациялауды сұрауға рұқсат беру</string>
+    <string name="menu_clear_recent_requests">Соңғы сұраныстарды тазалау</string>
+    <string name="safetynet_last_run_at">Соңғы қолданылуы: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="pref_safetynet_recent_uses">Соңғы қолданылулары</string>
+    <string name="pref_safetynet_recent_attestation_summary">Аттестация: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_summary">ReCaptcha: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_enterprise_summary">ReCaptcha Enterprise: %s</string>
+    <string name="pref_safetynet_recent_copy_json">JSON JWS деректерін көшіру</string>
+    <string name="pref_safetynet_recent_advice">Кеңес</string>
+    <string name="pref_safetynet_recent_eval_type">Бағалау түрі</string>
+    <string name="pref_safetynet_recent_response_status">Жауап мәртебесі</string>
+    <string name="pref_safetynet_recent_cat_response">Жауап деректері</string>
+    <string name="pref_safetynet_recent_cat_request">Сұраныс деректері</string>
+    <string name="pref_safetynet_recent_nonce">Nonce (Hex)</string>
+    <string name="pref_safetynet_recent_request_time">Сұраныс уақыты</string>
+    <string name="pref_safetynet_recent_request_type">Сұраныс түрі</string>
+    <string name="pref_safetynet_recent_cat_basic">Негізгі деректер</string>
+    <string name="pref_safetynet_recent_token">Токен</string>
+    <string name="pref_safetynet_recent_copied">Жалпақшаға көшірілді!</string>
+    <string name="pref_safetynet_test_integrity_cts_passed">Integrity және CTS сәтті өтті</string>
+    <string name="pref_safetynet_test_cts_failed">CTS сәтсіз аяқталды</string>
+    <string name="pref_safetynet_test_integrity_failed">Integrity сәтсіз аяқталды</string>
+    <string name="pref_safetynet_test_not_completed">Әлі аяқталмады</string>
+    <string name="pref_safetynet_test_no_result">Нәтиже жоқ</string>
+    <string name="pref_safetynet_test_invalid_json">Жарамсыз JSON</string>
+    <string name="pref_vending_licensing_category">Google Play лицензиялауы</string>
+    <string name="pref_vending_licensing_enable_switch">Лицензияны тексеру сұраныстарына жауап беру</string>
+    <string name="pref_vending_license_enable_summary">Кейбір қолданбалар оларды Google Play-ден сатып алғаныңызды растауды талап етеді. Қолданба сұрағанда, microG Google-ден сатып алуды растайтын құжатты жүктей алады. Егер бұл функция өшірілсе немесе Google аккаунты қосылмаса, лицензияны растау сұраныстарына назар аударылмайды.</string>
+    <string name="pref_vending_licensing_purchase_free_apps_switch">Тегін қолданбаларды кітапханаға автоматты түрде қосу</string>
+    <string name="pref_vending_licensing_purchase_free_apps_summary">Тегін қолданбалар Google Play-ден жүктелгенін тексеруі мүмкін. Сізге қолжетімді барлық тегін қолданбалар үшін тексеруден әрқашан сәтті өту үшін тегін қолданбаларды аккаунт кітапханаңызға автоматты түрде қосыңыз.</string>
+    <string name="pref_vending_feature_delivery">Google Play Feature Delivery</string>
+    <string name="pref_vending_split_install_switch">Компоненттерді сұраныс бойынша орнату</string>
+    <string name="pref_vending_licensing_split_install_summary">Қолданбаларға қосымша компоненттерді жүктеуге және орнатуға рұқсат беру</string>
+    <string name="feedback_disabled">Қазіргі уақытта кері байланыс жіберу мүмкін емес</string>
+    <string name="backup_disabled">Қазіргі уақытта резервтік көшірме жасау мүмкін емес</string>
+    <string name="pref_vending_billing_category">Google Play Billing</string>
+    <string name="pref_vending_billing_enable_switch">Төлем сұраныстарын өңдеу</string>
+    <string name="pref_vending_billing_enable_summary">Іске қосылғанда, кейбір қолданбалар Google Play Billing қызметі арқылы сатып алуларды аяқтай алады немесе жазылымдарды бастай алады.</string>
+    <string name="pref_vending_billing_note_experimental">Бұл мүмкіндік эксперименттік сипатқа ие және ақша жоғалтуға әкелуі мүмкін. Сіз ескертілдіңіз.</string>
+    <string name="pref_vending_billing_note_licensing">Кейбір қолданбалар сатып алуларыңызды растау үшін лицензияны тексеруді де іске қосуды талап етуі мүмкін.</string>
+    <string name="pref_vending_asset_delivery_category">Google Play Asset Delivery</string>
+    <string name="pref_vending_asset_delivery_switch">Сұраныс бойынша активтерді жеткізуді іске қосу</string>
+    <string name="pref_vending_asset_delivery_summary">Play Asset Delivery қолданатын қолданбалар сұраған кезде қосымша активтерді жүктеу</string>
+    <string name="pref_vending_asset_device_sync_summary">Play Asset Delivery қолданатын қолданбалар қазіргі уақытта қолданылып жатқан құрылғының ақпаратына сүйене отырып, қосымша активтерді жүктейді.</string>
+    <string name="pref_vending_asset_device_sync_switch">Құрылғы ақпаратын синхрондауды іске қосу</string>
+    <string name="pref_workprofile_create_account">Жұмыс аккаунтын баптауға рұқсат беру</string>
+    <string name="pref_workprofile_intro">Жұмыс орныңыз немесе білім беру мекемеңіз үшін жұмыс профилін баптаған кезде,
+        баптау процесі осы профильге қолданбаларды жүктеуді қосу үшін Google-мен байланысуға тырысуы мүмкін.</string>
+    <string name="pref_workprofile_disclaimer">microG қолданысыңыздың корпоративтік саясаттарға сәйкес келуін қамтамасыз ету сіздің жауапкершілігіңізде.
+        microG мүмкіндігінше жақсы деңгейде ұсынылған және күтілгендей дәл жұмыс істейтініне кепілдік бере алмайды.</string>
+    <string name="pref_auto_create_player">Play Games аккаунтының тіркелуіне рұқсат беру</string>
+    <string name="pref_auto_create_player_intro">Ойындар ойнағанда, кіру және жетістіктер, көшбасшылар кестесі, архивтер және т.б. ойынға қатысты функцияларды жазу үшін Play Games аккаунтын қолдануыңыз керек. Өшіргеннен кейін, Play Games аккаунтына байланыстырылмаған Google аккаунттары автоматты түрде тіркелмейді және ойынға кіру мен ойнау мүмкін болмайды.</string>
+    <string name="pref_allow_upload_game_played">Ойналған ойындарды жүктеуге рұқсат беру</string>
+    <string name="pref_allow_upload_game_played_summary">Өшірілген жағдайда, ойынға кіргеннен кейін ойын ойналған мәртебесі туралы есеп берілмейді және кейбір ойындарға кіру мүмкін болмауы мүмкін.</string>
+    <string name="pref_change_default_game_player">Ойындар үшін аккаунтты өзгерту</string>
+    <string name="pref_change_default_game_player_summary">Ойындар үшін әдепкі аккаунтты өзгерту &amp; Аккаунтты ойын бойынша өзгерту.</string>
+    <string name="pref_delete_game_account_data">Play Games деректерін жою</string>
+    <string name="pref_delete_game_account_data_summary">Play Games аккаунтын &amp; барлық деректерді жою &amp; Жеке ойын деректерін жою.</string>
+    <string name="credentials_assisted_cancel">Бас тарту</string>
+    <string name="credentials_assisted_continue">Жалғастыру</string>
+    <string name="credentials_assisted_confirmation_header">Жүйеге кіріп жатырсыз</string>
+    <string name="credentials_assisted_continue_as_user_button_label">%1$s ретінде жалғастыру</string>
+    <string name="credentials_assisted_sign_back_title">Google арқылы %1$s жүйесіне қайта кіріңіз</string>
+    <string name="credentials_assisted_signin_consent_header">%1$s ретінде кіру</string>
+    <string name="credentials_assisted_signin_consent">Жалғастыру арқылы Google сіздің аты-жөніңізді, электрондық пошта адресіңізді және профиль суретіңізді %1$s компаниясымен бөліседі. %1$s компаниясының Құпиялылық саясаты мен Қызмет көрсету шарттарымен танысыңыз.</string>
+    <string name="credentials_assisted_signin_description">Google-мен кіру мүмкіндігін Google аккаунттарыңызда басқара аласыз.</string>
+    <string name="credentials_assisted_choose_account_label">Аккаунтты таңдаңыз</string>
+    <string name="credentials_assisted_choose_account_subtitle">%1$s бетіне өту үшін</string>
+    <string name="credentials_assisted_choose_account_error_tips">Аккаунттағы кемшілік</string>
+    <string name="credentials_assisted_signin_button_text_long">Google-мен кіріңіз</string>
+    <string name="credentials_assisted_signin_add_account">Аккаунт қосу</string>
+    <string name="credentials_service_sign_in_with_google_label">Google-мен кіріңіз</string>
+    <string name="credentials_service_remote_custom_subtitle">Қорғаныс кілті, смартфон немесе планшет</string>
+    <string name="limited_services_dialog_information">Сіз microG Limited Services қолданып жатырсыз. Әдеттегі microG Services-тен айырмашылығы, бұл нұсқа тек microG кітапханаларын қолданатын қолданбалармен жұмыс істейді, Google Play-дегілермен емес. Бұл көптеген қолданбалар бұл сервистерді ескермейтінін білдіреді.</string>
+    <string name="limited_services_dialog_information_ack">Түсінемін</string>
+    <string name="games_achievement_list_title">Жетістіктер</string>
+    <string name="games_achievements_empty_text">Бұл ойын үшін жетістіктер жоқ</string>
+    <string name="games_api_access_denied">Бұл құрылғыдағы ешбір аккаунт Games API-леріне қол жеткізе алмайды</string>
+    <string name="games_delete_snapshot_dialog_cancel">Бас тарту</string>
+    <string name="games_delete_game_data_header">Жеке ойын деректерін жою</string>
+    <string name="games_delete_game_data_explanation">Google Play Games арқылы ойнаған ойындарыңыздың жеке деректерін біржола жоя аласыз. Бұл әрекет сіз таңдаған ойын үшін ұпайларыңызды, прогресіңізді (сақталған ойындарды) және параметрлеріңізді жояды.</string>
+    <string name="games_delete_profile_dialog_title">Бұл аккаунтты жойғыңыз келетініңізге сенімдісіз бе?</string>
+    <string name="games_delete_profile_explanation_with_gamer_name">Геймер аты &lt;b&gt;%1$s&lt;/b&gt; (&lt;b&gt;%2$s&lt;/b&gt;), XP және барлық профиль деректері үшін Google Play Games аккаунтыңызды біржола жойыңыз. Бұл әрекет сонымен қатар ойнаған ойындарыңыздағы ұпайларыңызды, прогресіңізді (сақталған ойындарды) және параметрлеріңізді жоюы мүмкін.</string>
+    <string name="games_delete_profile_dialog_message">Бұл әрекетті бұрынғы қалпына келтіру мүмкін емес.</string>
+    <string name="games_delete_profile_fail">Профильді жою мүмкін болмады. Кейінірек қайта försöзіңіз.</string>
+    <string name="games_delete_game_data_confirm_dialog_title">%1$s деректерін жою</string>
+    <string name="games_delete_game_data_confirm_dialog_message">%1$s үшін деректеріңізді біржола жойған кезде Google Play Games-тегі ұпайларыңыз, прогресіңіз (сақталған ойындар) және ойын параметрлері жойылады.</string>
+    <string name="games_popup_signin_welcome">Сәлем, %1$s</string>
+    <string name="family_management_title">Отбасы</string>
+    <string name="family_management_retry">Қайта försöңіз</string>
+    <string name="family_management_load_error">Мазмұнды жүктеу сәтсіз аяқталды</string>
+    <string name="family_management_toolbar_back">Артқа</string>
+    <string name="family_management_toolbar_more">Толығырақ</string>
+    <string name="family_management_exit_family_group">Отбасы тобынан шығу</string>
+    <string name="family_management_delete_family_group">Отбасы тобын жою</string>
+    <string name="family_management_leave_family_password_title">Отбасы тобынан шығу үшін құпия сөзді растаңыз</string>
+    <string name="family_management_delete_family_password_title">Отбасы тобын жою үшін құпия сөзді растаңыз</string>
+    <string name="family_management_remove_member_password_title">\"%s\" мүшесін жою үшін құпия сөзді растаңыз</string>
+    <string name="family_management_invite_family_member">Отбасы мүшелерін шақыру</string>
+    <string name="family_management_cancel_invite">Шақыруды 취кіру</string>
+    <string name="family_management_cancel_invite_success">Шақыру сәтті түрде 취кірілді</string>
+    <string name="family_management_cancel_invite_error">Шақыруды 취кіру кезінде қателік орын алды. Қайта försöңіз.</string>
+    <string name="family_management_remove_member">Мүшені алып тастау</string>
+    <string name="family_management_member_removed_success">%s отбасылық топтан алынды</string>
+    <string name="family_management_member_remove_failed">%s мүшесін алып тастауда қателік кетті. Қайталап көріңіз.</string>
+    <string name="family_management_leave_family_error_message">Отбасылық топтан шығуда қателік кетті. Қайталап көріңіз.</string>
+    <string name="family_management_exist_group_success">Сіз отбасылық топтан шықтыңыз…</string>
+    <string name="family_management_delete_group_success">Отбасылық топ жойылды</string>
+    <string name="family_management_delete_group_failure">Үй тобын жою мүмкін болмады</string>
+    <string name="family_management_delete_group_cancel">Бас тарту</string>
+    <string name="family_management_delete_group_confirm">ОК</string>
+    <string name="family_management_input_pwd">Құпия сөзді енгізіңіз</string>
+    <string name="family_management_invite_sent_date_format">Шақыру %s күні жіберілді</string>
+    <string name="family_management_invite_send">Шақыру жіберілді</string>
+    <string name="family_management_pwd_error">Құпия сөз қате, қайта енгізіңіз</string>
+    <string name="barcode_scanner_brand">%1$s атынан microG арқылы сканерленді</string>
+    <string name="camera_permission_dialog_button">ОК</string>
+    <string name="camera_permission_dialog_message">microG қызметтеріне %1$s үшін кодты сканерлеу мақсатында құрылғыңыздың камерасына қол жеткізу қажет.\n\nҚосу үшін Баптауларда microG қызметтеріне камераға рұқсат беріңіз.</string>
+    <string name="camera_permission_dialog_title">Камераға рұқсат қажет</string>
+    <string name="pref_app_install_settings_title">Қосымша орнатушы баптаулары</string>
+    <string name="pref_app_install_switch_title">Қосымшаларды орнатуға рұқсат беру</string>
+    <string name="pref_app_install_other_apps_note">Авторизация басқа дереккөздерден ұсынылған қосымшаларды орнатуға мүмкіндік береді.</string>
+    <string name="pref_app_install_permission_instruction">Орнатылған қосымшаларыңыздың дұрыс жұмыс істеуін қамтамасыз ету үшін, microG Companion-ға басқа дереккөздерден жүктелген қосымшаларды орнатуға рұқсат беріңіз.</string>
+    <string name="prefcat_app_install_list_title">Қолданба орнатушыны қолданатын қолданбалар</string>
+    <string name="service_name_google_location_sharing">Google орналасқан жерін бөлісу</string>
+    <string name="location_sharing_description">Осы құрылғы арқылы Google қолданбалары мен сервистеріндегі нақты уақыттағы орналасқан жерді бөлісуді басқарыңыз</string>
+    <string name="location_sharing_learn_more">&quot;Орналасқан жерді бөлісу&quot; туралы көбірек біліңіз</string>
+    <string name="location_sharing_switch_text">Орналасқан жерді бөлісуді қолдану</string>
+    <string name="location_sharing_turn_off_notify_hint">Егер осы құрылғы үшін Орналасқан жерді бөлісуді өшірсеңіз, бөлісуіңізді алған адамдарға хабарлама жіберілмейді.</string>
+    <string name="location_sharing_off_previous_hint">Қайта қосылғанға дейін тек соңғы бөлісілген орналасқан жеріңіз қолжетімді болады.</string>
+    <string name="location_sharing_disabled">Бұл аккаунт үшін белсенді орналасқан жер бөлісулері жоқ</string>
+    <string name="location_sharing_turn_on_hint">Google қолданбасынан немесе сервисінен орналасқан жеріңізді бөлісе бастаған соң, Орналасқан жерді бөлісуді осы жерден басқара аласыз.\n\nОрналасқан жерді бөлісе бастау үшін Google Maps немесе Family Link бөліміне өтіңіз.</string>
+    <string name="location_sharing_turn_off_title">Орналасқан жерді бөлісуді өшіру</string>
+    <string name="location_sharing_turn_off_hint">Сіз әлі де бір Google аккаунтына кіріс жасалған басқа құрылғылардан немесе Google емес қолданбалардан өз тұрған жеріңізді бөлісе беруіңіз мүмкін. Тұрған жерді бөлісу параметрлерін тиісті жерлерден тексеріңіз.\n\nСіз бөліскен адамдар сіздің соңғы бөлісілген тұрған жеріңізді көре береді.</string>
+    <string name="location_sharing_turn_off_cancel">Қалдыру</string>
+    <string name="location_sharing_turn_off_confirm">Өшіру</string>
+    <string name="location_sharing_confirm_dialog_title">Тұрған жерді бөлісуді қосу</string>
+    <string name="location_sharing_confirm_dialog_text">Тұрған жеріңізді бөлісетін адамдар әрдайым мыналарды көре алады:\n·Атыңыз бен фотосуретіңіз\n·Google сервисін қолданбаған кезде де құрылғыңыздың соңғы тұрған жері\n·Құрылғыңыздың батарея қуаты және оның зарядталуы\n·Егер олар Тұрған жерді бөлісу хабарландыруын қосса, келу және кету уақытыңыз</string>
     <!-- Passkey management -->
+    <string name="pref_passkey_manager_title">Passkey-лерді басқару</string>
+    <string name="pref_passkey_manager_empty_title">Сақталған passkey-лер жоқ</string>
+    <string name="pref_passkey_manager_description">Үшінші тарап қолданбалары passkey-лерді тіркегенде, microG жергілікті жазбаны сақтайды. Егер қолданба microG-ге хабарлама жібермей passkey-ді жойса, жазба қалды болуы мүмкін. Мұндай қалдық жазбаларды осы жерден жоя аласыз.</string>
+    <string name="pref_passkey_manager_delete_dialog_title">Passkey-ді жою</string>
+    <string name="pref_passkey_manager_delete_dialog_message">\"%1$s\" құрылғысындағы \"%2$s\" үшін passkey-ді жою. Бұл әрекетті артқа қайтару мүмкін емес; қайта кіру үшін жаңа passkey тіркеу қажет болады.</string>
+    <string name="pref_passkey_manager_delete_dialog_confirm">Жою</string>
+    <string name="pref_passkey_manager_unknown_user">Белгісіз пайдаланушы</string>
+    <string name="pref_passkey_manager_transport_screen_lock">Экранды бұғаттау</string>
+    <string name="pref_passkey_manager_transport_usb">USB</string>
+    <string name="pref_passkey_manager_transport_nfc">NFC</string>
+    <string name="pref_passkey_manager_transport_bluetooth">Bluetooth</string>
+    <string name="pref_passkey_manager_transport_hybrid">Гибридті</string>
+    <string name="pref_passkey_manager_credential_id_format_internal">ID: %1$s</string>
+    <string name="self_check_resolution_oem_restriction">Жүйеңіз фондық процестерді шектеуі мүмкін. Осы шектеулерді қалай өшіруді білу үшін осы жерді басып, Don\'t Kill My App! сайтына өтіңіз</string>
+    <string name="morphe_sign_in_with_google_microg_label">MicroG RE арқылы Google-мен кіру</string>
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Қате архитектура нұсқасы орнатылған</string>
+    <string name="abi_mismatch_message">"Бұл MicroG-RE нұсқасы тек 64 биттік (arm64) кітапханаларды ғана қамтиды, бірақ бұл құрылғыда 32 биттік пайдаланушы кеңістігі жұмыс істеп тұр.
+
+Conscrypt қажет ететін функциялар (аккаунтқа кіру, стриминг, BotGuard, бейне ағындарын имитациялау, SponsorBlock, Return YouTube Dislike және т.б.) дұрыс жұмыс істемейді және ойнату мәселелеріне немесе \"Unable to find a default SSL provider\" қатесіне әкелуі мүмкін.
+
+Оның орнына ARMv7 немесе Universal APK орнатыңыз."</string>
+    <string name="abi_mismatch_download_armv7">ARMv7 APK жүктеу</string>
+    <string name="abi_mismatch_downloading_title">Дұрыс нұсқа жүктелуде…</string>
 </resources>
