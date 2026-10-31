@@ -11,16 +11,16 @@ Mõned teenused ja funktsioonid ei ole saadaval
 
 Teie andmed ei kao"</string>
     <string name="dialog_confirm_button">Eemalda</string>
-    <string name="dialog_cancel_button"> 취nuelleere</string>
+    <string name="dialog_cancel_button">Tühista</string>
     <string name="snackbar_remove_account">Konto %s eemaldatud</string>
-    <string name="snackbar_undo_button">Külluta tagasi</string>
+    <string name="snackbar_undo_button">Võta tagasi</string>
     <string name="gms_settings_name">MicroG seaded</string>
     <string name="gms_settings_summary">Seadistage MicroG teenused.</string>
     <string name="just_a_sec">Hetke...</string>
     <string name="ask_permission_tos">Jätkates lubate sellele rakendusele ja Google\'ile kasutada teie infot vastavalt nende teenustingimustele ja privaatsuspoliitikale.</string>
     <string name="ask_scope_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> soovib:</string>
     <string name="ask_service_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> soovib kasutada:</string>
-    <string name="account_manager_title">Google\'i konto juhid</string>
+    <string name="account_manager_title">Konto haldaja</string>
     <string name="sorry">Vabandust...</string>
     <string name="auth_before_connect">Ühendage Google\'i konto microG-ga.\n\nÜhendamiseks Google\'i kontoga kasutage nuppu <b>Logi sisse</b> või nuppu <b>Huawei</b>, kui teil on selle tootja seade. Nupu vajutamisel suunatakse teid kontole sisselogimise lehele.</string>
     <string name="auth_sign_in">Logi sisse</string>
@@ -48,7 +48,7 @@ See võib võtta mõne minuti."</string>
     <string name="auth_action_notification_content">Teie Google\'i konto vajab täiendavat seadistamist.</string>
     <string name="auth_action_reauth_notification_title">Konto vajab tegevust</string>
     <string name="auth_action_activity_header">Lõpetage oma Google\'i konto seadistamine</string>
-    <string name="auth_action_activity_explanation">Et saaksite seda seadet kasutada oma Google\'i kontoga %s, tehke järgmised sammud.</string>
+    <string name="auth_action_activity_explanation">Oma Google\'i konto %s kasutamiseks selles seadmes järgige järgmisi juhiseid.</string>
     <string name="auth_action_step_enable_checkin">Luba seadme registreerimine</string>
     <string name="auth_action_step_enable_checkin_description">"Teie seade peab vähemalt üks kord Google'is registreeruma.
 
@@ -296,6 +296,8 @@ Mõned rakendused ei saa pärast seda tegevust uuesti registreeruda. Enne uut re
     <string name="push_notifications_summary_off">VÄLJA</string>
     <string name="push_notifications_summary_automatic">SISI / Automaatselt: %s</string>
     <string name="push_notifications_summary_manual">SISI / Manuaalselt: %s</string>
+    <string name="push_notifications_summary_values_seconds">%s sekundit</string>
+    <string name="push_notifications_summary_values_minutes">%s minutit</string>
     <string name="pref_vending_licensing_category">Google Play litsentsimine</string>
     <string name="pref_vending_licensing_enable_switch">Vasta litsentsiverifitseerimise päringutele</string>
     <string name="pref_vending_license_enable_summary">Mõned rakendused nõuavad kinnitust, et olete need ostnud Google Playst. Kui rakendus seda palub, saab microG alla laadida ostukinnituse Google\'ilt. Kui see on pole aktiveeritud või pole lisatud Google\'i kontot, ignoreeritakse litsentsiverifitseerimise päringuid.</string>
@@ -411,6 +413,7 @@ Mõned rakendused ei saa pärast seda tegevust uuesti registreeruda. Enne uut re
     <string name="family_management_delete_family_password_title">Kinnita parool, et kustutada peregrupp</string>
     <string name="family_management_remove_member_password_title">Kinnita parool, et eemaldada \"%s\"</string>
     <string name="family_management_invite_family_member">Kutsu pereliikmeid</string>
+    <string name="family_management_invite_slots_left">%1$d allesolevad kutsed</string>
     <string name="family_management_cancel_invite">Tühista kutse</string>
     <string name="family_management_cancel_invite_success">Kutse tühistati edukalt</string>
     <string name="family_management_cancel_invite_error">Kutse tühistamisel tekis tõrke. Proovi uuesti.</string>

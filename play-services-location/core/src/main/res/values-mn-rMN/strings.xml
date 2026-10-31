@@ -5,8 +5,63 @@
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="service_name_location">Байршил</string>
+    <string name="prefcat_location_apps_title">Сүүлийн үеийн хандалт</string>
+    <string name="prefcat_location_wifi_title">Wi-Fi байршил</string>
+    <string name="prefcat_location_cell_title">Мобайл сүлжээний байршил</string>
+    <string name="prefcat_geocoder_title">Хаяг тодорхойлогч</string>
+    <string name="pref_location_wifi_online_enabled_title">Онлайн үйлчилгээнээс хүсэх</string>
+    <string name="pref_location_wifi_online_enabled_summary">Онлайн байршлын үйлчилгээнээс Wi-Fi-д суурилсан байршлыг татах.</string>
+    <string name="pref_location_wifi_moving_enabled_title">Hotspot-оос хүсэх</string>
+    <string name="pref_location_wifi_moving_enabled_summary">Холбогдсон үед дэмжлэгтэй hotspot-оос Wi-Fi байршлыг шууд татах.</string>
+    <string name="pref_location_wifi_learning_enabled_title">GPS-ээс санаж хадгалах</string>
+    <string name="pref_location_wifi_learning_enabled_summary">GPS ашиглаж байх үед Wi-Fi байршлыг дотооддоо хадгалах.</string>
+    <string name="pref_location_cell_online_enabled_title">Онлайн үйлчилгээнээс хүсэх</string>
+    <string name="pref_location_cell_online_enabled_summary">Мобайл сүлжээний суурийн станцуудын байршлыг онлайн байршлын үйлчилгээнээс татах.</string>
+    <string name="pref_location_cell_learning_enabled_title">GPS-ээс санахад</string>
+    <string name="pref_location_cell_learning_enabled_summary">GPS ашиглах үед мобайл сүлжээний байршлыг локалаар хадгалах.</string>
+    <string name="pref_geocoder_nominatim_enabled_title">Nominatim ашиглах</string>
+    <string name="pref_geocoder_nominatim_enabled_summary">OpenStreetMap Nominatim-ийг ашиглан хаяг тодорхойлох.</string>
+    <string name="fragment_location_apps_title">Байршлын эрхтэй аппликейшнүүд</string>
+    <string name="location_app_last_access_at">Сүүлд хандсан: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="pref_location_app_force_coarse_title">Байршлыг албадмал хязгаарлах</string>
+    <string name="pref_location_app_force_coarse_summary">Энэ аппликейшний зөвшөөрлийн түвшинг үл тоомсорлон, үргэлж хязгаарлагдмал байршлыг буцаана.</string>
+    <string name="prefcat_app_last_location">Сүүлд мэдээлсэн байршил</string>
+    <string name="location_settings_dialog_message_title_for_better_experience">Илүү сайн туршлагад зориулж төхөөрөмжийн байршлыг идэвхжүүлнэ үү, энэ нь microG-ийн байршлын үйлчилгээг ашигладаг</string>
+    <string name="location_settings_dialog_message_title_to_continue">Үргэлжлүүлэхийн тулд төхөөрөмжийн байршлыг идэвхжүүлнэ үү, энэ нь microG-ийн байршлын үйлчилгээг ашигладаг</string>
+    <string name="location_settings_dialog_message_details_start_paragraph">Таны төхөөрөмжид дараах үйлдлүүд шаардлагатай болно:</string>
+    <string name="location_settings_dialog_message_location_services_gps_and_nlp">GPS, Wi‑Fi, үүрэнсүлжээ болон мэдрэгчдийг ашиглах</string>
+    <string name="location_settings_dialog_message_grant_permissions">microG үйлчилгээнд байршлын зөвшөөрөл олгох</string>
+    <string name="location_settings_dialog_message_gls_consent">microG байршлын үйлчилгээг ашиглах; энэ үйлчилгээний хүрээнд microG байршлын өгөгдлийг тогтмол цуглуулж, байршлын нарийвчлал болон байршилд суурилсан үйлчилгээг сайжруулахын тулд уг өгөгдлийг нэрээ нууцалсан хэлбэрээр ашиглаж болно.</string>
+    <string name="location_settings_dialog_message_details_end_paragraph">Дэлгэрэнгүй мэдээллийг байршлын тохиргооноос харна уу.</string>
+    <string name="location_settings_dialog_btn_cancel">Үгүй, баярлалаа</string>
+    <string name="location_settings_dialog_btn_sure">ОК</string>
+    <string name="pref_location_custom_url_summary">Энэ нь үйлчилгээний URL-ийг өөрийн хүслээр тохируулах боломжийг олгоно. Буруу утга оруулбал байршлын үйлчилгээ хариу үйлдэл үзүүлэхгүй эсвэл бүрэн ажиллахгүй байх可能性があります.</string>
+    <string name="pref_location_custom_url_details">/v1/geolocate замын хаяг автоматаар нэмэгдэнэ. Хэрэв байршлын үйлчилгээ үзүүлэгч түлхүүр шаарддаг бол түүнийг үндсэн URL-ийн query параметр хэлбэрээр нэмж болно.</string>
+    <string name="pref_location_custom_url_input_hint">Үйлчилгээний тусгайлсан URL</string>
+    <string name="pref_location_custom_source_title">Тусгайлсан</string>
+    <string name="pref_location_source_title">Онлайн байршлын үйлчилгээг сонгох</string>
+    <string name="pref_location_source_terms">Нөхцөл / Нууцлал</string>
+    <string name="pref_location_source_suggested">Санал болгосон</string>
+    <string name="pref_location_import_export_title">Байршлын өгөгдлийг импортлох эсвэл экспортлох</string>
+    <string name="notification_config_required_title">Тохиргоо шаардлагатай</string>
+    <string name="notification_config_required_text_online_sources">Онлайн байршлын үйлчилгээг үргэлжлүүлэн ашиглахын тулд байршлын өгөгдлийн үйлчилгээг сонгох шаардлагатай.</string>
+    <string name="location_data_export_wifi_title">Локал Wi-Fi байршлын өгөгдлийн санг экспортлох</string>
+    <string name="location_data_export_cell_title">Локал гар утасны суурийн станцын байршлын өгөгдлийн санг экспортлох</string>
+    <string name="location_data_import_title">Файлаас байршлын өгөгдлийг импортлох</string>
+    <string name="prefcat_location_timeline_title">Google Maps-ийн Цаг хугацааны шугам</string>
+    <string name="pref_location_timeline_title">Байршлын түүхийг идэвхжүүлэх</string>
+    <string name="pref_location_timeline_summary">"Байршлын мэдээллээ тогтмол бүртгэж, Google Maps-ийн Цаг хугацааны шугаманд боломжтой болгох."</string>
+    <string name="pref_location_timeline_upload_title">Google хаягтай синхрончлох</string>
+    <string name="pref_location_timeline_upload_summary">"Байршлын түүхийг Google-ийн серверт синхрончилж, бусад төхөөрөмж дээр харуулах боломжтой болгох."</string>
     <!-- RE strings -->
+    <string name="prefcat_location_maps_title">Google Maps</string>
+    <string name="pref_map_engine_title">Газрын зураг дүрслэгч</string>
     <!-- "Mapbox (MapLibre)" must be left untranslated .-->
+    <string name="pref_map_engine_summary">Аппликейшн дээр газрыг дүрслэхэд ашиглах хөдөлгүүрийг сонгоно уу. Mapbox (MapLibre)-ийг санал болгож байна.</string>
     <!-- "Stadia Maps" must be left untranslated .-->
+    <string name="pref_stadia_key_title">Stadia Maps API түлхүүр</string>
+    <string name="pref_stadia_key_summary">Сонголтоор. Stadia Maps дүрслэгчийн сонголтыг нэмнэ; Stadia-д API түлхүүр шаардлагатай.</string>
     <!-- "HMS (Huawei Map Kit)" must be left untranslated .-->
+    <string name="pref_hms_key_title">HMS (Huawei Map Kit) API түлхүүр</string>
+    <string name="pref_hms_key_summary">Сонголтоор. HMS дүрслэгчийн сонголтыг нэмнэ; төхөөрөмж дээр HMS Core суурилуулсан байх шаардлагатай.</string>
 </resources>
