@@ -37,24 +37,17 @@ Most modern phones can use this release.
 
 If you are unsure which variant to use, download the universal APK (`microg-version.apk`).
 
-### Verify the APK signature
-
-All release APKs are signed with the same certificate. Before installing, you can check that an APK is an official build, for example with [AppVerifier](https://github.com/soupslurpr/AppVerifier) or Obtainium.
-
-Package name and SHA-256 certificate fingerprint (AppVerifier format):
+<details>
+<summary>APK signature</summary>
 
 ```
 app.revanced.android.gms
 0B:6C:95:15:AF:B1:95:FA:C5:96:01:69:6B:A0:A7:90:7A:0B:21:7C:CF:72:0B:43:14:84:27:CC:F6:43:43:E7
 ```
 
-With the Android SDK build tools:
+Package name and SHA-256 fingerprint of the signing certificate, for example for AppVerifier or Obtainium.
 
-```
-apksigner verify --print-certs microg-version.apk
-```
-
-The output must contain `certificate SHA-256 digest: 0b6c9515afb195fac59601696ba0a7907a0b217ccf720b43148427ccf64343e7`.
+</details>
 
 ## Translations
 
