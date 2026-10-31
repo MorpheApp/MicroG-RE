@@ -38,6 +38,8 @@ import org.microg.gms.utils.digest
 import org.microg.gms.utils.getCertificates
 import org.microg.gms.utils.toHexString
 import java.io.UnsupportedEncodingException
+import java.net.HttpURLConnection
+import java.net.URL
 import java.nio.charset.Charset
 import java.util.HashMap
 import java.util.Locale
@@ -47,6 +49,49 @@ import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine
 
 object DynamicLinkUtils {
+
+    /**
+     * Hosts of plain HTTP redirect short links (e.g. Google Maps share links). These can be resolved
+     * without the datamixer API by reading the redirect target.
+     */
+    private val REDIRECT_SHORT_LINK_HOSTS = setOf("goo.gl", "maps.app.goo.gl")
+    private const val MAX_REDIRECTS = 5
+    private const val REDIRECT_TIMEOUT_MS = 10_000
+
+    fun isRedirectShortLink(linkUrl: String): Boolean {
+        val url = runCatching { URL(linkUrl) }.getOrNull() ?: return false
+        return url.protocol == "https" && url.host.lowercase(Locale.ROOT) in REDIRECT_SHORT_LINK_HOSTS
+    }
+
+    /**
+     * Resolves a redirect short link (see [REDIRECT_SHORT_LINK_HOSTS]) to its https target without
+     * following the redirect into the target itself. Blocking, must not be called on the main thread.
+     *
+     * @return the resolved https URL, or null if the link is not a supported short link or could not be resolved.
+     */
+    fun resolveRedirectShortLink(linkUrl: String): String? {
+        if (!isRedirectShortLink(linkUrl)) return null
+        var current = URL(linkUrl)
+        repeat(MAX_REDIRECTS) {
+            val connection = (current.openConnection() as HttpURLConnection).apply {
+                instanceFollowRedirects = false
+                connectTimeout = REDIRECT_TIMEOUT_MS
+                readTimeout = REDIRECT_TIMEOUT_MS
+                requestMethod = "GET"
+            }
+            val location = try {
+                if (connection.responseCode !in 300..399) return null
+                connection.getHeaderField("Location") ?: return null
+            } finally {
+                connection.disconnect()
+            }
+            val next = runCatching { URL(current, location) }.getOrNull() ?: return null
+            if (next.protocol != "https") return null
+            if (next.host.lowercase(Locale.ROOT) !in REDIRECT_SHORT_LINK_HOSTS) return next.toString()
+            current = next
+        }
+        return null
+    }
 
     suspend fun requestLinkResponse(linkUrl: String, queue: RequestQueue): MutateAppInviteLinkResponse? {
         val request = ProtobufPostRequest(
