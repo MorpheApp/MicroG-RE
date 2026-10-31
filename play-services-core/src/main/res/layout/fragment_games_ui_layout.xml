@@ -79,7 +79,7 @@
 
         <TextView
             android:id="@+id/games_ui_error_tips"
-            android:textColor="@android:color/black"
+            android:textColor="?android:attr/textColorPrimary"
             android:textSize="20sp"
             android:gravity="center"
             android:visibility="gone"

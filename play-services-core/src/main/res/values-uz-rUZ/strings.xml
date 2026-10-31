@@ -7,7 +7,9 @@
     <string name="gms_settings_name">MicroG sozlamalari</string>
     <string name="gms_settings_summary">MicroG xizmatlarini sozlash.</string>
     <string name="just_a_sec">Bir soniya…</string>
+    <string name="ask_permission_tos">Davom etish orqali siz ushbu ilova va Google’ga ma―lumotlaringizdan ularning tegishli xizmat ko‘rsatish shartlari va maxfiylik siyosatiga muvofiq foydalanishga ruxsat berasiz.</string>
     <string name="ask_scope_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> quyidagini ishlatmoqchi:</string>
+    <string name="ask_service_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> quyidagilardan foydalanishni xohlaydi:</string>
     <string name="account_manager_title">Kechirasiz…</string>
     <string name="sorry">Qurilmangiz sizni tizimga kiritish uchun Google serverlariga ulanishni o\'rnatmoqda.
 
@@ -22,14 +24,84 @@ Keyinroq qayta urinib ko'ring."</string>
     <string name="auth_general_error_desc">"Qurilmangiz ma'lumotlarni hisobingizga saqlash uchun Google bilan bog'lanmoqda.
 
 Bu bir necha daqiqa davom etishi mumkin."</string>
+    <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> Google hisobingizga kirish uchun sizning ruxsatingizni talab qiladi.</string>
     <string name="auth_action_notification_channel_name">Bu amalni bekor qilib bo\'lmaydi.</string>
     <string name="auth_action_notification_channel_description">Profilingizni o\'chirib bo\'lmadi. Keyinroq qayta urinib ko\'ring.</string>
     <string name="auth_action_notification_title">%1$s uchun ma\'lumotlarni o\'chirish</string>
+    <string name="auth_action_notification_content">Google hisobingiz qo\'shimcha sozlashni talab qiladi.</string>
+    <string name="auth_action_reauth_notification_title">Hisob uchun harakat talab qilinadi</string>
+    <string name="auth_action_activity_header">Google hisobingizni sozlashni yakunlang</string>
+    <string name="auth_action_activity_explanation">Ushbu qurilmada %s Google hisobingizdan foydalanish uchun quyidagi qadamlarni bajaring.</string>
+    <string name="auth_action_step_enable_checkin">Qurilmani ro\'yxatga olishni yoqing</string>
+    <string name="auth_action_step_enable_gcm">Cloud Messaging xizmatini yoqing</string>
+    <string name="auth_action_step_enable_gcm_description">Hisob sozlamalari yakunlangandan so\'ng Cloud Messaging xizmatini o\'chirishingiz mumkin.</string>
+    <string name="auth_action_step_allow_microg_gcm">microG uchun Cloud Messaging\'ga ruxsat berish</string>
+    <string name="auth_action_step_allow_microg_gcm_description">Sizning sozlamalaringizga ko\'ra, microG Cloud Messaging uchun ro\'yxatdan o\'tishdan oldin sizdan ruxsat olishi kerak.</string>
+    <string name="auth_action_step_enable_lockscreen">Xavfsiz ekran qulfini sozlang</string>
+    <string name="auth_action_step_enable_lockscreen_description">"Sizning Google hisobingiz ish joyingiz yoki ta'lim muassasasi tomonidan boshqariladi. Administratoringiz qurilmalar hisob ma'lumotlariga kirishdan oldin xavfsiz ekran qulfiga ega bo'lishi kerak deb qaror qildi.
+
+Iltimos, parol, PIN-kod yoki grafik qulfni sozlang."</string>
+    <string name="auth_action_step_perform_content_description">Bosqichni bajarish uchun bosing</string>
+    <string name="auth_action_step_completed_content_description">Bosqich yakunlandi</string>
+    <string name="auth_action_activity_finish">Tugatish</string>
+    <string name="signin_picker_subtitle"><xliff:g example="F-Droid">%1$s</xliff:g> sahifasiga o\'tish uchun davom eting</string>
+    <string name="signin_confirm_title">Sizga <xliff:g example="F-Droid">%1$s</xliff:g> sahifasiga kirishga ruxsat bering</string>
+    <string name="signin_subtext_sharing">Davom etish uchun, microG sizning Google hisobingizdagi ismingiz, elektron pochta manzilingiz va profil rasmingizni <xliff:g example="F-Droid">%1$s</xliff:g> bilan baham ko\"radi.</string>
+    <string name="perm_provision_label">microG xizmatlarini tayyorlash</string>
+    <string name="perm_provision_description">Ilovaga foydalanuvchi aralashuvisiz microG xizmatlarini sozlash imkonini beradi</string>
+    <string name="perm_car_speed_label">Avtomobil tezligi</string>
+    <string name="perm_car_speed_description">"Avtomobilingiz tezligiga kirish"</string>
+    <string name="perm_car_info_label">Avtomobil ma\'lumotlari</string>
+    <string name="perm_car_info_description">"Avtomobilingiz ma'lumotlariga kirish"</string>
+    <string name="perm_car_fuel_label">Avtomobil yoqilg\'isi darajasi</string>
+    <string name="perm_car_fuel_description">"Avtomobilingiz yoqilg'isi darajasi ma'lumotlariga kirish"</string>
+    <string name="perm_car_mileage_label">Avtomobil yurgan masofasi</string>
+    <string name="perm_car_mileage_description">"Avtomobilingizning yurgan masofasi ma'lumotlariga kirish"</string>
+    <string name="perm_car_vendor_extension_label">Avtomobil sotuvchisi kanali</string>
+    <string name="perm_car_vendor_extension_description">"Avtomobilga oid ma'lumotlarni almashish uchun avtomobil sotuvchisi kanaliga kirish"</string>
+    <string name="service_name_checkin">Qurilmani ro\'yxatga olish</string>
+    <string name="service_name_mcs">Bulutli xabarlar</string>
+    <string name="service_name_device_attestation">Qurilmani tasdiqlash</string>
+    <string name="service_name_vending">Play Store xizmatlari</string>
+    <string name="service_name_work_profile">Ish profili</string>
+    <string name="games_title">Google Play Games</string>
+    <string name="games_info_title"><xliff:g example="F-Droid">%1$s</xliff:g> Play Games\'dan foydalanishni xohlaydi</string>
+    <string name="games_info_content">Play Games\'dan foydalanish uchun Google Play Games ilovasini o\'rnatish talab qilinadi. Ilova Play Games-siz ham ishlashi mumkin, ammo u kutilmaganda ishlay qolishi ehtimoli bor.</string>
+    <string name="pick_place_title">Joyni tanlang</string>
+    <string name="place_picker_select_title">Ushbu joyni tanlang</string>
+    <string name="place_picker_nearby_places">Yaqin atrofdagi joylar</string>
     <!-- Self check -->
+    <string name="self_check_pkg_gms">microG xizmatlari</string>
+    <string name="self_check_pkg_vending">microG Companion / Play Store</string>
+    <string name="self_check_pkg_gsf">microG Services Framework</string>
+    <string name="self_check_name_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> o\'rnatilgan: </string>
+    <string name="self_check_resolution_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> ilovasini yoki unga mos keladigan boshqa ilovani o\'rnating. Qaysi ilovalar mos kelishi haqida hujjatlarni tekshiring.</string>
+    <string name="self_check_name_correct_sig"><xliff:g example="F-Droid">%1$s</xliff:g> imzosi to\'g\'ri: </string>
+    <string name="self_check_resolution_correct_sig">O\'rnatilgan <xliff:g example="F-Droid">%1$s</xliff:g> mos emas yoki u uchun imzo spoofing-i faollashtirilmagan. Iltimos, qaysi ilovalar va ROMlar mos kelishi haqidagi hujjatlarni tekshiring.</string>
+    <string name="self_check_name_battery_optimizations">Batareya optimallashtirishlari e\'tiborsiz qoldirildi:</string>
+    <string name="self_check_resolution_battery_optimizations">Batareya optimallashtirishlarini o\'chirish uchun bu yerga teging. Buni bajarmaslik ilovalarning noto\'g\'ri ishlashiga olib kelishi mumkin.</string>
     <!-- Settings strings -->
+    <string name="cond_gcm_bat_summary">Siz Cloud Messaging-ni yoqdingiz, lekin microG xizmatlari uchun batareya optimallashtirishlari faol. Push-bildirishnomalar kelishi uchun batareya optimallashtirishlarini e\'tiborsiz qoldirishingiz kerak.</string>
+    <string name="prefs_account">Hisob sozlamalari</string>
+    <string name="prefs_account_privacy">Shaxsiy ma\'lumotlar &amp; maxfiylik</string>
+    <string name="prefs_account_security">Tizimga kirish &amp; xavfsizlik</string>
+    <string name="pref_auth_trust_google_summary">O\"chirilgan bo\"lganda, ilovaning avtorizatsiya so\"rovi Google\"ga yuborilishidan oldin foydalanuvchidan tasdiq so\"raladi. Agar bu o\"chirilgan bo\"lsa, ba\"zi ilovalar Google hisobidan foydalana olmasligi mumkin.</string>
+    <string name="pref_auth_include_android_id_summary">O\"chirilgan bo\"lganda, autentifikatsiya so\"rovlari qurilma ro\"yxatidan o\"tkazilishi bilan bog\"lanmaydi, bu ruxsat etilmagan qurilmalarga tizimga kirish imkonini berishi mumkin, ammo kutilmagan oqibatlarga olib kelishi mumkin.</string>
+    <string name="pref_auth_strip_device_name_summary">Yoqilgan bo\"lganda, autentifikatsiya so\"rovlari qurilma nomini o\"z ichiga olmaydi, bu ruxsat etilmagan qurilmalarga tizimga kirish imkonini berishi mumkin, ammo kutilmagan oqibatlarga olib kelishi mumkin.</string>
+    <string name="pref_auth_two_step_verification_title">Ikki bosqichli tekshiruv so\"rovlarini qabul qilish</string>
+    <string name="pref_auth_two_step_verification_summary">Yoqilgan bo\"lganda, qurilma Google\"dan ikki bosqichli tekshiruv so\"rovlarini qabul qilishi mumkin (Cloud Messaging talab qilinadi).</string>
+    <string name="pref_auth_allow_find_devices_title">Google Device Finder\"ga javob berishga ruxsat berish</string>
+    <string name="pref_auth_allow_find_devices_summary">Yoqilganda, qurilma Google\'dan kelgan \"Qurilmamni topish\" bildirishnomalariga javob berishi mumkin (Cloud Messaging talab qilinadi).</string>
+    <string name="pref_checkin_enable_summary">Qurilmangizni Google xizmatlariga ro\"yxatdan o\"tkazadi va noyob qurilma identifikatorini yaratadi. microG ro\"yxatdan o\"tish ma\"lumotlaridan Google hisobingiz nomidan boshqa identifikatsiya qiluvchi bitlarni olib tashlaydi.</string>
+    <string name="checkin_last_registration">Oxirgi ro\'yxatdan o\'tish: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="pref_game_accounts_title">Google o\'yin hisoblari</string>
     <string name="prefcat_accounts_settings_title">Sozlamalar</string>
+    <string name="auth_add_account">Hisobni qo\'shish</string>
+    <string name="pref_add_account_summary">Google hisobini qo\'shing</string>
+    <string name="pref_gcm_enable_mcs_summary">Cloud Messaging ko\'plab uchinchi tomon ilovalari tomonidan foydalaniladigan push-bildirishnomalar provayderidir. Undan foydalanish uchun qurilma ro\'yxatdan o\'tishini yoqishingiz kerak.</string>
     <string name="pref_hide_launcher_icon">Ishga tushirgichda ikonkani yashirish</string>
     <string name="update_failed_title">Yangilanishda xatolik</string>
+    <string name="gcm_last_message_at">Oxirgi xabar: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
     <string name="gcm_registered_since">Ro\'yxatdan o\'tgan: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
     <string name="gcm_unregister_confirm_title">Ro\'yxatdan o\'chirilsinmi: <xliff:g example="F-Droid">%1$s</xliff:g>?</string>
     <string name="gcm_unregister_confirm_message">Ba\'zi ilovalar avtomatik ravishda qayta ro\'yxatdan o\'tmaydi va/yoki buni qo\'lda qilish imkoniyatini taqdim etmaydi. Ro\'yxatdan o\'chirilgandan so\'ng bu ilovalar to\'g\'ri ishlamasligi mumkin.\nDavom etasizmi?</string>

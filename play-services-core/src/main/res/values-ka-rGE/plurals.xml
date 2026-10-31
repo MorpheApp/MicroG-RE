@@ -14,4 +14,17 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="gcm_registered_apps_counter">
+        <item quantity="one"><xliff:g example="1">%1$d</xliff:g> რეგისტრირებული აპლიკაცია</item>
+        <item quantity="other"><xliff:g example="123">%1$d</xliff:g> რეგისტრირებული აპლიკაცია</item>
+    </plurals>
+    <plurals name="cond_perm_summary">
+        <item quantity="one">microG სერვისების გამართული მუშაობისთვის საჭირო უფლება არ არის გაცემული.</item>
+        <item quantity="other">microG სერვისების გამართული მუშაობისთვის საჭირო უფლებები არ არის გაცემული.</item>
+    </plurals>
+    <plurals name="cond_perm_action">
+        <item quantity="one">მოითხოვეთ ખૂდების უფლება</item>
+        <item quantity="other">მოითხოვეთ ખૂდების უფლებები</item>
+    </plurals>
+</resources>

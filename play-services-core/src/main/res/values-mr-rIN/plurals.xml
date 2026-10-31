@@ -19,4 +19,12 @@
         <item quantity="one"><xliff:g example="1">%1$d</xliff:g> नोंदणीकृत ॲप</item>
         <item quantity="other"><xliff:g example="123">%1$d</xliff:g> नोंदणीकृत ॲप्स</item>
     </plurals>
+    <plurals name="cond_perm_summary">
+        <item quantity="one">microG Services च्या योग्य कार्यासाठी आवश्यक असलेली एक परवानगी मंजूर केलेली नाही.</item>
+        <item quantity="other">microG Services च्या योग्य कार्यासाठी आवश्यक असलेल्या परवानग्या मंजूर केलेल्या नाहीत.</item>
+    </plurals>
+    <plurals name="cond_perm_action">
+        <item quantity="one">गहाळ परवानगीची विनंती करा</item>
+        <item quantity="other">गहाळ परवानग्यांची विनंती करा</item>
+    </plurals>
 </resources>

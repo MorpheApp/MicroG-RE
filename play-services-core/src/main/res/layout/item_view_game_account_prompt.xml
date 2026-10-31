@@ -38,6 +38,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:textSize="14dp"
-            android:textColor="@android:color/black" />
+            android:textColor="?android:attr/textColorPrimary" />
     </LinearLayout>
 </LinearLayout>

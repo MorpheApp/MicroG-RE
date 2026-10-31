@@ -15,5 +15,21 @@
   ~ limitations under the License.
   -->
 <resources>
+    <string name="lib_name">Eines de la UI de microG</string>
+    <string name="lib_license">Llicència Apache 2.0, equip de microG</string>
+    <string name="about_version_str">Versió %1$s</string>
+    <string name="about_default_license">Tots els drets reservats.</string>
+    <string name="prefcat_setup">Configuració</string>
+    <string name="self_check_title">Autocomprobació</string>
+    <string name="self_check_desc">Comprova si el sistema està correctament configurat per utilitzar microG.</string>
+    <string name="self_check_cat_permissions">Permisos concedits</string>
+    <string name="self_check_name_permission">Permís per a %1$s:</string>
+    <string name="self_check_name_permission_interact_across_profiles">Permís per interactuar amb el perfil de treball:</string>
+    <string name="self_check_resolution_permission">Toca aquí per concedir el permís. Si no es concedeix el permís, les aplicacions poden funcionar incorrectament.</string>
+    <string name="about_root_title">Demo de la UI de microG</string>
+    <string name="about_root_summary">Resum</string>
+    <string name="about_root_version">Versió v0.1.0</string>
+    <string name="about_root_libraries">Libreries incloses</string>
     <!--Settings About-->
+    <string name="about_morphe_description">Morphe és un projecte de codi obert dissenyat per modificar aplicacions d\'Android mitjançant pegats</string>
 </resources>

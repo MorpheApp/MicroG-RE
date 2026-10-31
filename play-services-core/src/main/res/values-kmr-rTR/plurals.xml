@@ -19,4 +19,12 @@
         <item quantity="one"><xliff:g example="1">%1$d</xliff:g> sepan qeydkirî ye</item>
         <item quantity="other"><xliff:g example="123">%1$d</xliff:g> sepan qeydkirî ne</item>
     </plurals>
+    <plurals name="cond_perm_summary">
+        <item quantity="one">Rikekê ji bo karê rastî ya Xizmetên microG pêwist e, nade.</item>
+        <item quantity="other">Destûrên ji bo karê rastî yê Xizmetên microG pêwîst nehatine dayîn.</item>
+    </plurals>
+    <plurals name="cond_perm_action">
+        <item quantity="one">Daxwaza destûra winda bike</item>
+        <item quantity="other">Daxwaza destûrên winda bikin</item>
+    </plurals>
 </resources>

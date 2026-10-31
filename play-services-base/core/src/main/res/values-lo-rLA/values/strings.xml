@@ -3,4 +3,22 @@
   ~ SPDX-FileCopyrightText: 2020, microG Project Team
   ~ SPDX-License-Identifier: Apache-2.0
   -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="foreground_service_notification_title">ກຳລັງເຮັດວຽກຢູ່ໃນພື້ນຫຼັງ</string>
+    <string name="foreground_service_notification_text"><xliff:g example="Exposure Notification">%1$s</xliff:g> ກຳລັງເຮັດວຽກຢູ່ໃນພື້ນຫຼັງ.</string>
+    <string name="foreground_service_notification_big_text">ຍົກເວັ້ນ <xliff:g example="microG Services">%1$s</xliff:g> ອອກຈາກການປັບປຸງແບັດເຕີຣີ ຫຼື ປ່ຽນການຕັ້ງຄ່າການແຈ້ງເຕືອນເພື່ອເຊື່ອງການແຈ້ງເຕືອນນີ້.</string>
+    <string name="foreground_action_battery_optimization">ການປັບແຕ່ງແບັດເຕີຣີໃຫ້ເໝາະສົມ</string>
+    <string name="foreground_action_notification_settings">ການຕັ້ງຄ່າ</string>
+    <string name="menu_advanced">ຂັ້ນສູງ</string>
+    <string name="menu_settings">ການຕັ້ງຄ່າ</string>
+    <string name="menu_game_managed">ຈັດການບັນຊີເກມ</string>
+    <string name="list_no_item_none">ບໍ່ມີ</string>
+    <string name="list_item_see_all">ເບິ່ງທັງໝົດ</string>
+    <string name="open_app">ເປີດ</string>
+    <string name="service_status_disabled">ປິດໃຊ້ງານ</string>
+    <string name="service_status_enabled">ເປີດໃຊ້ງານ</string>
+    <string name="service_status_automatic">ອັດຕະໂນມັດ</string>
+    <string name="service_status_manual">ດ້ວຍຕົນເອງ</string>
+    <string name="service_status_enabled_short">ເປີດ</string>
+    <string name="service_status_disabled_short">ປິດ</string>
+</resources>

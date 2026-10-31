@@ -3,4 +3,22 @@
   ~ SPDX-FileCopyrightText: 2020, microG Project Team
   ~ SPDX-License-Identifier: Apache-2.0
   -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="foreground_service_notification_title">পাৰ্শ্বভূমিত সক্ৰিয়</string>
+    <string name="foreground_service_notification_text"><xliff:g example="Exposure Notification">%1$s</xliff:g> পাৰ্শ্বভূমিত চলি আছে।</string>
+    <string name="foreground_service_notification_big_text">বেটাৰী অপ্টিমাইজেশ্বনৰ পৰা <xliff:g example="microG Services">%1$s</xliff:g> বাদ দিয়ক বা এই জাননীটো লুকুৱাবলৈ জাননীৰ ছেটিংছ সলনি কৰক।</string>
+    <string name="foreground_action_battery_optimization">বেটাৰী অপ্টিমাইজেশ্যন</string>
+    <string name="foreground_action_notification_settings">ছেটিংছ</string>
+    <string name="menu_advanced">উন্নত</string>
+    <string name="menu_settings">ছেটিংছ</string>
+    <string name="menu_game_managed">গেম একাউণ্টসমূহ পৰিচালিত</string>
+    <string name="list_no_item_none">কোনো নাই</string>
+    <string name="list_item_see_all">সকলোটা চাওক</string>
+    <string name="open_app">খোলক</string>
+    <string name="service_status_disabled">অক্ষম কৰা হৈছে</string>
+    <string name="service_status_enabled">সক্ৰিয় কৰা হৈছে</string>
+    <string name="service_status_automatic">স্বয়ংস্বকীয়</string>
+    <string name="service_status_manual">ম্যানুৱেল</string>
+    <string name="service_status_enabled_short">অন</string>
+    <string name="service_status_disabled_short">অফ</string>
+</resources>

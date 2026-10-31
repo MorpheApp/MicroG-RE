@@ -4,8 +4,381 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="gms_settings_name">MicroG тохиргоо</string>
+    <string name="gms_settings_summary">MicroG үйлчилгээнүүдийг тохируулах.</string>
+    <string name="just_a_sec">Түр хүлээнэ үү…</string>
+    <string name="ask_permission_tos">Үргэлжлүүлснээр та энэ аппликейшн болон Google-д таны мэдээллийг тэдгээрийн үйлчилгээний нөхцөл болон нууцлалын бодлогын дагуу ашиглахыг зөвшөөрч байна.</string>
+    <string name="ask_scope_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> дараах үйлдлийг хийхийг хүсэж байна:</string>
+    <string name="ask_service_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> дараахыг ашиглахыг хүсэж байна:</string>
+    <string name="account_manager_title">Google-ийн бүртгэлийн менежер</string>
+    <string name="sorry">Уучлаарай…</string>
+    <string name="auth_before_connect">Google бүртгэлийг microG-тэй холбох.\n\nGoogle бүртгэлтэй холбохын тулд <b style="font-weight: bold;">Нэвтрэх</b> товчийг, эсвэл та Huawei үйлдвэрлэлийн төхөөрөмжтэй бол <b style="font-weight: bold;">Huawei</b> товчийг ашиглана уу. Товчнуудын аль нэгийг дарснаар та бүртгэлд нэвтрэх хуудас руу шилжнэ.</string>
+    <string name="auth_connecting">"Таныг нэвтрүүлэхийн тулд төхөөрөмж Google-ийн серверүүдтэй холболт тогтоож байна.
+
+Үүнд хэдэн секунд зарцуулагдаж болно."</string>
+    <string name="no_network_error_desc">"Сүлжээний холболтгүй байна.
+
+Энэ нь түр зуурын асуудал байж болно, эсвэл таны Android төхөөрөмж өгөгдлийн үйлчилгээнд тохируулагдаагүй байж болзошгүй. Мобайл сүлжээнд холбогдсоны дараа дахин оролдох эсвэл Wi-Fi сүлжээнд холбогдоно уу."</string>
+    <string name="auth_general_error_desc">"Google-ийн сервертэй холбогдохэд алдаа гарлаа.
+
+Дараа дахин оролдоно уу."</string>
+    <string name="auth_finalize">"Таны төхөөрөмж мэдээллийг таны бүртгэлд хадгалахын тулд Google-тэй холбогдож байна.
+
+Үүнд хэдэн минут зарцуулагдаж магадгүй юм."</string>
+    <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> нь таны Google бүртгэлд хандахын тулд таны зөвшөөрлийг шаардаж байна.</string>
+    <string name="auth_package_override_request_title"><b><xliff:g example="F-Droid">%1$s</xliff:g></b>-д <xliff:g example="account@example.com">%2$s</xliff:g> хаяг руу онцгой эрхээр хандахыг зөвшөөрөх үү?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> нь <xliff:g example="F-Droid Inc.">%3$s</xliff:g> компанийн <b><xliff:g example="F-Droid">%2$s</xliff:g></b> мэтээр таны бүртгэлд хандахыг хүсэж байна. Энэ нь таны бүртгэлд онцгой эрхээр хандах боломжийг олгож магадгүй юм.</string>
+    <string name="auth_action_notification_channel_name">Google бүртгэлийн сэрэмжлүүлэг</string>
+    <string name="auth_action_notification_channel_description">Таны Google бүртгэлүүдийн аль нэг нь ашиглахын өмнө нэмэлт тохиргоо шаардлагатай болсон эсвэл бүртгэл microG-тэй нийцэхгүй байгаа тохиолдолд мэдэгдэнэ.</string>
+    <string name="auth_action_notification_title">Бүртгэлийн үйлдэл шаардлагатай</string>
+    <string name="auth_action_notification_content">Таны Google бүртгэлд нэмэлт тохиргоо шаардлагатай байна.</string>
+    <string name="auth_action_reauth_notification_title">Бүртгэлийн үйлдэл шаардлагатай</string>
+    <string name="auth_action_activity_header">Google бүртгэлийнхээ тохиргоог дуусгах</string>
+    <string name="auth_action_activity_explanation">Энэ төхөөрөмж дээр %s Google бүртгэлээ ашиглахын тулд дараах алхмуудыг гүйцэтгэнэ үү.</string>
+    <string name="auth_action_step_enable_checkin">Төхөөрөмжийн бүртгэлийг идэвхжүүлэх</string>
+    <string name="auth_action_step_enable_checkin_description">"Таны төхөөрөмж Google-д дор хаяж нэг удаа бүртгүүлэх шаардлагатай.
+
+Бүртгэлийн тохиргоо дууссаны дараа Google төхөөрөмжийн бүртгэлийг идэвхгүй болгох боломжтой."</string>
+    <string name="auth_action_step_enable_gcm">Cloud Messaging-ийг идэвхжүүлэх</string>
+    <string name="auth_action_step_enable_gcm_description">Та бүртгэлийн тохиргоог дуусгасны дараа Cloud Messaging-ийг идэвхгүй болгох боломжтой.</string>
+    <string name="auth_action_step_allow_microg_gcm">microG-д Cloud Messaging-ийг зөвшөөрөх</string>
+    <string name="auth_action_step_allow_microg_gcm_description">Таны тохиргооны дагуу microG нь Cloud Messaging-д бүртгүүлэхийн önдө танаас зөвшөөрөл авах шаардлагатай.</string>
+    <string name="auth_action_step_enable_lockscreen">Дэлгэцийн найдвартай түгжээг тохируулах</string>
+    <string name="auth_action_step_enable_lockscreen_description">"Таны Google бүртгэлийг ажлын байр эсвэл боловсролын байгууллага удирддаг. Таны администратор бүртгэлийн мэдээлэлд хандахын önд төхөөрөмжүүдэд дэлгэцийн найдвартай түгжээ шаардлагатай гэж шийдсэн байна.
+
+Гуравдагч нууц үг, PIN код эсвэл хээгээр дэлгэцээ түгжээрэй."</string>
+    <string name="auth_action_step_perform_content_description">Алхмыг гүйцэтгэхийн тулд дарна уу</string>
+    <string name="auth_action_step_completed_content_description">Алхам дууслаа</string>
+    <string name="auth_action_activity_finish">Дуусгах</string>
+    <string name="signin_picker_subtitle"><xliff:g example="F-Droid">%1$s</xliff:g> рүү үргэлжлүүлэх</string>
+    <string name="signin_confirm_title"><xliff:g example="F-Droid">%1$s</xliff:g> дээр нэвтрэх зөвшөөрөл</string>
+    <string name="signin_subtext_sharing">Үргэлжлүүлэхийн тулд microG таны Google хаягийн нэр, имэйл хаяг болон профайл зургийг <xliff:g example="F-Droid">%1$s</xliff:g>-тэй хуваалцах болно.</string>
+    <string name="perm_provision_label">microG үйлчилгээг бэлдэх</string>
+    <string name="perm_provision_description">Хэрэглэгчийн оролцоогүйгээр аппликейшнд microG үйлчилгээг тохируулахыг зөвшөөрнө</string>
+    <string name="perm_car_speed_label">Машины хурд</string>
+    <string name="perm_car_speed_description">"Автомашины хурдыг харах"</string>
+    <string name="perm_car_info_label">Автомашины мэдээлэл</string>
+    <string name="perm_car_info_description">"Автомашины мэдээлэлд хандах"</string>
+    <string name="perm_car_fuel_label">Автомашины түлшний түвшин</string>
+    <string name="perm_car_fuel_description">"Автомашины түлшний түвшний мэдээлэлд хандах"</string>
+    <string name="perm_car_mileage_label">Автомашины гүйлцэл</string>
+    <string name="perm_car_mileage_description">"Автомашины гүйлцлийн мэдээлэлд хандах"</string>
+    <string name="perm_car_vendor_extension_label">Автомашины үйлдвэрлэгчийн суваг</string>
+    <string name="perm_car_vendor_extension_description">"Автомашинд хамаарах мэдээлэл солилцохын тулд үйлдвэрлэгчийн сувагт хандах"</string>
+    <string name="service_name_checkin">Төхөөрөмжийн бүртгэл</string>
+    <string name="service_name_mcs">Үүлэн мессеж</string>
+    <string name="service_name_device_attestation">Төхөөрөмжийн баталгаажуулалт</string>
+    <string name="service_name_vending">Play Store-ийн үйлчилгээ</string>
+    <string name="service_name_work_profile">Ажлын профиль</string>
+    <string name="games_title">Google Play Games</string>
+    <string name="games_info_title"><xliff:g example="F-Droid">%1$s</xliff:g> нь Play Games-ийг ашиглахыг хүсэж байна</string>
+    <string name="games_info_content">Play Games-ийг ашиглахын тулд Google Play Games аппликейшныг суулгах шаардлагатай. Аппликейшн нь Play Games-гүйгээр үргэлжлүүлэн ажиллах боломжтой боловч гэнэтийн алдаа гарч болзошгүй.</string>
+    <string name="pick_place_title">Газар сонгох</string>
+    <string name="place_picker_select_title">Энэ байршлыг сонгох</string>
+    <string name="place_picker_nearby_places">Ойр орчмын газрууд</string>
     <!-- Self check -->
+    <string name="self_check_name_system_spoofs">Системийн гарын үсгийн хуурамчлал: </string>
+    <string name="self_check_resolution_system_spoofs">Ямар алхмууд шаардлагатай байж болох талаарх баримт бичгийг шалгана уу.</string>
+    <string name="self_check_pkg_gms">microG-ийн үйлчилгээ</string>
+    <string name="self_check_pkg_vending">microG Companion / Play Store</string>
+    <string name="self_check_pkg_gsf">microG Services Framework</string>
+    <string name="self_check_name_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> суурилуулсан: </string>
+    <string name="self_check_resolution_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> эсвэл үそれに тохирох аппликейшн суурилуулна уу. Аль аппликейшнүүд тохиромжтойг баримт бичгээс шалгана уу.</string>
+    <string name="self_check_name_correct_sig"><xliff:g example="F-Droid">%1$s</xliff:g> зөв гарын үсэгтэй: </string>
+    <string name="self_check_resolution_correct_sig">Суурилуулсан <xliff:g example="F-Droid">%1$s</xliff:g> нь тохиромжгүй эсвэл түүнд зориулсан гарын үсгийг хуурах функц идэвхгүй байна. Аль аппликейшн болон ROM-ууд тохиромжтойг баримт бичгээс шалгана уу.</string>
+    <string name="self_check_name_battery_optimizations">Батерейны оновчлолыг үл тоомсорлосон:</string>
+    <string name="self_check_resolution_battery_optimizations">Батерейны оновчлолыг идэвхгүй болгохын тулд энд дарна уу. Үүнийг хийхгүй бол аппликейшнүүд буруу ажиллах可能性があります.</string>
     <!-- Settings strings -->
+    <string name="cond_gcm_bat_summary">Та Cloud Messaging-ийг идэвхжүүлсэн боловч microG Services-ийн зай батлуурлах оновчлол идэвхтэй байна. Push мэдэгдлүүд хүрдэг байхын тулд зай батлуурлах оновчлолыг алгасах ёстой.</string>
+    <string name="prefs_account">Бүртгэлийн тохиргоо</string>
+    <string name="prefs_account_privacy">Хувийн мэдээлэл &amp; нууцлал</string>
+    <string name="prefs_account_security">Нэвтрэх &amp; аюулгүй байдал</string>
+    <string name="pref_auth_trust_google_summary">Идэвхгүй болгосон тохиолдолд, апп-ын эрх шалгах хүсэлтийг Google рүү илгээхээс өмнө хэрэглэгчээс асууна. Идэвхгүй болгосон тохиолдолд зарим аппликейшнүүд Google бүртгэлийг ашиглаж чадахгүй болно.</string>
+    <string name="pref_auth_visible_summary">Идэвхжүүлсэн тохиолдолд энэ төхөөрөмж дээрх бүх програмууд урьдчилсан зөвшөөрөлгүйгээр таны Google бүртгэлийн имэйл хаягийг харах боломжтой болно.</string>
+    <string name="pref_auth_include_android_id_summary">Идэвхгүй болгосон тохиолдолд, баталгаажуулах хүсэлтүүд төхөөрөмжийн бүртгэлтэй холбогдохгүй бөгөөд энэ нь зөвшөөрөлгүй төхөөрөмжүүдэд нэвтрэх боломж олгож, гэнэтийн үр дагавартай байж болзошгүй.</string>
+    <string name="pref_auth_strip_device_name_summary">Идэвхжүүлсэн тохиолдолд, баталгаажуулах хүсэлтүүдэд төхөөрөмжийн нэрийг багтаахгүй бөгөөд энэ нь зөвшөөрөлгүй төхөөрөмжүүдэд нэвтрэх боломж олгож, гэнэтийн үр дагавартай байж болзошгүй.</string>
+    <string name="pref_auth_two_step_verification_title">Хоёр шатлалт баталгаажуулалтын сануулга хүлээн авах</string>
+    <string name="pref_auth_two_step_verification_summary">Идэвхжүүлсэн тохиолдолд төхөөрөмж Google-ээс хоёр шатлалт баталгаажуулалтын сануулга хүлээн авах боломжтой (Cloud Messaging шаардлагатай).</string>
+    <string name="pref_auth_allow_find_devices_title">Google-ийн Төхөөрөмж хайгчид хариу өгөх зөвшөөрөл</string>
+    <string name="pref_auth_allow_find_devices_summary">Идэвхжүүлсэн тохиолдолд төхөөрөмж нь Google-ийн \"Төхөөрөмжөө ол\" мэдэгдэлд хариу өгөх боломжтой (Cloud Messaging шаардлагатай).</string>
+    <string name="pref_checkin_enable_summary">Таны төхөөрөмжийг Google-ийн үйлчилгээнүүдэд бүртгэж, төхөөрөмжийн дахин давтагдашгүй танилах дугаарыг үүсгэнэ. microG нь бүртгэлийн өгөгдлөөс Google хаягийн нэрээс бусад таних мэдээллүүдийг устгадаг.</string>
+    <string name="checkin_last_registration">Сүүлийн бүртгэл: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="pref_accounts_title">Бүртгэлүүд</string>
+    <string name="pref_game_accounts_title">Google тоглоомын бүртгэлүүд</string>
+    <string name="prefcat_accounts_settings_title">Тохиргоо</string>
+    <string name="prefcat_accounts_backup_title">Дансны нөөцлөлт</string>
+    <string name="pref_accounts_backup_title">Данснуудыг нөөцлөх</string>
+    <string name="pref_accounts_backup_summary">Google данснуудаа файл руу экспортлох</string>
+    <string name="pref_accounts_restore_title">Данснуудыг сэргээх</string>
+    <string name="pref_accounts_restore_summary">Google данснуудаа файлаас импортлох</string>
+    <string name="pref_accounts_backup_warning_title">Данснуудыг нөөцлөх үү?</string>
+    <string name="pref_accounts_backup_warning_message">Энэ нь таны данс болон нэвтрэх токенуудыг (SID/LSID) файл руу бичнэ. Энэ файлыг олж авсан хэн ч таны дансанд нэвтрэх боломжтой тул үүнийг найдвартай хадгалж, хэзээ ч бусдад бүү хуваалцаарай.</string>
+    <string name="button_backup_accounts">Нөөцлөх</string>
+    <string name="snackbar_accounts_backed_up">Дансуудыг нөөцлөв</string>
+    <string name="snackbar_accounts_export_failed">Нөөцлөх үйлдэл амжилтгүй боллоо</string>
+    <string name="snackbar_accounts_import_failed">Сэргээлт амжилтгүй боллоо</string>
+    <string name="auth_add_account">Бүртгэл нэмэх</string>
+    <string name="pref_add_account_summary">Google бүртгэл нэмэх</string>
+    <string name="pref_gcm_enable_mcs_summary">Cloud Messaging нь олон гуравдагч талын программуудад ашиглагддаг push мэдэгдлийн үйлчилгээ юм. Үүнийг ашиглахын тулд төхөөрөмжийн бүртгэлийг идэвхжүүлэх ёстой.</string>
+    <string name="pref_hide_launcher_icon">Launcher-т дүрсээ нуух</string>
+    <string name="hide_launcher_icon_dialog_message">Идэвхжүүлсэн тохиолдолд MicroG нь апп-ын цэснээс нуугдах болно. MicroG-г төхөөрөмжийн системийн апп-ын жагсаалт дахь апп-ын мэдээллээс нээх боломжтой.</string>
+    <string name="hide_launcher_icon_updating_title">Апп шинэчлэгдэж байгаа тул түр хүлээнэ үү</string>
+    <string name="pref_language_title">Хэл</string>
+    <string name="pref_language_system_default">Системийн анхны тохиргоо</string>
+    <string name="pref_update_title">Шинэчлэлт шалгах</string>
+    <string name="pref_update_summary">GitHub-ээс илүү шинэ хувилбарыг шалгана уу.</string>
+    <string name="update_include_prerelease">Хөгжүүлэлтийн хувилбаруудыг багтаах</string>
+    <string name="update_available_title">Шинэчлэлт боломжтой</string>
+    <string name="update_available_prerelease_title">Шинэчлэлт боломжтой (урьдчилсан хувилбар)</string>
+    <string name="update_available_message">Шинэ v%1$s хувилбар гарлаа. Та v%2$s хувилбарыг суулгасан байна. Шинэчлэлийг татаж аваад суулгах уу?</string>
+    <string name="update_now">Шинэчлэх</string>
+    <string name="update_whats_new">Шинэж засварууд</string>
+    <string name="update_ignore">Үл тоомсорлох</string>
+    <string name="update_downloading_title">Шинэчлэл татаж байна…</string>
+    <string name="update_download_failed">Татаж авахад алдаа гарлаа. Интернетийн холболтоо шалгаад дахин оролдоно уу.</string>
+    <string name="update_signature_mismatch">Аппликейшныг шинэчилж чадсангүй, гарын үсэг зөрүүтэй байна.</string>
+    <string name="update_failed_title">Шинэчлэл амжилтгүй боллоо</string>
+    <string name="update_permission_required_title">Зөвшөөрөл шаардлагатай</string>
+    <string name="update_permission_required_message">Шинэчлэлтүүдийг суулгалахын тулд систем тохиргооноос MicroG-д үл мэдэгдэх апп суулгах зөвшөөрлийг олгоно уу.</string>
+    <string name="update_open_settings">Тохиргоо</string>
+    <string name="update_check_failed">Шинэчлэл шалгаж чадсангүй. Интернетийн холболтоо шалгаад дахин оролдоно уу.</string>
+    <string name="update_up_to_date_title">Та хамгийн сүүлийн хувилбарыг ашиглаж байна</string>
+    <string name="update_up_to_date_message">MicroG-RE v%s нь хамгийн сүүлийн хувилбар юм.</string>
+    <string name="update_notification_title">Шинэчлэл бэлэн боллоо</string>
+    <string name="update_notification_text">Шинэ v%s хувилбар гарлаа, шинэчлэхийн тулд товшино уу</string>
+    <string name="update_notification_channel">Шинэчлэлүүд</string>
+    <string name="update_notification_permission_title">Мэдэгдэл</string>
+    <string name="update_notification_permission_message">Шинэ шинэчлэл гарсан эсэхийг мэдэгдэхийн тулд MicroG-RE-д мэдэгдэл илгээх зөвшөөрөл шаардлагатай. Шинэчлэлийн мэдэгдлүүд хүрэхэд зөвшөөрөл олгоно уу.</string>
+    <string name="update_notification_permission_allow">Зөвшөөрөх</string>
+    <string name="update_notification_permission_not_now">Одоогоор үгүй</string>
+    <string name="update_notification_permission_open_settings">Тохиргоог нээх</string>
+    <string name="gcm_last_message_at">Сүүлийн зурвас: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_registered_since">Бүртгүүлсэн огноо: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_unregister_confirm_title"><xliff:g example="F-Droid">%1$s</xliff:g> бүртгэлийг цуцлах уу?</string>
+    <string name="gcm_unregister_confirm_message">Зарим аппликейшнүүд автоматаар дахин бүртгүүлэхгүй эсвэл гараар бүртгүүлэх сонголтгүй байдаг. Эдгээр аппликейшнүүд бүртгэлээ цуцласны дараа зөв ажиллахгүй байж магадгүй юм.\nҮргэлжлүүлэх үү?</string>
+    <string name="gcm_unregister_after_deny_message">Та аль хэдийн бүртгэлтэй байгаа аппликейшний түлхэц мэдэгдэлд бүртгүүлэхийг татгалзлаа.\nИрээдүйд түлхэц зурвас хүлээн авахгүй байхын тулд одоо бүртгэлийг цуцлах уу?</string>
+    <string name="gcm_messages_counter">Зурвас: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> байт)</string>
+    <string name="gcm_network_state_connected"><xliff:g example="2 hours ago">%1$s</xliff:g>-аас хойш холбогдсон</string>
+    <string name="gcm_enable_switch">Push мэдэгдэл хүлээн авах</string>
+    <string name="gcm_allow_app_popup"><xliff:g example="F-Droid">%1$s</xliff:g> аппликейшнд push мэдэгдэлд бүртгүүлэх зөвшөөрөл өгөх үү?</string>
+    <string name="pref_push_app_allow_register_summary">Аппликейшнийг түлхэц мэдэгдэлд бүртгүүлэхийг зөвшөөрөх.</string>
+    <string name="pref_push_app_wake_for_delivery_summary">Ирэх push мэдэгдлүүдийг хүлээн авахын тулд аппликейшнийг арын горимд ажиллуулна уу.</string>
+    <string name="safetynet_intro">Google SafetyNet нь төхөөрөмжийг зөв хамгаалагдсан, Android CTS-тэй нийцтэй эсэхийг баталгаажуулдаг гэрчилгээний систем юм. Зарим аппликейшнүүд нь аюулгүй байдлын үүднээс эсвэл засварлалтаас хамгаалах урьдчилсан нөхцөл болгон SafetyNet-ийг ашигладаг.\n\nmicroG GmsCore нь SafetyNet-ийн үнэгүй хэрэгжүүлэлтийг агуулдаг боловч албан ёсны сервер нь SafetyNet-ийн хүсэлтүүдийг DroidGuard proprietary системээр гарын үсэг зурсан байхыг шаарддаг.</string>
+    <string name="safetynet_enable_switch">Төхөөрөмжийн баталгаажуулалтыг зөвшөөрөх</string>
+    <string name="pref_safetynet_test_title">SafetyNet баталгаажуулалтыг шалгах</string>
+    <string name="pref_recaptcha_test_title">ReCAPTCHA-г шалгах</string>
+    <string name="pref_recaptcha_enterprise_test_title">ReCAPTCHA Enterprise-ийг шалгах</string>
+    <string name="pref_test_summary_passed">Бүх шалгалт амжилттай боллоо</string>
+    <string name="pref_test_summary_failed">Алдаа: %s</string>
+    <string name="pref_test_summary_warn">Анхааруулга: %s</string>
+    <string name="pref_test_summary_running">Ажиллаж байна…</string>
+    <string name="pref_droidguard_unsupported_summary">Энэ төхөөрөмж дээр DroidGuard ажиллагааг дэмжихгүй. SafetyNet үйлчилгээ алдаатай ажиллаж магадгүй.</string>
+    <string name="prefcat_safetynet_apps_title">SafetyNet ашигладаг аппликейшнүүд</string>
+    <string name="prefcat_device_attestation_apps_title">Төхөөрөмжийн баталгаажуулалт ашигладаг аппликейшнүүд</string>
+    <string name="pref_device_attestation_app_allow_requests_title">Хүсэлтүүдийг зөвшөөрөх</string>
+    <string name="pref_device_attestation_app_allow_requests_summary">Аппликейшнд төхөөрөмжийн баталгаажуулалт хийх хүсэлт гаргахыг зөвшөөрөх</string>
+    <string name="menu_clear_recent_requests">Сүүлийн үеийн хүсэлтүүдийг цэвэрлэх</string>
+    <string name="safetynet_last_run_at">Сүүлд ашигласан: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="pref_safetynet_recent_uses">Сүүлийн үеийн ашиглалтууд</string>
+    <string name="pref_safetynet_recent_attestation_summary">Баталгаажуулалт: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_summary">ReCaptcha: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_enterprise_summary">ReCaptcha Enterprise: %s</string>
+    <string name="pref_safetynet_recent_copy_json">JSON JWS өгөгдлийг хуулах</string>
+    <string name="pref_safetynet_recent_advice">Зөвлөмж</string>
+    <string name="pref_safetynet_recent_eval_type">Үнэлгээний төрөл</string>
+    <string name="pref_safetynet_recent_response_status">Хариултын төлөв</string>
+    <string name="pref_safetynet_recent_cat_response">Хариултын өгөгдөл</string>
+    <string name="pref_safetynet_recent_cat_request">Захисгалын өгөгдөл</string>
+    <string name="pref_safetynet_recent_nonce">Nonce (Hex)</string>
+    <string name="pref_safetynet_recent_request_time">Захисгалын цаг</string>
+    <string name="pref_safetynet_recent_request_type">Захисгалын төрөл</string>
+    <string name="pref_safetynet_recent_cat_basic">Үндсэн өгөгдөл</string>
+    <string name="pref_safetynet_recent_token">Токен</string>
+    <string name="pref_safetynet_recent_copied">Хавхлагаас хууллаа!</string>
+    <string name="pref_safetynet_test_integrity_cts_passed">Integrity болон CTS шалгалт амжилттай</string>
+    <string name="pref_safetynet_test_cts_failed">CTS амжилтгүй боллоо</string>
+    <string name="pref_safetynet_test_integrity_failed">Integrity амжилтгүй боллоо</string>
+    <string name="pref_safetynet_test_not_completed">Хараахан дуусаагүй байна</string>
+    <string name="pref_safetynet_test_no_result">Үр дүн байхгүй</string>
+    <string name="pref_safetynet_test_invalid_json">Буруу JSON</string>
+    <string name="pref_vending_licensing_category">Google Play Лиценз</string>
+    <string name="pref_vending_licensing_enable_switch">Лицензийн баталгаажуулалтын хүсэлтэд хариулах</string>
+    <string name="pref_vending_license_enable_summary">Зарим аппликейшнүүд нь Google Play-ээс худалдан авсан эсэхийг баталгаажуулах шаардлагатай байдаг. Аппликейшнээс хүсэлт ирүүлсэн тохиолдолд microG нь Google-ээс худалдан авалтын нотолгоог татаж авч болно. Хэрэв идэвхгүй болгосон эсвэл Google бүртгэл нэмээгүй бол лицензийн баталгаажуулалтын хүсэлтийг үл тоомсорлоно.</string>
+    <string name="pref_vending_licensing_purchase_free_apps_switch">Үнэгүй аппликейшнүүдийг сан руу автоматаар нэмэх</string>
+    <string name="pref_vending_licensing_purchase_free_apps_summary">Үнэгүй аппликейшнүүд нь Google Play-ээс татаж авсан эсэхийг шалгаж болно. Танд одоо боломжтой бүх үнэгүй аппликейшнүүдийн шалгалтыг үргэлж давpassing-аар байхын тулд тэдгээрийг бүртгэлийн сандаа автоматаар нэмээрэй.</string>
+    <string name="pref_vending_feature_delivery">Google Play Feature Delivery</string>
+    <string name="pref_vending_split_install_switch">Шаардлагатай компонентыг суулгах</string>
+    <string name="pref_vending_licensing_split_install_summary">Аппликейшнүүдэд нэмэлт компонент татаж аваад суулгахыг зөвшөөрөх</string>
+    <string name="feedback_disabled">Одоогоор санал хүсэлт илгээх боломжгүй</string>
+    <string name="backup_disabled">Одоогоор нөөцлөлт хийх боломжгүй</string>
+    <string name="pref_vending_billing_category">Google Play Billing</string>
+    <string name="pref_vending_billing_enable_switch">Төлбөрийн хүсэлтийг боловсруулах</string>
+    <string name="pref_vending_billing_enable_summary">Идэвхжүүлсний дараа зарим аппликейшнүүд Google Play Төлбөрийн үйлчилгээгээр дамжуулан худалдан авалт хийх эсвэл бүртгэлийг эхлүүлэх боломжтой болно.</string>
+    <string name="pref_vending_billing_note_experimental">Энэхүү функц нь туршилтын шатандаа байгаа бөгөөд мөнгөн хохирол учруулж болзошгүй. Танд анхааруулга өгсөн болно.</string>
+    <string name="pref_vending_billing_note_licensing">Зарим аппликейшнүүд худалдан авалтыг баталгаажуулахын тулд лицензийн баталгаажуулалтыг мөн идэвхжүүлэхийг шаардаж магадгүй.</string>
+    <string name="pref_vending_asset_delivery_category">Google Play Asset Delivery</string>
+    <string name="pref_vending_asset_delivery_switch">Хэрэгцээгээр нөөцийг хүлээн авахыг идэвхжүүлэх</string>
+    <string name="pref_vending_asset_delivery_summary">Play Asset Delivery ашигладаг аппликейшнүүдээс хүсэлт ирэхэд нэмэлт нөөцийг татаж авах</string>
+    <string name="pref_vending_asset_device_sync_summary">Play Asset Delivery ашигладаг аппликейшнүүд нь одоо ашиглаж буй төхөөрөмжийн мэдээлэлд үндэслэн нэмэлт нөөцийг татаж авна.</string>
+    <string name="pref_vending_asset_device_sync_switch">Төхөөрөмжийн мэдээллийн синхрончлолыг идэвхжүүлэх</string>
+    <string name="pref_workprofile_create_account">Ажлын бүртгэлийг тохируулахыг зөвшөөрөх</string>
+    <string name="pref_workprofile_intro">Ажлын байр эсвэл боловсролын байгууллагынхаа ажлын профайл тохируулах үед
+        тухайн профайл дээр аппликейшн татаж авахад Google-тэй холбогдох оролдлого хийж болзошгүй.</string>
+    <string name="pref_workprofile_disclaimer">microG-ийг ашиглах нь компанийн бодлоготой нийцтэй эсэхийг баталгаажуулах нь таны хариуцлага юм.
+        microG нь боломжит хамгийн сайн түвшинд提供されており, яг хүлээгдэж буй байдлаар ажиллана гэсэн баталгаа өгөхгүй.</string>
+    <string name="pref_auto_create_player">Play Games-ийн бүртгэлийг зөвшөөрөх</string>
+    <string name="pref_auto_create_player_intro">Тоглоом тоглох үед та амжилт, тэргүүлэх жагсаалт, архив гэх мэт тоглоомтой холбоотой функцуудыг бүртгэж, нэвтрэхийн тулд Play Games-ийн бүртгэлийг ашиглах шаардлагатай. Идэвхгүй болгосны дараа Play Games-ийн бүртгэлтэй холбогдоогүй Google бүртгэлүүдийг автоматаар бүртгэхгүй бөгөөд тоглоомд нэвтэрч тоглох боломжгүй болно.</string>
+    <string name="pref_allow_upload_game_played">Тоглосон тоглоомын мэдээллийг илгээхийг зөвшөөрөх</string>
+    <string name="pref_allow_upload_game_played_summary">Идэвхгүй болгосон тохиолдолд тоглоомд нэвтэрсний дараа тоглосон төлөвийг илгээхгүй бөгөөд зарим тоглоомд нэвтрэх боломжгүй болж магадгүй.</string>
+    <string name="pref_change_default_game_player">Тоглоомын бүртгэлийг өөрчлөх</string>
+    <string name="pref_change_default_game_player_summary">Тоглоомын үндсэн бүртгэлийг өөрчлөх &amp; Тоглоом бүрээр бүртгэл солих.</string>
+    <string name="pref_delete_game_account_data">Play Games-ийн өгөгдлийг устгах</string>
+    <string name="pref_delete_game_account_data_summary">Play Games-ийн бүртгэл &amp; бүх өгөгдлийг устгах &amp; Тус бүр тоглоомын өгөгдлийг устгах.</string>
+    <string name="credentials_assisted_cancel">Цуцлах</string>
+    <string name="credentials_assisted_continue">Үргэлжлүүлэх</string>
+    <string name="credentials_assisted_confirmation_header">Нэвтрэж байна</string>
+    <string name="credentials_assisted_continue_as_user_button_label">%1$s хэрэглэгчээр үргэлжлүүлэх</string>
+    <string name="credentials_assisted_sign_back_title">Google-ээр %1$s дээр дахин нэвтрэх</string>
+    <string name="credentials_assisted_signin_consent_header">%1$s хэрэглэгчээр нэвтрэх байна</string>
+    <string name="credentials_assisted_signin_consent">Үргэлжлүүлснээр Google таны нэр, имэйл хаяг болон профайл зургийг %1$s-тэй хуваалцах болно. %1$s-ийн Нууцлалын бодлого болон Үйлчилгээний нөхцөлийг уншина уу.</string>
+    <string name="credentials_assisted_signin_description">Та Google бүртгэлээсээ Google-ээр нэвтрэх тохиргоог удирдах боломжтой.</string>
+    <string name="credentials_assisted_choose_account_label">Данс сонгох</string>
+    <string name="credentials_assisted_choose_account_subtitle">%1$s руу үргэлжлүүлэхэд</string>
+    <string name="credentials_assisted_choose_account_error_tips">Дансны хэвийн бус байдал</string>
+    <string name="credentials_assisted_signin_button_text_long">Google-ээр нэвтрэх</string>
+    <string name="credentials_assisted_signin_add_account">Данс нэмэх</string>
+    <string name="credentials_service_sign_in_with_google_label">Google-ээр нэвтрэх</string>
+    <string name="credentials_service_remote_custom_subtitle">Аюулгүй байдлын түлхүүр, ухаалаг утас эсвэл таблет</string>
+    <string name="limited_services_dialog_information">Та microG Limited Services-ийг ашиглаж байна. Ердийн microG Services-ээс ялгаатай нь энэ хувилбар нь зөвхөн microG сангуудыг ашигладаг аппликейшнүүд дээр ажиллах бөгөөд Google Play-ийн апп-ууд дээр ажиллахгүй. Энэ нь ихэнх аппликейшнүүд эдгээр үйлчилгээг үл тоомсорлохыг хэлнэ.</string>
+    <string name="limited_services_dialog_information_ack">Ойлголоо</string>
+    <string name="games_achievement_list_title">Ололт амжилтууд</string>
+    <string name="games_achievements_empty_text">Энэ тоглоомын ололт амжилт байхгүй байна</string>
+    <string name="games_api_access_denied">Энэ төхөөрөмж дээрх ямар ч бүртгэл Тоглоомын API-д хандах боломжгүй байна</string>
+    <string name="games_achievement_locked_content_description">түгжигдсэн</string>
+    <string name="games_achievement_unlocked_content_description">түгжээг тайлсан</string>
+    <string name="games_achievement_extra_text">%1$s XP</string>
+    <string name="games_leaderboard_empty_text">Энэ тоглоомын тэргүүлэх жагсаалт байхгүй байна</string>
+    <string name="games_leaderboard_list_title">Эрэмбэ</string>
+    <string name="games_leaderboards_score_label">Оноо: %1$s</string>
+    <string name="games_snapshot_empty_text">Тоглоомын хадгалалт хараахан хийгдээгүй байна</string>
+    <string name="games_snapshot_choose_btn_text">сонгох</string>
+    <string name="games_snapshot_delete_btn_text">устгах</string>
+    <string name="games_delete_snapshot_dialog_title">Хадгалсан тоглоомыг устгах</string>
+    <string name="games_delete_snapshot_dialog_message">Та энэ хадгалсан тоглоомыг устгахыг хүсэж байгаадаа итгэлтэй байна уу?</string>
+    <string name="games_delete_snapshot_dialog_cancel">Цуцлах</string>
+    <string name="games_delete_snapshot_dialog_ok">Зөвшөөрөх</string>
+    <string name="games_delete_snapshot_error">Устгах үйлдэл амжилтгүй боллоо, дараа дахин оролдоно уу</string>
+    <string name="games_state_description_signed_out">Гарсан</string>
+    <string name="games_state_description_delete">Устгах</string>
+    <string name="games_change_button_text">Өөрчлөх</string>
+    <string name="games_change_default_account_section_title">Тоглоомын үндсэн бүртгэлийг өөрчлөх</string>
+    <string name="games_change_default_account_description">Үндсэн бүртгэл: %1$s</string>
+    <string name="games_change_default_account_explanation">Энэхүү бүртгэлийг тоглоомод автоматаар нэвтрэх, тоглоомын явц болон тохиргоог хадгалахад ашигладаг. Үндсэн бүртгэлийг өөрчлөх эсвэл системээс гарах нь таны тоглосон тоглоомын явц болон тохиргоог шинэчлэх эрсдэлтэй.</string>
+    <string name="games_change_per_game_title">Тоглоом бүрээр бүртгэлийг өөрчлөх</string>
+    <string name="games_change_per_game_description">Сонгосон тоглоомын бүртгэлийг өөрчлөх эсвэл системээс гарах нь тухайн тоглоомын явц болон тохиргоог шинэчлэх эрсдэлтэй.</string>
+    <string name="games_change_default_account_for_all_games_dialog_title">Шинэ үндсэн бүртгэлийн сонголтыг сонгоно уу</string>
+    <string name="games_change_default_account_for_all_games_dialog_description">Одоогийн үндсэн бүртгэл: %1$s</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_title">Зөвхөн шинэ тоглоомуудад үндсэн бүртгэлийг өөрчлөх </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_description">Таны тоглосон тоглоомын ахиц дэвшил болон тохиргоог алдахгүй. Гэвч таны ахиц дэвшил нь бүртгэлүүдийн хооронд хуваагдана.</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_title"> Бүх тоглоомын үндсэн бүртгэлийг өөрчлөх </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_description">Таны тоглосон тоглоомын ахиц дэвшил болон тохиргоог алдах магадлалтай. Өөрчлөлтийг хэрэгжүүлэхийн тулд тоглоомыг дахин ачаална.</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_title"> Бүх тоглоомоос гарөх </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_description">Таны тоглосон тоглоомын ахиц дэвшил болон тохиргоог алдах магадлалтай. Өөрчлөлтийг хэрэгжүүлэхийн тулд тоглоомыг дахин ачаална.</string>
+    <string name="games_change_per_game_dialog_title">Энэхүү тоглоомын сонголтыг зааж өгнө үү</string>
+    <string name="games_change_per_game_dialog_description">Бүртгэлийг өөрчлөх эсвэл гарцах нь тоглоомын явц болон тохиргоог дахин шинэчлэх магадлалтай</string>
+    <string name="games_change_per_game_dialog_option_use_player">%1$s-ийг ашиглах</string>
+    <string name="games_change_per_game_dialog_option_use_player_snackbar_success_message">Та энэхүү тоглоомд %1$s-ээр нэвтэрнэ</string>
+    <string name="games_change_per_game_dialog_option_sign_out">Гарах</string>
+    <string name="games_change_per_game_dialog_option_sign_out_snackbar_success_message">Та энэхүү тоглоомоос гарлаа</string>
+    <string name="games_change_sign_out_of_all_games_snackbar_success_message">Та бүх тоглоомоос гарлаа</string>
+    <string name="games_change_default_account_for_all_games_snackbar_success_message">Та бүх тоглоомд %1$s хаягаар нэвтрэх болно</string>
+    <string name="games_change_default_account_for_new_games_snackbar_success_message">Та шинэ тоглоомуудад %1$s хаягаар нэвтрэх болно</string>
+    <string name="games_account_display_content">Одоогийн бүртгэл: %1$s</string>
+    <string name="games_delete_profile_header">Play Games бүртгэл &amp; бүх өгөгдлийг устгах</string>
+    <string name="games_delete_profile_explanation">Google Play Games бүртгэл, XP болон профайлын бүх өгөгдлийг бүрмөсөн устгах. Энэ үйлдлийг хийснээр таны тоглосон тоглоомын оноо, ахиц (хадгалсан тоглоомууд) болон тохиргоо мөн устгагдаж болзошгүй.</string>
+    <string name="games_delete_profile_button">Бүрмөсөн устгах</string>
+    <string name="games_delete_game_data_header">Тоглоомын өгөгдлийг тус бүрээр нь устгах</string>
+    <string name="games_delete_game_data_explanation">Та Google Play Games ашиглан тоглосон тоглоомынхоо өгөгдлийг бүрмөсөн устгах боломжтой. Энэ үйлдлээр таны сонгосон тоглоомын оноо, ахиц (хадгалсан тоглоомууд) болон тохиргоонууд устна.</string>
+    <string name="games_delete_profile_dialog_title">Та энэхүү бүртгэлийг устгахыг хүсэж байгаадаа итгэлтэй байна уу?</string>
+    <string name="games_delete_profile_explanation_with_gamer_name">Тоглогчийн нэр &lt;b&gt;%1$s&lt;/b&gt; (&lt;b&gt;%2$s&lt;/b&gt;), XP болон профайл дахь бүх өгөгдлийг багтсан Google Play Games бүртгэлийг бүрмөсөн устгана. Энэ үйлдлээр таны тоглосон тоглоомын оноо, ахиц (хадгалсан тоглоомууд) болон тохиргоонууд мөн устгагдаж болно.</string>
+    <string name="games_delete_profile_dialog_message">Энэ үйлдлийг цуцлах боломжгүй.</string>
+    <string name="games_delete_profile_fail">Таны профайлыг устгаж чадсангүй. Дараа дахин оролдоно уу.</string>
+    <string name="games_delete_game_data_confirm_dialog_title">%1$s-ийн өгөгдлийг устгах</string>
+    <string name="games_delete_game_data_confirm_dialog_message">%1$s-ийн өгөгдлийг бүрмөсөн устгаснаар Google Play Games дээрх таны оноо, ахиц (хадгалсан тоглоомууд) болон тоглоомын тохиргоонууд бүрэн устна.</string>
+    <string name="games_popup_signin_welcome">Сайн байна уу, %1$s</string>
+    <string name="family_management_title">Гэр бүл</string>
+    <string name="family_management_retry">Дахин оролдох</string>
+    <string name="family_management_load_error">Агуулга ачаалах амжилтгүй боллоо</string>
+    <string name="family_management_toolbar_back">Буцах</string>
+    <string name="family_management_toolbar_more">Илүү</string>
+    <string name="family_management_exit_family_group">Гэр бүлийн бүлгээс гарах</string>
+    <string name="family_management_delete_family_group">Гэр бүлийн бүлгийг устгах</string>
+    <string name="family_management_leave_family_password_title">Гэр бүлийн бүлгээс гарахын тулд нууц үгээ баталгаажуулна уу</string>
+    <string name="family_management_delete_family_password_title">Гэр бүлийн бүлгийг устгахын тулд нууц үгээ баталгаажуулна уу</string>
+    <string name="family_management_remove_member_password_title">\"%s\"-ийг хасахын тулд нууц үгээ баталгаажуулна уу</string>
+    <string name="family_management_invite_family_member">Гэр бүлийн гишүүдийг урих</string>
+    <string name="family_management_cancel_invite">Урилгыг цуцлах</string>
+    <string name="family_management_cancel_invite_success">Урилгыг амжилттай цуцавлаа</string>
+    <string name="family_management_cancel_invite_error">Урилгыг цуцлахад алдаа гарлаа. Дахин оролдоно уу.</string>
+    <string name="family_management_remove_member">Гишүүнийг хасах</string>
+    <string name="family_management_member_removed_success">%s-ыг гэр бүлийн бүлгээс хаслаа</string>
+    <string name="family_management_member_remove_failed">%s-ыг хасахад алдаа гарлаа. Дахин оролдоно уу.</string>
+    <string name="family_management_leave_family_error_message">Гэр бүлийн бүлгээс гарахад алдаа гарлаа. Дахин оролдоно уу.</string>
+    <string name="family_management_exist_group_success">Та гэр бүлийн бүлгээс гарлаа…</string>
+    <string name="family_management_delete_group_success">Гэр бүлийн бүлгийг устгалаа</string>
+    <string name="family_management_delete_group_failure">Гэрийн бүлгийг устгаж чадсангүй</string>
+    <string name="family_management_delete_group_cancel">Цуцлах</string>
+    <string name="family_management_delete_group_confirm">ОК</string>
+    <string name="family_management_input_pwd">Нууц үгээ оруулна уу</string>
+    <string name="family_management_invite_sent_date_format">Урилгыг %s-нд илгээсэн</string>
+    <string name="family_management_invite_send">Урилгыг илгээлээ</string>
+    <string name="family_management_pwd_error">Нууц үг буруу байна, дахин оруулна уу</string>
+    <string name="barcode_scanner_brand">%1$s-ын нэрийн өмнөөс microG-ээр сканнердсэн</string>
+    <string name="camera_permission_dialog_button">ОК</string>
+    <string name="camera_permission_dialog_message">microG үйлчилгээ нь %1$s-ийн кодыг уншихад таны төхөөрөмжийн камерт хандах шаардлагатай.\n\nИдэвхжүүлэхийн тулд Тохиргоо хэсгээс microG үйлчилгээнд камерын зөвшөөрлийг олгоно уу.</string>
+    <string name="camera_permission_dialog_title">Камерын зөвшөөрөл шаардлагатай</string>
+    <string name="pref_app_install_settings_title">Апп суулгагчийн тохиргоо</string>
+    <string name="pref_app_install_switch_title">Апп суулгахыг зөвшөөрөх</string>
+    <string name="pref_app_install_other_apps_note">Зөвшөөрөл нь бусад эх сурвалжаас ирсэн аппликейшн суулгах боломжийг олгоно.</string>
+    <string name="pref_app_install_permission_instruction">Суулгасан апп-ууд тань зөв ажиллахын тулд microG Companion-д бусад эх сурвалжаас татаж авсан апп-уудыг суулгах зөвшөөрлийг олгоно уу.</string>
+    <string name="prefcat_app_install_list_title">App Installer ашиглаж буй аппликейшнүүд</string>
+    <string name="service_name_google_location_sharing">Google Байршлын хуваалцах</string>
+    <string name="location_sharing_description">Энэ төхөөрөмжөөс Google апп болон үйлчилгээнүүдээр дамжуулан байршлаа бодит хугацаанд хуваалцах тохиргоогоо удирдах</string>
+    <string name="location_sharing_learn_more">&quot;Байршил хуваалцах&quot;-ийн талаар дэлгэрэнгүй мэдэх</string>
+    <string name="location_sharing_switch_text">Байршлын хуваалцахыг ашиглах</string>
+    <string name="location_sharing_turn_off_notify_hint">Хэрэв та энэ төхөөрөмжийн Байршлын хуваалцах функцийг унтраавал, таны хуваалцаж буй хүмүүст мэдэгдэл очихгүй.</string>
+    <string name="location_sharing_off_previous_hint">Та эргүүлэн асаа അതുлж, зөвхөн хамгийн сүүлд хуваалцсан байршил чинь харагдах болно.</string>
+    <string name="location_sharing_disabled">Энэ бүртгэлд идэвхтэй байршлын хуваалцаа байхгүй байна</string>
+    <string name="location_sharing_turn_on_hint">Та Google апп эсвэл үйлчилгээнээс байршлаа хуваалцаж эхэлсний дараа Байршлын хуваалцах тохиргоогоо эндээс удирдах боломжтой.\n\nБайршлаа хуваалцаж эхлэхийн тулд Google Maps эсвэл Family Link руу орно уу.</string>
+    <string name="location_sharing_turn_off_title">Байршлын хуваалцахыг унтраах</string>
+    <string name="location_sharing_turn_off_hint">Та нэг Google бүртгэлээр нэвтэрсэн бусад төхөөрөмжүүд эсвэл Google-ийн бус аппликейшнуудаас байршлаа хуваалцсаар байж болзошгүй. Байршил хуваалцах тохиргоог хаашаа ч хамаагүй шалгаарай.\n\nТаны хуваалцсан хүмүүс таны хамгийн сүүлийн хуваалцсан байршлыг үргэлжлүүлэн харах болно.</string>
+    <string name="location_sharing_turn_off_cancel">Үлдээх</string>
+    <string name="location_sharing_turn_off_confirm">Унтраах</string>
+    <string name="location_sharing_confirm_dialog_title">Байршил хуваалцахыг идэвхжүүлэх</string>
+    <string name="location_sharing_confirm_dialog_text">Та байршлаа хуваалцсан хүмүүс дараах зүйлсийг үргэлжлүүлэн харах боломжтой:\n·Таны нэр болон зураг\n·Та Google-ийн үйлчилгээг ашиглаагүй байх үед ч төхөөрөмжийн тань сүүлийн байршил\n·Төхөөрөмжийн тань цэнэглэлт болон цэнэглэгдэж байгаа эсэх\n·Хэрэв тэд Байршил хуваалцах мэдэгдлийг нэмбэл таны ирэх болон явах цаг</string>
     <!-- Passkey management -->
+    <string name="pref_passkey_manager_title">Passkey-г удирдах</string>
+    <string name="pref_passkey_manager_empty_title">Хадгалагдсан passkey байхгүй</string>
+    <string name="pref_passkey_manager_description">Гуравдагч талын аппликейшнууд passkey бүртгэх үед microG дотоод бүртгэл хөтөлдөг. Хэрэв аппликейшн microG-д мэдэгдэлгүйгээр passkey-г устгавал тухайн бүртгэл үлдэж болно. Та ийм үлдэгдэл бүртгэлүүдийг эндээс устгах боломжтой.</string>
+    <string name="pref_passkey_manager_delete_dialog_title">Нэвтрэх түлхүүрийг устгах</string>
+    <string name="pref_passkey_manager_delete_dialog_message">\"%1$s\" дээрх \"%2$s\"-ийн нэвтрэх түлхүүрийг устгах. Үүнийг буцаах боломжгүй; дахин нэвтрэхийн тулд шинээр нэвтрэх түлхүүр бүртгэх шаардлагатай болно.</string>
+    <string name="pref_passkey_manager_delete_dialog_confirm">Устгах</string>
+    <string name="pref_passkey_manager_unknown_user">Үл мэдэгдэх хэрэглэгч</string>
+    <string name="pref_passkey_manager_transport_screen_lock">Дэлгэцийн түгжээ</string>
+    <string name="pref_passkey_manager_transport_usb">USB</string>
+    <string name="pref_passkey_manager_transport_nfc">NFC</string>
+    <string name="pref_passkey_manager_transport_bluetooth">Bluetooth</string>
+    <string name="pref_passkey_manager_transport_hybrid">Холимог</string>
+    <string name="pref_passkey_manager_credential_id_format_internal">ID: %1$s</string>
+    <string name="self_check_resolution_oem_restriction">Таны систем арын процессыг хязгаарлаж болзошгүй. Эдгээр хязгаарлалтыг хэрхэн идэвхгүй болгох талаар мэдэхийн тулд энд дарж \"Don\'t Kill My App!\" сайтыг нээнэ үү</string>
+    <string name="morphe_sign_in_with_google_microg_label">MicroG RE-ээр дамжуулан Google-ээр нэвтрэх</string>
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Буруу архитектурын хувилбар суулгасан байна</string>
+    <string name="abi_mismatch_message">"Энэхүү MicroG-RE хувилбар нь зөвхөн 64-bit (arm64) сангуудыг агуулсан боловч энэ төхөөрөмж нь 32-bit хэрэглэгчийн орчинд ажиллаж байна.
+
+Conscrypt шаардлагатай функцууд (бүртгэлээр нэвтрэх, стриминг, BotGuard, видео стримийг spoof хийх, SponsorBlock, Return YouTube Dislike гэх мэт) зөв ажиллахгүй бөгөөд тоглуулалтын алдаа эсвэл \"Unable to find a default SSL provider\" гэсэн алдаа гарахад хүргэж болзошгүй.
+
+Үүний оронд ARMv7 эсвэл Universal APK-г суулгана уу."</string>
+    <string name="abi_mismatch_download_armv7">ARMv7 APK татах</string>
+    <string name="abi_mismatch_downloading_title">Зөв хувилбарыг татаж байна…</string>
 </resources>

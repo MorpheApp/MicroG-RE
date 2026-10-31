@@ -16,6 +16,7 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import org.microg.gms.accountaction.ErrorResolverKt;
 import org.microg.gms.accountaction.Resolution;
+import org.microg.gms.common.Constants;
 import org.microg.gms.common.NotOkayException;
 import org.microg.gms.common.PackageSpoofUtils;
 import org.microg.gms.common.PackageUtils;
@@ -24,11 +25,13 @@ import org.microg.gms.settings.SettingsContract;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import static android.content.pm.ApplicationInfo.FLAG_SYSTEM;
 import static android.content.pm.ApplicationInfo.FLAG_UPDATED_SYSTEM_APP;
 import static android.os.Build.VERSION.SDK_INT;
 import static org.microg.gms.auth.AuthPrefs.isTrustGooglePermitted;
+import static org.microg.gms.gcm.ExtensionsKt.GMS_NOTS_OAUTH_SERVICE;
 
 public class AuthManager {
 
@@ -37,6 +40,9 @@ public class AuthManager {
     public static final String PREF_AUTH_VISIBLE = SettingsContract.Auth.VISIBLE;
     public static final int ONE_HOUR_IN_SECONDS = 60 * 60;
     public Map<Object, Object> dynamicFields = new HashMap<>();
+    // RE changes start
+    private static final ConcurrentHashMap<String, Object> REQUEST_LOCKS = new ConcurrentHashMap<>();
+    // RE changes end
     private final Context context;
     private final String accountName;
     private final String packageName;
@@ -315,8 +321,28 @@ public class AuthManager {
         }
     }
 
+    // RE changes start
+    /**
+     * Coalesce concurrent requests for the same token: callers waiting on the lock
+     * get the freshly stored token instead of each performing a network refresh.
+     */
     @NonNull
     public AuthResponse requestAuth(boolean legacy) throws IOException {
+        String key = accountName + "/" + buildTokenKey();
+        Object lock = REQUEST_LOCKS.get(key);
+        if (lock == null) {
+            Object newLock = new Object();
+            lock = REQUEST_LOCKS.putIfAbsent(key, newLock);
+            if (lock == null) lock = newLock;
+        }
+        synchronized (lock) {
+            return requestAuthLocked(legacy);
+        }
+    }
+
+    @NonNull
+    private AuthResponse requestAuthLocked(boolean legacy) throws IOException {
+        // RE changes end
         if (service.equals(AuthConstants.SCOPE_GET_ACCOUNT_ID)) {
             AuthResponse response = new AuthResponse();
             response.accountId = response.auth = getAccountManager().getUserData(getAccount(), "GoogleUserId");
@@ -361,6 +387,13 @@ public class AuthManager {
             request.callerIsGms().calledFromAccountManager();
         } else {
             request.callerIsApp();
+        }
+        // Google only issues the notifications token (the one Google Prompt number
+        // matching rides on) to its own package. A request microG makes for itself has
+        // to identify as Play services: claiming this build's own name is rejected as
+        // UNREGISTERED_ON_API_CONSOLE and no prompt ever reaches the device.
+        if (Constants.GMS_PACKAGE_NAME.equals(packageName) && GMS_NOTS_OAUTH_SERVICE.equals(service)) {
+            request.app(Constants.GOOGLE_GMS_PACKAGE_NAME, Constants.GMS_PACKAGE_SIGNATURE_SHA1);
         }
         AuthResponse response = request.getResponse();
         if (!isPermitted() && !isTrustGooglePermitted(context)) {

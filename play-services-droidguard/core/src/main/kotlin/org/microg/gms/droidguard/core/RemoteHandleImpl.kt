@@ -40,6 +40,10 @@ class RemoteHandleImpl(private val context: Context, private val packageName: St
         Log.d(TAG, "POST ${connection.url}: $payload")
         connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8")
         connection.requestMethod = "POST"
+        // RE changes start
+        connection.connectTimeout = 15000
+        connection.readTimeout = 30000
+        // RE changes end
         connection.doInput = true
         connection.doOutput = true
         connection.outputStream.use { it.write(payload.encodeToByteArray()) }

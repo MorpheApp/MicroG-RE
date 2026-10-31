@@ -443,7 +443,7 @@
     <string name="location_sharing_description">Управляйте передачей геоданных в реальном времени между приложениями и сервисами Google с этого устройства</string>
     <string name="location_sharing_learn_more">Узнайте больше о «Геопередаче»</string>
     <string name="location_sharing_switch_text">Использовать Геопередачу</string>
-    <string name="location_sharing_turn_off_notify_hint">Если вы отключите Геопередачу для этого устройства, люди, с которыми вы делитесь, не будут уведомлены.</string>
+    <string name="location_sharing_turn_off_notify_hint">Если вы отключите функцию \'Отправка геоданных\' для данного устройства, люди, с которыми вы делитесь геоданными, не получат уведомления.</string>
     <string name="location_sharing_off_previous_hint">Ваше последнее переданное местоположение будет доступно, пока вы не включите её снова.</string>
     <string name="location_sharing_disabled">Нет активных передач местоположения для этого аккаунта</string>
     <string name="location_sharing_turn_on_hint">Как только вы начнете передавать свое местоположение из приложения или сервиса Google, вы сможете управлять Геопередачей отсюда.\n\nЧтобы начать передачу, откройте Google Карты или Family Link.</string>
@@ -452,7 +452,7 @@
     <string name="location_sharing_turn_off_cancel">Оставить включенной</string>
     <string name="location_sharing_turn_off_confirm">Выключить</string>
     <string name="location_sharing_confirm_dialog_title">Включить Геопередачу</string>
-    <string name="location_sharing_confirm_dialog_text">Люди, которым вы передаете свое местоположение, всегда могут видеть:\n·Ваше имя и фото\n·Недавнее местоположение вашего устройства, даже когда вы не используете сервис Google\n·Уровень заряда батареи вашего устройства и заряжается ли оно\n·Время вашего прибытия и ухода, если они добавят уведомление о Геопередаче</string>
+    <string name="location_sharing_confirm_dialog_text">Люди, которым вы передаете свое местоположение, всегда могут видеть:\n·Ваше имя и фото\n·Недавнее местоположение вашего устройства, даже когда вы не используете сервис Google\n·Уровень заряда батареи вашего устройства и заряжается ли оно\n·Время вашего прибытия и ухода, если они добавят уведомление о передаче местоположения</string>
     <!-- Passkey management -->
     <string name="pref_passkey_manager_title">Управление ключами доступа</string>
     <string name="pref_passkey_manager_empty_title">Нет сохраненных ключей доступа</string>

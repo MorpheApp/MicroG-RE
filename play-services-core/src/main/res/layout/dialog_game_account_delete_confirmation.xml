@@ -12,11 +12,11 @@
         android:text="@string/games_delete_profile_dialog_title"
         android:textSize="18dp"
         android:padding="16dp"
-        android:textColor="@android:color/black"/>
+        android:textColor="?android:attr/textColorPrimary"/>
 
     <View
         android:layout_width="match_parent"
-        android:background="@android:color/darker_gray"
+        android:background="?android:attr/listDivider"
         android:layout_height="1dp"/>
 
     <TextView

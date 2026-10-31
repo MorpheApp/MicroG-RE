@@ -4,11 +4,488 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="dialog_title_remove_account">Выдаліць ўліковы запіс</string>
+    <string name="dialog_message_remove_account">"Вы ўпэўнены, што хочаце выдаліць гэты ўлічовы запіс?
+
+Некаторыя сэрвісы і функцыі будуць недаступныя
+
+Вашыя даныя не будуць страчаны"</string>
+    <string name="dialog_confirm_button">Выдаліць</string>
+    <string name="dialog_cancel_button">Адмяніць</string>
+    <string name="snackbar_remove_account">Уліковы запіс %s выдалены</string>
+    <string name="snackbar_undo_button">Адмяніць дзеянне</string>
+    <string name="gms_settings_name">Налады MicroG</string>
+    <string name="gms_settings_summary">Наладзіць паслугі MicroG.</string>
+    <string name="just_a_sec">Адну секунду…</string>
+    <string name="ask_permission_tos">Працягваючы, вы дазваляеце гэтай праграме і Google выкарыстоўваць вашу інфармацыю ў адпаведнасці з іх адпаведнымі умовамі выкарыстання і палітыкай прыватнасці.</string>
+    <string name="ask_scope_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> жадае:</string>
+    <string name="ask_service_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> хоча выкарыстаць:</string>
+    <string name="account_manager_title">Мэнэджэр улікаў Google</string>
+    <string name="sorry">Прабачце…</string>
+    <string name="auth_before_connect">Падключыце ўліковы запіс Google праз microG.\n\nДавайце падключымся да ўліковага запісу Google, выкарыстайце кнопку <b>Увайсці</b> або кнопку <b>Huawei</b>, калі ў вас прылада гэтага вытворцы. Націснуўшы адну з кнопак, вы будзеце перанакіраваны на старонку ўваходу ў ваш уліковы запіс.</string>
+    <string name="auth_sign_in">Увайсці</string>
+    <string name="auth_connecting">"Ваша прылада ўсталёўвае злучэнне з серверамі Google для вашага ўваходу.
+
+Гэта можа заняць некалькі секунд."</string>
+    <string name="no_network_error_desc">"У вас няма падключэння да сеткі.
+
+Гэта можа быць часовай праблемай, альбо ваша прылада Android можа быць не наладжаная для паслуг перадачы даных. Паспрабуйце яшчэ раз, калі падключачыцеся да мабільнай сеткі, або падключыцеся да сеткі Wi-Fi."</string>
+    <string name="auth_general_error_desc">"Вынікла праблема пры ўзаемадзеянні з серверамі Google.
+
+Паспрабуйце пазней."</string>
+    <string name="auth_finalize">"Ваша прылада звязваецца з Google, каб захаваць інфармацыю ў вашым уліку.
+
+Гэта можа заняць пару хвілін."</string>
+    <string name="allow">Дазволіць</string>
+    <string name="deny">Адмовіць</string>
+    <string name="auth_notification_title">Патрабуецца аўтэнтыфікацыя</string>
+    <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> патрабуе вашай аўтарызацыі для доступу да вашага ўліку Google.</string>
+    <string name="auth_package_override_request_title">Дазволіць <b><xliff:g example="F-Droid">%1$s</xliff:g></b> прывілеяваны доступ да <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> хоча атрымаць доступ да вашай уліхоўкі так, нібы гэта быў <b><xliff:g example="F-Droid">%2$s</xliff:g> ад <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Гэта можа надаць прывілеяваны доступ да вашай уліхоўкі.</string>
+    <string name="auth_action_notification_channel_name">Апавяшчэнні аб уліку Google</string>
+    <string name="auth_action_notification_channel_description">Паведамляе, калі адзін з вашых уліковых запісаў Google патрабуе дадатковай налады перад выкарыстаннем або калі ўліковы запіс не сумяшчальны з microG.</string>
+    <string name="auth_action_notification_title">Патрабуюцца дзеянні з уліковым запісам</string>
+    <string name="auth_action_notification_content">Ваш уліковы запіс Google патрабуе дадатковай налады.</string>
+    <string name="auth_action_reauth_notification_title">Патрабуюцца дзеянні з уліковым запісам</string>
+    <string name="auth_action_activity_header">Завяршыце наладку вашага ўліковага запісу Google</string>
+    <string name="auth_action_activity_explanation">Выканайце наступныя крокі, каб móc выкарыстоўваць свой уліковы запіс Google %s на гэтай прыладзе.</string>
+    <string name="auth_action_step_enable_checkin">Уключыць рэгістрацыю прылады</string>
+    <string name="auth_action_step_enable_checkin_description">"Ваша прылада павінна зарэгістравацца ў Google хаця б адзін раз.
+
+Вы можаце адключыць рэгістрацыю прылады ў Google пасля завяршэння налады ўліхоўку."</string>
+    <string name="auth_action_step_enable_gcm">Уключыць Cloud Messaging</string>
+    <string name="auth_action_step_enable_gcm_description">Вы можаце выключыць Cloud Messaging пасля завяршэння наладкі ўліковага запісу.</string>
+    <string name="auth_action_step_allow_microg_gcm">Дазволіць Cloud Messaging для microG</string>
+    <string name="auth_action_step_allow_microg_gcm_description">Згодна з вашымі перавагамі, microG патрабуе вашага дазволу, перш чым зарэгістравацца ў Cloud Messaging.</string>
+    <string name="auth_action_step_enable_lockscreen">Настройце бяспечную блакіроўку экрана</string>
+    <string name="auth_action_step_enable_lockscreen_description">"Вашым уліковым запісам Google кіруе ваша працадаўца або навучальная ўстанова. Ваш адміністратар вырашыў, што прылады павінны мець бяспечную блакіроўку экрана для атрымання доступу да даных уліковага запісу.
+
+Калі ласка, усталюйце пароль, PIN-код або графічны ключ для блакіроўкі экрана."</string>
+    <string name="auth_action_step_perform_content_description">Націсніце, каб выканаць крок</string>
+    <string name="auth_action_step_completed_content_description">Крок выкананы</string>
+    <string name="auth_action_activity_finish">Завершыць</string>
+    <string name="signin_picker_title">Выберыце ўліковы запіс</string>
+    <string name="signin_picker_subtitle">каб працягнуць у <xliff:g example="F-Droid">%1$s</xliff:g></string>
+    <string name="signin_picker_add_account_label">Дадаць іншы ўліковы запіс</string>
+    <string name="signin_confirm_title">Дазволіць вам увайсці ў <xliff:g example="F-Droid">%1$s</xliff:g></string>
+    <string name="signin_confirm_button_text">Дазволіць і паділіцца</string>
+    <string name="signin_subtext_sharing">Каб працягнуць, microG перадасць імя, адрас электроннай пошты і выяву профілю вашага ўліковага запісу Google у <xliff:g example="F-Droid">%1$s</xliff:g>.</string>
+    <string name="perm_status_broadcast_label">слухаць унутраныя трансляцыі статусу</string>
+    <string name="perm_gsf_read_gservices_label">чытаць канфігурацыю Google-сервісаў</string>
+    <string name="perm_c2dm_receive_label">слухаць паведамленні C2DM</string>
+    <string name="perm_c2dm_send_label">адпраўляць паведамленні C2DM іншым праграмам</string>
+    <string name="perm_gtalk_svc_label">абменьвацца паведамленнямі і атрымліваць апавяшчэнні аб сінхранізацыі з сервераў Google</string>
+    <string name="perm_extended_access_label">Пашырэны доступ да сэрвісаў Google</string>
+    <string name="perm_provision_label">наладваць службы microG</string>
+    <string name="perm_provision_description">Дазваляе праграме наладваць службы microG без удзелу карыстальніка</string>
+    <string name="perm_car_speed_label">Шкорасць аўтамабіля</string>
+    <string name="perm_car_speed_description">"Доступ да хуткасці вашага аўтамабіля"</string>
+    <string name="perm_car_info_label">Інфармацыя пра аўтамабіль</string>
+    <string name="perm_car_info_description">"Доступ да інфармацыі пра ваш аўтамабіль"</string>
+    <string name="perm_car_fuel_label">Узровень паліва ў аўтамабілі</string>
+    <string name="perm_car_fuel_description">"Атрымайце доступ да інфармацыі аб узроўні паліва вашага аўтамабіля"</string>
+    <string name="perm_car_mileage_label">Прабег аўтамабіля</string>
+    <string name="perm_car_mileage_description">"Атрымайце доступ да інфармацыі пра прабег вашага аўтамабіля"</string>
+    <string name="perm_car_vendor_extension_label">Канал пастаўшчыка аўтамабіля</string>
+    <string name="perm_car_vendor_extension_description">"Атрымайце доступ да канала пастаўшчыка вашага аўтамабіля для абмену спецыфічнай інфармацыяй пра аўтамабіль"</string>
+    <string name="service_name_checkin">Рэгістрацыя прылады</string>
+    <string name="service_name_mcs">Хмарныя паведамленні</string>
+    <string name="service_name_device_attestation">Атэстацыя прылады</string>
+    <string name="service_name_vending">Службы Play Store</string>
+    <string name="service_name_work_profile">Рабочы профіль</string>
+    <string name="games_title">Google Play Games</string>
+    <string name="games_info_title"><xliff:g example="F-Droid">%1$s</xliff:g> хоча выкарыстоўваць Play Games</string>
+    <string name="games_info_content">Для выкарыстання Play Games патрабуецца ўсталяваць праграму Google Play Games. Праграма можа працягнуць працу без Play Games, але яна можа паводзіць сябе непрадказана.</string>
+    <string name="pick_place_title">Выберыце месца</string>
+    <string name="place_picker_select_title">Выбраць гэтую лакацыю</string>
+    <string name="place_picker_nearby_places">Месцы побач</string>
+    <string name="network_type_mobile">Мабільная сетка</string>
+    <string name="network_type_wifi">Wi-Fi</string>
+    <string name="network_type_roaming">Роўмінг</string>
+    <string name="network_type_other">Іншыя сеткі</string>
     <!-- Self check -->
+    <string name="self_check_cat_fake_sig">Падтрымка падмены подпісу</string>
+    <string name="self_check_cat_gms_packages">Усталяваныя пакеты</string>
+    <string name="self_check_cat_system">Сістэма</string>
+    <string name="self_check_name_system_spoofs">Сістэмны спаф signature: </string>
+    <string name="self_check_resolution_system_spoofs">Калі ласка, азнаёмцеся з дакументацыяй, каб даведацца, якія крокі могуць патрабавацца.</string>
+    <string name="self_check_pkg_gms">Службы microG</string>
+    <string name="self_check_pkg_vending">microG Companion / Play Store</string>
+    <string name="self_check_pkg_gsf">microG Services Framework</string>
+    <string name="self_check_name_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> ўсталявана: </string>
+    <string name="self_check_resolution_app_installed">Усталюйце праграму <xliff:g example="F-Droid">%1$s</xliff:g> або сумяшчальную з ёю. Калі ласка, праверце ў дакументацыі, якія праграмы з\'яўляюцца сумяшчальнымі.</string>
+    <string name="self_check_name_correct_sig"><xliff:g example="F-Droid">%1$s</xliff:g> мае правільны подпіс: </string>
+    <string name="self_check_resolution_correct_sig">Усталяваная праграма <xliff:g example="F-Droid">%1$s</xliff:g> альбо не з\'яўляецца сумяшчальнай, альбо для яе не актывавана падмена подпісу. Калі ласка, праверце ў дакументацыі, якія праграмы і ROM сумяшчальныя.</string>
+    <string name="self_check_name_battery_optimizations">Аптымізацыі акумулятара ігнаруюцца:</string>
+    <string name="self_check_resolution_battery_optimizations">Націсніце тут, каб адключыць аптымізацыю акумулятара. У адваротным выпадку праграмы могуць працаваць няправільна.</string>
     <!-- Settings strings -->
+    <string name="prefcat_about">Пра праграму</string>
+    <string name="prefcat_details">Падрабязнасці</string>
+    <string name="cond_gcm_bat_title">Аптымізацыя акумулятара ўключана</string>
+    <string name="cond_gcm_bat_summary">Вы ўключаны Cloud Messaging, але для сэрвісаў microG актывавана аптымізацыя акумулятара. Каб атрымліваць push-апавяшчэнні, вам трэба ігнараваць аптымізацыю акумулятара.</string>
+    <string name="cond_gcm_bat_action">Ігнараваць аптымізацыю</string>
+    <string name="cond_perm_title">Адсутнічае дазвол</string>
+    <string name="prefs_account">Налады ўліковага запісу</string>
+    <string name="prefs_account_privacy">Асабістая інфармацыя &amp; прыватнасць</string>
+    <string name="prefs_account_security">Уваход &amp; бяспека</string>
+    <string name="pref_auth_trust_google_title">Давяраць Google у пытаннях дазвораў праграм</string>
+    <string name="pref_auth_trust_google_summary">Калі гэтая функцыя выключана, карыстальніка будуць пытаць перад адпраўкай запыту праграмы на аўтарызацыю ў Google. Некаторыя праграмы не змогуць выкарыстоўваць уліковы запіс Google, калі гэтая функцыя выключана.</string>
+    <string name="pref_auth_visible_title">Дазволіць праграмам знаходзіць уліхоўкі</string>
+    <string name="pref_auth_visible_summary">Калі гэтая функцыя ўключана, усе праграмы на гэтай прыладнасці змогуць бачыць адрас 전자пошты вашых уліковых запісаў Google без папярэдняй аўтарызацыі.</string>
+    <string name="pref_auth_include_android_id_title">Аўтэнтыфікацыя праз рэгістрацыю прылады</string>
+    <string name="pref_auth_include_android_id_summary">Калі гэтая функцыя выключана, запыты на аўтэнтыфікацыю не будуць звязаны з рэгістрацыяй прыладнасці, што можа дазволіць увайсці з недазволеных прылад, але можа мець непрадзіменыя наступствы.</string>
+    <string name="pref_auth_strip_device_name_title">Выдаліць назву прылады для аўтэнтыфікацыі</string>
+    <string name="pref_auth_strip_device_name_summary">Калі гэтая функцыя ўключана, запыты на аўтэнтыфікацыю не будуць уключаць назву прыладнасці, што можа дазволіць увайсці з недазволеных прылад, але можа мець непрадзіменыя наступствы.</string>
+    <string name="pref_auth_two_step_verification_title">Атрымліваць паведамленні для двухэтапнай пацверкі</string>
+    <string name="pref_auth_two_step_verification_summary">Калі гэтая функцыя ўключана, прыладнасць можа атрымліваць паведамленні для двухэтапнай пацверкі ад Google (патрабуецца Cloud Messaging).</string>
+    <string name="pref_auth_allow_find_devices_title">Дазволіць адказваць на запыты Google Device Finder</string>
+    <string name="pref_auth_allow_find_devices_summary">Калі гэтая функцыя ўключана, прыладнасць можа адказваць на паведамленні «Знайсці маю прыладу» ад Google (патрабуецца Cloud Messaging).</string>
+    <string name="pref_checkin_enable_summary">Рэгіструе вашу прыладу ў сэрвісах Google і стварае ўнікальны ідэнтыфікатар прылады. microG выдаляе ідэнтыфікацыйныя біты з даных рэгістрацыі, за выключэння назвы вашага ўліковага запісу Google.</string>
+    <string name="pref_device_registration_android_id">Android ID</string>
+    <string name="checkin_not_registered">Не зарэгістравана</string>
+    <string name="checkin_last_registration">Апошняя рэгістрацыя: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="checkin_enable_switch">Зарэгістраваць прыладу</string>
+    <string name="pref_info_status">Статус</string>
+    <string name="pref_accounts_title">Уліковыя запісы</string>
+    <string name="pref_game_accounts_title">Ігровыя ўліковыя запісы Google</string>
+    <string name="pref_accounts_summary">Дадаваць і кіраваць уліковымі запісамі Google</string>
     <string name="prefcat_accounts_settings_title">Налады</string>
+    <string name="prefcat_accounts_login_accounts_title">Увайшоў</string>
+    <string name="prefcat_accounts_options_title">Опцыі</string>
+    <string name="pref_accounts_manage_accounts_title">Кіраваць уліковымі запісамі</string>
+    <string name="pref_accounts_manage_accounts_summary">Адкрыць менеджэр уліковых запісаў прылады</string>
+    <string name="prefcat_accounts_backup_title">Рэзервовае капіраванне ўліковых запісаў</string>
+    <string name="pref_accounts_backup_title">Зрабіць рэзервовую копію ўліковых запісаў</string>
+    <string name="pref_accounts_backup_summary">Экспартаваць уліковыя запісы Google у файл</string>
+    <string name="pref_accounts_restore_title">Віднавіць уліковыя запісы</string>
+    <string name="pref_accounts_restore_summary">Імпартаваць уліковыя запісы Google з файла</string>
+    <string name="pref_accounts_backup_warning_title">Зрабіць рэзервовую копію ўліковых запісаў?</string>
+    <string name="pref_accounts_backup_warning_message">Гэта запісвае вашы ўліковыя запісы і токены ўваходу (SID/LSID) ў файл. Любы, хто атрымае гэты файл, зможа атрымаць доступ да вашых уліковых запісаў, таму захоўвайце яго ў бяспекі і ніколі не перадавайце іншым.</string>
+    <string name="button_backup_accounts">Рэзерваваць</string>
+    <string name="snackbar_accounts_backed_up">Уліковыя запісы зарэзерваваны</string>
+    <string name="snackbar_accounts_restored">Віднаўлена %1$d уліковая запіс(ы)</string>
+    <string name="snackbar_accounts_export_failed">Рэзервованае капіраванне не ўдалося</string>
+    <string name="snackbar_accounts_import_failed">Аднаўленне памылкавы</string>
+    <string name="prefcat_youtube_activity">Актыўнасць YouTube</string>
+    <string name="pref_manage_all_history">Кіраваць усёй гісторыяй</string>
+    <string name="pref_data_in_youtube">Вашы даныя ў YouTube</string>
+    <string name="pref_accounts_login_accounts_summary">Уліковыя запісы захаваны і захоўваюцца толькі на гэтай прыладзе. Націсніце на ўліковы запіс, каб назаўсёды выдаліць яго з гэтай прылады</string>
+    <string name="pref_privacy_title">Прыватнасць</string>
+    <string name="pref_privacy_summary">Налады прыватнасці для аўтэнтыфікацыі і праграм</string>
+    <string name="auth_add_account">Дадаць уліковы запіс</string>
+    <string name="prefcat_applications">Праграмы</string>
+    <string name="prefcat_authentication">Аўтэнтыфікацыя</string>
+    <string name="pref_add_account_summary">Дадаць уліковы запіс Google</string>
+    <string name="pref_gcm_enable_mcs_summary">Cloud Messaging — гэта пастаўшчык push-апавешчанняў, які выкарыстоўваецца многімі староннімі праграмамі. Каб карыстацца ім, вы павінны ўключаць рэгістрацыю прылады.</string>
+    <string name="pref_gcm_confirm_new_apps_title">Падтверджаць новыя прыкладанні</string>
+    <string name="pref_gcm_confirm_new_apps_summary">Запытваць паданне перад рэгістрацыяй новага прыкладання для атрымання push-апавешчэнняў</string>
+    <string name="pref_about_title">Пра MicroG RE</string>
+    <string name="pref_hide_launcher_icon">Схаваць значок у ланчары</string>
+    <string name="hide_launcher_icon_dialog_message">Калі гэтую функцыю ўключаць, MicroG будзе схаваны ў запусціль праграм. MicroG можна адкрыць праз інфармацыю пра праграму ў спісе сістэмных праграм вашай прылады.</string>
+    <string name="hide_launcher_icon_updating_title">Калі ласка, пачакайце, пакуль праграма абнаўляецца</string>
+    <string name="pref_language_title">Мова</string>
+    <string name="pref_language_system_default">Параметры сістэмы па змаўчанні</string>
+    <string name="pref_github_summary">Рэпазіторый выконнага кода</string>
+    <string name="pref_update_title">Праверыць наяўнасць абнаўленняў</string>
+    <string name="pref_update_summary">Праверце наяўнасць новай версіі на GitHub.</string>
+    <string name="update_include_prerelease">Уключаць распрацоўчыя зборкі</string>
+    <string name="update_available_title">Даступна абнаўленне</string>
+    <string name="update_available_prerelease_title">Даступна абнаўленне (прадыпускная версія)</string>
+    <string name="update_available_message">Даступна новая версія v%1$s. У вас усталявана версія v%2$s. Спампаваць і ўсталяваць абнаўленне?</string>
+    <string name="update_now">Абнавіць</string>
+    <string name="update_whats_new">Што новага</string>
+    <string name="update_ignore">Ігнараваць</string>
+    <string name="update_downloading_title">Загрузка абнаўлення…</string>
+    <string name="update_download_failed">Загрузка не ўдалася. Праверце злучэнне і паспрабуйце зноў.</string>
+    <string name="update_signature_mismatch">Праграму немагчыма абнавіць, подпісы розныя.</string>
     <string name="update_failed_title">Абнаўленне не ўдалося</string>
+    <string name="update_permission_required_title">Патрабуецца дазвол</string>
+    <string name="update_permission_required_message">Каб усталяваць абнаўленні, дазвольце MicroG усталяваць невядомыя праграмы ў сістэмных наладках.</string>
     <string name="update_open_settings">Налады</string>
+    <string name="update_check_failed">Не ўдалося праверыць наяўнасць абнаўленняў. Праверце злучэнне і паспрабуйце зноў.</string>
+    <string name="update_up_to_date_title">У вас усталявана апошняя версія</string>
+    <string name="update_up_to_date_message">MicroG-RE v%s — гэта найсвежае версія.</string>
+    <string name="update_notification_title">Даступна абнаўленне</string>
+    <string name="update_notification_text">Даступна новая версія v%s, націсніце, каб абнавіць</string>
+    <string name="update_notification_channel">Абнаўленні</string>
+    <string name="update_notification_permission_title">Апавяшчэнні</string>
+    <string name="update_notification_permission_message">Каб паведаміць вас, калі з\'явіцца новае абнаўленне, MicroG-RE патрабуецца дазвол на адпраўку апавяшчэнняў. Калі ласка, дазвольце апавяшчэнні, каб вы атрымлівалі паведамленні аб абнаўленнях.</string>
+    <string name="update_notification_permission_allow">Дазволіць</string>
+    <string name="update_notification_permission_not_now">Не зараз</string>
+    <string name="update_notification_permission_open_settings">Адкрыць налады</string>
+    <string name="gcm_unregister_app">Адмена рэгістрацыі</string>
+    <string name="gcm_no_message_yet">Паведамленняў пакуль не атрымана</string>
+    <string name="gcm_last_message_at">Апошня паведамленне: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_registered">Зарэгістравана</string>
+    <string name="gcm_registered_since">Зарэгістраваны з: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_unregister_confirm_title">Адрэгістраваць <xliff:g example="F-Droid">%1$s</xliff:g>?</string>
+    <string name="gcm_unregister_confirm_message">Некаторыя праграмы не рэгіструюцца аўтаматычна і/або не прапануюць магчымасці зрабіць гэта ўручную. Такія праграмы могуць працаваць няправільна пасля адрэгістрацыі.\nПрацягнуць?</string>
+    <string name="gcm_unregister_after_deny_message">Вы адмовілі праграме, якая ўжо зарэгістравана, ў рэгістрацыі для атрымання push-апавешчанняў.\nЦі хочаце вы адрэгістраваць яе зараз, каб яна не атрымала push-паведамлення ў будучыні?</string>
+    <string name="gcm_messages_counter">Паведамленні: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> байтаў)</string>
+    <string name="gcm_network_state_disconnected">Адключана</string>
+    <string name="gcm_network_state_connected">Падключаны з <xliff:g example="2 hours ago">%1$s</xliff:g></string>
+    <string name="gcm_enable_switch">Атрымліваць push-апавешчанні</string>
+    <string name="gcm_allow_app_popup">Дазволіць <xliff:g example="F-Droid">%1$s</xliff:g> зарэгістравацца для атрымання push-апавешчанняў?</string>
+    <string name="pref_push_app_allow_register_title">Дазволіць рэгістрацыю</string>
+    <string name="pref_push_app_allow_register_summary">Дазволіць праграме зарэгістравацца для атрымання push-апавешчанняў.</string>
+    <string name="pref_push_app_wake_for_delivery_title">Запускаць прыкладанне пры атрыманні push-паведамлення</string>
+    <string name="pref_push_app_wake_for_delivery_summary">Запусціце праграму, пакуль яна знаходзіцца ў фоне, каб атрымліваць уваходныя push-паведамленні.</string>
+    <string name="prefcat_push_apps_title">Прыкладанні, якія выкарыстоўваюць push-апавешчэнні</string>
+    <string name="prefcat_push_apps_registered_title">Зарэгістраваныя праграмы</string>
+    <string name="prefcat_push_apps_unregistered_title">Нязарэгістраваныя праграмы</string>
+    <string name="prefcat_gcm_registers">Рэгістры</string>
+    <string name="prefcat_advanced">Падробнасці</string>
+    <string name="pref_gcm_remove_registers">Выдаліць усе зарэгістраваныя праграмы</string>
+    <string name="pref_gcm_remove_registers_summary">Выкарыстоўвайце гэты варыянт толькі ў выпадку, калі ў вас узніклі праблемы з рэгістрацыяй праграмы або атрыманнем апавяшчэнняў</string>
+    <string name="gcm_remove_registers_dialog_title">Выдаліць усе рэгістрацыі?</string>
+    <string name="gcm_remove_registers_dialog_message">"Гэта адразу выдаліць усе зарэгістраваныя праграмы з атрымання push-апавешчань
+
+Вам спатрэбяцца новыя securityToken і AndroidID для рэгістрацыі праграм. Праверце статус рэгістрацыі прылады
+
+Некаторыя праграмы, магчыма, не змогуць зарэгістравацца зноў пасля гэтага дзеяння. Вам можа спатрэбіцца ачысціць даныя гэтых праграм, перш чым яны змогуць зноў запытаць рэгістрацыю"</string>
+    <string name="gcm_remove_registers_toast_message">Усе праграмы выдалены з push-апавешчань</string>
+    <string name="prefcat_push_networks_title">Сеці для выкарыстання push-паведамленняў</string>
+    <string name="safetynet_intro">Google SafetyNet — гэта сістэма сертыфікацыі прылад, якая гарантуе, што прылада надлежачым чынам засэкурана і сумяшчальна з Android CTS. Некаторыя праграмы выкарыстоўваюць SafetyNet з міркункаў бяспекі або як папярэднюю ўмову для абароны ад умяшательства.\n\nmicroG GmsCore змяшчае бясплатную рэалізацыю SafetyNet, але афіцыйны сервер патрабуе, каб запыты SafetyNet былі падпісаны з выкарыстаннем закрытай сістэмы DroidGuard.</string>
+    <string name="safetynet_enable_switch">Дазволіць атэстацыю прылады</string>
+    <string name="pref_safetynet_test_title">Праверыць атэстацыю SafetyNet</string>
+    <string name="pref_recaptcha_test_title">Праверыць ReCAPTCHA</string>
+    <string name="pref_recaptcha_enterprise_test_title">Праверыць ReCAPTCHA Enterprise</string>
+    <string name="pref_test_summary_passed">Усе тэсты пройдзены</string>
+    <string name="pref_test_summary_failed">Не прайшоў: %s</string>
+    <string name="pref_test_summary_warn">Папярэджанне: %s</string>
+    <string name="pref_test_summary_running">Выкананне…</string>
+    <string name="pref_droidguard_unsupported_summary">Выкананне DroidGuard не падтрымліваецца на гэтай прыладзе. Службы SafetyNet могуць працаваць няправільна.</string>
+    <string name="prefcat_safetynet_apps_title">Прылады, якія выкарыстоўваюць SafetyNet</string>
+    <string name="prefcat_device_attestation_apps_title">Прылады, якія выкарыстоўваюць атэстацыю прылады</string>
+    <string name="pref_device_attestation_app_allow_requests_title">Дазволіць запыты</string>
+    <string name="pref_device_attestation_app_allow_requests_summary">Дазволіць прыладзе запытваць атэстацыю прылады</string>
+    <string name="menu_clear_recent_requests">Ачысціць нядаўнія запыты</string>
+    <string name="safetynet_last_run_at">Апошні раз: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="profile_name_native">Натыўны</string>
+    <string name="profile_name_real">Рэальны</string>
+    <string name="profile_name_user">Карыстальніцкае: %s</string>
+    <string name="profile_name_auto">Аўтаматычны: %s</string>
+    <string name="profile_name_system">Сістэмны: %s</string>
+    <string name="pref_device_registration_import_custom_profile_title">Імпартаваць карыстальніцкі профіль</string>
+    <string name="pref_device_registration_serial_title">Серыйны нумар</string>
+    <string name="pref_device_registration_import_custom_profile_summary">Імпартаваць профіль прылады з файла</string>
+    <string name="pref_device_registration_select_profile_title">Выбраць профіль</string>
+    <string name="pref_device_registration_device_profile_category">Профіль прылады</string>
+    <string name="pref_safetynet_recent_uses">Нядаўняе выкарыстанне</string>
+    <string name="pref_safetynet_recent_attestation_summary">Атэстацыя: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_summary">ReCaptcha: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_enterprise_summary">ReCaptcha Enterprise: %s</string>
+    <string name="pref_safetynet_recent_copy_json">Капіяваць даныя JSON JWS</string>
+    <string name="pref_safetynet_recent_advice">Парада</string>
+    <string name="pref_safetynet_recent_eval_type">Тып ацэнкі</string>
+    <string name="pref_safetynet_recent_response_status">Статус адказу</string>
+    <string name="pref_safetynet_recent_cat_response">Даныя адказу</string>
+    <string name="pref_safetynet_recent_cat_request">Даныя запыту</string>
+    <string name="pref_safetynet_recent_nonce">Nonce (Hex)</string>
+    <string name="pref_safetynet_recent_request_time">Час запыту</string>
+    <string name="pref_safetynet_recent_request_type">Тып запыту</string>
+    <string name="pref_safetynet_recent_cat_basic">Базавыя даныя</string>
+    <string name="pref_safetynet_recent_token">Токен</string>
+    <string name="pref_safetynet_recent_copied">Скопіравана ў буфер абмену!</string>
+    <string name="pref_safetynet_test_integrity_cts_passed">Integrity і CTS прайшоныя</string>
+    <string name="pref_safetynet_test_cts_failed">CTS не прайшоны</string>
+    <string name="pref_safetynet_test_integrity_failed">Integrity не прайшоны</string>
+    <string name="pref_safetynet_test_not_completed">Яшчэ не завершана</string>
+    <string name="pref_safetynet_test_no_result">Няма выніку</string>
+    <string name="pref_safetynet_test_invalid_json">Несапраўдны JSON</string>
+    <string name="push_notifications_summary_off">ВЫКЛ</string>
+    <string name="push_notifications_summary_automatic">УКЛ / Аўтаматычна: %s</string>
+    <string name="push_notifications_summary_manual">УКЛ / Уручную: %s</string>
+    <string name="push_notifications_summary_values_seconds">%s секунд</string>
+    <string name="push_notifications_summary_values_minutes">%s хвілін</string>
+    <string name="pref_vending_licensing_category">Ліцэнзаванне Google Play</string>
+    <string name="pref_vending_licensing_enable_switch">Адказваць на запыты праверкі ліцэнзіі</string>
+    <string name="pref_vending_license_enable_summary">Некаторыя праграмы патрабуюць пацвярджэння таго, што вы набылі іх у Google Play. Калі праграма запытае, microG можа спампаваць пацвярджэнне куплі з Google. Калі гэтая функцыя выключана або не дададзены ніякі ўліковы запіс Google, запыты на пацвярджэнне ліцэнзіі ігнаруюцца.</string>
+    <string name="pref_vending_licensing_purchase_free_apps_switch">Аўтаматычна дадаваць бясплатныя праграмы ў бібліятэку</string>
+    <string name="pref_vending_licensing_purchase_free_apps_summary">Бясплатныя праграмы могуць правяраць, ці былі яны спампоўлены з Google Play. Аўтаматычна дадавайце бясплатныя праграмы ў бібліятэку вашага ўліковага запісу, каб заўсёды праходзіць праверку для ўсіх бясплатнаў патраўных праграм, даступных вам у дадзены момант.</string>
+    <string name="pref_vending_feature_delivery">Дастаўка функцый Google Play</string>
+    <string name="pref_vending_split_install_switch">Усталёўка кампанентаў па патрабаванню</string>
+    <string name="pref_vending_licensing_split_install_summary">Дазволіць праграмам спампоўваць і ўсталёўваць дадатковыя кампаненты</string>
+    <string name="feedback_disabled">Адпраўка водгукаў цярунь недаступная</string>
+    <string name="backup_disabled">Рэзервоўнае капіраванне зараз недаступна</string>
+    <string name="pref_vending_billing_category">Google Play Billing</string>
+    <string name="pref_vending_billing_enable_switch">Апрацоўка запытаў на аплату</string>
+    <string name="pref_vending_billing_enable_summary">Пасля ўключаэння некаторыя праграмы змогуць здзяйсняць пакупкі або аформляць падпіскі праз службу Google Play Billing.</string>
+    <string name="pref_vending_billing_note_experimental">Гэтая функцыя з\'яўляецца эксперыментальнай і можа прывесці да страты грошай. Вас папярэдзяна.</string>
+    <string name="pref_vending_billing_note_licensing">Некаторым праграмам можа пацябавацца ўключэнне праверкі ліцэнзіі для пацверджання вашых пакупак.</string>
+    <string name="pref_vending_asset_delivery_category">Google Play Asset Delivery</string>
+    <string name="pref_vending_asset_delivery_switch">Уключыць дастаўку рэсурсаў па запыце</string>
+    <string name="pref_vending_asset_delivery_summary">Спампаваць дадатковыя рэсурсы па запыце праграм, якія выкарыстоўваюць Play Asset Delivery</string>
+    <string name="pref_vending_asset_device_sync_summary">Праграмы, якія выкарыстоўваюць Play Asset Delivery, будуць спампоўваць дадатковыя рэсурсы на аснове інфармацыі пра прыладу, якая выкарыстоўваецца ў дадзены момант.</string>
+    <string name="pref_vending_asset_device_sync_switch">Уключаць сінхранізацыю інфармацыі аб прыладзе</string>
+    <string name="pref_workprofile_create_account">Дазволіць налады рабочага ўліковага запісу</string>
+    <string name="pref_workprofile_intro">Пры налажванні рабочага профіля для вашага месца працы або навучальнай установы,
+        наладжванне можа паспрабаваць падключачыся да Google, каб дазволіць спампаваць праграмы ў гэты профіль.</string>
+    <string name="pref_workprofile_disclaimer">Вы нясеце адказнасць за тое, каб ваша выкарыстанне microG адпавядала карпаратыўным палітыкам.
+        microG прадастаўляецца прынаіменшымі намаганнямі і не можа гарантаваць паводзіны дакладна так, як чакаецца.</string>
+    <string name="pref_auto_create_player">Дазволіць рэгістрацыю ўлікову запис Play Games</string>
+    <string name="pref_auto_create_player_intro">Пры гульні ў гульні вам трэба выкарыстоўваць уліковы запис Play Games для ўваходу і запісу функцый, звязаных з гульнёй, такіх як дасягнення, табліцы лідараў, архівы і г.д. Пасля адключаэння ўліковыя записи Google, якія не прывязаны да ўліковага запису Play Games, не будуць рэгістравацца аўтаматычна, і ў гульню не будзе магчыма ўвойсці і гуляць.</string>
+    <string name="pref_allow_upload_game_played">Дазволіць загрузку інфармацыі пра прайграныя гульні</string>
+    <string name="pref_allow_upload_game_played_summary">Калі гэтая функцыя адключана, гульня не будзе паведамляць пра статус прайгранай гульні пасля ўваходу ў яе, і ў некаторыя гульні можа быць немагчыма ўвойсці.</string>
+    <string name="pref_change_default_game_player">Змяніць уліковы запіс для гульняў</string>
+    <string name="pref_change_default_game_player_summary">Змяніць уліковы запіс па змаўчанні для гульняў &amp; змяніць уліковы запіс для канкрэтнай гульні.</string>
+    <string name="pref_delete_game_account_data">Выдаліць даныя Play Games</string>
+    <string name="pref_delete_game_account_data_summary">Выдаліць уліковы запіс Play Games &amp; усе даныя &amp; выдаліць даныя асобных гульняў.</string>
+    <string name="credentials_assisted_cancel">Адмяніць</string>
+    <string name="credentials_assisted_continue">Працягнуць</string>
+    <string name="credentials_assisted_confirmation_header">Выконваецца ўваход</string>
+    <string name="credentials_assisted_continue_as_user_button_label">Працягнуць як %1$s</string>
+    <string name="credentials_assisted_sign_back_title">Зноў увайдзіце ў %1$s з дапамогай Google</string>
+    <string name="credentials_assisted_signin_consent_header">Уваход як %1$s</string>
+    <string name="credentials_assisted_signin_consent">Калі вы працягнёце, Google перадасць ваша імя, адрас электроннай пошты і фота профілю ў %1$s. Азнаёмцеся з Палітыкай прыватнасці і Умовамі выкарыстання %1$s.</string>
+    <string name="credentials_assisted_signin_description">Вы можаце кіраваць увахам праз Google у сваіх акаўнтах Google.</string>
+    <string name="credentials_assisted_choose_account_label">Выберыце акаўнт</string>
+    <string name="credentials_assisted_choose_account_subtitle">каб працягнуць у %1$s</string>
+    <string name="credentials_assisted_choose_account_error_tips">Несапраўнасць акаўнта</string>
+    <string name="credentials_assisted_signin_button_text_long">Увайсці праз Google</string>
+    <string name="credentials_assisted_signin_add_account">Дадаць акаўнт</string>
+    <string name="credentials_service_sign_in_with_google_label">Увайсці праз Google</string>
+    <string name="credentials_service_remote_custom_subtitle">Ключ бяспекі, смартфон або планшэт</string>
+    <string name="limited_services_dialog_information">Вы карыстаецеся абмежаванымі службамі microG. У адрозненне ад звычайных службаў microG, гэты варыянт працуе толькі з праграмамі, якія выкарыстоўваюць бібліятэкі microG, а не з тымі, што знаходзяцца ў Google Play. Гэта азначае, што большасць праграм будуць ігнараваць гэтыя службы.</string>
+    <string name="limited_services_dialog_information_ack">Я разумею</string>
+    <string name="games_achievement_list_title">Дасягненні</string>
+    <string name="games_achievements_empty_text">Для гэтай гульні няма дасягненняў</string>
+    <string name="games_api_access_denied">Ні адзін уліхавы запіс на гэтай прыладнасці не мае доступу да Games API</string>
+    <string name="games_achievement_locked_content_description">заблакавана</string>
+    <string name="games_achievement_unlocked_content_description">разблакавана</string>
+    <string name="games_achievement_extra_text">%1$s XP</string>
+    <string name="games_leaderboard_empty_text">Для гэтай гульні няма табліц лідараў</string>
+    <string name="games_leaderboard_list_title">Рэйтынгі</string>
+    <string name="games_leaderboards_score_label">Вынік: %1$s</string>
+    <string name="games_snapshot_empty_text">Захаванаў гэты гульні пакуль няма</string>
+    <string name="games_snapshot_choose_btn_text">выбраць</string>
+    <string name="games_snapshot_delete_btn_text">выдаліць</string>
+    <string name="games_delete_snapshot_dialog_title">Выдаліць захаваную гульню</string>
+    <string name="games_delete_snapshot_dialog_message">Вы ўпэўнены, што хочаце выдаліць гэты захаваны запіс гульні?</string>
+    <string name="games_delete_snapshot_dialog_cancel">Адмяніць</string>
+    <string name="games_delete_snapshot_dialog_ok">Ок</string>
+    <string name="games_delete_snapshot_error">Выдаленне не ўдалося, паспрабуйце пазней</string>
+    <string name="games_state_description_signed_out">Выйшлі з акаўнта</string>
+    <string name="games_state_description_delete">Выдаліць</string>
+    <string name="games_change_button_text">Змяніць</string>
+    <string name="games_change_default_account_section_title">Змяніць акаўнт па замаўчанні для гульняў</string>
+    <string name="games_change_default_account_description">Акаўнт па замаўчанні: %1$s</string>
+    <string name="games_change_default_account_explanation">Гэты акаўнт выкарыстоўваецца для вашага аўтаматычнага ўваходу ў гульні, захавання прагрэсу гульні і налад. Змена акаўнта па замаўчанні або выхад з яго можа прывесці да скідавання вашага прагрэсу і налад у гульнях, у якія вы гулялі.</string>
+    <string name="games_change_per_game_title">Змяніць акаўнт для канкрэтнай гульні</string>
+    <string name="games_change_per_game_description">Змена акаўнта для выбранай гульні або выхад з яго можа прывесці да скідавання вашага прагрэсу і налад у гэтай гульні.</string>
+    <string name="games_change_default_account_for_all_games_dialog_title">Выберыце варыянт для новага акаўнта па замаўчанні</string>
+    <string name="games_change_default_account_for_all_games_dialog_description">Паতрэбны ўзлепаваны ўліковы запіс: %1$s</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_title">Змяніць уліхоўны запіс па змаўчанні толькі для новых гульняў </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_description">Вы не страціце доступ да прагрэсу і налад гульняў, у якія вы ўжо гулялі. Але ваш прагрэс будзе падзелены паміж уліхоўнымі запісамі.</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_title"> Змяніць уліхоўны запіс па змаўчанні для ўсіх гульняў </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_description">Вы можаце страціць доступ да прагрэсу і налад гульняў, у якія вы гулялі. Мы перазагрузім гульню, каб прымяніць змены.</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_title"> Выйсці з усіх гульняў </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_description">Вы можаце страціць доступ да прагрэсу і налад гульняў, у якія вы гулялі. Мы перазагрузім гульню, каб прымяніць змены.</string>
+    <string name="games_change_per_game_dialog_title">Выберыце варыянт для гэтай гульні</string>
+    <string name="games_change_per_game_dialog_description">Змена ўліковага запісу або выхад з сістэмы могуць скінуць ваш прагрэс і налады гульні</string>
+    <string name="games_change_per_game_dialog_option_use_player">Выкарыстаць %1$s</string>
+    <string name="games_change_per_game_dialog_option_use_player_snackbar_success_message">Вы ўвайдзеце ў гэтую гульню з %1$s</string>
+    <string name="games_change_per_game_dialog_option_sign_out">Выйсці</string>
+    <string name="games_change_per_game_dialog_option_sign_out_snackbar_success_message">Цяпер вы выйшлі з гэтай гульні</string>
+    <string name="games_change_sign_out_of_all_games_snackbar_success_message">Цяпер вы выйшлі з усіх гульняў</string>
+    <string name="games_change_default_account_for_all_games_snackbar_success_message">Вы ўвайдзеце ў ўсе гульні з %1$s</string>
+    <string name="games_change_default_account_for_new_games_snackbar_success_message">Вы ўвайдзеце ў новыя гульні з %1$s</string>
+    <string name="games_account_display_content">Потэчны ўліковы запіс: %1$s</string>
+    <string name="games_delete_profile_header">Выдаліць уліхоўны запіс Play Games &amp; усе даныя</string>
+    <string name="games_delete_profile_explanation">Назаўсёды выдаліце свой улікоўны запіс Google Play Games, XP і ўсе даныя профілю. Гэта дзеянне таксама можа выдаліць вашы вынікі, прагрэс (захаваныя гульні) і налады ў гульнях, у якія вы гулялі.</string>
+    <string name="games_delete_profile_button">Выдаліць назаўсёды</string>
+    <string name="games_delete_game_data_header">Выдаліць даныя асобных гульняў</string>
+    <string name="games_delete_game_data_explanation">Вы можаце назаўсёды выдаліць асобныя даныя для гульняў, у якія вы гулялі з дапамогой Google Play Games. Гэта дзеянне выдаляе вашы вынікі, прагрэс (захаваныя гульні) і налады для выбранай гульні.</string>
+    <string name="games_delete_profile_dialog_title">Вы ўпэўнены, што хочаце выдаліць гэты ўлікоўны запіс?</string>
+    <string name="games_delete_profile_explanation_with_gamer_name">Назаўсёды выдаліце свой улікоўны запіс Google Play Games для імя гульца &lt;b&gt;%1$s&lt;/b&gt; (&lt;b&gt;%2$s&lt;/b&gt;), XP і ўсе даныя профілю. Гэта дзеянне таксама можа выдаліць вашы вынікі, прагрэс (захаваныя гульні) і налады ў гульнях, у якія вы гулялі.</string>
+    <string name="games_delete_profile_dialog_message">Гэта дзеянне нельга скасаваць.</string>
+    <string name="games_delete_profile_fail">Не ўдалося выдаліць ваш профіль. Паспрабуйце пазней.</string>
+    <string name="games_delete_game_data_confirm_dialog_title">Выдаліць даныя для %1$s</string>
+    <string name="games_delete_game_data_confirm_dialog_message">Пастаяннае выдаленне вашых даных для %1$s прывядзе да выдалення вашых вынікаў, прагрэсу (захаваных гульняў) і налад гульні ў Google Play Games.</string>
+    <string name="games_popup_signin_welcome">Прывітанне, %1$s</string>
+    <string name="family_management_title">Сям\'я</string>
+    <string name="family_management_retry">Паўтарыць</string>
+    <string name="family_management_load_error">Не ўдалося загрузіць кантэнт</string>
+    <string name="family_management_toolbar_back">Назад</string>
+    <string name="family_management_toolbar_more">Яшчэ</string>
+    <string name="family_management_exit_family_group">Пакінуць сямейную групу</string>
+    <string name="family_management_delete_family_group">Выдаліць сямейную групу</string>
+    <string name="family_management_leave_family_password_title">Падтвердзіце пароль, каб пакінуць сямейную групу</string>
+    <string name="family_management_delete_family_password_title">Падтвердзіце пароль, каб выдаліць сямейную групу</string>
+    <string name="family_management_remove_member_password_title">Падтвердзіце пароль, каб выдаліць \"%s\"</string>
+    <string name="family_management_invite_family_member">Запрасіць сяброў сям\'і</string>
+    <string name="family_management_invite_slots_left">Засталося запрашаў: %1$d</string>
+    <string name="family_management_cancel_invite">Адменіць запрашэнне</string>
+    <string name="family_management_cancel_invite_success">Запрашэнне паспяхова адменена</string>
+    <string name="family_management_cancel_invite_error">Памылка пры адмене запрашэння. Паспрабуйце яшчэ раз.</string>
+    <string name="family_management_remove_member">Выдаліць члена</string>
+    <string name="family_management_member_removed_success">%s было выдалена з вашай сямейнай групы</string>
+    <string name="family_management_member_remove_failed">Памылка пры выдаленні %s. Паспрабуйце яшчэ раз.</string>
+    <string name="family_management_leave_family_error_message">Памылка пры выхадзе з сямейнай групы. Паспрабуйце яшчэ раз.</string>
+    <string name="family_management_exist_group_success">Вы пакінулі сваю сямейную групу…</string>
+    <string name="family_management_delete_group_success">Сямейная група выдалена</string>
+    <string name="family_management_delete_group_failure">Не ўдалося выдаліць сямейную групу</string>
+    <string name="family_management_delete_group_cancel">Адмяніць</string>
+    <string name="family_management_delete_group_confirm">Ок</string>
+    <string name="family_management_input_pwd">Калі ласка, увядзіце пароль</string>
+    <string name="family_management_invite_sent_date_format">Запрашэнне адпраўлена %s</string>
+    <string name="family_management_invite_send">Запрашэнне адпраўлена</string>
+    <string name="family_management_pwd_error">Няправільны пароль, калі ласка, увядзіце яго зноў</string>
+    <string name="barcode_scanner_brand">Сканавана microG ад імя %1$s</string>
+    <string name="camera_permission_dialog_button">Ок</string>
+    <string name="camera_permission_dialog_message">Службам microG патрабуецца доступ да камеры вашай прылады, каб сканаваць код для %1$s.\n\nКаб уключыць гэтую функцыю, надаць дазвол на выкарыстанне камеры для службаў microG у Настройках.</string>
+    <string name="camera_permission_dialog_title">Патрабуецца дазвол на выкарыстанне камеры</string>
+    <string name="pref_app_install_settings_title">Настройкі ўсталявання праграм</string>
+    <string name="pref_app_install_switch_title">Дазволіць усталяванне праграм</string>
+    <string name="pref_app_install_other_apps_note">Аўтарызацыя дазваляе ўсталёўку праграм з іншых крыніц.</string>
+    <string name="pref_app_install_permission_instruction">Каб забяспечыць правільную працу ўсталяваных праграм, калі ласка, дайце microG Companion дазвол на ўсталёўку праграм, спампоўваючых з іншых крыніц.</string>
+    <string name="prefcat_app_install_list_title">Праграмы, якія выкарыстоўваюць App Installer</string>
+    <string name="service_name_google_location_sharing">Google Location Sharing</string>
+    <string name="location_sharing_description">Кіруйце перадачай вашага месцазнаходжання ў рэальным часе ў праграмах і сэрвісах Google з гэтай прылады</string>
+    <string name="location_sharing_learn_more">Даведацься больш пра &quot;Передачу месцазнаходжання&quot;</string>
+    <string name="location_sharing_switch_text">Выкарыстоўваць перадачу месцазнаходжання</string>
+    <string name="location_sharing_turn_off_notify_hint">Калі вы выключаеце перадачу месцазнаходжання для гэтай прылады, людзі, з якімі вы дзеліцеся, не будуць паведомленыя.</string>
+    <string name="location_sharing_off_previous_hint">Да таго часу, пакуль вы не ўключыце гэтую функцыю зноў, будзе даступна толькі ваша апошняя падзеленая лакацыя.</string>
+    <string name="location_sharing_disabled">Для гэтага акаўнта няма актыўных сесій перадачы месцазнаходжання</string>
+    <string name="location_sharing_turn_on_hint">Як толькі вы пачнеце перадаваць сваё меснасць з праграмы або сэрвіса Google, вы зможаце кіраваць функцыяй «Перадача меснасці» тут.\n\nКаб пачаць перадаваць сваё меснасць, перайдзіце ў Google Maps або Family Link.</string>
+    <string name="location_sharing_turn_off_title">Выключаць перадачу меснасці</string>
+    <string name="location_sharing_turn_off_hint">Вы ўсё яшчэ можаце перадаваць сваё меснасць з іншых прылад, увайшоўшых у той жа ўлічовы запіс Google, або з праграм не ад Google. Абавязкова праверце налады перадачы меснасці ў усіх адпаведных месцах.\n\nЛюдзі, з якімі вы дзеліцеся, будуць і надалей бачыць вашае апошняе перададзенае меснасць.</string>
+    <string name="location_sharing_turn_off_cancel">Закахаць</string>
+    <string name="location_sharing_turn_off_confirm">Выключаць</string>
+    <string name="location_sharing_confirm_dialog_title">Уключаць перадачу меснасці</string>
+    <string name="location_sharing_confirm_dialog_text">Людзі, з якімі вы дзеліцеся сваім меснасцю, заўсёды могуць бачыць:\n·Ваша імя і фота\n·Нядаўняе меснасць вашай прылады, нават калі вы не карыстаецеся сэрвісам Google\n·Зарадзаванасць акумулятара вашай прылады і тое, ці зараджаецца яна\n·Час вашага прыбыцця і ад\'езду, калі яны дададуць паведамленне аб перадачы меснасці</string>
     <!-- Passkey management -->
+    <string name="pref_passkey_manager_title">Кіраваць ключамі доступа</string>
+    <string name="pref_passkey_manager_empty_title">Захаваных паскіёў няма</string>
+    <string name="pref_passkey_manager_description">Калі стороннія праграмы рэгіструюць паскіё, microG вядзе мясцовы ўлік. Калі праграма выдаляе паскій без паведамлення microG, запіс можа застацца безнадзейным. Вы можаце выдаліць такія рэштыквыя запісы тут.</string>
+    <string name="pref_passkey_manager_delete_dialog_title">Выдаліць паскій</string>
+    <string name="pref_passkey_manager_delete_dialog_message">Выдаліць паскій для \"%2$s\" на \"%1$s\". Гэтае дзеянне нельга скасаваць; вам спатрэбіцца зарэгістраваць новы паскій, каб зноў увайсці ў сістэму.</string>
+    <string name="pref_passkey_manager_delete_dialog_confirm">Выдаліць</string>
+    <string name="pref_passkey_manager_unknown_user">Невядомы карыстальнік</string>
+    <string name="pref_passkey_manager_transport_screen_lock">Блакіроўка экрана</string>
+    <string name="pref_passkey_manager_transport_usb">USB</string>
+    <string name="pref_passkey_manager_transport_nfc">NFC</string>
+    <string name="pref_passkey_manager_transport_bluetooth">Bluetooth</string>
+    <string name="pref_passkey_manager_transport_hybrid">Гібрыдны</string>
+    <string name="pref_passkey_manager_credential_id_format_internal">ID: %1$s</string>
+    <string name="self_check_cat_patched_apps">Патчаныя праграмы</string>
+    <string name="self_check_source_morphe">Патчы Morphe</string>
+    <string name="self_check_source_alternative">аль턴натыўныя патчы</string>
+    <string name="self_check_resolution_patched_app_installed">Праграмы, якія выкарыстоўваюць %1$s, не знойдзены. Калі ласка, патэчце і ўсталюйце змадыфікаваную праграму</string>
+    <string name="self_check_name_notifications">Апавяшчэнні дазволеныя</string>
+    <string name="self_check_resolution_notifications">Націсніце тут, каб адкрыць налады паведамленняў. Паведамленні выкарыстоўваюцца для таго, каб GcmService працягваў працаць у фоне, калі ўключана аптымізацыя зарада або за іншых умоваў</string>
+    <string name="self_check_name_oem_restriction">Абмежаванні фонавых працэсаў</string>
+    <string name="self_check_resolution_oem_restriction">Ваша сістэма можа абмяжоўваць фоновыя працэсы. Націсніце тут, каб адкрыць сайт Don\'t Kill My App! і даведацца, як адхіліць гэтыя абмежаванні</string>
+    <string name="morphe_sign_in_with_google_microg_label">Увайсці праз Google праз MicroG RE</string>
+    <string name="self_check_patched_app_installed">Праца з %1$s</string>
+    <string name="self_check_action_download_morphe">Спампаваць Morphe</string>
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Усталяваны няправільны варыянт архітэктуры</string>
+    <string name="abi_mismatch_message">"Гэтая зборка MicroG-RE змяшчае толькі 64-бітныя (arm64) бібліятэкі, але гэтая прылада выкарыстоўвае 32-бітны карыстальніцкі прастору.
+
+Функцыі, якім патрэбен Conscrypt (ўваход у ўліхоўку, стрымінг, BotGuard, подмена відэапатокаў, SponsorBlock, Return YouTube Dislike і г.д.), не будуць працаваць правільна і могуць выклікаць праблемы з прайграваннем або памылку \"Unable to find a default SSL provider\".
+
+Замяняйце яе на ARMv7 або Universal APK."</string>
+    <string name="abi_mismatch_download_armv7">Спампаваць APK ARMv7</string>
+    <string name="abi_mismatch_downloading_title">Загрузка правільнага варыянта…</string>
 </resources>

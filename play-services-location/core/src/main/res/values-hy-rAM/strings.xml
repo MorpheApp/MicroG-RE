@@ -4,8 +4,64 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="service_name_location">Տեղադրություն</string>
+    <string name="prefcat_location_apps_title">Վերջին մուտքերը</string>
+    <string name="prefcat_location_wifi_title">Wi-Fi տեղադրություն</string>
+    <string name="prefcat_location_cell_title">Բջջային ցանցի տեղադրություն</string>
+    <string name="prefcat_geocoder_title">Հասցեների լուծիչ</string>
+    <string name="pref_location_wifi_online_enabled_title">Հարցում առցանց ծառայությունից</string>
+    <string name="pref_location_wifi_online_enabled_summary">Ստանալ Wi-Fi-ի վրա հիմնված տեղադրությունը առցանց տեղադրության ծառայությունից:</string>
+    <string name="pref_location_wifi_moving_enabled_title">Հարցում Hotspot-ից</string>
+    <string name="pref_location_wifi_moving_enabled_summary">Ստանալ Wi-Fi տեղադրությունը անմիջապես աջակցվող hotspot-ներից միացման ժամանակ:</string>
+    <string name="pref_location_wifi_learning_enabled_title">Հիշել GPS-ից</string>
+    <string name="pref_location_wifi_learning_enabled_summary">Պահպանել Wi-Fi տեղադրությունները տեղীয়ව, երբ օգտագործվում է GPS-ը:</string>
+    <string name="pref_location_cell_online_enabled_title">Հարցում առցանց ծառայությունից</string>
+    <string name="pref_location_cell_online_enabled_summary">Ստանալ բջջային ցանցի բազային կայանների տեղադրությունները առցանց տեղադրության ծառայությունից:</string>
+    <string name="pref_location_cell_learning_enabled_title">Հիշել GPS-ից</string>
+    <string name="pref_location_cell_learning_enabled_summary">Պահպանել բջջային ցանցի տեղադրությունները տեղում, երբ օգտագործվում է GPS-ը:</string>
+    <string name="pref_geocoder_nominatim_enabled_title">Օգտագործել Nominatim-ը</string>
+    <string name="pref_geocoder_nominatim_enabled_summary">Լուծել հասցեները՝ օգտագործելով OpenStreetMap Nominatim-ը:</string>
+    <string name="fragment_location_apps_title">Հավելվածներ՝ տեղադրության հասանելիությամբ</string>
+    <string name="location_app_last_access_at">Վերջին հասանելիությունը՝ <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="pref_location_app_force_coarse_title">Հարկադիր կիրառել մոտ approximate տեղադրությունը</string>
+    <string name="pref_location_app_force_coarse_summary">Միշտ վերադարձնել մոտ approximate տեղադրություններ այս հավելվածին՝ անտեսելով դրա թույլտվության մակարդակը:</string>
+    <string name="prefcat_app_last_location">Վերջին հաղորդված տեղադրությունը</string>
+    <string name="location_settings_dialog_message_title_for_better_experience">Ավելի լավ փորձառության համար միացրեք սարքի տեղադիրը, որն օգտագործում է microG-ի տեղորոշման ծառայությունը</string>
+    <string name="location_settings_dialog_message_title_to_continue">Շարունակելու համար միացրեք սարքի տեղադիրը, որն օգտագործում է microG-ի տեղորոշման ծառայությունը</string>
+    <string name="location_settings_dialog_message_details_start_paragraph">Ձեր սարքին անհրաժեշտ կլինի՝</string>
+    <string name="location_settings_dialog_message_location_services_gps_and_nlp">Օգտագործել GPS-ը, Wi‑Fi-ն, բջջային ցանցերը և տվիչները</string>
+    <string name="location_settings_dialog_message_grant_permissions">Տրամադրել տեղորոշման թույլտվություններ microG Service-ին</string>
+    <string name="location_settings_dialog_message_gls_consent">Օգտագործել microG-ի տեղորոշման ծառայությունը. որպես այս ծառայության մաս, microG-ը կարող է պարբերաբար հավաքագրել տեղորոշման տվյալներ և օգտագործել այդ տվյալները անանուն ձևով՝ տեղորոշման ճշգրտությունը և տեղորոշման վրա հիմնված ծառայությունները բարելավելու համար:</string>
+    <string name="location_settings_dialog_message_details_end_paragraph">Մանրամասների համար անցեք տեղադրության կարգավորումներ:</string>
+    <string name="location_settings_dialog_btn_cancel">Ոչ, շնորհակալություն</string>
+    <string name="location_settings_dialog_btn_sure">Լավ</string>
+    <string name="pref_location_custom_url_summary">Սա թույլ է տալիս սահմանել սպասարկման հատուկ URL: Անվավեր արժեքները կարող են հանգեցնել տեղադրության ծառայությունների անպատասխանության կամ ամբողջական անհասանելիության:</string>
+    <string name="pref_location_custom_url_details">/v1/geolocate հասցեն ավտոմատ կերպով ավելացվում է: Եթե տեղադրության մատակարարը պահանջում է բանալի, այն կարող է ավելացվել որպես հարցման պարամետր արմատային URL-ին:</string>
+    <string name="pref_location_custom_url_input_hint">Սպասարկման հատուկ URL</string>
+    <string name="pref_location_custom_source_title">Հատուկ</string>
+    <string name="pref_location_source_title">Ընտրեք տեղադրության առցանց ծառայությունը</string>
+    <string name="pref_location_source_terms">Պայմաններ / Գաղտնիություն</string>
+    <string name="pref_location_source_suggested">Առաջարկված</string>
+    <string name="pref_location_import_export_title">Ներմուծել կամ արտահանել տեղադրության տվյալները</string>
+    <string name="notification_config_required_title">Պահանջվում է կարգավորում</string>
+    <string name="notification_config_required_text_online_sources">Առցանց տեղադրության ծառայությունների օգտագործումը շարունակելու համար անհրաժեշտ է ընտրել տեղադրության տվյալների ծառայություն:</string>
+    <string name="location_data_export_wifi_title">Արտահանել տեղական Wi-Fi տեղադրության տվյալների բազան</string>
+    <string name="location_data_export_cell_title">Արտահանել տեղական բջջային կայանների տեղադրության տվյալների բազան</string>
+    <string name="location_data_import_title">Ներբեռնել տեղադրության տվյալները ֆայլից</string>
+    <string name="prefcat_location_timeline_title">Google Maps-ի ժամանակագրությունը</string>
+    <string name="pref_location_timeline_title">Միացնել տեղադրության պատմությունը</string>
+    <string name="pref_location_timeline_summary">"Պարբերաբար գրանցեք ձեր տեղադրության տեղեկությունները և դարձրեք դրանք հասանելի Google Maps-ի ժամանակագրության համար:"</string>
+    <string name="pref_location_timeline_upload_title">Սինխրոնացնել Google հաշվի հետ</string>
+    <string name="pref_location_timeline_upload_summary">"Սինխրոնացնել տեղադրության պատմությունը Google-ի սերվերների հետ, որպեսզի այն հնարավոր լինի տեսնել այլ սարքերի վրա:"</string>
     <!-- RE strings -->
+    <string name="prefcat_location_maps_title">Google Maps</string>
+    <string name="pref_map_engine_title">Քարտեզի ռենդերեր</string>
     <!-- "Mapbox (MapLibre)" must be left untranslated .-->
+    <string name="pref_map_engine_summary">Ընտրեք հավելվածներում քարտեզները ռենդեր ചെയ്യാծ շարժիչը: Mapbox (MapLibre)-ը երկիր է խորհուրդ տրվում:</string>
     <!-- "Stadia Maps" must be left untranslated .-->
+    <string name="pref_stadia_key_title">Stadia Maps API բանալին</string>
+    <string name="pref_stadia_key_summary">Կամընտիր: Ավելացնում է Stadia Maps ռենդերերի տարբերակը. Stadia-ն պահանջում է API բանալի:</string>
     <!-- "HMS (Huawei Map Kit)" must be left untranslated .-->
+    <string name="pref_hms_key_title">HMS (Huawei Map Kit) API բանալին</string>
+    <string name="pref_hms_key_summary">Կամընտիր: Ավելացնում է HMS ռենդերերի տարբերակը. պահանջում է HMS Core սարքի վրա:</string>
 </resources>

@@ -13,7 +13,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textColor="#303030"
+        android:textColor="?android:attr/textColorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_height="wrap_content"/>
 
@@ -25,7 +25,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:text="@string/credentials_assisted_choose_account_subtitle"
-        android:textColor="#979697"
+        android:textColor="?android:attr/textColorSecondary"
         android:layout_height="wrap_content"/>
 
     <com.google.android.material.button.MaterialButton
@@ -34,8 +34,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
-        android:textColor="@android:color/white"
-        app:backgroundTint="#303030"
+        android:textColor="?attr/colorOnPrimary"
+        app:backgroundTint="?attr/colorPrimary"
         app:layout_constraintTop_toBottomOf="@+id/add_account_subtitle_tv"
         android:text="@string/pref_add_account_summary"
         app:layout_constraintLeft_toLeftOf="parent"

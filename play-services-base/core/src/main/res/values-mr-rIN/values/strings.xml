@@ -4,9 +4,21 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="foreground_service_notification_title">बॅकग्राउंडमध्ये सक्रिय आहे</string>
     <string name="foreground_service_notification_text"><xliff:g example="Exposure Notification">%1$s</xliff:g> पार्श्वभूमीत चालू आहे.</string>
     <string name="foreground_service_notification_big_text">बॅटरी ऑप्टिमायझेशनमधून <xliff:g example="microG Services">%1$s</xliff:g> वगळा किंवा ही सूचना लपवण्यासाठी सूचना सेटिंग्ज बदला.</string>
+    <string name="foreground_action_battery_optimization">बॅटरी ऑप्टिमायझेशन</string>
+    <string name="foreground_action_notification_settings">सेटिंग्ज</string>
     <string name="menu_advanced">प्रगत</string>
+    <string name="menu_settings">सेटिंग्ज</string>
     <string name="menu_game_managed">गेम खाती व्यवस्थापित</string>
+    <string name="list_no_item_none">काहीही नाही</string>
+    <string name="list_item_see_all">सर्व पहा</string>
     <string name="open_app">उघडा</string>
+    <string name="service_status_disabled">बंद आहे</string>
+    <string name="service_status_enabled">सुरू आहे</string>
+    <string name="service_status_automatic">स्वयंचलित</string>
+    <string name="service_status_manual">मॅन्युअल</string>
+    <string name="service_status_enabled_short">सुरू</string>
+    <string name="service_status_disabled_short">बंद</string>
 </resources>

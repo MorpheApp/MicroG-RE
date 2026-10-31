@@ -14,4 +14,17 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="gcm_registered_apps_counter">
+        <item quantity="one"><xliff:g example="1">%1$d</xliff:g> টা পঞ্জীয়নভুক্ত App</item>
+        <item quantity="other"><xliff:g example="123">%1$d</xliff:g> টা পঞ্জীয়নভুক্ত Apps</item>
+    </plurals>
+    <plurals name="cond_perm_summary">
+        <item quantity="one">microG Services ৰ সঠিক কাৰ্যক্ষমতাৰ বাবে প্ৰয়োজনীয় এটা অনুমতি প্ৰদান কৰা হোৱা নাই।</item>
+        <item quantity="other">microG Services ৰ সঠিক কাৰ্যক্ষমতাৰ বাবে প্ৰয়োজনীয় অনুমতিসমূহ প্ৰদান কৰা হোৱা নাই।</item>
+    </plurals>
+    <plurals name="cond_perm_action">
+        <item quantity="one">নাবাকি অনুমতিৰ বাবে অনুৰোধ কৰক</item>
+        <item quantity="other">নাবাকি অনুমতিসমূহৰ বাবে অনুৰোধ কৰক</item>
+    </plurals>
+</resources>

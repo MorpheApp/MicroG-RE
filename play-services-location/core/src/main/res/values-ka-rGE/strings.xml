@@ -4,8 +4,64 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="service_name_location">მდებარეობა</string>
+    <string name="prefcat_location_apps_title">ბოლო წვდომები</string>
+    <string name="prefcat_location_wifi_title">Wi-Fi მდებარეობა</string>
+    <string name="prefcat_location_cell_title">მობილური ქსელის მდებარეობა</string>
+    <string name="prefcat_geocoder_title">მისამართის განმსაზღვრელი</string>
+    <string name="pref_location_wifi_online_enabled_title">მოთხოვნა ონლაინ სერვისიდან</string>
+    <string name="pref_location_wifi_online_enabled_summary">Wi-Fi-ზე დაფუძნებული მდებარეობის მიღება ონლაინ სერვისიდან.</string>
+    <string name="pref_location_wifi_moving_enabled_title">მოთხოვნა Hotspot-იდან</string>
+    <string name="pref_location_wifi_moving_enabled_summary">Wi-Fi მდებარეობის პირდაპირ მიღება მხარდაჭერილი Hotspot-ებიდან დაკავშირებისას.</string>
+    <string name="pref_location_wifi_learning_enabled_title">დამახსოვრება GPS-იდან</string>
+    <string name="pref_location_wifi_learning_enabled_summary">Wi-Fi მდებარეობების локаლურად შენახვა GPS-ის გამოყენებისას.</string>
+    <string name="pref_location_cell_online_enabled_title">მოთხოვნა ონლაინ სერვისიდან</string>
+    <string name="pref_location_cell_online_enabled_summary">მობილური ქსელის საკომუნიკაციო ანტენების მდებარეობების მიღება ონლაინ სერვისიდან.</string>
+    <string name="pref_location_cell_learning_enabled_title">დამახსოვრება GPS-იდან</string>
+    <string name="pref_location_cell_learning_enabled_summary">მობილური ქსელის მდებარეობების ლოკალურად შენახვა GPS-ის გამოყენებისას.</string>
+    <string name="pref_geocoder_nominatim_enabled_title">Nominatim-ის გამოყენება</string>
+    <string name="pref_geocoder_nominatim_enabled_summary">მისამართების განსაზღვრა OpenStreetMap Nominatim-ის გამოყენებით.</string>
+    <string name="fragment_location_apps_title">აპლიკაციები მდებარეობაზე წვდომით</string>
+    <string name="location_app_last_access_at">ბოლო წვდომა: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="pref_location_app_force_coarse_title">მიახვიტვას დააფიქსირება</string>
+    <string name="pref_location_app_force_coarse_summary">ყოველთვის მიაწოდეთ მიახლოებითი მდებარეობა ამ აპლიკაციას, მისი ნებართვის დონის მიუხედავად.</string>
+    <string name="prefcat_app_last_location">ბოლოს მოხსენებული მდებარეობა</string>
+    <string name="location_settings_dialog_message_title_for_better_experience">უკეთესი გამოცდილებისთვის ჩართეთ მოწყობილობის მდებარეობა, რომელიც იყენებს microG-ის მდებარეობის სერვისს</string>
+    <string name="location_settings_dialog_message_title_to_continue">გასაგრძელებლად ჩართეთ მოწყობილობის მდებარეობა, რომელიც იყენებს microG-ის მდებარეობის სერვისს</string>
+    <string name="location_settings_dialog_message_details_start_paragraph">თქვენს მოწყობილობას დასჭირდება:</string>
+    <string name="location_settings_dialog_message_location_services_gps_and_nlp">GPS-ის, Wi‑Fi-ის, მობილური ქსელებისა და სენსორების გამოყენება</string>
+    <string name="location_settings_dialog_message_grant_permissions">მიანიჭეთ მდებარეობის ნებართვები microG Service-ს</string>
+    <string name="location_settings_dialog_message_gls_consent">გამოიყენეთ microG-ის მდებარეობის სერვისი; ამ სერვისის ფარგლებში, microG-მა შესაძლოა პერიოდულად შეაგროვოს მდებარეობის მონაცემები და გამოიყენოს ეს მონაცემები ანონიმურად, რათა გააუმჯობესოს მდებარეობის სიზუსტე და მდებარეობაზე დაფუძნებული სერვისები.</string>
+    <string name="location_settings_dialog_message_details_end_paragraph">დეტალებისთვის გადადით მდებარეობის პარამეტრებში.</string>
+    <string name="location_settings_dialog_btn_cancel">არა, გმადლობთ</string>
+    <string name="location_settings_dialog_btn_sure">გასაგებია</string>
+    <string name="pref_location_custom_url_summary">ეს საშუალებას გაძლევთ დააყენოთ სერვისის tùyიყოფილი URL. არასწორმა მნიშვნელობებმა შესაძლოა გამოიწვიოს მდებარეობის სერვისების უპასუხოობა ან სრულიად მიუწვდომელობა.</string>
+    <string name="pref_location_custom_url_details">გზა /v1/geolocate ავტომატურად ემატება. თუ მდებარეობის პროვაიდერი მოითხოვს გასაღებს, ის შეიძლება დაემატოს როგორც მოთხოვნის პარამეტრი ძირეულ URL-ს.</string>
+    <string name="pref_location_custom_url_input_hint">სერვისის tùyიყოფილი URL</string>
+    <string name="pref_location_custom_source_title">ტ自定义</string>
+    <string name="pref_location_source_title">აირჩიეთ ონლაინ მდებარეობის სერვისი</string>
+    <string name="pref_location_source_terms">წესები / კონფიდენციალურობა</string>
+    <string name="pref_location_source_suggested">რეკომენდებული</string>
+    <string name="pref_location_import_export_title">მდებარეობის მონაცემების იმპორტი ან ექსპორტი</string>
+    <string name="notification_config_required_title">საჭიროა კონფიგურაცია</string>
+    <string name="notification_config_required_text_online_sources">ონლაინ ლოკაციისა სერვისების გამოსაყენებლად საჭიროა ლოკაციის მონაცემთა სერვისის არჩევა.</string>
+    <string name="location_data_export_wifi_title">ლოკალური Wi-Fi ლოკაციის მონაცემთა ბაზის ექსპორტი</string>
+    <string name="location_data_export_cell_title">ლოკალური მობილური კოშკების ლოკაციის მონაცემთა ბაზის ექსპორტი</string>
+    <string name="location_data_import_title">ლოკაციის მონაცემების იმპორტი ფაილიდან</string>
+    <string name="prefcat_location_timeline_title">Google Maps-ის Timeline</string>
+    <string name="pref_location_timeline_title">ლოკაციის ისტორიის ჩართვა</string>
+    <string name="pref_location_timeline_summary">"პერიოდულად ჩაწერეთ თქვენი ლოკაციის ინფორმაცია და გახადეთ იგი ხელმისაწვდომი Google Maps-ის Timeline-ისთვის."</string>
+    <string name="pref_location_timeline_upload_title">სინქრონიზაცია Google-ის ანგარიშთან</string>
+    <string name="pref_location_timeline_upload_summary">"ლოკაციის ისტორიის სინქრონიზაცია Google-ის სერვერებზე, რათა იგი სხვა მოწყობილებებზეც გამოჩნდეს."</string>
     <!-- RE strings -->
+    <string name="prefcat_location_maps_title">Google Maps</string>
+    <string name="pref_map_engine_title">რუკის რენდერერი</string>
     <!-- "Mapbox (MapLibre)" must be left untranslated .-->
+    <string name="pref_map_engine_summary">აირჩიეთ რუკების რენდერინგისთვის გამოყენებული ძრავი აპლიკაციებში. რეკომენდებულია Mapbox (MapLibre).</string>
     <!-- "Stadia Maps" must be left untranslated .-->
+    <string name="pref_stadia_key_title">Stadia Maps-ის API გასაღები</string>
+    <string name="pref_stadia_key_summary">არასავალდებულო. ამატებს Stadia Maps რენდერერის ოფციას; Stadia-ს სჭირდება API გასაღები.</string>
     <!-- "HMS (Huawei Map Kit)" must be left untranslated .-->
+    <string name="pref_hms_key_title">HMS (Huawei Map Kit)-ის API გასაღები</string>
+    <string name="pref_hms_key_summary">არასავალდებულო. ამატებს HMS რენდერერის ოფციას; მოთხოვს HMS Core-ს მოწყობილობაზე.</string>
 </resources>

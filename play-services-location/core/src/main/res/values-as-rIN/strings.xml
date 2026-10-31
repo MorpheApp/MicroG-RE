@@ -4,8 +4,65 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="service_name_location">লোকেচন</string>
+    <string name="prefcat_location_apps_title">শেহতীয়া প্ৰৱেশ</string>
+    <string name="prefcat_location_wifi_title">Wi-Fi লোকেচন</string>
+    <string name="prefcat_location_cell_title">মবাইল নেটৱৰ্ক লোকেচন</string>
+    <string name="prefcat_geocoder_title">ঠিকনা ৰিজলভাৰ</string>
+    <string name="pref_location_wifi_online_enabled_title">অনলাইন সেৱাৰ পৰা অনুৰোধ</string>
+    <string name="pref_location_wifi_online_enabled_summary">অনলাইন লোকেচন সেৱাৰ পৰা Wi-Fi-ৰ আধাৰত লোকেচন সংগ্ৰহ কৰক।</string>
+    <string name="pref_location_wifi_moving_enabled_title">হটস্পটৰ পৰা অনুৰোধ</string>
+    <string name="pref_location_wifi_moving_enabled_summary">সংযোগ কৰাৰ সময়ত সমৰ্থিত হটস্পটৰ পৰা পোনপটীয়াকৈ Wi-Fi লোকেচন সংগ্ৰহ কৰক।</string>
+    <string name="pref_location_wifi_learning_enabled_title">GPS ৰ পৰা মনত ৰাখক</string>
+    <string name="pref_location_wifi_learning_enabled_summary">GPS ব্যৱহাৰ কৰাৰ সময়ত Wi-Fi লোকেচনসমূহ স্থানীয়ভাৱে সংৰক্ষণ কৰক।</string>
+    <string name="pref_location_cell_online_enabled_title">অনলাইন সেৱাৰ পৰা অনুৰোধ</string>
+    <string name="pref_location_cell_online_enabled_summary">অনলাইন লোকেচন চাৰ্ভিচৰ পৰা মবাইল নেটৱৰ্কৰ সেল টাৱাৰৰ অৱস্থান সংগ্ৰহ কৰক।</string>
+    <string name="pref_location_cell_learning_enabled_title">GPS-ৰ পৰা মনত ৰাখক</string>
+    <string name="pref_location_cell_learning_enabled_summary">GPS ব্যৱহাৰ কৰাৰ সময়ত মবাইল নেটৱৰ্কৰ অৱস্থানসমূহ স্থানীয়ভাৱে সংৰক্ষণ কৰক।</string>
+    <string name="pref_geocoder_nominatim_enabled_title">Nominatim ব্যৱহাৰ কৰক</string>
+    <string name="pref_geocoder_nominatim_enabled_summary">OpenStreetMap Nominatim ব্যৱহাৰ কৰি ঠিকনাসমূহ সমাধান কৰক।</string>
+    <string name="fragment_location_apps_title">লোকেশন এক্সেছ থকা এপসমূহ</string>
+    <string name="location_app_last_access_at">শেষ এক্সেছ: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="pref_location_app_force_coarse_title">কাৰ্স লোকেচন জোৰ কৰক</string>
+    <string name="pref_location_app_force_coarse_summary">এই এপৰ অনুমতিৰ স্তৰক আওকাণ কৰি সদায় কাৰ্স লোকেচন প্ৰদান কৰক।</string>
+    <string name="prefcat_app_last_location">শেষৰপৰ্যায়ে প্ৰদান কৰা লোকেচন</string>
+    <string name="location_settings_dialog_message_title_for_better_experience">ভাল অভিজ্ঞতাৰ বাবে, ডিভাইচ লোকেচন অন কৰক, যিয়ে microG-ৰ লোকেচন সেৱা ব্যৱহাৰ কৰে</string>
+    <string name="location_settings_dialog_message_title_to_continue">আগবাঢ়িবলৈ, ডিভাইচ লোকেচন অন কৰক, যিয়ে microG-ৰ লোকেচন সেৱা ব্যৱহাৰ কৰে</string>
+    <string name="location_settings_dialog_message_details_start_paragraph">আপোনাৰ ডিভাইচটোৰ প্ৰয়োজন হ\'ব:</string>
+    <string name="location_settings_dialog_message_location_services_gps_and_nlp">GPS, Wi‑Fi, চেল নেটৱৰ্ক আৰু চেঞ্চৰসমূহ ব্যৱহাৰ কৰক</string>
+    <string name="location_settings_dialog_message_grant_permissions">microG সেৱাক লোকেচন পাৰমিছন প্ৰদান কৰক</string>
+    <string name="location_settings_dialog_message_gls_consent">microG লোকেচন সেৱা ব্যৱহাৰ কৰক; এই সেৱাৰ অংশ হিচাপে, microG-ই পৰ্যায়িকভাৱে লোকেচন ডাটা সংগ্ৰহ কৰিব পাৰে আৰু লোকেচনৰ সঠিকতা আৰু লোকেচন-ভিত্তিক সেৱাসমূহ উন্নত কৰিবলৈ এই ডাটা বেনামী পদ্ধতিৰে ব্যৱহাৰ কৰিব পাৰে।</string>
+    <string name="location_settings_dialog_message_details_end_paragraph">বিশদ জানিবলৈ, স্থানৰ ছেটিংছলৈ যাওক।</string>
+    <string name="location_settings_dialog_btn_cancel">না লাগত নকৰিব</string>
+    <string name="location_settings_dialog_btn_sure">ঠিক আছে</string>
+    <string name="pref_location_custom_url_summary">এয়া এটা কাস্টম চাৰ্ভিচ URL ছেট কৰিবলৈ অনুমতি দিয়ে। অবৈধ মানৰ ফলত লোকেচন চাৰ্ভিচবোৰ অনুপ্ৰতিক্ৰিয়াশীল বা সম্পূৰ্ণৰূপে অনুপলব্ধ হ\'ব পাৰে।</string>
+    <string name="pref_location_custom_url_details">/v1/geolocate পাথেটো স্বয়ংক্ৰিয়ভাৱে সংলগ্ন হয়। যদি লোকেচন প্ৰদানকাৰীৰ এটা কীৰ প্ৰয়োজন হয়, তেন্তে ইয়াক ৰুট URL-ৰ কুৱেৰী পাৰামিটাৰ হিচাপে সংলগ্ন কৰিব পাৰি।</string>
+    <string name="pref_location_custom_url_input_hint">কাস্টম চাৰ্ভিচ URL</string>
+    <string name="pref_location_custom_source_title">কাস্টম</string>
+    <string name="pref_location_source_title">অনলাইন লোকেচন চাৰ্ভিচ নিৰ্বাচন কৰক</string>
+    <string name="pref_location_source_terms">চৰ্তসমূহ / গোপনীয়তা</string>
+    <string name="pref_location_source_suggested">পৰামৰ্শ কৰা</string>
+    <string name="pref_location_import_export_title">লোকেচন ডেটা ইমপোর্ট বা এক্সপৰ্ট কৰক</string>
+    <string name="notification_config_required_title">কনফিগাৰেশন প্ৰয়োজনীয়</string>
+    <string name="notification_config_required_text_online_sources">অনলাইন লোকেচন সেৱাসমূহ ব্যৱহাৰ কৰি থাকিবলৈ, আপুনি এটা লোকেচন ডাটা সেৱা বাছি ল’ব লাগিব।</string>
+    <string name="location_data_export_wifi_title">স্থানীয় Wi-Fi লোকেচন ডাটাবেছ এক্সপৰ্ট কৰক</string>
+    <string name="location_data_export_cell_title">স্থানীয় সেল টাৱাৰ লোকেচন ডাটাবেছ এক্সপৰ্ট কৰক</string>
+    <string name="location_data_import_title">ফাইলৰ পৰা লোকেচন ডাটা ইমপৰ্ট কৰক</string>
+    <string name="location_data_import_result_toast">%1$d টা ৰেকৰ্ড ইমপৰ্ট কৰা হৈছে।</string>
+    <string name="prefcat_location_timeline_title">Google Maps টাইমলাইন</string>
+    <string name="pref_location_timeline_title">লোকেচন ইতিহাস সক্ৰিয় কৰক</string>
+    <string name="pref_location_timeline_summary">"পৰ্যায়িকভাৱে আপোনাৰ লোকেচন তথ্য ৰেকৰ্ড কৰক আৰু ইয়াক Google Maps Timeline-ত উপলব্ধ কৰক।"</string>
+    <string name="pref_location_timeline_upload_title">Google একাউণ্টৰ সৈতে সংগত কৰক</string>
+    <string name="pref_location_timeline_upload_summary">"লোকেচন ইতিহাস Google চাৰ্ভাৰৰ সৈতে সংগত কৰক, যাতে ইয়াক অন্যান্য ডিভাইচত প্ৰদৰ্শন কৰিব পৰা যায়।"</string>
     <!-- RE strings -->
+    <string name="prefcat_location_maps_title">Google Maps</string>
+    <string name="pref_map_engine_title">মেপ ৰেণ্ডাৰেৰ</string>
     <!-- "Mapbox (MapLibre)" must be left untranslated .-->
+    <string name="pref_map_engine_summary">এপ্‌সত মেপ ৰেণ্ডাৰ কৰিবলৈ ব্যৱহাৰ কৰা ইঞ্জিনটো বাছনি কৰক। Mapbox (MapLibre) পৰামৰ্শ কৰা হৈছে।</string>
     <!-- "Stadia Maps" must be left untranslated .-->
+    <string name="pref_stadia_key_title">Stadia Maps API কী</string>
+    <string name="pref_stadia_key_summary">ঐচ্ছিক। এটা Stadia Maps ৰেণ্ডাৰেৰ বিকল্প যোগ কৰে; Stadia-ৰ বাবে এটা API কী প্ৰয়োজন।</string>
     <!-- "HMS (Huawei Map Kit)" must be left untranslated .-->
+    <string name="pref_hms_key_title">HMS (Huawei Map Kit) API key</string>
+    <string name="pref_hms_key_summary">ঐচ্ছিক। এটা HMS ৰেণ্ডাৰেৰ বিকল্প যোগ কৰে; ডিভাইচত HMS Core প্ৰয়োজন।</string>
 </resources>

@@ -4,6 +4,7 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="service_name_location">Жайгашкан жер</string>
     <!-- RE strings -->
     <!-- "Mapbox (MapLibre)" must be left untranslated .-->
     <!-- "Stadia Maps" must be left untranslated .-->

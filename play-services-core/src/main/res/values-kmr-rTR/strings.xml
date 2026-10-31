@@ -12,6 +12,7 @@
     <string name="ask_service_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> dixwaze bi kar bîne:</string>
     <string name="account_manager_title">Rêveberê Hesabê Google</string>
     <string name="sorry">Bibore…</string>
+    <string name="auth_before_connect">Hesaba Google bi microG ve girê bide.\n\nWerin em bi hesabekî Google ve girê bidin, tombola <b>Sign in</b> an jî tombola <b>Huawei</b> bikar bînin heke amûra we ya vê hilberînerê be. Bi tekanîna yek ji tombolan, hûn ê werin veguhastin rûpelê têketina hesabê xwe.</string>
     <string name="auth_connecting">"Cîhaza we têkiliyek bi serverên Google re çêdike da ku hûn têkevin.
 
 Ev dikare çend çirkan bidome."</string>
@@ -25,14 +26,148 @@ Paşê carek din biceribînin."</string>
 
 Ev dikare çend deqîqan bidome."</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> hewceyî desthilatdariya we ye ku bigihîje hesabê we yê Google.</string>
+    <string name="auth_package_override_request_title">Rê bide <b><xliff:g example="F-Droid">%1$s</xliff:g></b> gihîştina îmtiyazdar ji bo <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> dixwaze gihîştina hesabê we bike wekî ku ew <b><xliff:g example="F-Droid">%2$s</xliff:g> ji aliyê <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b> be. Ev dikare gihîştineke îmtiyazdar ji bo hesabê we bide.</string>
     <string name="auth_action_notification_channel_name">Hişyariyên hesabê Google</string>
     <string name="auth_action_notification_channel_description">Dema ku yek ji hesabên we yên Google hewceyî sazkirina zêde ye berî ku bê bikaranîn an jî dema ku hesabek bi microG re ne hevaheng e, agahdar dike.</string>
     <string name="auth_action_notification_title">Çalakiyek ji bo hesabê pêwîst e</string>
+    <string name="auth_action_notification_content">Hesaba Google a te pêdiviya bi mîsalkirina zêde heye.</string>
+    <string name="auth_action_reauth_notification_title">Çalakiyên hesab pêwîst in</string>
+    <string name="auth_action_activity_header">Sazkirina hesaba xwe ya Google bi dawî bike</string>
+    <string name="auth_action_activity_explanation">Ji bo ku tu bikar bînî hesaba xwe ya Google %s li ser vê ampirê, gavên xwarê temam bike.</string>
+    <string name="auth_action_step_enable_checkin">Tomarkirina ampirî çalak bike</string>
+    <string name="auth_action_step_enable_checkin_description">"Divê amûra te herî kêm carekê li Google qedandibe.
+
+Tu dikarî qedandina amûra Google piştî ku sazkirina hesabê bi dawî bû rakirî."</string>
+    <string name="auth_action_step_enable_gcm">Cloud Messaging çalak bike</string>
+    <string name="auth_action_step_enable_gcm_description">Piştî ku sazkirina hesab bi dawî bû, tu dikarî Cloud Messaging rakirî bike.</string>
+    <string name="auth_action_step_allow_microg_gcm">Cloud Messaging ji bo microG bidestnixe</string>
+    <string name="auth_action_step_allow_microg_gcm_description">Li gorî tercîhên te, microG pêdiviya bi destûra te heye berî ku ew xwe ji bo Cloud Messaging tomar bike.</string>
+    <string name="auth_action_step_enable_lockscreen">Qulkirina ekranê ya ewle bicihkîne</string>
+    <string name="auth_action_step_enable_lockscreen_description">"Hesaba Google a we ji hêla cihê we yê kar an jî saziyê we ya perwerdehiyê ve tê birêvebirin. Adminê we biryar da ku berî gihîştina daneyên hesabê, divê amûr qulkirineke ekranê ya ewle hebe.
+
+Ji kerema xwe şîfreyek, PINek, an qulkirineke şablonê bicihkînin."</string>
+    <string name="auth_action_step_perform_content_description">Ji bo encamdana gava biçîke</string>
+    <string name="auth_action_step_completed_content_description">Gav hat temamkirin</string>
+    <string name="auth_action_activity_finish">Bitevî</string>
+    <string name="signin_picker_subtitle">ji bo berdewamkirinê ber bi <xliff:g example="F-Droid">%1$s</xliff:g></string>
+    <string name="signin_confirm_title">Rê bide ku tu di <xliff:g example="F-Droid">%1$s</xliff:g> de têkevî</string>
+    <string name="signin_subtext_sharing">Ji bo berdewamkirinê, microG dê nav, navnîşana e-mailê û wêneyê profîlê Hesaba Google a we bi <xliff:g example="F-Droid">%1$s</xliff:g> parve bike.</string>
+    <string name="perm_provision_label">xizmetên microG amade bike</string>
+    <string name="perm_provision_description">Rêwîyî dide aplikasyonê ku xizmetên microG bêyî destwerdana bikarhêner configure bike</string>
+    <string name="perm_car_speed_label">Leza erebeyê</string>
+    <string name="perm_car_speed_description">"Gihîştina leza erebeya te"</string>
+    <string name="perm_car_info_label">Agahiyên erebeyê</string>
+    <string name="perm_car_info_description">"Gihîştina agahiyên erebeya te"</string>
+    <string name="perm_car_fuel_label">Astê sotmena erebeyê</string>
+    <string name="perm_car_fuel_description">"Gihîştina agahiyên astê sotmena erebeya te"</string>
+    <string name="perm_car_mileage_label">Mîlajê erebeyê</string>
+    <string name="perm_car_mileage_description">"Gihîştina agahiyên mîlajê erebeya te"</string>
+    <string name="perm_car_vendor_extension_label">Kanala forvendayê ya otomobîlan</string>
+    <string name="perm_car_vendor_extension_description">"Ji bo pevguhertina agahiyên taybet ên otomobîlan, gihîştina kanalê ya forvendayê ya otomobîla xwe bikin"</string>
+    <string name="service_name_checkin">Tomara Amûrê</string>
+    <string name="service_name_mcs">Peyamên Ewira</string>
+    <string name="service_name_device_attestation">Şahidiya Amûrê</string>
+    <string name="service_name_vending">Xizmetên Play Store</string>
+    <string name="service_name_work_profile">Profila xebatê</string>
+    <string name="games_title">Lîstikên Google Play</string>
+    <string name="games_info_title"><xliff:g example="F-Droid">%1$s</xliff:g> dixwaze Lîstikên Play bikar bîne</string>
+    <string name="games_info_content">Ji bo bikaranîna Lîstikên Play, divê sepana Lîstikên Google Play bê sazkirin. Sepana dikare bêyî Lîstikên Play jî berdewam bike, lê dibe ku bi awayekî neyîsperê tevdigere.</string>
+    <string name="pick_place_title">Cihekî hilbijêre</string>
+    <string name="place_picker_select_title">Vê cihî bijêre</string>
+    <string name="place_picker_nearby_places">Cihên nêzîk</string>
     <!-- Self check -->
+    <string name="self_check_name_system_spoofs">Sîstema spoof dike signature: </string>
+    <string name="self_check_resolution_system_spoofs">Ji kerema xwe belgeyên derbasî kontrol bike ka kîjan gav pêwîst in.</string>
+    <string name="self_check_pkg_gms">Xizmetên microG</string>
+    <string name="self_check_pkg_vending">Hevalê microG / Play Store</string>
+    <string name="self_check_pkg_gsf">Çarçoveya Xizmetên microG</string>
+    <string name="self_check_name_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> hatiye sazkirin: </string>
+    <string name="self_check_resolution_app_installed">Sepoka <xliff:g example="F-Droid">%1$s</xliff:g> an jî yekî guncav sazkirin. Ji kerema xwe li belgeyan binêre ka kîjan sepok guncav in.</string>
+    <string name="self_check_name_correct_sig"><xliff:g example="F-Droid">%1$s</xliff:g> îmze ya rast heye: </string>
+    <string name="self_check_resolution_correct_sig">An jî <xliff:g example="F-Droid">%1$s</xliff:g> ê hatî sazkirin ne li gorî ye an jî spoofing-a îmzayê ji bo wê neçalak e. Ji kerema xwe li belgeyên derbarê wê yên ku kîjan aplikasyon û ROM li gorî ne binêre.</string>
+    <string name="self_check_name_battery_optimizations">Optimîzasyonên bateriyê yên hatine paşguhkirin:</string>
+    <string name="self_check_resolution_battery_optimizations">Li vir bitikîne da ku optimîzasyonên bateriyê bêçalak bikî. Heke tu vê nekî, dibe ku aplikasyon ne rast bixebitin.</string>
     <!-- Settings strings -->
+    <string name="cond_gcm_bat_summary">Te Cloud Messaging çalak kir lê optimîzasyonên bateriyê ji bo Servîsên microG çalak in. Ji bo ku agahdariyên push bigihîjin, divê tu optimîzasyonên bateriyê paşguh bikî.</string>
+    <string name="prefs_account">Mînasên hesabê</string>
+    <string name="prefs_account_privacy">Agahiyên kesane &amp; dîmenê taybet</string>
+    <string name="prefs_account_security">Temamkirina nasnameyê &amp; ewlehî</string>
+    <string name="pref_auth_trust_google_summary">Dema ku bêçalak be, berî ku daxwaza authorization-a aplikasyonekê ji Google re were şandin, ji bikarhêner re tê pirsîn. Heke ev bêçalak be, hinek aplikasyon dê li ser bikarhîstina hesabê Google bi ser nekevin.</string>
+    <string name="pref_auth_visible_summary">Gava tê aktîvkirin, hemû aplikasyonên li ser vê amûrê dê bikaribin navnîşana e-peyama Hesabên Google ên we bêyî destûra pêşîn bibînin.</string>
+    <string name="pref_auth_include_android_id_summary">Dema bêkar kirin, daxwazên pejirandinê nayên girêdan bi qeydkirina ampirî, ku dibe ku rê bide ampirên nayên pejirandî têkevin, lê dibe ku encamên nayên pêşbînî bikeve.</string>
+    <string name="pref_auth_strip_device_name_summary">Dema were aktive kirin, daxwazên pejirandinê navê ampirî nayên navda, ku dibe ku rê bide ampirên nayên pejirandî têkevin, lê dibe ku encamên nayên pêşbînî bikeve.</string>
+    <string name="pref_auth_two_step_verification_title">Daxwazên pejirandina du-qalan werbigire</string>
+    <string name="pref_auth_two_step_verification_summary">Dema were aktive kirin, ampir dikare daxwazên pejirandina du-qalan ji Google werbigire (Cloud Messaging pêwîst e).</string>
+    <string name="pref_auth_allow_find_devices_title">Rê bide bersiva Google Device Finder</string>
+    <string name="pref_auth_allow_find_devices_summary">Dema were aktive kirin, ampir dikare bersiva agahdariyên \"Find My Device\" ji Google bide (Cloud Messaging pêwîst e).</string>
+    <string name="pref_checkin_enable_summary">Ampirê we di xizmetên Google de qeydkirine û nasnameyeke taybet a ampirî çêdike. microG bîtên nasîner ji pêyên qeydkirinê j bibliographic navê hesabê we yê Google jê dibere.</string>
+    <string name="checkin_last_registration">Qeydkirina dawî: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="pref_accounts_title">Hesab</string>
+    <string name="pref_game_accounts_title">Hesabên Lîstikên Google</string>
     <string name="prefcat_accounts_settings_title">Nastîn</string>
+    <string name="snackbar_accounts_restored">%1$d hesab(an) hatin vegerandin</string>
+    <string name="auth_add_account">Hesabê Zêde Bike</string>
+    <string name="pref_add_account_summary">Hesaba Google zêde bike</string>
+    <string name="pref_gcm_enable_mcs_summary">Cloud Messaging dabeşkerê agahdarkirinên push e ku ji hêla gelek sepanên third-party ve tê bikaranîn. Ji bo bikaranîna wê, divê hûn tomarkirina amûrê çalak bikin.</string>
     <string name="pref_hide_launcher_icon">Îkona launcherê veşêre</string>
+    <string name="hide_launcher_icon_dialog_message">Heke hatîn çalakkirin, MicroG dê di launcher-a appên te de veşartî be. MicroG dikare ji agahiyên appê yên di lîsteya appên sîstemê ya amûrê de bê vekirin.</string>
+    <string name="hide_launcher_icon_updating_title">Ji kerema xwe li benda nûkirina appê bimîne</string>
+    <string name="update_include_prerelease">Avahiyên dev bide nav</string>
+    <string name="update_available_message">v%1$s ya nû berdest e. Versiyona v%2$s hatî sazkirin. Nûkirinê daxînin û sazkirin?</string>
+    <string name="update_ignore">Paşguh bike</string>
+    <string name="update_downloading_title">Nûkirin tê daxistin…</string>
+    <string name="update_download_failed">Daxistin bi ser neket. Girêdana xwe kontrol bike û careke din ceribîne.</string>
+    <string name="update_signature_mismatch">App nikare bê nûkirin, îmza ne wek hev in.</string>
+    <string name="update_failed_title">Nûkirin bi ser neket</string>
+    <string name="update_permission_required_title">Destûr pêwîst e</string>
+    <string name="update_permission_required_message">Ji bo sazkirina nûkirinan, ji kerema xwe rê bide MicroG ku appên nayên naskirin di setingên sîstemê de sazkirine.</string>
     <string name="update_open_settings">Nastîn</string>
+    <string name="update_check_failed">Nûkirin nehatin dîtin. Girêdana xwe kontrol bike û careke din ceribîne.</string>
+    <string name="update_up_to_date_title">Hûn li ser herî nû ne</string>
+    <string name="update_up_to_date_message">MicroG-RE v%s herî nû ye.</string>
+    <string name="update_notification_title">Nûkirin heye</string>
+    <string name="update_notification_text">v%s ya nû berdest e, ji bo nûkirinê bitike</string>
+    <string name="update_notification_channel">Nûkirin</string>
+    <string name="update_notification_permission_title">Agahdarî</string>
+    <string name="update_notification_permission_message">Ji bo ku em we agahdar bikin gava nûvekirineke nû hebe, MicroG-RE hewcedariya destûrê heye da ku agahdariyan bişîne. Ji kerema xwe destûrê bide agahdariyan da ku agahdariyên nûvekirinê bigihîjin we.</string>
+    <string name="update_notification_permission_allow">Rê bide</string>
+    <string name="update_notification_permission_not_now">Ne niha</string>
+    <string name="update_notification_permission_open_settings">Mîhengên veke</string>
+    <string name="gcm_last_message_at">Nameya dawî: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_registered_since">Ji <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g> ve hatî tomarkirin</string>
+    <string name="gcm_unregister_confirm_title"><xliff:g example="F-Droid">%1$s</xliff:g> ji tomarkirinê derxe?</string>
+    <string name="gcm_unregister_confirm_message">Hinek aplikasyon bi xwe neyên tekrar-têqeykirin û/an veguherîneke xwe ya destî naxînin. Ev aplikasyon dibe ku piştî jêhatineqeykirinê rast nekarin.\nBidomîne?</string>
+    <string name="gcm_unregister_after_deny_message">Te destûr neda aplikasyonekî ku ji berê ve hatibû qeydkirin ji bo agahdariyên push.\nMa tu dixwazî niha wê jê bikişînî da ku di pêşerojê de peyamên push wernegrin?</string>
+    <string name="gcm_messages_counter">Namey: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> bytes)</string>
+    <string name="gcm_network_state_connected">Ji <xliff:g example="2 hours ago">%1$s</xliff:g> ve têkiliyê daye</string>
+    <string name="gcm_enable_switch">Agahdarkirinên push werbike</string>
+    <string name="gcm_allow_app_popup">Rê bide <xliff:g example="F-Droid">%1$s</xliff:g> ku ji bo agahdariyên push qeyd bibe?</string>
+    <string name="pref_push_app_allow_register_summary">Destûr bide aplikasyonî ku ji bo agahdariyên push xwe qeydkirine.</string>
+    <string name="pref_push_app_wake_for_delivery_summary">Aplikasyonê di paşbingavê de destpê bike da ku peyamên push ên hatine werbigire.</string>
+    <string name="safetynet_intro">Google SafetyNet pergaleke sertîfikasyona amîrê ye, ku piştrast dike ku amîr bi awayekî rast ewle ye û bi Android CTS re li hev tê. Hin sepan ji bo sedemên ewlehiyê an wekî şertekî pêşîn ji bo parastina li dijî destkarîyan SafetyNetê bikar tînin.\n\nmicroG GmsCore jimsaziyeke belaş a SafetyNetê dihewîne, lê servera fermî daxwaz dike ku daxwazên SafetyNet bi rêya pergala xwedî DroidGuard bên îmzekirin.</string>
+    <string name="safetynet_enable_switch">Rê bide şahidiyên amîrê</string>
+    <string name="pref_safetynet_test_title">Testkirina şahidiya SafetyNet</string>
+    <string name="pref_recaptcha_test_title">Testkirina ReCAPTCHA</string>
+    <string name="pref_recaptcha_enterprise_test_title">Testkirina ReCAPTCHA Enterprise</string>
+    <string name="pref_test_summary_passed">Hemû test derbas bûn</string>
+    <string name="pref_test_summary_failed">Têk çû: %s</string>
+    <string name="pref_test_summary_warn">Hişyarî: %s</string>
+    <string name="pref_test_summary_running">Dixebite…</string>
+    <string name="pref_droidguard_unsupported_summary">Bikeşandina DroidGuard li ser vê amûrê nayê piştkirin. Xizmetên SafetyNet dibe ku ne rast bixebitin.</string>
+    <string name="prefcat_safetynet_apps_title">Appên ku SafetyNetê bikar tînin</string>
+    <string name="prefcat_device_attestation_apps_title">Appên ku Device Attestation bikar tînin</string>
+    <string name="pref_device_attestation_app_allow_requests_title">Daxwazan rêbide</string>
+    <string name="pref_device_attestation_app_allow_requests_summary">Rê bide ku app daxwaza device attestationê bike</string>
+    <string name="menu_clear_recent_requests">Daxwazên dawî paqij bike</string>
+    <string name="safetynet_last_run_at">Bikaranîna dawî: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="pref_safetynet_recent_uses">Bikaranînên dawî</string>
+    <string name="pref_safetynet_recent_attestation_summary">Piştekirandin: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_summary">ReCaptcha: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_enterprise_summary">ReCaptcha Enterprise: %s</string>
+    <string name="credentials_assisted_cancel">Betal bike</string>
+    <string name="credentials_assisted_choose_account_subtitle">bo domandina li %1$s</string>
+    <string name="games_delete_snapshot_dialog_cancel">Betal bide</string>
     <string name="games_delete_profile_dialog_message">Ev çalakî nikare bê paşve kirin.</string>
     <string name="games_delete_profile_fail">Nehate ku profîla we were jêbirin. Paşê carek din biceribînin.</string>
     <string name="games_delete_game_data_confirm_dialog_title">Daneyên ji bo %1$s jê bibe</string>
@@ -102,5 +237,14 @@ Ev dikare çend deqîqan bidome."</string>
     <string name="pref_passkey_manager_transport_bluetooth">Bluetooth</string>
     <string name="pref_passkey_manager_transport_hybrid">Hîbrîd</string>
     <string name="pref_passkey_manager_credential_id_format_internal">ID: %1$s</string>
+    <string name="morphe_sign_in_with_google_microg_label">Bi Google têkeve bi rêya MicroG RE</string>
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Varyantaleleyaleya arkitektûrê ya şaş hatî sazkirin</string>
+    <string name="abi_mismatch_message">"Ev avahîya MicroG-RE tenê pîpên 64-bit (arm64) dihewîne, lê ev amûr li ser userspace-a 32-bit dimeşe.
+
+Taybetmendiyên ku hewcedariya wan bi Conscrypt heye (çûna hesabê, streaming, BotGuard, spoofkirina streamingên vîdyoyê, SponsorBlock, Return YouTube Dislike, û hwd.) nayên xebitandin û dibe ku bibine sedema pirsgirêkên lîstkirinê an jî \"Unable to find a default SSL provider\".
+
+Li şûma vê, APKya ARMv7 an Universal sazkirin."</string>
+    <string name="abi_mismatch_download_armv7">APK ya ARMv7 daxîne</string>
+    <string name="abi_mismatch_downloading_title">Variant ya rast tê daxînin…</string>
 </resources>

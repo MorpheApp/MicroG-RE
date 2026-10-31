@@ -3,4 +3,22 @@
   ~ SPDX-FileCopyrightText: 2020, microG Project Team
   ~ SPDX-License-Identifier: Apache-2.0
   -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="foreground_service_notification_title">Atzamaruan aktibo</string>
+    <string name="foreground_service_notification_text"><xliff:g example="Exposure Notification">%1$s</xliff:g> atzamaruan korrika dago.</string>
+    <string name="foreground_service_notification_big_text">Kanpoko <xliff:g example="microG Services">%1$s</xliff:g> bateria-optimizazioetatik edo alda tu jakinarazpen-konfigurazioa jakinarazpen hau ezagutzeko.</string>
+    <string name="foreground_action_battery_optimization">Bateriaren optimizazioa</string>
+    <string name="foreground_action_notification_settings">Konfigurazioa</string>
+    <string name="menu_advanced">Aurreratu</string>
+    <string name="menu_settings">Konfigurazioa</string>
+    <string name="menu_game_managed">Kudeatutako joko-kontuak</string>
+    <string name="list_no_item_none">Ezik</string>
+    <string name="list_item_see_all">Denak ikusi</string>
+    <string name="open_app">Ikus</string>
+    <string name="service_status_disabled">Desaktibatuta</string>
+    <string name="service_status_enabled">Aktibatuta</string>
+    <string name="service_status_automatic">Automatikoa</string>
+    <string name="service_status_manual">Manuala</string>
+    <string name="service_status_enabled_short">Bai</string>
+    <string name="service_status_disabled_short">Ez</string>
+</resources>

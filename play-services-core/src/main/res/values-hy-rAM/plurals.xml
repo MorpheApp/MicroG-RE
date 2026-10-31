@@ -14,4 +14,17 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="gcm_registered_apps_counter">
+        <item quantity="one"><xliff:g example="1">%1$d</xliff:g> գրանցված հավելված</item>
+        <item quantity="other"><xliff:g example="123">%1$d</xliff:g> գրանցված հավելվածներ</item>
+    </plurals>
+    <plurals name="cond_perm_summary">
+        <item quantity="one">microG ծառայությունների պատշաճ գործառնության համար անհրաժեշտ թույլտվությունը տրված չէ:</item>
+        <item quantity="other">microG ծառայությունների պատշաճ գործառնության համար անհրաժեշտ թույլտվությունները տրված չեն:</item>
+    </plurals>
+    <plurals name="cond_perm_action">
+        <item quantity="one">Հարցնել բացակայող թույլտվության մասին</item>
+        <item quantity="other">Հարցնել բացակայող թույլտվությունների մասին</item>
+    </plurals>
+</resources>

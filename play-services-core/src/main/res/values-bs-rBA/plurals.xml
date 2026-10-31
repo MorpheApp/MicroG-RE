@@ -14,4 +14,20 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="gcm_registered_apps_counter">
+        <item quantity="one"><xliff:g example="1">%1$d</xliff:g> registrirana aplikacija</item>
+        <item quantity="few"><xliff:g example="123">%1$d</xliff:g> registrovane aplikacije</item>
+        <item quantity="other"><xliff:g example="123">%1$d</xliff:g> registrovanih aplikacija</item>
+    </plurals>
+    <plurals name="cond_perm_summary">
+        <item quantity="one">Dozvola potrebna za pravilno funkcionisanje microG usluga nije dodijeljena.</item>
+        <item quantity="few">Dozvole potrebne za pravilno funkcionisanje microG usluga nisu dodijeljene.</item>
+        <item quantity="other">Dozvole potrebne za pravilno funkcionisanje microG usluga nisu dodijeljene.</item>
+    </plurals>
+    <plurals name="cond_perm_action">
+        <item quantity="one">Zatraži nedostajuću dozvolu</item>
+        <item quantity="few">Zatraži nedostajuće dozvole</item>
+        <item quantity="other">Zatraži nedostajuće dozvole</item>
+    </plurals>
+</resources>

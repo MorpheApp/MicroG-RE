@@ -3,4 +3,22 @@
   ~ SPDX-FileCopyrightText: 2020, microG Project Team
   ~ SPDX-License-Identifier: Apache-2.0
   -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="foreground_service_notification_title">Ակտիվ է հետնապլանում</string>
+    <string name="foreground_service_notification_text"><xliff:g example="Exposure Notification">%1$s</xliff:g>-ն աշխատում է հետնապլանում:</string>
+    <string name="foreground_service_notification_big_text">Բացառեք <xliff:g example="microG Services">%1$s</xliff:g>-ը մարտկոցի օպտիմալացումից կամ փոխեք ծանուցումների կարգավորումները այս ծանուցումը թաքցնելու համար:</string>
+    <string name="foreground_action_battery_optimization">Մարտկոցի օպտիմալացում</string>
+    <string name="foreground_action_notification_settings">Կարգավորումներ</string>
+    <string name="menu_advanced">Ընդլայնված</string>
+    <string name="menu_settings">Կարգավորումներ</string>
+    <string name="menu_game_managed">Կառավարվող խաղային հաշիվներ</string>
+    <string name="list_no_item_none">Ոչինչ</string>
+    <string name="list_item_see_all">Տեսնել բոլորը</string>
+    <string name="open_app">Բացել</string>
+    <string name="service_status_disabled">Անջատված է</string>
+    <string name="service_status_enabled">Միացված է</string>
+    <string name="service_status_automatic">Ավտոմատ</string>
+    <string name="service_status_manual">Ձեռքով</string>
+    <string name="service_status_enabled_short">Միացված</string>
+    <string name="service_status_disabled_short">Անջատված</string>
+</resources>

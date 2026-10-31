@@ -36,6 +36,9 @@ Bandykite dar kartą vėliau."</string>
     <string name="auth_finalize">"Jūsų įrenginys susisiekia su Google, kad išsaugotų informaciją į jūsų paskyrą.
 
 Tai gali užtrukti porą minučių."</string>
+    <string name="allow">Leidti</string>
+    <string name="deny">Atmesti</string>
+    <string name="auth_notification_title">Reikalingas autentifikavimas</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> reikalauja jūsų leidimo pasiekti jūsų Google paskyrą.</string>
     <string name="auth_package_override_request_title">Leisti <b><xliff:g example="F-Droid">%1$s</xliff:g></b> privilegijuotą prieigą prie <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
     <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> nori pasiekti jūsų paskyrą taip, lyg būtų <b><xliff:g example="F-Droid">%2$s</xliff:g>, kurią sukūrė <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Tai gali suteikti jai privilegijuotą prieigą prie jūsų paskyros.</string>
@@ -67,6 +70,12 @@ Nustatykite ekrano užraktą naudodami slaptažodį, PIN kodą arba šabloną."<
     <string name="signin_confirm_title">Leisti jums prisijungti prie <xliff:g example="F-Droid">%1$s</xliff:g></string>
     <string name="signin_confirm_button_text">Leisti ir dalintis</string>
     <string name="signin_subtext_sharing">Kad galėtumėte tęsti, microG pasidalins jūsų Google paskyros vardu, jos el. pašto adresu ir profilio nuotrauka su <xliff:g example="F-Droid">%1$s</xliff:g>.</string>
+    <string name="perm_status_broadcast_label">sekti vidinius būsenos pranešimus</string>
+    <string name="perm_gsf_read_gservices_label">skaityti „Google“ paslaugos konfigūraciją</string>
+    <string name="perm_c2dm_receive_label">sekti C2DM žinutes</string>
+    <string name="perm_c2dm_send_label">siųsti C2DM žinutes į kitas programėles</string>
+    <string name="perm_gtalk_svc_label">keistis žinutėmis ir gauti sinchronizavimo pranešimus iš „Google“ serverių</string>
+    <string name="perm_extended_access_label">Išplėstinė prieiga prie „Google“ paslaugų</string>
     <string name="perm_provision_label">konfigūruoti microG paslaugas</string>
     <string name="perm_provision_description">Leidžia programai be vartotojo sąveikos konfigūruoti microG paslaugas</string>
     <string name="perm_car_speed_label">Automobilio greitis</string>
@@ -92,8 +101,12 @@ Nustatykite ekrano užraktą naudodami slaptažodį, PIN kodą arba šabloną."<
     <string name="place_picker_nearby_places">Netoliese esančios vietos</string>
     <string name="network_type_mobile">Mobilusis ryšys</string>
     <string name="network_type_wifi">Wi-Fi</string>
+    <string name="network_type_roaming">Rovingas</string>
     <string name="network_type_other">Kiti tinklai</string>
     <!-- Self check -->
+    <string name="self_check_cat_fake_sig">Parašo klastavimo palaikymas</string>
+    <string name="self_check_cat_gms_packages">Įdiegtos paketės</string>
+    <string name="self_check_cat_system">Sistema</string>
     <string name="self_check_name_system_spoofs">Sistema klastoja parašą: </string>
     <string name="self_check_resolution_system_spoofs">Dokumentacijoje patikrinkite, kokių veiksmų gali prireikti.</string>
     <string name="self_check_pkg_gms">microG paslaugos</string>
@@ -107,23 +120,40 @@ Nustatykite ekrano užraktą naudodami slaptažodį, PIN kodą arba šabloną."<
     <string name="self_check_resolution_battery_optimizations">Palieskite čia, kad išjungtumėte baterijos optimizavimą. To nepadarius, programos gali elgtis netinkamai.</string>
     <!-- Settings strings -->
     <string name="prefcat_about">Apie</string>
+    <string name="prefcat_details">Informacija</string>
+    <string name="cond_gcm_bat_title">Akumuliatoriaus optimizavimas įjungtas</string>
     <string name="cond_gcm_bat_summary">Įjungėte Cloud Messaging, bet microG paslaugoms taikomas baterijos optimizavimas. Kad gautumėte stumiamuosius pranešimus, turėtumėte nepaisyti baterijos optimizavimo.</string>
+    <string name="cond_gcm_bat_action">Ignoruoti optimizavimą</string>
+    <string name="cond_perm_title">Trūksta leidimo</string>
     <string name="prefs_account">Paskyros nuostatos</string>
     <string name="prefs_account_privacy">Asmeninė informacija &amp; privatumas</string>
     <string name="prefs_account_security">Prisijungimas &amp; saugumas</string>
+    <string name="pref_auth_trust_google_title">Pasitikėti „Google“ dėl programėlių leidimų</string>
     <string name="pref_auth_trust_google_summary">Kai išjungta, prieš siunčiant programos autorizacijos užklausą į Google, vartotojo klausiama. Kai kurios programos negalės naudoti Google paskyros, jei ši parinktis išjungta.</string>
+    <string name="pref_auth_visible_title">Leidžiamas programėlėms ieškoti paskyros</string>
     <string name="pref_auth_visible_summary">Kai įjungta, visos šio įrenginio programos galės matyti jūsų Google paskyrų el. pašto adresus be išankstinio leidimo.</string>
+    <string name="pref_auth_include_android_id_title">Autentikuoti naudojant įrenginio registraciją</string>
     <string name="pref_auth_include_android_id_summary">Kai išjungta, autentifikavimo užklausos nebus susietos su įrenginio registracija. Tai gali leisti neautorizuotiems įrenginiams prisijungti, tačiau gali sukelti nenumatytų pasekmių.</string>
+    <string name="pref_auth_strip_device_name_title">Pašalinti įrenginio pavadinimą autentikavimui</string>
     <string name="pref_auth_strip_device_name_summary">Kai įjungta, autentifikavimo užklausose nebus įrenginio pavadinimo. Tai gali leisti neautorizuotiems įrenginiams prisijungti, tačiau gali sukelti nenumatytų pasekmių.</string>
     <string name="pref_auth_two_step_verification_title">Gauti dviejų veiksmų patvirtinimo raginimus</string>
     <string name="pref_auth_two_step_verification_summary">Kai įjungta, įrenginys gali gauti dviejų veiksmų patvirtinimo raginimus iš Google (reikia Cloud Messaging).</string>
     <string name="pref_auth_allow_find_devices_title">Leisti reaguoti į Google įrenginio paiešką</string>
     <string name="pref_auth_allow_find_devices_summary">Kai įjungta, įrenginys gali reaguoti į „Find My Device“ pranešimus iš Google (reikia Cloud Messaging).</string>
     <string name="pref_checkin_enable_summary">Registruoja jūsų įrenginį Google paslaugose ir sukuria unikalų įrenginio identifikatorių. microG pašalina iš registracijos duomenų identifikuojančias dalis, išskyrus jūsų Google paskyros pavadinimą.</string>
+    <string name="pref_device_registration_android_id">„Android“ ID</string>
+    <string name="checkin_not_registered">Neužregistruota</string>
     <string name="checkin_last_registration">Paskutinė registracija: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="checkin_enable_switch">Užregistruoti įrenginį</string>
+    <string name="pref_info_status">Būsena</string>
     <string name="pref_accounts_title">Paskyros</string>
     <string name="pref_game_accounts_title">Google žaidimų paskyros</string>
+    <string name="pref_accounts_summary">Pridėti ir valdyti \"Google\" paskyras</string>
     <string name="prefcat_accounts_settings_title">Nustatymai</string>
+    <string name="prefcat_accounts_login_accounts_title">Prisijungta</string>
+    <string name="prefcat_accounts_options_title">Parinktys</string>
+    <string name="pref_accounts_manage_accounts_title">Valdyti paskyras</string>
+    <string name="pref_accounts_manage_accounts_summary">Atidaryti įrenginio paskyrų valdyklį</string>
     <string name="prefcat_accounts_backup_title">Paskyrų atsarginė kopija</string>
     <string name="pref_accounts_backup_title">Kurti paskyrų atsargines kopijas</string>
     <string name="pref_accounts_backup_summary">Eksportuoti „Google“ paskyras į failą</string>
@@ -136,14 +166,26 @@ Nustatykite ekrano užraktą naudodami slaptažodį, PIN kodą arba šabloną."<
     <string name="snackbar_accounts_restored">Atkurta %1$d paskyra(-os)</string>
     <string name="snackbar_accounts_export_failed">Nepavyko sukurti atsarginės kopijos</string>
     <string name="snackbar_accounts_import_failed">Nepavyko atkurti paskyrų</string>
+    <string name="prefcat_youtube_activity">„YouTube“ veikla</string>
+    <string name="pref_manage_all_history">Valdyti visą istoriją</string>
+    <string name="pref_data_in_youtube">Jūsų duomenys „YouTube“</string>
+    <string name="pref_accounts_login_accounts_summary">Paskyros išsaugomos ir laikomos tik šiame įrenginyje. Bakstelėkite paskyrą, kad visiškai ištrintumėte ją iš šio įrenginio</string>
+    <string name="pref_privacy_title">Privatumas</string>
+    <string name="pref_privacy_summary">Autentifikavimo ir programėlių privatumo nustatymai</string>
     <string name="auth_add_account">Pridėti paskyrą</string>
+    <string name="prefcat_applications">Programėlės</string>
+    <string name="prefcat_authentication">Autentifikavimas</string>
     <string name="pref_add_account_summary">Pridėti Google paskyrą</string>
     <string name="pref_gcm_enable_mcs_summary">Cloud Messaging yra stumiamųjų pranešimų teikėjas, kurį naudoja daug trečiųjų šalių programų. Norėdami naudotis šia paslauga, turite įjungti įrenginio registraciją.</string>
+    <string name="pref_gcm_confirm_new_apps_title">Patvirtinti naujas programėles</string>
+    <string name="pref_gcm_confirm_new_apps_summary">Klausti prieš registruojant naują programėlę stumimo pranešimų gavimui</string>
+    <string name="pref_about_title">Apie MicroG RE</string>
     <string name="pref_hide_launcher_icon">Slėpti piktogramą programų sąraše</string>
     <string name="hide_launcher_icon_dialog_message">Jei įjungta, MicroG bus paslėptas programų sąraše. MicroG galima atidaryti iš programos informacijos, esančios įrenginio sistemos programų sąraše.</string>
     <string name="hide_launcher_icon_updating_title">Palaukite, kol programa atnaujinama</string>
     <string name="pref_language_title">Kalba</string>
     <string name="pref_language_system_default">Sistemos numatytoji</string>
+    <string name="pref_github_summary">Ištekio kodo repozitorijus</string>
     <string name="pref_update_title">Patikrinti ar yra atnaujinimų</string>
     <string name="pref_update_summary">Naujesnės versijos ieškokite „GitHub“.</string>
     <string name="update_include_prerelease">Įtraukti kūrimo versijas</string>
@@ -184,8 +226,25 @@ Nustatykite ekrano užraktą naudodami slaptažodį, PIN kodą arba šabloną."<
     <string name="gcm_network_state_connected">Prisijungta <xliff:g example="2 hours ago">%1$s</xliff:g></string>
     <string name="gcm_enable_switch">Gauti stumiamuosius pranešimus</string>
     <string name="gcm_allow_app_popup">Leisti <xliff:g example="F-Droid">%1$s</xliff:g> registruotis stumiamiesiems pranešimams?</string>
+    <string name="pref_push_app_allow_register_title">Leidžiamas registravimas</string>
     <string name="pref_push_app_allow_register_summary">Leisti programai registruotis stumiamiesiems pranešimams.</string>
+    <string name="pref_push_app_wake_for_delivery_title">Paleisti programėlę gavus stumimo pranešimą</string>
     <string name="pref_push_app_wake_for_delivery_summary">Paleisti programą fone, kad gautų gaunamus stumiamuosius pranešimus.</string>
+    <string name="prefcat_push_apps_title">Programėlės, naudojančios stumimo pranešimus</string>
+    <string name="prefcat_push_apps_registered_title">Užregistruotos programėlės</string>
+    <string name="prefcat_push_apps_unregistered_title">Neužregistruotos programėlės</string>
+    <string name="prefcat_gcm_registers">Registracijos</string>
+    <string name="prefcat_advanced">Išplėstiniai</string>
+    <string name="pref_gcm_remove_registers">Pašalinti visas užregistruotas programėles</string>
+    <string name="pref_gcm_remove_registers_summary">Naudokite šią parinktį tik tuo atveju, jei kyla problemų registruojant programėlę arba gaudant pranešimus</string>
+    <string name="gcm_remove_registers_dialog_title">Pašalinti visus registrus?</string>
+    <string name="gcm_remove_registers_dialog_message">"Dėl to visos registruotos programėlės vienu metu nustos gauti stumimo pranešimų
+
+Norint registruoti programėles, reikės naujo saugumo žymeno securityToken ir AndroidID. Patikrinkite įrenginio registracijos būseną
+
+Kai kurios programėlės po šio veiksmo gali nebegalėti registruotis. Prieš suregistravus jas iš naujo, gali tekti išvalyti jų duomenis"</string>
+    <string name="gcm_remove_registers_toast_message">Visos programėlės pašalintos iš stumimo pranešimų</string>
+    <string name="prefcat_push_networks_title">Tinklai, kurie bus naudojami stumiamosioms pranešimams</string>
     <string name="safetynet_intro">„Google SafetyNet“ yra įrenginio sertifikavimo sistema, užtikrinanti, kad įrenginys yra tinkamai apsaugotas ir suderinamas su Android CTS. Kai kurios programos naudoja SafetyNet saugumo sumetimais arba kaip būtiną sąlygą apsaugai nuo klastojimo.\n\nmicroG GmsCore yra laisvas SafetyNet įgyvendinimas, tačiau oficialus serveris reikalauja, kad SafetyNet užklausos būtų pasirašomos naudojant nuosavybinę DroidGuard sistemą.</string>
     <string name="safetynet_enable_switch">Leisti įrenginio atestavimą</string>
     <string name="pref_safetynet_test_title">Išbandyti SafetyNet atestavimą</string>
@@ -202,6 +261,16 @@ Nustatykite ekrano užraktą naudodami slaptažodį, PIN kodą arba šabloną."<
     <string name="pref_device_attestation_app_allow_requests_summary">Leisti programai prašyti įrenginio atestavimo</string>
     <string name="menu_clear_recent_requests">Išvalyti naujausias užklausas</string>
     <string name="safetynet_last_run_at">Paskutinis naudojimas: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="profile_name_native">Gimtoji kalba</string>
+    <string name="profile_name_real">Tikras</string>
+    <string name="profile_name_user">Pasirinktinis: %s</string>
+    <string name="profile_name_auto">Automatiška: %s</string>
+    <string name="profile_name_system">Sistema: %s</string>
+    <string name="pref_device_registration_import_custom_profile_title">Importuoti pasirinktą profilį</string>
+    <string name="pref_device_registration_serial_title">Serijinis nr</string>
+    <string name="pref_device_registration_import_custom_profile_summary">Importuoti įrenginio profilį iš failo</string>
+    <string name="pref_device_registration_select_profile_title">Pasirinkti profilį</string>
+    <string name="pref_device_registration_device_profile_category">Įrenginio profilis</string>
     <string name="pref_safetynet_recent_uses">Naujausi naudojimai</string>
     <string name="pref_safetynet_recent_attestation_summary">Atestavimas: %s</string>
     <string name="pref_safetynet_recent_recaptcha_summary">reCAPTCHA: %s</string>
@@ -399,8 +468,17 @@ Nustatykite ekrano užraktą naudodami slaptažodį, PIN kodą arba šabloną."<
     <string name="pref_passkey_manager_transport_bluetooth">Bluetooth</string>
     <string name="pref_passkey_manager_transport_hybrid">Hibridinis</string>
     <string name="pref_passkey_manager_credential_id_format_internal">ID: %1$s</string>
+    <string name="self_check_cat_patched_apps">Pataisytos programėlės</string>
+    <string name="self_check_source_morphe">Morphe modifikacijos</string>
+    <string name="self_check_source_alternative">alternatyvios modifikacijos</string>
+    <string name="self_check_resolution_patched_app_installed">Programėlių, naudojančių %1$s, nerasta. Patikslinkite ir įdiegkite modifikuotą programėlę</string>
+    <string name="self_check_name_notifications">Pranešimai leidžiami</string>
+    <string name="self_check_resolution_notifications">Bakstelėkite čia, kad atidarytumėte pranešimų nustatymus. Pranešimai naudojami, kad „GcmService“ veiktų fonine režimu, kai įjungta baterijos optimizavimas arba kitomis sąlygomis</string>
+    <string name="self_check_name_oem_restriction">Foninių procesų apribojimai</string>
     <string name="self_check_resolution_oem_restriction">Jūsų sistema gali apriboti foninius procesus. Bakstelėkite čia, kad atidarytumėte svetainę „Don\'t Kill My App!“ ir sužinotumėte, kaip išjungti šiuos apribojimus</string>
     <string name="morphe_sign_in_with_google_microg_label">Prisijunkite su „Google“ per „MicroG RE“</string>
+    <string name="self_check_patched_app_installed">Veikia su %1$s</string>
+    <string name="self_check_action_download_morphe">Atsisiųsti „Morphe“</string>
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
     <string name="abi_mismatch_title">Įdiegtas netinkamas architektūros variantas</string>
     <string name="abi_mismatch_message">"Ši MicroG-RE versija turi tik 64 bitų (arm64) bibliotekas, tačiau šiame įrenginyje naudojama 32 bitų vartotojo erdvė.

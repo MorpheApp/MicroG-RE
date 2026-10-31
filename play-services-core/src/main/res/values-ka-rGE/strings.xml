@@ -4,8 +4,492 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="dialog_title_remove_account">ანგარიშის წაშლა</string>
+    <string name="dialog_message_remove_account">"დარწმუნებული ხართ, რომ გსურთ ამ ანგარიშის წაშლა?
+
+ზოგიერთი სერვისი და ფუნქცია მიუწვდომელი იქნება
+
+თქვენი მონაცემები არ დაიკარგება"</string>
+    <string name="dialog_confirm_button">წაშლა</string>
+    <string name="dialog_cancel_button">გაუქმება</string>
+    <string name="snackbar_remove_account">ანგარიში %s წაშლილია</string>
+    <string name="snackbar_undo_button">გაუქმება</string>
+    <string name="gms_settings_name">MicroG-ის პარამეტრები</string>
+    <string name="gms_settings_summary">MicroG სერვისების გამართვა.</string>
+    <string name="just_a_sec">ერთი წამით...</string>
+    <string name="ask_permission_tos">გაგრძელებით თქვენ უფლებას აძლევთ ამ აპლიკაციას და Google-ს, გამოიყენონ თქვენი ინფორმაცია მათი შესაბამისი მომსახურების პირობებისა და კონფიდენციალურობის პოლიტიკის შესაბამისად.</string>
+    <string name="ask_scope_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> სურს:</string>
+    <string name="ask_service_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> სურს გამოიყენოს:</string>
+    <string name="account_manager_title">Google Account Manager</string>
+    <string name="sorry">ბოდიში…</string>
+    <string name="auth_before_connect">დააკავშირეთ Google-ის ანგარიში microG-სთან.\n\nმოდით დავაკავშიროთ Google-ის ანგარიში, გამოიყენეთ ღილაკი <b style="font-weight: bold;">შესვლა</b> ან ღილაკი <b style="font-weight: bold;">Huawei</b>, თუ გაქვთ ამ მწარმოებლის მოწყობილობა. ერთ-ერთი ღილაკის დაჭერით თქვენ გადამისამართდებით თქვენს ანგარიშზე შესვლის გვერდზე.</string>
+    <string name="auth_sign_in">შესვლა</string>
+    <string name="auth_connecting">"თქვენი მოწყობილობა ამყარებს კავშირს Google-ის სერვერებთან თქვენი ავტორიზაციისთვის.
+
+ამისთვის შეიძლება რამდენიმე წამი დასჭირდეს."</string>
+    <string name="no_network_error_desc">"თქვენ არ გაქვთ ქსელის კავშირი.
+
+ეს შეიძლება იყოს დროებითი პრობლემა ან თქვენი Android მოწყობილობა შესაძლოა არ იყოს მომზადებული მონაცემთა სერვისებისთვის. სცადეთ ხელახლა მობილურ ქსელთან დაკავშირების შემდეგ, ან დაუკავშირდით Wi-Fi ქსელს."</string>
+    <string name="auth_general_error_desc">"წარმოიშვა პრობლემა Google-ის სერვერებთან კომუნიკაციისას.
+
+სცადეთ მოგვიანებით."</string>
+    <string name="auth_finalize">"თქვენი მოწყობილება უკავშირდება Google-ს ინფორმაციის თქვენს ანგარიშზე შესანახად.
+
+ამისთვის შეიძლება რამდენიმე წუთი დასჭირდეს."</string>
+    <string name="allow">ნებადართვა</string>
+    <string name="deny">უარყოფა</string>
+    <string name="auth_notification_title">საჭიროა ავტორიზაცია</string>
+    <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> თქვენს Google ანგარიშზე წვდომისთვის საჭიროებს თქვენს ავტორიზაციას.</string>
+    <string name="auth_package_override_request_title">ვხედოთ <b><xliff:g example="F-Droid">%1$s</xliff:g></b>-ს პრივილეგირებული წვდომა <xliff:g example="account@example.com">%2$s</xliff:g>-ზე?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b>-ს სურს წვდომა თქვენს ანგარიშზე ისე, თითქოს ის იყოს <b><xliff:g example="F-Droid">%2$s</xliff:g> <xliff:g example="F-Droid Inc.">%3$s</xliff:g>-ის მიერ</b>. ამან შესაძლოა მას თქვენს ანგარიშზე პრივილეგირებული წვდომა მისცეს.</string>
+    <string name="auth_action_notification_channel_name">Google ანგარიშის შეტყობინებები</string>
+    <string name="auth_action_notification_channel_description">გატყობინებთ, როდესაც თქვენი ერთ-ერთი Google ანგარიში საჭიროებს დამატებით კონფიგურაციას გამოყენებამდე, ან როდესაც ანგარიში შეუთავსებელია microG-სთან.</string>
+    <string name="auth_action_notification_title">საჭიროა მოქმედება ანგარიშთან დაკავშირებით</string>
+    <string name="auth_action_notification_content">თქვენი Google რიცხვის დამატებითი კონფიგურაციაა საჭირო.</string>
+    <string name="auth_action_reauth_notification_title">საჭიროა ქმედება ანგარიშთან დაკავშირებით</string>
+    <string name="auth_action_activity_header">დაასრულეთ თქვენი Google ანგარიშის კონფიგურაცია</string>
+    <string name="auth_action_activity_explanation">შეასრულეთ შემდეგი ნაბიჯები, რათა შეძლოთ თქვენი Google ანგარიშის %s გამოყენება ამ მოწყობილობაზე.</string>
+    <string name="auth_action_step_enable_checkin">ჩართეთ მოწყობილობის რეგისტრაცია</string>
+    <string name="auth_action_step_enable_checkin_description">"თქვენი მოწყობილობა მინიმუმ ერთხელ უნდა დარეგისტრირდეს Google-ში.
+
+Google-ის მოწყობილობის რეგისტრაციის გათიშვლა შეგიძლიათ ანგარიშის გამართვის დასრულების შემდეგ."</string>
+    <string name="auth_action_step_enable_gcm">ჩართეთ Cloud Messaging</string>
+    <string name="auth_action_step_enable_gcm_description">თქვენ შეგიძლიათ გამორთოთ Cloud Messaging ანგარიშის კონფიგურაციის დასრულების შემდეგ.</string>
+    <string name="auth_action_step_allow_microg_gcm">ნება დართეთ Cloud Messaging-ის გამოყენება microG-სთვის</string>
+    <string name="auth_action_step_allow_microg_gcm_description">თქვენი პარამეტრების თანახმად, microG-ს სჭირდება თქვენი ნებართვა Cloud Messaging-ისთვის რეგისტრაციის განსახორციელებლად.</string>
+    <string name="auth_action_step_enable_lockscreen">გააკონფიგურირეთ ეკრანის უსაფრთხო დაბლოკვა</string>
+    <string name="auth_action_step_enable_lockscreen_description">"თქვენს Google ანგარიშს მართავს თქვენი სამუშაო ადგილი ან საგანმანათლებლო დაწესებულება. თქვენმა ადმინისტრატორმა გადაწყვიტა, რომ მოწყობილობებს სჭირდებათ ეკრანის უსაფრთხო დაბლოკვა, სანამ ისინი შეძლებენ ანგარიშის მონაცემებზე წვდომას.
+
+გთხოვთ, დააყენოთ პაროლი, PIN კოდი ან გრაფიკული საკლიდო ეკრანი."</string>
+    <string name="auth_action_step_perform_content_description">დააჭირეთ ნაბიჯის შესასრულებლად</string>
+    <string name="auth_action_step_completed_content_description">ნაბიჯი დასრულებულია</string>
+    <string name="auth_action_activity_finish">დასრულება</string>
+    <string name="signin_picker_title">აირჩიეთ ანგარიში</string>
+    <string name="signin_picker_subtitle"><xliff:g example="F-Droid">%1$s</xliff:g>-ზე გასაგრძელებლად</string>
+    <string name="signin_picker_add_account_label">სხვა ანგარიშის დამატება</string>
+    <string name="signin_confirm_title">ნებადართეთ <xliff:g example="F-Droid">%1$s</xliff:g>-ში ავტორიზაცია</string>
+    <string name="signin_confirm_button_text">ნებადართვა და გაზიარება</string>
+    <string name="signin_subtext_sharing">გასაგრძელებლად, microG გაუზიარებს თქვენი Google ანგარიშის სახელს, ელ-ფოსტის მისამართს და პროფილის სურათს <xliff:g example="F-Droid">%1$s</xliff:g>-ს.</string>
+    <string name="perm_status_broadcast_label">შიდა სტატუსის შეტყობინებების მოსმენა</string>
+    <string name="perm_gsf_read_gservices_label">Google-ის სერვისის კონფიგურაციის წაკითხვა</string>
+    <string name="perm_c2dm_receive_label">C2DM შეტყობინებების მოსმენა</string>
+    <string name="perm_c2dm_send_label">C2DM შეტყობინებების გაგზავნა სხვა აპლიკაციებში</string>
+    <string name="perm_gtalk_svc_label">შეტყობინებების გაცვლა და სინქრონიზაციის შეტყობინებების მიღება Google-ის სერვერებიდან</string>
+    <string name="perm_extended_access_label">გაფართოებული წვდომა Google-ის სერვისებზე</string>
+    <string name="perm_provision_label">microG სერვისების კონფიგურაცია</string>
+    <string name="perm_provision_description">AppName-ს საშუალებას აძლევს დააკონფიგურიროს microG სერვისები მომხმარებლის ჩარევის გარეშე</string>
+    <string name="perm_car_speed_label">მანქანის სიჩქარე</string>
+    <string name="perm_car_speed_description">"წვდომა თქვენი მანქანის სიჩქარეზე"</string>
+    <string name="perm_car_info_label">მანქანის შესახებ ინფორმაცია</string>
+    <string name="perm_car_info_description">"წვდომა თქვენი მანქანის ინფორმაციაზე"</string>
+    <string name="perm_car_fuel_label">საწვავის დონე</string>
+    <string name="perm_car_fuel_description">"წვდომა თქვენი მანქანის საწვავის დონის ინფორმაციაზე"</string>
+    <string name="perm_car_mileage_label">მანქანის გარბენილი მანძილი</string>
+    <string name="perm_car_mileage_description">"წვდომა თქვენი მანქანის გარბენილი მანძილის ინფორმაციაზე"</string>
+    <string name="perm_car_vendor_extension_label">მანქანის მწარმოებლის არხი</string>
+    <string name="perm_car_vendor_extension_description">"მიიღეთ წვდომა თქვენი ავტომობილის ვენდორის არხზე ავტომობილისთვის სპეციფიკური ინფორმაციის გასაცვლელად"</string>
+    <string name="service_name_checkin">მოწყობილობის რეგისტრაცია</string>
+    <string name="service_name_mcs">ღრუბლოვანი შეტყობინებები</string>
+    <string name="service_name_device_attestation">მოწყობილობის დადასტურება</string>
+    <string name="service_name_vending">Play Store-ის სერვისები</string>
+    <string name="service_name_work_profile">სამუშაო პროფილი</string>
+    <string name="games_title">Google Play Games</string>
+    <string name="games_info_title"><xliff:g example="F-Droid">%1$s</xliff:g> სურს Play Games-ის გამოყენება</string>
+    <string name="games_info_content">Play Games-ის გამოსაყენებლად საჭიროა Google Play Games აპლიკაციის ინსტალაცია. აპლიკაციამ შესაძლოა გააგრძელოს მუშაობა Play Games-ის გარეშე, თუმცა შესაძლოა ის მოულოდნელად იმოკვრდეს.</string>
+    <string name="pick_place_title">აირჩიეთ ადგილი</string>
+    <string name="place_picker_select_title">აირჩიეთ ეს მდებარეობა</string>
+    <string name="place_picker_nearby_places">ახლოს მდებარე ადგილები</string>
+    <string name="network_type_mobile">მობილური ქსელი</string>
+    <string name="network_type_wifi">Wi-Fi</string>
+    <string name="network_type_roaming">როუმინგი</string>
+    <string name="network_type_other">სხვა ქსელები</string>
     <!-- Self check -->
+    <string name="self_check_cat_fake_sig">ხელმოწერის სპუფინგის მხარდაჭერა</string>
+    <string name="self_check_cat_gms_packages">ინსტალირებული პაკეტები</string>
+    <string name="self_check_cat_system">სისტემა</string>
+    <string name="self_check_name_system_spoofs">სისტემური ხელმოწერის ფალსიფიკაცია: </string>
+    <string name="self_check_resolution_system_spoofs">გთხოვთ, გაეცნოთ დოკუმენტაციას იმ ნაბიჯების შესახებ, რომლებიც შესაძლოა საჭირო გახდეს.</string>
+    <string name="self_check_pkg_gms">microG-ის სერვისები</string>
+    <string name="self_check_pkg_vending">microG Companion / Play Store</string>
+    <string name="self_check_pkg_gsf">microG Services Framework</string>
+    <string name="self_check_name_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> დაინსტალირებულია: </string>
+    <string name="self_check_resolution_app_installed">დააინსტალირეთ აპლიკაცია <xliff:g example="F-Droid">%1$s</xliff:g> ან თავსებადი სხვა აპლიკაცია. გთხოვთ, გაეცნოთ დოკუმენტაციას იმის შესახებ, თუ რომელი აპლიკაციებია თავსებადი.</string>
+    <string name="self_check_name_correct_sig"><xliff:g example="F-Droid">%1$s</xliff:g>-ს აქვს სწორი ხელმოწერა: </string>
+    <string name="self_check_resolution_correct_sig">ან დაინსტალირებული <xliff:g example="F-Droid">%1$s</xliff:g> არ არის თავსებადი, ან მისი ხელმოწერის ფალსიფიკაცია (signature spoofing) არ არის აქტიური. გთხოვთ, გადაამოწმოთ დოკუმენტაცია იმის შესახებ, თუ რომელი აპლიკაციები და ROM-ებია თავსებადი.</string>
+    <string name="self_check_name_battery_optimizations">ბატარეის ოპტიმიზაცია იგნორირებულია:</string>
+    <string name="self_check_resolution_battery_optimizations">შეეხეთ აქ ბატარეის ოპტიმიზაციის გამოსართავად. ამის nicht გაკეთებამ შესაძლოა გამოიწვიოს აპლიკაციების არასწორი მუშაობა.</string>
     <!-- Settings strings -->
+    <string name="prefcat_about">შესახებ</string>
+    <string name="prefcat_details">დეტალები</string>
+    <string name="cond_gcm_bat_title">ელემენტის ოპტიმიზაცია ჩართულია</string>
+    <string name="cond_gcm_bat_summary">თქვენ გაააქტიურეთ Cloud Messaging, თუმცა microG სერვისებისთვის ჩართულია ბატარეის ოპტიმიზაცია. Push შეტყობინებების მისაღებად, თქვენ უნდა დააიგნორიროთ ბატარეის ოპტიმიზაცია.</string>
+    <string name="cond_gcm_bat_action">ოპტიმიზაციის იგნორირება</string>
+    <string name="cond_perm_title">ნებართვა არ არის მინიჭებული</string>
+    <string name="prefs_account">ანგარიშის პარამეტრები</string>
+    <string name="prefs_account_privacy">პერსონალური ინფორმაცია &amp; კონფიდენციალურობა</string>
+    <string name="prefs_account_security">შესვლა და უსაფრთხოება</string>
+    <string name="pref_auth_trust_google_title">ენდეთ Google-ს აპლიკაციის ნებართვებისთვის</string>
+    <string name="pref_auth_trust_google_summary">გამორთვრის შემთხვევაში, მომხმარებელს სთხოვენ დასტურს, სანამ აპლიკაციის ავტორიზაციის მოთხოვნა გაიგზავნება Google-თან. ზოგიერთ აპლიკაციას არ შეეძლება Google ანგარიშის გამოყენება, თუ ეს ფუნქცია გამორთულია.</string>
+    <string name="pref_auth_visible_title">ნებადაਓ აპლიკაციებს ანგარიშების მოძებნა</string>
+    <string name="pref_auth_visible_summary">გააქტიურების შემთხვევაში, ამ მოწყობილობაზე ყველა აპლიკაცია შეძლებს თქვენი Google-ის ანგარიშების ელფოსტის მისამართების ნახვას წინასწარი ავტორიზაციის გარეშე.</string>
+    <string name="pref_auth_include_android_id_title">აუთენტიფიკაცია მოწყობილობის რეგისტრაციით</string>
+    <string name="pref_auth_include_android_id_summary">გამორთვის შემთხვევაში, ავტორიზაციის მოთხოვნები არ იქნება დაკავშირებული მოწყობილობის რეგისტრაციასთან, რამაც შესაძლოა უფლებამოსილების არმქონე მოწყობილობებს შესვლის საშუალება მისცეს, თუმცა ამას შესაძლოა გაუთვალისწინებელი შედეგები მოჰყვეს.</string>
+    <string name="pref_auth_strip_device_name_title">მოწყობილობის სახელის მოცილება აუთენტიფიკაციისთვის</string>
+    <string name="pref_auth_strip_device_name_summary">გააქტიურების შემთხვევაში, ავტორიზაციის მოთხოვნები არ მოიცავს მოწყობილობის სახელს, რამაც შესაძლოა უფლებამოსილების არმქონე მოწყობილობებს შესვლის საშუალება მისცეს, თუმცა ამას შესაძლოა გაუთვალისწინებელი შედეგები მოჰყვეს.</string>
+    <string name="pref_auth_two_step_verification_title">ორეტაპიანი ვერიფიკაციის შეტყობინებების მიღება</string>
+    <string name="pref_auth_two_step_verification_summary">გააქტიურების შემთხვევაში, მოწყობილობას შეუძლია მიიღოს ორეტაპიანი ვერიფიკაციის შეტყობინებები Google-იდან (საჭიროა Cloud Messaging).</string>
+    <string name="pref_auth_allow_find_devices_title">Google-ის მოწყობილობის ამ選びთის პასუხის გაცემის დაშვება</string>
+    <string name="pref_auth_allow_find_devices_summary">გააქტიურების შემთხვევაში, მოწყობილობას შეუძლია უპასუხოს Google-ის „მოიძიე ჩემი მოწყობილება“ შეტყობინებებს (საჭიროა Cloud Messaging).</string>
+    <string name="pref_checkin_enable_summary">არეგისტრირებს თქვენს მოწყობილობას Google-ის სერვისებში და ქმნის მოწყობილობის უნიკალურ იდენტიფიკატორს. microG რეგისტრაციის მონაცემებიდან აშორებს საიდენტიფიკაციო ბიტებს, გარდა თქვენი Google-ის ანგარიშის სახელისა.</string>
+    <string name="pref_device_registration_android_id">Android ID</string>
+    <string name="checkin_not_registered">არ არის რეგისტრირებული</string>
+    <string name="checkin_last_registration">ბოლო რეგისტრაცია: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="checkin_enable_switch">მოწყობილობის რეგისტრაცია</string>
+    <string name="pref_info_status">სტატუსი</string>
+    <string name="pref_accounts_title">ანგარიშები</string>
+    <string name="pref_game_accounts_title">Google Game-ის ანგარიშები</string>
+    <string name="pref_accounts_summary">Google ანგარიშების დამატება და მართვა</string>
+    <string name="prefcat_accounts_settings_title">პარამეტრები</string>
+    <string name="prefcat_accounts_login_accounts_title">ავტორიზებული</string>
+    <string name="prefcat_accounts_options_title">პარამეტრები</string>
+    <string name="pref_accounts_manage_accounts_title">ანგარიშების მართვა</string>
+    <string name="pref_accounts_manage_accounts_summary">მოწყობილობის ანგარიშების მმართველით გახსნა</string>
+    <string name="prefcat_accounts_backup_title">ანგარიშების სარეზერვო ასლი</string>
+    <string name="pref_accounts_backup_title">ანგარიშების სარეზერვო ასლის შექმნა</string>
+    <string name="pref_accounts_backup_summary">Google-ის ანგარიშების ექსპორტი ფაილში</string>
+    <string name="pref_accounts_restore_title">ანგარიშების აღდგენა</string>
+    <string name="pref_accounts_restore_summary">Google ანგარიშების იმპორტი ფაილიდან</string>
+    <string name="pref_accounts_backup_warning_title">ანგარიშების სარეზერვო ასლის შექმნა?</string>
+    <string name="pref_accounts_backup_warning_message">ეს ჩაწერს თქვენს ანგარიშებს და ავტორიზაციის ტოკენებს (SID/LSID) ფაილში. ნებისმიერს, ვინც მოიპოვებს ამ ფაილს, შეეძლება წვდომა თქვენს ანგარიშებზე, ამიტომ შეინახეთ იგი უსაფრთხოდ და არასოდეს გააზიაროთ.</string>
+    <string name="button_backup_accounts">სარეზერვო ასლის შექმნა</string>
+    <string name="snackbar_accounts_backed_up">ანგარიშები დაარეზერვდა</string>
+    <string name="snackbar_accounts_restored">აღდგენილია %1$d ანგარიში</string>
+    <string name="snackbar_accounts_export_failed">სარეზერვო ასლის შექმნა ვერ მოხერხდა</string>
+    <string name="snackbar_accounts_import_failed">აღდგენა ვერ მოხერხდა</string>
+    <string name="prefcat_youtube_activity">YouTube აქტივობა</string>
+    <string name="pref_manage_all_history">მთელი ისტორიის მართვა</string>
+    <string name="pref_data_in_youtube">თქვენი მონაცემები YouTube-ზე</string>
+    <string name="pref_accounts_login_accounts_summary">ანგარიშები ინახება მხოლოდ ამ მოწყობილობაზე. ანგარიშის წასაშლელად დააჭირეთ მას</string>
+    <string name="pref_privacy_title">კონფიდენციალურობა</string>
+    <string name="pref_privacy_summary">კონფიდენციალურობის პარამეტრები ავთენტიფიკაციისა და აპლიკაციებისთვის</string>
+    <string name="auth_add_account">ანგარიშის დამატება</string>
+    <string name="prefcat_applications">აპლიკაციები</string>
+    <string name="prefcat_authentication">აუთენტიფიკაცია</string>
+    <string name="pref_add_account_summary">Google ანგარიშის დამატება</string>
+    <string name="pref_gcm_enable_mcs_summary">Cloud Messaging არის push შეტყობინებების პროვაიდერი, რომელსაც მრავალი მესამე მხარის აპლიკაცია იყენებს. მის გამოსაყენებლად თქვენ უნდა ჩართოთ მოწყობილობის რეგისტრაცია.</string>
+    <string name="pref_gcm_confirm_new_apps_title">ახალი აპლიკაციების დადასტურება</string>
+    <string name="pref_gcm_confirm_new_apps_summary">მოგიკითხოთ ახალი აპლიკაციის რეგისტრაციამდე push შეტყობინებების მისაღებად</string>
+    <string name="pref_about_title">MicroG RE-ს შესახებ</string>
+    <string name="pref_hide_launcher_icon">ხატულის დამალვა ლაუნჩერში</string>
+    <string name="hide_launcher_icon_dialog_message">აქტიურების შემთხვევაში, MicroG დამალული იქნება თქვენს აპლიკაციების გამშვებში. MicroG-ის გახსნა შესაძლებელია მოწყობილობის სისტემური აპლიკაციების სიიდან, აპლიკაციის ინფორმაციის განყოფილებიდან.</string>
+    <string name="hide_launcher_icon_updating_title">გთხოვთ, დაელოდოთ აპლიკაციის განახლებას</string>
+    <string name="pref_language_title">ენა</string>
+    <string name="pref_language_system_default">სისტემური ნაგულისხმევი</string>
+    <string name="pref_github_summary">საწყისი კოდის რეპოზიტორიუმი</string>
+    <string name="pref_update_title">განახლებების შემოწმება</string>
+    <string name="pref_update_summary">შეამოწმეთ GitHub-ზე ახალი ვერსიის არსებობა.</string>
+    <string name="update_include_prerelease">შეტევა დეველოპერის ვერსიების</string>
+    <string name="update_available_title">ხელმისაწვდომია განახლება</string>
+    <string name="update_available_prerelease_title">ხელმისაწვდომია განახლება (წინასწარი ვერსია)</string>
+    <string name="update_available_message">ხელმისაწვდომია ახალი ვერსია v%1$s. თქვენ დაინსტალირებული გაქვთ ვერსია v%2$s. გსურთ განახლების ჩამოტვირთვა და ინსტალაცია?</string>
+    <string name="update_now">განახლება</string>
+    <string name="update_whats_new">რა არის ახალი</string>
+    <string name="update_ignore">იგნორირება</string>
+    <string name="update_downloading_title">განახლების ჩამოტვირთვა…</string>
+    <string name="update_download_failed">ჩამოტვირთვა ვერ მოხერხდა. შეამოწმეთ თქვენი კავშირი და სცადეთ თავიდან.</string>
+    <string name="update_signature_mismatch">აპლიკაციის განახლება შეუძლებელია, ხელმოწერები განსხვავებულია.</string>
+    <string name="update_failed_title">განახლება ვერ მოხერხდა</string>
+    <string name="update_permission_required_title">საჭიროა ნებართვა</string>
+    <string name="update_permission_required_message">განახლებების დასაინსტალირებლად, გთხოვთ, სისტემურ პარამეტრებში მისცეთ MicroG-ს უცნობი აპლიკაციების ინსტალაციის უფლება.</string>
+    <string name="update_open_settings">პარამეტრები</string>
+    <string name="update_check_failed">განახლებების შემოწმება ვერ მოხერხდა. შეამოწმეთ თქვენი კავშირი და სცადეთ თავიდან.</string>
+    <string name="update_up_to_date_title">თქვენ გაქვთ ბოლო ვერსია</string>
+    <string name="update_up_to_date_message">MicroG-RE v%s არის უახლესი ვერსია.</string>
+    <string name="update_notification_title">ხელმისაწვდომია განახლება</string>
+    <string name="update_notification_text">ხელმისაწვდომია ახალი v%s, განახლებისთვის დააჭირეთ</string>
+    <string name="update_notification_channel">განახლებები</string>
+    <string name="update_notification_permission_title">შეტყობინებები</string>
+    <string name="update_notification_permission_message">იმისათვის, რომ გაგატყობინოთ ახალი განახლების ხელმისაწვდომობის შესახებ, MicroG-RE-ს სჭირდება შეტყობინებების გაგზავნის ნებართვა. გთხოვთ, დართოთ შეტყობინებები, რათა განახლების შესახებ შეტყობინებები თქვენამდე მოვიდეს.</string>
+    <string name="update_notification_permission_allow">დართავა</string>
+    <string name="update_notification_permission_not_now">არა ახლა</string>
+    <string name="update_notification_permission_open_settings">პარამეტრების გახსნა</string>
+    <string name="gcm_unregister_app">გაუქმება რეგისტრაციიდან</string>
+    <string name="gcm_no_message_yet">ჯერჯერობით შეტყობინებები არ არის მიღებული</string>
+    <string name="gcm_last_message_at">ბოლო შეტყობინება: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_registered">რეგისტრირებულია</string>
+    <string name="gcm_registered_since">რეგისტრირებულია: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_unregister_confirm_title">გსურთ <xliff:g example="F-Droid">%1$s</xliff:g>-ის რეგისტრაციის გაუქმება?</string>
+    <string name="gcm_unregister_confirm_message">ზოგიერთი აპლიკაცია ავტომატურად არ რეგისტრირდება ხელახლა და/ან არ გთავაზობთ ამის გაკეთების შესაძლებლობას მექანიკურად. რეგისტრირებიდან გასვლის შემდეგ ამ აპლიკაციებმა შესაძლოა გამართულად არ იმუშაონ.\nგსურთ გაგრძელება?</string>
+    <string name="gcm_unregister_after_deny_message">თქვენ უარი უთხარით რეგისტრაციაზე იმ აპლიკაციას, რომელიც უკვე რეგისტრირებულია push შეტყობინებებისთვის.\nგსურთ მისი რეგისტრაციის გაუქმება ახლა, რათა მომავალში მან აღარ მიიღოს push შეტყობინებები?</string>
+    <string name="gcm_messages_counter">შეტყობინებები: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> ბაიტი)</string>
+    <string name="gcm_network_state_disconnected">გათიშულია</string>
+    <string name="gcm_network_state_connected">დაკავშირებულია <xliff:g example="2 hours ago">%1$s</xliff:g>-დან</string>
+    <string name="gcm_enable_switch">push შეტყობინებების მიღება</string>
+    <string name="gcm_allow_app_popup">ნება დართოთ <xliff:g example="F-Droid">%1$s</xliff:g>-ს push შეტყობინებებისთვის რეგისტრაცია?</string>
+    <string name="pref_push_app_allow_register_title">რეგისტრაციის დაშვება</string>
+    <string name="pref_push_app_allow_register_summary">ნება დართეთ აპლიკაციას push შეტყობინებებისთვის რეგისტრაცია.</string>
+    <string name="pref_push_app_wake_for_delivery_title">აპლიკაციის გაშვება push შეტყობინებისას</string>
+    <string name="pref_push_app_wake_for_delivery_summary">გაუშვათ აპლიკაცია ფონურ რეჟიმში შემოსული push შეტყობინებების მისაღებად.</string>
+    <string name="prefcat_push_apps_title">აპლიკაციები, რომლებიც იყენებენ push შეტყობინებებს</string>
+    <string name="prefcat_push_apps_registered_title">რეგისტრირებული აპლიკაციები</string>
+    <string name="prefcat_push_apps_unregistered_title">ურეგისტრირო აპლიკაციები</string>
+    <string name="prefcat_gcm_registers">რეგისტრაციები</string>
+    <string name="prefcat_advanced">გაფართოებული</string>
+    <string name="pref_gcm_remove_registers">ყველა რეგისტრირებული აპლიკაციის წაშლა</string>
+    <string name="pref_gcm_remove_registers_summary">გამოიყენეთ ეს ოფცია მხოლოდ იმ შემთხვევაში, თუ გაქვთ პრობლემები აპლიკაციის რეგისტრაციასთან ან შეტყობინებების მიღებასთან</string>
+    <string name="gcm_remove_registers_dialog_title">ყველა რეგისტრაციის წაშლა?</string>
+    <string name="gcm_remove_registers_dialog_message">"ეს ერთიანად წაშლის ყველა რეგისტრირებულ აპლიკაციას push შეტყობინებების მიღების ს możliwościდან
+
+აპლიკაციების რეგისტრაციისთვის დაგჭირდებათ ახალი securityToken და AndroidID. შეამოწმეთ მოწყობილობის რეგისტრაციის სტატუსი
+
+ზოგიერთ აპლიკაციას შესაძლოა აღარ შეეძლოს რეგისტრაცია ამ მოქმედების შემდეგ. შესაძლოა დაგჭირდეთ ამ აპლიკაციების მონაცემების გასუფთავება, სანამ ისინი რეგისტრაციას ხელახლა მოითხოვენ"</string>
+    <string name="gcm_remove_registers_toast_message">ყველა აპლიკაცია წაშლილია push შეტყობინებებიდან</string>
+    <string name="prefcat_push_networks_title">ქსელები push შეტყობინებებისთვის</string>
+    <string name="safetynet_intro">Google SafetyNet არის მოწყობილობის სერტიფიცირების სისტემა, რომელიც უზრუნველყოფს მოწყობილობის სათანადო დაცვას და თავსებადობას Android CTS-თან. ზოგიერთი აპლიკაცია იყენებს SafetyNet-ს უსაფრთხოების მიზნით ან როგორც წინაპირობას მანიპულაციებისგან დაცვისთვის.\n\nmicroG GmsCore შეიცავს SafetyNet-ის თავისუფალ იმპლემენტაციას, თუმცა ოფიციალური სერვერი მოითხოვს, რომ SafetyNet მოთხოვნები იყოს ხელმოწერილი პროპრიეტარული DroidGuard სისტემით.</string>
+    <string name="safetynet_enable_switch">მოწყობილობის დადასტურების ნებართვა</string>
+    <string name="pref_safetynet_test_title">SafetyNet დადასტურების ტესტირება</string>
+    <string name="pref_recaptcha_test_title">ReCAPTCHA-ს ტესტირება</string>
+    <string name="pref_recaptcha_enterprise_test_title">ReCAPTCHA Enterprise-ის ტესტირება</string>
+    <string name="pref_test_summary_passed">ყველა ტესტი წარმატებით დასრულდა</string>
+    <string name="pref_test_summary_failed">ვერ მოხერხდა: %s</string>
+    <string name="pref_test_summary_warn">გაფრთხილება: %s</string>
+    <string name="pref_test_summary_running">მუშაობს…</string>
+    <string name="pref_droidguard_unsupported_summary">DroidGuard-ის შესრულება ამ მოწყობილობაზე მხარდაჭერილი არ არის. SafetyNet-ის სერვისები შესაძლოა არასწორად ამუშაონ.</string>
+    <string name="prefcat_safetynet_apps_title">აპლიკაციები, რომლებიც იყენებენ SafetyNet-ს</string>
+    <string name="prefcat_device_attestation_apps_title">აპლიკაციები, რომლებიც იყენებენ მოწყობილობის დადასტურებას</string>
+    <string name="pref_device_attestation_app_allow_requests_title">მოთხოვნების დაშვება</string>
+    <string name="pref_device_attestation_app_allow_requests_summary">ნებადართეთ აპლიკაციას მოითხოვოს მოწყობილობის დადასტურება</string>
+    <string name="menu_clear_recent_requests">ბოლოდროინდელი მოთხოვნების გასუფთავება</string>
+    <string name="safetynet_last_run_at">ბოლო გამოყენება: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="profile_name_native">მშობლიური</string>
+    <string name="profile_name_real">ნამდვილი</string>
+    <string name="profile_name_user">საკუთარი: %s</string>
+    <string name="profile_name_auto">ავტომატური: %s</string>
+    <string name="profile_name_system">სისტემური: %s</string>
+    <string name="pref_device_registration_import_custom_profile_title">საკუთარი პროფილის იმპორტი</string>
+    <string name="pref_device_registration_serial_title">სერიული ნომერი</string>
+    <string name="pref_device_registration_import_custom_profile_summary">მოწყობილობის პროფილის იმპორტი ფაილიდან</string>
+    <string name="pref_device_registration_select_profile_title">აირჩიეთ პროფილი</string>
+    <string name="pref_device_registration_device_profile_category">მოწყობილობის პროფილის</string>
+    <string name="pref_safetynet_recent_uses">ბოლოდროინდელი გამოყენებები</string>
+    <string name="pref_safetynet_recent_attestation_summary">დადასტურება: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_summary">ReCaptcha: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_enterprise_summary">ReCaptcha Enterprise: %s</string>
+    <string name="pref_safetynet_recent_copy_json">JSON JWS მონაცემების კოპირება</string>
+    <string name="pref_safetynet_recent_advice">რჩევა</string>
+    <string name="pref_safetynet_recent_eval_type">შეფასების ტიპი</string>
+    <string name="pref_safetynet_recent_response_status">პასუხის სტატუსი</string>
+    <string name="pref_safetynet_recent_cat_response">პასუხის მონაცემები</string>
+    <string name="pref_safetynet_recent_cat_request">მოთხოვნის მონაცემები</string>
+    <string name="pref_safetynet_recent_nonce">Nonce (Hex)</string>
+    <string name="pref_safetynet_recent_request_time">მოთხოვნის დრო</string>
+    <string name="pref_safetynet_recent_request_type">მოთხოვნის ტიპი</string>
+    <string name="pref_safetynet_recent_cat_basic">ბაზისური მონაცემები</string>
+    <string name="pref_safetynet_recent_token">ტოკენი</string>
+    <string name="pref_safetynet_recent_copied">კოპირებულია დაფაზე!</string>
+    <string name="pref_safetynet_test_integrity_cts_passed">Integrity და CTS წარმატებით გაიარა</string>
+    <string name="pref_safetynet_test_cts_failed">CTS ჩააგდო</string>
+    <string name="pref_safetynet_test_integrity_failed">Integrity ჩააგდო</string>
+    <string name="pref_safetynet_test_not_completed">ჯერ არ დასრულებულა</string>
+    <string name="pref_safetynet_test_no_result">შედეგი არ არის</string>
+    <string name="pref_safetynet_test_invalid_json">არასწორი JSON</string>
+    <string name="push_notifications_summary_off">გამორთულია</string>
+    <string name="push_notifications_summary_automatic">ჩართულია / ავტომატური: %s</string>
+    <string name="push_notifications_summary_manual">ჩართულია / მანუალური: %s</string>
+    <string name="push_notifications_summary_values_seconds">%s წამი</string>
+    <string name="push_notifications_summary_values_minutes">%s წუთი</string>
+    <string name="pref_vending_licensing_category">Google Play Licensing</string>
+    <string name="pref_vending_licensing_enable_switch">უპასუხეთ ლიცენზიის ვერიფიკაციის მოთხოვნებს</string>
+    <string name="pref_vending_license_enable_summary">ზოგიერთ აპლიკაციას სჭირდება იმის დადასტურება, რომ ისინი Google Play-ზე შეიძინეთ. აპლიკაციის მოთხოვნისას, microG-ს შეუძლია Google-იდან ჩამოტვირთოს შესყიდვის დამადასტურებელი საბუთი. თუ ეს ფუნქცია გამორთულია, ან არ არის დამატებული Google-ის ანგარიში, ლიცენზიის შემოწმების მოთხოვნები იგნორირდება.</string>
+    <string name="pref_vending_licensing_purchase_free_apps_switch">უფასო აპლიკაციების ავტომატურად დამატება ბიბლიოთეკაში</string>
+    <string name="pref_vending_licensing_purchase_free_apps_summary">უფასო აპლიკაციებმა შესაძლოა შეამოწმონ, ჩამოტვირთულა თუ არა ისინი Google Play-დან. ავტომატურად დაამატეთ უფასო აპლიკაციები თქვენი ანგარიშის ბიბლიოთეკაში, რათა ყოველთვის წარმატებით გაიაროთ შემოწმება ყველა იმ უფასო აპლიკაციისთვის, რომელიც ამჟამად ხელმისაწვდომია თქვენთვის.</string>
+    <string name="pref_vending_feature_delivery">Google Play Feature Delivery</string>
+    <string name="pref_vending_split_install_switch">კომპონენტების ინსტალაცია მოთხოვნისამებრ</string>
+    <string name="pref_vending_licensing_split_install_summary">აპლიკაციებისთვის დამატებითი კომპონენტების ჩამოტვირთვისა და ინსტალაციის ნებართვა</string>
+    <string name="feedback_disabled">უკუკავშირის გაგზავნა ამჟამად შეუძლებელია</string>
+    <string name="backup_disabled">სარეზერვო ასლის შექმნა ამჟამად შეუძლებელია</string>
+    <string name="pref_vending_billing_category">Google Play Billing</string>
+    <string name="pref_vending_billing_enable_switch">გადახდის მოთხოვნების დამუშავება</string>
+    <string name="pref_vending_billing_enable_summary">გააქტიურების შემდეგ, ზოგიერთმა აპლიკაციამ შესაძლოა განახორციელოს შესყიდვები ან გააფორმოს გამოწერა Google Play-ის გადახდის სერვისის მეშვეობით.</string>
+    <string name="pref_vending_billing_note_experimental">ეს ფუნქცია ექსპერიმენტულია და შესაძლოა ფულადი დანაკარგები გამოიწვიოს. თქვენ გაფრთხილებული ხართ.</string>
+    <string name="pref_vending_billing_note_licensing">ზოგიერთმა აპლიკაციამ შესაძლოა მოითხოვოს ლიცენზიის ვერიფიკაციის გააქტიურება შესყიდვების დასადასტურებლად.</string>
+    <string name="pref_vending_asset_delivery_category">Google Play Asset Delivery</string>
+    <string name="pref_vending_asset_delivery_switch">მოთხოვნით რესურსების მიწოდების გააქტიურება</string>
+    <string name="pref_vending_asset_delivery_summary">დამატებითი რესურსების ჩამოტვირთვა იმ აპლიკაციების მოთხოვნით, რომლებიც იყენებენ Play Asset Delivery-ს</string>
+    <string name="pref_vending_asset_device_sync_summary">აპლიკაციები, რომლებიც იყენებენ Play Asset Delivery-ს, ჩამოტვირთავენ დამატებით რესურსებს ამჟამად გამოყენებული მოწყობილობის ინფორმაციის საფუძველზე.</string>
+    <string name="pref_vending_asset_device_sync_switch">მოწყობილობის ინფორმაციის სინქრონიზაციის გააქტიურება</string>
+    <string name="pref_workprofile_create_account">სამუშაო ანგარიშის გამართვის ნებართვა</string>
+    <string name="pref_workprofile_intro">თქვენი სამუშაო ადგილის ან საგანმანათლებლო დაწესებულების სამუშაო პროფილის გამართვისას,
+        სისტემამ შესაძლოა სცადოს Google-თან დაკავშირება, რათა ამ პროფილისთვის აპლიკაციების ჩამოტვირთვა გახდეს შესაძლებელი.</string>
+    <string name="pref_workprofile_disclaimer">თქვენი პასუხისმგებლობაა დარწმუნდეთ, რომ microG-ის გამოყენება შეესაბამება კორპორატიულ პოლიტიკას.
+        microG მოწოდებულია მაქსიმალური შესაძლებლობების პრინციპით და ვერ განසაზღვრავს, რომ ის ზუსტად ისე იმუშავებს, როგორც მოსალოდნელია.</string>
+    <string name="pref_auto_create_player">ნებადართული იყოს Play Games-ის ანგარიშის რეგისტრაცია</string>
+    <string name="pref_auto_create_player_intro">თამაშების დროს, თქვენ გჭირდებათ Play Games-ის ანგარიში შესასვლელად და თამაშთან დაკავშირებული ფუნქციების, როგორიცაა მიღწევები, რეიტინგების ცხრილები, არქივები და ს.კ., ჩასაწერად. გამორთვის შემდეგ, Google-ის ანგარიშები, რომლებიც არ არის დაკავშირებული Play Games-ის ანგარიშთან, ავტომატურად არ დარეგისტრირდება და თამაშში შესვლა და თამაში შეუძლებელი იქნება.</string>
+    <string name="pref_allow_upload_game_played">ნებადართული იყოს გათამაშებული თამაშების ატვირთვა</string>
+    <string name="pref_allow_upload_game_played_summary">გამორთვრის შემთხვევაში, თამაში არ მოგვატყობინებს გათამაშებული თამაშის სტატუსის შესახებ თამაშში შესვლის შემდეგ და ზოგიერთ თამაშში შესვლა შესაძლოა შეუძლებელი იყოს.</string>
+    <string name="pref_change_default_game_player">ანგარიშის შეცვლა თამაშებისთვის</string>
+    <string name="pref_change_default_game_player_summary">შეცვალეთ თამაშების ნაგულისხმევი ანგარიში &amp; შეცვალეთ ანგარიში თითოეული თამაშისთვის.</string>
+    <string name="pref_delete_game_account_data">წაშალეთ Play Games-ის მონაცემები</string>
+    <string name="pref_delete_game_account_data_summary">წაშალეთ Play Games-ის ანგარიში &amp; ყველა მონაცემი &amp; წაშალეთ ცალკეული თამაშის მონაცემები.</string>
+    <string name="credentials_assisted_cancel">გაუქმება</string>
+    <string name="credentials_assisted_continue">გაგრძელება</string>
+    <string name="credentials_assisted_confirmation_header">ხდება თქვენი ავტორიზაცია</string>
+    <string name="credentials_assisted_continue_as_user_button_label">გააგრძელეთ როგორც %1$s</string>
+    <string name="credentials_assisted_sign_back_title">კვლავ განახორციელეთ ავტორიზაცია %1$s-ში Google-ის მეშვეობით</string>
+    <string name="credentials_assisted_signin_consent_header">ავტორიზაცია როგორც %1$s</string>
+    <string name="credentials_assisted_signin_consent">გაგრძელების შემთხვევაში, Google გაუზიარებს თქვენს სახელს, ელფოსტის მისამართს და პროფილის სურათს %1$s-ს. იხილეთ %1$s-ის კონფიდენციალურობის პოლიტიკა და მომსახურების პირობები.</string>
+    <string name="credentials_assisted_signin_description">თქვენ შეგიძლიათ მართოთ Google-ით შესვლა თქვენს Google ანგარიშებში.</string>
+    <string name="credentials_assisted_choose_account_label">აირჩიეთ ანგარიში</string>
+    <string name="credentials_assisted_choose_account_subtitle">%1$s-ზე გასაგრძელებლად</string>
+    <string name="credentials_assisted_choose_account_error_tips">ანგარიშის გაუმართაობა</string>
+    <string name="credentials_assisted_signin_button_text_long">შესვლა Google-ით</string>
+    <string name="credentials_assisted_signin_add_account">ანგარიშის დამატება</string>
+    <string name="credentials_service_sign_in_with_google_label">შესვლა Google-ით</string>
+    <string name="credentials_service_remote_custom_subtitle">უსაფრთხოების გასაღები, სმარტფონი ან პლანშეტი</string>
+    <string name="limited_services_dialog_information">თქვენ იყენებთ microG-ის შეზღუდულ სერვისებს. ჩვეულებრივი microG სერვისებისგან განსხვავებით, ეს ვერსია მუშაობს მხოლოდ იმ აპლიკაციებთან, რომლებიც იყენებენ microG ბიბლიოთეკებს და არა Google Play-ის აპლიკაციებთან. ეს ნიშნავს, რომ აპლიკაციების უმეტესობა უგულებელყოფს ამ სერვისებს.</string>
+    <string name="limited_services_dialog_information_ack">მესმის</string>
+    <string name="games_achievement_list_title">მიღწევები</string>
+    <string name="games_achievements_empty_text">ამ თამაშისთვის მიღწევები არ არსებობს</string>
+    <string name="games_api_access_denied">ამ მოწყობილობაზე არცერთ ანგარიშს არ აქვს წვდომა Games API-ებთან</string>
+    <string name="games_achievement_locked_content_description">დაკეტილი</string>
+    <string name="games_achievement_unlocked_content_description">განბლოკილი</string>
+    <string name="games_achievement_extra_text">%1$s XP</string>
+    <string name="games_leaderboard_empty_text">ამ თამაშისთვის რეიტინგების ცხრილები არ არსებობს</string>
+    <string name="games_leaderboard_list_title">რეიტინგები</string>
+    <string name="games_leaderboards_score_label">ქულა: %1$s</string>
+    <string name="games_snapshot_empty_text">თამაშის შენახული ვერსიები ჯერ არ არსებობს</string>
+    <string name="games_snapshot_choose_btn_text">აირჩიეთ</string>
+    <string name="games_snapshot_delete_btn_text">წაშლა</string>
+    <string name="games_delete_snapshot_dialog_title">შენახული თამაშის წაშლა</string>
+    <string name="games_delete_snapshot_dialog_message">დარწმუნებული ხართ, რომ გსურთ ამ შენახული თამაშის წაშლა?</string>
+    <string name="games_delete_snapshot_dialog_cancel">გაუქმება</string>
+    <string name="games_delete_snapshot_dialog_ok">OK</string>
+    <string name="games_delete_snapshot_error">წაშლა ვერ მოხერხდა, გთხოვთ სცადოთ მოგვიანებით</string>
+    <string name="games_state_description_signed_out">გამოსული ხართ სისტემიდან</string>
+    <string name="games_state_description_delete">წაშლა</string>
+    <string name="games_change_button_text">შეცვლა</string>
+    <string name="games_change_default_account_section_title">შეცვალეთ თამაშების ნაგულისხმევი ანგარიში</string>
+    <string name="games_change_default_account_description">ნაგულისხმევი ანგარიში: %1$s</string>
+    <string name="games_change_default_account_explanation">ეს ანგარიში გამოიყენება თამაშებში ავტომატურად შესასვლელად, თამაშის პროგრესის და პარამეტრების შესანახად. ნაგულისხმევი ანგარიშის შეცვლამ ან სისტემიდან გამოსვლამ შესაძლოა განისახლოს თქვენი პროგრესი და პარამეტრები იმ თამაშებისთვის, რომლებიც უკვე ითამაშეთ.</string>
+    <string name="games_change_per_game_title">შეცვალეთ ანგარიში თამაშების მიხედვით</string>
+    <string name="games_change_per_game_description">შერჩეული თამაშისთვის ანგარიშის შეცვლამ ან მისგან გამოსვლამ შესაძლოა განისაზღვროს თამაშის პროგრესისა და პარამეტრების განახლება.</string>
+    <string name="games_change_default_account_for_all_games_dialog_title">აირჩიეთ ვარიანტი ახალი ნაგულისხმევი ანგარიშისთვის</string>
+    <string name="games_change_default_account_for_all_games_dialog_description">მიმდინარე ნაგულისხმევი ანგარიში: %1$s</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_title">შეცვალეთ ნაგულისხმევი ანგარიში მხოლოდ ახალი თამაშებისთვის </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_description">თქვენ არ დაკარგავთ წვდომას იმ თამაშების პროგრესსა და პარამეტრებზე, რომლებიც უკვე ითამაშეთ. თუმცა, თქვენი პროგრესი განაწილდება ანგარიშებს შორის.</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_title"> შეცვალეთ ნაგულისხმევი ანგარიში ყველა თამაშისთვის </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_description">შესაძლოა დაკარგოთ წვდომა იმ თამაშების პროგრესსა და პარამეტრებზე, რომლებიც ითამაშეთ. ცვლილებების გამოსაქმედებლად ჩვენ გადავტვირთავთ თამაშს.</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_title"> გამოდით ყველა თამაშიდან </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_description">შესაძლოა დაკარგოთ წვდომა იმ თამაშების პროგრესსა და პარამეტრებზე, რომლებიც ითამაშეთ. ცვლილებების გამოსაქმედებლად ჩვენ გადავტვირთავთ თამაშს.</string>
+    <string name="games_change_per_game_dialog_title">აირჩიეთ ვარიანტი ამ თამაშისთვის</string>
+    <string name="games_change_per_game_dialog_description">ანგარიშის შეცვლამ ან გამოსვლამ შესაძლოა განის resetting-ოს თქვენი პროგრესი და თამაშის პარამეტრები</string>
+    <string name="games_change_per_game_dialog_option_use_player">გამოიყენეთ %1$s</string>
+    <string name="games_change_per_game_dialog_option_use_player_snackbar_success_message">ამ თამაშში შეხვალთ %1$s-ით</string>
+    <string name="games_change_per_game_dialog_option_sign_out">გასვლა</string>
+    <string name="games_change_per_game_dialog_option_sign_out_snackbar_success_message">ამ თამაშიდან უკვე გამოხვედით</string>
+    <string name="games_change_sign_out_of_all_games_snackbar_success_message">ყველა თამაშიდან უკვე გამოხვედით</string>
+    <string name="games_change_default_account_for_all_games_snackbar_success_message">თქვენ შეხვალთ ყველა თამაშში %1$s-ით</string>
+    <string name="games_change_default_account_for_new_games_snackbar_success_message">თქვენ შეხვალთ ახალ თამაშებში %1$s-ით</string>
+    <string name="games_account_display_content">მიმდინარე ანგარიში: %1$s</string>
+    <string name="games_delete_profile_header">წაშალეთ Play Games-ის ანგარიში &amp; ყველა მონაცემი</string>
+    <string name="games_delete_profile_explanation">სამუდამოდ წაშალეთ თქვენი Google Play Games-ის ანგარიში, XP და პროფილის ყველა მონაცემი. ამ მოქმედებამ შესაძლოა ასევე წაშალოს თქვენი ქულები, პროგრესი (შენახული თამაშები) და პარამეტრები იმ თამაშებში, რომლებიც თქვენ ითამაშეთ.</string>
+    <string name="games_delete_profile_button">წაშალეთ სამუდამოდ</string>
+    <string name="games_delete_game_data_header">ცალკეული თამაშის მონაცემების წაშლა</string>
+    <string name="games_delete_game_data_explanation">თქვენ შეგიძლიათ სამუდამოდ წაშალოთ ცალკეული მონაცემები იმ თამაშებისთვის, რომლებიც Google Play Games-ის გამოყენებით ითამაშეთ. ეს მოქმედება შლის თქვენს ქულებს, პროგრესს (შენახულ თამაშებს) და პარამეტრებს თქვენ მიერ არჩეული თამაშისთვის.</string>
+    <string name="games_delete_profile_dialog_title">დარწმუნებული ხართ, რომ გსურთ ამ ანგარიშის წაშლა?</string>
+    <string name="games_delete_profile_explanation_with_gamer_name">წაშალეთ სამუდამოდ თქვენი Google Play Games-ის ანგარიში გეიმერის სახელისთვის &lt;b&gt;%1$s&lt;/b&gt; (&lt;b&gt;%2$s&lt;/b&gt;), XP და პროფილის ყველა მონაცემი. ამ მოქმედებამ შესაძლოა ასევე წაშალოს თქვენი ქულები, პროგრესი (შენახული თამაშები) და პარამეტრები იმ თამაშებში, რომლებიც გითამაშიათ.</string>
+    <string name="games_delete_profile_dialog_message">ამ მოქმედების გაუქმება შეუძლებელია.</string>
+    <string name="games_delete_profile_fail">თქვენი პროფილის წაშლა ვერ მოხერხდა. სცადეთ მოგვიანებით.</string>
+    <string name="games_delete_game_data_confirm_dialog_title">მონაცემების წაშლა %1$s-ისთვის</string>
+    <string name="games_delete_game_data_confirm_dialog_message">%1$s-ისთვის მონაცემების სამუდამოდ წაშლა მოაშორებს თქვენს ქულებს, პროგრესს (შენახულ თამაშებს) და თამაშის პარამეტრებს Google Play Games-ში.</string>
+    <string name="games_popup_signin_welcome">გამარჯობა, %1$s</string>
+    <string name="family_management_title">ოჯახი</string>
+    <string name="family_management_retry">გაიმეორეთ</string>
+    <string name="family_management_load_error">კონტენტის ჩატვირთვა ვერ მოხერხდა</string>
+    <string name="family_management_toolbar_back">უკან</string>
+    <string name="family_management_toolbar_more">მეტი</string>
+    <string name="family_management_exit_family_group">გაკვრით გასვლა საოჯახო ჯგუფიდან</string>
+    <string name="family_management_delete_family_group">საოჯახო ჯგუფის წაშლა</string>
+    <string name="family_management_leave_family_password_title">გაადასტურეთ პაროლი საოჯახო ჯგუფის გასვლისთვის</string>
+    <string name="family_management_delete_family_password_title">გაადასტურეთ პაროლი საოჯახო ჯგუფის წაშლისთვის</string>
+    <string name="family_management_remove_member_password_title">გაადასტურეთ პაროლი \"%s\"-ის წაშლისთვის</string>
+    <string name="family_management_invite_family_member">ოჯახის წევრების მოწვევა</string>
+    <string name="family_management_invite_slots_left">დარჩენილია %1$d მოწვევა</string>
+    <string name="family_management_cancel_invite">მოწვევის გაუქმება</string>
+    <string name="family_management_cancel_invite_success">მოწვევა წარმატებით გაუქმა</string>
+    <string name="family_management_cancel_invite_error">მოწვევის გაუქმებისას მოხდა შეცდომა. სცადეთ ხელახლა.</string>
+    <string name="family_management_remove_member">წევრის წაშლა</string>
+    <string name="family_management_member_removed_success">%s წაიშალა თქვენი ოჯახის ჯგუფიდან</string>
+    <string name="family_management_member_remove_failed">%s-ის წაშლისას მოხდა შეცდომა. სცადეთ ხელახლა.</string>
+    <string name="family_management_leave_family_error_message">ოჯახის ჯგუფიდან გასვლისას მოხდა შეცდომა. სცადეთ ხელახლა.</string>
+    <string name="family_management_exist_group_success">თქვენ დატოვეთ თქვენი ოჯახის ჯგუფი…</string>
+    <string name="family_management_delete_group_success">ოჯახის ჯგუფი წაშლილია</string>
+    <string name="family_management_delete_group_failure">სახლის ჯგუფის წაშლამ არ ประცესმოხდა</string>
+    <string name="family_management_delete_group_cancel">გაუქმება</string>
+    <string name="family_management_delete_group_confirm">OK</string>
+    <string name="family_management_input_pwd">გთხოვთ, შეიყვანოთ თქვენი პაროლი</string>
+    <string name="family_management_invite_sent_date_format">მოწვევა გაგზავნილია %s-ში</string>
+    <string name="family_management_invite_send">მოწვევა გაგზავნილია</string>
+    <string name="family_management_pwd_error">არასწორი პაროლი, გთხოვთ, შეიყვანოთ ხელახლა</string>
+    <string name="barcode_scanner_brand">დასკანირებულია microG-ით %1$s-ის სახელით</string>
+    <string name="camera_permission_dialog_button">კარგი</string>
+    <string name="camera_permission_dialog_message">microG სერვისებს სჭირდება თქვენი მოწყობილობის კამერაზე წვდომა %1$s-ის კოდის დასასკანერებლად.\n\nგასააქტიურებლად, გთხოვთ, მიანიჭოთ კამერის ნებართვა microG სერვისებს პარამეტრებში.</string>
+    <string name="camera_permission_dialog_title">საჭიროა კამერის ნებართვა</string>
+    <string name="pref_app_install_settings_title">აპლიკაციების ინსტალატორის პარამეტრები</string>
+    <string name="pref_app_install_switch_title">აპლიკაციების ინსტალაციის დაშვება</string>
+    <string name="pref_app_install_other_apps_note">ავტორიზაცია იძლევა სხვა წყაროებიდან მოწოდებული აპლიკაციების ინსტალაციის საშუალებას.</string>
+    <string name="pref_app_install_permission_instruction">იმისათვის, რომ თქვენს მიერ დაინსტალირებული აპლიკაციები გამართულად ამუშაონ, გთხოვთ, მიანიჭოთ microG Companion-ს ავტორიზაცია სხვა წყაროებიდან ჩამოტვირთული აპლიკაციების დასაინსტალირებლად.</string>
+    <string name="prefcat_app_install_list_title">აპლიკაციები, რომლებიც იყენებენ აპლიკაციების ინსტალატორს</string>
+    <string name="service_name_google_location_sharing">Google-ის მდებარეობის გაზიარება</string>
+    <string name="location_sharing_description">მართეთ თქვენი მდებარეობის რეალურ დროში გაზიარება Google-ის აპლიკაციებსა და სერვისებს შორის ამ მოწყობილობიდან</string>
+    <string name="location_sharing_learn_more">გაიგეთ მეტი &quot;მდებარეობის გაზიარების&quot; შესახებ</string>
+    <string name="location_sharing_switch_text">გამოიყენეთ ადგილმდებარეობის გაზიარება</string>
+    <string name="location_sharing_turn_off_notify_hint">თუ ამ მოწყობილობისთვის გამორთავთ ადგილმდებარეობის გაზიარებას, ადამიანები, რომლებსაც უზიარებთ, არ zostდებიან შეტყობინებულები.</string>
+    <string name="location_sharing_off_previous_hint">მხოლოდ თქვენი ბოლო გაზიარებული ადგილმდებარეობა იქნება ხელმისაწვდომი, სანამ მას კვლავ არ ჩართავთ.</string>
+    <string name="location_sharing_disabled">ამ ანგარიშისთვის არ არის გააქტიურებული ადგილმდებარეობის გაზიარება</string>
+    <string name="location_sharing_turn_on_hint">მას შემდეგ, რაც Google-ის აპლიკაციიდან ან სერვისიდან დაიწყებთ ადგილმდებარეობის გაზიარებას, ამის მართვა შეძლებთ აქედან.\n\nადგილმდებარეობის გაზიარების დასაწყებად გადადით Google Maps-ში ან Family Link-ში.</string>
+    <string name="location_sharing_turn_off_title">ადგილმდებარეობის გაზიარების გამორთვა</string>
+    <string name="location_sharing_turn_off_hint">შესაძლოა, კვლავ აზიარებთ ადგილმდებარეობას სხვა მოწყობილობებიდან, რომლებზეც შესული ხართ იმავე Google ანგარიშით, ან არაგუგლური აპლიკაციების მეშვეობით. გადაამოწმეთ ადგილმდებარეობის გაზიარების პარამეტრები ყველგან, სადაც ეს შესაძლებელია.\n\nადამიანები, რომლებსაც გაუზიარეთ, კვლავინდებურად დაინახავენ თქვენს ბოლო გაზიარებულ ადგილმდებარეობას.</string>
+    <string name="location_sharing_turn_off_cancel">დატოვება</string>
+    <string name="location_sharing_turn_off_confirm">გამორთვა</string>
+    <string name="location_sharing_confirm_dialog_title">ლოკაციის გაზიარების ჩართვა</string>
+    <string name="location_sharing_confirm_dialog_text">ადამიანებს, რომლებსაც უზიარებთ თქვენს მდებარეობას, ყოველთვის შეუძლიათ ნახონ:
+·თქვენი სახელი და ფოტო
+·თქვენი მოწყობილობის ბოლო მდებარეობა, მაშინაც კი, როდესაც არ იყენებთ Google-ის სერვისს
+·თქვენი მოწყობილობის ელემენტის მუხტი და მუხტავა თუ არა იგი
+·თქვენი ჩასვლისა და გასვლის დრო, თუ ისინი დაამატებენ მდებარეობის გაზიარების შეტყობინებას</string>
     <!-- Passkey management -->
+    <string name="pref_passkey_manager_title">გასაღებების მართვა</string>
+    <string name="pref_passkey_manager_empty_title">შენახული გასაღებები არ არის</string>
+    <string name="pref_passkey_manager_description">როდესაც მესამე მხარის აპლიკაციები региსტრირებენ გასაღებებს, microG ინახავს მათ ადგილობრივ ჩანაწერს. თუ აპლიკაცია წაშლის გასაღებს microG-ს შეტყობინების გარეშე, ჩანაწერი შეიძლება დარჩეს. თქვენ შეგიძლიათ წაშალოთ ასეთი ნაშთები აქ.</string>
+    <string name="pref_passkey_manager_delete_dialog_title">გასაღების წაშლა</string>
+    <string name="pref_passkey_manager_delete_dialog_message">წაშალეთ გასაღები \"%2$s\"-სთვის \"%1$s\"-ზე. ამ მოქმედების გაუქმება შეუძლებელია; ხელახლა შესვლისთვის დაგჭირდებათ ახალი გასაღების რეგისტრაცია.</string>
+    <string name="pref_passkey_manager_delete_dialog_confirm">წაშლა</string>
+    <string name="pref_passkey_manager_unknown_user">უცნობი მომხმარებელი</string>
+    <string name="pref_passkey_manager_transport_screen_lock">ეკრანის ბლოკირება</string>
+    <string name="pref_passkey_manager_transport_usb">USB</string>
+    <string name="pref_passkey_manager_transport_nfc">NFC</string>
+    <string name="pref_passkey_manager_transport_bluetooth">Bluetooth</string>
+    <string name="pref_passkey_manager_transport_hybrid">ჰიბრიდული</string>
+    <string name="pref_passkey_manager_credential_id_format_internal">ID: %1$s</string>
+    <string name="self_check_cat_patched_apps">პატჩირებული აპლიკაციები</string>
+    <string name="self_check_source_morphe">Morphe-ის პატჩები</string>
+    <string name="self_check_source_alternative">ალტერნატიული პატჩები</string>
+    <string name="self_check_resolution_patched_app_installed">აპლიკაციები, რომლებიც იყენებენ %1$s, ვერ მოიძებნა. გთხოვთ, დააპატჩეთ და დააინსტალიროთ მოდიფიცირებული აპლიკაცია</string>
+    <string name="self_check_name_notifications">შეტყობინებები ნებადართულია</string>
+    <string name="self_check_resolution_notifications">დააჭირეთ აქ შეტყობინებების პარამეტრების გასახსნელად. შეტყობინებები გამოიყენება GcmService-ის ფონურ რეჟიმში მუშაობისთვის, როდესაც ჩართულია ელემენტის ოპტიმიზაცია ან სხვა პირობების დროს</string>
+    <string name="self_check_name_oem_restriction">ფონური პროცესების შეზღუდვები</string>
+    <string name="self_check_resolution_oem_restriction">თქვენმა სისტემამ შესაძლოა შეზღუდოს ფონური პროცესები. დააჭირეთ აქ, რათა გახსნათ საიტი Don\'t Kill My App! და გაიგოთ, როგორ გათიშოთ ეს შეზღუდვები</string>
+    <string name="morphe_sign_in_with_google_microg_label">შესვლა Google-ით MicroG RE-ს მეშვეობით</string>
+    <string name="self_check_patched_app_installed">მუშაობს %1$s-ით</string>
+    <string name="self_check_action_download_morphe">ჩამოტვირთეთ Morphe</string>
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">დაინსტალირებულია არქიტექტურის არასწორი ვარიანტი</string>
+    <string name="abi_mismatch_message">"MicroG-RE-ის ეს ვერსია მხოლოდ 64-ბიტიან (arm64) ბიბლიოთეკებს შეიცავს, თუმცა ეს მოწყობილობა იყენებს 32-ბიტიან მომხმარებლის სივრცეს.
+
+ფუნქციები, რომლებიც საჭიროებენ Conscrypt-ს (ანგარიშზე შესვლა, სٹریმინგი, BotGuard, ვიდეო სტრიმების spoof-ინგი, SponsorBlock, Return YouTube Dislike და ა.შ.), გამართულად არ იმუშავებს და შესაძლოა გამოიწვიოს დაკვრის პრობლემები ან შეტყობინება \"Unable to find a default SSL provider\".
+
+ამის ნაცვლად დააინსტალირეთ ARMv7 ან Universal APK."</string>
+    <string name="abi_mismatch_download_armv7">ARMv7 APK-ის ჩამოტვირთვა</string>
+    <string name="abi_mismatch_downloading_title">სწორი ვარიანტის ჩამოტვირთვა…</string>
 </resources>

@@ -5,11 +5,16 @@
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="foreground_service_notification_title">Арткы жакта иштеп жатат</string>
+    <string name="foreground_service_notification_text"><xliff:g example="Exposure Notification">%1$s</xliff:g> арткы жакта иштеп жатат.</string>
+    <string name="foreground_service_notification_big_text">Бул билдирүүнү жашыруу үчүн <xliff:g example="microG Services">%1$s</xliff:g> тиркемесин батареяны колдонуу чектөсүнөн чыгарыңыз же билдирүү жөндөөлөрүн өзгөртүңүз.</string>
     <string name="foreground_action_battery_optimization">Батареяны колдонуу чектөөлөрү</string>
     <string name="foreground_action_notification_settings">Оңдоолор </string>
+    <string name="menu_advanced">Кеңейтилген</string>
     <string name="menu_settings">Оңдоолор </string>
+    <string name="menu_game_managed">Оюн аккаунттары башкарылды</string>
     <string name="list_no_item_none">Эч бири</string>
     <string name="list_item_see_all">Баарын көрүү</string>
+    <string name="open_app">Ачуу</string>
     <string name="service_status_disabled">Иштен чыгарылган</string>
     <string name="service_status_enabled">Ишке киргизилген</string>
     <string name="service_status_automatic">Өзүнөн өзү</string>

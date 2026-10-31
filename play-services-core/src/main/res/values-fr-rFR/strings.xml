@@ -296,9 +296,9 @@ Vérifiez le statut d'enregistrement de l'appareil. Certaines applications pourr
     <string name="pref_safetynet_test_not_completed">Pas encore terminé</string>
     <string name="pref_safetynet_test_no_result">Aucun résultat</string>
     <string name="pref_safetynet_test_invalid_json">JSON invalide</string>
-    <string name="push_notifications_summary_off">DÉSACTIVÉ</string>
-    <string name="push_notifications_summary_automatic">ACTIVÉ / Automatique : %s</string>
-    <string name="push_notifications_summary_manual">ACTIVÉ / Manuel: %s</string>
+    <string name="push_notifications_summary_off">DÉSACTIVÉES</string>
+    <string name="push_notifications_summary_automatic">ACTIVÉES / Automatique : %s</string>
+    <string name="push_notifications_summary_manual">ACTIVÉES / Manuel: %s</string>
     <string name="push_notifications_summary_values_seconds">%s secondes</string>
     <string name="push_notifications_summary_values_minutes">%s minutes</string>
     <string name="pref_vending_licensing_category">Licence Google Play</string>

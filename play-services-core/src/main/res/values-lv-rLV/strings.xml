@@ -10,29 +10,394 @@
     <string name="snackbar_remove_account">%s konts noņemts</string>
     <string name="snackbar_undo_button">Atsaukt</string>
     <string name="gms_settings_name">MicroG iestatījumi</string>
+    <string name="gms_settings_summary">Iestatīt MicroG pakalpojumus.</string>
+    <string name="just_a_sec">Kārti mirklī…</string>
+    <string name="ask_permission_tos">Turpinot, jūs ļaujat šai lietotnei un Google izmantot jūsu informāciju saskaņā ar to attiecīgajiem pakalpojumu noteikumiem un privātuma politiku.</string>
+    <string name="ask_scope_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> vēlas:</string>
+    <string name="ask_service_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> vēlas izmantot:</string>
+    <string name="account_manager_title">Google kontu pārvaldītājs</string>
+    <string name="sorry">Atvainojiet…</string>
+    <string name="auth_before_connect">Savienojiet Google kontu ar microG.\n\nSavienojamies ar Google kontu, izmantojot pogu <b>Pierakstīties</b> vai pogu <b>Huawei</b>, ja jums ir šī ražotāja ierīce. Nospiežot vienu no pogām, jūs tiks pāvērsts uz lapu, kurā varat pieslēgties savam kontam.</string>
+    <string name="auth_connecting">"Jūsu ierīce veido savienojumu ar Google serveriem, lai jūs pieslēgtu.
+
+Tas var aizņemt dažas sekundes."</string>
+    <string name="no_network_error_desc">"Jums nav tīkla savienojuma.
+
+Šī var būt pagaidu problēma, vai arī jūsu Android ierīce var nebūt konfigurēta datu pakalpojumiem. Mēģiniet vēlreiz, kad būsiet pievienots pie mobilā tīkla, vai pieslēdzieties Wi-Fi tīklam."</string>
+    <string name="auth_general_error_desc">"Radās problēma, sazinoties ar Google serveriem.
+
+Mēģiniet vēlreiz vēlāk."</string>
+    <string name="auth_finalize">"Jūsu ierīce sazinās ar Google, lai saglabātu informāciju jūsu kontā.
+
+Tas var aizņemt dažas minūtes."</string>
+    <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> pieprasa jūsu autorizāciju, lai piekļūtu jūsu Google kontam.</string>
+    <string name="auth_package_override_request_title">Atļaut <b><xliff:g example="F-Droid">%1$s</xliff:g></b> privilēģētu piekļuvi kontam <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
+    <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> vēlas piekļūt jūsu kontam tā, it kā tas būtu <b><xliff:g example="F-Droid">%2$s</xliff:g> no <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Tas varētu dot tam privilēģētu piekļuvi jūsu kontam.</string>
+    <string name="auth_action_notification_channel_name">Google konta brīdinājumi</string>
+    <string name="auth_action_notification_channel_description">Brīdina, ja vienam no jūsu Google kontiem ir nepieciešama papildu konfigurācija, pirms to var izmantot, vai arī ja konts nav saderīgs ar microG.</string>
+    <string name="auth_action_notification_title">Nepieciešama konta darbība</string>
+    <string name="auth_action_notification_content">Jūsu Google kontam ir nepieciešama papildu konfigurācija.</string>
+    <string name="auth_action_reauth_notification_title">Nepieciešama konta darbība</string>
+    <string name="auth_action_activity_header">Pabeidziet Google konta konfigurēšanu</string>
+    <string name="auth_action_activity_explanation">Veiciet šīs darbības, lai varētu izmantot savu Google kontu %s šajā ierīcē.</string>
+    <string name="auth_action_step_enable_checkin">Iespējiet ierīces reģistrāciju</string>
+    <string name="auth_action_step_enable_checkin_description">"Jūsu ierīcei jebkurā gadījumā vienreiz jāreģistrējas Google servisos.
+
+Google ierīces reģistrāciju var izslēgt pēc konta konfigurēšanas pabeigšanas."</string>
+    <string name="auth_action_step_enable_gcm">Iespējiet Cloud Messaging</string>
+    <string name="auth_action_step_enable_gcm_description">Varat deaktivēt Cloud Messaging pēc konta konfigurācijas pabeigšanas.</string>
+    <string name="auth_action_step_allow_microg_gcm">Atļaujiet Cloud Messaging lietotāja microG</string>
+    <string name="auth_action_step_allow_microg_gcm_description">Saskaņā ar jūsu preferences, microG ir nepieciešama jūsu atļauja, lai tā varētu reģistrēties Cloud Messaging pakalpojumā.</string>
+    <string name="auth_action_step_enable_lockscreen">Konfigurējiet drošu ekrāna bloķēšanu</string>
+    <string name="auth_action_step_enable_lockscreen_description">"Jūsu Google kontu pārvalda jūsu darba vieta vai izglītošanas iestāde. Jūsu administrators ir izlēmis, ka ierīcēm ir jābūt drošai ekrāna bloķēšanai, pirms tās var piekļūt konta datiem.
+
+Lūdzu, iestatiet paroles, PIN koda vai raksta bloķēšanu ekrānam."</string>
+    <string name="auth_action_step_perform_content_description">Noklikšķiniet, lai veiktu soli</string>
+    <string name="auth_action_step_completed_content_description">Solis pabeigts</string>
+    <string name="auth_action_activity_finish">Pabeigt</string>
     <string name="signin_picker_title">Atlasiet kontu</string>
+    <string name="signin_picker_subtitle">lai turpinātu <xliff:g example="F-Droid">%1$s</xliff:g></string>
     <string name="signin_picker_add_account_label">Pievienot citu kontu</string>
+    <string name="signin_confirm_title">Atļaut piekļūt <xliff:g example="F-Droid">%1$s</xliff:g></string>
+    <string name="signin_subtext_sharing">Lai turpinātu, microG kopīgos jūsu Google konta vārdu, e-pasta adresi un profila fotoattēlu ar <xliff:g example="F-Droid">%1$s</xliff:g>.</string>
+    <string name="perm_provision_label">nodrošināt microG pakalpojumus</string>
+    <string name="perm_provision_description">Atļauj lietotnei konfigurēt microG pakalpojumus bez lietotāja līdzdalības</string>
+    <string name="perm_car_speed_label">Automašīnas ātrums</string>
+    <string name="perm_car_speed_description">"Iegūstiet piekļuvi sava automašīnas ātrumam"</string>
+    <string name="perm_car_info_label">Automašīnas informācija</string>
+    <string name="perm_car_info_description">"Iegūstiet piekļuvi sava automašīnas informācijai"</string>
+    <string name="perm_car_fuel_label">Automašīnas degvielas līmenis</string>
+    <string name="perm_car_fuel_description">"Iegūstiet piekļuvi sava automašīnas degvielas līmeņa informācijai"</string>
+    <string name="perm_car_mileage_label">Automašīnas nobraukums</string>
+    <string name="perm_car_mileage_description">"Iegūstiet piekļuvi sava automašīnas nobraukuma informācijai"</string>
+    <string name="perm_car_vendor_extension_label">Automašīnas ražotāja kanāls</string>
+    <string name="perm_car_vendor_extension_description">"Iegūstiet piekļuvi sava automašīnas ražotāja kanālam, lai apmainītos ar automašīnai specifisku informāciju"</string>
+    <string name="service_name_checkin">Ierīces reģistrācija</string>
+    <string name="service_name_mcs">Mākoņpakalpojuma ziņojumi</string>
+    <string name="service_name_device_attestation">Ierīces apliecinājums</string>
+    <string name="service_name_vending">Play Store pakalpojumi</string>
+    <string name="service_name_work_profile">Darba profils</string>
+    <string name="games_title">Google Play spēles</string>
+    <string name="games_info_title"><xliff:g example="F-Droid">%1$s</xliff:g> vēlas izmantot Play Games</string>
+    <string name="games_info_content">Lai izmantotu Play Games, ir jāinstalē Google Play Games lietotne. Lietums var turpināt darbību bez Play Games, taču iespējams, ka tas darbosies negaidīti.</string>
+    <string name="pick_place_title">Izvēlieties vietu</string>
+    <string name="place_picker_select_title">Atlasiet šo atrašanās vietu</string>
+    <string name="place_picker_nearby_places">Tuvāk esošas vietas</string>
     <!-- Self check -->
+    <string name="self_check_name_system_spoofs">Sistēmas parakstura viltotājs: </string>
+    <string name="self_check_resolution_system_spoofs">Lūdzu, pārbaudiet dokumentāciju, lai uzzinātu, kādas darbības varētu būt nepieciešamas.</string>
+    <string name="self_check_pkg_gms">microG pakalpojumi</string>
+    <string name="self_check_pkg_vending">microG Companion / Play Store</string>
+    <string name="self_check_pkg_gsf">microG Services Framework</string>
+    <string name="self_check_name_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> uzstādīta: </string>
+    <string name="self_check_resolution_app_installed">Uzstādiet lietotni <xliff:g example="F-Droid">%1$s</xliff:g> vai kādu saderīgu tai. Lūdzu, pārbaudiet dokumentāciju, lai uzzinātu, kuras lietotnes ir saderīgas.</string>
+    <string name="self_check_name_correct_sig"><xliff:g example="F-Droid">%1$s</xliff:g> paraksts ir pareizs: </string>
+    <string name="self_check_resolution_correct_sig">Iestālitais <xliff:g example="F-Droid">%1$s</xliff:g> nav saderīgs vai tam nav aktīva paraksta viltotšana. Lūdzu, pārbaudi dokumentāciju par to, kuras lietotnes un ROM ir saderīgas.</string>
+    <string name="self_check_name_battery_optimizations">Akumulatora optimizācijas ignorētas:</string>
+    <string name="self_check_resolution_battery_optimizations">Pieskaries šeit, lai atspēgtu akumulatora optimizācijas. Ja to neizdarīsi, lietotnes var darboties nekorekti.</string>
     <!-- Settings strings -->
+    <string name="cond_gcm_bat_summary">Tu iespējoji Cloud Messaging, taču microG Services ir aktīvas akumulatora optimizācijas. Lai push paziņojumi pienāktu, tev būtu jāignorē akumulatora optimizācijas.</string>
+    <string name="prefs_account">Konta preferences</string>
+    <string name="prefs_account_privacy">Personīgā informācija &amp; privātums</string>
+    <string name="prefs_account_security">Pieslutīšanās &amp; drošība</string>
+    <string name="pref_auth_trust_google_summary">Ja šī iespēja ir izslēgta, lietotājam tiks pajautāts, pirms lietotnes autorizācijas pieprasījums tiek nosūtīts Google. Dažām lietotnēm neizdosies izmantot Google kontu, ja šī iespēja ir izslēgta.</string>
+    <string name="pref_auth_visible_summary">Ja šī opcija ir iespējota, visas šīs ierīces lietotnes varēs redzēt jūsu Google kontu e-pasta adreses bez iepriekšējas autorizācijas.</string>
+    <string name="pref_auth_include_android_id_summary">Ja šī iespēja ir izslēgta, autentifikācijas pieprasījumi netiks saistīti ar ierīces reģistrāciju, kas var ļaut pieslēgties neautorizētām ierīcēm, taču tam var būt neparedzētas sekas.</string>
+    <string name="pref_auth_strip_device_name_summary">Ja šī iespēja ir iespējota, autentifikācijas pieprasījumi neskaitīs ierīces nosaukumu, kas var ļaut pieslēgties neautorizētām ierīcēm, taču tam var būt neparedzētas sekas.</string>
+    <string name="pref_auth_two_step_verification_title">Saņemt divpakāpes verificācijas paziņojumus</string>
+    <string name="pref_auth_two_step_verification_summary">Ja šī iespēja ir iespējota, ierīce var saņemt divpakāpes verificācijas paziņojumus no Google (nepieciešams Cloud Messaging).</string>
+    <string name="pref_auth_allow_find_devices_title">Atļaut reaģēt uz Google Device Finder</string>
+    <string name="pref_auth_allow_find_devices_summary">Ja šī iespēja ir iespējota, ierīce var reaģēt uz Google paziņojumiem \"Atrast manu ierīci\" (nepieciešams Cloud Messaging).</string>
+    <string name="pref_checkin_enable_summary">Reģistrē jūsu ierīci Google pakalpojumiem un izveido unikālu ierīces identifikatoru. microG no reģistrācijas datiem izslēdz identificējošos bitus, izņemot jūsu Google konta nosaukumu.</string>
+    <string name="checkin_last_registration">Pēdējā reģistrācija: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
     <string name="pref_info_status">Statuss</string>
     <string name="pref_accounts_title">Konti</string>
+    <string name="pref_game_accounts_title">Google spēļu konti</string>
     <string name="prefcat_accounts_settings_title">Iestatījumi</string>
     <string name="pref_accounts_manage_accounts_title">Pārvaldīt kontus</string>
     <string name="pref_accounts_manage_accounts_summary">Atvērt ierīces kontu pārvaldnieku</string>
+    <string name="prefcat_accounts_backup_title">Kontu rezervēšana</string>
+    <string name="pref_accounts_backup_title">Rezervēt kontus</string>
+    <string name="pref_accounts_backup_summary">Eksportēt Google kontus failā</string>
+    <string name="pref_accounts_restore_title">Atjaunot kontus</string>
+    <string name="pref_accounts_restore_summary">Importēt Google kontus no faila</string>
+    <string name="pref_accounts_backup_warning_title">Rezervēt kontu kopijas?</string>
+    <string name="pref_accounts_backup_warning_message">Šī darbība sagrāva jūsu kontus un pieslēgšanās tokenus (SID/LSID) failā. Ikviens, kurš iegūst šo failu, var piekļūt jūsu kontiem, tāpēc glabājiet to droši un nekad nekopīvējiet.</string>
+    <string name="button_backup_accounts">Rezervēt</string>
+    <string name="snackbar_accounts_backed_up">Kontu kopijas rezervētas</string>
+    <string name="snackbar_accounts_export_failed">Rezervēšana neizdevās</string>
+    <string name="snackbar_accounts_import_failed">Atjaudināšana neizdevās</string>
     <string name="pref_privacy_title">Konfidencialitāte</string>
+    <string name="auth_add_account">Pievienot kontu</string>
     <string name="prefcat_applications">Lietotnes</string>
+    <string name="pref_add_account_summary">Pievienot Google kontu</string>
+    <string name="pref_gcm_enable_mcs_summary">Cloud Messaging ir push paziņojumu pakalpojums, ko izmanto daudzas trešo pušu lietotnes. Lai to izmantotu, jums ir jāaktivizē ierīces reģistrācija.</string>
+    <string name="pref_hide_launcher_icon">Slēpt ikonu palavā</string>
+    <string name="hide_launcher_icon_dialog_message">Ja šī opcija ir iespējota, MicroG tiks slēpts jūsu lietotņu sarakstā. MicroG var atvērt no lietotnes informācijas, kas atrodas jūsu ierīces sistēmas lietotņu sarakstā.</string>
+    <string name="hide_launcher_icon_updating_title">Lūdzu, uzgaidiet, kamēr lietotne tiek atjaunināta</string>
+    <string name="pref_language_title">Valoda</string>
+    <string name="pref_language_system_default">Sistēmas noklusējums</string>
+    <string name="pref_update_title">Pārbaudīt atjauninājumus</string>
+    <string name="pref_update_summary">Pārbaudīt GitHub, vai pieejama jaunāka versija.</string>
+    <string name="update_include_prerelease">Iekļaut izstrādātāju versijas</string>
+    <string name="update_available_title">Pieejams atjauninājums</string>
+    <string name="update_available_prerelease_title">Pieejams atjauninājums (priekšversija)</string>
+    <string name="update_available_message">Pieejama jauna versija v%1$s. Jums ir instalēta versija v%2$s. Lejupielādēt un instalēt atjauninājumu?</string>
+    <string name="update_now">Atjaunināt</string>
+    <string name="update_whats_new">Kas ir jauns</string>
+    <string name="update_ignore">Ignorēt</string>
+    <string name="update_downloading_title">Lejupielādē atjauninājumu…</string>
+    <string name="update_download_failed">Lejupielāde neizdevās. Pārbaudiet savu savienojumu un mēģiniet vēlreiz.</string>
+    <string name="update_signature_mismatch">Lietotni nevar atjaunināt, jo paraksturi neatsakai.</string>
+    <string name="update_failed_title">Atjauninājums neveiksmīgs</string>
+    <string name="update_permission_required_title">Nepieciešama atļauja</string>
+    <string name="update_permission_required_message">Lai instalētu atjauninājumus, lūdzu, sistēmas iestatījumos atļaujiet MicroG instalēt nezināmas lietotnes.</string>
     <string name="update_open_settings">Iestatījumi</string>
+    <string name="update_check_failed">Neizdevās pārbaudīt atjauninājumus. Pārbaudiet savu savienojumu un mēģiniet vēlreiz.</string>
+    <string name="update_up_to_date_title">Jums ir jaunākā versija</string>
+    <string name="update_up_to_date_message">MicroG-RE v%s ir jaunākā versija.</string>
+    <string name="update_notification_title">Atjauninājums ir pieejams</string>
+    <string name="update_notification_text">Jaunā v%s versija ir pieejama, pieskarcieties, lai atjauninātu</string>
+    <string name="update_notification_channel">Atjauninājumi</string>
     <string name="update_notification_permission_title">Paziņojumi</string>
+    <string name="update_notification_permission_message">Lai jūs informētu, kad ir pieejams jauns atjauninājums, MicroG-RE ir nepieciešama atļauja sūtīt paziņojumus. Lūdzu, atļaujiet paziņojumus, lai jūs saņemtu brīdinājumus par atjauninājumiem.</string>
+    <string name="update_notification_permission_allow">Atļaut</string>
+    <string name="update_notification_permission_not_now">Tagad nē</string>
+    <string name="update_notification_permission_open_settings">Atvērt iestatījumus</string>
+    <string name="gcm_last_message_at">Pēdējais ziņojums: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_registered_since">Reģistrēts kopš: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_unregister_confirm_title">Atregistrēt <xliff:g example="F-Droid">%1$s</xliff:g>?</string>
+    <string name="gcm_unregister_confirm_message">Dažas lietotnes automātiski nereģistrējas no jauna un/vai nepiedāvā iespēju to izdarīt manuāli. Pēc no-reģistrācijas šīs lietotnes var nedarboties pareizi.\nTurpināt?</string>
+    <string name="gcm_unregister_after_deny_message">Jūs atteicāties ļaut lietotnei, kas jau ir reģistrēta, reģistrēties push paziņojumiem.\nVai vēlaties to no-reģistrēt tagad, lai tā nākotnē nesaņemtu push ziņojumus?</string>
+    <string name="gcm_messages_counter">Ziņojumi: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> baiti)</string>
+    <string name="gcm_network_state_connected">Savienots kopš <xliff:g example="2 hours ago">%1$s</xliff:g></string>
+    <string name="gcm_enable_switch">Saņemt push paziņojumus</string>
+    <string name="gcm_allow_app_popup">Atļaut <xliff:g example="F-Droid">%1$s</xliff:g> reģistrēties push paziņojumiem?</string>
+    <string name="pref_push_app_allow_register_summary">Atļaut lietotnei reģistrēties push paziņojumiem.</string>
+    <string name="pref_push_app_wake_for_delivery_summary">Kārtot lietotni, kamēr tā darbojas fonā, lai saņemtu ienākošos push ziņojumus.</string>
+    <string name="safetynet_intro">Google SafetyNet ir ierīču sertifikācijas sistēma, kas nodrošina, ka ierīce ir pienācīgi novēršota no draudumiem un saderīga ar Android CTS. Dažas lietotnes izmanto SafetyNet drošības apsvērumu dēļ vai kā priekšnoteikumu aizsardzībai pret izmaiņām.\n\nmicroG GmsCore satur SafetyNet brīvu implementāciju, taču oficiālajam serverim ir nepieciešams, lai SafetyNet pieprasījumi būtu parakstīti, izmantojot proprietāro DroidGuard sistēmu.</string>
+    <string name="safetynet_enable_switch">Atļaut ierīces apliecinājumu</string>
+    <string name="pref_safetynet_test_title">Testēt SafetyNet apliecinājumu</string>
+    <string name="pref_recaptcha_test_title">Testēt ReCAPTCHA</string>
+    <string name="pref_recaptcha_enterprise_test_title">Testēt ReCAPTCHA Enterprise</string>
+    <string name="pref_test_summary_passed">Citi visi testi veiksmīgi</string>
+    <string name="pref_test_summary_failed">Kļūda: %s</string>
+    <string name="pref_test_summary_warn">Brīdinājums: %s</string>
+    <string name="pref_test_summary_running">Notiek izpilde…</string>
+    <string name="pref_droidguard_unsupported_summary">DroidGuard izpilde šajā ierīcē netiek atbalstīta. SafetyNet pakalpojumi var darboties nelikumīgi.</string>
+    <string name="prefcat_safetynet_apps_title">Lietotnes, kas izmanto SafetyNet</string>
+    <string name="prefcat_device_attestation_apps_title">Lietotnes, kas izmanto ierīces apliecinājumu</string>
+    <string name="pref_device_attestation_app_allow_requests_title">Atļaut pieprasījumus</string>
+    <string name="pref_device_attestation_app_allow_requests_summary">Atļaut lietotnei pieprasīt ierīces apliecinājumu</string>
+    <string name="menu_clear_recent_requests">Notīrīt nesenos pieprasījumus</string>
+    <string name="safetynet_last_run_at">Pēdējā izmantošana: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
     <string name="pref_device_registration_serial_title">Sērijas numurs</string>
     <string name="pref_device_registration_import_custom_profile_summary">Ievietot ierīces profilu no datnes</string>
     <string name="pref_device_registration_select_profile_title">Atlasiet profilu</string>
     <string name="pref_device_registration_device_profile_category">Ierīces profils</string>
+    <string name="pref_safetynet_recent_uses">Nesena piekļuve</string>
+    <string name="pref_safetynet_recent_attestation_summary">Apliecinājums: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_summary">ReCaptcha: %s</string>
+    <string name="pref_safetynet_recent_recaptcha_enterprise_summary">ReCaptcha Enterprise: %s</string>
+    <string name="pref_safetynet_recent_copy_json">Kopēt JSON JWS datus</string>
+    <string name="pref_safetynet_recent_advice">Padoms</string>
+    <string name="pref_safetynet_recent_eval_type">Novērtējuma tips</string>
+    <string name="pref_safetynet_recent_response_status">Atbildes statuss</string>
+    <string name="pref_safetynet_recent_cat_response">Atbildes dati</string>
+    <string name="pref_safetynet_recent_cat_request">Pieprasījuma dati</string>
+    <string name="pref_safetynet_recent_nonce">Nonce (heksdecimālais)</string>
+    <string name="pref_safetynet_recent_request_time">Pieprasījuma laiks</string>
+    <string name="pref_safetynet_recent_request_type">Pieprasījuma tips</string>
+    <string name="pref_safetynet_recent_cat_basic">Pamata dati</string>
+    <string name="pref_safetynet_recent_token">Tokenis</string>
+    <string name="pref_safetynet_recent_copied">Kopēts starpuklājumā!</string>
+    <string name="pref_safetynet_test_integrity_cts_passed">Integrity un CTS izbaigots veiksmīgi</string>
+    <string name="pref_safetynet_test_cts_failed">CTS neveiksmīgs</string>
+    <string name="pref_safetynet_test_integrity_failed">Integrity neveiksmīgs</string>
+    <string name="pref_safetynet_test_not_completed">Vēl nav pabeigts</string>
+    <string name="pref_safetynet_test_no_result">Nav rezultāta</string>
+    <string name="pref_safetynet_test_invalid_json">Nederīgs JSON</string>
     <string name="push_notifications_summary_values_seconds">%s sekundes</string>
     <string name="push_notifications_summary_values_minutes">%s minūtes</string>
+    <string name="pref_vending_licensing_category">Google Play licencēšana</string>
+    <string name="pref_vending_licensing_enable_switch">Atbildēt uz licences verificācijas pieprasījumiem</string>
+    <string name="pref_vending_license_enable_summary">Dažām lietotnēm ir nepieciešama apliecinājuma, ka tās ir iegūtas Google Play. Ja lietotne to pieprasa, microG var lejupielādēt pirkuma apliecinājumu no Google. Ja šī funkcija ir izslēgta vai nav pievienots Google konts, licencēšanas pārbaudes pieprasījumi tiek ignorēti.</string>
+    <string name="pref_vending_licensing_purchase_free_apps_switch">Automātiski pievienot bezmaksas lietotnes bibliotēkai</string>
+    <string name="pref_vending_licensing_purchase_free_apps_summary">Bezmaksas lietotnes var pārbaudīt, vai tās ir lejupielādētas no Google Play. Automātiski pievienojiet bezmaksas lietotnes sava konta bibliotēkai, lai vienmēr izdotos visām pašlaik jums pieejamajām bezmaksas lietotnēm.</string>
+    <string name="pref_vending_feature_delivery">Google Play funkciju piegāde</string>
+    <string name="pref_vending_split_install_switch">Komponentu instalācija pieprasījumā</string>
+    <string name="pref_vending_licensing_split_install_summary">Atļaut lietotnēm lejupielādēt un instalēt papildu komponentus</string>
+    <string name="feedback_disabled">Atgriezums pašlaik nav iespējams</string>
+    <string name="backup_disabled">Rezervēšana pašlaik nav iespējama</string>
+    <string name="pref_vending_billing_category">Google Play apmaksas sistēma</string>
+    <string name="pref_vending_billing_enable_switch">Apstrādāt apmaksas pieprasījumus</string>
+    <string name="pref_vending_billing_enable_summary">Kad šī funkcija ir iespējota, dažas lietotnes var veikt pirkumus vai uzsākt abonementus, izmantojot Google Play apmaksas pakalpojumu.</string>
+    <string name="pref_vending_billing_note_experimental">Šī funkcija ir eksperimentāla un var izraisīt naudas zudumu. Jūs esat brīdināts.</string>
+    <string name="pref_vending_billing_note_licensing">Dažām lietotnesi var būt nepieciešams, lai jūs iespējotu arī licences verificēšanu, lai apstiprinātu pirkumus.</string>
+    <string name="pref_vending_asset_delivery_category">Google Play Asset Delivery</string>
+    <string name="pref_vending_asset_delivery_switch">Iespējot resursu piegādi pie pieprasījuma</string>
+    <string name="pref_vending_asset_delivery_summary">Lejupielādēt papildu resursus, ja to pieprasa lietotnes, kas izmanto Play Asset Delivery</string>
+    <string name="pref_vending_asset_device_sync_summary">Lietotnes, kas izmanto Play Asset Delivery, lejupielādēs papildu resursus, pamatojoties uz pašlaik lietotās ierīces informāciju.</string>
+    <string name="pref_vending_asset_device_sync_switch">Iespējot ierīces informācijas sinhronizāciju</string>
+    <string name="pref_workprofile_create_account">Atļaut darba konta izveidi</string>
+    <string name="pref_workprofile_intro">Iestatot darba profilu jūsu darba vietai vai izglītības iestādei,
+iestatīšanas process var mēģināt savienoties ar Google, lai iespējotu lietotņu lejupielādi šajā profilā.</string>
+    <string name="pref_workprofile_disclaimer">Jūs esat atbildīgs par to, lai jūsu microG izmantošana būtu saskaņā ar korporatīvās politikas noteikumiem.
+        microG tiek nodrošināts pēc labākajām iespējām, un nevar garantēt, ka tas darbosies tieši tā, kā iespējams sagaidīt.</string>
+    <string name="pref_auto_create_player">Atļaut Play Games konta reģistrāciju</string>
+    <string name="pref_auto_create_player_intro">Spēlējot spēles, jums ir jāizmanto Play Games konts, lai pieslēgtos un ierakstītu ar spēlēm saistītas funkcijas, piemēram, sasniegumus, līderu sarakstus, arhīvus utt. Pēc izslēgšanas Google konti, kas nav saitē ar Play Games kontu, netiks automātiski reģistrēti, un spēlē nebūs iespējams pieslēgties un spēlēt.</string>
+    <string name="pref_allow_upload_game_played">Atļaut spēlēto spēļu augšupielādi</string>
+    <string name="pref_allow_upload_game_played_summary">Ja šī funkcija ir izslēgta, spēle neziņos par spēlēto spēles statusu pēc spēlē pieslēgšanās, un dažās spēlēs iespējams nebūs pieslēgties.</string>
+    <string name="pref_change_default_game_player">Mainīt kontu spēlēm</string>
+    <string name="pref_change_default_game_player_summary">Mainīt noklusējuma kontu spēlēm &amp; mainīt kontu katrai spēlei atsevišķi.</string>
+    <string name="pref_delete_game_account_data">Dzēst Play Games datus</string>
+    <string name="pref_delete_game_account_data_summary">Dzēst Play Games kontu &amp; visus datus &amp; dzēst atsevišķu spēļu datus.</string>
     <string name="credentials_assisted_cancel">Atcelt</string>
+    <string name="credentials_assisted_continue">Turpināt</string>
+    <string name="credentials_assisted_confirmation_header">Pierakstāmies</string>
+    <string name="credentials_assisted_continue_as_user_button_label">Turpināt kā %1$s</string>
+    <string name="credentials_assisted_sign_back_title">Pierakstīties %1$s vēlreiz, izmantojot Google</string>
+    <string name="credentials_assisted_signin_consent_header">Pierakstīšanās kā %1$s</string>
+    <string name="credentials_assisted_signin_consent">Turpinot, Google kopīgsi jūsu vārdu, e-pasta adresi un profila fotoattēlu ar %1$s. Skatīt %1$s Privātuma politiku un Lietošanas noteikumus.</string>
+    <string name="credentials_assisted_signin_description">Jūs varat pārvaldīt iespēju \"Pierakstīties ar Google\" savos Google kontos.</string>
+    <string name="credentials_assisted_choose_account_label">Atlasiet kontu</string>
+    <string name="credentials_assisted_choose_account_subtitle">turpināt %1$s</string>
+    <string name="credentials_assisted_choose_account_error_tips">Konta anomālija</string>
+    <string name="credentials_assisted_signin_button_text_long">Pierakstīties ar Google</string>
+    <string name="credentials_assisted_signin_add_account">Pievienot kontu</string>
+    <string name="credentials_service_sign_in_with_google_label">Pierakstīties ar Google</string>
+    <string name="credentials_service_remote_custom_subtitle">Drošības atslēga, viedtālrunis vai planšete</string>
+    <string name="limited_services_dialog_information">Jūs izmantojat microG Limited Services. Atšķirībā no parastajiem microG Services, šis variants darbojas tikai ar lietotnēm, kas izmanto microG bibliotēkas, nevis tām, kas ir Google Play. Tas nozīmē, ka lielākā daļa lietotnēm ignorēs šos pakalpojumus.</string>
+    <string name="limited_services_dialog_information_ack">Es saprotu</string>
+    <string name="games_achievement_list_title">Sasniegumi</string>
+    <string name="games_achievements_empty_text">Šai spēlei nav sasniegumu</string>
+    <string name="games_api_access_denied">Nekadal konts šajā ierīcē nevar piekļūt spēļu API</string>
+    <string name="games_achievement_locked_content_description">slēgts</string>
+    <string name="games_achievement_unlocked_content_description">atslēgts</string>
+    <string name="games_achievement_extra_text">%1$s XP</string>
+    <string name="games_leaderboard_empty_text">Šai spēlei nav līderu sarakstiem</string>
+    <string name="games_leaderboard_list_title">Reitingi</string>
+    <string name="games_leaderboards_score_label">Rezultāts: %1$s</string>
+    <string name="games_snapshot_empty_text">Spēles saglabājumi vēl nav saglabāti</string>
+    <string name="games_snapshot_choose_btn_text">atlasīt</string>
+    <string name="games_snapshot_delete_btn_text">dzēst</string>
+    <string name="games_delete_snapshot_dialog_title">Dzēst saglabāto spēli</string>
+    <string name="games_delete_snapshot_dialog_message">Vai esat pārliecināti, ka vēlaties dzēst šo saglabāto spēli?</string>
     <string name="games_delete_snapshot_dialog_cancel">Atcelt</string>
+    <string name="games_delete_snapshot_dialog_ok">Labi</string>
+    <string name="games_delete_snapshot_error">Dzēšana neizdevās, lūdzu, mēģiniet vēlreiz vēlāk</string>
+    <string name="games_state_description_signed_out">Izrakstīts</string>
+    <string name="games_state_description_delete">Dzēst</string>
+    <string name="games_change_button_text">Mainīt</string>
+    <string name="games_change_default_account_section_title">Mainīt noklūstējošo kontu spēlēm</string>
+    <string name="games_change_default_account_description">Noklūstējums konts: %1$s</string>
+    <string name="games_change_default_account_explanation">Šis konts tiek izmantots, lai automātiski pieslēgtu jūs spēlēm, saglabātu spēles progresu un iestatījumus. Noklūstējuma konta maiņa vai izrakstīšanās var resetēt jūsu progresu un iestatījumus spēlēm, kuras esat spēlējis.</string>
+    <string name="games_change_per_game_title">Mainīt kontu katrai spēlei atsevišķi</string>
+    <string name="games_change_per_game_description">Izvēlētās spēles konta maiņa vai izrakstīšanās no tās var resetēt jūsu progresu un iestatījumus šai spēlei.</string>
+    <string name="games_change_default_account_for_all_games_dialog_title">Izvēlieties iespēju jaunajam noklusējuma kontam</string>
+    <string name="games_change_default_account_for_all_games_dialog_description">Pašreizējais noklusējuma konts: %1$s</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_title">Mainīt noklusējuma kontu tikai jaunām spēlēm </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_description">Jūs nepaklausīsiet piekļuvi progresam un iestatījumiem spēlēm, kuras esat spēlējis. Taču jūsu progress tiks sadalīts starp kontiem.</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_title"> Mainīt noklusējuma kontu visām spēlēm </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_description">Iespējams, ka jūs zaudēsiet piekļuvi progresam un iestatījumiem spēlēm, kuras esat spēlējis. Mēs restartēsim spēli, lai piemērotu jūsu izmaiņas.</string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_title"> Izlogoties no visām spēlēm </string>
+    <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_description">Jūs varat zaudēt piekļuvi progresam un iestatījumiem spēlēm, kuras esat spēlējis. Mēs restartēsim spēli, lai piemērot jūsu izmaiņas.</string>
+    <string name="games_change_per_game_dialog_title">Izvēlieties iespēju šai spēlei</string>
+    <string name="games_change_per_game_dialog_description">Konta maiņa vai izēglēšana var resetēt jūsu progresu un iestatījumus šai spēlei</string>
+    <string name="games_change_per_game_dialog_option_use_player">Izmantot %1$s</string>
+    <string name="games_change_per_game_dialog_option_use_player_snackbar_success_message">Šajā spēlē tiks veikta pierakstīšanās ar %1$s</string>
+    <string name="games_change_per_game_dialog_option_sign_out">Izrakstīties</string>
+    <string name="games_change_per_game_dialog_option_sign_out_snackbar_success_message">Jūs tagad esat izrakstījušies no šīs spēles</string>
+    <string name="games_change_sign_out_of_all_games_snackbar_success_message">Jūs tagad esat izrakstījušies no visu spēlēm</string>
+    <string name="games_change_default_account_for_all_games_snackbar_success_message">Visās spēlēs tiks veikta pieslēgšanās ar %1$s</string>
+    <string name="games_change_default_account_for_new_games_snackbar_success_message">Jaunās spēles tiks piesaistītas kontam %1$s</string>
+    <string name="games_account_display_content">Pašreizējais konts: %1$s</string>
+    <string name="games_delete_profile_header">Dzēst Play Games kontu &amp; visus datus</string>
+    <string name="games_delete_profile_explanation">Ekstremāli izdzēst savu Google Play Games kontu, XP un visus profila datus. Šī darbība var izdzēst arī jūsu punktus, progresu (saglabātās spēles) un iestatījumus spēlēs, kurās esat spēlējis.</string>
+    <string name="games_delete_profile_button">Dzēst neatgriezeniski</string>
+    <string name="games_delete_game_data_header">Dzēst atsevišķu spēļu datus</string>
+    <string name="games_delete_game_data_explanation">Jūs varat neatgriezeniski dzēst atsevišķus datus spēlēm, kuras esat spēlējis, izmantojot Google Play Games. Šī darbība dzēš jūsu rezultātus, progresu (saglabātajām spēlēm) un iestatījumus izvēlētajai spēlei.</string>
+    <string name="games_delete_profile_dialog_title">Vai tiešām vēlaties dzēst šo kontu?</string>
+    <string name="games_delete_profile_explanation_with_gamer_name">Neatgriezeniski dzēst jūsu Google Play Games kontu spēlētāja vārdam &lt;b&gt;%1$s&lt;/b&gt; (&lt;b&gt;%2$s&lt;/b&gt;), XP un visiem profila datiem. Šī darbība var dzēst arī jūsu rezultātus, progresu (saglabātajām spēlēm) un iestatījumus spēlēs, kuras esat spēlējis.</string>
+    <string name="games_delete_profile_dialog_message">Šo darbību nevar atsaukt.</string>
+    <string name="games_delete_profile_fail">Neizdevās dzēst jūsu profilu. Mēģiniet vēlreiz vēlāk.</string>
+    <string name="games_delete_game_data_confirm_dialog_title">Dzēst datus spēlei %1$s</string>
+    <string name="games_delete_game_data_confirm_dialog_message">Neatgriezeniski dzēšot datus spēlei %1$s, tiks izdzēsti jūsu rezultāti, progress (saglabātajām spēlēm) un spēles iestatījumi Google Play Games.</string>
+    <string name="games_popup_signin_welcome">Sveicināti, %1$s</string>
+    <string name="family_management_title">Ģimene</string>
+    <string name="family_management_retry">Mēģināt vēlreiz</string>
+    <string name="family_management_load_error">Satura ielāde neizdevās</string>
+    <string name="family_management_toolbar_back">Atpakaļ</string>
+    <string name="family_management_toolbar_more">Vairāk</string>
+    <string name="family_management_exit_family_group">Pamest ģimenes grupu</string>
+    <string name="family_management_delete_family_group">Dzēst ģimenes grupu</string>
+    <string name="family_management_leave_family_password_title">Apstipriniet paroli, lai pamestu ģimenes grupu</string>
+    <string name="family_management_delete_family_password_title">Apstipriniet paroli, lai dzēstu ģimenes grupu</string>
+    <string name="family_management_remove_member_password_title">Apstipriniet paroli, lai noņemtu \"%s\"</string>
+    <string name="family_management_invite_family_member">Uzaicināt ģimenes locekļus</string>
+    <string name="family_management_cancel_invite">Atcelt uzaicinājumu</string>
+    <string name="family_management_cancel_invite_success">Uzaicinājums veiksmīgi atcelts</string>
+    <string name="family_management_cancel_invite_error">Radās problēmas, atkīlot uzaicinājumu. Mēģiniet vēlreiz.</string>
+    <string name="family_management_remove_member">No onegt dalībā</string>
+    <string name="family_management_member_removed_success">%s tika izņemts/-a no jūsu ģimenes grupas</string>
+    <string name="family_management_member_remove_failed">Radās problēma, noņemot %s. Mēģiniet vēlreiz.</string>
+    <string name="family_management_leave_family_error_message">Radās problēma, izstājot no ģimenes grupas. Mēģiniet vēlreiz.</string>
+    <string name="family_management_exist_group_success">Jūs izstājāt no savas ģimenes grupas…</string>
+    <string name="family_management_delete_group_success">Ģimenes grupa izdzēsta</string>
+    <string name="family_management_delete_group_failure">Neizdevās izdzēst mājas grupu</string>
     <string name="family_management_delete_group_cancel">Atcelt</string>
+    <string name="family_management_delete_group_confirm">Labi</string>
+    <string name="family_management_input_pwd">Lūdzu, ievadiet savu paroli</string>
+    <string name="family_management_invite_sent_date_format">Uzaicinājums nosūtīts %s</string>
+    <string name="family_management_invite_send">Uzaicinājums nosūtīts</string>
+    <string name="family_management_pwd_error">Nepareiza parole, lūdzu, ievadiet vēlreiz</string>
+    <string name="barcode_scanner_brand">Noskenējis microG %1$s vārdā</string>
+    <string name="camera_permission_dialog_button">Labi</string>
+    <string name="camera_permission_dialog_message">microG pakalpojumiem ir nepieciešama piekļuve jūsu ierīces kamerai, lai noskenētu kodu %1$s.\n\nLai to iespējotu, lūdzu, iestatījumos piešķiriet kameras piekļuvi microG pakalpojumiem.</string>
+    <string name="camera_permission_dialog_title">Nepieciešama kameras piekļuve</string>
+    <string name="pref_app_install_settings_title">Lietotņu instalēšanas iestatījumi</string>
+    <string name="pref_app_install_switch_title">Atļaut lietotņu instalēšanu</string>
+    <string name="pref_app_install_other_apps_note">Autorizācija ļauj instalēt lietotnes no citiem avotiem.</string>
+    <string name="pref_app_install_permission_instruction">Lai nodrošinātu, ka instalētās lietotnes darbojas pareizi, lūdzu, autorizējiet microG Companion, lai instalētu no citiem avotiem lejupielādētas lietotnes.</string>
+    <string name="prefcat_app_install_list_title">Programmas, kas izmanto programmu instalatoru</string>
+    <string name="service_name_google_location_sharing">Google atrašanās vietas kopīgošana</string>
+    <string name="location_sharing_description">Pārvaldi reāllaika atrašanās vietas kopīgošanu Google programmās un pakalpojumu šīs ierīces ietvaros</string>
+    <string name="location_sharing_learn_more">Uzzini vairāk par &quot;Atrašanās vietas kopīgošanu&quot;</string>
+    <string name="location_sharing_switch_text">Izmantot atrašanās vietas kopīgošanu</string>
+    <string name="location_sharing_turn_off_notify_hint">Ja šai ierīcei izslēgsi atrašanās vietas kopīgošanu, cilvēkiem, ar kuriem kopīgo, par to netiks paziņots.</string>
+    <string name="location_sharing_off_previous_hint">Līdz šīs funkcijas atslēgšanai būs pieejama tikai pēdējā kopīgā atrašanās vieta.</string>
+    <string name="location_sharing_disabled">Šim kontam nav aktīvas atrašanās vietas kopīgošanas</string>
+    <string name="location_sharing_turn_on_hint">Kad sāksi kopīgot savu atrašanās vietu no Google programmas vai pakalpojuma, vari pārvaldīt atrašanās vietas kopīgošanu šeit.\n\nLai sāktu kopīgot savu atrašanās vietu, dodies uz Google Maps vai Family Link.</string>
+    <string name="location_sharing_turn_off_title">Izslēgt atrašanās vietas kopīgošanu</string>
+    <string name="location_sharing_turn_off_hint">Jūs joprojām varat kopīgot savu atrašanās vietu no citām ierīcēm, kas ir pieteiktas tajam pašam Google kontam, vai no lietotnēm, kas nav Google lietotnes. Pārliecinieties, ka pārbaudījāt savus atrašanās vietas kopīgošanas iestatījumus visās vietās, kur tie varētu būt piemērojamie.\n\nPersonas, ar kurām dalāties, turpinās redzēt jūsu pēdējo kopīgoto atrašanās vietu.</string>
+    <string name="location_sharing_turn_off_cancel">Atstāt ieslēgtu</string>
+    <string name="location_sharing_turn_off_confirm">Izeslēgt</string>
+    <string name="location_sharing_confirm_dialog_title">Iespējot atrašanās vietas kopīgošanu</string>
+    <string name="location_sharing_confirm_dialog_text">Personas, ar kurām kopīgojat savu atrašanās vietu, vienmēr var redzēt:\n·Jūsu vārdu un fotoattēlu\n·Jūsu ierīces pēdējo atrašanās vietu, pat ja neizmantojat Google pakalpojumu\n·Jūsu ierīces akumulatora līmeni un to, vai tā tiek uzlādēta\n·Jūsu ankomstas un izbraukšanas laiku, ja tās pievieno paziņojumu par atrašanās vietas kopīgošanu</string>
     <!-- Passkey management -->
+    <string name="pref_passkey_manager_title">Pārvaldīt pākses atslēgas</string>
+    <string name="pref_passkey_manager_empty_title">Nav saglabātu pākses atslēgu</string>
+    <string name="pref_passkey_manager_description">Kad trešo pušu lietotnes reģistrē pākses atslēgas, microG saglabā lokālu ierakstu. Ja lietotne dzēš pākses atslēgu, nebrīdinot microG, ieraksts var palikt nevajadzīgs. Šādus atlikušos ierakstus vardzēst šeit.</string>
+    <string name="pref_passkey_manager_delete_dialog_title">Dzēst piekļuves atslēgu</string>
+    <string name="pref_passkey_manager_delete_dialog_message">Dzēst piekļuves atslēgu \"%2$s\" resursam \"%1$s\". Šo darbību nevar atsaukt; lai pieslēgtos atkārtoti, būs jāreģistrē jauna piekļuves atslēga.</string>
+    <string name="pref_passkey_manager_delete_dialog_confirm">Dzēst</string>
+    <string name="pref_passkey_manager_unknown_user">Nezināms lietotājs</string>
+    <string name="pref_passkey_manager_transport_screen_lock">Ekrāna bloķēšana</string>
+    <string name="pref_passkey_manager_transport_usb">USB</string>
+    <string name="pref_passkey_manager_transport_nfc">NFC</string>
+    <string name="pref_passkey_manager_transport_bluetooth">Bluetooth</string>
+    <string name="pref_passkey_manager_transport_hybrid">Hibrīds</string>
+    <string name="pref_passkey_manager_credential_id_format_internal">ID: %1$s</string>
+    <string name="self_check_resolution_oem_restriction">Jūsu sistēma var ierobežot fona procesus. Pieskarieties šeit, lai atvērtu vietni Don\'t Kill My App! un uzzinātu, kā izslēgt šos ierobežojumus</string>
+    <string name="morphe_sign_in_with_google_microg_label">Pierakstīties ar Google, izmantojot MicroG RE</string>
     <string name="self_check_action_download_morphe">Lejupielādēt Morphe</string>
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
+    <string name="abi_mismatch_title">Instalēts nepareizs arhitektūras variants</string>
+    <string name="abi_mismatch_message">"Šī MicroG-RE versija satur tikai 64-bitu (arm64) bibliotēkas, taču šī ierīce izmanto 32-bitu lietotāja vidi.
+
+Funkcijas, kurām ir nepieciešams Conscrypt (konta pieslēgšanās, straumēšana, BotGuard, video plūsmu spoofing, SponsorBlock, Return YouTube Dislike u.c.), nedarbosies pareizi un var izraisīt atskaites problēmas vai kļūdu \"Unable to find a default SSL provider\".
+
+Tā vietā instalējiet ARMv7 vai Universal APK."</string>
+    <string name="abi_mismatch_download_armv7">Lejupielādēt ARMv7 APK</string>
+    <string name="abi_mismatch_downloading_title">Lejupielādē pareizo variantu…</string>
 </resources>

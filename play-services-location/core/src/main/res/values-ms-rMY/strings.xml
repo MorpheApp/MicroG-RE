@@ -4,7 +4,9 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="service_name_location">Lokasi</string>
     <string name="pref_location_custom_source_title">Tersuai</string>
+    <string name="location_data_import_result_toast">%1$d rekod telah diimport.</string>
     <!-- RE strings -->
     <!-- "Mapbox (MapLibre)" must be left untranslated .-->
     <!-- "Stadia Maps" must be left untranslated .-->

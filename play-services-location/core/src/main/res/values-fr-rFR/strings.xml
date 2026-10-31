@@ -65,8 +65,8 @@
     <string name="pref_map_engine_summary">Choisissez le moteur utilisé pour afficher les cartes dans les applications. Mapbox (MapLibre) est recommandé.</string>
     <!-- "Stadia Maps" must be left untranslated .-->
     <string name="pref_stadia_key_title">Clé API Stadia Maps</string>
-    <string name="pref_stadia_key_summary">Optionnel. Ajoute une option de moteur de rendu Stadia Maps ; Stadia nécessite une clé API.</string>
+    <string name="pref_stadia_key_summary">Facultatif. Ajoute une option de moteur de rendu Stadia Maps ; Stadia nécessite une clé API.</string>
     <!-- "HMS (Huawei Map Kit)" must be left untranslated .-->
     <string name="pref_hms_key_title">Clé API HMS (Huawei Map Kit)</string>
-    <string name="pref_hms_key_summary">Optionnel. Ajoute une option de moteur de rendu HMS ; nécessite HMS Core sur l\'appareil.</string>
+    <string name="pref_hms_key_summary">Facultatif. Ajoute une option de moteur de rendu HMS ; nécessite HMS Core sur l\'appareil.</string>
 </resources>

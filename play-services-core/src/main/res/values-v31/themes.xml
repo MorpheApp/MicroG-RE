@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- API 31+ light. Theme.Base still resolves to Theme.Material3Expressive.DynamicColors.DayNight,
-         so dynamic colors stay available if DynamicColors.applyToActivitiesIfAvailable() is ever wired
-         up at runtime; until then the md_theme light palette is used for a consistent MicroG-RE look. -->
+    <!-- API 31+ light. UpdaterApplication applies DynamicColors at runtime on top of this theme,
+         so the wallpaper palette wins wherever the system provides one. These items are the base
+         the overlay is applied over, and the fallback when it cannot be applied. -->
     <style name="Theme.App" parent="Theme.Base.DayNight.NoActionBar">
         <item name="colorPrimary">@color/md_theme_primary</item>
         <item name="colorOnPrimary">@color/md_theme_onPrimary</item>

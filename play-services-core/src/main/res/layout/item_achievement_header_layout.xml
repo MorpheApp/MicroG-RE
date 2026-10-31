@@ -2,13 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:paddingVertical="10dp"
-    android:background="@android:color/white"
+    android:background="?android:attr/colorBackground"
     android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/achievements_header_title"
         android:textSize="12sp"
-        android:textColor="#808080"
+        android:textColor="?android:attr/textColorSecondary"
         android:layout_width="wrap_content"
         android:layout_centerVertical="true"
         android:layout_height="wrap_content"/>

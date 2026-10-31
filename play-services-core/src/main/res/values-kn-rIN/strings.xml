@@ -6,8 +6,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Self check -->
     <!-- Settings strings -->
-    <string name="credentials_assisted_continue">Continue</string>
-    <string name="games_change_per_game_dialog_option_sign_out">Sign out</string>
     <!-- Passkey management -->
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
 </resources>

@@ -29,7 +29,7 @@
         android:layout_toEndOf="@id/leaderboard_player_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/darker_gray"
+        android:textColor="?android:attr/textColorSecondary"
         android:textSize="11sp" />
 
     <TextView
@@ -41,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="12dp"
-        android:textColor="@android:color/darker_gray"
+        android:textColor="?android:attr/textColorSecondary"
         android:textSize="11sp" />
 
     <View
@@ -50,7 +50,7 @@
         android:layout_alignStart="@id/leaderboard_player_name"
         android:layout_below="@id/leaderboard_player_logo"
         android:layout_width="match_parent"
-        android:background="#E6E6E6"
+        android:background="?android:attr/listDivider"
         android:layout_height="1dp"/>
 
 </RelativeLayout>

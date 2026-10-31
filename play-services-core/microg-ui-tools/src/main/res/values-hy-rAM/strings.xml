@@ -15,5 +15,21 @@
   ~ limitations under the License.
   -->
 <resources>
+    <string name="lib_name">microG UI Գործիքներ</string>
+    <string name="lib_license">Apache License 2.0, microG թիմ</string>
+    <string name="about_version_str">Տարբերակ %1$s</string>
+    <string name="about_default_license">Բոլոր իրավունքները պահպանված են:</string>
+    <string name="prefcat_setup">Կարգավորում</string>
+    <string name="self_check_title">Ինքնաստուգում</string>
+    <string name="self_check_desc">Ստուգեք՝ արդյոք համակարգը ճիշտ է կարգավորված microG-ն օգտագործելու համար:</string>
+    <string name="self_check_cat_permissions">Տրված թույլտվություններ</string>
+    <string name="self_check_name_permission">Թույլտվություն %1$s-ին՝</string>
+    <string name="self_check_name_permission_interact_across_profiles">Թույլտվություն աշխատանքային պրոֆիլի հետ փոխազդելու համար՝</string>
+    <string name="self_check_resolution_permission">Հպեք այստեղ՝ թույլտվությունը տրամադրելու համար: Թույլտվության բացակայությունը կարող է հանգեցնել հավելվածների ոչ ճիշտ աշխատանքի:</string>
+    <string name="about_root_title">microG UI Դեմո</string>
+    <string name="about_root_summary">Ամփոփում</string>
+    <string name="about_root_version">Տարբերակ v0.1.0</string>
+    <string name="about_root_libraries">Ներառված գրադարաններ</string>
     <!--Settings About-->
+    <string name="about_morphe_description">Morphe-ը բաց կոդով նախագիծ է, որը նախատեսված է Android հավելվածները փաթեթների միջոցով փոփոխելու համար</string>
 </resources>

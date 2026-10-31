@@ -15,5 +15,21 @@
   ~ limitations under the License.
   -->
 <resources>
+    <string name="lib_name">microG UI ხელსაწყოები</string>
+    <string name="lib_license">Apache License 2.0, microG-ის გუნდი</string>
+    <string name="about_version_str">ვერსია %1$s</string>
+    <string name="about_default_license">ყველა უფლება დაცულია.</string>
+    <string name="prefcat_setup">налаგდება</string>
+    <string name="self_check_title">თვითშემოწმება</string>
+    <string name="self_check_desc">შეამოწმეთ, სწორად არის თუ არა სისტემა მომზადებული microG-ის გამოსაყენებლად.</string>
+    <string name="self_check_cat_permissions">ნებართვები and given</string>
+    <string name="self_check_name_permission">ნებართვა %1$s-ისთვის:</string>
+    <string name="self_check_name_permission_interact_across_profiles">სამუშაო პროფილთან ურთიერთობის ნებართვა:</string>
+    <string name="self_check_resolution_permission">შეხეთ აქ ნებართვას მისანიჭებლად. ნებართვის არგაცემა შესაძლოა გამოიწვიოს აპლიკაციების არასწორი მუშაობა.</string>
+    <string name="about_root_title">microG UI დემო</string>
+    <string name="about_root_summary">შეჯამება</string>
+    <string name="about_root_version">ვერსია v0.1.0</string>
+    <string name="about_root_libraries">ჩართული ბიბლიოთეკები</string>
     <!--Settings About-->
+    <string name="about_morphe_description">Morphe არის ღია კოდის პროექტი, რომელიც შექმნილია Android აპლიკაციების პატჩების მეშვეობით модиფიცირებისთვის</string>
 </resources>

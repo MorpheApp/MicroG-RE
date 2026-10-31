@@ -15,13 +15,5 @@
   ~ limitations under the License.
   -->
 <resources>
-    <string name="about_version_str">កំណែ %1$s</string>
-    <string name="about_default_license">រក្សាសិទ្ធិគ្រប់យ៉ាង.</string>
-    <string name="self_check_title">ពិនិត្យខ្លួនឯង</string>
-    <string name="self_check_name_permission">ការអនុញ្ញាតចំពោះ %1$s៖</string>
-    <string name="about_root_title">គំរូបង្ហាញ microG UI</string>
-    <string name="about_root_version">កំណែ v0.1.0</string>
-    <string name="about_root_libraries">បណ្ណាល័យត្រូវបានរួមបញ្ចូល</string>
     <!--Settings About-->
-    <string name="about_morphe_description">Morphe គឺជាគម្រោងប្រភពបើកចំហដែលត្រូវបានរចនាឡើង ដើម្បីកែសម្រួលកម្មវិធីអាន់ដ្រយ តាមរយៈបំណះ</string>
 </resources>
