@@ -5,9 +5,64 @@
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="service_name_location">Орналасу орны</string>
+    <string name="prefcat_location_apps_title">Соңғы қолжетімділік</string>
+    <string name="prefcat_location_wifi_title">Wi-Fi орналасуы</string>
+    <string name="prefcat_location_cell_title">Мобильді желі орналасуы</string>
+    <string name="prefcat_geocoder_title">Мекенжай шешуші</string>
+    <string name="pref_location_wifi_online_enabled_title">Онлайн сервистен сұрау</string>
+    <string name="pref_location_wifi_online_enabled_summary">Онлайн орналасу сервисінен Wi-Fi негізіндегі орналасу мәліметтерін алу.</string>
+    <string name="pref_location_wifi_moving_enabled_title">Hotspot-тан сұрау</string>
+    <string name="pref_location_wifi_moving_enabled_summary">Қосылған кезде Wi-Fi орналасуын қолдау көрсетілетін hotspot-тардан тікелей алу.</string>
+    <string name="pref_location_wifi_learning_enabled_title">GPS-тен есте сақтау</string>
+    <string name="pref_location_wifi_learning_enabled_summary">GPS қолданылғанда Wi-Fi орналасуларын жергілікті түрде сақтау.</string>
+    <string name="pref_location_cell_online_enabled_title">Онлайн сервистен сұрау</string>
+    <string name="pref_location_cell_online_enabled_summary">Мобильді желінің ұялық мұнараларының орналасуын онлайн орналасу қызметінен алу.</string>
+    <string name="pref_location_cell_learning_enabled_title">GPS-тен есте сақтау</string>
+    <string name="pref_location_cell_learning_enabled_summary">GPS қолданылғанда мобильді желінің орналасуын жергілікті түрде сақтау.</string>
+    <string name="pref_geocoder_nominatim_enabled_title">Nominatim қолдану</string>
+    <string name="pref_geocoder_nominatim_enabled_summary">Мекенжайларды OpenStreetMap Nominatim арқылы анықтау.</string>
+    <string name="fragment_location_apps_title">Орналасуға рұқсаты бар қолданбалар</string>
+    <string name="location_app_last_access_at">Соңғы қолданылуы: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="pref_location_app_force_coarse_title">Дәлдігі төмен орналасуды мәжбүрлеу</string>
+    <string name="pref_location_app_force_coarse_summary">Рұқсат деңгейін ескермей, бұл қолданбаға әрқашан дәлдігі төмен орналасу мәліметтерін қайтару.</string>
+    <string name="prefcat_app_last_location">Соңғы хабарланған орналасу</string>
+    <string name="location_settings_dialog_message_title_for_better_experience">Жақсырақ тәжірибе үшін microG-нің орналасу қызметін қолданатын құрылғы орналасуын қосыңыз</string>
+    <string name="location_settings_dialog_message_title_to_continue">Жалғастыру үшін microG-нің орналасу қызметін қолданатын құрылғы орналасуын қосыңыз</string>
+    <string name="location_settings_dialog_message_details_start_paragraph">Құрылғыңызға келесілер қажет болады:</string>
+    <string name="location_settings_dialog_message_location_services_gps_and_nlp">GPS, Wi‑Fi, ұялы желілерді және сенсорларды қолдану</string>
+    <string name="location_settings_dialog_message_grant_permissions">microG қызметіне орналасу рұқсаттарын беріңіз</string>
+    <string name="location_settings_dialog_message_gls_consent">microG орналасу қызметін қолданыңыз; бұл қызметтің бөлігі ретінде microG орналасу дәлдігі мен орналасуға негізделген қызметтерді жақсарту үшін мерзімді түрде орналасу деректерін жинап, бұл деректерді анонимді түрде қолдануы мүмкін.</string>
+    <string name="location_settings_dialog_message_details_end_paragraph">Толығырақ білу үшін орналасу баптауларына өтіңіз.</string>
+    <string name="location_settings_dialog_btn_cancel">Жоқ, рахмет</string>
+    <string name="location_settings_dialog_btn_sure">ОК</string>
+    <string name="pref_location_custom_url_summary">Бұл қызметтің жеке URL-мекенжайын орнатуға мүмкіндік береді. Қате мәндер орналасу қызметтерінің жауап бермеуіне немесе мүлдем қолжетімсіз болуына әкеп соғуы мүмкін.</string>
+    <string name="pref_location_custom_url_details">/v1/geolocate жолы автоматты түрде қосылады. Егер орналасу провайдеріне кілт қажет болса, оны түбірлік URL-ге сұраныс параметрі ретінде қосуға болады.</string>
+    <string name="pref_location_custom_url_input_hint">Қызметтің жеке URL-мекенжайы</string>
+    <string name="pref_location_custom_source_title">Жеке</string>
+    <string name="pref_location_source_title">Онлайн орналасу қызметін таңдаңыз</string>
+    <string name="pref_location_source_terms">Шарттар / Құпиялылық</string>
+    <string name="pref_location_source_suggested">Ұсынылған</string>
+    <string name="pref_location_import_export_title">Орналасу деректерін импорттау немесе экспорттау</string>
+    <string name="notification_config_required_title">Баптау қажет</string>
+    <string name="notification_config_required_text_online_sources">Онлайн орналасу сервистерін қолдануды жалғастыру үшін орналасу деректері сервисін таңдауыңыз керек.</string>
+    <string name="location_data_export_wifi_title">Жергілікті Wi-Fi орналасу дерекқорын экспорттау</string>
+    <string name="location_data_export_cell_title">Жергілікті ұялық мұнара орналасу деректер базасын экспорттау</string>
+    <string name="location_data_import_title">Орналасқан жер деректерін файлдан импорттау</string>
     <string name="location_data_import_result_toast">%1$d жазба импортталды.</string>
+    <string name="prefcat_location_timeline_title">Google Maps Хронологиясы</string>
+    <string name="pref_location_timeline_title">Орналасқан жер тарихын қосу</string>
+    <string name="pref_location_timeline_summary">"Орналасқан жер туралы ақпаратты мерзімді түрде жазып, оны Google Maps Хронологиясы үшін қолжетімді етіңіз."</string>
+    <string name="pref_location_timeline_upload_title">Google аккаунтымен синхрондау</string>
+    <string name="pref_location_timeline_upload_summary">"Орналасқан жер тарихын Google серверлерімен синхрондаңыз, сонда ол басқа құрылғыларда көрсетіледі."</string>
     <!-- RE strings -->
+    <string name="prefcat_location_maps_title">Google Maps</string>
+    <string name="pref_map_engine_title">Карта рендерері</string>
     <!-- "Mapbox (MapLibre)" must be left untranslated .-->
+    <string name="pref_map_engine_summary">Қосымшаларда карталарды көрсету үшін қолданылатын қозғалтқышты таңдаңыз. Mapbox (MapLibre) ұсынылады.</string>
     <!-- "Stadia Maps" must be left untranslated .-->
+    <string name="pref_stadia_key_title">Stadia Maps API кілті</string>
+    <string name="pref_stadia_key_summary">Міндетсіз. Stadia Maps рендері мүмкіндігін қосады; Stadia үшін API кілті қажет.</string>
     <!-- "HMS (Huawei Map Kit)" must be left untranslated .-->
+    <string name="pref_hms_key_title">HMS (Huawei Map Kit) API кілті</string>
+    <string name="pref_hms_key_summary">Міндетсіз. HMS рендері мүмкіндігін қосады; құрылғыда HMS Core болуы тиіс.</string>
 </resources>

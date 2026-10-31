@@ -15,5 +15,14 @@
   ~ limitations under the License.
   -->
 <resources>
+    <string name="lib_name">microG UI கருவிகள்</string>
+    <string name="lib_license">Apache License 2.0, microG குழு</string>
+    <string name="about_default_license">அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</string>
+    <string name="prefcat_setup">அமைவு</string>
+    <string name="self_check_desc">microG-ஐப் பயன்படுத்த கணினி சரியாக அமைக்கப்பட்டுள்ளதா என்பதைச் சரிபார்க்கவும்.</string>
+    <string name="self_check_cat_permissions">அனுமதிகள் வழங்கப்பட்டுள்ளன</string>
+    <string name="self_check_name_permission_interact_across_profiles">வேலை சுயவிவரத்துடன் தொடர்பு கொள்ள அனுமதி:</string>
+    <string name="self_check_resolution_permission">அனுமதியை வழங்க இங்கே தொடவும். அனுமதியை வழங்காவிட்டால் பயன்பாடுகள் சரியாகச் செயல்படாமல் போகலாம்.</string>
+    <string name="about_root_summary">சுருக்கம்</string>
     <!--Settings About-->
 </resources>

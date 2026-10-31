@@ -4,8 +4,63 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="prefcat_location_apps_title">சமீபத்திய அணுகல்</string>
+    <string name="prefcat_location_wifi_title">Wi-Fi இருப்பிடம்</string>
+    <string name="prefcat_location_cell_title">மொபைல் நெட்வொர்க் இருப்பிடம்</string>
+    <string name="prefcat_geocoder_title">முகவரி தீர்வி</string>
+    <string name="pref_location_wifi_online_enabled_title">ஆன்லைன் சேவையிலிருந்து கோரிக்கை</string>
+    <string name="pref_location_wifi_online_enabled_summary">ஆன்லைன் இருப்பிடச் சேவையிலிருந்து Wi-Fi அடிப்படையிலான இருப்பிடத்தைப் பெறுங்கள்.</string>
+    <string name="pref_location_wifi_moving_enabled_title">ஹாட்ஸ்பாட்டிலிருந்து கோரிக்கை</string>
+    <string name="pref_location_wifi_moving_enabled_summary">இணைக்கப்பட்டிருக்கும்போது ஆதரவு பெற்ற ஹாட்ஸ்பாட்டுகளிலிருந்து நேரடியாக Wi-Fi இருப்பிடத்தைப் பெறுங்கள்.</string>
+    <string name="pref_location_wifi_learning_enabled_title">GPS-லிருந்து நினைவில் கொள்க</string>
+    <string name="pref_location_wifi_learning_enabled_summary">GPS பயன்படுத்தப்படும்போது Wi-Fi இருப்பிடங்களை உள்ளூர் சேமிப்பகத்தில் சேமிக்கவும்.</string>
+    <string name="pref_location_cell_online_enabled_title">ஆன்லைன் சேவையிலிருந்து கோரிக்கை</string>
+    <string name="pref_location_cell_online_enabled_summary">ஆன்லைன் இருப்பிட சேவையிலிருந்து மொபைல் நெட்வொர்க் செல் டவர் இருப்பிடங்களைப் பெறுங்கள்.</string>
+    <string name="pref_location_cell_learning_enabled_title">GPS-லிருந்து நினைவில் கொள்</string>
+    <string name="pref_location_cell_learning_enabled_summary">GPS பயன்படுத்தப்படும்போது மொபைல் நெட்வொர்க் இருப்பிடங்களை உள்ளூர் ரீதியாகச் சேமிக்கவும்.</string>
+    <string name="pref_geocoder_nominatim_enabled_title">Nominatim-ஐப் பயன்படுத்தவும்</string>
+    <string name="pref_geocoder_nominatim_enabled_summary">OpenStreetMap Nominatim-ஐப் பயன்படுத்தி முகவரிகளைக் கண்டறியவும்.</string>
+    <string name="fragment_location_apps_title">இருப்பிட அணுகல் கொண்ட செயலிகள்</string>
+    <string name="location_app_last_access_at">கடைசி அணுகல்: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="pref_location_app_force_coarse_title">தோராயமான இருப்பிடத்தை வலுக்கப்படுத்து</string>
+    <string name="pref_location_app_force_coarse_summary">இந்த செயலியின் அனுமதி அளவை புறக்கணித்து, எப்போதும் தோராயமான இருப்பிடங்களை வழங்கவும்.</string>
+    <string name="prefcat_app_last_location">கடைசியாக அறிவிக்கப்பட்ட இருப்பிடம்</string>
+    <string name="location_settings_dialog_message_title_for_better_experience">சிறந்த அனுபவத்திற்கு, microG-ன் இருப்பிட சேவையைப் பயன்படுத்தும் சாதன இருப்பிடத்தை ஆன் செய்யவும்</string>
+    <string name="location_settings_dialog_message_title_to_continue">தொடர, microG-ன் இருப்பிட சேவையைப் பயன்படுத்தும் சாதன இருப்பிடத்தை ஆன் செய்யவும்</string>
+    <string name="location_settings_dialog_message_details_start_paragraph">உங்கள் சாதனத்திற்கு இவை தேவைப்படும்:</string>
+    <string name="location_settings_dialog_message_location_services_gps_and_nlp">GPS, Wi‑Fi, செல் நெட்வொர்க்குகள் மற்றும் சென்சார்களைப் பயன்படுத்துதல்</string>
+    <string name="location_settings_dialog_message_grant_permissions">microG சேவைக்கு இருப்பிட அனுமதிகளை வழங்கவும்</string>
+    <string name="location_settings_dialog_message_gls_consent">microG இருப்பிட சேவையைப் பயன்படுத்தவும்; இந்தச் சேவையின் ஒரு பகுதியாக, microG அவ்வப்போது இருப்பிடத் தரவைச் சேகரிக்கலாம் மற்றும் இருப்பிடத் துல்லியம் மற்றும் இருப்பிட அடிப்படையிலான சேவைகளை மேம்படுத்த இந்தத் தரவை அநாமதேய முறையில் பயன்படுத்தலாம்.</string>
+    <string name="location_settings_dialog_message_details_end_paragraph">விவரங்களுக்கு, இருப்பிட அமைப்புகளுக்குச் செல்லவும்.</string>
+    <string name="location_settings_dialog_btn_cancel">தேவையில்லை</string>
+    <string name="location_settings_dialog_btn_sure">சரி</string>
+    <string name="pref_location_custom_url_summary">இது ஒரு தனிப்பயன் சேவை URL-ஐ அமைக்க அனுமதிக்கிறது. தவறான மதிப்புகள் இருப்பிடச் சேவைகள் பதிலளிக்காமல் அல்லது முற்றிலும் கிடைக்காமல் போவதற்கு வழிவகுக்கும்.</string>
+    <string name="pref_location_custom_url_details">/v1/geolocate பாதை தானாகவே சேர்க்கப்படுகிறது. இருப்பிட வழங்குநருக்கு ஒரு சாவி தேவைப்பட்டால், அதை ரூட் URL-க்கு வினவல் அளவுருவாக சேர்க்கலாம்.</string>
+    <string name="pref_location_custom_url_input_hint">தனிப்பயன் சேவை URL</string>
+    <string name="pref_location_custom_source_title">தனிப்பயன்</string>
+    <string name="pref_location_source_title">ஆன்லைன் இருப்பிடச் சேவையைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="pref_location_source_terms">விதிமுறைகள் / தனியுரிமை</string>
+    <string name="pref_location_source_suggested">பரிந்துரைக்கப்பட்டது</string>
+    <string name="pref_location_import_export_title">இருப்பிடத் தரவை இறக்குமதி அல்லது ஏற்றுமதி செய்யவும்</string>
+    <string name="notification_config_required_title">கட்டமைப்பு தேவை</string>
+    <string name="notification_config_required_text_online_sources">ஆன்லைன் இருப்பிடச் சேவைகளைத் தொடர்ந்து பயன்படுத்த, நீங்கள் ஒரு இருப்பிடத் தரவுச் சேவையைத் தேர்ந்தெடுக்க வேண்டும்.</string>
+    <string name="location_data_export_wifi_title">உள்ளூர் Wi-Fi இருப்பிடத் தரவுத்தளத்தை ஏற்றுமதி செய்க</string>
+    <string name="location_data_export_cell_title">உள்ளூர் செல் டவர் இருப்பிடத் தரவுத்தளத்தை ஏற்றுமதி செய்க</string>
+    <string name="location_data_import_title">கோப்பிலிருந்து இருப்பிடத் தரவை இறக்குமதி செய்க</string>
+    <string name="prefcat_location_timeline_title">Google Maps காலவரிசை</string>
+    <string name="pref_location_timeline_title">இருப்பிட வரலாற்றை இயக்கு</string>
+    <string name="pref_location_timeline_summary">"உங்கள் இருப்பிடத் தகவலை அவ்வப்போது பதிவு செய்து, அதை Google Maps காலவரிசையில் கிடைக்கச் செய்யுங்கள்."</string>
+    <string name="pref_location_timeline_upload_title">Google கணக்குடன் ஒத்திசைக்கவும்</string>
+    <string name="pref_location_timeline_upload_summary">"இருப்பிட வரலாற்றை Google சேவையகங்களுடன் ஒத்திசைக்கவும், இதன் மூலம் அதை மற்ற சாதனங்களில் காண்பிக்க முடியும்."</string>
     <!-- RE strings -->
+    <string name="prefcat_location_maps_title">கூகுள் மேப்ஸ்</string>
+    <string name="pref_map_engine_title">வரைபட ரெண்டரர்</string>
     <!-- "Mapbox (MapLibre)" must be left untranslated .-->
+    <string name="pref_map_engine_summary">செயலிகளில் வரைபடங்களை வழங்கப் பயன்படுத்தப்படும் இயந்திரத்தைத் தேர்ந்தெடுக்கவும். Mapbox (MapLibre) பரிந்துரைக்கப்படுகிறது.</string>
     <!-- "Stadia Maps" must be left untranslated .-->
+    <string name="pref_stadia_key_title">Stadia Maps API விசை</string>
+    <string name="pref_stadia_key_summary">விருப்பமானது. ஒரு Stadia Maps ரெண்டரர் விருப்பத்தைச் சேர்க்கிறது; Stadia-விற்கு ஒரு API விசை தேவை.</string>
     <!-- "HMS (Huawei Map Kit)" must be left untranslated .-->
+    <string name="pref_hms_key_title">HMS (Huawei Map Kit) API விசை</string>
+    <string name="pref_hms_key_summary">விருப்பமானது. ஒரு HMS ரெண்டரர் விருப்பத்தைச் சேர்க்கிறது; சாதனத்தில் HMS Core தேவை.</string>
 </resources>
