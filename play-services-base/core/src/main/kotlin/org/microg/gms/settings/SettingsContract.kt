@@ -256,6 +256,7 @@ object SettingsContract {
         const val ICHNAEA_CONTRIBUTE = "location_ichnaea_contribute"
         const val MAPS_TIMELINE = "location_timeline"
         const val MAPS_TIMELINE_UPLOAD = "location_timeline_upload"
+        const val SYSTEM_NETWORK_LOCATION = "location_system_network"
 
         val PROJECTION = arrayOf(
             WIFI_ICHNAEA,
@@ -271,6 +272,7 @@ object SettingsContract {
             ICHNAEA_CONTRIBUTE,
             MAPS_TIMELINE,
             MAPS_TIMELINE_UPLOAD,
+            SYSTEM_NETWORK_LOCATION,
         )
     }
 

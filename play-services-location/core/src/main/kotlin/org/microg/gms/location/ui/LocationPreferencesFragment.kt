@@ -51,6 +51,10 @@ class LocationPreferencesFragment : PreferenceFragmentCompat() {
     private lateinit var locationAppsAll: Preference
     private lateinit var locationAppsNone: Preference
     private lateinit var networkProviderCategory: PreferenceCategory
+    private lateinit var systemNetworkCategory: PreferenceCategory
+    private lateinit var systemNetwork: TwoStatePreference
+    private lateinit var wifiCategory: PreferenceCategory
+    private lateinit var cellCategory: PreferenceCategory
     private lateinit var wifiIchnaea: TwoStatePreference
     private lateinit var wifiMoving: TwoStatePreference
     private lateinit var wifiLearning: TwoStatePreference
@@ -270,6 +274,10 @@ class LocationPreferencesFragment : PreferenceFragmentCompat() {
         locationAppsAll = preferenceScreen.findPreference("pref_location_apps_all") ?: locationAppsAll
         locationAppsNone = preferenceScreen.findPreference("pref_location_apps_none") ?: locationAppsNone
         networkProviderCategory = preferenceScreen.findPreference("prefcat_location_network_provider") ?: networkProviderCategory
+        systemNetworkCategory = preferenceScreen.findPreference("prefcat_location_system_network") ?: systemNetworkCategory
+        systemNetwork = preferenceScreen.findPreference("pref_location_system_network") ?: systemNetwork
+        wifiCategory = preferenceScreen.findPreference("prefcat_location_wifi") ?: wifiCategory
+        cellCategory = preferenceScreen.findPreference("prefcat_location_cells") ?: cellCategory
         wifiIchnaea = preferenceScreen.findPreference("pref_location_wifi_mls_enabled") ?: wifiIchnaea
         wifiMoving = preferenceScreen.findPreference("pref_location_wifi_moving_enabled") ?: wifiMoving
         wifiLearning = preferenceScreen.findPreference("pref_location_wifi_learning_enabled") ?: wifiLearning
@@ -333,8 +341,13 @@ class LocationPreferencesFragment : PreferenceFragmentCompat() {
             }
         }
         configureChangeListener(timelineUpload) { LocationSettings(requireContext()).mapsTimelineUpload = it }
+        configureChangeListener(systemNetwork) {
+            LocationSettings(requireContext()).systemNetworkLocation = it
+            updateNetworkSourceEnabled(it)
+        }
 
         networkProviderCategory.isVisible = requireContext().hasNetworkLocationServiceBuiltIn()
+        systemNetworkCategory.isVisible = requireContext().hasNetworkLocationServiceBuiltIn() && requireContext().canUseSystemNetworkLocation()
         wifiLearning.isVisible =
             SDK_INT >= 17 && requireContext().getSystemService<LocationManager>()?.allProviders.orEmpty().contains(LocationManager.GPS_PROVIDER)
         cellLearning.isVisible =
@@ -359,6 +372,12 @@ class LocationPreferencesFragment : PreferenceFragmentCompat() {
         database.close()
     }
 
+    /** The built-in Wi-Fi and cell settings have no effect while the system provider is used. */
+    private fun updateNetworkSourceEnabled(useSystemNetwork: Boolean) {
+        wifiCategory.isEnabled = !useSystemNetwork
+        cellCategory.isEnabled = !useSystemNetwork
+    }
+
     private fun updateContent() {
         lifecycleScope.launchWhenResumed {
             val context = requireContext()
@@ -371,6 +390,10 @@ class LocationPreferencesFragment : PreferenceFragmentCompat() {
             timelineEnabled.isChecked = LocationSettings(context).mapsTimeline
             timelineUpload.isEnabled = LocationSettings(context).mapsTimeline
             timelineUpload.isChecked = LocationSettings(context).mapsTimelineUpload
+            if (systemNetworkCategory.isVisible) {
+                systemNetwork.isChecked = LocationSettings(context).systemNetworkLocation
+                updateNetworkSourceEnabled(systemNetwork.isChecked)
+            }
 
             // Map renderer dropdown: base engines always available, Stadia/HMS only appear
             // once their API key has been configured in the settings above.

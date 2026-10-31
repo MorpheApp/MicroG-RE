@@ -383,6 +383,7 @@ class SettingsProvider : ContentProvider() {
             Location.ICHNAEA_CONTRIBUTE -> getSettingsBoolean(key, false)
             Location.MAPS_TIMELINE -> getSettingsBoolean(key, false)
             Location.MAPS_TIMELINE_UPLOAD -> getSettingsBoolean(key, false)
+            Location.SYSTEM_NETWORK_LOCATION -> getSettingsBoolean(key, false)
             else -> throw IllegalArgumentException("Unknown key: $key")
         }
     }
@@ -406,6 +407,7 @@ class SettingsProvider : ContentProvider() {
                 Location.ICHNAEA_CONTRIBUTE -> editor.putBoolean(key, value as Boolean)
                 Location.MAPS_TIMELINE -> editor.putBoolean(key, value as Boolean)
                 Location.MAPS_TIMELINE_UPLOAD -> editor.putBoolean(key, value as Boolean)
+                Location.SYSTEM_NETWORK_LOCATION -> editor.putBoolean(key, value as Boolean)
                 else -> throw IllegalArgumentException("Unknown key: $key")
             }
         }

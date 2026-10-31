@@ -25,6 +25,20 @@
             android:title="@string/list_item_see_all" />
     </PreferenceCategory>
     <PreferenceCategory
+        android:key="prefcat_location_system_network"
+        android:layout="@layout/preference_material_category"
+        android:title="@string/prefcat_location_system_network_title"
+        app:allowDividerAbove="false">
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:persistent="false"
+            android:key="pref_location_system_network"
+            android:layout="@layout/preference_material_single"
+            android:title="@string/pref_location_system_network_title"
+            android:summary="@string/pref_location_system_network_summary"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+    <PreferenceCategory
         android:key="prefcat_location_network_provider"
         android:layout="@layout/preference_category_no_label"
         app:allowDividerAbove="false">
