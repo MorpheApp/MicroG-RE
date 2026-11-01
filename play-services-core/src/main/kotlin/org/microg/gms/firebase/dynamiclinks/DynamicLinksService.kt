@@ -58,8 +58,17 @@ class DynamicLinksServiceImpl(private val context: Context, private val callingP
                 val linkUri = Uri.parse(link)
                 if ("http" == linkUri.scheme || "https" == linkUri.scheme) {
                     val response = runCatching { withContext(Dispatchers.IO) { DynamicLinkUtils.requestLinkResponse(link, queue) } }.getOrNull()
-                        ?: throw RuntimeException("requestLinkResponse failed")
-                    val data = DynamicLinkData(link, response.data_?.intentData, (response.data_?.app?.minAppVersion ?: 0).toInt(), System.currentTimeMillis(), null, null)
+                    val useResponse = response != null && (response.data_?.intentData != null || !DynamicLinkUtils.isRedirectShortLink(link))
+                    val data = if (useResponse && response != null) {
+                        DynamicLinkData(link, response.data_?.intentData, (response.data_?.app?.minAppVersion ?: 0).toInt(), System.currentTimeMillis(), null, null)
+                    } else {
+                        // Plain redirect short links (e.g. maps.app.goo.gl) are not known to the datamixer API,
+                        // resolve them by reading the redirect target instead.
+                        val target = runCatching { withContext(Dispatchers.IO) { DynamicLinkUtils.resolveRedirectShortLink(link) } }
+                            .onFailure { Log.d(TAG, "getDynamicLink: resolving redirect failed", it) }.getOrNull()
+                            ?: throw RuntimeException("requestLinkResponse failed")
+                        DynamicLinkData(link, target, 0, System.currentTimeMillis(), null, null)
+                    }
                     Log.d(TAG, "getDynamicLink: $link -> $data")
                     callback.onStatusDynamicLinkData(Status.SUCCESS, data)
                     return@launchWhenCreated
