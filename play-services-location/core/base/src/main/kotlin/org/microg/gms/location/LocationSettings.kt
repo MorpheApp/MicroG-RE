@@ -107,4 +107,9 @@ class LocationSettings(private val context: Context) {
     var mapsTimelineUpload: Boolean
         get() = getSettings(SettingsContract.Location.MAPS_TIMELINE_UPLOAD) { c -> c.getInt(0) != 0 }
         set(value) = setSettings { put(SettingsContract.Location.MAPS_TIMELINE_UPLOAD, value) }
+
+    /** Use the system `network` location provider instead of the built-in network location service. */
+    var systemNetworkLocation: Boolean
+        get() = getSettings(SettingsContract.Location.SYSTEM_NETWORK_LOCATION) { c -> c.getInt(0) != 0 }
+        set(value) = setSettings { put(SettingsContract.Location.SYSTEM_NETWORK_LOCATION, value) }
 }

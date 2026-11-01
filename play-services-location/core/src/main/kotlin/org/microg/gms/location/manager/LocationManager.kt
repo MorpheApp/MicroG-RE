@@ -61,6 +61,7 @@ class LocationManager(private val context: Context, override val lifecycle: Life
 
     private var currentGpsInterval: Long = -1
     private var currentNetworkInterval: Long = -1
+    private var currentNetworkBuiltIn: Boolean? = null
 
     val deviceOrientationManager = DeviceOrientationManager(context, lifecycle) { updateLocationRequests() }
 
@@ -174,12 +175,9 @@ class LocationManager(private val context: Context, override val lifecycle: Life
         deviceOrientationManager.stop()
 
         if (context.hasNetworkLocationServiceBuiltIn()) {
-            val intent = Intent(ACTION_NETWORK_LOCATION_SERVICE)
-            intent.`package` = context.packageName
-            intent.putExtra(EXTRA_PENDING_INTENT, coarsePendingIntent)
-            intent.putExtra(EXTRA_ENABLE, false)
-            context.startService(intent)
+            disableBuiltInNetworkLocation()
         }
+        currentNetworkBuiltIn = null
 
         val locationManager = context.getSystemService<SystemLocationManager>() ?: return
         try {
@@ -210,7 +208,21 @@ class LocationManager(private val context: Context, override val lifecycle: Life
         }
         val lowPower = requestManager.granularity <= GRANULARITY_COARSE || requestManager.priority >= Priority.PRIORITY_LOW_POWER || (requestManager.priority >= Priority.PRIORITY_BALANCED_POWER_ACCURACY && requestManager.intervalMillis >= BALANCE_LOW_POWER_INTERVAL)
 
-        if (context.hasNetworkLocationServiceBuiltIn() && currentNetworkInterval != networkInterval) {
+        val locationManager = context.getSystemService<SystemLocationManager>() ?: return
+        val useBuiltInNetwork = useBuiltInNetworkLocation()
+        if (currentNetworkBuiltIn != null && currentNetworkBuiltIn != useBuiltInNetwork) {
+            // The network location source was switched in settings: stop the previous one.
+            Log.d(TAG, "Switching network location to ${if (useBuiltInNetwork) "built-in" else "system"} provider")
+            if (currentNetworkBuiltIn == true) {
+                disableBuiltInNetworkLocation()
+            } else {
+                removeSystemNetworkLocationUpdates(locationManager)
+            }
+            currentNetworkInterval = -1
+        }
+        currentNetworkBuiltIn = useBuiltInNetwork
+
+        if (useBuiltInNetwork && currentNetworkInterval != networkInterval) {
             val intent = Intent(ACTION_NETWORK_LOCATION_SERVICE)
             intent.`package` = context.packageName
             intent.putExtra(EXTRA_PENDING_INTENT, coarsePendingIntent)
@@ -222,7 +234,6 @@ class LocationManager(private val context: Context, override val lifecycle: Life
             currentNetworkInterval = networkInterval
         }
 
-        val locationManager = context.getSystemService<SystemLocationManager>() ?: return
         if (gpsInterval != currentGpsInterval) {
             if (gpsInterval == Long.MAX_VALUE) {
                 // Fetch last location from GPS, just to make sure we already considered it
@@ -242,7 +253,7 @@ class LocationManager(private val context: Context, override val lifecycle: Life
                 // Ignore
             }
         }
-        if (!context.hasNetworkLocationServiceBuiltIn() && LocationManagerCompat.hasProvider(locationManager, NETWORK_PROVIDER) && currentNetworkInterval != networkInterval) {
+        if (!useBuiltInNetwork && LocationManagerCompat.hasProvider(locationManager, NETWORK_PROVIDER) && currentNetworkInterval != networkInterval) {
             boundToSystemNetworkLocation = true
             if (networkInterval == Long.MAX_VALUE) {
                 // Fetch last location from GPS, just to make sure we already considered it
@@ -260,6 +271,34 @@ class LocationManager(private val context: Context, override val lifecycle: Life
                 // Ignore
             }
         }
+    }
+
+    /**
+     * The built-in network location service is used if available, unless the user chose the system
+     * `network` provider in settings and that one can be used.
+     */
+    private fun useBuiltInNetworkLocation(): Boolean {
+        if (!context.hasNetworkLocationServiceBuiltIn()) return false
+        val useSystem = runCatching { settings.systemNetworkLocation }.getOrDefault(false)
+        return !(useSystem && context.canUseSystemNetworkLocation())
+    }
+
+    private fun disableBuiltInNetworkLocation() {
+        val intent = Intent(ACTION_NETWORK_LOCATION_SERVICE)
+        intent.`package` = context.packageName
+        intent.putExtra(EXTRA_PENDING_INTENT, coarsePendingIntent)
+        intent.putExtra(EXTRA_ENABLE, false)
+        context.startService(intent)
+    }
+
+    private fun removeSystemNetworkLocationUpdates(locationManager: SystemLocationManager) {
+        if (!boundToSystemNetworkLocation) return
+        try {
+            LocationManagerCompat.removeUpdates(locationManager, networkLocationListener)
+        } catch (e: SecurityException) {
+            // Ignore
+        }
+        boundToSystemNetworkLocation = false
     }
 
     private fun SystemLocationManager.requestSystemProviderUpdates(provider: String, interval: Long, @Quality quality: Int, listener: LocationListenerCompat) {
@@ -364,7 +403,7 @@ class LocationManager(private val context: Context, override val lifecycle: Life
         writer.println("Last coarse location: ${postProcessor.process(lastLocationCapsule.getLocation(GRANULARITY_COARSE), GRANULARITY_COARSE, true)}")
         writer.println("Last fine location: ${postProcessor.process(lastLocationCapsule.getLocation(GRANULARITY_FINE), GRANULARITY_FINE, true)}")
         writer.println("Interval: gps=${if (currentGpsInterval==Long.MAX_VALUE) "off" else currentGpsInterval.formatDuration()} network=${if (currentNetworkInterval==Long.MAX_VALUE) "off" else currentNetworkInterval.formatDuration()}")
-        writer.println("Network location: built-in=${context.hasNetworkLocationServiceBuiltIn()} system=$boundToSystemNetworkLocation")
+        writer.println("Network location: built-in=${context.hasNetworkLocationServiceBuiltIn()} system=$boundToSystemNetworkLocation using-built-in=$currentNetworkBuiltIn")
         requestManager.dump(writer)
         deviceOrientationManager.dump(writer)
     }

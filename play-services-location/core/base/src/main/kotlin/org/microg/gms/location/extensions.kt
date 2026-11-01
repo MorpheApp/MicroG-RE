@@ -7,11 +7,13 @@ package org.microg.gms.location
 
 import android.content.Context
 import android.content.Intent
+import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import android.location.Location
 import android.os.SystemClock
 import android.text.format.DateUtils
 import androidx.core.location.LocationCompat
+import androidx.core.location.LocationManagerCompat
 
 const val ACTION_NETWORK_LOCATION_SERVICE = "org.microg.gms.location.network.ACTION_NETWORK_LOCATION_SERVICE"
 const val EXTRA_LOCATION = "location"
@@ -85,5 +87,20 @@ fun Context.hasNetworkLocationServiceBuiltIn(): Boolean {
         }
     } else {
         return flag
+    }
+}
+
+/**
+ * Whether the system `network` location provider can be used instead of the built-in network
+ * location service. It must exist, and this app must not be a system app, because a system
+ * installation may itself back the system `network` provider, which would request its own locations.
+ */
+fun Context.canUseSystemNetworkLocation(): Boolean {
+    if (applicationInfo.flags and ApplicationInfo.FLAG_SYSTEM != 0) return false
+    val locationManager = getSystemService(Context.LOCATION_SERVICE) as? android.location.LocationManager ?: return false
+    return try {
+        LocationManagerCompat.hasProvider(locationManager, android.location.LocationManager.NETWORK_PROVIDER)
+    } catch (e: Exception) {
+        false
     }
 }
