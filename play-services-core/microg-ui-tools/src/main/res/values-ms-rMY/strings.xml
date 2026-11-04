@@ -15,5 +15,14 @@
   ~ limitations under the License.
   -->
 <resources>
+    <string name="lib_name">Alatan UI microG</string>
+    <string name="lib_license">Lesen Apache 2.0, Pasukan microG</string>
+    <string name="about_default_license">Hak cipta terpelihara.</string>
+    <string name="prefcat_setup">Persediaan</string>
+    <string name="self_check_desc">Semak jika sistem ditetapkan dengan betul untuk menggunakan microG.</string>
+    <string name="self_check_cat_permissions">Kebenaran diberikan</string>
+    <string name="self_check_name_permission_interact_across_profiles">Kebenaran untuk berinteraksi dengan profil kerja:</string>
+    <string name="self_check_resolution_permission">Sentuh di sini untuk memberikan kebenaran. Tidak memberikan kebenaran boleh menyebabkan aplikasi tidak berfungsi dengan betul.</string>
+    <string name="about_root_summary">Ringkasan</string>
     <!--Settings About-->
 </resources>

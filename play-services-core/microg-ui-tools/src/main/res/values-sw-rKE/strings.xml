@@ -15,5 +15,14 @@
   ~ limitations under the License.
   -->
 <resources>
+    <string name="lib_name">Zana za UI za microG</string>
+    <string name="lib_license">Leseni ya Apache 2.0, Timu ya microG</string>
+    <string name="about_default_license">Haki zote zimehifadhiwa.</string>
+    <string name="prefcat_setup">Usanidi</string>
+    <string name="self_check_desc">Angalia ikiwa mfumo umeundwa kwa usahihi ili kutumia microG.</string>
+    <string name="self_check_cat_permissions">Ruhusa zimeidhinishwa</string>
+    <string name="self_check_name_permission_interact_across_profiles">Ruhusa ya kuingiliana na wasifu wa kazi:</string>
+    <string name="self_check_resolution_permission">Gusa hapa ili kutoa ruhusa. Kutotoa ruhusa kunaweza kusababisha programu kutofanya kazi ipasavyo.</string>
+    <string name="about_root_summary">Muhtasari</string>
     <!--Settings About-->
 </resources>

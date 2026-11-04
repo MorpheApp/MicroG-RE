@@ -5,9 +5,64 @@
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="service_name_location">Mahali</string>
+    <string name="prefcat_location_apps_title">Ufikiaji wa hivi karibuni</string>
+    <string name="prefcat_location_wifi_title">Mahali pa Wi-Fi</string>
+    <string name="prefcat_location_cell_title">Mahali pa mtandao wa simu</string>
+    <string name="prefcat_geocoder_title">Kitatuzi cha anwani</string>
+    <string name="pref_location_wifi_online_enabled_title">Ombi kutoka huduma ya mtandaoni</string>
+    <string name="pref_location_wifi_online_enabled_summary">Pata mahali kulingana na Wi-Fi kutoka huduma ya mahali ya mtandaoni.</string>
+    <string name="pref_location_wifi_moving_enabled_title">Ombi kutoka Hotspot</string>
+    <string name="pref_location_wifi_moving_enabled_summary">Pata mahali pa Wi-Fi moja kwa moja kutoka hotspot zinazohusika unapounganishwa.</string>
+    <string name="pref_location_wifi_learning_enabled_title">Kumbuka kutoka GPS</string>
+    <string name="pref_location_wifi_learning_enabled_summary">Hifadhi maeneo ya Wi-Fi ndani ya kifaa wakati GPS inapotumiwa.</string>
+    <string name="pref_location_cell_online_enabled_title">Ombi kutoka huduma ya mtandaoni</string>
+    <string name="pref_location_cell_online_enabled_summary">Pakua maeneo ya minara ya mtandao wa simu kutoka huduma ya maeneo ya mtandaoni.</string>
+    <string name="pref_location_cell_learning_enabled_title">Kumbuka kutoka GPS</string>
+    <string name="pref_location_cell_learning_enabled_summary">Hifadhi maeneo ya mtandao wa simu ndani ya kifaa wakati GPS inapotumiwa.</string>
+    <string name="pref_geocoder_nominatim_enabled_title">Tumia Nominatim</string>
+    <string name="pref_geocoder_nominatim_enabled_summary">Tatua anwani kwa kutumia OpenStreetMap Nominatim.</string>
+    <string name="fragment_location_apps_title">Programu zenye ufikiaji wa eneo</string>
+    <string name="location_app_last_access_at">Ufikiaji wa mwisho: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="pref_location_app_force_coarse_title">Lazimisha eneo lisilo sahihi</string>
+    <string name="pref_location_app_force_coarse_summary">Kila mara rudisha maeneo yasiyo sahihi kwa programu hii, huku ukipuuza kiwango chake cha ruhusa.</string>
+    <string name="prefcat_app_last_location">Eneo la mwisho lililoripotiwa</string>
+    <string name="location_settings_dialog_message_title_for_better_experience">Kwa uzoefu bora zaidi, washa eneo la kifaa, ambalo hutumia huduma ya eneo ya microG</string>
+    <string name="location_settings_dialog_message_title_to_continue">Ili kuendelea, washa eneo la kifaa, ambalo hutumia huduma ya eneo ya microG</string>
+    <string name="location_settings_dialog_message_details_start_paragraph">Kifaa chako kitahitaji:</string>
+    <string name="location_settings_dialog_message_location_services_gps_and_nlp">Tumia GPS, Wi‑Fi, mitandao ya simu, na vitambuzi</string>
+    <string name="location_settings_dialog_message_grant_permissions">Toa ruhusa za eneo kwa Huduma ya microG</string>
+    <string name="location_settings_dialog_message_gls_consent">Tumia huduma ya eneo ya microG; kama sehemu ya huduma hii, microG inaweza kukusanya data ya eneo mara kwa mara na kutumia data hii kwa njia isiyojulikana ili kuboresha usahihi wa eneo na huduma zinazozingatia eneo.</string>
+    <string name="location_settings_dialog_message_details_end_paragraph">Kwa maelezo zaidi, nenda kwenye mipangilio ya eneo.</string>
+    <string name="location_settings_dialog_btn_cancel">Hapana, asante</string>
+    <string name="location_settings_dialog_btn_sure">Sawa</string>
+    <string name="pref_location_custom_url_summary">Hii inaruhusu kuweka URL ya huduma ya kiofisi. Maadili batili yanaweza kusababisha huduma za eneo kutofanya kazi au kutopatikana kabisa.</string>
+    <string name="pref_location_custom_url_details">Njia ya /v1/geolocate huongezwa kiotomatiki. Ikiwa mtoa huduma wa eneo anahitaji ufunguo, unaweza kuongezwa kama parameter ya hoja kwenye URL kuu.</string>
+    <string name="pref_location_custom_url_input_hint">URL ya huduma ya kiofisi</string>
+    <string name="pref_location_custom_source_title">Kiofisi</string>
+    <string name="pref_location_source_title">Chagua huduma ya eneo ya mtandaoni</string>
+    <string name="pref_location_source_terms">Masharti / Faragha</string>
+    <string name="pref_location_source_suggested">Inapendekezwa</string>
+    <string name="pref_location_import_export_title">Import au export data ya eneo</string>
+    <string name="notification_config_required_title">Usanidi unahitajika</string>
+    <string name="notification_config_required_text_online_sources">Ili kuendelea kutumia huduma za mahali mtandaoni, unapaswa kuchagua huduma ya data ya mahali.</string>
+    <string name="location_data_export_wifi_title">Export kanzi-data ya mahali ya Wi-Fi ya ndani</string>
+    <string name="location_data_export_cell_title">Export kanzi-data ya mahali ya mnara wa simu ya ndani</string>
+    <string name="location_data_import_title">Import data ya mahali kutoka kwenye faili</string>
     <string name="location_data_import_result_toast">Imekubaliwa rekodi %1$d.</string>
+    <string name="prefcat_location_timeline_title">Timeline ya Google Maps</string>
+    <string name="pref_location_timeline_title">Washa historia ya mahali</string>
+    <string name="pref_location_timeline_summary">"Rekodi taarifa zako za mahali mara kwa mara na uzifanye zipatikane kwenye Google Maps Timeline."</string>
+    <string name="pref_location_timeline_upload_title">Sawazisha na akaunti ya Google</string>
+    <string name="pref_location_timeline_upload_summary">"Sawazisha historia ya mahali na seva za Google, ili iweze kuonyeshwa kwenye vifaa vingine."</string>
     <!-- RE strings -->
+    <string name="prefcat_location_maps_title">Google Maps</string>
+    <string name="pref_map_engine_title">Kichakata ramani</string>
     <!-- "Mapbox (MapLibre)" must be left untranslated .-->
+    <string name="pref_map_engine_summary">Chagua injini inayotumika kuonyesha ramani katika programu. Mapbox (MapLibre) inapendekezwa.</string>
     <!-- "Stadia Maps" must be left untranslated .-->
+    <string name="pref_stadia_key_title">Ufunguo wa API ya Stadia Maps</string>
+    <string name="pref_stadia_key_summary">Hiyo ni ya hiari. Huongeza chaguo la renderer ya Stadia Maps; Stadia inahitaji ufunguo wa API.</string>
     <!-- "HMS (Huawei Map Kit)" must be left untranslated .-->
+    <string name="pref_hms_key_title">Ufunguo wa API ya HMS (Huawei Map Kit)</string>
+    <string name="pref_hms_key_summary">Hiyo ni ya hiari. Huongeza chaguo la renderer ya HMS; inahitaji HMS Core kwenye kifaa.</string>
 </resources>
