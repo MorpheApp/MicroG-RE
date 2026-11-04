@@ -105,8 +105,8 @@ if (!ignoreGit) {
 }
 
 // RE specific version name and code
-def ourGmsVersionCode = 255070304
-def ourGmsVersionName = "7.3.0"
+def ourGmsVersionCode = 255070311
+def ourGmsVersionName = "7.3.1-dev.1"
 def ourVendingVersionCode = ourGmsVersionCode
 def ourVendingVersionName = ourGmsVersionName
 

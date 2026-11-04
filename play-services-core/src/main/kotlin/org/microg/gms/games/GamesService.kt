@@ -131,11 +131,17 @@ class GamesService : BaseService(TAG, GmsService.GAMES) {
 
                 val player = JSONObject(GamesConfigurationService.getPlayer(this@GamesService, account)).toPlayer()
 
-                var showConnectingPopup = request.extras.getBoolean(EXTRA_SHOW_CONNECTING_POPUP, false)
-                if (showConnectingPopup) {
-                    Log.d(TAG, "handleServiceRequest: showConnectingPopup")
-                    AccountPromptManager.getInstance(this@GamesService).show(player.displayName, player.iconImageUrl)
+                // RE changes start
+                // The connecting popup used a system overlay window, which is not supported
+                // because SYSTEM_ALERT_WINDOW is not declared.
+                if (false) {
+                    val showConnectingPopup = request.extras.getBoolean(EXTRA_SHOW_CONNECTING_POPUP, false)
+                    if (showConnectingPopup) {
+                        Log.d(TAG, "handleServiceRequest: showConnectingPopup")
+                        AccountPromptManager.getInstance(this@GamesService).show(player.displayName, player.iconImageUrl)
+                    }
                 }
+                // RE changes end
 
                 callback.onPostInitCompleteWithConnectionInfo(
                     CommonStatusCodes.SUCCESS,

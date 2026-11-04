@@ -15,5 +15,14 @@
   ~ limitations under the License.
   -->
 <resources>
+    <string name="lib_name">microG UI куралдары</string>
+    <string name="lib_license">Apache License 2.0, microG командасы</string>
+    <string name="about_default_license">Бардык укуктар сакталган.</string>
+    <string name="prefcat_setup">Орнотуу</string>
+    <string name="self_check_desc">Система microG колдонуу үчүн туура орнотулганын текшериңиз.</string>
+    <string name="self_check_cat_permissions">Уруксаттар берилген</string>
+    <string name="self_check_name_permission_interact_across_profiles">Жумуш профили менен өз ара аракеттенүүгө уруксат:</string>
+    <string name="self_check_resolution_permission">Уруксат берүү үчүн бул жерди басыңыз. Уруксат берилбесе, колдонмолор туура эмес иштеши мүмкүн.</string>
+    <string name="about_root_summary">Кыскача маалымат</string>
     <!--Settings About-->
 </resources>
