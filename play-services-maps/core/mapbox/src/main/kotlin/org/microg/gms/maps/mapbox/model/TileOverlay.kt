@@ -13,6 +13,9 @@ import com.mapbox.mapboxsdk.maps.Style
 import com.mapbox.mapboxsdk.style.layers.Property
 import com.mapbox.mapboxsdk.style.layers.PropertyFactory
 import com.mapbox.mapboxsdk.style.layers.RasterLayer
+// RE changes start
+import com.mapbox.mapboxsdk.style.layers.SymbolLayer
+// RE changes end
 import com.mapbox.mapboxsdk.style.sources.RasterSource
 import com.mapbox.mapboxsdk.style.sources.TileSet
 import org.microg.gms.maps.mapbox.GoogleMapImpl
@@ -27,14 +30,23 @@ class TileOverlayImpl(private val map: GoogleMapImpl, private val id: String, op
     private var transparency = options.transparency
     private val tileProvider: TileProvider? = runCatching { options.tileProvider }.getOrNull()
 
-    private val sourceId = "gms-tileoverlay-src-$id"
-    private val layerId = "gms-tileoverlay-layer-$id"
+    // RE changes start
+    val sourceId = "gms-tileoverlay-src-$id"
+    val layerId = "gms-tileoverlay-layer-$id"
+    // RE changes end
 
     init {
         tileProvider?.let { TileProviderHttpAdapter.register(id, it) }
     }
 
-    fun addToStyle(style: Style) {
+    // RE changes start
+    fun removeFromStyle(style: Style) {
+        if (style.getLayer(layerId) != null) {
+            style.removeLayer(layerId)
+        }
+    }
+
+    fun addToStyle(style: Style, belowLayerId: String? = null) {
         if (tileProvider == null || style.getLayer(layerId) != null) {
             return
         }
@@ -44,14 +56,22 @@ class TileOverlayImpl(private val map: GoogleMapImpl, private val id: String, op
             style.addSource(RasterSource(sourceId, tileSet, TILE_SIZE))
         }
 
-        style.addLayer(
-            RasterLayer(layerId, sourceId).withProperties(
-                PropertyFactory.rasterOpacity(opacity()),
-                PropertyFactory.visibility(visibilityValue()),
-                PropertyFactory.rasterFadeDuration(if (fadeIn) FADE_DURATION_MS else 0f)
-            )
+        val layer = RasterLayer(layerId, sourceId).withProperties(
+            PropertyFactory.rasterOpacity(opacity()),
+            PropertyFactory.visibility(visibilityValue()),
+            PropertyFactory.rasterFadeDuration(if (fadeIn) FADE_DURATION_MS else 0f)
         )
+
+        val targetBelow = belowLayerId ?: map.getLowestAnnotationLayerId(style)
+            ?: style.layers.firstOrNull { it is SymbolLayer }?.id
+
+        if (targetBelow != null && style.getLayer(targetBelow) != null) {
+            style.addLayerBelow(layer, targetBelow)
+        } else {
+            style.addLayer(layer)
+        }
     }
+    // RE changes end
 
     private fun opacity(): Float = 1f - transparency
 
@@ -67,16 +87,20 @@ class TileOverlayImpl(private val map: GoogleMapImpl, private val id: String, op
         TileProviderHttpAdapter.unregister(id)
         map.tileOverlays.remove(id)
         map.map?.getStyle { style ->
-            style.removeLayer(layerId)
+            // RE changes start
+            removeFromStyle(style)
+            // RE changes end
             style.removeSource(sourceId)
         }
     }
 
     override fun clearTileCache() {
         map.map?.getStyle { style ->
-            style.removeLayer(layerId)
+            // RE changes start
+            removeFromStyle(style)
             style.removeSource(sourceId)
-            addToStyle(style)
+            map.reorderTileOverlays(style)
+            // RE changes end
         }
     }
 
@@ -84,6 +108,9 @@ class TileOverlayImpl(private val map: GoogleMapImpl, private val id: String, op
 
     override fun setZIndex(zIndex: Float) {
         this.zIndex = zIndex
+        // RE changes start
+        map.map?.getStyle { map.reorderTileOverlays(it) }
+        // RE changes end
     }
 
     override fun getZIndex(): Float = zIndex
