@@ -4,8 +4,65 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="service_name_location">ຕຳແໜ່ງ</string>
+    <string name="prefcat_location_apps_title">ການເຂົ້າເຖິງຫຼ້າສຸດ</string>
+    <string name="prefcat_location_wifi_title">ຕຳແໜ່ງ Wi-Fi</string>
+    <string name="prefcat_location_cell_title">ຕຳແໜ່ງເຄືອຂ່າຍມືຖື</string>
+    <string name="prefcat_geocoder_title">ຕົວແກ້ໄຂທີ່ຢູ່</string>
+    <string name="pref_location_wifi_online_enabled_title">ຮ້ອງຂໍຈາກບໍລິການອອນໄລນ໌</string>
+    <string name="pref_location_wifi_online_enabled_summary">ດຶງຂໍ້ມູນຕຳແໜ່ງທີ່ອີງໃສ່ Wi-Fi ຈາກບໍລິການຕຳແໜ່ງອອນໄລນ໌.</string>
+    <string name="pref_location_wifi_moving_enabled_title">ຮ້ອງຂໍຈາກ Hotspot</string>
+    <string name="pref_location_wifi_moving_enabled_summary">ດຶງຂໍ້ມູນຕຳແໜ່ງ Wi-Fi ໂດຍກົງຈາກ hotspot ທີ່ຮອງຮັບເມື່ອເຊື່ອມຕໍ່.</string>
+    <string name="pref_location_wifi_learning_enabled_title">ຈົດຈຳຈາກ GPS</string>
+    <string name="pref_location_wifi_learning_enabled_summary">ເກັບຂໍ້ມູນຕຳແໜ່ງ Wi-Fi ໄວ້ໃນເຄື່ອງເມື່ອໃຊ້ GPS.</string>
+    <string name="pref_location_cell_online_enabled_title">ຮ້ອງຂໍຈາກບໍລິການອອນໄລນ໌</string>
+    <string name="pref_location_cell_online_enabled_summary">ດຶງຂໍ້ມູນຕຳແໜ່ງເສົາສັນຍານເຄືອຂ່າຍມືຖືຈາກບໍລິການຕຳແໜ່ງອອນລາຍ.</string>
+    <string name="pref_location_cell_learning_enabled_title">ຈື່ຈຳຈາກ GPS</string>
+    <string name="pref_location_cell_learning_enabled_summary">ເກັບຂໍ້ມູນຕຳແໜ່ງເຄືອຂ່າຍມືຖືໄວ້ໃນເຄື່ອງເມື່ອມີການໃຊ້ GPS.</string>
+    <string name="pref_geocoder_nominatim_enabled_title">ໃຊ້ Nominatim</string>
+    <string name="pref_geocoder_nominatim_enabled_summary">ແປງທີ່ຢູ່ໂດຍໃຊ້ OpenStreetMap Nominatim.</string>
+    <string name="fragment_location_apps_title">ແອັບທີ່ມີການເຂົ້າເຖິງຕຳແໜ່ງ</string>
+    <string name="location_app_last_access_at">ເຂົ້າເຖິງຄັ້ງລ່າສຸດ: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="pref_location_app_force_coarse_title">ບັງຄັບໃຊ້ຕຳແໜ່ງແບບຫຍໍ້</string>
+    <string name="pref_location_app_force_coarse_summary">ສົ່ງຄືນຕຳແໜ່ງແບບຫຍໍ້ໃຫ້ແອັບນີ້ສະເໝີ, ໂດຍບໍ່ສົນໃຈລະດັບການອະນຸຍາດຂອງມັນ.</string>
+    <string name="prefcat_app_last_location">ຕຳແໜ່ງທີ່ລາຍງານຫຼ້າສຸດ</string>
+    <string name="location_settings_dialog_message_title_for_better_experience">ເພື່ອປະສົບການທີ່ດີຂຶ້ນ, ໃຫ້ເປີດຕຳແໜ່ງຂອງອຸປະກອນ, ເຊິ່ງຈະໃຊ້ບໍລິການຕຳແໜ່ງຂອງ microG</string>
+    <string name="location_settings_dialog_message_title_to_continue">ເພື່ອດຳເນີນການຕໍ່, ໃຫ້ເປີດຕຳແໜ່ງຂອງອຸປະກອນ, ເຊິ່ງຈະໃຊ້ບໍລິການຕຳແໜ່ງຂອງ microG</string>
+    <string name="location_settings_dialog_message_details_start_paragraph">ອຸປະກອນຂອງທ່ານຈະຕ້ອງ:</string>
+    <string name="location_settings_dialog_message_location_services_gps_and_nlp">ໃຊ້ GPS, Wi‑Fi, ເຄືອຂ່າຍໂທລະສັບ, ແລະ ເຊັນເຊີ</string>
+    <string name="location_settings_dialog_message_grant_permissions">ອະນຸຍາດການເຂົ້າເຖິງຕຳແໜ່ງໃຫ້ກັບບໍລິການ microG</string>
+    <string name="location_settings_dialog_message_gls_consent">ໃຊ້ບໍລິການຕຳແໜ່ງຂອງ microG; ເຊິ່ງເປັນສ່ວນໜຶ່ງຂອງບໍລິການນີ້, microG ອາດຈະເກັບກຳຂໍ້ມູນຕຳແໜ່ງເປັນໄລຍະ ແລະ ໃຊ້ຂໍ້ມູນນີ້ແບບບໍ່ລະບຸຕົວຕົນ ເພື່ອປັບປຸງຄວາມຖືກຕ້ອງຂອງຕຳແໜ່ງ ແລະ ບໍລິການທີ່ອີງຕາມຕຳແໜ່ງ.</string>
+    <string name="location_settings_dialog_message_details_end_paragraph">ສຳລັບລາຍລະອຽດ, ໃຫ້ໄປທີ່ການຕັ້ງຄ່າສະຖານທີ່.</string>
+    <string name="location_settings_dialog_btn_cancel">ບໍ່, ຂອບໃຈ</string>
+    <string name="location_settings_dialog_btn_sure">ຕົກລົງ</string>
+    <string name="pref_location_custom_url_summary">ສິ່ງນີ້ອະນຸຍາດໃຫ້ກຳນົດ URL ຂອງບໍລິການທີ່ກຳໜົດເອງ. ຄ່າທີ່ບໍ່ຖືກຕ້ອງອາດເຮັດໃຫ້ບໍລິການສະຖານທີ່ບໍ່ຕອບສະໜອງ ຫຼື ບໍ່ສາມາດນຳໃຊ້ໄດ້ເລີຍ.</string>
+    <string name="pref_location_custom_url_details">ເສັ້ນທາງ /v1/geolocate ຈະຖືກເພີ່ມເຂົ້າໄປໂດຍອັດຕະໂນມັດ. ຖ້າຜູ້ໃຫ້ບໍລິການສະຖານທີ່ຕ້ອງການຄີ, ມັນສາມາດເພີ່ມເຂົ້າເປັນພារາມິເຕີຂອງຄຳສອບຖາມໃນ root URL.</string>
+    <string name="pref_location_custom_url_input_hint">URL ຂອງບໍລິການທີ່ກຳໜົດເອງ</string>
+    <string name="pref_location_custom_source_title">ກຳໜົດເອງ</string>
+    <string name="pref_location_source_title">ເລືອກບໍລິການສະຖານທີ່ອອນລາຍ</string>
+    <string name="pref_location_source_terms">ເງື່ອນໄຂ / ຄວາມເປັນສ່ວນຕົວ</string>
+    <string name="pref_location_source_suggested">ແນະນຳ</string>
+    <string name="pref_location_import_export_title">ນຳເຂົ້າ ຫຼື ສົ່ງອອກຂໍ້ມູນສະຖານທີ່</string>
+    <string name="notification_config_required_title">ຈໍາເປັນຕ້ອງມີການຕັ້ງຄ່າ</string>
+    <string name="notification_config_required_text_online_sources">ເພື່ອສືບຕໍ່ນຳໃຊ້ບໍລິການຕຳແໜ່ງອອນລາຍ, ທ່ານຈຳເປັນຕ້ອງເລືອກບໍລິການຂໍ້ມູນຕຳແໜ່ງ.</string>
+    <string name="location_data_export_wifi_title">ສົ່ງອອກຖານຂໍ້ມູນຕຳແໜ່ງ Wi-Fi ທ້ອງຖິ່ນ</string>
+    <string name="location_data_export_cell_title">ສົ່ງອອກຖານຂໍ້ມູນຕຳແໜ່ງເສົາສັນຍານໂທລະສັບທ້ອງຖິ່ນ</string>
+    <string name="location_data_import_title">ນຳເຂົ້າຂໍ້ມູນຕຳແໜ່ງຈາກໄຟລ໌</string>
+    <string name="location_data_import_result_toast">ນຳເຂົ້າ %1$d ລາຍການແລ້ວ.</string>
+    <string name="prefcat_location_timeline_title">Timeline ຂອງ Google Maps</string>
+    <string name="pref_location_timeline_title">ເປີດໃຊ້ປະຫວັດຕຳແໜ່ງ</string>
+    <string name="pref_location_timeline_summary">"ບັນທຶກຂໍ້ມູນຕຳແໜ່ງຂອງທ່ານເປັນໄລຍະ ແລະ ເຮັດໃຫ້ມັນສາມາດນຳໃຊ້ໄດ້ໃນ Timeline ຂອງ Google Maps."</string>
+    <string name="pref_location_timeline_upload_title">ຊິງໂຄຣນຳບັນຊີ Google</string>
+    <string name="pref_location_timeline_upload_summary">"ຊິງໂຄຣນ໌ປະຫວັດຕຳແໜ່ງໄປຍັງເຊີບເວີຂອງ Google, ເພື່ອໃຫ້ມັນສາມາດສະແດງຜົນໃນອຸປະກອນອື່ນໆໄດ້."</string>
     <!-- RE strings -->
+    <string name="prefcat_location_maps_title">Google Maps</string>
+    <string name="pref_map_engine_title">ຕົວແທນການສະແດງຜົນແຜນທີ່</string>
     <!-- "Mapbox (MapLibre)" must be left untranslated .-->
+    <string name="pref_map_engine_summary">ເລືອກເຄື່ອງມືທີ່ໃຊ້ເພື່ອສະແດງຜົນແຜນທີ່ໃນແອັບ. ແນະນຳໃຫ້ໃຊ້ Mapbox (MapLibre).</string>
     <!-- "Stadia Maps" must be left untranslated .-->
+    <string name="pref_stadia_key_title">ລະຫັດ API ຂອງ Stadia Maps</string>
+    <string name="pref_stadia_key_summary">ທາງເລືອກ. ເພີ່ມຕົວເລືອກຕົວແທນການສະແດງຜົນຂອງ Stadia Maps; Stadia ຕ້ອງການລະຫັດ API.</string>
     <!-- "HMS (Huawei Map Kit)" must be left untranslated .-->
+    <string name="pref_hms_key_title">ລະຫັດ API ຂອງ HMS (Huawei Map Kit)</string>
+    <string name="pref_hms_key_summary">ທາງເລືອກ. ເພີ່ມຕົວເລືອກຕົວແທນການສະແດງຜົນຂອງ HMS; ຕ້ອງການ HMS Core ໃນອຸປະກອນ.</string>
 </resources>

@@ -4,9 +4,65 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="service_name_location">شوێن</string>
+    <string name="prefcat_location_apps_title">گەیشتنی دوایین</string>
+    <string name="prefcat_location_wifi_title">شوێنی Wi-Fi</string>
+    <string name="prefcat_location_cell_title">شوێنی تۆڕی مۆبایل</string>
+    <string name="prefcat_geocoder_title">چارەسەرکەری ناونیشان</string>
+    <string name="pref_location_wifi_online_enabled_title">داواکاری لە خزمەتگوزاری ئۆنلاین</string>
+    <string name="pref_location_wifi_online_enabled_summary">هێنانی شوێنی بنەمای Wi-Fi لە خزمەتگوزاری شوێنی ئۆنلاین.</string>
+    <string name="pref_location_wifi_moving_enabled_title">داواکاری لە Hotspot</string>
+    <string name="pref_location_wifi_moving_enabled_summary">هێنانی شوێنی Wi-Fi ڕاستەوخۆ لە hotspot-ەکانی پشتگیریکراو کاتێک بەستراونەتەوە.</string>
+    <string name="pref_location_wifi_learning_enabled_title">بیرهێنان لە GPS</string>
+    <string name="pref_location_wifi_learning_enabled_summary">پاشکەوتکردنی شوێنەکانی Wi-Fi لە ناو خۆی کاتێک GPS بەکاردێت.</string>
+    <string name="pref_location_cell_online_enabled_title">داواکاری لە خزمەتگوزاری ئۆنلاین</string>
+    <string name="pref_location_cell_online_enabled_summary">هێنانى شوێنی تاوەرەکانی تۆڕی مۆبایل لە خزمەتگوزاری شوێنی ئۆنلاین.</string>
+    <string name="pref_location_cell_learning_enabled_title">بیرهێنان لە GPS</string>
+    <string name="pref_location_cell_learning_enabled_summary">پاشکەوتکردنی شوێنەکانی تۆڕی مۆبایل بە شێوەی خۆماڵی کاتێک GPS بەکاردێت.</string>
+    <string name="pref_geocoder_nominatim_enabled_title">بەکارهێنانی Nominatim</string>
+    <string name="pref_geocoder_nominatim_enabled_summary">دیاریکردنی ناونیشانەکان بە بەکارهێنانی OpenStreetMap Nominatim.</string>
+    <string name="fragment_location_apps_title">ئەپڵیکەیشنەکانی دەستیڕاگەیشتن بە شوێن</string>
+    <string name="location_app_last_access_at">دوایین دەستگەیشتن: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="pref_location_app_force_coarse_title">سەپاندنی شوێنی گشتی</string>
+    <string name="pref_location_app_force_coarse_summary">هەمیشە شوێنە گشتییەکان بۆ ئەم ئەپڵیکەیشنە بنێرە، بێ گوێدانە ئاستی مۆڵەتی.</string>
+    <string name="prefcat_app_last_location">دوایین شوێنی ڕاپۆرتکراو</string>
+    <string name="location_settings_dialog_message_title_for_better_experience">بۆ ئەزموونێکی باشتر، شوێنی ئامێرەکە چالاک بکە، کە خزمەتگوزاری شوێنی microG بەکاردەهێنێت</string>
+    <string name="location_settings_dialog_message_title_to_continue">بۆ بەردەوامبوون، شوێنی ئامێرەکە چالاک بکە، کە خزمەتگوزاری شوێنی microG بەکاردەهێنێت</string>
+    <string name="location_settings_dialog_message_details_start_paragraph">ئامێرەکەت پێویستی دەبێت بە:</string>
+    <string name="location_settings_dialog_message_location_services_gps_and_nlp">بەکارهێنانی GPS، Wi‑Fi، تۆڕەکانی مۆبایل، و هەستەوەرەکان</string>
+    <string name="location_settings_dialog_message_grant_permissions">بەخشینی مۆڵەتی شوێن بە خزمەتگوزاری microG</string>
+    <string name="location_settings_dialog_message_gls_consent">خزمەتگوزاری شوێنی microG بەکاربهێنە؛ وەک بەشێک لەم خزمەتگوزارییە، microG ڕەنگە بە شێوەیەکی خولانە داتای شوێن کۆبکاتەوە و ئەم داتایە بە شێوەیەکی بەناو نەناسرێت بەکاربهێنێت بۆ باشترکردنی وردی شوێن و خزمەتگوزارییە بنەماکەیان لەسەر شوێن.</string>
+    <string name="location_settings_dialog_message_details_end_paragraph">بۆ زانیاری زیاتر، بڕۆ بۆ ڕێکخستنەکانی شوێن.</string>
+    <string name="location_settings_dialog_btn_cancel">نەخێر، سوپاس</string>
+    <string name="location_settings_dialog_btn_sure">باشە</string>
+    <string name="pref_location_custom_url_summary">ئەمە ڕێگە دەدات ناونیشانی خزمەتگوزارییەکی تایبەت دابنرێت. بەها نادروستەکان دەبنە هۆی ئەوەی خزمەتگوزارییەکانی شوێن وەڵام نەدەنەوە یان بە تەواوی بەردەست نەبن.</string>
+    <string name="pref_location_custom_url_details">ڕێگەی /v1/geolocate بە شێوەیەکی ئۆتۆماتیکی زیاد دەکرێت. ئەگەر دابینکەری شوێن پێویستی بە کلیڵ بێت، دەکرێت وەک پارامەترێکی پرسینەو بە ناونیشانی سەرەکی زیاد بکرێت.</string>
+    <string name="pref_location_custom_url_input_hint">ناونیشانی خزمەتگوزاری تایبەت</string>
     <string name="pref_location_custom_source_title">باو</string>
+    <string name="pref_location_source_title">خزمەتگوزاری شوێنی ئۆنلاین هەڵبژێرە</string>
+    <string name="pref_location_source_terms">مەرجەکان / تایبەتمەندی</string>
+    <string name="pref_location_source_suggested">پێشنیارکراو</string>
+    <string name="pref_location_import_export_title">هاوێژاندن یان هەناردەکردنی داتای شوێن</string>
+    <string name="notification_config_required_title">ڕێکخستن پێویستە</string>
+    <string name="notification_config_required_text_online_sources">بۆ بەردەوامبوون لە بەکارهێنانی خزمەتگوزارییەکانی شوێنی ئۆنلاین، پێویستە خزمەتگوزارییەکی داتای شوێن هەڵبژێریت.</string>
+    <string name="location_data_export_wifi_title">هەناردەکردنی بنکەی داتای شوێنی Wi-Fi ی خۆماڵی</string>
+    <string name="location_data_export_cell_title">هەناردەکردنی بنکەی داتای شوێنی تاوەری پەیوەندی خۆماڵی</string>
+    <string name="location_data_import_title">هاوێژاندنی داتای شوێن لە فایلێکەوە</string>
+    <string name="location_data_import_result_toast">%1$d تۆمار هاوێژکرا.</string>
+    <string name="prefcat_location_timeline_title">هێڵکاتی نەخشەی گووگڵ</string>
+    <string name="pref_location_timeline_title">چالاککردنی مێژووی شوێن</string>
+    <string name="pref_location_timeline_summary">"زانیارییەکانی شوێنت بە شێوەیەکی خولی تۆمار بکە و بۆ هێڵکاتی نەخشەی گووگڵ بەردەست بکە."</string>
+    <string name="pref_location_timeline_upload_title">هەمگاتکردن لەگەڵ هەژماری گوگڵ</string>
+    <string name="pref_location_timeline_upload_summary">"مێژووی شوێنەکە هەمگات بکە لەگەڵ سێرڤەرەکانی گوگڵ، بۆ ئەوەی بتوانرێت لەسەر ئامێرەکانی تریش پیشان بدرێت."</string>
     <!-- RE strings -->
+    <string name="prefcat_location_maps_title">گووگڵ مپس</string>
+    <string name="pref_map_engine_title">ڕێگەی نیشاندانی نەخشە</string>
     <!-- "Mapbox (MapLibre)" must be left untranslated .-->
+    <string name="pref_map_engine_summary">ئەو بزوێنەرە هەڵبژێرە کە بۆ نیشاندانی نەخشەکان لەناو ئەپەکاندا بەکاردێت. Mapbox (MapLibre) پێشنیار دەکرێت.</string>
     <!-- "Stadia Maps" must be left untranslated .-->
+    <string name="pref_stadia_key_title">کۆدی API ی Stadia Maps</string>
+    <string name="pref_stadia_key_summary">ئارەزوومەندانە. بژاردەی نیشاندانی نەخشەی Stadia Maps زیاد دەکات؛ Stadia پێویستی بە کۆدێکی API هەیە.</string>
     <!-- "HMS (Huawei Map Kit)" must be left untranslated .-->
+    <string name="pref_hms_key_title">کۆدی API ی HMS (Huawei Map Kit)</string>
+    <string name="pref_hms_key_summary">ئارەزوومەندانە. بژاردەی نیشاندانی نەخشەی HMS زیاد دەکات؛ پێویستی بە HMS Core هەیە لەسەر ئامێرەکە.</string>
 </resources>
