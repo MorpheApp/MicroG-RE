@@ -51,6 +51,7 @@ import com.mapbox.mapboxsdk.maps.Style
 import com.mapbox.mapboxsdk.plugins.annotation.*
 import com.mapbox.mapboxsdk.plugins.annotation.Annotation
 import com.mapbox.mapboxsdk.style.layers.Property.LINE_CAP_ROUND
+import com.mapbox.mapboxsdk.style.layers.SymbolLayer
 import com.google.android.gms.dynamic.unwrap
 import com.google.android.gms.maps.GoogleMap
 import com.mapbox.mapboxsdk.WellKnownTileServer
@@ -358,8 +359,34 @@ class GoogleMapImpl(context: Context, var options: GoogleMapOptions) : AbstractG
         val id = "t${tileId++}"
         val tileOverlay = TileOverlayImpl(this, id, options)
         tileOverlays[id] = tileOverlay
-        map?.getStyle { tileOverlay.addToStyle(it) }
+        map?.getStyle { reorderTileOverlays(it) }
         return tileOverlay
+    }
+
+    fun getLowestAnnotationLayerId(style: Style): String? {
+        val candidateIds = setOfNotNull(
+            fillManager?.layerId,
+            lineManager?.layerId,
+            symbolManager?.layerId
+        )
+        if (candidateIds.isEmpty()) return null
+        for (layer in style.layers) {
+            if (layer.id in candidateIds) {
+                return layer.id
+            }
+        }
+        return null
+    }
+
+    fun reorderTileOverlays(style: Style) {
+        val sortedOverlays = tileOverlays.values.sortedBy { it.zIndex }
+        val targetBelowId = getLowestAnnotationLayerId(style)
+            ?: style.layers.firstOrNull { it is SymbolLayer }?.id
+
+        for (overlay in sortedOverlays) {
+            overlay.removeFromStyle(style)
+            overlay.addToStyle(style, targetBelowId)
+        }
     }
 
     override fun addCircle(options: CircleOptions): ICircleDelegate {
@@ -391,6 +418,8 @@ class GoogleMapImpl(context: Context, var options: GoogleMapOptions) : AbstractG
         lineManager?.let { clear(it) }
         fillManager?.let { clear(it) }
         symbolManager?.let { clear(it) }
+        tileOverlays.values.toList().forEach { it.remove() }
+        tileOverlays.clear()
     }
 
     fun <T : Annotation<*>> clear(manager: AnnotationManager<*, T, *, *, *, *>) {
@@ -421,7 +450,7 @@ class GoogleMapImpl(context: Context, var options: GoogleMapOptions) : AbstractG
             lines?.let { runCatching { lineManager?.update(it) } }
             fills?.let { runCatching { fillManager?.update(it) } }
             symbols?.let { runCatching { symbolManager?.update(it) } }
-            tileOverlays.values.forEach { overlay -> overlay.addToStyle(it) }
+            reorderTileOverlays(it)
         }
 
         map?.setStyle(
@@ -817,7 +846,7 @@ class GoogleMapImpl(context: Context, var options: GoogleMapOptions) : AbstractG
                 pendingBitmaps.forEach { map -> it.addImage(map.key, map.value) }
                 pendingBitmaps.clear()
 
-                tileOverlays.values.forEach { overlay -> overlay.addToStyle(it) }
+                reorderTileOverlays(it)
 
                 map.locationComponent.apply {
                     activateLocationComponent(LocationComponentActivationOptions.builder(mapContext, it)
