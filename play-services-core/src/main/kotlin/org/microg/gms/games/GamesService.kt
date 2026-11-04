@@ -58,6 +58,7 @@ import org.microg.gms.common.GmsService
 import org.microg.gms.common.PackageUtils
 import org.microg.gms.games.achievements.AchievementsApiClient
 import org.microg.gms.games.snapshot.SnapshotsDataClient
+import org.microg.gms.games.utils.AccountPromptManager
 import org.microg.gms.utils.warnOnTransactionIssues
 import java.io.File
 import java.io.FileOutputStream
@@ -129,6 +130,18 @@ class GamesService : BaseService(TAG, GmsService.GAMES) {
                 GamesConfigurationService.setDefaultAccount(this@GamesService, packageName, account)
 
                 val player = JSONObject(GamesConfigurationService.getPlayer(this@GamesService, account)).toPlayer()
+
+                // RE changes start
+                // The connecting popup used a system overlay window, which is not supported
+                // because SYSTEM_ALERT_WINDOW is not declared.
+                if (false) {
+                    val showConnectingPopup = request.extras.getBoolean(EXTRA_SHOW_CONNECTING_POPUP, false)
+                    if (showConnectingPopup) {
+                        Log.d(TAG, "handleServiceRequest: showConnectingPopup")
+                        AccountPromptManager.getInstance(this@GamesService).show(player.displayName, player.iconImageUrl)
+                    }
+                }
+                // RE changes end
 
                 callback.onPostInitCompleteWithConnectionInfo(
                     CommonStatusCodes.SUCCESS,

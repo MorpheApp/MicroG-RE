@@ -6,11 +6,15 @@
 package org.microg.gms.games.utils
 
 import android.content.Context
+import android.graphics.PixelFormat
+import android.os.Build.VERSION.SDK_INT
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
+import android.view.WindowManager
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -22,6 +26,7 @@ class AccountPromptManager private constructor(context: Context) {
 
     private val appContextRef = WeakReference(context.applicationContext)
     private val handler = Handler(Looper.getMainLooper())
+    private var windowManagerRef: WeakReference<WindowManager>? = null
 
     private var promptViewRef: WeakReference<View>? = null
     private val removeRunnable = Runnable { remove() }
@@ -56,6 +61,33 @@ class AccountPromptManager private constructor(context: Context) {
         usernameView.text = String.format(context.getString(R.string.games_popup_signin_welcome), username)
 
         ImageManager.create(context).loadImage(avatarUrl, avatar)
+
+        // RE changes start
+        // Upstream added the view to a system overlay window (TYPE_APPLICATION_OVERLAY).
+        // That is removed because SYSTEM_ALERT_WINDOW is not declared.
+        if (false) {
+            val windowManager = context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
+            windowManagerRef = WeakReference(windowManager)
+
+            val layoutParams = WindowManager.LayoutParams(
+                WindowManager.LayoutParams.WRAP_CONTENT,
+                WindowManager.LayoutParams.WRAP_CONTENT,
+                if (SDK_INT >= 26) WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY
+                else WindowManager.LayoutParams.TYPE_PHONE,
+                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS or WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL,
+                PixelFormat.TRANSLUCENT
+            ).apply {
+                gravity = Gravity.TOP or Gravity.CENTER_HORIZONTAL
+                y = 80
+            }
+
+            try {
+                windowManager.addView(view, layoutParams)
+            } catch (e: Exception) {
+                Log.w(TAG, "windowManager addView failed ", e)
+            }
+        }
+        // RE changes end
 
         fun prepare() {
             Log.d(TAG, "prepare")
@@ -96,6 +128,17 @@ class AccountPromptManager private constructor(context: Context) {
     fun remove() {
         Log.d(TAG, "remove")
         handler.removeCallbacksAndMessages(null)
+
+        // RE changes start
+        if (false) {
+            promptViewRef?.get()?.let { view ->
+                try {
+                    windowManagerRef?.get()?.removeView(view)
+                } catch (_: Exception) {
+                }
+            }
+        }
+        // RE changes end
 
         promptViewRef?.clear()
         promptViewRef = null
