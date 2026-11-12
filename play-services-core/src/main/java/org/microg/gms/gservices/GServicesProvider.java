@@ -71,13 +71,13 @@ public class GServicesProvider extends ContentProvider {
             String packageName = getCallingPackage();
             if (packageName == null) return false;
             PackageManager packageManager = getContext().getPackageManager();
-            if (new ExtendedPackageInfo(packageManager, packageName).isGooglePackage()) return true;
             // RE changes start
+            if (new ExtendedPackageInfo(packageManager, packageName).isGooglePackage()) return true;
             if (packageName.startsWith("app.morphe.") || packageName.startsWith("app.revanced.") || packageName.startsWith("app.rvx.")) {
                 return true;
             }
-            // RE changes end
             return false;
+            // RE changes end
         } catch (Exception e) {
             return false;
         }

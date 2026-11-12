@@ -5,6 +5,7 @@
 
 package org.microg.gms.phenotype
 
+// RE changes start
 import android.accounts.AccountManager
 import android.content.Context
 import android.net.Uri
@@ -369,3 +370,4 @@ internal fun Context.notifyPhenotypeChange(packageName: String?) {
         Log.w(PHENOTYPE_LOG_TAG, "Failed to notify configuration change", e)
     }
 }
+// RE changes end

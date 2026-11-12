@@ -16,21 +16,28 @@
 
 package org.microg.gms.phenotype;
 
+// RE changes start
 import android.accounts.Account;
+// RE changes end
 import android.content.ContentProvider;
 import android.content.ContentValues;
+// RE changes start
 import android.content.Context;
+// RE changes end
 import android.database.Cursor;
 import android.database.MatrixCursor;
 import android.net.Uri;
+// RE changes start
 import android.os.Binder;
 import android.os.Process;
 import android.os.UserManager;
 import android.util.Base64;
+// RE changes end
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+// RE changes start
 import com.google.android.gms.phenotype.Configuration;
 import com.google.android.gms.phenotype.Configurations;
 import com.google.android.gms.phenotype.Flag;
@@ -38,9 +45,11 @@ import org.microg.gms.common.GooglePackagePermission;
 import org.microg.gms.common.PackageUtils;
 
 import java.util.Objects;
+// RE changes end
 
 public class ConfigurationProvider extends ContentProvider {
     private static final String TAG = "GmsPhenotypeCfgProvider";
+    // RE changes start
     @Override
     public boolean onCreate() {
         return true;
@@ -118,6 +127,7 @@ public class ConfigurationProvider extends ContentProvider {
             default: throw new AssertionError("Unknown flag value type");
         }
     }
+    // RE changes end
 
     @Nullable
     @Override

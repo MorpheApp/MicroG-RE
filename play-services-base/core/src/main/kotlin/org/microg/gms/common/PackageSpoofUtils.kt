@@ -8,7 +8,9 @@ import org.microg.gms.base.core.BuildConfig
 /**
  * utilities to spoof package information
  */
+// RE changes start
 object PackageSpoofUtils {
+// RE changes end
     private const val TAG = "SpoofUtils"
     private const val META_SPOOF_PACKAGE_NAME =
         "${BuildConfig.BASE_PACKAGE_NAME}.android.gms.SPOOFED_PACKAGE_NAME"

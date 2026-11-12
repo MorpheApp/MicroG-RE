@@ -22,12 +22,14 @@ public class RegistrationInfo extends AutoSafeParcelable {
     public int[] field6;
     @Field(7)
     public String clientPackageName;
+    // RE changes start
     @Field(8)
     public byte[] clientCertHash;
     @Field(9)
     public int registrationSource;
     @Field(10)
     public int field10;
+    // RE changes end
 
     public static final Creator<RegistrationInfo> CREATOR = new AutoCreator<>(RegistrationInfo.class);
 }
