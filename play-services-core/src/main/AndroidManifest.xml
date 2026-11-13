@@ -209,6 +209,14 @@
         coil.singleton, coil.base, androidx.compose.material3, com.google.accompanist.systemuicontroller, androidx.compose.animation.graphics,
         androidx.compose.ui.tooling.data, androidx.compose.ui.tooling.preview, androidx.compose.ui.tooling,androidx.compose.material" />
 
+    <!-- // RE changes start -->
+    <queries>
+        <intent>
+            <action android:name="com.google.android.libraries.phenotype.registration.PhenotypeMetadataHolderService" />
+        </intent>
+    </queries>
+    <!-- // RE changes end -->
+
     <application
         android:name="org.microg.gms.ui.updater.UpdaterApplication"
         android:allowBackup="true"
@@ -1106,10 +1114,31 @@
 
         <!-- Phenotype -->
 
+        <!-- // RE changes start -->
         <provider
             android:name="org.microg.gms.phenotype.ConfigurationProvider"
             android:authorities="${basePackageName}.android.gms.phenotype"
+            android:directBootAware="true"
             android:exported="true" />
+
+        <provider android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup" android:exported="false"
+            tools:node="merge">
+            <meta-data android:name="org.microg.gms.phenotype.PhenotypeInitializer" android:value="androidx.startup" />
+        </provider>
+
+        <receiver android:name="org.microg.gms.phenotype.PhenotypePackageReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_FULLY_REMOVED" />
+                <action android:name="android.intent.action.PACKAGE_DATA_CLEARED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <!-- // RE changes end -->
 
         <service
             android:name="org.microg.gms.phenotype.PhenotypeService"
