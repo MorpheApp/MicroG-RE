@@ -238,12 +238,12 @@
     <string name="pref_gcm_remove_registers">ลบแอปพลิเคชันที่ลงทะเบียนทั้งหมด</string>
     <string name="pref_gcm_remove_registers_summary">ใช้ตัวเลือกนี้เมื่อมีปัญหาในการลงทะเบียนแอปหรือรับการแจ้งเตือน</string>
     <string name="gcm_remove_registers_dialog_title">ลบการลงทะเบียนทั้งหมด?</string>
-    <string name="gcm_remove_registers_dialog_message">"นี้จะนำเอแอปที่ลงทะเบียนทั้งหมดออกจากการรับการแจ้งเตือน Push ตามคำสั่ง
+    <string name="gcm_remove_registers_dialog_message">"นี้จะนำเอแอปที่ลงทะเบียนทั้งหมดออกจากการรับการแจ้งเตือนแบบพุชตามคำสั่ง
 
-คุณจะต้องมี securityToken และ AndroidIDbaruใหม่เพื่อลงทะเบียนแอปใหม่ตรวจสอบสถานะการลงทะเบียนของอุปกรณ์
+คุณจะต้องมี securityToken และ AndroidID ใหม่เพื่อลงทะเบียนแอปใหม่ตรวจสอบสถานะการลงทะเบียนของอุปกรณ์
 
 บางแอปอาจไม่สามารถลงทะเบียนใหม่อีกได้หลังจากการดำเนินการนี้ คุณอาจต้องล้างข้อมูลของแอปเหล่านี้ก่อนที่จะสามารถร้องขอลงทะเบียนใหม่อีกครั้งได้"</string>
-    <string name="gcm_remove_registers_toast_message">แอปทั้งหมดถูกนำออกจากการแจ้งเตือน Push แล้ว</string>
+    <string name="gcm_remove_registers_toast_message">แอปทั้งหมดถูกนำออกจากการแจ้งเตือนแบบพุชแล้ว</string>
     <string name="prefcat_push_networks_title">เครือข่ายในการใช้การแจ้งเตือนแบบอัตโนมัติ</string>
     <string name="safetynet_intro">Google SafetyNet คือระบบรับรองอุปกรณ์ เพื่อให้แน่ใจว่าอุปกรณ์มีความปลอดภัยอย่างเหมาะสมและเข้ากันได้กับ Android CTS แอปพลิเคชันบางตัวใช้ SafetyNet เพื่อเหตุผลด้านความปลอดภัยหรือเป็นข้อกำหนดเบื้องต้นสำหรับการป้องกันการดัดแปลง\n\nmicroG GmsCore มีการใช้งาน SafetyNet แบบเปิดเผยโค้ดฟรี แต่เซิร์ฟเวอร์อย่างเป็นทางการกำหนดให้คำขอ SafetyNet ต้องลงนามโดยใช้ระบบ DroidGuard ที่เป็นลิขสิทธิ์</string>
     <string name="safetynet_enable_switch">อนุญาตให้ยืนยันตัวตนอุปกรณ์</string>

@@ -176,7 +176,7 @@ Skonfiguruj hasło, kod PIN lub wzór blokady ekranu."</string>
     <string name="prefcat_applications">Aplikacje</string>
     <string name="prefcat_authentication">Autoryzacja</string>
     <string name="pref_add_account_summary">Dodaj konto Google</string>
-    <string name="pref_gcm_enable_mcs_summary">Cloud Messaging to dostawca powiadomień push używany przez wiele aplikacji firm trzecich. Aby z niego korzystać, musisz włączyć rejestrację urządzenia.</string>
+    <string name="pref_gcm_enable_mcs_summary">Cloud Messaging to dostawca powiadomień push używany przez wiele zewnętrznych aplikacji. Aby z niego korzystać, musisz włączyć rejestrację urządzenia.</string>
     <string name="pref_gcm_confirm_new_apps_title">Potwierdź nowe aplikacje</string>
     <string name="pref_gcm_confirm_new_apps_summary">Pytaj przed rejestracją nowej aplikacji do otrzymywania powiadomień push</string>
     <string name="pref_about_title">Informacje</string>
@@ -457,7 +457,7 @@ Niektóre aplikacje mogą nie być w stanie zarejestrować się ponownie. Koniec
     <!-- Passkey management -->
     <string name="pref_passkey_manager_title">Zarządzaj kluczami dostępu</string>
     <string name="pref_passkey_manager_empty_title">Brak zapisanych kluczy dostępu</string>
-    <string name="pref_passkey_manager_description">Kiedy aplikacje firm trzecich rejestrują klucze dostępu, microG przechowuje ich lokalny zapis. Jeśli aplikacja usunie klucz dostępu bez powiadomienia microG, wpis ten może pozostać w systemie. W tym miejscu możesz usunąć takie zbędne wpisy.</string>
+    <string name="pref_passkey_manager_description">Kiedy zewnętrzne aplikacje rejestrują klucze dostępu, microG przechowuje ich lokalny zapis. Jeśli aplikacja usunie klucz dostępu bez powiadomienia microG, wpis ten może pozostać w systemie. W tym miejscu możesz usunąć takie zbędne wpisy.</string>
     <string name="pref_passkey_manager_delete_dialog_title">Usuń klucz dostępu</string>
     <string name="pref_passkey_manager_delete_dialog_message">Usuń klucz dostępu dla \"%2$s\" w \"%1$s\". Tego działania nie można cofnąć, aby zalogować się ponownie, konieczne będzie zarejestrowanie nowego klucza dostępu.</string>
     <string name="pref_passkey_manager_delete_dialog_confirm">Usuń</string>

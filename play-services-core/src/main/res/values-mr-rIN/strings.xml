@@ -4,8 +4,21 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="dialog_title_remove_account">खाते काढून टाका</string>
+    <string name="dialog_message_remove_account">"तुम्हाला नक्की हे खाते काढुन टाकायचे आहे का?
+
+काही सेवा आणि फंक्शन अनुपलब्ध राहतील
+
+तुमचा डेटा पुसला जाणार नाही"</string>
+    <string name="dialog_confirm_button">रिमूव्ह</string>
+    <string name="dialog_cancel_button">रद्द करा</string>
+    <string name="snackbar_remove_account">खाते %s काढुन टाकले</string>
+    <string name="snackbar_undo_button">पुर्नस्थापित करा</string>
     <string name="gms_settings_name">MicroG सेटिंग्ज</string>
     <string name="gms_settings_summary">MicroG सेवा सेटअप करा.</string>
+    <string name="just_a_sec">फक्त थोडावेळ...</string>
+    <string name="account_manager_title">गुगल खाते व्यवस्थापक</string>
+    <string name="sorry">माफ करा...</string>
     <string name="auth_before_connect">microG सह Google खाते कनेक्ट करा.\n\nचला Google खात्याशी कनेक्ट होऊया, <b>Sign in</b> बटण वापरा किंवा तुमच्याकडे या उत्पादकाचे डिव्हाइस असल्यास <b>Huawei</b> बटण वापरा. बटणांपैकी एक दाबून तुम्हाला तुमच्या खात्यात लॉग इन करण्याच्या पृष्ठावर निर्देशित केले जाईल.</string>
     <string name="no_network_error_desc">"तुमच्याकडे नेटवर्क कनेक्शन नाही.
 
@@ -16,6 +29,9 @@
     <string name="auth_finalize">"तुमचे डिव्हाइस तुमच्या खात्यात माहिती जतन करण्यासाठी Google शी संपर्क साधत आहे.
 
 यासाठी काही मिनिटे लागू शकतात."</string>
+    <string name="allow">मान्य</string>
+    <string name="deny">अमान्य</string>
+    <string name="auth_notification_title">प्रमाणीकरण आवश्यक</string>
     <string name="auth_notification_content">तुमच्या Google खात्यात प्रवेश करण्यासाठी <xliff:g example="F-Droid">%1$s</xliff:g> ला तुमच्या अधिकृततेची आवश्यकता आहे.</string>
     <string name="auth_package_override_request_title"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> ला <xliff:g example="account@example.com">%2$s</xliff:g> साठी विशेषाधिकार प्राप्त प्रवेशाची परवानगी द्यायची का?</string>
     <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> ला तुमच्या खात्यात <b><xliff:g example="F-Droid">%2$s</xliff:g> by <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b> असल्याप्रमाणे प्रवेश करण्याची इच्छा आहे. यामुळे त्याला तुमच्या खात्याचा विशेषाधिकार असलेला प्रवेश मिळू शकतो.</string>
@@ -41,8 +57,11 @@
     <string name="auth_action_step_perform_content_description">पायरी पूर्ण करण्यासाठी क्लिक करा</string>
     <string name="auth_action_step_completed_content_description">पायरी पूर्ण झाली</string>
     <string name="auth_action_activity_finish">पूर्ण करा</string>
+    <string name="signin_picker_title">अकाउंट निवडा</string>
     <string name="signin_picker_subtitle"><xliff:g example="F-Droid">%1$s</xliff:g> वर जाण्यासाठी</string>
+    <string name="signin_picker_add_account_label">अन्य खाते जोडा</string>
     <string name="signin_confirm_title">तुम्हाला <xliff:g example="F-Droid">%1$s</xliff:g> मध्ये साइन इन करण्याची परवानगी द्या</string>
+    <string name="signin_confirm_button_text">मान्य आणि शेअर करा</string>
     <string name="signin_subtext_sharing">पुढे जाण्यासाठी, microG तुमच्या Google खात्याचे नाव, ईमेल पत्ता आणि प्रोफाइल फोटो <xliff:g example="F-Droid">%1$s</xliff:g> सोबत शेअर करेल.</string>
     <string name="perm_provision_label">microG सेवा प्रोव्हिजन करा</string>
     <string name="perm_provision_description">वापरकर्त्याच्या हस्तक्षेपाशिवाय microG सेवा कॉन्फिगर करण्याची परवानगी ॲपला देते</string>
@@ -67,7 +86,11 @@
     <string name="pick_place_title">एक ठिकाण निवडा</string>
     <string name="place_picker_select_title">हे स्थान निवडा</string>
     <string name="place_picker_nearby_places">जवळची ठिकाणे</string>
+    <string name="network_type_roaming">रोमिंग </string>
+    <string name="network_type_other">अन्य नेटवर्क्स</string>
     <!-- Self check -->
+    <string name="self_check_cat_gms_packages">इन्स्टॉल असलेले पेकेजेस</string>
+    <string name="self_check_cat_system">सिस्टम</string>
     <string name="self_check_name_system_spoofs">सिस्टम स्वाक्षरीची नक्कल करते: </string>
     <string name="self_check_resolution_system_spoofs">कोणत्या पायऱ्या आवश्यक असू शकतात याबद्दल कृपया डॉक्युमेंटेशन तपासा.</string>
     <string name="self_check_pkg_gms">microG सेवा</string>
@@ -80,11 +103,14 @@
     <string name="self_check_name_battery_optimizations">बॅटरी ऑप्टिमाइझेशनकडे दुर्लक्ष केले:</string>
     <string name="self_check_resolution_battery_optimizations">बॅटरी ऑप्टिमाइझेशन अक्षम करण्यासाठी येथे स्पर्श करा. असे न केल्यास अनुप्रयोगे चुकीच्या पद्धतीने कार्य करू शकतात.</string>
     <!-- Settings strings -->
+    <string name="prefcat_about">बद्दल</string>
     <string name="cond_gcm_bat_summary">तुम्ही Cloud Messaging सक्षम केले आहे परंतु microG Services साठी बॅटरी ऑप्टिमायझेशन सक्रिय आहे. पुश नोटिफिकेशन्स मिळवण्यासाठी तुम्ही बॅटरी ऑप्टिमायझेशन दुर्लक्षित केले पाहिजे.</string>
+    <string name="cond_perm_title">परवानगी अनुपलब्ध</string>
     <string name="prefs_account">खाते पसंती</string>
     <string name="prefs_account_privacy">वैयक्तिक माहिती &amp; गोपनीयता</string>
     <string name="prefs_account_security">साइन-इन &amp; सुरक्षा</string>
     <string name="pref_auth_trust_google_summary">जेव्हा हे अक्षम केले जाते, तेव्हा ॲपची ऑथोरायझेशन विनंती Google कडे पाठवण्यापूर्वी वापरकर्त्याला विचारले जाते. हे अक्षम केल्यास काही ॲप्लिकेशन्सना Google खाते वापरण्यात अडचण येऊ शकते.</string>
+    <string name="pref_auth_visible_title">अॅप्सना खाती शोधायची मान्यता द्या</string>
     <string name="pref_auth_visible_summary">सक्षम केल्यावर, या डिव्हाइसवरील सर्व ॲप्लिकेशन्सना पूर्वपरवानगीशिवाय तुमच्या Google खात्यांचा ईमेल पत्ता पाहता येईल.</string>
     <string name="pref_auth_include_android_id_summary">जेव्हा हे अक्षम केले जाते, तेव्हा ऑथेंटिकेशन विनंत्या डिव्हाइस नोंदणीशी लिंक केल्या जाणार नाहीत, ज्यामुळे अनधिकृत डिव्हाइसेसना साइन इन करण्याची परवानगी मिळू शकते, परंतु याचे अनपेक्षित परिणाम होऊ शकतात.</string>
     <string name="pref_auth_strip_device_name_summary">जेव्हा हे सक्षम केले जाते, तेव्हा ऑथेंटिकेशन विनंत्यांमध्ये डिव्हाइसचे नाव समाविष्ट केले जाणार नाही, ज्यामुळे अनधिकृत डिव्हाइसेसना साइन इन करण्याची परवानगी मिळू शकते, परंतु याचे अनपेक्षित परिणाम होऊ शकतात.</string>
@@ -93,10 +119,16 @@
     <string name="pref_auth_allow_find_devices_title">Google Device Finder ला प्रतिसाद देण्याची परवानगी द्या</string>
     <string name="pref_auth_allow_find_devices_summary">सक्षम केल्यावर, डिव्हाइस Google कडून येणाऱ्या Find My Device सूचनांना प्रतिसाद देऊ शकते (Cloud Messaging आवश्यक आहे).</string>
     <string name="pref_checkin_enable_summary">तुमचे डिव्हाइस Google सेवांमध्ये नोंदवते आणि एक अद्वितीय डिव्हाइस ओळखकर्ता तयार करते. microG नोंदणी डेटामधून तुमच्या Google खाते नावाशिवाय इतर ओळख पटवणारे बिट्स काढून टाकते.</string>
+    <string name="checkin_not_registered">नोंदणीकृत नाही</string>
     <string name="checkin_last_registration">शेवटची नोंदणी: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="checkin_enable_switch">डिव्हाइसची नोंदणी करा</string>
+    <string name="pref_info_status">स्थिती</string>
     <string name="pref_accounts_title">खाती</string>
     <string name="pref_game_accounts_title">Google गेम खाती</string>
+    <string name="pref_accounts_summary">गुगल खाते जोडा आणि व्यवस्थापन करा</string>
     <string name="prefcat_accounts_settings_title">सेटिंग्ज</string>
+    <string name="prefcat_accounts_options_title">पर्याय</string>
+    <string name="pref_accounts_manage_accounts_title">खाती व्यवस्थापित करा</string>
     <string name="prefcat_accounts_backup_title">अकाउंट बॅकअप</string>
     <string name="pref_accounts_backup_title">अकाउंट्सचा बॅकअप घ्या</string>
     <string name="pref_accounts_backup_summary">गुगल अकाउंट्स फाईलमध्ये एक्सपोर्ट करा</string>
@@ -109,9 +141,13 @@
     <string name="snackbar_accounts_restored">%1$d खाते(स) पुनर्संचयित केले</string>
     <string name="snackbar_accounts_export_failed">बॅकअप अयशस्वी</string>
     <string name="snackbar_accounts_import_failed">रिस्टोअर अयशस्वी</string>
+    <string name="pref_privacy_title">गोपनीयता</string>
     <string name="auth_add_account">खाते जोडा</string>
+    <string name="prefcat_applications">ॲप्लिकेशन्स</string>
+    <string name="prefcat_authentication">प्रमाणीकरण</string>
     <string name="pref_add_account_summary">Google खाते जोडा</string>
     <string name="pref_gcm_enable_mcs_summary">Cloud Messaging हा एक पुश नोटिफिकेशन प्रोव्हायडर आहे जो अनेक थर्ड-पार्टी ॲप्लिकेशन्सद्वारे वापरला जातो. याचा वापर करण्यासाठी तुम्ही डिव्हाइस नोंदणी सक्षम करणे आवश्यक आहे.</string>
+    <string name="pref_about_title">MicroG RE बद्दल</string>
     <string name="pref_hide_launcher_icon">लाँचरमध्ये आयकॉन लपवा</string>
     <string name="hide_launcher_icon_dialog_message">सक्षम केल्यास, MicroG तुमच्या ॲप लॉन्चरमध्ये लपवले जाईल. तुमच्या डिव्हाइसच्या सिस्टम ॲप सूचीमधील ॲप माहितीमधून MicroG उघडता येईल.</string>
     <string name="hide_launcher_icon_updating_title">ॲप अपडेट होत असताना कृपया प्रतीक्षा करा</string>
@@ -144,7 +180,10 @@
     <string name="update_notification_permission_allow">परवानगी द्या</string>
     <string name="update_notification_permission_not_now">आता नको</string>
     <string name="update_notification_permission_open_settings">सेटिंग्ज उघडा</string>
+    <string name="gcm_unregister_app">नोंदणी रद्द करा</string>
+    <string name="gcm_no_message_yet">अजूनपर्यंत कोणताही संदेश मिळाला नाही</string>
     <string name="gcm_last_message_at">शेवटचा संदेश: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_registered">नोंदणीकृत</string>
     <string name="gcm_registered_since">नोंदणी झाल्याची तारीख: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
     <string name="gcm_unregister_confirm_title"><xliff:g example="F-Droid">%1$s</xliff:g> अनरजिस्टर्ड करायचे का?</string>
     <string name="gcm_unregister_confirm_message">काही ॲप्स स्वयंचलितपणे पुन्हा नोंदणी करत नाहीत आणि/किंवा ते मॅन्युअली करण्याची पर्याय देत नाहीत. नोंदणी रद्द केल्यानंतर ही ॲप्स कदाचित योग्यरित्या काम करणार नाहीत.\nचालू ठेवायचे आहे का?</string>
@@ -153,8 +192,12 @@
     <string name="gcm_network_state_connected"><xliff:g example="2 hours ago">%1$s</xliff:g> पासून कनेक्टेड आहे</string>
     <string name="gcm_enable_switch">पुश नोटिफिकेशन्स प्राप्त करा</string>
     <string name="gcm_allow_app_popup"><xliff:g example="F-Droid">%1$s</xliff:g> ला पुश नोटिफिकेशन्ससाठी नोंदणी करण्याची परवानगी द्यायची का?</string>
+    <string name="pref_push_app_allow_register_title">नोंदणी मान्य करा</string>
     <string name="pref_push_app_allow_register_summary">ॲपला पुश नोटिफिकेशन्ससाठी नोंदणी करण्याची परवानगी द्या.</string>
     <string name="pref_push_app_wake_for_delivery_summary">येणारे पुश संदेश प्राप्त करण्यासाठी बॅकग्राउंडमध्ये असताना ॲप सुरू करा.</string>
+    <string name="prefcat_push_apps_registered_title">नोंदणीकृत अॅप्स</string>
+    <string name="prefcat_push_apps_unregistered_title">अनोंदणीकृत अॅप्स</string>
+    <string name="pref_gcm_remove_registers">सर्व नोंदणीकृत अॅप्स काढुन टाका</string>
     <string name="safetynet_intro">Google SafetyNet ही एक डिव्हाइस सर्टिफिकेशन सिस्टम आहे, जी डिव्हाइस योग्यरित्या सुरक्षित आणि Android CTS शी सुसंगत असल्याचे सुनिश्चित करते. काही ॲप्लिकेशन्स सुरक्षिततेच्या कारणांसाठी किंवा टेंपर-प्रोटेक्शनसाठी पूर्वअट म्हणून SafetyNet वापरतात.\n\nmicroG GmsCore मध्ये SafetyNet ची मोफत अंमलबजावणी आहे, परंतु अधिकृत सर्व्हरला SafetyNet विनंत्या प्रोप्रायटरी DroidGuard सिस्टम वापरून स्वाक्षरित असणे आवश्यक आहे.</string>
     <string name="safetynet_enable_switch">डिवाइस अटेस्टेशनला परवानगी द्या</string>
     <string name="pref_safetynet_test_title">SafetyNet अटेस्टेशनची चाचणी घ्या</string>
@@ -171,6 +214,12 @@
     <string name="pref_device_attestation_app_allow_requests_summary">अॅपला डिव्हाइस अटेस्टेशनची विनंती करण्याची परवानगी द्या</string>
     <string name="menu_clear_recent_requests">नुकत्याच केलेल्या विनंत्या पुसा</string>
     <string name="safetynet_last_run_at">शेवटचा वापर: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="profile_name_auto">स्वयंचलित: %s</string>
+    <string name="profile_name_system">सिस्टम: %s</string>
+    <string name="pref_device_registration_serial_title">सीरियल</string>
+    <string name="pref_device_registration_import_custom_profile_summary">फाईल मधून डिव्हाइस प्रोफाईल आयात करा</string>
+    <string name="pref_device_registration_select_profile_title">प्रोफाईल निवडा</string>
+    <string name="pref_device_registration_device_profile_category">डिव्हाइस प्रोफाईल</string>
     <string name="pref_safetynet_recent_uses">नुकतेच केलेले वापर</string>
     <string name="pref_safetynet_recent_attestation_summary">अटेस्टेशन: %s</string>
     <string name="pref_safetynet_recent_recaptcha_summary">ReCaptcha: %s</string>
@@ -193,6 +242,10 @@
     <string name="pref_safetynet_test_not_completed">अद्याप पूर्ण झाले नाही</string>
     <string name="pref_safetynet_test_no_result">निकाल नाही</string>
     <string name="pref_safetynet_test_invalid_json">अवैध JSON</string>
+    <string name="push_notifications_summary_off">बंद करा</string>
+    <string name="push_notifications_summary_automatic">चालू/स्वयंचलित: %s</string>
+    <string name="push_notifications_summary_values_seconds">%s सेकंद</string>
+    <string name="push_notifications_summary_values_minutes">%s मिनिटे</string>
     <string name="pref_vending_licensing_category">Google Play लायसन्सिंग</string>
     <string name="pref_vending_licensing_enable_switch">लायसन्स पडताळणी विनंत्यांना उत्तरे द्या</string>
     <string name="pref_vending_license_enable_summary">काही ॲप्सना तुम्ही ते Google Play वरून खरेदी केले आहेत याची पडताळणी आवश्यक असते. जेव्हा एखादे ॲप विनंती करते, तेव्हा microG Google कडून खरेदीचा पुरावा डाउनलोड करू शकते. जर हे अक्षम असेल, किंवा कोणतेही Google खाते जोडलेले नसेल, तर लायसन्स पडताळणीच्या विनंत्यांकडे दुर्लक्ष केले जाते.</string>
@@ -363,8 +416,12 @@
     <string name="pref_passkey_manager_transport_bluetooth">ब्लूटूथ</string>
     <string name="pref_passkey_manager_transport_hybrid">हायब्रीड</string>
     <string name="pref_passkey_manager_credential_id_format_internal">ID: %1$s</string>
+    <string name="self_check_cat_patched_apps">पॅच केलेले अॅप्स</string>
+    <string name="self_check_source_morphe">Morphe पॅचेस</string>
+    <string name="self_check_source_alternative">पर्यायी पॅचेस</string>
     <string name="self_check_resolution_oem_restriction">तुमची सिस्टिम बॅकग्राउंड प्रक्रिया प्रतिबंधित करू शकते. \'Don\'t Kill My App!\' साइट उघडण्यासाठी आणि हे निर्बंध कसे काढायचे हे जाणून घेण्यासाठी येथे टॅप करा</string>
     <string name="morphe_sign_in_with_google_microg_label">MicroG RE द्वारे Google सह साइन इन करा</string>
+    <string name="self_check_action_download_morphe">Morphe डाउनलोड करा</string>
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
     <string name="abi_mismatch_title">चुकीचे आर्किटेक्चर व्हेरिएंट इंस्टॉल केले आहे</string>
     <string name="abi_mismatch_message">"या MicroG-RE बिल्डमध्ये फक्त 64-बिट (arm64) लायब्ररीज आहेत, परंतु हे डिव्हाइस 32-बिट युझरस्पेसवर चालत आहे.
