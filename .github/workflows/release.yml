@@ -277,17 +277,27 @@ jobs:
             PREV=$(gh release list --exclude-drafts --exclude-pre-releases --limit 1 --json tagName --jq '.[0].tagName // ""')
             FLAGS=(--latest)
           fi
-          if [ -n "$PREV" ]; then
-            FLAGS+=(--notes-start-tag "$PREV")
-          fi
+
+          SHA=$(git rev-parse HEAD)
 
           # Fails if the branch moved while building, nothing is released in that case.
           git push origin "HEAD:refs/heads/$BRANCH"
 
+          NOTES_ARGS=(-f "tag_name=$TAG" -f "target_commitish=$SHA")
+          if [ -n "$PREV" ]; then
+            NOTES_ARGS+=(-f "previous_tag_name=$PREV")
+          fi
+          NOTES="$RUNNER_TEMP/release-notes.md"
+          gh api "repos/{owner}/{repo}/releases/generate-notes" "${NOTES_ARGS[@]}" --jq .body > "$NOTES.raw"
+
+          # Drop chore entries such as the dev to main merge pull request.
+          grep -vE '^\* chore(\([^)]*\))?!?:' "$NOTES.raw" > "$NOTES" || true
+          cat "$NOTES"
+
           gh release create "$TAG" dist/*.apk \
-            --target "$(git rev-parse HEAD)" \
+            --target "$SHA" \
             --title "$TAG" \
-            --generate-notes \
+            --notes-file "$NOTES" \
             "${FLAGS[@]}"
 
       # Pushes made with GITHUB_TOKEN do not trigger other workflows, so start the back merge manually.
