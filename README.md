@@ -37,6 +37,18 @@ Most modern phones can use this release.
 
 If you are unsure which variant to use, download the universal APK (`microg-version.apk`).
 
+<details>
+<summary>APK signature</summary>
+
+```
+app.revanced.android.gms
+0B:6C:95:15:AF:B1:95:FA:C5:96:01:69:6B:A0:A7:90:7A:0B:21:7C:CF:72:0B:43:14:84:27:CC:F6:43:43:E7
+```
+
+Package name and SHA-256 fingerprint of the signing certificate, for example for AppVerifier or Obtainium.
+
+</details>
+
 ## Translations
 
 If you'd like to help translate MicroG please see [here](https://morphe.software/translate).

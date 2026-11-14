@@ -2,6 +2,22 @@ name: Release
 
 on:
   workflow_dispatch:
+    inputs:
+      release:
+        description: >-
+          Bump the version, commit it and publish a GitHub release.
+          On dev this makes a x.y.z-dev.N pre-release.
+          On main a -dev version only drops the -dev suffix.
+        type: choice
+        default: "Build only (no release)"
+        options:
+          - "Build only (no release)"
+          - "Release patch update (x.x.N)"
+          - "Release minor update (x.N.x)"
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -9,12 +25,100 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      actions: write
 
     steps:
       - name: "Checkout sources"
         uses: actions/checkout@v7
         with:
           fetch-depth: 0
+
+      - name: "Bump version"
+        id: bump
+        if: inputs.release != 'Build only (no release)'
+        env:
+          RELEASE_TYPE: ${{ inputs.release }}
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+
+          case "$RELEASE_TYPE" in
+            "Release patch update"*) BUMP=patch ;;
+            "Release minor update"*) BUMP=minor ;;
+            *) echo "::error::Unknown release type: $RELEASE_TYPE"; exit 1 ;;
+          esac
+
+          if [ "$BRANCH" != "main" ] && [ "$BRANCH" != "dev" ]; then
+            echo "::error::Releases can only be made from main or dev, not '$BRANCH'"
+            exit 1
+          fi
+
+          OLD_CODE=$(sed -nE 's/^def ourGmsVersionCode = ([0-9]+)$/\1/p' build.gradle)
+          OLD_NAME=$(sed -nE 's/^def ourGmsVersionName = "([^"]+)"$/\1/p' build.gradle)
+          if [ -z "$OLD_CODE" ] || [ -z "$OLD_NAME" ]; then
+            echo "::error::Could not find ourGmsVersionCode / ourGmsVersionName in build.gradle"
+            exit 1
+          fi
+
+          if [[ ! "$OLD_NAME" =~ ^([0-9]+)\.([0-9]+)\.([0-9]+)(-dev\.([0-9]+))?$ ]]; then
+            echo "::error::Unsupported version name format: $OLD_NAME"
+            exit 1
+          fi
+          MAJOR=${BASH_REMATCH[1]}
+          MINOR=${BASH_REMATCH[2]}
+          PATCH=${BASH_REMATCH[3]}
+          DEV=${BASH_REMATCH[5]}
+
+          if [ "$BRANCH" = "main" ]; then
+            PRERELEASE=false
+            if [ -n "$DEV" ]; then
+              # dev was merged to main, release the version dev was working towards.
+              echo "::notice::Dropping -dev suffix from $OLD_NAME, the $BUMP selection is not used"
+              NEW_NAME="$MAJOR.$MINOR.$PATCH"
+            elif [ "$BUMP" = "minor" ]; then
+              NEW_NAME="$MAJOR.$((MINOR + 1)).0"
+            else
+              NEW_NAME="$MAJOR.$MINOR.$((PATCH + 1))"
+            fi
+          else
+            PRERELEASE=true
+            if [ -z "$DEV" ]; then
+              # Last version was a stable release, start a new dev series.
+              if [ "$BUMP" = "minor" ]; then
+                NEW_NAME="$MAJOR.$((MINOR + 1)).0-dev.1"
+              else
+                NEW_NAME="$MAJOR.$MINOR.$((PATCH + 1))-dev.1"
+              fi
+            elif [ "$BUMP" = "minor" ] && [ "$PATCH" != "0" ]; then
+              # Current dev series is a patch update, move it to the next minor.
+              NEW_NAME="$MAJOR.$((MINOR + 1)).0-dev.1"
+            else
+              NEW_NAME="$MAJOR.$MINOR.$PATCH-dev.$((DEV + 1))"
+            fi
+          fi
+          NEW_CODE=$((OLD_CODE + 1))
+
+          if git rev-parse -q --verify "refs/tags/$NEW_NAME" > /dev/null; then
+            echo "::error::Tag $NEW_NAME already exists"
+            exit 1
+          fi
+
+          sed -i -E \
+            -e "s/^def ourGmsVersionCode = [0-9]+$/def ourGmsVersionCode = $NEW_CODE/" \
+            -e "s/^def ourGmsVersionName = \"[^\"]+\"$/def ourGmsVersionName = \"$NEW_NAME\"/" \
+            build.gradle
+          grep -qx "def ourGmsVersionCode = $NEW_CODE" build.gradle
+          grep -qx "def ourGmsVersionName = \"$NEW_NAME\"" build.gradle
+
+          echo "Version: $OLD_NAME ($OLD_CODE) -> $NEW_NAME ($NEW_CODE)"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: Update build version" -- build.gradle
+
+          echo "name=$NEW_NAME" >> "$GITHUB_OUTPUT"
+          echo "code=$NEW_CODE" >> "$GITHUB_OUTPUT"
+          echo "prerelease=$PRERELEASE" >> "$GITHUB_OUTPUT"
 
       - name: "Setup Java"
         uses: actions/setup-java@v6
@@ -148,13 +252,50 @@ jobs:
       - name: "List APKs"
         run: ls -lh dist/
 
-#      - name: "Create release"
-#        uses: softprops/action-gh-release@v2
-#        with:
-#          tag_name: v${{ steps.version.outputs.tag }}
-#          name: v${{ steps.version.outputs.version }}
-#          files: dist/*.apk
-#          generate_release_notes: true
+      - name: "Push version bump and create release"
+        if: steps.bump.outputs.name != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.bump.outputs.name }}
+          APK_TAG: ${{ steps.version.outputs.tag }}
+          PRERELEASE: ${{ steps.bump.outputs.prerelease }}
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+
+          if [ "$APK_TAG" != "$TAG" ]; then
+            echo "::error::APK version '$APK_TAG' does not match bumped version '$TAG'"
+            exit 1
+          fi
+
+          # Release notes start from the last release of any kind for dev,
+          # and from the last stable release for main.
+          if [ "$PRERELEASE" = "true" ]; then
+            PREV=$(gh release list --exclude-drafts --limit 1 --json tagName --jq '.[0].tagName // ""')
+            FLAGS=(--prerelease --latest=false)
+          else
+            PREV=$(gh release list --exclude-drafts --exclude-pre-releases --limit 1 --json tagName --jq '.[0].tagName // ""')
+            FLAGS=(--latest)
+          fi
+          if [ -n "$PREV" ]; then
+            FLAGS+=(--notes-start-tag "$PREV")
+          fi
+
+          # Fails if the branch moved while building, nothing is released in that case.
+          git push origin "HEAD:refs/heads/$BRANCH"
+
+          gh release create "$TAG" dist/*.apk \
+            --target "$(git rev-parse HEAD)" \
+            --title "$TAG" \
+            --generate-notes \
+            "${FLAGS[@]}"
+
+      # Pushes made with GITHUB_TOKEN do not trigger other workflows, so start the back merge manually.
+      - name: "Back merge main to dev"
+        if: steps.bump.outputs.name != '' && github.ref_name == 'main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run back_merge.yml --ref main
 
       - name: "Upload APK (universal icon)"
         uses: actions/upload-artifact@v7

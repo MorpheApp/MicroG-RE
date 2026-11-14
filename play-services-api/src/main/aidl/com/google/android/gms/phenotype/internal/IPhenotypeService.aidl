@@ -2,7 +2,14 @@ package com.google.android.gms.phenotype.internal;
 
 import com.google.android.gms.common.api.internal.IStatusCallback;
 import com.google.android.gms.phenotype.internal.IPhenotypeCallbacks;
+// RE changes start
+import com.google.android.gms.phenotype.internal.IGetStorageInfoCallbacks;
+import com.google.android.gms.phenotype.internal.IFlagUpdateListener;
+// RE changes end
 import com.google.android.gms.phenotype.Flag;
+// RE changes start
+import com.google.android.gms.phenotype.GenericDimension;
+// RE changes end
 import com.google.android.gms.phenotype.RegistrationInfo;
 
 interface IPhenotypeService {
@@ -23,13 +30,25 @@ interface IPhenotypeService {
     oneway void deleteFlagOverrides(IPhenotypeCallbacks callbacks, String packageName, String user, String flagName) = 14; // returns via callbacks.onFlagOverrides()
     oneway void listFlagOverrides(IPhenotypeCallbacks callbacks, String packageName, String user, String flagName) = 15; // returns via callbacks.onFlagOverrides()
 
-    oneway void clearFlagOverrides(IPhenotypeCallbacks callbacks, String packageName, String user) = 17; // returns via callbacks.onFlagOverridesSet()
+    // RE changes start
+    oneway void setFlagOverrideLegacy(IPhenotypeCallbacks callbacks, String packageName, String user, String flagName, String flagValue) = 16;
+    oneway void setFlags(IPhenotypeCallbacks callbacks, String packageName, String user, in Flag[] flags) = 17;
+    // RE changes end
     oneway void bulkRegister(IPhenotypeCallbacks callbacks, in RegistrationInfo[] infos) = 18; // returns via callbacks.onRegister()
     oneway void setAppSpecificProperties(IPhenotypeCallbacks callbacks, String packageName, in byte[] p2) = 19; // returns via callbacks.onAppSpecificPropertiesSet()
 
+    // RE changes start
+    oneway void setGenericDimensions(IPhenotypeCallbacks callbacks, String packageName, String user, in GenericDimension[] dimensions) = 20;
+    // RE changes end
     oneway void getServingVersion(IPhenotypeCallbacks callbacks) = 21; // returns via callbacks.onServingVersion()
     oneway void getExperimentTokensForLogging(IPhenotypeCallbacks callbacks, String packageName, String logSourceName, String p3, String clientPackageName) = 22; // returns via callbacks.onExperimentTokens()
     oneway void syncAllAfterOperation(IPhenotypeCallbacks callbacks, long p1) = 23; // returns via callbacks.onSyncFinished()
     oneway void setRuntimeProperties(IStatusCallback callbacks, String p1, in byte[] p2) = 24;
-//    oneway void setExternalExperiments(IStatusCallback callbacks, String p1, in List<byte[]> p2) = 25;
+    // RE changes start
+    oneway void setExternalExperiments(IStatusCallback callbacks, String packageName, in List experimentTokens) = 25;
+    oneway void getStorageInfo(IGetStorageInfoCallbacks callbacks) = 26;
+    oneway void registerFlagUpdateListener(String processName, IFlagUpdateListener listener) = 27;
+    oneway void setAppWideProperties(IStatusCallback callbacks, in byte[] properties) = 28;
+    oneway void commitToConfigurationWithProperties(IPhenotypeCallbacks callbacks, in byte[] properties) = 30;
+    // RE changes end
 }

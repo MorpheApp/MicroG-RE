@@ -4,7 +4,16 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="dialog_title_remove_account">Buang akaun</string>
+    <string name="dialog_message_remove_account">"Adakah anda pasti untuk membuang akaun ini?
+
+Sesetengah perkhidmatan dan fungsi akan menjadi tidak tersedia
+
+Maklumat anda tidak akan hilang"</string>
     <string name="dialog_confirm_button">Keluarkan</string>
+    <string name="dialog_cancel_button">Batal</string>
+    <string name="snackbar_remove_account">Akaun %s dibuang</string>
+    <string name="snackbar_undo_button">Buat asal</string>
     <string name="gms_settings_name">Pengaturan microG</string>
     <string name="gms_settings_summary">Sediakan perkhidmatan MicroG.</string>
     <string name="just_a_sec">Tunggu sebentar… </string>
@@ -27,6 +36,9 @@ Cuba lagi kemudian."</string>
     <string name="auth_finalize">"Peranti anda sedang menghubungi Google untuk menyimpan maklumat ke akaun anda.
 
 Ini mungkin mengambil masa beberapa minit."</string>
+    <string name="allow">Benarkan</string>
+    <string name="deny">Tolak</string>
+    <string name="auth_notification_title">Pengesahan diperlukan</string>
     <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> memerlukan kebenaran anda untuk mengakses akaun Google anda.</string>
     <string name="auth_package_override_request_title">Benarkan akses istimewa <b><xliff:g example="F-Droid">%1$s</xliff:g></b> kepada <xliff:g example="account@example.com">%2$s</xliff:g>?</string>
     <string name="auth_package_override_request_message"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> ingin mengakses akaun anda seolah-olah ia adalah <b><xliff:g example="F-Droid">%2$s</xliff:g> oleh <xliff:g example="F-Droid Inc.">%3$s</xliff:g></b>. Ini mungkin memberikannya akses istimewa kepada akaun anda.</string>
@@ -58,6 +70,8 @@ Sila tetapkan kata laluan, PIN, atau kunci corak skrin."</string>
     <string name="signin_confirm_title">Benarkan anda log masuk ke <xliff:g example="F-Droid">%1$s</xliff:g></string>
     <string name="signin_confirm_button_text">Benarkan dan kongsi</string>
     <string name="signin_subtext_sharing">Untuk teruskan, microG akan kongsikan nama, alamat emel dan gambar profil akaun Google anda dengan <xliff:g example="F-Droid">%1$s</xliff:g>.</string>
+    <string name="perm_status_broadcast_label">dengar siaran status dalaman</string>
+    <string name="perm_gsf_read_gservices_label">baca konfigurasi perkhidmatan Google</string>
     <string name="perm_provision_label">sediakan perkhidmatan microG</string>
     <string name="perm_provision_description">Membenarkan aplikasi untuk mengkonfigurasi perkhidmatan microG tanpa interaksi pengguna</string>
     <string name="perm_car_speed_label">Kelajuan kereta</string>
@@ -81,6 +95,9 @@ Sila tetapkan kata laluan, PIN, atau kunci corak skrin."</string>
     <string name="pick_place_title">Pilih tempat</string>
     <string name="place_picker_select_title">Pilih lokasi ini</string>
     <string name="place_picker_nearby_places">Tempat berhampiran</string>
+    <string name="network_type_mobile">Rangkaian mudah alih</string>
+    <string name="network_type_roaming">Roaming</string>
+    <string name="network_type_other">Rangkaian lain</string>
     <!-- Self check -->
     <string name="self_check_cat_system">Sistem</string>
     <string name="self_check_name_system_spoofs">Sistem memalsukan tandatangan: </string>
@@ -96,6 +113,7 @@ Sila tetapkan kata laluan, PIN, atau kunci corak skrin."</string>
     <string name="self_check_resolution_battery_optimizations">Sentuh di sini untuk menyahaktifkan pengoptimuman bateri. Kegagalan melakukan ini mungkin menyebabkan aplikasi tidak berfungsi dengan betul.</string>
     <!-- Settings strings -->
     <string name="prefcat_about">Mengenai</string>
+    <string name="prefcat_details">Butiran</string>
     <string name="cond_gcm_bat_summary">Anda telah mengaktifkan Pemesejan Awan tetapi mempunyai pengoptimuman bateri aktif untuk Perkhidmatan microG. Untuk notifikasi tolak sampai, anda harus mengabaikan pengoptimuman bateri.</string>
     <string name="prefs_account">Keutamaan akaun</string>
     <string name="prefs_account_privacy">Info peribadi &amp; privasi</string>

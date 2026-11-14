@@ -5,10 +5,64 @@
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="service_name_location">Manzil</string>
+    <string name="prefcat_location_apps_title">Yaqinda kirishlar</string>
+    <string name="prefcat_location_wifi_title">Wi-Fi manzili</string>
+    <string name="prefcat_location_cell_title">Mobil tarmoq manzili</string>
+    <string name="prefcat_geocoder_title">Manzilni aniqlovchi</string>
+    <string name="pref_location_wifi_online_enabled_title">Onlayn xizmatdan so\'rov</string>
+    <string name="pref_location_wifi_online_enabled_summary">Onlayn joylashuv xizmatidan Wi-Fi asosidagi joylashuvni olish.</string>
+    <string name="pref_location_wifi_moving_enabled_title">Hotspotdan so\'rov</string>
+    <string name="pref_location_wifi_moving_enabled_summary">Ulangan vaqtda Wi-Fi manzili bevosita qo\'llab-quvvatlanadigan hotspotlardan olinadi.</string>
+    <string name="pref_location_wifi_learning_enabled_title">GPS dan eslab qolish</string>
+    <string name="pref_location_wifi_learning_enabled_summary">GPS ishlatilganda Wi-Fi manzillarini lokal tarzda saqlash.</string>
+    <string name="pref_location_cell_online_enabled_title">Onlayn xizmatdan so\'rov</string>
+    <string name="pref_location_cell_online_enabled_summary">Mobil tarmoq hujayra minoralari joylashuvlarini onlayn joylashuv xizmatidan olish.</string>
+    <string name="pref_location_cell_learning_enabled_title">GPSdan eslab qolish</string>
+    <string name="pref_location_cell_learning_enabled_summary">GPS ishlatilganda mobil tarmoq joylashuvlarini mahalliy ravishda saqlash.</string>
+    <string name="pref_geocoder_nominatim_enabled_title">Nominatimdan foydalanish</string>
+    <string name="pref_geocoder_nominatim_enabled_summary">OpenStreetMap Nominatim yordamida manzillarni aniqlash.</string>
+    <string name="fragment_location_apps_title">Joylashuvga ruxsatga ega ilovalar</string>
+    <string name="location_app_last_access_at">Oxirgi kirish: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="pref_location_app_force_coarse_title">Taxminiy joylashuvni majburlash</string>
+    <string name="pref_location_app_force_coarse_summary">Ilovaning ruxsat darajasini e\'tiborsiz qoldirgan holda, unga har doim taxminiy joylashuvlarni qaytarish.</string>
+    <string name="prefcat_app_last_location">Oxirgi xabar qilingan joylashuv</string>
+    <string name="location_settings_dialog_message_title_for_better_experience">Yaxshiroq tajriba uchun qurilma joylashuvini yoqing, u microG joylashuv xizmatidan foydalanadi</string>
+    <string name="location_settings_dialog_message_title_to_continue">Davom etish uchun qurilma joylashuvini yoqing, u microG joylashuv xizmatidan foydalanadi</string>
+    <string name="location_settings_dialog_message_details_start_paragraph">Qurilmangiz quyidagilarni bajarishi kerak:</string>
+    <string name="location_settings_dialog_message_location_services_gps_and_nlp">GPS, Wi‑Fi, mobil tarmoqlar va sensorlardan foydalanish</string>
+    <string name="location_settings_dialog_message_grant_permissions">microG xizmatiga joylashuv ruxsatlarini bering</string>
+    <string name="location_settings_dialog_message_gls_consent">microG joylashuv xizmatidan foydalaning; ushbu xizmatning bir qismi sifatida microG joylashuv aniqligini va joylashuvga asoslangan xizmatlarni yaxshilash uchun vaqti-vaqti bilan joylashuv ma\'lumotlarini yig\'ishi va ushbu ma\'lumotlardan anonim tarzda foydalanishi mumkin.</string>
+    <string name="location_settings_dialog_message_details_end_paragraph">Batafsil ma\'lumot uchun joylashuv sozlamalariga o\'ting.</string>
+    <string name="location_settings_dialog_btn_cancel">Rahmat, shart emas</string>
+    <string name="location_settings_dialog_btn_sure">OK</string>
+    <string name="pref_location_custom_url_summary">Bu maxsus servis URL manzilingni o\'rnatish imkonini beradi. Notog\'ri qiymatlar joylashuv xizmatlarining javob bermasligiga yoki butunlay ishlamasligiga olib kelishi mumkin.</string>
+    <string name="pref_location_custom_url_details">/v1/geolocate yo\'li avtomatik ravishda qo\'shiladi. Agar joylashuv provayderi kalitni talab qilsa, uni asosiy URL manziliga so\'rov parametri sifatida qo\'shish mumkin.</string>
+    <string name="pref_location_custom_url_input_hint">Maxsus servis URL manzili</string>
     <string name="pref_location_custom_source_title">Maxsus</string>
+    <string name="pref_location_source_title">Onlayn joylashuv xizmatini tanlang</string>
+    <string name="pref_location_source_terms">Shartlar / Maxfiylik</string>
+    <string name="pref_location_source_suggested">Tavsiya etilgan</string>
+    <string name="pref_location_import_export_title">Joylashuv ma\'lumotlarini import qilish yoki eksport qilish</string>
+    <string name="notification_config_required_title">Konfiguratsiya talab qilinadi</string>
+    <string name="notification_config_required_text_online_sources">Onlayn joylashuv xizmatlaridan foydalanishda davom etish uchun joylashuv ma\'lumotlari xizmatini tanlashingiz kerak.</string>
+    <string name="location_data_export_wifi_title">Mahalliy Wi-Fi joylashuv ma\'lumotlar bazasini eksport qilish</string>
+    <string name="location_data_export_cell_title">Mahalliy hujayra minorasi joylashuv ma\'lumotlar bazasini eksport qilish</string>
+    <string name="location_data_import_title">Joylashuv ma\'lumotlarini fayldan import qilish</string>
     <string name="location_data_import_result_toast">%1$d ta yozuv import qilindi.</string>
+    <string name="prefcat_location_timeline_title">Google Maps xronologiyasi</string>
+    <string name="pref_location_timeline_title">Joylashuv tarixini yoqish</string>
+    <string name="pref_location_timeline_summary">"Joylashuv ma'lumotlaringizni vaqti-vaqti bilan yozib boring va ularni Google Maps Timeline uchun ochiq qiling."</string>
+    <string name="pref_location_timeline_upload_title">Google hisobiga sinxronizatsiya qilish</string>
+    <string name="pref_location_timeline_upload_summary">"Joylashuv tarixini Google serverlariga sinxronizatsiya qiling, shunda uni boshqa qurilmalarda ko'rish mumkin bo'ladi."</string>
     <!-- RE strings -->
+    <string name="prefcat_location_maps_title">Google Maps</string>
+    <string name="pref_map_engine_title">Xarita rendereri</string>
     <!-- "Mapbox (MapLibre)" must be left untranslated .-->
+    <string name="pref_map_engine_summary">Ilovalarda xaritalarni render qilish uchun ishlatiladigan dvigatelni tanlang. Mapbox (MapLibre) tavsiya etiladi.</string>
     <!-- "Stadia Maps" must be left untranslated .-->
+    <string name="pref_stadia_key_title">Stadia Maps API kaliti</string>
+    <string name="pref_stadia_key_summary">Ixtiyoriy. Stadia Maps renderlovchisi variantini qo\'shadi; Stadia uchun API kaliti talab qilinadi.</string>
     <!-- "HMS (Huawei Map Kit)" must be left untranslated .-->
+    <string name="pref_hms_key_title">HMS (Huawei Map Kit) API kaliti</string>
+    <string name="pref_hms_key_summary">Ixtiyoriy. HMS renderlovchisi variantini qo\'shadi; qurilmada HMS Core bo\'lishi talab qilinadi.</string>
 </resources>
