@@ -20,8 +20,11 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
+import android.net.Network;
+import android.net.NetworkCapabilities;
 import android.net.NetworkInfo;
 import android.net.NetworkRequest;
+import android.os.SystemClock;
 import android.util.Log;
 
 import androidx.core.app.PendingIntentCompat;
@@ -37,36 +40,70 @@ import static org.microg.gms.checkin.CheckinService.REGULAR_CHECKIN_INTERVAL;
 
 public class TriggerReceiver extends WakefulBroadcastReceiver {
     private static final String TAG = "GmsCheckinTrigger";
-    private static boolean registered = false;
+    private static final long MIN_RETRY_INTERVAL_MS = 60_000L;
+    private static volatile boolean registered = false;
+    private static volatile long lastRetryMs = 0L;
+
+    /** Modern API: unlike getActiveNetworkInfo(), not subject to per-UID NetworkInfo BLOCKED filtering. */
+    private static boolean hasInternet(Context context) {
+        ConnectivityManager cm =
+                (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (cm == null) return false;
+        if (SDK_INT >= 23) {
+            Network network = cm.getActiveNetwork();
+            NetworkCapabilities caps =
+                    network == null ? null : cm.getNetworkCapabilities(network);
+            return caps != null && caps.hasCapability(NET_CAPABILITY_INTERNET);
+        }
+        NetworkInfo info = cm.getActiveNetworkInfo();
+        return info != null && info.isConnected();
+    }
 
     @Override
     public void onReceive(Context context, Intent intent) {
         try {
             boolean force = "android.provider.Telephony.SECRET_CODE".equals(intent.getAction());
 
-            if (CheckinPreferences.isEnabled(context) || force) {
-                if (LastCheckinInfo.read(context).getLastCheckin() > System.currentTimeMillis() - REGULAR_CHECKIN_INTERVAL && !force) {
+            if (!CheckinPreferences.isEnabled(context) && !force) {
+                Log.d(TAG, "Ignoring " + intent + ": checkin is disabled");
+                return;
+            }
+
+            // The callback firing means the INTERNET request is already satisfied.
+            // Never re-register from inside it, or we get an unbounded self-loop.
+            boolean fromNetworkCallback =
+                    intent.hasExtra(ConnectivityManager.EXTRA_NETWORK_REQUEST);
+
+            if (fromNetworkCallback || hasInternet(context) || force) {
+                registered = false;
+                if (LastCheckinInfo.read(context).getLastCheckin() >
+                        System.currentTimeMillis() - REGULAR_CHECKIN_INTERVAL && !force) {
                     CheckinService.schedule(context);
                     return;
                 }
+                Intent subIntent = new Intent(context, CheckinService.class);
+                subIntent.putExtra(EXTRA_FORCE_CHECKIN, force);
+                startWakefulService(new ForegroundServiceContext(context), subIntent);
+                return;
+            }
 
-                ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-                NetworkInfo networkInfo = cm.getActiveNetworkInfo();
-                if (networkInfo != null && networkInfo.isConnected() || force) {
-                    Intent subIntent = new Intent(context, CheckinService.class);
-                    subIntent.putExtra(EXTRA_FORCE_CHECKIN, force);
-                    startWakefulService(new ForegroundServiceContext(context), subIntent);
-                } else if (SDK_INT >= 23) {
-                    // no network, register a network callback to retry when we have internet
-                    NetworkRequest networkRequest = new NetworkRequest.Builder()
-                            .addCapability(NET_CAPABILITY_INTERNET)
-                            .build();
-                    Intent i = new Intent(context, TriggerReceiver.class);
-                    PendingIntent pendingIntent = PendingIntentCompat.getBroadcast(context, 0, i, FLAG_UPDATE_CURRENT, true);
+            // Genuinely offline: at most one pending retry, rate-limited.
+            if (SDK_INT >= 23 && !registered) {
+                long now = SystemClock.elapsedRealtime();
+                if (now - lastRetryMs < MIN_RETRY_INTERVAL_MS) return;
+                lastRetryMs = now;
+                ConnectivityManager cm = (ConnectivityManager)
+                        context.getSystemService(Context.CONNECTIVITY_SERVICE);
+                NetworkRequest networkRequest = new NetworkRequest.Builder()
+                        .addCapability(NET_CAPABILITY_INTERNET)
+                        .build();
+                Intent i = new Intent(context, TriggerReceiver.class);
+                PendingIntent pendingIntent = PendingIntentCompat.getBroadcast(
+                        context, 0, i, FLAG_UPDATE_CURRENT, true);
+                if (cm != null) {
                     cm.registerNetworkCallback(networkRequest, pendingIntent);
+                    registered = true;
                 }
-            } else {
-                Log.d(TAG, "Ignoring " + intent + ": checkin is disabled");
             }
         } catch (Exception e) {
             Log.w(TAG, e);
