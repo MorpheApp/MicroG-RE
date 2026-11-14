@@ -4,6 +4,9 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="auth_notification_content"><xliff:g example="F-Droid">%1$s</xliff:g> కు మీ అధికార నిర్ధారణ కావాలి, మీ google ఖాతాలోకి ప్రవేశించడానికిమీ google ఖాతా లోకి ప్రవేశించడానికి</string>
+    <string name="auth_package_override_request_title"><b><xliff:g example="F-Droid">%1$s</xliff:g></b> కు <xliff:g example="account@example.com">%2$s</xliff:g> ప్రత్యేక యాక్సెస్ ఇవ్వాలా?</string>
+    <string name="auth_action_notification_content">మీ Google ఖాతాకు అదనపు సెటప్ అవసరం </string>
     <!-- Self check -->
     <!-- Settings strings -->
     <!-- Passkey management -->
