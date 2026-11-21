@@ -45,6 +45,10 @@ public class RegisterRequest extends HttpFormClient.Request {
     @RequestHeader("app")
     @RequestContent("app")
     public String app;
+    // RE changes start
+    public String realApp;
+    public String realAppSignature;
+    // RE changes end
     @RequestContent("cert")
     public String appSignature;
     @RequestContent("app_ver")
@@ -76,6 +80,13 @@ public class RegisterRequest extends HttpFormClient.Request {
         securityToken = lastCheckinInfo.getSecurityToken();
         return this;
     }
+
+    // RE changes start
+    public RegisterRequest realApp(String realApp) {
+        this.realApp = realApp;
+        return this;
+    }
+    // RE changes end
 
     public RegisterRequest app(String app) {
         this.app = app;
@@ -138,9 +149,16 @@ public class RegisterRequest extends HttpFormClient.Request {
         return this;
     }
 
+    // RE changes start
     public boolean hasExtraParam(String key) {
-        return extraParams.containsKey(extraParamKey(key));
+        return extraParams.containsKey(key) || extraParams.containsKey(extraParamKey(key));
     }
+
+    public void removeExtraParam(String key) {
+        extraParams.remove(key);
+        extraParams.remove(extraParamKey(key));
+    }
+    // RE changes end
 
     private static String extraParamKey(String key) {
         return "X-" + key;

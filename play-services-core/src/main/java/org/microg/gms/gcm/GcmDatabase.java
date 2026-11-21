@@ -51,6 +51,13 @@ public class GcmDatabase extends SQLiteOpenHelper {
     private static final String FIELD_TIMESTAMP = "timestamp";
     private static final String FIELD_REGISTER_ID = "register_id";
 
+    // RE changes start
+    private static final String TABLE_PACKAGE_ALIASES = "package_aliases";
+    private static final String CREATE_TABLE_PACKAGE_ALIASES = "CREATE TABLE IF NOT EXISTS package_aliases (" +
+            "spoofed_package TEXT PRIMARY KEY," +
+            "real_package TEXT);";
+    // RE changes end
+
     private Context context;
 
     public GcmDatabase(Context context) {
@@ -103,8 +110,19 @@ public class GcmDatabase extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREATE_TABLE_APPS);
         db.execSQL(CREATE_TABLE_REGISTRATIONS);
+        // RE changes start
+        db.execSQL(CREATE_TABLE_PACKAGE_ALIASES);
+        // RE changes end
         importLegacyData(db);
     }
+
+    // RE changes start
+    @Override
+    public void onOpen(SQLiteDatabase db) {
+        super.onOpen(db);
+        db.execSQL(CREATE_TABLE_PACKAGE_ALIASES);
+    }
+    // RE changes end
 
     public synchronized List<App> getAppList() {
         SQLiteDatabase db = getReadableDatabase();
@@ -168,12 +186,18 @@ public class GcmDatabase extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
         db.delete(TABLE_REGISTRATIONS, FIELD_PACKAGE_NAME + " LIKE ?", new String[]{packageName});
         db.delete(TABLE_APPS, FIELD_PACKAGE_NAME + " LIKE ?", new String[]{packageName});
+        // RE changes start
+        db.delete(TABLE_PACKAGE_ALIASES, "real_package = ?", new String[]{packageName});
+        // RE changes end
     }
 
     public synchronized void resetDatabase() {
         SQLiteDatabase db = getWritableDatabase();
         db.delete(TABLE_APPS, null, null);
         db.delete(TABLE_REGISTRATIONS, null, null);
+        // RE changes start
+        db.delete(TABLE_PACKAGE_ALIASES, null, null);
+        // RE changes end
     }
 
     public synchronized void noteAppRegistrationError(String packageName, String error) {
@@ -319,5 +343,35 @@ public class GcmDatabase extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         throw new IllegalStateException("Upgrades not supported");
     }
+
+    // RE changes start
+    public synchronized void notePackageAlias(String spoofedPackage, String realPackage) {
+        if (spoofedPackage == null || realPackage == null || spoofedPackage.equals(realPackage)) return;
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put("spoofed_package", spoofedPackage);
+        cv.put("real_package", realPackage);
+        db.insertWithOnConflict(TABLE_PACKAGE_ALIASES, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
+    }
+
+    public synchronized String resolveRealPackage(String categoryPackage) {
+        if (categoryPackage == null) return null;
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.query(TABLE_PACKAGE_ALIASES, new String[]{"real_package"}, "spoofed_package = ?", new String[]{categoryPackage}, null, null, null, "1");
+        if (cursor != null) {
+            try {
+                if (cursor.moveToFirst()) {
+                    String realPackage = cursor.getString(0);
+                    if (realPackage != null && !realPackage.isEmpty()) {
+                        return realPackage;
+                    }
+                }
+            } finally {
+                cursor.close();
+            }
+        }
+        return categoryPackage;
+    }
+    // RE changes end
 
 }

@@ -24,6 +24,10 @@ import static org.microg.gms.common.HttpFormClient.ResponseField;
 public class RegisterResponse {
     @ResponseField("token")
     public String token;
+    // RE changes start: Parse Error from HTTP 200 responses (e.g. FIS_AUTH_ERROR)
+    @ResponseField("Error")
+    public String error;
+    // RE changes end
     @ResponseHeader("Retry-After")
     public String retryAfter;
     @ResponseField("deleted")
@@ -35,6 +39,7 @@ public class RegisterResponse {
     public String toString() {
         return "RegisterResponse{" +
                 "token='" + token + '\'' +
+                ", error='" + error + '\'' +
                 ", retryAfter='" + retryAfter + '\'' +
                 ", deleted='" + deleted + '\'' +
                 '}';

@@ -12,10 +12,31 @@ import org.microg.gms.base.core.BuildConfig
 object PackageSpoofUtils {
 // RE changes end
     private const val TAG = "SpoofUtils"
-    private const val META_SPOOF_PACKAGE_NAME =
-        "${BuildConfig.BASE_PACKAGE_NAME}.android.gms.SPOOFED_PACKAGE_NAME"
-    private const val META_SPOOF_PACKAGE_SIGNATURE =
-        "${BuildConfig.BASE_PACKAGE_NAME}.android.gms.SPOOFED_PACKAGE_SIGNATURE"
+    private val CANDIDATE_SPOOF_PACKAGE_NAME_KEYS = listOf(
+        "${BuildConfig.BASE_PACKAGE_NAME}.android.gms.SPOOFED_PACKAGE_NAME",
+        "app.morphe.android.gms.SPOOFED_PACKAGE_NAME",
+        "app.revanced.android.gms.SPOOFED_PACKAGE_NAME"
+    )
+    private val CANDIDATE_SPOOF_PACKAGE_SIGNATURE_KEYS = listOf(
+        "${BuildConfig.BASE_PACKAGE_NAME}.android.gms.SPOOFED_PACKAGE_SIGNATURE",
+        "app.morphe.android.gms.SPOOFED_PACKAGE_SIGNATURE",
+        "app.revanced.android.gms.SPOOFED_PACKAGE_SIGNATURE"
+    )
+
+    private fun getMetadataString(meta: Bundle?, candidateKeys: List<String>, suffix: String): String? {
+        if (meta == null) return null
+        for (key in candidateKeys) {
+            val value = meta.getString(key)
+            if (!value.isNullOrEmpty()) return value
+        }
+        for (key in meta.keySet()) {
+            if (key != null && key.endsWith(suffix)) {
+                val value = meta.getString(key)
+                if (!value.isNullOrEmpty()) return value
+            }
+        }
+        return null
+    }
 
     private val spoofedPackageNameCache = HashMap<String, String>()
     private val spoofedPackageSignatureCache = HashMap<String, String>()
@@ -103,7 +124,7 @@ object PackageSpoofUtils {
         return spoofedPackageNameCache[packageName] ?: run {
             // fetch value
             val meta = getPackageMetadata(packageManager, packageName)
-            val spoofedPackageName = meta?.getString(META_SPOOF_PACKAGE_NAME)
+            val spoofedPackageName = getMetadataString(meta, CANDIDATE_SPOOF_PACKAGE_NAME_KEYS, ".android.gms.SPOOFED_PACKAGE_NAME")
             if (spoofedPackageName != null) {
                 spoofedPackageNameCache[packageName] = spoofedPackageName
             }
@@ -126,7 +147,7 @@ object PackageSpoofUtils {
         return spoofedPackageSignatureCache[packageName] ?: run {
             // fetch value
             val meta = getPackageMetadata(packageManager, packageName)
-            val spoofedSignature = meta?.getString(META_SPOOF_PACKAGE_SIGNATURE)
+            val spoofedSignature = getMetadataString(meta, CANDIDATE_SPOOF_PACKAGE_SIGNATURE_KEYS, ".android.gms.SPOOFED_PACKAGE_SIGNATURE")
             if (spoofedSignature != null) {
                 spoofedPackageSignatureCache[packageName] = spoofedSignature
             }
