@@ -238,9 +238,9 @@
     <string name="pref_gcm_remove_registers">ลบแอปพลิเคชันที่ลงทะเบียนทั้งหมด</string>
     <string name="pref_gcm_remove_registers_summary">ใช้ตัวเลือกนี้เมื่อมีปัญหาในการลงทะเบียนแอปหรือรับการแจ้งเตือน</string>
     <string name="gcm_remove_registers_dialog_title">ลบการลงทะเบียนทั้งหมด?</string>
-    <string name="gcm_remove_registers_dialog_message">"นี้จะนำเอแอปที่ลงทะเบียนทั้งหมดออกจากการรับการแจ้งเตือนแบบพุชตามคำสั่ง
+    <string name="gcm_remove_registers_dialog_message">"การกระทำนี้จะนำแอปที่ลงทะเบียนทั้งหมดออกจากการรับการแจ้งเตือนแบบพุชพร้อมกัน
 
-คุณจะต้องมี securityToken และ AndroidID ใหม่เพื่อลงทะเบียนแอปใหม่ตรวจสอบสถานะการลงทะเบียนของอุปกรณ์
+คุณจะต้องมี securityToken และ AndroidID ใหม่เพื่อลงทะเบียนแอปใหม่ ตรวจสอบสถานะการลงทะเบียนของอุปกรณ์
 
 บางแอปอาจไม่สามารถลงทะเบียนใหม่อีกได้หลังจากการดำเนินการนี้ คุณอาจต้องล้างข้อมูลของแอปเหล่านี้ก่อนที่จะสามารถร้องขอลงทะเบียนใหม่อีกครั้งได้"</string>
     <string name="gcm_remove_registers_toast_message">แอปทั้งหมดถูกนำออกจากการแจ้งเตือนแบบพุชแล้ว</string>
