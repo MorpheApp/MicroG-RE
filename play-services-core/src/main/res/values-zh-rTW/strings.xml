@@ -97,7 +97,7 @@
     <string name="games_info_title"><xliff:g example="F-Droid">%1$s</xliff:g> 想要使用 Play 遊戲</string>
     <string name="games_info_content">使用 Play 遊戲需要安裝 Google Play 遊戲應用程式。應用程式可能可以在沒有 Play 遊戲的情況下繼續運作，但可能會出現非預期的行為。</string>
     <string name="pick_place_title">選擇地點</string>
-    <string name="place_picker_select_title">選擇此位置</string>
+    <string name="place_picker_select_title">選取此位置</string>
     <string name="place_picker_nearby_places">附近地點</string>
     <string name="network_type_mobile">行動網路</string>
     <string name="network_type_wifi">Wi-Fi</string>
@@ -271,7 +271,7 @@ microG GmsCore 包含 SafetyNet 的免費實作，但官方伺服器要求 Safet
     <string name="pref_device_registration_import_custom_profile_title">匯入裝置設定檔</string>
     <string name="pref_device_registration_serial_title">序號</string>
     <string name="pref_device_registration_import_custom_profile_summary">從檔案管理員匯入裝置設定檔</string>
-    <string name="pref_device_registration_select_profile_title">選擇個人資料</string>
+    <string name="pref_device_registration_select_profile_title">選取個人資料</string>
     <string name="pref_device_registration_device_profile_category">裝置設定檔</string>
     <string name="pref_safetynet_recent_uses">最近使用</string>
     <string name="pref_safetynet_recent_attestation_summary">驗證：%s</string>
@@ -359,7 +359,7 @@ microG 以「盡力而為」的基礎提供，無法保證行為完全符合預�
     <string name="games_leaderboard_list_title">排行榜</string>
     <string name="games_leaderboards_score_label">分數：%1$s</string>
     <string name="games_snapshot_empty_text">尚未儲存任何遊戲存檔</string>
-    <string name="games_snapshot_choose_btn_text">選擇</string>
+    <string name="games_snapshot_choose_btn_text">選取</string>
     <string name="games_snapshot_delete_btn_text">刪除</string>
     <string name="games_delete_snapshot_dialog_title">刪除已儲存的遊戲</string>
     <string name="games_delete_snapshot_dialog_message">您確定要刪除此已儲存的遊戲嗎？</string>
@@ -374,7 +374,7 @@ microG 以「盡力而為」的基礎提供，無法保證行為完全符合預�
     <string name="games_change_default_account_explanation">此帳戶用於自動登入遊戲、儲存您的遊戲進度與設定。變更預設帳戶或登出可能會重設您已玩過的遊戲的進度與設定。</string>
     <string name="games_change_per_game_title">依遊戲變更帳戶</string>
     <string name="games_change_per_game_description">變更所選遊戲的帳戶或登出該遊戲，可能會重設該遊戲的進度與設定。</string>
-    <string name="games_change_default_account_for_all_games_dialog_title">選擇新預設帳戶的選項</string>
+    <string name="games_change_default_account_for_all_games_dialog_title">選取新預設帳戶的選項</string>
     <string name="games_change_default_account_for_all_games_dialog_description">目前預設帳戶：%1$s</string>
     <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_title">僅變更新遊戲的預設帳戶</string>
     <string name="games_change_default_account_for_all_games_dialog_option_only_for_new_games_description">您不會失去已玩過遊戲的進度與設定存取權。但您的進度會分散於多個帳戶。</string>
@@ -382,7 +382,7 @@ microG 以「盡力而為」的基礎提供，無法保證行為完全符合預�
     <string name="games_change_default_account_for_all_games_dialog_option_for_all_games_description">您可能會失去已玩過遊戲的進度與設定存取權。我們會重新啟動遊戲以套用您的變更。</string>
     <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_title"> 登出所有遊戲 </string>
     <string name="games_change_default_account_for_all_games_dialog_option_sign_out_of_all_games_description">您可能會失去已玩過遊戲的進度與設定存取權。我們會重新啟動遊戲以套用您的變更。</string>
-    <string name="games_change_per_game_dialog_title">為此遊戲選擇選項</string>
+    <string name="games_change_per_game_dialog_title">為此遊戲選取選項</string>
     <string name="games_change_per_game_dialog_description">變更帳戶或登出可能會重設此遊戲的進度與設定</string>
     <string name="games_change_per_game_dialog_option_use_player">使用 %1$s</string>
     <string name="games_change_per_game_dialog_option_use_player_snackbar_success_message">您將使用 %1$s 登入此遊戲</string>
