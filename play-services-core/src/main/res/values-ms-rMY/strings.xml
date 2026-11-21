@@ -72,6 +72,10 @@ Sila tetapkan kata laluan, PIN, atau kunci corak skrin."</string>
     <string name="signin_subtext_sharing">Untuk teruskan, microG akan kongsikan nama, alamat emel dan gambar profil akaun Google anda dengan <xliff:g example="F-Droid">%1$s</xliff:g>.</string>
     <string name="perm_status_broadcast_label">dengar siaran status dalaman</string>
     <string name="perm_gsf_read_gservices_label">baca konfigurasi perkhidmatan Google</string>
+    <string name="perm_c2dm_receive_label">mendengar mesej C2DM</string>
+    <string name="perm_c2dm_send_label">menghantar mesej C2DM ke aplikasi lain</string>
+    <string name="perm_gtalk_svc_label">menukar mesej dan menerima pemberitahuan segerak daripada pelayan Google</string>
+    <string name="perm_extended_access_label">Capaian lanjutan ke perkhidmatan Google</string>
     <string name="perm_provision_label">sediakan perkhidmatan microG</string>
     <string name="perm_provision_description">Membenarkan aplikasi untuk mengkonfigurasi perkhidmatan microG tanpa interaksi pengguna</string>
     <string name="perm_car_speed_label">Kelajuan kereta</string>
@@ -96,9 +100,12 @@ Sila tetapkan kata laluan, PIN, atau kunci corak skrin."</string>
     <string name="place_picker_select_title">Pilih lokasi ini</string>
     <string name="place_picker_nearby_places">Tempat berhampiran</string>
     <string name="network_type_mobile">Rangkaian mudah alih</string>
+    <string name="network_type_wifi">Wi-Fi</string>
     <string name="network_type_roaming">Roaming</string>
     <string name="network_type_other">Rangkaian lain</string>
     <!-- Self check -->
+    <string name="self_check_cat_fake_sig">Sokongan perdayaan tandatangan</string>
+    <string name="self_check_cat_gms_packages">Pakej terpasang</string>
     <string name="self_check_cat_system">Sistem</string>
     <string name="self_check_name_system_spoofs">Sistem memalsukan tandatangan: </string>
     <string name="self_check_resolution_system_spoofs">Sila semak dokumentasi tentang langkah-langkah yang mungkin diperlukan.</string>
@@ -114,7 +121,9 @@ Sila tetapkan kata laluan, PIN, atau kunci corak skrin."</string>
     <!-- Settings strings -->
     <string name="prefcat_about">Mengenai</string>
     <string name="prefcat_details">Butiran</string>
+    <string name="cond_gcm_bat_title">Pengoptimuman bateri didayakan</string>
     <string name="cond_gcm_bat_summary">Anda telah mengaktifkan Pemesejan Awan tetapi mempunyai pengoptimuman bateri aktif untuk Perkhidmatan microG. Untuk notifikasi tolak sampai, anda harus mengabaikan pengoptimuman bateri.</string>
+    <string name="cond_gcm_bat_action">Abaikan pengoptimuman</string>
     <string name="prefs_account">Keutamaan akaun</string>
     <string name="prefs_account_privacy">Info peribadi &amp; privasi</string>
     <string name="prefs_account_security">Log masuk &amp; keselamatan</string>

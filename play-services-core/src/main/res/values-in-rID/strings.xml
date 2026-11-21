@@ -182,7 +182,7 @@ Silakan atur kata sandi, PIN, atau pola kunci layar."</string>
     <string name="pref_about_title">Tentang MicroG RE</string>
     <string name="pref_hide_launcher_icon">Sembunyikan ikon di peluncur</string>
     <string name="hide_launcher_icon_dialog_message">Jika diaktifkan, MicroG akan disembunyikan di peluncur aplikasi Anda. MicroG dapat dibuka dari info aplikasi yang ada di daftar aplikasi sistem perangkat Anda.</string>
-    <string name="hide_launcher_icon_updating_title">Mohon tungu sementara aplikasi diperbarui</string>
+    <string name="hide_launcher_icon_updating_title">Mohon tunggu sementara aplikasi diperbarui</string>
     <string name="pref_language_title">Bahasa</string>
     <string name="pref_language_system_default">Bawaan sistem</string>
     <string name="pref_github_summary">Repositori sumber kode</string>

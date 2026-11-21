@@ -404,7 +404,7 @@ Niektóre aplikacje mogą nie być w stanie zarejestrować się ponownie. Koniec
     <string name="games_delete_game_data_confirm_dialog_message">Trwałe usunięcie danych dla %1$s spowoduje usunięcie Twoich wyników, postępów (zapisanych gier) i ustawień w Grach Google Play.</string>
     <string name="games_popup_signin_welcome">Cześć, %1$s</string>
     <string name="family_management_title">Rodzina</string>
-    <string name="family_management_retry">Spróbuj ponownie</string>
+    <string name="family_management_retry">Ponów</string>
     <string name="family_management_load_error">Błąd ładowania treści</string>
     <string name="family_management_toolbar_back">Wstecz</string>
     <string name="family_management_toolbar_more">Więcej</string>

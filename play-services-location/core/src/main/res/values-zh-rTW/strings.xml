@@ -39,12 +39,12 @@
     <string name="pref_location_custom_url_details">會自動附加 /v1/geolocate 路徑。如果位置提供者需要金鑰，可將其作為查詢參數附加至根 URL。</string>
     <string name="pref_location_custom_url_input_hint">自訂服務 URL</string>
     <string name="pref_location_custom_source_title">自訂</string>
-    <string name="pref_location_source_title">選擇線上位置服務</string>
+    <string name="pref_location_source_title">選取線上位置服務</string>
     <string name="pref_location_source_terms">條款 / 隱私權</string>
     <string name="pref_location_source_suggested">建議</string>
     <string name="pref_location_import_export_title">匯入或匯出位置資料</string>
     <string name="notification_config_required_title">需要設定</string>
-    <string name="notification_config_required_text_online_sources">若要繼續使用線上位置服務，您需要選擇一個位置資料服務。</string>
+    <string name="notification_config_required_text_online_sources">若要繼續使用線上位置服務，您需要選取一個位置資料服務。</string>
     <string name="location_data_export_wifi_title">匯出本機 Wi-Fi 位置資料庫</string>
     <string name="location_data_export_cell_title">匯出本機行動基地台位置資料庫</string>
     <string name="location_data_import_title">從檔案匯入位置資料</string>
