@@ -68,21 +68,46 @@ public class PushRegisterManager {
     }
 
     public static void completeRegisterRequest(Context context, GcmDatabase database, String requestId, RegisterRequest request, BundleCallback callback) {
+        String realPackage = request.app;
         if (request.app != null) {
-            ExtendedPackageInfo packageInfo = new ExtendedPackageInfo(context, request.app);
+            // RE changes start: Resolve spoofed package and signature for modded Google apps
+            String spoofedPackage = org.microg.gms.common.PackageSpoofUtils.spoofPackageName(context.getPackageManager(), realPackage);
+            if (spoofedPackage != null && !spoofedPackage.equals(realPackage)) {
+                request.realApp = realPackage;
+                request.app = spoofedPackage;
+            }
+            // RE changes end
+
+            ExtendedPackageInfo packageInfo = new ExtendedPackageInfo(context, realPackage);
             if (request.appVersion <= 0)
                 request.appVersion = packageInfo.getShortVersionCode();
             if (!request.delete) {
                 if (request.appSignature == null) {
                     request.appSignature = packageInfo.getFirstCertificateSha1Hex();
                 }
+                // RE changes start: Resolve spoofed signature if declared
+                request.realAppSignature = request.appSignature;
+                String spoofedSig = org.microg.gms.common.PackageSpoofUtils.spoofStringSignature(context.getPackageManager(), realPackage, request.appSignature);
+                if (spoofedSig != null) {
+                    request.appSignature = spoofedSig;
+                }
+                // RE changes end
                 request.sdkVersion = packageInfo.getTargetSdkVersion();
                 if (!request.hasExtraParam(GcmConstants.EXTRA_APP_VERSION_NAME))
                     request.extraParam(GcmConstants.EXTRA_APP_VERSION_NAME, packageInfo.getVersionName());
             }
+
+            // RE changes start: Strip unauthenticated FIS extras for spoofed/cloned Google apps
+            if (request.realApp != null) {
+                request.removeExtraParam("appid");
+                request.removeExtraParam("gmp_app_id");
+            }
+            // RE changes end
         }
 
-        GcmDatabase.App app = database.getApp(request.app);
+        // RE changes start: Check registration and prefs using real installed package
+        GcmDatabase.App app = database.getApp(realPackage);
+        // RE changes end
         GcmPrefs prefs = GcmPrefs.get(context);
         if (!request.delete) {
             if (!prefs.isEnabled() ||
@@ -95,12 +120,14 @@ public class PushRegisterManager {
                 return;
             }
         } else {
-            if (database.getRegistrationsByApp(request.app).isEmpty()) {
+            // RE changes start: Use realPackage for unregistration check
+            if (database.getRegistrationsByApp(realPackage).isEmpty()) {
                 Bundle bundle = new Bundle();
-                bundle.putString(EXTRA_UNREGISTERED, attachRequestId(request.app, requestId));
+                bundle.putString(EXTRA_UNREGISTERED, attachRequestId(realPackage, requestId));
                 callback.onResult(bundle);
                 return;
             }
+            // RE changes end
         }
 
         request.getResponseAsync(new HttpFormClient.Callback<RegisterResponse>() {
@@ -129,32 +156,44 @@ public class PushRegisterManager {
 
     private static Bundle handleResponse(GcmDatabase database, RegisterRequest request, RegisterResponse response, Exception e, String requestId) {
         Bundle resultBundle = new Bundle();
+        // RE changes start: Record registration against the real installed package and signature
+        String targetApp = (request.realApp != null && !request.realApp.isEmpty()) ? request.realApp : request.app;
+        String targetSig = (request.realAppSignature != null && !request.realAppSignature.isEmpty()) ? request.realAppSignature : request.appSignature;
+        // RE changes end
         if (response == null && e == null) {
             resultBundle.putString(EXTRA_ERROR, attachRequestId(ERROR_SERVICE_NOT_AVAILABLE, requestId));
         } else if (e != null) {
             if (e.getMessage() != null && e.getMessage().startsWith("Error=")) {
                 String errorMessage = e.getMessage().substring(6);
-                database.noteAppRegistrationError(request.app, errorMessage);
+                database.noteAppRegistrationError(targetApp, errorMessage);
                 resultBundle.putString(EXTRA_ERROR, attachRequestId(errorMessage, requestId));
             } else {
                 resultBundle.putString(EXTRA_ERROR, attachRequestId(ERROR_SERVICE_NOT_AVAILABLE, requestId));
             }
         } else {
             if (!request.delete) {
-                if (response.token == null) {
-                    database.noteAppRegistrationError(request.app, response.responseText);
+                if (response.error != null) {
+                    database.noteAppRegistrationError(targetApp, response.error);
+                    resultBundle.putString(EXTRA_ERROR, attachRequestId(response.error, requestId));
+                } else if (response.token == null) {
+                    database.noteAppRegistrationError(targetApp, response.responseText);
                     resultBundle.putString(EXTRA_ERROR, attachRequestId(ERROR_SERVICE_NOT_AVAILABLE, requestId));
                 } else {
-                    database.noteAppRegistered(request.app, request.appSignature, response.token);
+                    database.noteAppRegistered(targetApp, targetSig, response.token);
+                    // RE changes start: Register alias mapping if spoofed
+                    if (!targetApp.equals(request.app)) {
+                        database.notePackageAlias(request.app, targetApp);
+                    }
+                    // RE changes end
                     resultBundle.putString(EXTRA_REGISTRATION_ID, attachRequestId(response.token, requestId));
                 }
             } else {
                 if (!request.app.equals(response.deleted) && !request.app.equals(response.token) && !request.sender.equals(response.token) && !"".equals(response.token)) {
-                    database.noteAppRegistrationError(request.app, response.responseText);
+                    database.noteAppRegistrationError(targetApp, response.error != null ? response.error : response.responseText);
                     resultBundle.putString(EXTRA_ERROR, attachRequestId(ERROR_SERVICE_NOT_AVAILABLE, requestId));
                 } else {
-                    database.noteAppUnregistered(request.app, request.appSignature);
-                    resultBundle.putString(EXTRA_UNREGISTERED, attachRequestId(request.app, requestId));
+                    database.noteAppUnregistered(targetApp, targetSig);
+                    resultBundle.putString(EXTRA_UNREGISTERED, attachRequestId(targetApp, requestId));
                 }
             }
 

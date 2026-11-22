@@ -602,18 +602,35 @@ public class McsService extends Service implements Handler.Callback {
 
     private void handleAppMessage(DataMessageStanza msg) {
         String packageName = msg.category;
+        // RE changes start: Resolve real package name if this is an aliased Google app
+        String realPackage = database.resolveRealPackage(packageName);
+        if (realPackage != null && !realPackage.equals(packageName)) {
+            logd(this, "handleAppMessage: resolving spoofed category " + packageName + " -> " + realPackage);
+            packageName = realPackage;
+        }
+        // RE changes end
         database.noteAppMessage(packageName, DataMessageStanza.ADAPTER.encodedSize(msg));
         GcmDatabase.App app = database.getApp(packageName);
 
         // Apps patched for the renamed base package listen on the package-scoped action;
         // deliver with whichever action the app actually has a receiver registered for.
-        String deliveryAction = ACTION_C2DM_RECEIVE;
-        Intent probe = new Intent(ACTION_C2DM_RECEIVE_PACKAGE);
-        probe.setPackage(packageName);
-        List<ResolveInfo> packageReceivers = getPackageManager().queryBroadcastReceivers(probe, 0);
-        if (packageReceivers != null && !packageReceivers.isEmpty()) {
-            deliveryAction = ACTION_C2DM_RECEIVE_PACKAGE;
+        // RE changes start: Probe candidate actions (basePackage, morphe, legacy)
+        String deliveryAction = ACTION_C2DM_RECEIVE_LEGACY;
+        String[] actionsToProbe = new String[] {
+            ACTION_C2DM_RECEIVE_PACKAGE,
+            "app.morphe.android.c2dm.intent.RECEIVE",
+            ACTION_C2DM_RECEIVE_LEGACY
+        };
+        for (String action : actionsToProbe) {
+            Intent probe = new Intent(action);
+            probe.setPackage(packageName);
+            List<ResolveInfo> packageReceivers = getPackageManager().queryBroadcastReceivers(probe, 0);
+            if (packageReceivers != null && !packageReceivers.isEmpty()) {
+                deliveryAction = action;
+                break;
+            }
         }
+        // RE changes end
 
         Intent intent = new Intent();
         intent.setAction(deliveryAction);
@@ -627,11 +644,14 @@ public class McsService extends Service implements Handler.Callback {
             intent.putExtra(EXTRA_RAWDATA_BASE64, Base64.encodeToString(msg.raw_data.toByteArray(), Base64.DEFAULT));
             intent.putExtra(EXTRA_RAWDATA, msg.raw_data.toByteArray());
         }
-        if (app.wakeForDelivery) {
+        // RE changes start: Safe wakeForDelivery guard against null app
+        boolean wakeForDelivery = (app != null) ? app.wakeForDelivery : true;
+        if (wakeForDelivery) {
             intent.addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
         } else {
             intent.addFlags(Intent.FLAG_EXCLUDE_STOPPED_PACKAGES);
         }
+        // RE changes end
         for (AppData appData : msg.app_data) {
             if (appData.key == null) continue;
             String key = appData.key.toLowerCase(Locale.US);
@@ -653,7 +673,9 @@ public class McsService extends Service implements Handler.Callback {
 
         if (receiverPermission == null) {
             // Without receiver permission, we only restrict by package name
-            if (app.wakeForDelivery) addPowerSaveTempWhitelistApp(packageName);
+            // RE changes start: Use guarded wakeForDelivery
+            if (wakeForDelivery) addPowerSaveTempWhitelistApp(packageName);
+            // RE changes end
             logd(this, "Deliver message to all receivers in package " + packageName);
             intent.setPackage(packageName);
             sendOrderedBroadcast(intent, null);
@@ -666,11 +688,15 @@ public class McsService extends Service implements Handler.Callback {
                     Intent targetIntent = new Intent(intent);
                     targetIntent.setComponent(new ComponentName(resolveInfo.activityInfo.packageName, resolveInfo.activityInfo.name));
                     if (resolveInfo.activityInfo.packageName.equals(packageName)) {
-                        if (app.wakeForDelivery) addPowerSaveTempWhitelistApp(packageName);
+                        // RE changes start: Use guarded wakeForDelivery
+                        if (wakeForDelivery) addPowerSaveTempWhitelistApp(packageName);
+                        // RE changes end
                         // We don't need receiver permission for our own package
                         logd(this, "Deliver message to own receiver " + resolveInfo);
                         sendOrderedBroadcast(targetIntent, null);
-                    } else if (resolveInfo.filter.hasCategory(packageName)) {
+                    // RE changes start: Null-safe filter check
+                    } else if (resolveInfo.filter != null && resolveInfo.filter.hasCategory(packageName)) {
+                    // RE changes end
                         // Permission required
                         logd(this, "Deliver message to third-party receiver (with permission check)" + resolveInfo);
                         sendOrderedBroadcast(targetIntent, receiverPermission);
