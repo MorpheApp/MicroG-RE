@@ -300,6 +300,28 @@ jobs:
             --notes-file "$NOTES" \
             "${FLAGS[@]}"
 
+      # GITHUB_TOKEN cannot dispatch events to other repositories, so use a GitHub App token.
+      - name: "Generate website deploy token"
+        id: app-token
+        if: steps.bump.outputs.name != ''
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.MORPHE_AAMATT_APP_ID }}
+          private-key: ${{ secrets.WEBSITE_DISPATCH_TOKEN }}
+          owner: MorpheApp
+
+      - name: "Trigger website deploy"
+        if: steps.bump.outputs.name != ''
+        uses: actions/github-script@v9
+        with:
+          github-token: ${{ steps.app-token.outputs.token }}
+          script: |
+            await github.rest.repos.createDispatchEvent({
+              owner: 'MorpheApp',
+              repo: 'morphe-website',
+              event_type: 'trigger-deploy'
+            })
+
       # Pushes made with GITHUB_TOKEN do not trigger other workflows, so start the back merge manually.
       - name: "Back merge main to dev"
         if: steps.bump.outputs.name != '' && github.ref_name == 'main'

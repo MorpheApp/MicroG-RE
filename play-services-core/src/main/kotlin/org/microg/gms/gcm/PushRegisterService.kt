@@ -81,7 +81,16 @@ suspend fun completeRegisterRequest(context: Context, database: GcmDatabase, req
     PushRegisterManager.completeRegisterRequest(context, database, requestId, request) {
         val errorMsg = it.getString(EXTRA_ERROR)
         Log.w(TAG, "completeRegisterRequest error: $errorMsg")
-        if (errorMsg == PushRegisterManager.attachRequestId(ERROR_INVALID_FID, requestId) && !request.delete) {
+        // RE changes start: Retry without invalid FID if FIS authentication fails
+        if (errorMsg != null && errorMsg.contains("FIS_AUTH_ERROR") && !request.delete && request.hasExtraParam("appid")) {
+            Log.d(TAG, "FIS_AUTH_ERROR encountered, retrying registration without unauthenticated FID")
+            request.removeExtraParam("appid")
+            request.removeExtraParam("gmp_app_id")
+            PushRegisterManager.completeRegisterRequest(context, database, requestId, request) { result ->
+                continuation.resume(result)
+            }
+        } else if (errorMsg == PushRegisterManager.attachRequestId(ERROR_INVALID_FID, requestId) && !request.delete) {
+        // RE changes end
             Log.d(TAG, "completeRegisterRequest register error, You need to call delete first before you can re-register")
             request.delete = true
             request.response
@@ -364,6 +373,21 @@ internal class PushRegisterHandler(private val context: Context, private val dat
                 ForegroundServiceContext(context).startService(i)
             }
             else -> {
+                // RE changes start: Handle one-way requests and proxied notification queries
+                if (oneWay) {
+                    val bundle = Bundle()
+                    bundle.putBoolean("ack", true)
+                    sendReplyViaMessage(what, id, replyTo, bundle)
+                    return
+                }
+                if (what == 5) {
+                    // Proxied notification data query (TwoWayRequest)
+                    val bundle = Bundle()
+                    bundle.putBundle("data", Bundle())
+                    sendReplyViaMessage(what, id, replyTo, bundle)
+                    return
+                }
+                // RE changes end
                 val bundle = Bundle()
                 bundle.putBoolean("unsupported", true)
                 sendReplyViaMessage(what, id, replyTo, bundle)

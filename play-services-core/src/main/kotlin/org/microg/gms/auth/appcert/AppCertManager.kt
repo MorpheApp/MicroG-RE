@@ -24,6 +24,7 @@ import okio.ByteString.Companion.decodeHex
 import okio.ByteString.Companion.of
 import org.microg.gms.checkin.LastCheckinInfo
 import org.microg.gms.common.Constants
+import org.microg.gms.common.PackageSpoofUtils
 import org.microg.gms.common.PackageUtils
 import org.microg.gms.gcm.GcmConstants
 import org.microg.gms.gcm.GcmDatabase
@@ -152,7 +153,13 @@ class AppCertManager(private val context: Context) {
         val deviceKey = deviceKey ?: if (fetchDeviceKey()) deviceKey else null
         // The auth service uses the original package, which may not be installed.
         // RE changes start
-        val packageCertificateHash = PackageUtils.firstSignatureDigest(context, packageName)?.decodeHex()?.base64()
+        val effectivePackage = PackageSpoofUtils.spoofPackageName(context.packageManager, packageName) ?: packageName
+        val certPackage = if (PackageUtils.firstSignatureDigest(context, packageName) != null) {
+            packageName
+        } else {
+            GcmDatabase(context).resolveRealPackage(packageName)
+        }
+        val packageCertificateHash = PackageUtils.firstSignatureDigest(context, certPackage)?.decodeHex()?.base64()
         // RE changes end
         val proto = if (deviceKey != null) {
             val macSecret = deviceKey.macSecret?.toByteArray()
@@ -162,9 +169,9 @@ class AppCertManager(private val context: Context) {
             }
             val mac = Mac.getInstance("HMACSHA256")
             mac.init(SecretKeySpec(macSecret, "HMACSHA256"))
-            val hmac = mac.doFinal("$packageName$packageCertificateHash".toByteArray())
+            val hmac = mac.doFinal("$effectivePackage$packageCertificateHash".toByteArray())
             SpatulaHeaderProto(
-                    packageInfo = SpatulaHeaderProto.PackageInfo(packageName, packageCertificateHash),
+                    packageInfo = SpatulaHeaderProto.PackageInfo(effectivePackage, packageCertificateHash),
                     hmac = of(*hmac),
                     deviceId = deviceKey.deviceId,
                     keyId = deviceKey.keyId,
@@ -174,7 +181,7 @@ class AppCertManager(private val context: Context) {
             Log.d(TAG, "Using fallback spatula header based on Android ID")
             val androidId = getSettings(context, CheckIn.getContentUri(context), arrayOf(CheckIn.ANDROID_ID)) { cursor: Cursor -> cursor.getLong(0) }
             SpatulaHeaderProto(
-                    packageInfo = SpatulaHeaderProto.PackageInfo(packageName, packageCertificateHash),
+                    packageInfo = SpatulaHeaderProto.PackageInfo(effectivePackage, packageCertificateHash),
                     deviceId = androidId
             )
         }
