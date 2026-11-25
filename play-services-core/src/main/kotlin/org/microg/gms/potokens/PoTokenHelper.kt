@@ -193,6 +193,14 @@ class PoTokenHelper(val context: Context) {
     }
 
     suspend fun callPoToken(packageName: String, inputData: ByteArray): ByteArray = poTokenMutex.withLock {
+        // RE changes start
+        if (!PO_TOKEN_SERVICE_ENABLED) {
+            Log.d(TAG, "callPoToken: PoToken service is disabled")
+            // Same empty result as a failed token request.
+            return@withLock PoTokenResultWrap().encode()
+        }
+        // RE changes end
+
         var tokenInfo = poTokenStore.loadUsedIntegrityTokenInfo()
         val lastUpdateTime = poTokenStore.getLastUpdateTime()
         val flag = poTokenStore.getIntervalFlag()
