@@ -14,6 +14,16 @@ private const val GMS_PO_TOKENS_API = "AIzaSyBtL0AK6Hzgr69rQyeyhi-V1lmtsPGZd1M"
 
 const val PO_INTEGRITY_TOKEN_SERVER_URL = "$GMS_PO_TOKENS_SERVER_URL/v1/getPoIntegrityToken?alt=proto&key=$GMS_PO_TOKENS_API"
 
+// RE changes start
+/**
+ * If PoTokens are requested from the server.
+ *
+ * Patched apps do not pass DroidGuard, so the server never returns a token. A failed request
+ * is not cached, and each call would run DroidGuard and call the endpoint again.
+ */
+const val PO_TOKEN_SERVICE_ENABLED = false
+// RE changes end
+
 const val TYPE_URL = "type.googleapis.com/google.crypto.tink.AesGcmKey"
 const val KEY_TOKEN = "po-token-fast"
 const val KEY_FAST = "po-fast-key"
