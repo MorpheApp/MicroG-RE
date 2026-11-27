@@ -49,7 +49,7 @@ internal suspend fun Context.cryptAuthSyncKeys(authToken: String, instanceId: St
                     "${it.substring(0, 2)}.${it.substring(2, 4)}.${it.substring(4, 6)} (190800-{{cl}})"
                 },
                 device_software_version_code = BuildConfig.VERSION_CODE.toLong(),
-                device_software_package = Constants.GMS_PACKAGE_NAME
+                device_software_package = Constants.GOOGLE_GMS_PACKAGE_NAME
             )
         ),
         instance_id = instanceId,
@@ -75,7 +75,7 @@ internal suspend fun Context.cryptAuthSyncKeys(authToken: String, instanceId: St
         .base64Url()
 
     val jsonBody = jsonObjectOf(
-        "applicationName" to Constants.GMS_PACKAGE_NAME,
+        "applicationName" to Constants.GOOGLE_GMS_PACKAGE_NAME,
         "clientVersion" to "1.0.0",
         "syncSingleKeyRequests" to jsonArrayOf(
             jsonObjectOf(
@@ -126,7 +126,7 @@ private suspend fun Context.cryptAuthQuery(url: String, authToken: String, reque
         setDoInput(true)
         setDoOutput(true)
         setRequestProperty("x-goog-api-key", API_KEY)
-        setRequestProperty("x-android-package", Constants.GMS_PACKAGE_NAME)
+        setRequestProperty("x-android-package", Constants.GOOGLE_GMS_PACKAGE_NAME)
         setRequestProperty("x-android-cert", CERTIFICATE)
         setRequestProperty("Authorization", "Bearer $authToken")
         setRequestProperty("Content-Type", "application/json")

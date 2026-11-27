@@ -14,6 +14,7 @@ import android.net.Uri;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
+import com.google.android.gms.common.Scopes;
 import org.microg.gms.accountaction.ErrorResolverKt;
 import org.microg.gms.accountaction.Resolution;
 import org.microg.gms.common.Constants;
@@ -36,6 +37,7 @@ import static org.microg.gms.gcm.ExtensionsKt.GMS_NOTS_OAUTH_SERVICE;
 public class AuthManager {
 
     private static final String TAG = "GmsAuthManager";
+    private static final String CRYPTAUTH_OAUTH_SERVICE = AuthConstants.SCOPE_OAUTH2 + Scopes.CRYPTAUTH;
     public static final String PERMISSION_TREE_BASE = "com.google.android.googleapps.permission.GOOGLE_AUTH.";
     public static final String PREF_AUTH_VISIBLE = SettingsContract.Auth.VISIBLE;
     public static final int ONE_HOUR_IN_SECONDS = 60 * 60;
@@ -389,10 +391,11 @@ public class AuthManager {
             request.callerIsApp();
         }
         // Google only issues the notifications token (the one Google Prompt number
-        // matching rides on) to its own package. A request microG makes for itself has
+        // matching rides on) and the CryptAuth token (the one the Workspace screen lock
+        // check rides on) to its own package. A request microG makes for itself has
         // to identify as Play services: claiming this build's own name is rejected as
-        // UNREGISTERED_ON_API_CONSOLE and no prompt ever reaches the device.
-        if (Constants.GMS_PACKAGE_NAME.equals(packageName) && GMS_NOTS_OAUTH_SERVICE.equals(service)) {
+        // UNREGISTERED_ON_API_CONSOLE.
+        if (Constants.GMS_PACKAGE_NAME.equals(packageName) && (GMS_NOTS_OAUTH_SERVICE.equals(service) || CRYPTAUTH_OAUTH_SERVICE.equals(service))) {
             request.app(Constants.GOOGLE_GMS_PACKAGE_NAME, Constants.GMS_PACKAGE_SIGNATURE_SHA1);
         }
         AuthResponse response = request.getResponse();
