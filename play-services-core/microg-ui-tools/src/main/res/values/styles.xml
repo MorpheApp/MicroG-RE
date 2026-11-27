@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Link tile on the Morphe page: a tall tonal button with a leading icon and
+         start-aligned label, on the surface container role. -->
+    <style name="Widget.MicroG.MorpheLink" parent="Widget.Material3Expressive.Button.TonalButton">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:textAppearance">?attr/textAppearanceTitleMedium</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="backgroundTint">?attr/colorSurfaceContainer</item>
+        <item name="iconTint">?attr/colorPrimary</item>
+        <item name="iconGravity">start</item>
+        <item name="iconPadding">16dp</item>
+        <item name="iconSize">24dp</item>
+        <item name="shapeAppearance">?attr/shapeAppearanceCornerLargeIncreased</item>
+    </style>
+</resources>

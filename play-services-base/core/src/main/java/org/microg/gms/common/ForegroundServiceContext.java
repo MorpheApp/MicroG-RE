@@ -88,7 +88,7 @@ public class ForegroundServiceContext extends ContextWrapper {
 
     @RequiresApi(26)
     private static Notification buildForegroundNotification(Context context, String serviceName) {
-        // Notification channel (high importance, mirrors MicroG-RE)
+        // Notification channel (high importance, mirrors MicroG RE)
         String channelName = context.getString(R.string.foreground_service_notification_title);
         NotificationChannel channel = new NotificationChannel("foreground-service", channelName, NotificationManager.IMPORTANCE_HIGH);
         channel.setLockscreenVisibility(Notification.VISIBILITY_SECRET);

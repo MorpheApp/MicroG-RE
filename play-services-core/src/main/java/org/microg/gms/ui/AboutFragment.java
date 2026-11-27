@@ -17,6 +17,10 @@
 package org.microg.gms.ui;
 
 import android.content.Context;
+import android.view.View;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
 
 import androidx.fragment.app.Fragment;
 
@@ -30,6 +34,21 @@ public class AboutFragment extends AbstractAboutFragment {
 
     public static String getSelfVersion(Context context) {
         return getAppVersion(context);
+    }
+
+    @Override
+    protected void loadUpdateStatus(@NonNull TextView status, @NonNull View divider) {
+        AboutActivityKt.bindAboutUpdateStatus(requireActivity(), status, divider);
+    }
+
+    @Override
+    protected void openContributors() {
+        PeopleSheet.INSTANCE.show(requireActivity(), PeopleList.CONTRIBUTORS);
+    }
+
+    @Override
+    protected void openSupporters() {
+        PeopleSheet.INSTANCE.show(requireActivity(), PeopleList.SUPPORTERS);
     }
 
     @Override

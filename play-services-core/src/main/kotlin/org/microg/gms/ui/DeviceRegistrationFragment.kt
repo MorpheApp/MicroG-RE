@@ -79,6 +79,7 @@ class DeviceRegistrationFragment : PreferenceFragmentCompat() {
         statusCategory = preferenceScreen.findPreference("prefcat_device_registration_status") ?: statusCategory
         status = preferenceScreen.findPreference("pref_device_registration_status") ?: status
         androidId = preferenceScreen.findPreference("pref_device_registration_android_id") ?: androidId
+        switchBarPreference.isChecked = CheckinPreferences.isEnabled(requireContext())
 
         deviceProfile.setOnPreferenceChangeListener { _, newValue ->
             ProfileManager.setProfile(requireContext(), newValue as String? ?: PROFILE_AUTO)

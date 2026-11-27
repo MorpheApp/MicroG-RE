@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- MicroG-RE contrast theme overlays -->
+    <!-- MicroG RE contrast theme overlays -->
 
     <style name="ThemeOverlay.AppTheme.MediumContrast" parent="Theme.Material3Expressive.Light.NoActionBar">
         <item name="colorPrimary">@color/md_theme_primary_mediumContrast</item>

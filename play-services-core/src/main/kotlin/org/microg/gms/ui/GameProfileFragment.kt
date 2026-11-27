@@ -83,6 +83,11 @@ class GameProfileFragment : PreferenceFragmentCompat() {
             val hasGamePlayAccount = runCatching {
                 AccountManager.get(requireContext()).getAccountsByType(AuthConstants.DEFAULT_ACCOUNT_TYPE)
             }.getOrNull()?.any { GamesConfigurationService.getPlayer(requireContext(), it) != null }
+            // The two account entries below it only show with a Play Games account: without them
+            // this is the group's only card, rounded at the bottom too. Set before the visibility
+            // changes, which is what makes the list rebind it.
+            allowUploadGamePlayed.layoutResource =
+                if (hasGamePlayAccount == true) R.layout.preference_material_top else R.layout.preference_material_single
             deletePlayGamesAccountPreference.isVisible = hasGamePlayAccount == true
             changeDefaultAccountPreference.isVisible = hasGamePlayAccount == true
         }

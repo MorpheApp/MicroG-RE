@@ -238,6 +238,10 @@ Please set up a password, PIN, or pattern lock screen."</string>
     <string name="pref_about_title">About MicroG RE</string>
     <string name="pref_hide_launcher_icon">Hide icon in launcher</string>
     <string name="hide_launcher_icon_dialog_message">If enabled, MicroG will be hidden in your app launcher. MicroG can be opened from the app info found in your device system app list.</string>
+    <!-- Normal (icon) build: turning on "Hide icon in launcher" switches to the no-icon build. -->
+    <string name="hide_launcher_icon_switch_title">Switch to the no-icon build?</string>
+    <string name="hide_launcher_icon_switch_message">This build can\'t hide its icon. To hide it, MicroG RE will download the no-icon build from GitHub and install it over this one. Your accounts and settings are kept.\n\nAfterwards, open MicroG RE from its App info page in your device settings.</string>
+    <string name="hide_launcher_icon_switch_action">Download and install</string>
     <string name="hide_launcher_icon_updating_title">Please wait while the app is updated</string>
     <string name="pref_language_title">Language</string>
     <string name="pref_language_system_default">System default</string>
@@ -245,6 +249,22 @@ Please set up a password, PIN, or pattern lock screen."</string>
     <string name="pref_github_summary">Source code repository</string>
     <string name="pref_update_title">Check for updates</string>
     <string name="pref_update_summary">Check GitHub for a newer version.</string>
+    <string name="pref_app_settings_title">App settings</string>
+    <string name="pref_app_settings_summary">Language, appearance, launcher icon and updates</string>
+    <string name="prefcat_app_settings_general">General</string>
+    <string name="prefcat_app_settings_updates">Updates</string>
+    <string name="pref_pure_black_title">Pure black</string>
+    <string name="pref_pure_black_summary">Uses true black backgrounds in dark mode</string>
+    <!-- Contributors and supporters sheets (opened from About), as in Morphe Manager -->
+    <string name="people_all_time">All time</string>
+    <string name="people_6_months">6 months</string>
+    <string name="people_3_months">3 months</string>
+    <string name="people_period">Period</string>
+    <string name="people_supporters_description">Backers on Open Collective</string>
+    <string name="people_become_supporter">Become a supporter</string>
+    <string name="people_more">And %s more</string>
+    <string name="people_unavailable">Could not load the list</string>
+    <string name="people_prior_development">Prior development</string>
     <string name="update_include_prerelease">Include dev builds</string>
     <string name="pref_about_summary" translatable="false">Version information and used libraries</string>
 
@@ -254,6 +274,15 @@ Please set up a password, PIN, or pattern lock screen."</string>
     <string name="update_now">Update</string>
     <string name="update_whats_new">What\'s new</string>
     <string name="update_ignore">Ignore</string>
+    <string name="update_later">Later</string>
+    <string name="update_prerelease_badge">Pre-release</string>
+    <string name="update_installed_label">Installed</string>
+    <string name="update_new_label">New</string>
+    <string name="update_download_size">Download size: %s</string>
+    <string name="update_download_connecting">Connecting…</string>
+    <string name="update_download_progress">%1$s of %2$s</string>
+    <string name="update_download_speed">%s/s</string>
+    <string name="update_download_speed_eta">%1$s/s · %2$s</string>
     <string name="update_downloading_title">Downloading update…</string>
     <string name="update_download_failed">Download failed. Check your connection and try again.</string>
     <string name="update_signature_mismatch">App cannot be updated, signatures are different.</string>
@@ -263,12 +292,13 @@ Please set up a password, PIN, or pattern lock screen."</string>
     <string name="update_open_settings">Settings</string>
     <string name="update_check_failed">Could not check for updates. Check your connection and try again.</string>
     <string name="update_up_to_date_title">You\'re up to date</string>
-    <string name="update_up_to_date_message">MicroG-RE v%s is the latest version.</string>
+    <string name="update_up_to_date_message">MicroG RE v%s is the latest version.</string>
+    <string name="about_update_available">Update available: %s</string>
     <string name="update_notification_title">Update available</string>
     <string name="update_notification_text">New v%s is available tap to update</string>
     <string name="update_notification_channel">Updates</string>
     <string name="update_notification_permission_title">Notifications</string>
-    <string name="update_notification_permission_message">To let you know when a new update is available, MicroG-RE needs permission to send notifications. Please allow notifications so update alerts can reach you.</string>
+    <string name="update_notification_permission_message">To let you know when a new update is available, MicroG RE needs permission to send notifications. Please allow notifications so update alerts can reach you.</string>
     <string name="update_notification_permission_allow">Allow</string>
     <string name="update_notification_permission_not_now">Not now</string>
     <string name="update_notification_permission_open_settings">Open settings</string>
@@ -579,7 +609,7 @@ Some apps may not be able to register again after this action. You may need to c
 
     <!-- ABI mismatch: arm64 APK on 32-bit userspace -->
     <string name="abi_mismatch_title">Wrong architecture variant installed</string>
-    <string name="abi_mismatch_message">"This MicroG-RE build only contains 64-bit (arm64) libraries, but this device is running a 32-bit userspace.
+    <string name="abi_mismatch_message">"This MicroG RE build only contains 64-bit (arm64) libraries, but this device is running a 32-bit userspace.
 
 Features that need Conscrypt (account login, streaming, BotGuard, Spoof video streams, SponsorBlock, Return YouTube Dislike, etc.) will not work properly and can cause playback issues or \"Unable to find a default SSL provider\".
 

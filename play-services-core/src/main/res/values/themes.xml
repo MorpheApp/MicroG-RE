@@ -6,10 +6,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- ============================================================
-         MicroG-RE Material 3 Expressive theme system
-         Dynamic colors remain available on API 31+ (see values-v31
-         of the Material library); below that the md_theme palette
-         defined in colors.xml is used (see Theme.App below).
+         MicroG RE Material 3 Expressive theme system
+         Theme.Base carries the full md_theme palette (light colors in
+         values/colors.xml, dark in values-night/colors.xml). On API 31+
+         UpdaterApplication applies DynamicColors over it at runtime, so
+         the wallpaper palette wins wherever the system provides one.
          ============================================================ -->
 
     <!-- Base application theme -->
@@ -19,47 +20,22 @@
         <item name="android:colorAccent">?attr/colorPrimary</item>
         <item name="bottomSheetDialogTheme">@style/Theme.Component.Material.BottomSheet</item>
         <item name="alertDialogTheme">@style/Theme.Component.Material.AlertDialog</item>
+        <item name="popupMenuBackground">@drawable/popup_menu_background</item>
+        <item name="actionOverflowMenuStyle">@style/Widget.MicroG.PopupMenu.Overflow</item>
         <item name="materialAlertDialogTheme">@style/Theme.Component.Material.AlertDialog</item>
         <item name="snackbarStyle">@style/Theme.Component.Material.Snackbar</item>
         <item name="switchPreferenceCompatStyle">@style/Theme.Component.Material.SwitchPreferenceCompat</item>
         <item name="switchBarPreferenceStyle">@style/Theme.Component.SwitchBarPreference</item>
+        <item name="materialSwitchStyle">@style/Widget.MicroG.MaterialSwitch</item>
         <!-- fixes some UI issues on MIUI/HyperOS devices -->
         <item name="android:forceDarkAllowed" tools:targetApi="Q">false</item>
-        <!-- layout padding -->
-        <item name="android:listPreferredItemPaddingLeft">17dp</item>
-        <item name="android:listPreferredItemPaddingRight">17dp</item>
-        <item name="android:listPreferredItemPaddingStart">17dp</item>
-        <item name="android:listPreferredItemPaddingEnd">17dp</item>
-    </style>
-
-    <style name="Theme.Base.DayNight" parent="Theme.Base.Light" />
-
-    <style name="Theme.Base.DayNight.NoActionBar" parent="Theme.Base.Light.NoActionBar" />
-
-    <style name="Theme.Base.Dark" />
-
-    <style name="Theme.Base.Dark.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
-
-    <style name="Theme.Base.Light" />
-
-    <style name="Theme.Base.Light.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
-
-    <style name="Theme.Base.DayNight.Dialog.Alert" parent="Theme.Material3.DayNight.Dialog.Alert" />
-
-    <!-- Preference theme -->
-    <style name="Theme.Base.PreferenceThemeOverlay" parent="@style/PreferenceThemeOverlay">
-        <item name="switchPreferenceCompatStyle">@style/Theme.Component.Material.SwitchPreferenceCompat</item>
-        <item name="switchBarPreferenceStyle">@style/Theme.Component.SwitchBarPreference</item>
-    </style>
-
-    <!-- Application theme (< API 31 / static palette) -->
-    <style name="Theme.App" parent="Theme.Base.DayNight.NoActionBar">
+        <!-- layout padding (16dp screen margins, 4dp grid) -->
+        <item name="android:listPreferredItemPaddingLeft">16dp</item>
+        <item name="android:listPreferredItemPaddingRight">16dp</item>
+        <item name="android:listPreferredItemPaddingStart">16dp</item>
+        <item name="android:listPreferredItemPaddingEnd">16dp</item>
+        <!-- Static M3 palette (light/dark via values-night/colors.xml). Used as-is below
+             API 31; on API 31+ UpdaterApplication applies DynamicColors on top of it. -->
         <item name="colorPrimary">@color/md_theme_primary</item>
         <item name="colorOnPrimary">@color/md_theme_onPrimary</item>
         <item name="colorPrimaryContainer">@color/md_theme_primaryContainer</item>
@@ -109,7 +85,40 @@
         <item name="colorSurfaceContainerHighest">@color/md_theme_surfaceContainerHighest</item>
     </style>
 
-    <!-- TODO: Heavy duplication -->
+    <style name="Theme.Base.DayNight" parent="Theme.Base.Light" />
+
+    <style name="Theme.Base.DayNight.NoActionBar" parent="Theme.Base.Light.NoActionBar" />
+
+    <style name="Theme.Base.Dark" />
+
+    <style name="Theme.Base.Dark.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Base.Light" />
+
+    <style name="Theme.Base.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Base.DayNight.Dialog.Alert" parent="Theme.Material3.DayNight.Dialog.Alert" />
+
+    <!-- Preference theme -->
+    <style name="Theme.Base.PreferenceThemeOverlay" parent="@style/PreferenceThemeOverlay">
+        <!-- Grouped containers already separate items; no flat list dividers anywhere. -->
+        <item name="preferenceFragmentCompatStyle">@style/Theme.Component.PreferenceFragment</item>
+        <item name="switchPreferenceCompatStyle">@style/Theme.Component.Material.SwitchPreferenceCompat</item>
+        <item name="switchBarPreferenceStyle">@style/Theme.Component.SwitchBarPreference</item>
+    </style>
+
+    <!-- Application theme. The static palette lives in Theme.Base, so this only
+         exists as the name the manifest and code refer to. -->
+    <style name="Theme.App" parent="Theme.Base.DayNight.NoActionBar" />
+
+    <!-- Theme.Base.Translucent derives from the dialog theme, not Theme.Base, so it
+         needs its own copy of the static palette. -->
     <style name="Theme.App.Translucent" parent="Theme.Base.Translucent">
         <item name="colorPrimary">@color/md_theme_primary</item>
         <item name="colorOnPrimary">@color/md_theme_onPrimary</item>
@@ -160,7 +169,7 @@
         <item name="colorSurfaceContainerHighest">@color/md_theme_surfaceContainerHighest</item>
     </style>
 
-    <!-- MicroG-RE aliases -->
+    <!-- MicroG RE aliases -->
     <style name="AppTheme" parent="@style/Theme.Base.DayNight.NoActionBar" />
     <style name="AppTheme.Base" parent="@style/Theme.Base.DayNight.NoActionBar" />
     <style name="AppTheme.Login" parent="@style/AppTheme.Base" />
@@ -188,12 +197,12 @@
     </style>
 
     <style name="GISBottomSheetStyle" parent="@style/Widget.Material3.BottomSheet.Modal">
-        <item name="backgroundTint">@android:color/white</item>
+        <item name="backgroundTint">?attr/colorSurfaceContainerLow</item>
     </style>
 
     <style name="GISDescriptionStyle" parent="@style/TextAppearance.Material3.BodyMedium">
         <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
-        <item name="android:letterSpacing" tools:targetApi="lollipop">0.014</item>
+        <item name="android:letterSpacing" >0.014</item>
     </style>
 
 </resources>

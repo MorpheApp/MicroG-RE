@@ -14,14 +14,15 @@
         <Preference
             android:enabled="false"
             android:key="pref_location_apps_none"
-            android:layout="@layout/preference_material_top"
+            android:layout="@layout/preference_material_secondary_single"
             android:title="@string/list_no_item_none"
             app:iconSpaceReserved="false" />
         <Preference
             android:icon="@drawable/ic_expand_apps"
             android:key="pref_location_apps_all"
-            android:layout="@layout/preference_material_bottom"
+            android:layout="@layout/preference_material_secondary_bottom"
             android:order="5"
+            app:isPreferenceVisible="false"
             android:title="@string/list_item_see_all" />
     </PreferenceCategory>
     <PreferenceCategory

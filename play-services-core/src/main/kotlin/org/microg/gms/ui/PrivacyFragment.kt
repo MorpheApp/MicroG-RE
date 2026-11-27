@@ -26,7 +26,6 @@ import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.TwoStatePreference
 import com.google.android.gms.R
 import com.google.android.material.color.MaterialColors
-import com.google.android.material.transition.MaterialSharedAxis
 import org.microg.gms.auth.AuthConstants
 import org.microg.gms.common.Constants
 import org.microg.gms.gcm.ACTION_GCM_REGISTER_ALL_ACCOUNTS
@@ -43,12 +42,6 @@ val TWO_STATE_SETTINGS = listOf(
 )
 
 class PrivacyFragment : PreferenceFragmentCompat() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        enterTransition = MaterialSharedAxis(MaterialSharedAxis.X, true)
-        returnTransition = MaterialSharedAxis(MaterialSharedAxis.X, false)
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

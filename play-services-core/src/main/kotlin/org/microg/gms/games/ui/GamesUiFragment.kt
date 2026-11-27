@@ -24,7 +24,6 @@ import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -72,6 +71,7 @@ import org.microg.gms.games.snapshot.SnapshotsAdapter
 import org.microg.gms.games.snapshot.SnapshotsDataClient
 import org.microg.gms.people.PeopleManager
 import org.microg.gms.profile.ProfileManager
+import org.microg.gms.ui.buildAlertDialog
 
 class GamesUiFragment : BottomSheetDialogFragment() {
 
@@ -286,7 +286,7 @@ class GamesUiFragment : BottomSheetDialogFragment() {
                     activity?.setResult(RESULT_OK, intent)
                     activity?.finish()
                 } else {
-                    AlertDialog.Builder(context).apply {
+                    context.buildAlertDialog().apply {
                         setTitle(getString(R.string.games_delete_snapshot_dialog_title))
                         setMessage(getString(R.string.games_delete_snapshot_dialog_message))
                     }.setNegativeButton(getString(R.string.games_delete_snapshot_dialog_cancel)) { dialog, _ ->

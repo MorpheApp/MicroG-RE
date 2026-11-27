@@ -11,7 +11,6 @@ import android.text.format.DateUtils
 import android.util.Base64
 import android.util.Log
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.lifecycleScope
 import androidx.preference.Preference
 import androidx.preference.PreferenceCategory
@@ -55,16 +54,17 @@ class PasskeyManagerFragment : PreferenceFragmentCompat() {
                 category.addPreference(emptyPlaceholder)
             } else {
                 list.forEachIndexed { index, item ->
-                    category.addPreference(buildPasskeyPreference(ctx, item, index))
+                    category.addPreference(buildPasskeyPreference(ctx, item, index, list.size))
                 }
             }
         }
     }
 
-    private fun buildPasskeyPreference(ctx: Context, item: KnownRegistration, order: Int): Preference =
+    private fun buildPasskeyPreference(ctx: Context, item: KnownRegistration, order: Int, total: Int): Preference =
         Preference(ctx).apply {
             key = "pref_passkey_${item.rpId}_${item.credentialId}"
             this.order = order
+            layoutResource = groupedLayoutForPosition(order, total)
             isIconSpaceReserved = false
             widgetLayoutResource = R.layout.widget_passkey_delete
             title = item.rpId
@@ -75,9 +75,17 @@ class PasskeyManagerFragment : PreferenceFragmentCompat() {
             }
         }
 
+    /** Segmented container shape: rounded outer corners on the first/last row only. */
+    private fun groupedLayoutForPosition(index: Int, total: Int): Int = when {
+        total <= 1 -> R.layout.preference_material_single
+        index == 0 -> R.layout.preference_material_top
+        index == total - 1 -> R.layout.preference_material_bottom
+        else -> R.layout.preference_material_middle
+    }
+
     private fun confirmDelete(item: KnownRegistration) {
         val displayUser = formatPasskeyUser(requireContext(), item.userJson)
-        AlertDialog.Builder(requireContext())
+        requireContext().buildAlertDialog()
             .setTitle(R.string.pref_passkey_manager_delete_dialog_title)
             .setMessage(getString(R.string.pref_passkey_manager_delete_dialog_message, item.rpId, displayUser))
             .setNegativeButton(android.R.string.cancel, null)

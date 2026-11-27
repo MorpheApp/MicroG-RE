@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modal bottom sheet out: drops away and fades, accelerating, in 200ms. -->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shareInterpolator="false">
+    <translate
+        android:duration="200"
+        android:fromYDelta="0"
+        android:interpolator="@interpolator/m3_sys_motion_easing_emphasized_accelerate"
+        android:toYDelta="25%p" />
+    <alpha
+        android:duration="200"
+        android:fillAfter="true"
+        android:fromAlpha="1.0"
+        android:interpolator="@interpolator/m3_sys_motion_easing_emphasized_accelerate"
+        android:toAlpha="0.0" />
+</set>

@@ -22,9 +22,8 @@ import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
 import androidx.navigation.NavController
 import androidx.navigation.navOptions
-import androidx.navigation.ui.R
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-
+import org.microg.gms.base.core.R
 fun PackageManager.getApplicationInfoIfExists(packageName: String?, flags: Int = 0): ApplicationInfo? = packageName?.let {
     try {
         getApplicationInfo(it, flags)
@@ -37,10 +36,10 @@ fun PackageManager.getApplicationInfoIfExists(packageName: String?, flags: Int =
 fun NavController.navigate(context: Context, @IdRes resId: Int, args: Bundle? = null) {
     navigate(resId, args, if (context.systemAnimationsEnabled) navOptions {
         anim {
-            enter = R.anim.nav_default_enter_anim
-            exit = R.anim.nav_default_exit_anim
-            popEnter = R.anim.nav_default_pop_enter_anim
-            popExit = R.anim.nav_default_pop_exit_anim
+            enter = R.anim.settings_nav_enter
+            exit = R.anim.settings_nav_exit
+            popEnter = R.anim.settings_nav_pop_enter
+            popExit = R.anim.settings_nav_pop_exit
         }
     } else null)
 }

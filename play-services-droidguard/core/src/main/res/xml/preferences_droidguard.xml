@@ -2,11 +2,13 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <PreferenceCategory
+        android:layout="@layout/preference_material_category"
         android:title="@string/prefcat_droidguard_mode"
         app:iconSpaceReserved="false">
         <Preference
             android:icon="@drawable/ic_radio_unchecked"
             android:key="pref_droidguard_mode_embedded"
+            android:layout="@layout/preference_material_top"
             android:persistent="false"
             android:summary="@string/pref_droidguard_mode_embedded_summary"
             android:title="@string/pref_droidguard_mode_embedded_title" />
@@ -17,11 +19,16 @@
             android:summary="@string/pref_droidguard_mode_network_summary"
             android:title="@string/pref_droidguard_mode_network_title" />
     </PreferenceCategory>
-    <SwitchPreferenceCompat
-        android:defaultValue="true"
-        android:persistent="false"
-        android:key="pref_droidguard_block_hw_attestation"
-        android:summary="@string/pref_droidguard_block_hw_attestation_summary"
-        android:title="@string/pref_droidguard_block_hw_attestation_title"
-        app:iconSpaceReserved="false" />
+    <PreferenceCategory
+        android:layout="@layout/preference_material_category_spacer"
+        app:iconSpaceReserved="false">
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="pref_droidguard_block_hw_attestation"
+            android:layout="@layout/preference_material_single"
+            android:persistent="false"
+            android:summary="@string/pref_droidguard_block_hw_attestation_summary"
+            android:title="@string/pref_droidguard_block_hw_attestation_title"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
 </PreferenceScreen>

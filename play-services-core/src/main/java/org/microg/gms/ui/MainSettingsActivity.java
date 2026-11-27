@@ -12,15 +12,18 @@ import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import androidx.transition.TransitionManager;
 
 import com.google.android.gms.BuildConfig;
 import com.google.android.gms.R;
+import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 
 import org.microg.gms.common.Constants;
 import org.microg.gms.ui.settings.SettingsProvider;
 import org.microg.gms.ui.updater.AppUpdater;
 import org.microg.gms.ui.updater.UpdateCheckScheduler;
+import org.microg.tools.ui.WindowInsetsHelper;
 
 import static org.microg.gms.ui.UtilsKt.buildAlertDialog;
 import static org.microg.gms.ui.settings.SettingsProviderKt.getAllSettingsProviders;
@@ -52,6 +55,7 @@ public class MainSettingsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        WindowInsetsHelper.enableEdgeToEdge(this);
         super.onCreate(savedInstanceState);
 
         Intent intent = getIntent();
@@ -65,28 +69,48 @@ public class MainSettingsActivity extends AppCompatActivity {
         CollapsingToolbarLayout toolbarLayout = findViewById(R.id.collapsing_toolbar);
         setSupportActionBar(toolbar);
 
+        // Edge-to-edge: the app bar takes the status bar inset, the scrolling content and
+        // the FAB take the navigation bar / IME inset.
+        WindowInsetsHelper.applySettingsInsets(findViewById(R.id.root_layout),
+                findViewById(R.id.nested_scroll_view), findViewById(R.id.preference_fab));
+
         for (SettingsProvider settingsProvider : getAllSettingsProviders(this)) {
             settingsProvider.extendNavigation(getNavController());
         }
 
         appBarConfiguration = new AppBarConfiguration.Builder(getNavController().getGraph()).build();
         NavigationUI.setupWithNavController(toolbarLayout, toolbar, getNavController(), appBarConfiguration);
-
-        // Fix navigating into a submenu does not show the menu from the top.
+        // On the way back to the main page NavigationUI fades the up arrow out through a delayed
+        // transition on the toolbar, which runs for almost a second and holds the toolbar's layout
+        // meanwhile: a page opened within it got its arrow drifting below the title and its menu
+        // late. The arrow goes at once instead, as the title does. Added after NavigationUI's
+        // listener, this one runs after it, before the transition starts.
+        // The new title is only redrawn, not laid out: one that takes two lines was drawn at the
+        // old height for a frame or two before the app bar grew for it. Lay it out right away.
         getNavController().addOnDestinationChangedListener((controller, destination, arguments) -> {
-            NestedScrollView nestedScrollView = findViewById(R.id.nested_scroll_view);
-            if (nestedScrollView != null) {
-                nestedScrollView.scrollTo(0, 0);
-            }
+            TransitionManager.endTransitions(toolbar);
+            toolbarLayout.requestLayout();
         });
 
+        // Each page opens at the top with its large title expanded and gets its scroll position
+        // back when returned to, without the page being left jumping during the transition.
+        getNavController().addOnDestinationChangedListener(new PageScrollKeeper(
+                (NestedScrollView) findViewById(R.id.nested_scroll_view),
+                (AppBarLayout) findViewById(R.id.app_bar),
+                getSupportFragmentManager().findFragmentById(R.id.navhost)));
+
         showDialogIfNeeded();
+        LauncherEntries.sync(this);
 
         UpdateCheckScheduler.schedule(this);
         AppUpdater.checkOnLaunch(this);
         // The daily update notification needs POST_NOTIFICATIONS on Android 13+; a
         // background receiver can never prompt, so ask while the settings screen is open.
-        AppUpdater.ensureUpdateNotificationPermission(this);
+        // Only on a fresh start: not again when the activity is recreated (language change,
+        // rotation), where "Not now" was just answered.
+        if (savedInstanceState == null) {
+            AppUpdater.ensureUpdateNotificationPermission(this);
+        }
     }
 
     @Override

@@ -21,6 +21,7 @@ dependencies {
     implementation "androidx.preference:preference-ktx:$preferenceVersion"
 
     implementation "com.android.volley:volley:$volleyVersion"
+    implementation "com.google.android.material:material:$materialVersion"
     implementation "com.squareup.wire:wire-runtime:$wireVersion"
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"

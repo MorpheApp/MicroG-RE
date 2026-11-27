@@ -22,7 +22,7 @@ public class Constants {
     public static final int GMS_VERSION_CODE = (BuildConfig.VERSION_CODE / 1000) * 1000;
     /** The real Google Play Services package name, used for compatibility checks. */
     public static final String GOOGLE_GMS_PACKAGE_NAME = "com.google.android.gms";
-    /** The package name of this build, e.g. app.revanced.android.gms for MicroG-RE. */
+    /** The package name of this build, e.g. app.revanced.android.gms for MicroG RE. */
     public static final String GMS_PACKAGE_NAME = BuildConfig.BASE_PACKAGE_NAME + ".android.gms";
     public static final String USER_MICROG_PACKAGE_NAME = "org.microg.gms";
     /** The real Google Services Framework package name (GSF is a system app; this build never ships a renamed GSF APK). */

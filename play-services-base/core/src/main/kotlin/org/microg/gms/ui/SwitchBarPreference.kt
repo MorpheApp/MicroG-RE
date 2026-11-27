@@ -14,7 +14,11 @@ import androidx.preference.PreferenceViewHolder
 import androidx.preference.TwoStatePreference
 import org.microg.gms.base.core.R
 
-// TODO
+/**
+ * The on/off bar at the top of a service page (e.g. "Receive push notifications"): a two state
+ * preference drawn as a full width bar whose background follows its state (on, off, disabled),
+ * set through the switchBarFrame* attributes of its style.
+ */
 class SwitchBarPreference : TwoStatePreference {
     private val frameId: Int
     private val backgroundOn: Drawable?
@@ -38,7 +42,12 @@ class SwitchBarPreference : TwoStatePreference {
         holder.isDividerAllowedAbove = false
         val switch = holder.findViewById(R.id.switch_widget) as SwitchCompat
         switch.setOnCheckedChangeListener(null)
-        switch.isChecked = isChecked
+        if (switch.isChecked != isChecked) {
+            // Programmatic state (e.g. the saved value loaded after the page opened): show it
+            // directly rather than animating as if the user had toggled it.
+            switch.isChecked = isChecked
+            switch.jumpDrawablesToCurrentState()
+        }
         switch.setOnCheckedChangeListener { view, isChecked ->
             if (!callChangeListener(isChecked)) {
                 view.isChecked = !isChecked

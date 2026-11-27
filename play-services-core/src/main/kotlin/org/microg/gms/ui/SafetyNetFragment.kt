@@ -63,8 +63,21 @@ class SafetyNetFragment : PreferenceFragmentCompat() {
         appsNone = preferenceScreen.findPreference("pref_safetynet_apps_none") ?: appsNone
         droidguardUnsupported = preferenceScreen.findPreference("pref_droidguard_unsupported") ?: droidguardUnsupported
 
+        // Saved state is a cheap local read: apply it before the list is first drawn.
+        switchBarPreference.isEnabled = CheckinPreferences.isEnabled(requireContext())
+        switchBarPreference.isChecked = SafetyNetPreferences.isEnabled(requireContext()) && DroidGuardPreferences.isEnabled(requireContext())
+        droidguardUnsupported.isVisible = switchBarPreference.isChecked && !DroidGuardPreferences.isAvailable(requireContext())
+
         runReCaptcha.isVisible = RECAPTCHA_SITE_KEY != null
         runReCaptchaEnterprise.isVisible = RECAPTCHA_ENTERPRISE_SITE_KEY != null
+        // Builds without reCAPTCHA keys show neither test: drop the empty group and its gap.
+        preferenceScreen.findPreference<Preference>("prefcat_safetynet_tests")?.isVisible =
+            runReCaptcha.isVisible || runReCaptchaEnterprise.isVisible
+        // Keep the reCAPTCHA test group rounded correctly when only one test is available.
+        if (runReCaptcha.isVisible != runReCaptchaEnterprise.isVisible) {
+            runReCaptcha.layoutResource = R.layout.preference_material_single
+            runReCaptchaEnterprise.layoutResource = R.layout.preference_material_single
+        }
 
         runReCaptcha.setOnPreferenceClickListener { runReCaptchaAttest(); true }
         runReCaptchaEnterprise.setOnPreferenceClickListener { runReCaptchaEnterpriseAttest();true }

@@ -21,4 +21,7 @@
 
     <color name="switchbar_background_color">#ff37474f</color>
     <color name="switch_accent_color">#ff7fcac3</color>
+    <!-- Warning tone (amber) for status badges such as "Pre-release". -->
+    <color name="badge_warning_container">#FFDDB3</color>
+    <color name="badge_warning_content">#5D4200</color>
 </resources>

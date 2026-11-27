@@ -151,7 +151,9 @@ android {
                 // Normal builds always show the launcher icon; pass -PnoIcon=true to
                 // build a variant with the icon hidden from install time. Only the
                 // noicon variant carries the hide/show toggle in Settings.
-                launcherIconEnabled: (project.findProperty("noIcon") == "true") ? "false" : "true"
+                launcherIconEnabled: (project.findProperty("noIcon") == "true") ? "false" : "true",
+                // The app-info entry is the way in only where there is no launcher icon
+                infoEntryEnabled   : (project.findProperty("noIcon") == "true") ? "true" : "false"
         ]
 
         // Only the noicon build exposes the hide-launcher-icon feature in Settings.

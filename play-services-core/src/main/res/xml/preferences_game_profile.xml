@@ -26,7 +26,7 @@
         <SwitchPreferenceCompat
             android:persistent="false"
             android:key="allow_upload_game_played"
-            android:layout="@layout/preference_material_top"
+            android:layout="@layout/preference_material_single"
             android:summary="@string/pref_allow_upload_game_played_summary"
             android:title="@string/pref_allow_upload_game_played"
             app:iconSpaceReserved="false" />

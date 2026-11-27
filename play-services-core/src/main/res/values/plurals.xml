@@ -32,4 +32,17 @@
         <item quantity="one">Request missing permission</item>
         <item quantity="other">Request missing permissions</item>
     </plurals>
+    <plurals name="update_download_seconds_left">
+        <item quantity="one">%d second left</item>
+        <item quantity="other">%d seconds left</item>
+    </plurals>
+    <plurals name="update_download_minutes_left">
+        <item quantity="one">%d minute left</item>
+        <item quantity="other">%d minutes left</item>
+    </plurals>
+    <!-- Under the title of the contributors sheet: how many are listed for the period picked. -->
+    <plurals name="people_contributor_count">
+        <item quantity="one">%s user</item>
+        <item quantity="other">%s users</item>
+    </plurals>
 </resources>

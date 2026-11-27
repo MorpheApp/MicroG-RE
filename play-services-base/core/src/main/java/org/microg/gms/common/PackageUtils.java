@@ -52,7 +52,7 @@ public class PackageUtils {
     private static final String[] GOOGLE_PRIMARY_KEYS = {GOOGLE_PLATFORM_KEY, GOOGLE_PLATFORM_KEY_2, GOOGLE_APP_KEY};
 
     // Additional Google packages whose (re-signed) forks are identified by their real
-    // Google signature digest. Mirrors MicroG-RE so extended access / account access
+    // Google signature digest. Mirrors MicroG RE so extended access / account access
     // works for apps like YouTube Music, whose digest is not in GOOGLE_PRIMARY_KEYS.
     public static final Map<String, String> KNOWN_GOOGLE_PACKAGES;
 
@@ -95,7 +95,7 @@ public class PackageUtils {
         if (packageName == null) return false;
         // Re-signed Google forks declare their original identity via SPOOFED_PACKAGE_NAME;
         // look the digest up under that name so KNOWN_GOOGLE_PACKAGES matches. Mirrors
-        // MicroG-RE (which also handles known Google packages that aren't installed under
+        // MicroG RE (which also handles known Google packages that aren't installed under
         // the real name, e.g. intent targets like com.google.android.youtube).
         String signatureDigest = firstSignatureDigest(context, packageName);
         String spoofedPackageName = PackageSpoofUtils.spoofPackageName(context.getPackageManager(), packageName);
@@ -131,7 +131,7 @@ public class PackageUtils {
         }
 
         // TODO: Replace with explicit permission instead of generic "extended access"
-        // Fall back to the spoof-aware extended-access check (MicroG-RE parity) so
+        // Fall back to the spoof-aware extended-access check (MicroG RE parity) so
         // re-signed Google forks whose digest is not in GOOGLE_PRIMARY_KEYS (e.g.
         // YouTube Music) still pass GooglePackagePermission gates like ACCOUNT.
         if (callerHasExtendedAccess(context)) return true;
@@ -177,7 +177,7 @@ public class PackageUtils {
     @Nullable
     public static String firstSignatureDigest(@NonNull PackageManager packageManager, String packageName, boolean useSigningInfo) {
         // Spoof the signature of known Google apps (ReVanced forks of Google packages
-        // are re-signed, so their real digest no longer matches). Mirrors MicroG-RE.
+        // are re-signed, so their real digest no longer matches). Mirrors MicroG RE.
         if (packageName.endsWith(".youtube")) {
             return GOOGLE_APP_KEY;
         } else if (packageName.endsWith(".youtube.music")) {
@@ -214,8 +214,8 @@ public class PackageUtils {
         if (packagesForUid != null && packagesForUid.length != 0) {
             for (String packageName : packagesForUid) {
                 // Re-signed Google forks (e.g. Morphe apps) declare their original Google
-                // identity via SPOOFED_PACKAGE_NAME meta-data; look the digest up under the
-                // spoofed name so KNOWN_GOOGLE_PACKAGES matches. Mirrors MicroG-RE.
+                // identity via SPOOFED_PACKAGE_NAME metadata; look the digest up under the
+                // spoofed name so KNOWN_GOOGLE_PACKAGES matches. Mirrors MicroG RE.
                 String spoofedPackageName = PackageSpoofUtils.spoofPackageName(context.getPackageManager(), packageName);
                 if (isGooglePackage(spoofedPackageName != null ? spoofedPackageName : packageName, firstSignatureDigest(context, packageName))
                         || Constants.GMS_PACKAGE_NAME.equals(packageName))

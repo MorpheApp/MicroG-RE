@@ -39,7 +39,6 @@ import com.google.android.material.floatingactionbutton.ExtendedFloatingActionBu
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textview.MaterialTextView
-import com.google.android.material.transition.MaterialSharedAxis
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -47,7 +46,6 @@ import org.microg.gms.account.AccountPreference
 import org.microg.gms.auth.AuthConstants
 import org.microg.gms.auth.login.LoginActivity
 import org.microg.gms.backup.AccountBackup
-import org.microg.gms.people.DatabaseHelper
 import org.microg.gms.people.PeopleManager
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -64,19 +62,8 @@ class AccountsFragment : PreferenceFragmentCompat() {
     private lateinit var exportAccountsLauncher: ActivityResultLauncher<String>
     private lateinit var importAccountsLauncher: ActivityResultLauncher<Array<String>>
 
-    // TODO: This should use some better means of accessing the database
-    private fun getDisplayName(account: Account): String? {
-        val databaseHelper = DatabaseHelper(context)
-        val cursor = databaseHelper.getOwner(account.name)
-        return try {
-            if (cursor.moveToNext()) {
-                cursor.getColumnIndex("display_name").takeIf { it >= 0 }?.let { cursor.getString(it) }.takeIf { !it.isNullOrBlank() }
-            } else null
-        } finally {
-            cursor.close()
-            databaseHelper.close()
-        }
-    }
+    private fun getDisplayName(account: Account): String? =
+        PeopleManager.getDisplayName(requireContext(), account.name)?.takeIf { it.isNotBlank() }
 
     private fun getCircleDrawable(bitmap: Bitmap?): Drawable {
         return bitmap?.let {
@@ -86,10 +73,6 @@ class AccountsFragment : PreferenceFragmentCompat() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enterTransition = MaterialSharedAxis(MaterialSharedAxis.X, true)
-        returnTransition = MaterialSharedAxis(MaterialSharedAxis.X, false)
-        exitTransition = MaterialSharedAxis(MaterialSharedAxis.X, true)
-        reenterTransition = MaterialSharedAxis(MaterialSharedAxis.X, false)
         exportAccountsLauncher = registerForActivityResult(ActivityResultContracts.CreateDocument("application/json")) { uri ->
             if (uri != null) exportAccountsTo(uri)
         }

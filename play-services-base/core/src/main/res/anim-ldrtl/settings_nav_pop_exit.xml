@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Shared axis (X) back: the current page slides towards the end and fades out quickly. -->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shareInterpolator="false">
+    <translate
+        android:duration="@integer/settings_nav_anim_duration"
+        android:fromXDelta="0%"
+        android:interpolator="@android:interpolator/fast_out_slow_in"
+        android:toXDelta="-8%" />
+    <alpha
+        android:duration="@integer/settings_nav_anim_fade_duration"
+        android:fillAfter="true"
+        android:fromAlpha="1.0"
+        android:interpolator="@android:interpolator/fast_out_linear_in"
+        android:toAlpha="0.0" />
+</set>

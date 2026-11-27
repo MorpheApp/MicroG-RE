@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Settings page transitions (Material shared axis X): medium length slide, short fade out. -->
+    <integer name="settings_nav_anim_duration">300</integer>
+    <integer name="settings_nav_anim_fade_duration">120</integer>
+</resources>

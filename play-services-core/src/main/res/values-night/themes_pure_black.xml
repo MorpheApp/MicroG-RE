@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark mode "Pure black": true black page background and surface (status bar area,
+         app bar, lists), as Morphe Manager does. Cards, sheets and dialogs keep their
+         container colors, dynamic (Material You) where the system provides them. -->
+    <style name="ThemeOverlay.MicroG.PureBlack" parent="">
+        <item name="android:colorBackground">@android:color/black</item>
+        <item name="colorSurface">@android:color/black</item>
+        <item name="colorSurfaceDim">@android:color/black</item>
+    </style>
+</resources>

@@ -30,11 +30,13 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.color.MaterialColors;
 import com.google.android.material.listitem.ListItemLayout;
-import com.google.android.material.transition.MaterialSharedAxis;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -86,13 +88,6 @@ public abstract class AbstractAboutFragment extends Fragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setEnterTransition(new MaterialSharedAxis(MaterialSharedAxis.X, true));
-        setReturnTransition(new MaterialSharedAxis(MaterialSharedAxis.X, false));
-    }
-
-    @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         view.setBackgroundColor(MaterialColors.getColor(view, android.R.attr.colorBackground));
@@ -118,39 +113,76 @@ public abstract class AbstractAboutFragment extends Fragment {
         return null;
     }
 
+    /** Morphe's official links, the same targets Morphe Manager uses. */
+    private static final String URL_WEBSITE = "https://morphe.software";
+
+    /**
+     * Fills the version card's status row (up to date / update available). The app module
+     * overrides this with its updater; by default the row stays hidden.
+     */
+    protected void loadUpdateStatus(@NonNull TextView status, @NonNull View divider) {
+    }
+
+    /**
+     * Colors the tile behind the MicroG RE logo as Morphe Manager sets off its own: the theme's
+     * text color, faint. The logo's cut-outs show the tile, so they read light in a light theme
+     * and dark in a dark one. Used wherever the logo stands on a tile, the About page and the
+     * update sheet.
+     */
+    public static void applyLogoTile(@NonNull View tile) {
+        int ink = MaterialColors.getColor(tile, com.google.android.material.R.attr.colorOnSurface);
+        tile.setBackgroundColor(MaterialColors.compositeARGBWithAlpha(ink, MaterialColors.isColorLight(ink) ? 26 : 20));
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View aboutRoot = inflater.inflate(R.layout.about_root, container, false);
 
-        ViewGroup appCardContainer = aboutRoot.findViewById(R.id.app_card_container);
-        if (appCardContainer != null) {
-            View appCard = inflater.inflate(R.layout.about_app, appCardContainer, true);
-//            ((ImageView) appCard.findViewById(R.id.app_icon)).setImageDrawable(getIcon(requireContext()));
-//            ((TextView) appCard.findViewById(R.id.app_title)).setText(getAppName());
-            ((TextView) appCard.findViewById(R.id.app_version)).setText(appCard.getContext().getString(R.string.about_version_str, getAppVersion()));
-
-            View appInfo = appCard.findViewById(R.id.app_info);
-            if (appInfo != null) {
-                appInfo.setOnClickListener(v -> {
-                    Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                    intent.setData(Uri.parse("package:" + requireContext().getPackageName()));
-                    try {
-                        startActivity(intent);
-                    } catch (Exception ignored) {
-                    }
-                });
+        // Header: opens the system app info page.
+        aboutRoot.findViewById(R.id.app_info).setOnClickListener(v -> {
+            Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+            intent.setData(Uri.parse("package:" + requireContext().getPackageName()));
+            try {
+                startActivity(intent);
+            } catch (Exception ignored) {
             }
-        }
+        });
 
-        ViewGroup morpheCardContainer = aboutRoot.findViewById(R.id.morphe_card_container);
-        if (morpheCardContainer != null) {
-            View morpheCard = inflater.inflate(R.layout.about_morphe, morpheCardContainer, true);
+        applyLogoTile(aboutRoot.findViewById(R.id.app_icon));
 
-            morpheCard.findViewById(R.id.morphe_github).setOnClickListener(v -> openUrl("https://github.com/MorpheApp"));
-            morpheCard.findViewById(R.id.morphe_reddit).setOnClickListener(v -> openUrl("https://www.reddit.com/r/MorpheApp"));
-            morpheCard.findViewById(R.id.morphe_website).setOnClickListener(v -> openUrl("https://morphe.software/"));
+        // Version card.
+        String version = getAppVersion();
+        ((TextView) aboutRoot.findViewById(R.id.app_version)).setText(version);
+        if (version != null && version.toLowerCase(Locale.ROOT).contains("dev")) {
+            aboutRoot.findViewById(R.id.about_prerelease_badge).setVisibility(View.VISIBLE);
         }
+        loadUpdateStatus(aboutRoot.findViewById(R.id.about_status), aboutRoot.findViewById(R.id.about_status_divider));
+
+        // Official links.
+        bindLink(aboutRoot, R.id.morphe_donate, URL_WEBSITE + "/donate");
+        bindLink(aboutRoot, R.id.morphe_website, URL_WEBSITE);
+        bindLink(aboutRoot, R.id.morphe_github, "https://github.com/MorpheApp");
+        bindLink(aboutRoot, R.id.morphe_reddit, "https://reddit.com/r/MorpheApp");
+        bindLink(aboutRoot, R.id.morphe_translations, URL_WEBSITE + "/translate");
+        aboutRoot.findViewById(R.id.morphe_contributors).setOnClickListener(v -> openContributors());
+        aboutRoot.findViewById(R.id.morphe_supporters).setOnClickListener(v -> openSupporters());
+
+        // Close behaves like system back, so it works wherever the page is hosted.
+        aboutRoot.findViewById(R.id.about_close).setOnClickListener(v ->
+                requireActivity().getOnBackPressedDispatcher().onBackPressed());
+
+        // Full screen page: keep content clear of the system bars while scrolling under them.
+        View content = aboutRoot.findViewById(R.id.main_container);
+        final int padLeft = content.getPaddingLeft();
+        final int padTop = content.getPaddingTop();
+        final int padRight = content.getPaddingRight();
+        final int padBottom = content.getPaddingBottom();
+        ViewCompat.setOnApplyWindowInsetsListener(content, (v, insets) -> {
+            Insets bars = insets.getInsets(WindowInsetsCompat.Type.systemBars() | WindowInsetsCompat.Type.displayCutout());
+            v.setPadding(padLeft + bars.left, padTop + bars.top, padRight + bars.right, padBottom + bars.bottom);
+            return insets;
+        });
 
         List<Library> libraries = new ArrayList<>();
         collectLibraries(libraries);
@@ -180,6 +212,20 @@ public abstract class AbstractAboutFragment extends Fragment {
         return aboutRoot;
     }
 
+    /** Shows who contributed. The app module lists them in the app; by default, the web page. */
+    protected void openContributors() {
+        openUrl("https://github.com/MorpheApp/MicroG-RE/graphs/contributors");
+    }
+
+    /** Shows who supports Morphe. The app module lists them in the app; by default, the web page. */
+    protected void openSupporters() {
+        openUrl("https://opencollective.com/morpheapp");
+    }
+
+    private void bindLink(View root, int id, String url) {
+        root.findViewById(id).setOnClickListener(v -> openUrl(url));
+    }
+
     private void openUrl(String url) {
         try {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
@@ -203,7 +249,6 @@ public abstract class AbstractAboutFragment extends Fragment {
         }
     }
 
-    @SuppressWarnings("ClassCanBeRecord")
     protected static class Library implements Comparable<Library> {
         public final String packageName;
         public final String name;

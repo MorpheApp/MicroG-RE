@@ -6,8 +6,8 @@
         android:key="prefcat_current_accounts"
         android:layout="@layout/preference_material_category_small"
         android:title="@string/prefcat_accounts_login_accounts_title"
-        android:visibility="gone"
-        app:allowDividerAbove="false" />
+        app:allowDividerAbove="false"
+        app:isPreferenceVisible="false" />
 
     <PreferenceCategory
         android:key="prefcat_account_settings"

@@ -105,7 +105,7 @@ class PicturePickerUtils(private val activity: MainActivity, private val resultC
                 photoFile.delete()
             }
             photoFile.createNewFile()
-            return FileProvider.getUriForFile(activity, "${activity.packageName}.fileprovider", photoFile)
+            return FileProvider.getUriForFile(activity, org.microg.gms.settings.GmsFileProvider.authority(activity), photoFile)
         } catch (e: Exception) {
             Log.w(TAG, "createImageUri: ", e)
             return null

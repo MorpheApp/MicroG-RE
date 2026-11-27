@@ -5,6 +5,7 @@
 
 package org.microg.gms.settings
 
+import android.content.ComponentName
 import android.content.Context
 import android.content.pm.ProviderInfo
 import android.database.Cursor
@@ -19,6 +20,18 @@ import java.io.FileNotFoundException
 private const val TAG = "GmsFileProvider"
 
 class GmsFileProvider : FileProvider() {
+    companion object {
+        /**
+         * This app's own file provider authority, as the manifest declares it. It is not the
+         * package name + ".fileprovider" on every flavor, and must never resolve to the provider
+         * of another microG build installed next to this one.
+         */
+        @JvmStatic
+        fun authority(context: Context): String =
+            context.packageManager.getProviderInfo(ComponentName(context, GmsFileProvider::class.java), 0).authority
+                .split(';').first()
+    }
+
     private val emptyProjection = arrayOfNulls<String>(0)
     private var initializationFailed = false
 

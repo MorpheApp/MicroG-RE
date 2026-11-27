@@ -34,7 +34,6 @@ import android.os.Process
 import android.provider.Settings
 import android.text.method.LinkMovementMethod
 import android.util.Log
-import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
@@ -43,7 +42,10 @@ import androidx.core.content.FileProvider
 import androidx.core.net.toUri
 import androidx.core.text.HtmlCompat
 import com.google.android.gms.BuildConfig
+import org.microg.gms.settings.GmsFileProvider
 import com.google.android.gms.R
+import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.gson.Gson
 import com.google.gson.JsonArray
@@ -57,7 +59,7 @@ import java.net.URL
 import java.util.zip.ZipFile
 
 /**
- * In-app updater for MicroG-RE.
+ * In-app updater for MicroG RE.
  *
  * Checks GitHub for the latest release, prompts the user on launch (or via a notification
  * when running in the background), and can download and install the new APK through the
@@ -74,6 +76,8 @@ object AppUpdater {
     private const val PREFS_IGNORED_VERSION = "ignored_version"
     private const val PREFS_LAST_CHECK = "last_check"
     private const val PREFS_NOTIF_ASKED = "notif_permission_asked"
+    private const val PREFS_LATEST_SEEN = "latest_seen_version"
+    private const val PREFS_LATEST_SEEN_PRERELEASE = "latest_seen_prerelease"
 
     private var pendingAction: ((Activity) -> Unit)? = null
     private var isLifecycleRegistered = false
@@ -141,35 +145,35 @@ object AppUpdater {
             return
         }
         if (!ensureInstallPermission(activity) { runUpdateFlow(it, update) }) return
-        ensureUpdateNotificationPermission(activity)
+        // No notification prompt here: settings already asks on launch, and a dialog opened
+        // now would collide with the download sheet.
 
         isDownloadInProgress = true
         var isCancelled = false
         var activeConnection: HttpURLConnection? = null
 
-        val progress = ProgressBar(activity, null, android.R.attr.progressBarStyleHorizontal).apply {
-            isIndeterminate = true
-            val padding = (16 * activity.resources.displayMetrics.density).toInt()
-            setPadding(padding, padding, padding, padding)
+        val dialog = DownloadProgressDialog(
+            activity,
+            R.string.update_downloading_title,
+            "MicroG RE v${update.version}",
+            update.assetSize
+        ) {
+            isCancelled = true
+            isDownloadInProgress = false
+            Thread {
+                try { activeConnection?.disconnect() } catch (_: Exception) {}
+            }.start()
         }
-        val dialog = MaterialAlertDialogBuilder(activity)
-            .setTitle(R.string.update_downloading_title)
-            .setCancelable(false)
-            .setView(progress)
-            .setNegativeButton(android.R.string.cancel) { _, _ ->
-                isCancelled = true
-                isDownloadInProgress = false
-                Thread {
-                    try { activeConnection?.disconnect() } catch (_: Exception) {}
-                }.start()
-            }
-            .create()
         dialog.show()
 
         Thread {
-            val file = downloadUrlCancellable(url, File(activity.cacheDir, "$DOWNLOAD_DIR/$DOWNLOAD_FILE"), { isCancelled }) { conn ->
-                activeConnection = conn
-            }
+            val file = downloadUrlCancellable(
+                url,
+                File(activity.cacheDir, "$DOWNLOAD_DIR/$DOWNLOAD_FILE"),
+                { isCancelled },
+                { conn -> activeConnection = conn },
+                dialog::onProgress
+            )
             runOnUiThread(activity) {
                 dialog.dismiss()
                 isDownloadInProgress = false
@@ -189,37 +193,20 @@ object AppUpdater {
     @JvmStatic
     fun downloadAndInstallNoIconVariant(activity: Activity) {
         if (!ensureInstallPermission(activity) { downloadAndInstallNoIconVariant(it) }) return
-        ensureUpdateNotificationPermission(activity)
+        // No notification prompt here: settings already asks on launch, and a dialog opened
+        // now would collide with the download sheet.
 
         isDownloadInProgress = true
         var isCancelled = false
         var activeConnection: HttpURLConnection? = null
 
-        val progress = ProgressBar(activity, null, android.R.attr.progressBarStyleHorizontal).apply {
-            isIndeterminate = true
-            val padding = (16 * activity.resources.displayMetrics.density).toInt()
-            setPadding(padding, padding, padding, padding)
+        val dialog = DownloadProgressDialog(activity, R.string.hide_launcher_icon_updating_title, null, 0L) {
+            isCancelled = true
+            isDownloadInProgress = false
+            Thread {
+                try { activeConnection?.disconnect() } catch (_: Exception) {}
+            }.start()
         }
-
-        val dialog = MaterialAlertDialogBuilder(activity)
-            .setTitle(R.string.hide_launcher_icon_updating_title)
-            .setView(progress)
-            .setCancelable(false)
-            .setNegativeButton(android.R.string.cancel) { _, _ ->
-                isCancelled = true
-                isDownloadInProgress = false
-                Thread {
-                    try { activeConnection?.disconnect() } catch (_: Exception) {}
-                }.start()
-            }
-            .setOnCancelListener {
-                isCancelled = true
-                isDownloadInProgress = false
-                Thread {
-                    try { activeConnection?.disconnect() } catch (_: Exception) {}
-                }.start()
-            }
-            .create()
         dialog.show()
 
         Thread {
@@ -258,9 +245,9 @@ object AppUpdater {
             for (url in candidateUrls) {
                 if (isCancelled) break
                 Log.i(TAG, "Attempting to download no-icon variant from: $url")
-                val file = downloadUrlCancellable(url, targetFile, { isCancelled }) { conn ->
-                    activeConnection = conn
-                }
+                val file = downloadUrlCancellable(
+                    url, targetFile, { isCancelled }, { conn -> activeConnection = conn }, dialog::onProgress
+                )
                 if (file != null && file.length() > 0L) {
                     downloadedFile = file
                     break
@@ -310,19 +297,43 @@ object AppUpdater {
             .setContentIntent(pending)
             .setAutoCancel(true)
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-        context.getSystemService(NotificationManager::class.java).notify(NOTIFICATION_ID, builder.build())
+        ContextCompat.getSystemService(context, NotificationManager::class.java)?.notify(NOTIFICATION_ID, builder.build())
     }
 
     /** Dismisses the "update available" notification (e.g. when the user ignores the update). */
     @JvmStatic
     fun dismissUpdateNotification(context: Context) {
-        context.getSystemService(NotificationManager::class.java).cancel(NOTIFICATION_ID)
+        ContextCompat.getSystemService(context, NotificationManager::class.java)?.cancel(NOTIFICATION_ID)
     }
 
     /** True when [update] is newer than the installed version. */
     @JvmStatic
-    fun isNewerThanInstalled(update: UpdateInfo): Boolean {
-        return compareVersions(update.version, BuildConfig.VERSION_NAME) > 0
+    fun isNewerThanInstalled(update: UpdateInfo): Boolean = isNewerThanInstalled(update.version)
+
+    @JvmStatic
+    fun isNewerThanInstalled(version: String): Boolean {
+        return compareVersions(version, BuildConfig.VERSION_NAME) > 0
+    }
+
+    /**
+     * Keeps what a check of the [includePrerelease] channel came back with: the latest release,
+     * or nothing after a failed check. The About page shows it as soon as it opens, the way
+     * Morphe shows the last check it ran, and only then checks again.
+     */
+    @JvmStatic
+    fun rememberLatest(context: Context, update: UpdateInfo?, includePrerelease: Boolean) {
+        prefs(context).edit()
+            .putString(PREFS_LATEST_SEEN, update?.version)
+            .putBoolean(PREFS_LATEST_SEEN_PRERELEASE, includePrerelease)
+            .apply()
+    }
+
+    /** The latest release the last check of the chosen channel found, or null before one or after a failed one. */
+    @JvmStatic
+    fun lastSeenLatest(context: Context): String? {
+        val prefs = prefs(context)
+        if (prefs.getBoolean(PREFS_LATEST_SEEN_PRERELEASE, false) != includePrerelease(context)) return null
+        return prefs.getString(PREFS_LATEST_SEEN, null)
     }
 
     // -----------------------------------------------------------------------------------
@@ -338,6 +349,7 @@ object AppUpdater {
                 activity.resources.getBoolean(R.bool.hide_launcher_icon_available),
                 includePrerelease(activity)
             )
+            rememberLatest(activity, update, includePrerelease(activity))
             runOnUiThread(activity) {
                 if (update == null) {
                     if (manual) toast(activity, R.string.update_check_failed)
@@ -358,96 +370,75 @@ object AppUpdater {
         }.start()
     }
 
-    /**
-     * Keeps the action buttons inside the dialog.
-     *
-     * The dialog is a floating window with a capped height, and whatever does not fit is clipped
-     * at the bottom - exactly where the buttons sit. Everything else in the layout has a fixed
-     * height, so the release notes are the one part that has to give: give them whatever room is
-     * left over once the rest is laid out and let them scroll inside it. Without this a long
-     * changelog silently hides the last action.
-     */
-    private fun capReleaseNotes(
-        activity: Activity,
-        root: android.view.View,
-        scroll: android.widget.ScrollView,
-        notes: android.widget.TextView,
-    ) {
-        val available = root.height
-        if (available <= 0 || root.width <= 0) return
-        val density = activity.resources.displayMetrics.density
-        val wanted = notes.height
-
-        // Measure the dialog again without the notes to learn how much room the rest of it needs.
-        scroll.layoutParams = scroll.layoutParams.apply { height = 0 }
-        root.measure(
-            android.view.View.MeasureSpec.makeMeasureSpec(root.width, android.view.View.MeasureSpec.EXACTLY),
-            android.view.View.MeasureSpec.makeMeasureSpec(0, android.view.View.MeasureSpec.UNSPECIFIED)
-        )
-        val rest = root.measuredHeight
-        val allowed = (available - rest)
-            .coerceIn((48 * density).toInt(), (120 * density).toInt())
-        scroll.layoutParams = scroll.layoutParams.apply { height = minOf(wanted, allowed) }
-        scroll.requestLayout()
-    }
-
     private fun showUpdateDialog(activity: Activity, update: UpdateInfo) {
         if (isUpdateDialogShowing || isDownloadInProgress || isAbiWarningShowing) return
         isUpdateDialogShowing = true
+        val sheet = BottomSheetDialog(activity)
         val view = activity.layoutInflater.inflate(R.layout.dialog_update, null)
+        org.microg.tools.ui.AbstractAboutFragment.applyLogoTile(view.findViewById(R.id.update_logo))
+        sheet.setContentView(view)
+        sheet.behavior.skipCollapsed = true
+        sheet.behavior.state = BottomSheetBehavior.STATE_EXPANDED
+        sheet.setOnDismissListener { isUpdateDialogShowing = false }
+
         var current = update
-        val titleView = view.findViewById<android.widget.TextView>(R.id.update_title)
-        val messageView = view.findViewById<android.widget.TextView>(R.id.update_message)
+        val badge = view.findViewById<android.widget.TextView>(R.id.update_prerelease_badge)
+        val versionFrom = view.findViewById<android.widget.TextView>(R.id.update_version_from)
+        val versionTo = view.findViewById<android.widget.TextView>(R.id.update_version_to)
+        val sizeView = view.findViewById<android.widget.TextView>(R.id.update_size)
+        val sizeDivider = view.findViewById<android.view.View>(R.id.update_size_divider)
         val notesView = view.findViewById<android.widget.TextView>(R.id.update_notes)
-        val notesHeader = view.findViewById<android.widget.TextView>(R.id.update_notes_header)
-        val notesScroll = view.findViewById<android.widget.ScrollView>(R.id.update_notes_scroll)
+        val notesHeader = view.findViewById<android.view.View>(R.id.update_notes_header)
+        val notesCard = view.findViewById<android.view.View>(R.id.update_notes_card)
+        val notesScroll = view.findViewById<android.view.View>(R.id.update_notes_scroll)
+        // Long changelogs scroll inside their card; capping it keeps the actions on screen.
+        val maxNotesHeight = (activity.resources.displayMetrics.heightPixels * 0.35f).toInt()
 
         fun refreshDialog(u: UpdateInfo) {
-            titleView.setText(
-                if (u.prerelease) R.string.update_available_prerelease_title
-                else R.string.update_available_title
-            )
-            messageView.text =
-                activity.getString(R.string.update_available_message, u.version, BuildConfig.VERSION_NAME)
+            badge.visibility = if (u.prerelease) android.view.View.VISIBLE else android.view.View.GONE
+            versionFrom.text = "v" + BuildConfig.VERSION_NAME
+            versionTo.text = "v" + u.version
+            val hasSize = u.assetSize > 0
+            sizeView.visibility = if (hasSize) android.view.View.VISIBLE else android.view.View.GONE
+            sizeDivider.visibility = sizeView.visibility
+            if (hasSize) {
+                sizeView.text = activity.getString(
+                    R.string.update_download_size,
+                    android.text.format.Formatter.formatShortFileSize(activity, u.assetSize)
+                )
+            }
             val notes = u.releaseNotes?.let { renderReleaseNotes(it) }
-            if (!notes.isNullOrBlank()) {
-                notesView.text = HtmlCompat.fromHtml(notes, HtmlCompat.FROM_HTML_MODE_COMPACT)
+            val hasNotes = !notes.isNullOrBlank()
+            notesHeader.visibility = if (hasNotes) android.view.View.VISIBLE else android.view.View.GONE
+            notesCard.visibility = notesHeader.visibility
+            if (hasNotes) {
+                notesView.text = HtmlCompat.fromHtml(notes!!, HtmlCompat.FROM_HTML_MODE_COMPACT).trimEnd()
                 notesView.movementMethod = LinkMovementMethod.getInstance()
-                notesView.visibility = android.view.View.VISIBLE
-                notesHeader.visibility = android.view.View.VISIBLE
-                notesScroll.visibility = android.view.View.VISIBLE
-                // Cap the notes area after layout so long changelogs scroll instead of pushing
-                // the action buttons off the bottom of the dialog.
-                notesScroll.layoutParams.height = android.view.ViewGroup.LayoutParams.WRAP_CONTENT
-                notesScroll.post { capReleaseNotes(activity, view, notesScroll, notesView) }
-            } else {
-                notesView.visibility = android.view.View.GONE
-                notesHeader.visibility = android.view.View.GONE
-                notesScroll.visibility = android.view.View.GONE
+                notesScroll.layoutParams = notesScroll.layoutParams.apply {
+                    height = android.view.ViewGroup.LayoutParams.WRAP_CONTENT
+                }
+                notesScroll.post {
+                    if (notesScroll.height > maxNotesHeight) {
+                        notesScroll.layoutParams = notesScroll.layoutParams.apply { height = maxNotesHeight }
+                    }
+                }
             }
         }
         refreshDialog(current)
 
-        val dialog = MaterialAlertDialogBuilder(activity)
-            .setView(view)
-            .setOnDismissListener { isUpdateDialogShowing = false }
-            .create()
-        // The actions are a full width vertical stack in the layout instead of the platform
-        // button bar, so a translation whose labels are longer than the English ones cannot
-        // clip them or leave the left half of the bar empty.
         view.findViewById<com.google.android.material.button.MaterialButton>(R.id.update_action_update)
             .setOnClickListener {
-                dialog.dismiss()
+                sheet.dismiss()
                 runUpdateFlow(activity, current)
             }
         view.findViewById<com.google.android.material.button.MaterialButton>(R.id.update_action_ignore)
             .setOnClickListener {
                 prefs(activity).edit().putString(PREFS_IGNORED_VERSION, current.version).apply()
                 dismissUpdateNotification(activity)
-                dialog.dismiss()
+                sheet.dismiss()
             }
         view.findViewById<com.google.android.material.button.MaterialButton>(R.id.update_action_cancel)
-            .setOnClickListener { dialog.dismiss() }
+            .setOnClickListener { sheet.dismiss() }
 
         // A dev build is always on the dev channel (forced by the version-name match) and
         // cannot be toggled off without a clean install, so only show the switch on stable
@@ -469,7 +460,7 @@ object AppUpdater {
                     if (candidate == null || !isNewerThanInstalled(candidate)) {
                         // Nothing newer on the newly selected channel. If the user turned the
                         // toggle off, the pre-release offer no longer applies: dismiss it.
-                        if (!checked) dialog.dismiss()
+                        if (!checked) sheet.dismiss()
                         return@runOnUiThread
                     }
                     current = candidate
@@ -477,7 +468,7 @@ object AppUpdater {
                 }
             }.start()
         }
-        dialog.show()
+        sheet.show()
     }
 
     /**
@@ -496,10 +487,17 @@ object AppUpdater {
         var html = renderer.render(parser.parse(s))
         // Bare URLs (not inside markdown links) aren't auto-linked by plain CommonMark,
         // so wrap the remaining ones that aren't already inside an href attribute.
+        // GitHub links get short labels ("#371", "7.4.0...7.4.1") like on github.com, so the
+        // generated release notes are not dominated by long wrapped URLs.
         html = html.replace(
-            Regex("""(?<!["=])(https?://[^\s<>"]+)""", RegexOption.IGNORE_CASE),
-            """<a href="$1">$1</a>"""
-        )
+            Regex("""(?<!["=])(https?://[^\s<>"]+)""", RegexOption.IGNORE_CASE)
+        ) { match ->
+            val url = match.groupValues[1]
+            """<a href="$url">${shortGithubLabel(url)}</a>"""
+        }
+        // Headings render as emphasized body text instead of oversized h1/h2 blocks.
+        html = html.replace(Regex("""<h[1-6][^>]*>""", RegexOption.IGNORE_CASE), "<p><b>")
+            .replace(Regex("""</h[1-6]>""", RegexOption.IGNORE_CASE), "</b></p>")
         // Render inline code and code blocks in monospace (Html maps <font face> to a span).
         html = html.replace(
             Regex("""<code[^>]*>""", RegexOption.IGNORE_CASE),
@@ -514,6 +512,16 @@ object AppUpdater {
             .replace("<ol>", "")
             .replace("</ol>", "")
         return html
+    }
+
+    private val githubRefLink = Regex("""^https?://github\.com/[^/]+/[^/]+/(?:pull|issues)/(\d+)/?$""", RegexOption.IGNORE_CASE)
+    private val githubCompareLink = Regex("""^https?://github\.com/[^/]+/[^/]+/compare/([^/?#]+)$""", RegexOption.IGNORE_CASE)
+
+    /** "#371" for pull request / issue links, "a...b" for compare links, else the URL itself. */
+    private fun shortGithubLabel(url: String): String {
+        githubRefLink.find(url)?.let { return "#" + it.groupValues[1] }
+        githubCompareLink.find(url)?.let { return it.groupValues[1] }
+        return url
     }
 
     /**
@@ -533,22 +541,19 @@ object AppUpdater {
     private fun showUpToDateDialog(activity: Activity, update: UpdateInfo) {
         if (isUpdateDialogShowing || isDownloadInProgress || isAbiWarningShowing) return
         isUpdateDialogShowing = true
-        val view = activity.layoutInflater.inflate(R.layout.dialog_up_to_date, null)
-        view.findViewById<android.widget.TextView>(R.id.up_to_date_title)
-            .setText(R.string.update_up_to_date_title)
-        view.findViewById<android.widget.TextView>(R.id.up_to_date_message).text =
-            activity.getString(R.string.update_up_to_date_message, update.version)
-        val dialog = MaterialAlertDialogBuilder(activity)
-            .setView(view)
+        val builder = MaterialAlertDialogBuilder(activity)
+            .setTitle(R.string.update_up_to_date_title)
+            .setMessage(activity.getString(R.string.update_up_to_date_message, update.version))
             .setPositiveButton(android.R.string.ok, null)
             .setOnDismissListener { isUpdateDialogShowing = false }
-            .create()
         // Only a stable build can opt into the dev channel; on a dev build the channel is
-        // forced by the version name, so hide the switch to avoid an unchangeable toggle.
+        // forced by the version name, so the switch is left out to avoid an unchangeable toggle.
         if (isDevBuild()) {
-            view.findViewById<android.view.View>(R.id.up_to_date_prerelease_row)
-                .visibility = android.view.View.GONE
+            builder.show()
+            return
         }
+        val view = activity.layoutInflater.inflate(R.layout.dialog_up_to_date, null)
+        val dialog = builder.setView(view).create()
         // Let an up-to-date stable user opt into the dev channel right here: flipping the
         // switch re-checks for pre-release builds and jumps to the update dialog if one is
         // newer. Previously the toggle only existed once an update was already offered.
@@ -646,7 +651,7 @@ object AppUpdater {
         }
 
         try {
-            val uri = FileProvider.getUriForFile(context, context.packageName + ".fileprovider", file)
+            val uri = FileProvider.getUriForFile(context, GmsFileProvider.authority(context), file)
             val intent = Intent(Intent.ACTION_VIEW)
                 .setDataAndType(uri, "application/vnd.android.package-archive")
                 .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_ACTIVITY_NEW_TASK)
@@ -705,7 +710,8 @@ object AppUpdater {
         initialUrl: String,
         target: File,
         isCancelled: () -> Boolean,
-        onConnectionCreated: (HttpURLConnection) -> Unit
+        onConnectionCreated: (HttpURLConnection) -> Unit,
+        onProgress: ((downloaded: Long, total: Long) -> Unit)? = null
     ): File? {
         var currentUrl = initialUrl
         var redirects = 0
@@ -741,6 +747,10 @@ object AppUpdater {
                 }
 
                 target.parentFile?.mkdirs()
+                // Content-Length via the header: getContentLengthLong() needs API 24.
+                val total = conn.getHeaderField("Content-Length")?.toLongOrNull() ?: -1L
+                var downloaded = 0L
+                onProgress?.invoke(0L, total)
                 val input = conn.inputStream
                 try {
                     FileOutputStream(target).use { out ->
@@ -753,6 +763,8 @@ object AppUpdater {
                                 return null
                             }
                             out.write(buffer, 0, bytesRead)
+                            downloaded += bytesRead
+                            onProgress?.invoke(downloaded, total)
                         }
                     }
                 } finally {
@@ -1099,34 +1111,18 @@ object AppUpdater {
                 it, titleRes, preferredNameContains, preferNoicon, directFileNameBuilder, requireUniversalName
             )
         }) return
-        ensureUpdateNotificationPermission(activity)
+        // No notification prompt here: settings already asks on launch, and a dialog opened
+        // now would collide with the download sheet.
 
         var isCancelled = false
         var activeConnection: HttpURLConnection? = null
 
-        val progress = ProgressBar(activity, null, android.R.attr.progressBarStyleHorizontal).apply {
-            isIndeterminate = true
-            val padding = (16 * activity.resources.displayMetrics.density).toInt()
-            setPadding(padding, padding, padding, padding)
+        val dialog = DownloadProgressDialog(activity, titleRes, null, 0L) {
+            isCancelled = true
+            Thread {
+                try { activeConnection?.disconnect() } catch (_: Exception) {}
+            }.start()
         }
-
-        val dialog = MaterialAlertDialogBuilder(activity)
-            .setTitle(titleRes)
-            .setView(progress)
-            .setCancelable(false)
-            .setNegativeButton(android.R.string.cancel) { _, _ ->
-                isCancelled = true
-                Thread {
-                    try { activeConnection?.disconnect() } catch (_: Exception) {}
-                }.start()
-            }
-            .setOnCancelListener {
-                isCancelled = true
-                Thread {
-                    try { activeConnection?.disconnect() } catch (_: Exception) {}
-                }.start()
-            }
-            .create()
         dialog.show()
 
         Thread {
@@ -1174,9 +1170,9 @@ object AppUpdater {
             for (url in candidateUrls) {
                 if (isCancelled) break
                 Log.i(TAG, "Attempting ABI variant download from: $url")
-                val file = downloadUrlCancellable(url, targetFile, { isCancelled }) { conn ->
-                    activeConnection = conn
-                }
+                val file = downloadUrlCancellable(
+                    url, targetFile, { isCancelled }, { conn -> activeConnection = conn }, dialog::onProgress
+                )
                 if (file != null && file.length() > 0L) {
                     downloadedFile = file
                     break

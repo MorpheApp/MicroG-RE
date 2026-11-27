@@ -25,19 +25,11 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 
 import com.google.android.material.color.MaterialColors;
-import com.google.android.material.transition.MaterialSharedAxis;
 
 public abstract class AbstractSettingsFragment extends PreferenceFragmentCompat {
     private static final String TAG = AbstractSettingsFragment.class.getSimpleName();
 
     private static final String DIALOG_FRAGMENT_TAG = "androidx.preference.PreferenceFragment.DIALOG";
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setEnterTransition(new MaterialSharedAxis(MaterialSharedAxis.X, true));
-        setReenterTransition(new MaterialSharedAxis(MaterialSharedAxis.X, false));
-    }
 
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {

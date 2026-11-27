@@ -16,7 +16,6 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.AppCompatRadioButton
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
@@ -30,6 +29,7 @@ import org.microg.gms.games.GAMES_PACKAGE_NAME
 import org.microg.gms.games.GamesConfigurationService
 import org.microg.gms.games.fetchAllSelfPlayers
 import org.microg.gms.games.toPlayer
+import org.microg.gms.ui.buildAlertDialog
 
 class GameChangeAccountFragment : Fragment() {
 
@@ -51,7 +51,7 @@ class GameChangeAccountFragment : Fragment() {
     private var playedGames: List<String> = emptyList()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return layoutInflater.inflate(R.layout.fragment_game_change_account, container, false);
+        return layoutInflater.inflate(R.layout.fragment_game_change_account, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -91,7 +91,7 @@ class GameChangeAccountFragment : Fragment() {
             Pair(appName, appIcon)
         }.getOrNull()
 
-        val gameItems = playedGames.mapNotNull {
+        val gameItems = playedGames.mapNotNull { it ->
             val defaultAccount = GamesConfigurationService.getDefaultAccount(requireContext(), it)
             val gameInfo = getGameInfo(requireContext(), it)
             val playerName = allPlayers.find { it.first.name == defaultAccount?.name }?.second
@@ -148,7 +148,7 @@ class GameChangeAccountFragment : Fragment() {
             dialogTitle.text = requireContext().getString(R.string.games_change_per_game_dialog_title)
             dialogSecondTitle.text = requireContext().getString(R.string.games_change_per_game_dialog_description)
 
-            allPlayers.filter { gameItem.defaultAccount == null || gameItem.defaultAccount.contains(it.first.name) == false }.forEach {
+            allPlayers.filter { gameItem.defaultAccount == null || !gameItem.defaultAccount.contains(it.first.name) }.forEach { it ->
                 buildRadioItem(
                     String.format(requireContext().getString(R.string.games_change_per_game_dialog_option_use_player), "${it.first.name} (${it.second})"),
                 ) {
@@ -217,7 +217,7 @@ class GameChangeAccountFragment : Fragment() {
     }
 
     private fun chooseAccountDialog(changeAllGames: Boolean) {
-        AlertDialog.Builder(requireContext()).setTitle(requireContext().getString(R.string.credentials_assisted_choose_account_label)).setItems(allPlayers.map {
+        requireContext().buildAlertDialog().setTitle(requireContext().getString(R.string.credentials_assisted_choose_account_label)).setItems(allPlayers.map {
             "${it.first.name} (${it.second})"
         }.toTypedArray()) { _, which ->
             lifecycleScope.launchWhenStarted {
