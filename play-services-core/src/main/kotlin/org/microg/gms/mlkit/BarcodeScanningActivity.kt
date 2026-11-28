@@ -8,17 +8,16 @@ package org.microg.gms.mlkit
 import android.Manifest.permission
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.os.Build.VERSION.SDK_INT
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import com.google.android.gms.R
 import com.google.android.gms.common.internal.safeparcel.SafeParcelableSerializer
+import org.microg.gms.ui.buildAlertDialog
 import org.microg.gms.vision.barcode.QRCodeScannerView
 
 private const val KEY_CALLING_APP_NAME = "extra_calling_app_name"
@@ -42,10 +41,6 @@ class BarcodeScanningActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        if (SDK_INT < 21) {
-            finish()
-            return
-        }
         setContentView(R.layout.activity_barcode_scanning)
         findViewById<ImageView>(R.id.barcode_scanning_cancel).setOnClickListener {
             finish()
@@ -62,23 +57,21 @@ class BarcodeScanningActivity : AppCompatActivity() {
 
     private fun startScanning(){
         lifecycleScope.launchWhenCreated {
-            if (SDK_INT >= 21) {
-                val scannerView = findViewById<QRCodeScannerView>(R.id.scannerView)
-                scannerView.startScanner { result ->
-                    if (result != null) {
-                        val resultIntent = Intent().apply {
-                            putExtra(KEY_BARCODE_RESULT, SafeParcelableSerializer.serializeToBytes(result))
-                        }
-                        setResult(RESULT_OK, resultIntent)
-                        finish()
+            val scannerView = findViewById<QRCodeScannerView>(R.id.scannerView)
+            scannerView.startScanner { result ->
+                if (result != null) {
+                    val resultIntent = Intent().apply {
+                        putExtra(KEY_BARCODE_RESULT, SafeParcelableSerializer.serializeToBytes(result))
                     }
+                    setResult(RESULT_OK, resultIntent)
+                    finish()
                 }
             }
         }
     }
 
     private fun showPermissionDialog(callingApp: String?) {
-        AlertDialog.Builder(this).apply {
+        buildAlertDialog().apply {
             setTitle(getString(R.string.camera_permission_dialog_title))
             setMessage(String.format(getString(R.string.camera_permission_dialog_message), callingApp))
             setPositiveButton(getString(R.string.camera_permission_dialog_button)){ dialog, _ ->

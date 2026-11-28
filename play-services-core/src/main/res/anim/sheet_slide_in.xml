@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modal bottom sheet in: a short rise with a quick fade, decelerating into place. Snappier
+     than the library default (400ms emphasized, which lingers at the end). -->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shareInterpolator="false">
+    <translate
+        android:duration="300"
+        android:fromYDelta="25%p"
+        android:interpolator="@interpolator/m3_sys_motion_easing_emphasized_decelerate"
+        android:toYDelta="0" />
+    <alpha
+        android:duration="150"
+        android:fromAlpha="0.0"
+        android:interpolator="@interpolator/m3_sys_motion_easing_linear"
+        android:toAlpha="1.0" />
+</set>

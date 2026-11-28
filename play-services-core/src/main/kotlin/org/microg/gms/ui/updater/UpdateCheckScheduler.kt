@@ -71,6 +71,7 @@ class UpdateCheckReceiver : BroadcastReceiver() {
             intent?.action == Intent.ACTION_MY_PACKAGE_REPLACED
         ) {
             UpdateCheckScheduler.schedule(context)
+            org.microg.gms.ui.LauncherEntries.sync(context)
             return
         }
         if (intent?.action != UpdateCheckScheduler.ACTION_CHECK) return
@@ -82,6 +83,7 @@ class UpdateCheckReceiver : BroadcastReceiver() {
                     context.resources.getBoolean(com.google.android.gms.R.bool.hide_launcher_icon_available)
                 val includePrerelease = AppUpdater.includePrerelease(context)
                 val update = AppUpdater.fetchLatestUpdate(noiconVariant, includePrerelease)
+                AppUpdater.rememberLatest(context, update, includePrerelease)
                 if (update == null || !AppUpdater.isNewerThanInstalled(update)) return@Thread
                 val ignored = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
                     .getString(PREFS_IGNORED_VERSION, null)

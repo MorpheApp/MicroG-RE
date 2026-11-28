@@ -35,10 +35,14 @@
         <action
             android:id="@+id/openLocationSettings"
             app:destination="@id/nav_location" />
-        <action
-            android:id="@+id/openAbout"
-            app:destination="@id/aboutFragment" />
     </fragment>
+
+    <!-- App settings -->
+
+    <fragment
+        android:id="@+id/appSettingsFragment"
+        android:name="org.microg.gms.ui.AppSettingsFragment"
+        android:label="@string/pref_app_settings_title" />
 
     <!-- Self-Check -->
 
@@ -64,7 +68,7 @@
     <fragment
         android:id="@+id/gameManagerFragment"
         android:name="org.microg.gms.ui.GameProfileFragment"
-        android:label=""/>
+        android:label="@string/pref_game_accounts_title"/>
 
     <fragment
         android:id="@+id/privacyFragment"
@@ -208,13 +212,6 @@
         android:name="org.microg.gms.ui.GoogleMoreFragment"
         android:label="@string/gms_settings_name" />
 
-    <!-- About -->
-
-    <fragment
-        android:id="@+id/aboutFragment"
-        android:name="org.microg.gms.ui.AboutFragment"
-        android:label="@string/prefcat_about"
-        tools:layout="@layout/about_root" />
 
     <!-- Included -->
 

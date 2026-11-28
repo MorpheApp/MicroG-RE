@@ -341,9 +341,18 @@ class LocationPreferencesFragment : PreferenceFragmentCompat() {
             SDK_INT >= 17 && requireContext().getSystemService<LocationManager>()?.allProviders.orEmpty().contains(LocationManager.GPS_PROVIDER)
     }
 
+    override fun onStart() {
+        super.onStart()
+        // Not in onResume: a page is only resumed once its enter animation is over, so the
+        // recent apps used to arrive after it had settled and push the rest of it down.
+        runCatching { updateContent() }.onFailure {
+            Log.w(TAG, "Failed to update location settings", it)
+            database.close()
+        }
+    }
+
     override fun onResume() {
         super.onResume()
-        runCatching { updateContent() }.onFailure { database.close() }
         arguments?.let {
             if (it.containsKey(NavController.KEY_DEEP_LINK_INTENT)) {
                 val intent = it.getParcelable<Intent>(NavController.KEY_DEEP_LINK_INTENT)
@@ -354,13 +363,13 @@ class LocationPreferencesFragment : PreferenceFragmentCompat() {
         }
     }
 
-    override fun onPause() {
-        super.onPause()
+    override fun onStop() {
+        super.onStop()
         database.close()
     }
 
     private fun updateContent() {
-        lifecycleScope.launchWhenResumed {
+        lifecycleScope.launchWhenStarted {
             val context = requireContext()
             wifiIchnaea.isChecked = LocationSettings(context).wifiIchnaea
             wifiMoving.isChecked = LocationSettings(context).wifiMoving

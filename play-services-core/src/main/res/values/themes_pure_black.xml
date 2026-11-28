@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- "Pure black" (App settings): applied over every activity theme when the option is on.
+         It only changes anything in dark mode (see values-night), where the background and
+         surface become true black while Material You keeps the containers and accents. -->
+    <style name="ThemeOverlay.MicroG.PureBlack" parent="" />
+</resources>

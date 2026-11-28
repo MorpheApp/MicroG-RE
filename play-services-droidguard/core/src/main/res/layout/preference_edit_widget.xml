@@ -4,17 +4,21 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.textfield.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="?attr/textInputOutlinedStyle"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    app:hintEnabled="false">
 
-    <EditText
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@android:id/edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:focusedByDefault="false"
+        android:importantForAutofill="no"
         android:inputType="textUri"
-        android:lines="1"
-        android:maxLines="1" />
-</LinearLayout>
+        android:maxLines="1"
+        tools:targetApi="o" />
+</com.google.android.material.textfield.TextInputLayout>

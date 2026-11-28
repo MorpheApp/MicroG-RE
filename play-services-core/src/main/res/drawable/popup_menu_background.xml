@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Popup and overflow menus: M3 Expressive style rounded container (16dp) on
+     colorSurfaceContainer, with 8dp of space above and below the items. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="?attr/colorSurfaceContainer" />
+    <corners android:radius="16dp" />
+    <padding
+        android:bottom="8dp"
+        android:top="8dp" />
+</shape>

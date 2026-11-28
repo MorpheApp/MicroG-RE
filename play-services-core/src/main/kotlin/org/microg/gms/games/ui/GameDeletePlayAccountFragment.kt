@@ -16,7 +16,6 @@ import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.core.text.HtmlCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
@@ -42,6 +41,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import org.microg.gms.games.DeleteApplicationDataRequest
 import org.microg.gms.games.GAMES_PACKAGE_NAME
 import org.microg.gms.games.fetchAllSelfPlayers
+import org.microg.gms.ui.buildAlertDialog
 import java.util.Locale
 
 class GameDeletePlayAccountFragment : Fragment() {
@@ -224,7 +224,7 @@ class GameDeletePlayAccountFragment : Fragment() {
     private fun handleMultiPlayer(players: List<Pair<Account, String>>) {
         currentChooseBtn.visibility = View.VISIBLE
         currentChooseBtn.setOnClickListener {
-            AlertDialog.Builder(requireContext()).setTitle(requireContext().getString(R.string.credentials_assisted_choose_account_label)).setItems(players.map {
+            requireContext().buildAlertDialog().setTitle(requireContext().getString(R.string.credentials_assisted_choose_account_label)).setItems(players.map {
                 "${it.first.name} (${it.second})"
             }.toTypedArray()) { _, which ->
                 loadingBar.visibility = View.VISIBLE

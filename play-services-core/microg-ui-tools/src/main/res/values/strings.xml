@@ -47,5 +47,17 @@
     <string name="about_microg_re" translatable="false">MicroG RE</string>
     <string name="about_morphe" translatable="false">Morphe</string>
     <string name="about_morphe_description">Morphe is an open-source project designed to modify Android apps through patches</string>
+    <string name="about_morphe_links">Official links</string>
+    <string name="about_morphe_donate">Donate</string>
+    <string name="about_morphe_website">Website</string>
+    <string name="about_morphe_github" translatable="false">GitHub</string>
+    <string name="about_morphe_reddit" translatable="false">Reddit</string>
+    <string name="about_morphe_translations">Translations</string>
+    <string name="about_morphe_supporters">Supporters</string>
+    <string name="about_morphe_contributors">Contributors</string>
+    <string name="about_morphe_version">Version</string>
+    <string name="about_morphe_prerelease">Pre-release</string>
+    <string name="about_morphe_up_to_date">Up to date</string>
+    <string name="about_morphe_close">Close</string>
 
 </resources>

@@ -136,7 +136,7 @@ public class MultiConnectionKeeper {
         } catch (PackageManager.NameNotFoundException e) {
             Log.d(TAG, USER_MICROG_PACKAGE_NAME + " not found");
         }
-        // MicroG-RE re-signs GMS, so its signature is never among the known
+        // MicroG RE re-signs GMS, so its signature is never among the known
         // Google/microG keys. If a package with the fork's GMS name is installed
         // anyway, prefer it over the calling package so client libraries built
         // for the fork can bind to it.
@@ -270,7 +270,7 @@ public class MultiConnectionKeeper {
                                 Log.d(TAG, "GMS service found for " + actionString);
                                 return intent;
                             } else if (Objects.equals(targetPackage, GMS_PACKAGE_NAME)) {
-                                // MicroG-RE is re-signed, so its signature is not in the
+                                // MicroG RE is re-signed, so its signature is not in the
                                 // known Google/microG keys. The fork's GMS package is the
                                 // intended service provider for these client libraries.
                                 Log.w(TAG, "GMS service found for " + actionString + " in re-signed GMS package " + targetPackage + " (signature not in known keys)");

@@ -14,19 +14,21 @@
         android:title="@string/prefcat_push_apps_title"
         app:allowDividerAbove="false">
 
+        <!-- Starts in its empty-state shape so nothing jumps when the app list loads. -->
         <Preference
             android:enabled="false"
             android:key="pref_push_apps_none"
-            android:layout="@layout/preference_material_top"
+            android:layout="@layout/preference_material_secondary_single"
             android:title="@string/list_no_item_none"
             app:iconSpaceReserved="false" />
 
         <Preference
             android:icon="@drawable/ic_expand_apps"
             android:key="pref_push_apps_all"
-            android:layout="@layout/preference_material_bottom"
+            android:layout="@layout/preference_material_secondary_bottom"
             android:order="5"
-            android:title="@string/list_item_see_all" />
+            android:title="@string/list_item_see_all"
+            app:isPreferenceVisible="false" />
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -42,11 +44,12 @@
             app:iconSpaceReserved="false"
             app:selectable="false"
             tools:summary="Connected since 15 minutes ago" />
-
-        <Preference
-            android:icon="@drawable/ic_information"
-            android:layout="@layout/preference_material_information"
-            android:selectable="false"
-            android:title="@string/pref_gcm_enable_mcs_summary" />
     </PreferenceCategory>
+
+    <!-- The explanation stays visible when Cloud Messaging is off, so the page is never empty. -->
+    <Preference
+        android:icon="@drawable/ic_information"
+        android:layout="@layout/preference_material_information"
+        android:selectable="false"
+        android:title="@string/pref_gcm_enable_mcs_summary" />
 </PreferenceScreen>

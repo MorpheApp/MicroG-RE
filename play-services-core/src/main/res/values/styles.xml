@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- MicroG-RE components theme styles -->
+    <!-- MicroG RE components theme styles -->
 
     <style name="Theme.Component.Material.SwitchPreferenceCompat" parent="@style/Preference.SwitchPreferenceCompat.Material">
         <item name="widgetLayout">@layout/preference_material_switch</item>
     </style>
 
-    <style name="Theme.Component.Material.AlertDialog" parent="@style/ThemeOverlay.Material3Expressive.MaterialAlertDialog.Centered">
-        <item name="android:colorBackground">?attr/colorSurfaceContainer</item>
+    <!-- Every switch shows its state in the thumb (a tick when on, a cross when off), the same
+         as the main switch bars: M3 leaves thumb icons optional but asks for one style per app. -->
+    <style name="Widget.MicroG.MaterialSwitch" parent="@style/Widget.Material3.CompoundButton.MaterialSwitch">
+        <item name="thumbIcon">@drawable/ic_check_switch</item>
+    </style>
+
+    <!-- M3 dialogs sit on colorSurfaceContainerHigh with the 28dp extra-large corner. The title
+         is start-aligned: M3 centers it only for dialogs with a hero icon, which these lack.
+         MaterialAlertDialogBuilder reads backgroundTint from the M3 dialog style (already
+         colorSurfaceContainerHigh); android:colorBackground covers the AppCompat fallback
+         used by buildAlertDialog() when the context is not Material-themed. -->
+    <style name="Theme.Component.Material.AlertDialog" parent="@style/ThemeOverlay.Material3Expressive.MaterialAlertDialog">
+        <item name="android:colorBackground">?attr/colorSurfaceContainerHigh</item>
         <item name="android:windowAnimationStyle">@style/MaterialAlertDialog.Material3.Animation</item>
         <item name="android:windowSoftInputMode">adjustResize</item>
         <item name="dialogCornerRadius">28dp</item>
@@ -16,18 +27,58 @@
         <item name="android:windowMinWidthMinor">91%</item>
     </style>
 
+    <!-- Overflow (three dot) menu: rounded container on colorSurfaceContainer, opening below
+         its button rather than on top of it. -->
+    <style name="Widget.MicroG.PopupMenu.Overflow" parent="@style/Widget.Material3.PopupMenu.Overflow">
+        <item name="android:popupBackground">@drawable/popup_menu_background</item>
+        <item name="overlapAnchor">false</item>
+        <item name="android:overlapAnchor">false</item>
+        <item name="android:dropDownVerticalOffset">4dp</item>
+    </style>
+
+    <style name="Theme.Component.PreferenceFragment" parent="@style/PreferenceFragment.Material">
+        <item name="android:divider">@null</item>
+        <item name="android:dividerHeight">0dp</item>
+    </style>
+
     <style name="Theme.Component.Material.Snackbar" parent="Widget.Material3.Snackbar">
-        <item name="android:layout_margin">17dp</item>
+        <item name="android:layout_margin">16dp</item>
         <item name="animationMode">slide</item>
     </style>
 
     <style name="Theme.Component.Material.BottomSheet" parent="@style/ThemeOverlay.Material3.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/Theme.Component.BottomSheet.Modal</item>
+        <item name="android:windowAnimationStyle">@style/Animation.MicroG.BottomSheetDialog</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
     </style>
 
-    <style name="Theme.Component.BottomSheet.Modal" parent="@style/Widget.Material3.BottomSheet">
-        <item name="backgroundTint">?attr/colorSurface</item>
+    <!-- Faster sheet motion than the library's (see anim/sheet_slide_in.xml). -->
+    <style name="Animation.MicroG.BottomSheetDialog" parent="@style/Animation.Material3.BottomSheetDialog">
+        <item name="android:windowEnterAnimation">@anim/sheet_slide_in</item>
+        <item name="android:windowExitAnimation">@anim/sheet_slide_out</item>
+    </style>
+
+    <!-- Contributors and supporters: a full screen page over the About page, as Morphe Manager
+         shows them. An overlay on the activity's theme, so pure black carries over. -->
+    <style name="ThemeOverlay.MicroG.PeoplePage" parent="">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">?android:attr/colorBackground</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowAnimationStyle">@style/Animation.MicroG.PeoplePage</item>
+    </style>
+
+    <!-- Morphe Manager's dialog motion: a fade with a slight scale (see anim/people_page_enter.xml). -->
+    <style name="Animation.MicroG.PeoplePage" parent="">
+        <item name="android:windowEnterAnimation">@anim/people_page_enter</item>
+        <item name="android:windowExitAnimation">@anim/people_page_exit</item>
+    </style>
+
+    <!-- Modal sheets use the modal variant (scrim-aware elevation, drag handle spacing)
+         on the M3 colorSurfaceContainerLow role. -->
+    <style name="Theme.Component.BottomSheet.Modal" parent="@style/Widget.Material3.BottomSheet.Modal">
+        <item name="backgroundTint">?attr/colorSurfaceContainerLow</item>
     </style>
 
     <style name="Theme.Component.SwitchBarPreference" parent="@style/Preference.SwitchBar">

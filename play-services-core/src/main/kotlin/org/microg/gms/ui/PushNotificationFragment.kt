@@ -21,7 +21,6 @@ import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceFragmentCompat
 import com.google.android.gms.R
 import com.google.android.material.color.MaterialColors
-import com.google.android.material.transition.MaterialSharedAxis
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.microg.gms.checkin.CheckinPreferences
@@ -42,10 +41,6 @@ class PushNotificationFragment : PreferenceFragmentCompat() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enterTransition = MaterialSharedAxis(MaterialSharedAxis.X, true)
-        returnTransition = MaterialSharedAxis(MaterialSharedAxis.X, false)
-        exitTransition = MaterialSharedAxis(MaterialSharedAxis.X, true)
-        reenterTransition = MaterialSharedAxis(MaterialSharedAxis.X, false)
         database = GcmDatabase(context)
     }
 
@@ -56,6 +51,15 @@ class PushNotificationFragment : PreferenceFragmentCompat() {
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         addPreferencesFromResource(R.xml.preferences_push_notifications)
+        // Saved state is a cheap local read. Apply it here, before the list adapter exists, so
+        // the first frame is already final: no switch flipping on and no "Details" group that
+        // is drawn and then removed (which slid the info text up).
+        val enabled = GcmPrefs.get(requireContext()).isEnabled
+        findPreference<SwitchBarPreference>("pref_push_enabled")?.apply {
+            isEnabled = CheckinPreferences.isEnabled(requireContext())
+            isChecked = enabled
+        }
+        findPreference<Preference>("prefcat_push_status")?.isVisible = enabled
     }
 
     @SuppressLint("RestrictedApi")
@@ -73,6 +77,7 @@ class PushNotificationFragment : PreferenceFragmentCompat() {
         switchBarPreference.setOnPreferenceChangeListener { _, newValue ->
             val newStatus = newValue as Boolean
             GcmPrefs.setEnabled(requireContext(), newStatus)
+            pushStatusCategory.isVisible = newStatus
             true
         }
     }
@@ -99,7 +104,7 @@ class PushNotificationFragment : PreferenceFragmentCompat() {
         lifecycleScope.launchWhenStarted {
             val statusInfo = getGcmServiceInfo(appContext)
             switchBarPreference.isChecked = statusInfo.configuration.enabled
-            pushStatusCategory.isVisible = statusInfo != null && statusInfo.configuration.enabled
+            pushStatusCategory.isVisible = statusInfo.configuration.enabled
             pushStatus.summary = if (statusInfo != null && statusInfo.connected) {
                 appContext.getString(R.string.gcm_network_state_connected, DateUtils.getRelativeTimeSpanString(statusInfo.startTimestamp, System.currentTimeMillis(), 0))
             } else {

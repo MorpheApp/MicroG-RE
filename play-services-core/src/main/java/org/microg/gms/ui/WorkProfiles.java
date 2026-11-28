@@ -22,6 +22,8 @@ import android.os.UserHandle;
 import android.os.UserManager;
 import android.util.Log;
 
+import androidx.core.content.ContextCompat;
+
 import java.lang.reflect.Method;
 
 /**
@@ -40,7 +42,7 @@ public class WorkProfiles {
      * profile has to be checked and not only its existence.
      */
     public static boolean hasManagedWorkProfile(Context context) {
-        UserManager userManager = context.getSystemService(UserManager.class);
+        UserManager userManager = ContextCompat.getSystemService(context, UserManager.class);
         if (userManager == null) return false;
 
         UserHandle self = Process.myUserHandle();

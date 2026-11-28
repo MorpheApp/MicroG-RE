@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2026 Morphe.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<!-- App settings: options about MicroG RE itself rather than a Google service. The keys are
+     the same as when these lived on the start page. -->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:key="prefcat_app_settings_general"
+        android:layout="@layout/preference_material_category"
+        android:title="@string/prefcat_app_settings_general"
+        app:allowDividerAbove="false">
+        <!-- Picked from a bottom sheet (see AppSettingsFragment), not the ListPreference dialog. -->
+        <ListPreference
+            android:defaultValue=""
+            android:icon="@drawable/ic_language"
+            android:key="pref_language"
+            android:layout="@layout/preference_material_top"
+            android:summary="@string/pref_language_system_default"
+            android:title="@string/pref_language_title" />
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:icon="@drawable/ic_contrast"
+            android:key="pref_pure_black"
+            android:layout="@layout/preference_material_middle"
+            android:summary="@string/pref_pure_black_summary"
+            android:title="@string/pref_pure_black_title" />
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:icon="@drawable/ic_hide_icon"
+            android:key="pref_hide_launcher_icon"
+            android:layout="@layout/preference_material_bottom"
+            android:persistent="false"
+            android:title="@string/pref_hide_launcher_icon" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="prefcat_app_settings_updates"
+        android:layout="@layout/preference_material_category"
+        android:title="@string/prefcat_app_settings_updates"
+        app:allowDividerAbove="false">
+        <Preference
+            android:icon="@drawable/ic_download"
+            android:key="pref_update"
+            android:layout="@layout/preference_material_single"
+            android:summary="@string/pref_update_summary"
+            android:title="@string/pref_update_title" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -76,44 +76,27 @@
             android:layout="@layout/preference_material_middle"
             android:title="@string/service_name_location"/>
     </PreferenceCategory>
-    <SwitchPreferenceCompat
-        android:defaultValue="false"
-        android:icon="@drawable/ic_hide_icon"
-        android:key="pref_hide_launcher_icon"
-        android:layout="@layout/preference_material_middle"
-        android:persistent="false"
-        android:title="@string/pref_hide_launcher_icon" />
     <Preference
         android:icon="@drawable/ic_self_check"
+        android:key="pref_self_check"
         android:layout="@layout/preference_material_middle"
         android:summary="@string/self_check_desc"
-        android:title="@string/self_check_title">
-        <intent
-            android:targetClass="org.microg.gms.ui.SelfCheckFragment$AsActivity"
-            android:targetPackage="@string/package_id" />
-    </Preference>
+        android:title="@string/self_check_title" />
     <Preference
         android:icon="@drawable/ic_github"
         android:key="pref_github"
         android:layout="@layout/preference_material_middle"
         android:summary="@string/pref_github_summary"
         android:title="@string/pref_github" />
-    <ListPreference
-        android:defaultValue=""
-        android:icon="@drawable/ic_language"
-        android:key="pref_language"
-        android:layout="@layout/preference_material_middle"
-        android:summary="@string/pref_language_system_default"
-        android:title="@string/pref_language_title" />
     <PreferenceCategory
         android:key="prefcat_footer"
         android:layout="@layout/preference_material_category_none" />
     <Preference
-        android:icon="@drawable/ic_download"
-        android:key="pref_update"
+        android:icon="@drawable/ic_settings"
+        android:key="pref_app_settings"
         android:layout="@layout/preference_material_middle"
-        android:summary="@string/pref_update_summary"
-        android:title="@string/pref_update_title" />
+        android:summary="@string/pref_app_settings_summary"
+        android:title="@string/pref_app_settings_title" />
     <Preference
         android:icon="@drawable/ic_information"
         android:key="pref_about"

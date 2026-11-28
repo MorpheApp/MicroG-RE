@@ -231,6 +231,7 @@
         android:localeConfig="@xml/locales_config"
         android:multiArch="true"
         android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
         android:theme="@style/Theme.App">
 
         <library android:name="${basePackageName}.android.gms" />
@@ -927,6 +928,14 @@
             android:authorities="${basePackageName}.android.gms.fonts"
             android:exported="true" />
 
+        <!-- Full-screen About page -->
+        <activity
+            android:name="org.microg.gms.ui.AboutActivity"
+            android:exported="false"
+            android:label="@string/prefcat_about"
+            android:process=":ui"
+            android:theme="@style/Theme.App" />
+
         <!-- microG Settings activity -->
         <activity
             android:name="org.microg.gms.ui.MainSettingsActivity"
@@ -944,8 +953,6 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <!-- Allow opening MicroG from system app list app info even if app icon is hidden. -->
-                <category android:name="android.intent.category.INFO" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.APPLICATION_PREFERENCES" />
@@ -990,6 +997,21 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.APPLICATION_PREFERENCES" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity-alias>
+
+        <!-- Opens MicroG from the system App info page while there is no launcher icon. Only on
+             then: Android prefers this entry over the launcher one as the app's launch intent,
+             and the system installer's "Open" button only starts launcher intents. Kept in
+             line with the launcher entry by org.microg.gms.ui.LauncherEntries. -->
+        <activity-alias
+            android:name="org.microg.gms.ui.SettingsActivityInfo"
+            android:enabled="${infoEntryEnabled}"
+            android:exported="true"
+            android:targetActivity="org.microg.gms.ui.MainSettingsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.INFO" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
