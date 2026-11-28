@@ -45,15 +45,34 @@ class MultiArchLoader(private val mapContext: Context, private val appContext: C
                 val mapVersion = PackageUtils.versionName(mapContext, Constants.GMS_PACKAGE_NAME)
                 val apkFile = File(mapContext.packageCodePath)
                 if (!cacheFile.exists() || cacheVersion == null || cacheVersion != mapVersion) {
-                    val zipFile = ZipFile(apkFile)
-                    val entry = zipFile.getEntry(path)
-                    if (entry != null) {
-                        copyInputStream(zipFile.getInputStream(entry), FileOutputStream(cacheFile))
-                    } else {
-                        Log.d(TAG, "Can't load native library: $path does not exist in $apkFile")
+                    // RE changes start
+                    ZipFile(apkFile).use { zipFile ->
+                        val entry = zipFile.getEntry(path)
+                        if (entry != null) {
+                            // Copy to a temp file first so a partial copy never replaces a valid library.
+                            val tempFile = File(cacheFile.absolutePath + ".tmp")
+                            tempFile.delete()
+                            copyInputStream(zipFile.getInputStream(entry), FileOutputStream(tempFile))
+                            if (!tempFile.setReadOnly()) {
+                                Log.w(TAG, "Failed to mark $tempFile read-only")
+                            }
+                            // The old file may be read-only, so delete it before renaming over it.
+                            cacheFile.delete()
+                            if (!tempFile.renameTo(cacheFile)) {
+                                throw IOException("Failed to rename $tempFile to $cacheFile")
+                            }
+                            cacheFileStamp.writeText(mapVersion.toString())
+                        } else {
+                            Log.d(TAG, "Can't load native library: $path does not exist in $apkFile")
+                        }
                     }
-                    cacheFileStamp.writeText(mapVersion.toString())
                 }
+                // Android 17+ refuses to load writable native libraries with System.load().
+                // Files cached by older versions may still be writable.
+                if (cacheFile.canWrite() && !cacheFile.setReadOnly()) {
+                    Log.w(TAG, "Failed to mark $cacheFile read-only")
+                }
+                // RE changes end
                 Log.d(TAG, "Loading $name from ${cacheFile.getPath()}")
                 System.load(cacheFile.absolutePath)
                 return
