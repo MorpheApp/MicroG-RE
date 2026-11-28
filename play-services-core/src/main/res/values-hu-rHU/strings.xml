@@ -17,7 +17,7 @@ Az adatai nem vesznek el"</string>
     <string name="gms_settings_name">MicroG beállítások</string>
     <string name="gms_settings_summary">MicroG szolgáltatások beállítása.</string>
     <string name="just_a_sec">Egy pillanat...</string>
-    <string name="ask_permission_tos">Tovább folytatva lehetővé teszi, hogy ez az alkalmazás és a Google az Ön adatait a saját szolgáltatási feltételeiknek és adatvédelmi irányelveiknek megfelelően használja.</string>
+    <string name="ask_permission_tos">A folytatással lehetővé teszi, hogy ez az alkalmazás és a Google az Ön adatait a saját szolgáltatási feltételeiknek és adatvédelmi irányelveiknek megfelelően használja.</string>
     <string name="ask_scope_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> a következőket szeretné:</string>
     <string name="ask_service_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> a következőket szeretné használni:</string>
     <string name="account_manager_title">Google-fiókkezelő</string>
@@ -30,7 +30,7 @@ Az egyik gomb megnyomásával átirányítjuk Önt a fiókjába való bejelentke
 Ez eltarthat néhány másodpercig."</string>
     <string name="no_network_error_desc">"Nincs hálózati kapcsolat.
 
-Ez lehet átmeneti probléma, vagy előfordulhat, hogy az Android-eszköz nincs beállítva adatforgalmi szolgáltatásokhoz. Próbálja újra, ha csatlakozott egy mobilhálózathoz, vagy csatlakozzon Wi-Fi-hálózathoz."</string>
+Ez lehet ideiglenes probléma vagy az Android-eszköz nem rendelkezik adatátviteli szolgáltatásokkal. Próbálja meg újra mobilhálózathoz vagy Wi-Fi-hálózathoz csatlakozva."</string>
     <string name="auth_general_error_desc">"Hiba történt a Google szervereivel való kommunikáció során.
 
 Próbálja újra később."</string>
