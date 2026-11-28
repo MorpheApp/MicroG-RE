@@ -66,7 +66,7 @@ class AboutActivity : AppCompatActivity() {
 /**
  * Fills the About version card's status from the release check, as Morphe's About shows its own:
  * the answer the last check came back with straight away, then a fresh check that rewords it.
- * "Up to date", or "Update available: <version>" with an Update badge that opens the update
+ * "Up to date", or "Update available: <version>" with an Update pill that opens the update
  * sheet. Nothing stands there before a check or after a failed one: neither means up to date.
  */
 fun bindAboutUpdateStatus(activity: Activity, status: TextView, divider: View) {

@@ -22,12 +22,19 @@
         android:paddingEnd="16dp"
         android:paddingBottom="24dp">
 
-        <!-- Header: logo tile, app name and project. Tapping it opens the app info page. The
-             tile's tone follows the theme and is set in AbstractAboutFragment. -->
+        <!-- Header: logo tile, then Morphe over the part of it this is, as Morphe Manager names
+             itself ("Morphe", "Manager") and the patched apps ("Morphe", "Patches"). Tapping it
+             opens the app info page. The tile's tone follows the theme and is set in AbstractAboutFragment.
+             Its padding leaves the ripple room, and the negative margin puts the tile in line with
+             the cards below, as in Morphe Manager. The logo fills the tile with no padding: ShapeableImageView
+             cuts its shape inside the padding, which would shrink the tile, and the logo's own
+             margins already set it in the tile as Manager sets its logo. -->
         <LinearLayout
             android:id="@+id/app_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="-8dp"
+            android:layout_marginEnd="-8dp"
             android:background="@drawable/about_header_background"
             android:clickable="true"
             android:focusable="true"
@@ -40,7 +47,6 @@
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:importantForAccessibility="no"
-                android:padding="6dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/ic_microg_logo"
                 app:shapeAppearanceOverlay="?attr/shapeAppearanceCornerLargeIncreased" />
@@ -56,7 +62,7 @@
                     android:id="@+id/app_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/about_microg_re"
+                    android:text="@string/about_morphe"
                     android:textAppearance="?attr/textAppearanceHeadlineSmall"
                     android:textColor="?attr/colorOnSurface"
                     android:textStyle="bold" />
@@ -64,7 +70,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/about_morphe"
+                    android:text="@string/about_microg_re"
                     android:textAppearance="?attr/textAppearanceBodyLarge"
                     android:textColor="?attr/colorOnSurfaceVariant" />
             </LinearLayout>
@@ -135,16 +141,19 @@
                     tools:visibility="visible" />
 
                 <!-- Release check result, as Morphe's About shows its own: "Up to date" as a line, or
-                     an update as a download icon, "Update available: <version>" and an Update badge. -->
+                     "Update available: <version>" and an Update pill. Both semibold where the
+                     platform can weigh a font (API 28), medium before it. -->
                 <TextView
                     android:id="@+id/about_status"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
                     android:fontFamily="sans-serif-medium"
+                    android:textFontWeight="600"
                     android:textAppearance="?attr/textAppearanceBodyMedium"
                     android:textColor="?attr/colorOnSurface"
                     android:visibility="gone"
+                    tools:targetApi="p"
                     tools:text="@string/about_morphe_up_to_date"
                     tools:visibility="visible" />
 
@@ -157,36 +166,38 @@
                     android:orientation="horizontal"
                     android:visibility="gone">
 
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:importantForAccessibility="no"
-                        android:src="@drawable/ic_about_update"
-                        app:tint="?attr/colorPrimary" />
-
                     <TextView
                         android:id="@+id/about_update_text"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-medium"
+                        android:textFontWeight="600"
                         android:textAppearance="?attr/textAppearanceBodyMedium"
-                        android:textColor="?attr/colorPrimary" />
+                        android:textColor="?attr/colorPrimary"
+                        tools:targetApi="p" />
 
-                    <TextView
+                    <!-- Morphe's action pill in its large size and primary colors: the download
+                         icon before its label, as Morphe Manager and the patched apps show it. -->
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/about_update_badge"
+                        style="@style/Widget.Material3Expressive.Button.TonalButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
-                        android:background="@drawable/about_update_badge_background"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:fontFamily="sans-serif-medium"
-                        android:paddingHorizontal="8dp"
-                        android:paddingVertical="4dp"
-                        android:textAppearance="?attr/textAppearanceLabelMedium"
-                        android:textColor="?attr/colorOnPrimaryContainer" />
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:minWidth="80dp"
+                        android:minHeight="40dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:textColor="?attr/colorOnPrimaryContainer"
+                        app:backgroundTint="?attr/colorPrimaryContainer"
+                        app:icon="@drawable/ic_about_update"
+                        app:iconGravity="textStart"
+                        app:iconPadding="4dp"
+                        app:iconSize="20dp"
+                        app:iconTint="?attr/colorOnPrimaryContainer" />
                 </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>

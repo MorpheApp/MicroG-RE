@@ -14,50 +14,48 @@
   ~ limitations under the License.
   -->
 
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- The page scrolls in its host's NestedScrollView (the settings activity, or
+     SelfCheckFragment.AsActivity). A scroll view of its own here could never scroll, and
+     kept the host from drawing its overscroll stretch at either end. -->
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:layout_marginStart="?attr/listPreferredItemPaddingStart"
+    android:layout_marginEnd="?attr/listPreferredItemPaddingEnd"
+    android:orientation="vertical">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/self_check_status_card"
+        style="?attr/materialCardViewFilledStyle"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="?attr/listPreferredItemPaddingStart"
-        android:layout_marginEnd="?attr/listPreferredItemPaddingEnd"
-        android:orientation="vertical">
+        android:layout_gravity="center"
+        app:cardBackgroundColor="?attr/colorSurfaceContainer"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp">
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/self_check_status_card"
-            style="?attr/materialCardViewFilledStyle"
+        <FrameLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            app:cardBackgroundColor="?attr/colorSurfaceContainer"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="0dp">
+            android:padding="24dp">
 
-            <FrameLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:padding="24dp">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/self_check_status_shape"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:importantForAccessibility="no"
+                android:scaleType="fitCenter"
+                tools:src="@drawable/ic_self_check_result" />
 
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/self_check_status_shape"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:layout_gravity="center"
-                    android:importantForAccessibility="no"
-                    android:scaleType="fitCenter"
-                    tools:src="@drawable/ic_self_check_result" />
+        </FrameLayout>
+    </com.google.android.material.card.MaterialCardView>
 
-            </FrameLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/self_check_root"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
-</androidx.core.widget.NestedScrollView>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/self_check_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+</androidx.appcompat.widget.LinearLayoutCompat>

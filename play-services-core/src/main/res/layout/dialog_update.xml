@@ -45,7 +45,6 @@
             android:layout_width="56dp"
             android:layout_height="56dp"
             android:importantForAccessibility="no"
-            android:padding="5dp"
             android:scaleType="fitCenter"
             android:src="@drawable/ic_microg_logo"
             app:shapeAppearanceOverlay="?attr/shapeAppearanceCornerLargeIncreased" />
