@@ -74,6 +74,7 @@ object LauncherEntries {
                 else PackageManager.GET_DISABLED_COMPONENTS
                 pm.getActivityInfo(component, flags).enabled
             } catch (e: PackageManager.NameNotFoundException) {
+                Log.w(TAG, "Launch entry $name not found", e)
                 false
             }
         }

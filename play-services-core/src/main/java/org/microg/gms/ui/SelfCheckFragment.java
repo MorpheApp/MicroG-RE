@@ -100,7 +100,7 @@ public class SelfCheckFragment extends AbstractSelfCheckFragment {
                 public void doChecks(Context context, ResultCollector collector) {
                     super.doChecks(context, collector);
                     PackageManager pm = context.getPackageManager();
-                    // Notifications: mirror MicroG RE — open notification settings instead of requesting
+                    // Notifications: mirror MicroG RE - open notification settings instead of requesting
                     // POST_NOTIFICATIONS, which the system silently auto-dismisses when the app-op is blocked
                     if (SDK_INT >= 33) {
                         boolean notificationsEnabled = NotificationManagerCompat.from(context).areNotificationsEnabled();

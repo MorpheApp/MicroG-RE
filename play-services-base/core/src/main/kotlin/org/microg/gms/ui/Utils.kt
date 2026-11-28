@@ -24,6 +24,7 @@ import androidx.navigation.NavController
 import androidx.navigation.navOptions
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import org.microg.gms.base.core.R
+
 fun PackageManager.getApplicationInfoIfExists(packageName: String?, flags: Int = 0): ApplicationInfo? = packageName?.let {
     try {
         getApplicationInfo(it, flags)

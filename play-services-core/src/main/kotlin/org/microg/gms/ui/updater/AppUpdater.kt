@@ -42,7 +42,6 @@ import androidx.core.content.FileProvider
 import androidx.core.net.toUri
 import androidx.core.text.HtmlCompat
 import com.google.android.gms.BuildConfig
-import org.microg.gms.settings.GmsFileProvider
 import com.google.android.gms.R
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
@@ -50,6 +49,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.gson.Gson
 import com.google.gson.JsonArray
 import com.google.gson.JsonObject
+import org.microg.gms.settings.GmsFileProvider
 import org.microg.gms.ui.MainSettingsActivity
 import org.microg.gms.ui.updater.AppUpdater.UPDATE_COOLDOWN_MS
 import java.io.File
@@ -160,9 +160,7 @@ object AppUpdater {
         ) {
             isCancelled = true
             isDownloadInProgress = false
-            Thread {
-                try { activeConnection?.disconnect() } catch (_: Exception) {}
-            }.start()
+            disconnectInBackground(activeConnection)
         }
         dialog.show()
 
@@ -203,9 +201,7 @@ object AppUpdater {
         val dialog = DownloadProgressDialog(activity, R.string.hide_launcher_icon_updating_title, null, 0L) {
             isCancelled = true
             isDownloadInProgress = false
-            Thread {
-                try { activeConnection?.disconnect() } catch (_: Exception) {}
-            }.start()
+            disconnectInBackground(activeConnection)
         }
         dialog.show()
 
@@ -407,12 +403,12 @@ object AppUpdater {
                     android.text.format.Formatter.formatShortFileSize(activity, u.assetSize)
                 )
             }
-            val notes = u.releaseNotes?.let { renderReleaseNotes(it) }
-            val hasNotes = !notes.isNullOrBlank()
+            val notes = u.releaseNotes?.let { renderReleaseNotes(it) }?.takeIf { it.isNotBlank() }
+            val hasNotes = notes != null
             notesHeader.visibility = if (hasNotes) android.view.View.VISIBLE else android.view.View.GONE
             notesCard.visibility = notesHeader.visibility
-            if (hasNotes) {
-                notesView.text = HtmlCompat.fromHtml(notes!!, HtmlCompat.FROM_HTML_MODE_COMPACT).trimEnd()
+            if (notes != null) {
+                notesView.text = HtmlCompat.fromHtml(notes, HtmlCompat.FROM_HTML_MODE_COMPACT).trimEnd()
                 notesView.movementMethod = LinkMovementMethod.getInstance()
                 notesScroll.layoutParams = notesScroll.layoutParams.apply {
                     height = android.view.ViewGroup.LayoutParams.WRAP_CONTENT
@@ -977,6 +973,18 @@ object AppUpdater {
     private fun prefsDefault(context: Context): SharedPreferences =
         androidx.preference.PreferenceManager.getDefaultSharedPreferences(context)
 
+    /** Closes a download connection off the main thread, where disconnect() may block on the network. */
+    private fun disconnectInBackground(connection: HttpURLConnection?) {
+        if (connection == null) return
+        Thread {
+            try {
+                connection.disconnect()
+            } catch (e: Exception) {
+                Log.w(TAG, "Failed to close download connection", e)
+            }
+        }.start()
+    }
+
     private fun runOnUiThread(activity: Activity, block: () -> Unit) {
         Handler(Looper.getMainLooper()).post { block() }
     }
@@ -1119,9 +1127,7 @@ object AppUpdater {
 
         val dialog = DownloadProgressDialog(activity, titleRes, null, 0L) {
             isCancelled = true
-            Thread {
-                try { activeConnection?.disconnect() } catch (_: Exception) {}
-            }.start()
+            disconnectInBackground(activeConnection)
         }
         dialog.show()
 

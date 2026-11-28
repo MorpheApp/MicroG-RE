@@ -28,6 +28,7 @@ import android.graphics.drawable.GradientDrawable
 import android.net.Uri
 import android.os.Build
 import android.util.AttributeSet
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.View
@@ -47,6 +48,8 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.core.view.updatePadding
 import androidx.fragment.app.FragmentActivity
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.GridLayoutManager
@@ -71,6 +74,7 @@ enum class PeopleList { CONTRIBUTORS, SUPPORTERS }
  * and followed by the projects MicroG RE grew out of, the supporters by how many back Morphe.
  */
 object PeopleSheet {
+    private const val TAG = "PeopleSheet"
     private const val DONATE_URL = "https://morphe.software/donate"
     private const val SUPPORTERS_URL = "https://opencollective.com/morpheapp"
 
@@ -210,7 +214,16 @@ object PeopleSheet {
             unavailable = fresh == null
             render()
         }
-        dialog.setOnDismissListener { job.cancel() }
+        // A plain dialog does not survive the activity being recreated: close it with the
+        // activity rather than leak its window.
+        val closeWithActivity = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_DESTROY) dialog.dismiss()
+        }
+        activity.lifecycle.addObserver(closeWithActivity)
+        dialog.setOnDismissListener {
+            job.cancel()
+            activity.lifecycle.removeObserver(closeWithActivity)
+        }
 
         dialog.setContentView(view, ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT))
         dialog.window?.let { layOutFullScreen(it, view, recycler) }
@@ -271,7 +284,8 @@ object PeopleSheet {
     private fun openUrl(context: Context, url: String) {
         try {
             context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
-        } catch (_: Exception) {
+        } catch (e: Exception) {
+            Log.w(TAG, "Failed to open $url", e)
         }
     }
 

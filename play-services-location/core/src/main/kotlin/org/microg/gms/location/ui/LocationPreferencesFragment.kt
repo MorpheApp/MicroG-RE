@@ -345,7 +345,10 @@ class LocationPreferencesFragment : PreferenceFragmentCompat() {
         super.onStart()
         // Not in onResume: a page is only resumed once its enter animation is over, so the
         // recent apps used to arrive after it had settled and push the rest of it down.
-        runCatching { updateContent() }.onFailure { database.close() }
+        runCatching { updateContent() }.onFailure {
+            Log.w(TAG, "Failed to update location settings", it)
+            database.close()
+        }
     }
 
     override fun onResume() {
@@ -360,8 +363,8 @@ class LocationPreferencesFragment : PreferenceFragmentCompat() {
         }
     }
 
-    override fun onPause() {
-        super.onPause()
+    override fun onStop() {
+        super.onStop()
         database.close()
     }
 

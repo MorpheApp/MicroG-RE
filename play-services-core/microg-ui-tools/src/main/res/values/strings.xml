@@ -58,7 +58,6 @@
     <string name="about_morphe_version">Version</string>
     <string name="about_morphe_prerelease">Pre-release</string>
     <string name="about_morphe_up_to_date">Up to date</string>
-    <string name="about_morphe_update_available">Update available</string>
     <string name="about_morphe_close">Close</string>
 
 </resources>

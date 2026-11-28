@@ -41,8 +41,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import org.microg.gms.games.DeleteApplicationDataRequest
 import org.microg.gms.games.GAMES_PACKAGE_NAME
 import org.microg.gms.games.fetchAllSelfPlayers
-import java.util.Locale
 import org.microg.gms.ui.buildAlertDialog
+import java.util.Locale
 
 class GameDeletePlayAccountFragment : Fragment() {
 

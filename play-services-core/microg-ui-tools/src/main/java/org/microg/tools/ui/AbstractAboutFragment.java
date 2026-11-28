@@ -22,6 +22,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,6 +49,8 @@ import java.util.Objects;
  * @noinspection unused
  */
 public abstract class AbstractAboutFragment extends Fragment {
+    private static final String TAG = "AboutFragment";
+
 
     protected abstract void collectLibraries(List<Library> libraries);
 
@@ -145,7 +148,8 @@ public abstract class AbstractAboutFragment extends Fragment {
             intent.setData(Uri.parse("package:" + requireContext().getPackageName()));
             try {
                 startActivity(intent);
-            } catch (Exception ignored) {
+            } catch (Exception e) {
+                Log.w(TAG, "Failed to open app info", e);
             }
         });
 
@@ -230,7 +234,8 @@ public abstract class AbstractAboutFragment extends Fragment {
         try {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
             startActivity(intent);
-        } catch (Exception ignored) {
+        } catch (Exception e) {
+            Log.w(TAG, "Failed to open " + url, e);
         }
     }
 

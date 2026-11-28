@@ -118,7 +118,9 @@ object MorphePeople {
     private fun readCache(context: Context): People? {
         val file = cacheFile(context)
         if (!file.isFile) return null
-        return runCatching { file.readText() }.getOrNull()?.let(::decode)
+        return runCatching { file.readText() }
+            .onFailure { Log.w(TAG, "Failed to read cached people", it) }
+            .getOrNull()?.let(::decode)
     }
 
     private fun decode(body: String): People? = try {

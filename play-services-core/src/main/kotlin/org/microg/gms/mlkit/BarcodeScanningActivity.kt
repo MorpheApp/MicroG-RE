@@ -17,8 +17,8 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import com.google.android.gms.R
 import com.google.android.gms.common.internal.safeparcel.SafeParcelableSerializer
-import org.microg.gms.vision.barcode.QRCodeScannerView
 import org.microg.gms.ui.buildAlertDialog
+import org.microg.gms.vision.barcode.QRCodeScannerView
 
 private const val KEY_CALLING_APP_NAME = "extra_calling_app_name"
 private const val KEY_BARCODE_RESULT = "extra_barcode_result"
